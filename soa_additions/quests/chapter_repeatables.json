@@ -1,0 +1,247 @@
+{
+  "id": "chapter_repeatables",
+  "title": "Repeatables",
+  "icon": "minecraft:experience_bottle",
+  "sort_order": 70,
+  "description": [
+    "Quests for the Repeatables progression path."
+  ],
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "rep_kill_chaos",
+      "title": "Kill Chaos Guardian",
+      "icon": "draconicevolution:chaotic_core",
+      "optional": true,
+      "x": 0,
+      "y": 32,
+      "repeatable": true,
+      "description": [
+        "Located at coordinates where x and z can be divided by 10000"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "draconicevolution:draconic_guardian",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 30000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "rep_mana_overload",
+      "title": "Mana Overload",
+      "icon": "botania:mana_pool",
+      "visibility": "invisible",
+      "optional": true,
+      "x": 0,
+      "y": 64,
+      "repeatable": true,
+      "description": [
+        "Submit the required amount of Mana"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:mana_singularity",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "rep_overfluxed",
+      "title": "Overfluxed",
+      "icon": "minecraft:redstone_block",
+      "visibility": "invisible",
+      "x": 64,
+      "y": 0,
+      "description": [
+        "Submit the required amount of RF or FE"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:flux_singularity",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "rep_too_much_xp",
+      "title": "Too Much Experience",
+      "icon": "minecraft:experience_bottle",
+      "visibility": "invisible",
+      "optional": true,
+      "x": 64,
+      "y": 48,
+      "repeatable": true,
+      "description": [
+        "Submit the required amount of EXP"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:experience_singularity",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "rep_inequivalent",
+      "title": "Inequivalent Exchange",
+      "icon": "projecte:transmutation_table",
+      "visibility": "invisible",
+      "optional": true,
+      "x": 128,
+      "y": 64,
+      "repeatable": true,
+      "description": [
+        "Submit the required amount of EMC"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:matter_singularity",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "rep_cosmic_dominator",
+      "title": "Cosmic Dominator",
+      "icon": "draconicevolution:chaotic_core",
+      "optional": true,
+      "shape": "square",
+      "x": 128,
+      "y": 32,
+      "repeatable": true,
+      "description": [
+        "In charge of everything in the universe."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:flux_singularity",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:mana_singularity",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:matter_singularity",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:experience_singularity",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:chaos_shard",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:creative_shard",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:anti_entropy_matter",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/fluix_steel"
+  },
+  "material": "soa_additions:fluix_steel",
+  "needed": 9,
+  "value": 1
+}

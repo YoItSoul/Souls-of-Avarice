@@ -1,0 +1,707 @@
+{
+  "type": "lootbags:loot",
+  "name": "Rare Loot Crate",
+  "color": 5592575,
+  "rarity": "rare",
+  "output": {
+    "rolls": 1,
+    "entries": [
+      {
+        "stack": {
+          "id": "minecraft:obsidian",
+          "count": 16
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_block",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:emerald_block",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:anvil",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:enchanting_table",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:bookshelf",
+          "count": 32
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:end_crystal",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ae2:wireless_booster",
+          "count": 10
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:dark_matter",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ae2:certus_quartz_crystal",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "enderio:energetic_alloy_ingot",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "botania:mana_powder",
+          "count": 6
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "redstone_arsenal:flux_ingot",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "scalinghealth:heart_crystal",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "cyclic:charm_crit",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "cyclic:charm_ultimate",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:item_purger",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity_ingot",
+          "count": 6
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "waystones:waystone",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "waystones:warp_stone",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ae2:certus_quartz_crystal",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ae2:item_storage_cell_16k",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ironchest:iron_chest",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:potion",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_epic\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_legendary\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_rare\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:stick",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:blue_shulker_box",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:ender_pearl",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:blaze_rod",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "cyclic:apple_emerald",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:cow_spawn_egg",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:redstone_seeds",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:gold_seeds",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:signalum_seeds",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:cookie",
+          "count": 64
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:ghast_seeds",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "twilightforest:fiery_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:quartz_block",
+          "count": 32
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:ender_pearl",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:ender_eye",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "waystones:warp_stone",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "waystones:warp_scroll",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "waystones:waystone",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "xnet:advanced_connector_blue",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "xnet:netcable_blue",
+          "count": 64
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:blood_sigil",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:bloody_sacrifice",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:poop",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:lucky_clover",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:medkit_small",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:medkit_big",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:iron_farm",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:gold_farm",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:experience_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:wither_skeleton_skull",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mekanismgenerators:solar_generator",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:wither_skeleton_skull",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:collector_mk3",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:cow_spawn_egg",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_sword",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "prefab:item_warehouse",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:cow_spawn_egg",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "botania:black_mystical_flower",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "botania:black_mystical_flower",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "botania:black_mystical_flower",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "botania:flower_bag",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "bountiful:bountyboard",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:stick",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "enderio:conductive_alloy_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "fluxnetworks:flux_plug",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "fluxnetworks:flux_point",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "cyclic:emerald_sword",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "chancecubes:compact_giant_chance_cube",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:guide_book",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:tower_chest_key",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:delivery_order",
+          "count": 1
+        },
+        "weight": 8
+      },
+      {
+        "stack": {
+          "id": "soa_additions:sunny_doll",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "storagedrawers:upgrade_template",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ironchest:iron_chest",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:loli_lolipop",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:purifying_dust",
+          "count": 10
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:food_bag",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:time_shard",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:furniture_crate",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "ae2:certus_quartz_crystal",
+          "count": 1
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

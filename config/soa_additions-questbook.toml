@@ -1,0 +1,46 @@
+
+[questBook]
+
+	#Quest book colors. Values are ARGB hex with an optional alpha channel.
+	#Format: 0xAARRGGBB — e.g. 0x80000000 is 50% transparent black,
+	#0xFF6B8CFF is a solid cornflower blue. Missing alpha implies fully opaque.
+	[questBook.palette]
+		#Main book background (set to 0x80000000 for 50% see-through black).
+		background = "0x80000000"
+		#Gradient bottom color. Use the same as 'background' to disable the gradient.
+		backgroundGradient = "0x80000000"
+		leftPane = "0xC01A1F33"
+		leftPaneSelected = "0xFF222842"
+		leftPaneHover = "0xFF1F253E"
+		border = "0xFF3A4264"
+		separator = "0xFF2A3050"
+		text = "0xFFE6E9F5"
+		textDim = "0xFF8A91AE"
+		textMuted = "0xFFBFC5DC"
+		accent = "0xFF6B8CFF"
+		heading = "0xFF6B8CFF"
+
+	[questBook.nodes]
+		outlineIdle = "0xFF0A0D18"
+		outlineHover = "0xFFFFFFFF"
+		statusLocked = "0xFF3A3F55"
+		statusVisible = "0xFF3E6FB5"
+		statusReady = "0xFF4EB02E"
+		statusClaimed = "0xFFC9A227"
+		claimedTickBackground = "0xFF1A1F33"
+		claimedTickForeground = "0xFF66FF66"
+
+	[questBook.edges]
+		normal = "0xFF5A6391"
+		orGroup = "0xFFB59A3A"
+
+	[questBook.detail]
+		background = "0xF00E1220"
+		header = "0xFF222842"
+		border = "0xFF3A4264"
+		shadow = "0x80000000"
+		tooltipBackground = "0xF00A0D18"
+		claimButton = "0xFF4EB02E"
+		submitButton = "0xFF3E6FB5"
+		checkmarkBox = "0xFF3A4264"
+

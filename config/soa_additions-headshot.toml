@@ -1,0 +1,38 @@
+
+[headshot]
+	#Seconds of blindness applied when a player is headshot without a helmet.
+	#Range: 0 ~ 60
+	noHelmetBlindnessSeconds = 2
+	#Blindness amplifier applied when a player is headshot without a helmet. 0 = level I.
+	#Range: 0 ~ 4
+	noHelmetBlindnessAmplifier = 0
+	#Volume of the attacker-only 'ding' sound on a successful headshot.
+	#Range: 0.0 ~ 1.0
+	dingVolume = 0.25
+	#Pitch of the attacker-only 'ding' sound on a successful headshot.
+	#Range: 0.5 ~ 2.0
+	dingPitch = 1.9
+	#Volume of the low thump played when a player is headshot without a helmet.
+	#Range: 0.0 ~ 1.0
+	thumpVolume = 0.9
+	#Pitch of the low thump played when a player is headshot without a helmet.
+	#Range: 0.5 ~ 2.0
+	thumpPitch = 0.5
+	#Headshot mechanics tuning.
+	#Headshot damage reduction contributed per armor point on the helmet.
+	#Range: 0.0 ~ 1.0
+	reductionPerArmorPoint = 0.1
+	#Headshot damage reduction contributed per toughness point on the helmet.
+	#Range: 0.0 ~ 1.0
+	reductionPerToughnessPoint = 0.08
+	#Hard cap on a helmet's headshot reduction fraction. 0.85 leaves at least
+	#15% of the raw headshot damage getting through regardless of how stacked
+	#the helmet's stats are.
+	#Range: 0.0 ~ 1.0
+	maxReduction = 0.85
+	#Durability points the helmet loses per 1.0 of raw headshot damage. The same
+	#value applies to every helmet — cheaper helmets with smaller max-durability
+	#pools naturally break faster than tougher ones.
+	#Range: 0.0 ~ 20.0
+	durabilityMultiplier = 1.5
+

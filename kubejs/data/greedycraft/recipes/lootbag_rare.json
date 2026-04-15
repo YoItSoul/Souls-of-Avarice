@@ -1,0 +1,9 @@
+{
+  "type": "lootbags:loot",
+  "name": "Rare Loot Crate",
+  "color": "#5555FF",
+  "rarity": "rare",
+  "output": {
+    "table": "greedycraft:lootbags/rare"
+  }
+}

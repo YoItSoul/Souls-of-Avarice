@@ -1,0 +1,1193 @@
+{
+  "id": "chapter_ae2",
+  "title": "Applied Energistics",
+  "icon": "ae2:controller",
+  "sort_order": 40,
+  "description": "Quests for the Applied Energistics progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "ae2_quartz",
+      "title": "Quartz!",
+      "icon": "minecraft:quartz",
+      "x": 0,
+      "y": 64,
+      "description": [
+        "Obtain some Nether Quartz"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:quartz",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:quartz",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_charged_quartz",
+      "title": "Charged Quartz",
+      "icon": "ae2:charged_certus_quartz_crystal",
+      "x": 32,
+      "y": 112,
+      "description": [
+        "Charge your Certus Quartz or find the already charged ones underground"
+      ],
+      "dependencies": [
+        "quest_mnw44z11"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:charged_certus_quartz_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:redstone_block",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_crystal_crafting",
+      "title": "Crystal Crafting",
+      "icon": "ae2:fluix_crystal",
+      "x": 32,
+      "y": 64,
+      "description": [
+        "Acquire a Fluix Crystal by tossing Charged Certus Quartz, Redstone and Nether Quartz together into water"
+      ],
+      "dependencies": [
+        "ae2_quartz",
+        "ae2_charged_quartz"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:fluix_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:inscriber",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_grind_dusts",
+      "title": "Grind the Dusts",
+      "icon": "ae2:certus_quartz_dust",
+      "x": 64,
+      "y": 64,
+      "description": [
+        "Acquire all types of crystal dust"
+      ],
+      "dependencies": [
+        "ae2_crystal_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_dust",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:ender_dust",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:fluix_dust",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_crystal_growth",
+      "title": "Crystal Growth",
+      "icon": "ae2:growth_accelerator",
+      "x": 96,
+      "y": 128,
+      "description": [
+        "Craft a Growth Accelerator to speed up crystal growth"
+      ],
+      "dependencies": [
+        "ae2_grind_dusts"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:growth_accelerator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_energy_conversion",
+      "title": "Energy Conversion",
+      "icon": "ae2:energy_acceptor",
+      "x": 96,
+      "y": 64,
+      "description": [
+        "Craft an Energy Acceptor which converts other types of energy into AE"
+      ],
+      "dependencies": [
+        "ae2_grind_dusts"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:energy_acceptor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:formation_core",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_meteorite",
+      "title": "Meteorite Impact",
+      "icon": "ae2:sky_stone_block",
+      "x": 144,
+      "y": 128,
+      "description": [
+        "Find a meteorite"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:sky_stone_block",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_inscriber",
+      "title": "Circuit Inscribing",
+      "icon": "ae2:inscriber",
+      "x": 144,
+      "y": 64,
+      "description": [
+        "Craft an Inscriber to create processor circuits"
+      ],
+      "dependencies": [
+        "ae2_energy_conversion",
+        "ae2_meteorite"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:inscriber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:inscriber",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:hopper",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ironchest:iron_chest",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_processors",
+      "title": "Intelligence Revolution",
+      "icon": "ae2:logic_processor",
+      "shape": "square",
+      "x": 240,
+      "y": 64,
+      "description": [
+        "Craft all three types of processors"
+      ],
+      "dependencies": [
+        "ae2_inscriber"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:logic_processor",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:calculation_processor",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:engineering_processor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:item_storage_cell_4k",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_me_chest",
+      "title": "Simplism",
+      "icon": "ae2:chest",
+      "x": 288,
+      "y": 128,
+      "description": [
+        "Make a ME Chest"
+      ],
+      "dependencies": [
+        "ae2_processors"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:chest",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_crafting_terminal",
+      "title": "More Elegant Crafting Method",
+      "icon": "ae2:crafting_terminal",
+      "x": 240,
+      "y": 128,
+      "description": [
+        "Craft a ME Crafting Terminal"
+      ],
+      "dependencies": [
+        "ae2_processors"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:crafting_terminal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:portable_item_cell_1k",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_drive",
+      "title": "Advanced Storage",
+      "icon": "ae2:drive",
+      "shape": "square",
+      "x": 336,
+      "y": 64,
+      "description": [
+        "Craft a ME Drive which can hold 10 storage cells at max"
+      ],
+      "dependencies": [
+        "ae2_processors"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:drive",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:item_storage_cell_16k",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 33
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_controller",
+      "title": "Control Center",
+      "icon": "ae2:controller",
+      "shape": "square",
+      "x": 384,
+      "y": 64,
+      "description": [
+        "Not enough channels? Make an ME Controller!"
+      ],
+      "dependencies": [
+        "ae2_drive"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:controller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:formation_core",
+          "count": 36
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_interface",
+      "title": "Advanced Transport",
+      "icon": "ae2:interface",
+      "x": 336,
+      "y": 16,
+      "description": [
+        "Craft an ME Interface"
+      ],
+      "dependencies": [
+        "ae2_drive"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:interface",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:diamond",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_storage_cell",
+      "title": "Never Enough Item Storage Space",
+      "icon": "ae2:item_storage_cell_256k",
+      "x": 272,
+      "y": 224,
+      "description": [
+        "Craft a 256k ME Item Storage Cell"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:item_storage_cell_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_wireless",
+      "title": "Wi-Fi Hotspot",
+      "icon": "ae2:wireless_access_point",
+      "shape": "square",
+      "x": 384,
+      "y": 128,
+      "description": [
+        "Craft a ME Wireless Access Point"
+      ],
+      "dependencies": [
+        "ae2_drive"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:wireless_access_point",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 80
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_free_access",
+      "title": "Free Access",
+      "icon": "ae2:wireless_crafting_terminal",
+      "x": 384,
+      "y": 176,
+      "description": [
+        "Craft a Wireless Crafting Terminal for on-the-go access"
+      ],
+      "dependencies": [
+        "ae2_wireless"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:wireless_crafting_terminal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:capacity_card",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:wireless_booster",
+          "count": 8
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_autocrafting",
+      "title": "Introduction to Autocrafting",
+      "icon": "ae2:1k_crafting_storage",
+      "shape": "square",
+      "x": 384,
+      "y": 16,
+      "description": [
+        "Set up autocrafting with a Crafting Storage"
+      ],
+      "dependencies": [
+        "ae2_controller",
+        "ae2_interface"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:1k_crafting_storage",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:16k_crafting_storage",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_molecular_assembler",
+      "title": "Automatic Aggregation",
+      "icon": "ae2:molecular_assembler",
+      "x": 64,
+      "y": 176,
+      "description": [
+        "Craft a Molecular Assembler"
+      ],
+      "dependencies": [
+        "ae2_grind_dusts"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:molecular_assembler",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 48
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_device_upgrade",
+      "title": "Device Upgrade",
+      "icon": "ae2:speed_card",
+      "x": 192,
+      "y": 128,
+      "description": [
+        "Craft an Acceleration Card to speed up your devices"
+      ],
+      "dependencies": [
+        "ae2_inscriber"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:speed_card",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:inscriber",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_network_tool",
+      "title": "Network Tool",
+      "icon": "ae2:network_tool",
+      "shape": "circle",
+      "x": 240,
+      "y": 16,
+      "description": [
+        "Craft a Network Tool to diagnose your ME network"
+      ],
+      "dependencies": [
+        "ae2_processors"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:network_tool",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw44z11",
+      "title": "Why So Certus?",
+      "icon": "ae2:certus_quartz_crystal",
+      "x": 0,
+      "y": 112,
+      "description": "Obtain 1× Certus Quartz Crystal to progress in the Applied Energistics path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw4unls",
+      "title": "ME Cooking",
+      "icon": "appliedcooking:kitchen_station",
+      "x": 288,
+      "y": 176,
+      "description": "Obtain 1× Kitchen Station to progress in the Applied Energistics path.",
+      "dependencies": [
+        "ae2_me_chest"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "appliedcooking:kitchen_station",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5262m",
+      "title": "256k Gold Chain",
+      "icon": "ae2:cell_component_256k",
+      "x": 336,
+      "y": 224,
+      "description": "Obtain 1× Cell Component 256k to progress in the Applied Energistics path.",
+      "dependencies": [
+        "ae2_drive"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:cell_component_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5els3",
+      "title": "Never Enough Item Storage Space (DISK)",
+      "icon": "ae2things:disk_drive_256k",
+      "x": 288,
+      "y": 256,
+      "description": [
+        "Craft a 256k ME DISK Drive.",
+        "They aren't limited to item typ efor storage!"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2things:disk_drive_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5gmxq",
+      "title": "Never Enough Fluid Storage Space",
+      "icon": "ae2:portable_fluid_cell_256k",
+      "x": 368,
+      "y": 288,
+      "description": [
+        "Craft a 256k ME Fluid Storage Cell"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:portable_fluid_cell_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5hp7k",
+      "title": "Never Enough Mana Storage Space",
+      "icon": "appbot:mana_storage_cell_256k",
+      "x": 336,
+      "y": 304,
+      "description": [
+        "Craft a 256k ME Mana Storage Cell"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "appbot:mana_storage_cell_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5k2fu",
+      "title": "Never Enough Source Storage Space",
+      "icon": "arseng:source_storage_cell_256k",
+      "x": 304,
+      "y": 288,
+      "description": [
+        "Craft a 256k ME Mana Storage Cell"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "arseng:source_storage_cell_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5nn6e",
+      "title": "Never Enough Energy Storage Space",
+      "icon": "appflux:fe_256k_cell",
+      "x": 384,
+      "y": 256,
+      "description": [
+        "Craft a 256k ME Mana Storage Cell"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "appflux:fe_256k_cell",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw5ocvy",
+      "title": "Never Enough Chemical Storage Space",
+      "icon": "appmek:chemical_storage_cell_256k",
+      "x": 400,
+      "y": 224,
+      "description": [
+        "Craft a 256k ME Chemical Storage Cell"
+      ],
+      "dependencies": [
+        "quest_mnw5262m"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "appmek:chemical_storage_cell_256k",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

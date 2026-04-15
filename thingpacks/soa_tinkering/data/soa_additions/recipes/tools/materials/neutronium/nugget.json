@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/cosmicneutronium"
+  },
+  "material": "soa_additions:neutronium",
+  "needed": 9,
+  "value": 1
+}

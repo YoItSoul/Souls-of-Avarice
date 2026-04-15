@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/draconium"
+  },
+  "material": "soa_additions:draconium",
+  "needed": 9,
+  "value": 1
+}

@@ -1,0 +1,4382 @@
+{
+  "id": "chapter_challenges",
+  "title": "Challenges",
+  "icon": "minecraft:diamond",
+  "sort_order": 80,
+  "description": "Quests for the Challenges progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "cha_professional_bounty_hunter",
+      "title": "Professional Bounty Hunter",
+      "icon": "soa_additions:bounty_hunter_medal",
+      "x": 384,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_bounty_hunter_37"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bounty_hunter_medal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bounty_hunter_medal_silver",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bounty_hunter_medal_bronze",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_accessory_reforge",
+      "title": "Accessory Reforge",
+      "icon": "bountifulbaubles:reforger",
+      "x": 48,
+      "y": 96,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bountifulbaubles:reforger",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 230
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_i",
+      "title": "Challenger I",
+      "icon": "inventorypets:petachieve_5",
+      "min_deps": 5,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 0,
+      "description": [
+        "Complete 5 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_a false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 2
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_where_did_the_pandas_go",
+      "title": "Where did the pandas go?",
+      "icon": "minecraft:bamboo",
+      "x": 432,
+      "y": 336,
+      "description": [
+        "Get some bamboo from a bamboo forest biome"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:bamboo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_gimme_your_soul",
+      "title": "Gimme your soul!",
+      "icon": "mysticalagriculture:tinkering_table",
+      "x": 240,
+      "y": 96,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:tinkering_table",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_essence",
+          "count": 21
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_flying_magic",
+      "title": "Flying magic!",
+      "icon": "magicfeather:magic_feather",
+      "x": 432,
+      "y": 144,
+      "description": [
+        "Obtain a magic feather which allows flight near a beacon"
+      ],
+      "dependencies": [
+        "cha_way_to_home"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "magicfeather:magic_feather",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:elytra",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_sand_but_better",
+      "title": "Sand but Better",
+      "icon": "snad:snad",
+      "x": 48,
+      "y": 288,
+      "description": [
+        "Obtain a snad which accelerates growth of cactus and sugarcane on it"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "snad:snad",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:sand",
+          "count": 256
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:glass",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_a_blessing_of_the_lord",
+      "title": "A Blessing of the Lord",
+      "icon": "minecraft:barrier",
+      "x": 192,
+      "y": 240,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_building_helper",
+      "title": "Building Helper",
+      "icon": "chiselsandbits:chisel_netherite",
+      "x": 432,
+      "y": 96,
+      "description": [
+        "Obtain a chisel which changes the style of your blocks"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "chiselsandbits:chisel_netherite",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_vi",
+      "title": "Challenger VI",
+      "icon": "inventorypets:petachieve_50",
+      "min_deps": 50,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 240,
+      "description": [
+        "Complete 50 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_f false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_draconic_soul",
+      "title": "Draconic Soul",
+      "icon": "soa_additions:dragon_soul",
+      "x": 240,
+      "y": 240,
+      "description": [
+        "Obtain a Draconic Soul by defeating the Ender Dragon at highest difficulty"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:dragon_soul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_the_destroyer",
+      "title": "The Destroyer",
+      "icon": "defiledlands:essence_destroyer",
+      "x": 0,
+      "y": 144,
+      "description": [
+        "Defeat The Destroyer in the defiled lands to get Ravaging Essence"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "defiledlands:essence_destroyer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_dancing_on_fire",
+      "title": "Dancing on Fire",
+      "icon": "minecraft:barrier",
+      "x": 336,
+      "y": 48,
+      "description": [
+        "Obtain Lava Waders which allows you to walk on lava!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_you_got_lucky",
+      "title": "You Got Lucky",
+      "icon": "soa_additions:lucky_clover",
+      "x": 192,
+      "y": 144,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:lucky_clover",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:lucky_clover",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_bounty_hunter",
+      "title": "Bounty Hunter",
+      "icon": "soa_additions:bounty_hunter_medal_emerald",
+      "x": 432,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_professional_bounty_hunter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bounty_hunter_medal_emerald",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_feel_the_motion",
+      "title": "Feel the Motion",
+      "icon": "minecraft:barrier",
+      "x": 192,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:shulker_shell",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:elytra",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_godsend_gift",
+      "title": "Godsend Gift",
+      "icon": "soa_additions:delivery_order",
+      "x": 432,
+      "y": 384,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:delivery_order",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:delivery_order",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_cosmos_in_your_hand",
+      "title": "Cosmos in Your Hand",
+      "icon": "additions:cosmilite_ingot",
+      "x": 240,
+      "y": 384,
+      "description": [
+        "Obtain Cosmilite Ingot by fusing many of the strongest metals"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "additions:cosmilite_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 80000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_i_love_math",
+      "title": "I Love Math",
+      "icon": "minecraft:barrier",
+      "x": 96,
+      "y": 336,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_colormatic",
+      "title": "COLORMATIC",
+      "icon": "minecraft:terracotta",
+      "x": 432,
+      "y": 48,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:black_mystical_flower",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 230
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:twilight_oak_sapling",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_village_destroyer",
+      "title": "Village Destroyer",
+      "icon": "minecraft:iron_block",
+      "x": 48,
+      "y": 48,
+      "description": [
+        "Kill an Iron Golem (but why?)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:villager_golem",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cow_spawn_egg",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:apple_emerald",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bountiful:bountyboard",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_one_stop_agricultural_market",
+      "title": "One-stop Agricultural Market",
+      "icon": "farmingforblockheads:market",
+      "x": 288,
+      "y": 192,
+      "description": [
+        "Obtain a market which allows you to buy saplings and seeds"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "farmingforblockheads:market",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 8
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_blood_deal",
+      "title": "Blood Deal",
+      "icon": "soa_additions:blood_sigil",
+      "x": 192,
+      "y": 0,
+      "description": [
+        "Craft these items to help you control the blood moon!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:blood_sigil",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bloody_sacrifice",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 256
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:raw_human_meat",
+          "count": 24
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_einstein_rosen_bridge",
+      "title": "Einstein-Rosen Bridge",
+      "icon": "minecraft:barrier",
+      "x": 288,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:waystone",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_capitalism",
+      "title": "Capitalism",
+      "icon": "minecraft:emerald",
+      "x": 96,
+      "y": 240,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cow_spawn_egg",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_tofu_power",
+      "title": "Tofu Power",
+      "icon": "minecraft:barrier",
+      "x": 336,
+      "y": 144,
+      "description": [
+        "Defeat the Tofu Gandlem to get a TofuForce Core"
+      ],
+      "dependencies": [
+        "cha_tofu_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_a_peaceful_life",
+      "title": "A Peaceful Life",
+      "icon": "minecraft:barrier",
+      "x": 432,
+      "y": 0,
+      "description": [
+        "Marry a villager and birth a child"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 9
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_iv",
+      "title": "Challenger IV",
+      "icon": "inventorypets:petachieve_30",
+      "min_deps": 30,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 144,
+      "description": [
+        "Complete 30 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_d false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_invisible_energy",
+      "title": "Invisible Energy",
+      "icon": "projecte:dark_matter",
+      "x": 96,
+      "y": 144,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "projecte:dark_matter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_i_m_in_charge_of_this_game",
+      "title": "I'm in Charge of This Game",
+      "icon": "minecraft:barrier",
+      "x": 240,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "scalinghealth:heart_crystal",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_no_more_terrible_looking_house",
+      "title": "No More Terrible Looking Houses",
+      "icon": "prefab:item_house",
+      "x": 96,
+      "y": 0,
+      "description": [
+        "Craft a one-key Starting House"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "prefab:item_house",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:red_bed",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_how_is_this_possible",
+      "title": "How is this possible?!",
+      "icon": "cookingforblockheads:cow_jar",
+      "x": 288,
+      "y": 96,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "cookingforblockheads:cow_jar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:leather",
+          "count": 30
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_super_chilling",
+      "title": "Super Chilling",
+      "icon": "additions:cryonium_ingot",
+      "x": 96,
+      "y": 384,
+      "description": [
+        "Defeat Frostmaw to get Cryonium"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "mowziemobs:frostmaw",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 7000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_cloud_storage",
+      "title": "Cloud Storage",
+      "icon": "enderstorage:ender_chest",
+      "x": 384,
+      "y": 384,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderstorage:ender_chest",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_underground_treasure",
+      "title": "Underground Treasure",
+      "icon": "minecraft:barrier",
+      "x": 144,
+      "y": 336,
+      "description": [
+        "Find a treasure urn. Beware of snakes!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_1up",
+      "title": "1Up",
+      "icon": "scalinghealth:medkit",
+      "x": 144,
+      "y": 48,
+      "description": [
+        "Get a Heart Container, crafted by heart crystal shards which can be occasionally found in dungeons or dropped from mobs."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "scalinghealth:medkit",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:golden_apple",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "scalinghealth:bandages",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_quick_house_moving",
+      "title": "Quick House Moving",
+      "icon": "minecraft:barrier",
+      "x": 144,
+      "y": 240,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:leather",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 70
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_the_depressed_man",
+      "title": "The Depressed Man",
+      "icon": "minecraft:barrier",
+      "x": 48,
+      "y": 144,
+      "description": [
+        "Kill the Mourner Boss"
+      ],
+      "dependencies": [
+        "cha_the_destroyer"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "defiledlands:the_mourner",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2300
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_who_doesn_t_want_enchanting_ta",
+      "title": "Who Doesn't Want Enchanting Table",
+      "icon": "minecraft:enchanting_table",
+      "x": 192,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:enchanting_table",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:anvil",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_never_fills_up",
+      "title": "Never Fills Up",
+      "icon": "minecraft:barrier",
+      "x": 288,
+      "y": 48,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_better_redstone",
+      "title": "Better Redstone",
+      "icon": "redstonepen:pen",
+      "x": 336,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "redstonepen:pen",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "redstonepen:pen",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_reliable_guardians",
+      "title": "Reliable Guardians",
+      "icon": "openmodularturrets:turret_base",
+      "x": 432,
+      "y": 240,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "openmodularturrets:turret_base",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_tofu_world",
+      "title": "Tofu World",
+      "icon": "theurgy:alchemical_sulfur_soybean",
+      "x": 288,
+      "y": 144,
+      "description": [
+        "Enter Tofu World by clicking a frame made with grilled tofu blocks and clicking it with a tofu staff.",
+        "",
+        "This isn't true, instead you need to make magic soybean paste, just to say you did it!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "theurgy:alchemical_sulfur_soybean",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_monument_looter",
+      "title": "Monument Looter",
+      "icon": "minecraft:prismarine_crystals",
+      "x": 432,
+      "y": 192,
+      "description": [
+        "Kill an Elder Guardian"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:elder_guardian",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:sea_lantern",
+          "count": 64
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_ancient_tome",
+      "title": "Ancient Tome",
+      "icon": "soa_additions:ancient_tome",
+      "x": 336,
+      "y": 240,
+      "description": [
+        "Get an ancient tome by killing mobs at high difficulty"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ancient_tome",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_city_protectors",
+      "title": "City Protectors",
+      "icon": "soa_additions:city_defender_medal",
+      "x": 144,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s), Click for more info"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:city_defender_medal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:experience_ingot",
+          "count": 30
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_ii",
+      "title": "Challenger II",
+      "icon": "inventorypets:petachieve_10",
+      "min_deps": 10,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 48,
+      "description": [
+        "Complete 10 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_b false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_perfect_material",
+      "title": "Perfect Material",
+      "icon": "mysticalagriculture:tinkering_table",
+      "x": 288,
+      "y": 0,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:tinkering_table",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_essence",
+          "count": 148
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_nasty_magnets",
+      "title": "Nasty Magnets",
+      "icon": "simplemagnets:basic_demagnetization_coil",
+      "x": 240,
+      "y": 192,
+      "description": [
+        "Craft a demagnetizer which disables item that increases pickup range in a radius"
+      ],
+      "dependencies": [
+        "cha_who_doesn_t_want_enchanting_ta"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "simplemagnets:basic_demagnetization_coil",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:white_dye",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:book",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_seasons",
+      "title": "Seasons!",
+      "icon": "sereneseasons:calendar",
+      "x": 144,
+      "y": 96,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "sereneseasons:calendar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "sereneseasons:season_sensor",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_grand_package_auto",
+      "title": "Grand Package Auto",
+      "icon": "packagedauto:packager",
+      "x": 384,
+      "y": 336,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "packagedauto:packager",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_i_m_ready_for_this",
+      "title": "I'm Ready For This",
+      "icon": "cyclic:water_candle",
+      "x": 384,
+      "y": 96,
+      "description": [
+        "Obtain a water candle which significantly boosts mob spawn rate nearby"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:water_candle",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_a_small_tree",
+      "title": "A small tree",
+      "icon": "bonsaitrees:bonsaipot",
+      "x": 0,
+      "y": 240,
+      "description": [
+        "Obtain a Bonsai Pot which helps planting trees!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bonsaitrees:bonsaipot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:oak_log",
+          "count": 128
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 120
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_v",
+      "title": "Challenger V",
+      "icon": "inventorypets:petachieve_40",
+      "min_deps": 40,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 192,
+      "description": [
+        "Complete 40 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_e false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 2
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_experienced_player",
+      "title": "Experienced Player",
+      "icon": "minecraft:barrier",
+      "x": 96,
+      "y": 48,
+      "description": [
+        "Submit 100 levels of XP"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald_block",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_shooting_stars",
+      "title": "Shooting Stars",
+      "icon": "nyx:fallen_star",
+      "x": 288,
+      "y": 336,
+      "description": [
+        "Pick up a fallen star, they sometimes fall from the sky at night"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "nyx:fallen_star",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_fooling_death",
+      "title": "Fooling Death",
+      "icon": "minecraft:totem_of_undying",
+      "x": 384,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:totem_of_undying",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 64
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_way_to_home",
+      "title": "Way to Home",
+      "icon": "minecraft:beacon",
+      "x": 384,
+      "y": 144,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:beacon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:gold_block",
+          "count": 9
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_mom_s_lunchbox",
+      "title": "Mom's Lunchbox",
+      "icon": "solapplepie:lunchbox",
+      "x": 240,
+      "y": 48,
+      "description": [
+        "Craft a lunch box which makes carrying and consuming food more easy"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solapplepie:lunchbox",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cooked_chicken",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cooked_rabbit",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cooked_beef",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cooked_porkchop",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_into_the_depths",
+      "title": "Into the Depths",
+      "icon": "deeperdarker:lily_flower",
+      "x": 0,
+      "y": 288,
+      "description": [
+        "Find the deep dark..."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "deeperdarker:otherside"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "prefab:block_compressed_stone",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_you_can_t_eat_this",
+      "title": "You Can't Eat This",
+      "icon": "minecraft:barrier",
+      "x": 336,
+      "y": 384,
+      "description": [
+        "Craft a Magic Mushroom, which increases the mining level of a tool when applied as modifier"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_huge_backpack",
+      "title": "Huge Backpack",
+      "icon": "simplybackpacks:ultimatebackpack",
+      "x": 336,
+      "y": 0,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "simplybackpacks:ultimatebackpack",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:purple_shulker_box",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_no_more_experience_losses",
+      "title": "No More Experience Losses",
+      "icon": "globalxp:xp_block",
+      "x": 48,
+      "y": 0,
+      "description": [
+        "Craft a XP Block to deposit your XP"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "globalxp:xp_block",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_feeling_lucky",
+      "title": "Feeling Lucky",
+      "icon": "chancecubes:chance_cube",
+      "x": 240,
+      "y": 144,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_you_got_lucky"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "chancecubes:chance_cube",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "chancecubes:chance_pendant_tier1",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:potion",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:splash_potion",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_omnipotent_tool",
+      "title": "Omnipotent Tool",
+      "icon": "morphtool:tool",
+      "x": 336,
+      "y": 96,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "morphtool:tool",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:dark_steel_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:twig_wand",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:wrench",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_infinistorage",
+      "title": "InfiniStorage",
+      "icon": "storagedrawers:creative_storage_upgrade",
+      "x": 48,
+      "y": 336,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "storagedrawers:creative_storage_upgrade",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "storagedrawers:upgrade_template",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_back_to_life",
+      "title": "Back to Life",
+      "icon": "soa_additions:medkit_super",
+      "x": 48,
+      "y": 240,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:medkit_super",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "scalinghealth:heart_crystal",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:medkit_super",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_quest_display",
+      "title": "Quest Display",
+      "icon": "ftbquests:screen",
+      "x": 96,
+      "y": 96,
+      "description": [
+        "Craft a Task Screen which can be used to submit RF, mana, etc"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ftbquests:screen",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 450
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_quick_make_a_wish_oh_wait_oh_n",
+      "title": "Quick, make a wish... oh wait... oh no!",
+      "icon": "nyx:meteor_ingot",
+      "x": 0,
+      "y": 48,
+      "description": [
+        "Get a meteor ingot from one of the meteors that fall from the sky"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "nyx:meteor_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:water_candle",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_drawer_network",
+      "title": "Drawer Network",
+      "icon": "storagedrawers:controller",
+      "x": 0,
+      "y": 336,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "storagedrawers:controller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "storagedrawers:compacting_drawers_3",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "storagedrawers:upgrade_template",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_knowledge_is_power",
+      "title": "Knowledge is Power",
+      "icon": "soa_additions:pearl_of_knowledge",
+      "x": 48,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_compressed_experience"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:pearl_of_knowledge",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:pearl_of_knowledge",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_foodie_s_heaven",
+      "title": "Foodie's Heaven",
+      "icon": "supplementaries:candy",
+      "x": 384,
+      "y": 48,
+      "description": [
+        "Enter Candy World by eating a magic piece of candy (there is no candy world, you just ate  some sketchy candy and now you are a pretty pretty princess...)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "supplementaries:candy",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:sugar",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_nature_s_blessing",
+      "title": "Nature's Blessing",
+      "icon": "additions:terra_alloy_ingot",
+      "x": 192,
+      "y": 384,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "additions:terra_alloy_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 25000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_daydreamer",
+      "title": "Daydreamer",
+      "icon": "comforts:hammock_black",
+      "x": 0,
+      "y": 96,
+      "description": [
+        "Build a hammock by connecting it to 2 opposite Rope and Nails that are 4 blocks apart. Hammocks can make you sleep at day!",
+        "",
+        "Black hammocks are the most comfy."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "comforts:hammock_black",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:red_bed",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "prefab:item_villager_houses",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_gigantic_storage",
+      "title": "Gigantic Storage",
+      "icon": "ironchest:iron_chest",
+      "x": 96,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ironchest:iron_chest",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ironchest:iron_chest",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_music",
+      "title": "Music!",
+      "icon": "ambience:soundnizer",
+      "x": 336,
+      "y": 336,
+      "description": [
+        "Craft a Soundnizer to play the music you like!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ambience:soundnizer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_fast_farming",
+      "title": "Fast Farming",
+      "icon": "mysticalagriculture:inferium_growth_accelerator",
+      "x": 288,
+      "y": 384,
+      "description": [
+        "Craft a Growth Accelerator that accelerates crop growth when placed beneath the farmland. Placing multiple stacks the effect."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_growth_accelerator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_growth_accelerator",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_even_larger_storage",
+      "title": "Even Larger Storage",
+      "icon": "actuallyadditions:block_giant_chest_large",
+      "x": 144,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_gigantic_storage"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:block_giant_chest_large",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_cooking_for_blockheads",
+      "title": "Cooking for Blockheads",
+      "icon": "cookingforblockheads:cooking_table",
+      "x": 0,
+      "y": 0,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "cookingforblockheads:cooking_table",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:apple",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cookingforblockheads:fridge",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cookingforblockheads:sink",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cow_spawn_egg",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cookingforblockheads:tool_rack",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cookingforblockheads:milk_jar",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_compressed_experience",
+      "title": "Compressed Experience",
+      "icon": "create:experience_block",
+      "x": 0,
+      "y": 192,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "create:experience_block",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:experience_singularity",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_moving_in_style",
+      "title": "Moving in Style",
+      "icon": "minecraft:barrier",
+      "x": 384,
+      "y": 0,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_eternity",
+      "title": "Eternity",
+      "icon": "projecte:dark_matter",
+      "x": 144,
+      "y": 144,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_invisible_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "projecte:dark_matter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "projecte:dark_matter",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_infernal_metal",
+      "title": "Infernal Metal",
+      "icon": "soa_additions:infernium_ingot",
+      "x": 144,
+      "y": 384,
+      "description": [
+        "Defeat Barako, the Sun Chief, and get Infernium in the Nether"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:infernium_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 12000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_i_can_grow_everything",
+      "title": "I Can Grow Everything",
+      "icon": "mysticalagradditions:insanium_essence",
+      "x": 240,
+      "y": 0,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:insanium_essence",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_essence",
+          "count": 24
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_power_of_creative",
+      "title": "Power of Creative",
+      "icon": "soa_additions:creative_soul",
+      "x": 384,
+      "y": 240,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:creative_soul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_vii",
+      "title": "Challenger VII",
+      "icon": "inventorypets:petachieve_60",
+      "min_deps": 60,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 288,
+      "description": [
+        "Complete 60 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_g false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_viii",
+      "title": "Challenger VIII",
+      "icon": "inventorypets:petachieve_60",
+      "min_deps": 89,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 336,
+      "description": [
+        "Complete all other Challenge Quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_all false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 30
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_condensed_essence",
+      "title": "Condensed Essence",
+      "icon": "appflux:charged_redstone",
+      "x": 0,
+      "y": 384,
+      "description": [
+        "Not quite flux dust... but close!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "appflux:charged_redstone",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "fluxnetworks:flux_dust",
+          "count": 32
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_bounty_hunter_37",
+      "title": "Bounty Hunter",
+      "icon": "bountiful:bountyboard",
+      "x": 336,
+      "y": 288,
+      "description": [
+        "Find a bounty board in the village, you can pick up bounty quests on it or take it to your base!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bountiful:bountyboard",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_hell_sailor",
+      "title": "Hell Sailor",
+      "icon": "minecraft:barrier",
+      "x": 96,
+      "y": 288,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:obsidian",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_soul_of_withering",
+      "title": "Soul of Withering",
+      "icon": "soa_additions:wither_soul",
+      "x": 288,
+      "y": 240,
+      "description": [
+        "Obtain a Soul of Withering by defeating the Wither at highest difficulty"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:wither_soul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_expensive_food",
+      "title": "Expensive Food",
+      "icon": "createfood:white_chocolate_toast",
+      "x": 240,
+      "y": 336,
+      "description": [
+        "White chocolate on toast! It's not a nether star, but it's close enough!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "createfood:white_chocolate_toast",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_bane_of_evil",
+      "title": "Bane of Evil",
+      "icon": "torchmaster:megatorch",
+      "x": 192,
+      "y": 96,
+      "description": [
+        "Obtain a Mega Torch which prevents mobs from spawning within a large area"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "torchmaster:megatorch",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "torchmaster:feral_flare_lantern",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_flux_control",
+      "title": "Flux Control",
+      "icon": "fluxnetworks:fluxcontroller",
+      "x": 48,
+      "y": 384,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "cha_condensed_essence"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "fluxnetworks:fluxcontroller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_the_origin",
+      "title": "The Origin",
+      "icon": "minecraft:compass",
+      "x": 192,
+      "y": 48,
+      "description": [
+        "Reach coordinate (0,0)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:waystone",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:warp_scroll",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ender_pearl",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_tower_conquerer",
+      "title": "Tower Conquerer",
+      "icon": "minecraft:barrier",
+      "x": 144,
+      "y": 0,
+      "description": [
+        "Reach the last floor of a battle tower and kill the boss there"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "battletowers:golem",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "lootbags:loot_bag",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_challenger_iii",
+      "title": "Challenger III",
+      "icon": "inventorypets:petachieve_20",
+      "min_deps": 20,
+      "show_deps": false,
+      "shape": "square",
+      "x": 528,
+      "y": 96,
+      "description": [
+        "Complete 20 challenge quests"
+      ],
+      "dependencies": [
+        "cha_a_peaceful_life",
+        "cha_sand_but_better",
+        "cha_cosmos_in_your_hand",
+        "cha_bane_of_evil",
+        "cha_invisible_energy",
+        "cha_no_more_experience_losses",
+        "cha_einstein_rosen_bridge",
+        "cha_perfect_material",
+        "cha_foodie_s_heaven",
+        "cha_who_doesn_t_want_enchanting_ta",
+        "cha_feel_the_motion",
+        "cha_knowledge_is_power",
+        "cha_compressed_experience",
+        "cha_the_origin",
+        "cha_accessory_reforge",
+        "cha_monument_looter",
+        "cha_where_did_the_pandas_go",
+        "cha_cooking_for_blockheads",
+        "cha_flying_magic",
+        "cha_tofu_power",
+        "cha_music",
+        "cha_bounty_hunter",
+        "cha_grand_package_auto",
+        "cha_tofu_world",
+        "cha_underground_treasure",
+        "cha_i_can_grow_everything",
+        "cha_i_love_math",
+        "cha_you_got_lucky",
+        "cha_a_blessing_of_the_lord",
+        "cha_gigantic_storage",
+        "cha_tower_conquerer",
+        "cha_gimme_your_soul",
+        "cha_drawer_network",
+        "cha_even_larger_storage",
+        "cha_draconic_soul",
+        "cha_bounty_hunter_37",
+        "cha_i_m_in_charge_of_this_game",
+        "cha_hell_sailor",
+        "cha_moving_in_style",
+        "cha_into_the_depths",
+        "cha_no_more_terrible_looking_house",
+        "cha_village_destroyer",
+        "cha_infinistorage",
+        "cha_ancient_tome",
+        "cha_shooting_stars",
+        "cha_this_game_is_too_easy",
+        "cha_building_helper",
+        "cha_never_fills_up",
+        "cha_godsend_gift",
+        "cha_colormatic",
+        "cha_better_redstone",
+        "cha_seasons",
+        "cha_daydreamer",
+        "cha_back_to_life",
+        "cha_flux_control",
+        "cha_i_m_ready_for_this",
+        "cha_professional_bounty_hunter",
+        "cha_nasty_magnets",
+        "cha_expensive_food",
+        "cha_experienced_player",
+        "cha_you_can_t_eat_this",
+        "cha_infernal_metal",
+        "cha_a_small_tree",
+        "cha_capitalism",
+        "cha_condensed_essence",
+        "cha_feeling_lucky",
+        "cha_one_stop_agricultural_market",
+        "cha_mom_s_lunchbox",
+        "cha_omnipotent_tool",
+        "cha_reliable_guardians",
+        "cha_eternity",
+        "cha_cloud_storage",
+        "cha_quest_display",
+        "cha_city_protectors",
+        "cha_the_destroyer",
+        "cha_way_to_home",
+        "cha_quick_house_moving",
+        "cha_1up",
+        "cha_the_depressed_man",
+        "cha_huge_backpack",
+        "cha_blood_deal",
+        "cha_quick_make_a_wish_oh_wait_oh_n",
+        "cha_fooling_death",
+        "cha_power_of_creative",
+        "cha_super_chilling",
+        "cha_soul_of_withering",
+        "cha_fast_farming",
+        "cha_how_is_this_possible",
+        "cha_nature_s_blessing"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p challenger_c false"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "cha_this_game_is_too_easy",
+      "title": "This Game is Too Easy",
+      "icon": "soa_additions:death_coin",
+      "x": 192,
+      "y": 336,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:death_coin",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

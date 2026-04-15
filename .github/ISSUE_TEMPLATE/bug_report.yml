@@ -1,0 +1,92 @@
+name: Bug report
+description: Report a crash, broken mechanic, or unexpected behavior in the modpack.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report!
+
+        **Before submitting**, please confirm:
+        - [ ] You are on the latest modpack version.
+        - [ ] This is not an issue with `soa_additions` content (quests, custom items, custom loot, etc.).
+              Those belong at https://github.com/YoItSoul/soa_additions/issues
+        - [ ] You have searched existing issues for duplicates.
+  - type: input
+    id: modpack-version
+    attributes:
+      label: Modpack version
+      placeholder: "e.g. 1.4.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: launcher
+    attributes:
+      label: Launcher
+      options:
+        - CurseForge
+        - Prism Launcher
+        - MultiMC
+        - ATLauncher
+        - FTB App
+        - Modrinth App
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: Side
+      options:
+        - Singleplayer
+        - Dedicated server
+        - LAN / Open to LAN
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Do '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / crash report
+      description: |
+        Paste a link to your `logs/latest.log`, `logs/debug.log`, or `crash-reports/*.txt`.
+        Use a paste service (mclo.gs, gist) — do not paste the full log inline.
+      placeholder: "https://mclo.gs/..."
+    validations:
+      required: false
+  - type: textarea
+    id: mods
+    attributes:
+      label: Mod changes
+      description: Have you added, removed, or updated any mods from the default pack? If yes, list them.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+    validations:
+      required: false

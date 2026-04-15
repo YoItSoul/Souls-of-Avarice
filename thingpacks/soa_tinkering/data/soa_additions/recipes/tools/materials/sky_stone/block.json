@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/sky_stone"
+  },
+  "material": "soa_additions:sky_stone",
+  "needed": 1,
+  "value": 9,
+  "leftover": {
+    "count": 1,
+    "tag": "forge:gems/sky_stone"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "lootbags:loot",
+  "name": "Epic Loot Crate",
+  "color": "#FF55FF",
+  "rarity": "epic",
+  "output": {
+    "table": "greedycraft:lootbags/epic"
+  }
+}

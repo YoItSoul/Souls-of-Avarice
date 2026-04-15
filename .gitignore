@@ -1,0 +1,43 @@
+# Ignore everything by default (whitelist approach for modpack repos)
+/*
+
+# Tracked directories
+!/config/
+!/kubejs/
+!/patchouli_books/
+!/scripts/
+!/soa_additions/
+!/thingpacks/
+
+# Tracked files
+!/options.txt
+!/servers.dat
+!/.gitignore
+!/.gitattributes
+!/.github/
+!/README.md
+!/LICENSE
+
+# ---- Within tracked directories ----
+
+# kubejs runtime-generated content
+kubejs/cache/
+kubejs/logs/
+kubejs/exported/
+kubejs/probe_dumps/
+kubejs/**/.probe/
+kubejs/**/*.log
+
+# config runtime noise
+config/**/*.log
+config/**/*.log.gz
+config/**/logs/
+config/**/cache/
+config/**/.cache/
+
+# Common runtime crud that can appear anywhere
+**/.DS_Store
+**/Thumbs.db
+**/*.bak
+**/*.old
+**/*.tmp

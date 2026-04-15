@@ -1,0 +1,99 @@
+
+[soa_additions]
+	#If true, breaking high-tier ores without the required tool deals heavy damage to the tool.
+	enableToolRequirements = false
+	#If true, Grove Boon blocks apply their effects.
+	enableGroveBoons = true
+	#Damage multiplier applied to tools that break blocks they cannot mine.
+	#Range: 1.0 ~ 100.0
+	toolDamageMultiplier = 10.0
+	#Server-enforced pack mode. When set to a valid mode (casual, adventure, expert),
+	#the server forces and locks this mode on startup. Players will not be able to
+	#change it, and any pack-mode selection quest will auto-complete on login.
+	#Leave empty (default) to let players choose their own mode.
+	#Intended for dedicated/multiplayer servers where the admin picks the mode.
+	serverPackMode = ""
+
+	[soa_additions.jvmProfiler]
+		#Background JVM/server telemetry sampler. Writes CSV + summary to logs/soa_jvm_stats/.
+		enabled = true
+		#Sample interval in seconds. Lower = more detail, higher = less overhead. Default 10.
+		#Range: 1 ~ 3600
+		intervalSeconds = 10
+		#Number of past session files to retain. Older ones are auto-deleted on startup.
+		#Range: 1 ~ 1000
+		keepSessions = 20
+		#If true, automatically capture a 30s Java Flight Recording when a long GC pause or near-OOM heap is detected.
+		autoJfrOnSpike = true
+
+	[soa_additions.questWebOverlay]
+		#Starts a lightweight HTTP server that serves a quest book overlay page.
+		#Players get a unique URL on login so they can view their quest progress
+		#on a second screen (phone, tablet, second monitor) with live updates.
+		#Default: true.
+		enabled = true
+		#HTTP port for the quest overlay server. Default: 25580.
+		#Range: 1024 ~ 65535
+		port = 25580
+
+	[soa_additions.telemetry]
+		#Sends one JSON report per launch to the modpack author's telemetry endpoint.
+		#Contents: Minecraft username + UUID, OS/CPU/RAM, JVM version + args (secrets stripped),
+		#heap size, load time, mod count, GPU. NO file paths, NO env vars, NO world data.
+		#Used to diagnose crashes and improve pack performance. Set to false to disable entirely.
+		#An anonymous install UUID is stored at config/soa_additions/install_id.txt — delete
+		#that file to rotate your identity. Default: true.
+		enabled = true
+		#HTTPS endpoint that receives the telemetry JSON POST.
+		#Defaults to the official Souls of Avarice telemetry server.
+		endpoint = "https://telemetry.soulsofavarice.com/report"
+		#If true and spark is installed, automatically run a 120-second spark profile
+		#shortly after the server starts and attach the resulting spark.lucko.me URL
+		#to the telemetry report. Extremely helpful for debugging player performance
+		#issues because we can see their flame graph without asking them for one.
+		#Minimal overhead — spark's sampler runs at a low frequency. Default: true.
+		autoSparkProfile = true
+		#How often (in minutes) to send an 'is playing' heartbeat while in a world.
+		#Each heartbeat upserts the player's row with is_playing=true, the current
+		#dimension, fresh heap stats, and a last_active_at timestamp. The dashboard
+		#treats rows with no heartbeat in 10 minutes as offline. Default: 5.
+		#Range: 1 ~ 60
+		heartbeatMinutes = 5
+
+	[soa_additions.packmodeDifficulty]
+		#Gameplay effects applied per pack mode, inspired by GreedyCraft.
+		#Force game difficulty to Hard on every player login.
+		forceHardDifficulty = true
+		#Health multiplier for boss mobs in Expert mode. 1.5 = +50% HP.
+		#Range: 1.0 ~ 10.0
+		expertBossHealthMultiplier = 1.5
+		#Natural regen speed multiplier for Casual. Lower = faster regen.
+		#Applied as a regen-interval scale: 0.8 means 80% of normal interval (faster).
+		#Range: 0.1 ~ 10.0
+		casualRegenMultiplier = 0.8
+		#Natural regen speed multiplier for Adventure.
+		#Range: 0.1 ~ 10.0
+		adventureRegenMultiplier = 1.2
+		#Natural regen speed multiplier for Expert. 2.5 = much slower regen.
+		#Range: 0.1 ~ 10.0
+		expertRegenMultiplier = 2.5
+		#Starvation damage (half-hearts) in Casual mode.
+		#Range: 1 ~ 20
+		casualStarvationDamage = 2
+		#Starvation damage (half-hearts) in Adventure mode.
+		#Range: 1 ~ 20
+		adventureStarvationDamage = 3
+		#Starvation damage (half-hearts) in Expert mode.
+		#Range: 1 ~ 20
+		expertStarvationDamage = 4
+		#Max exhaustion scale for Casual (GreedyCraft style).
+		#Higher = slower hunger drain. 2.5 means hunger drains at 40% normal speed.
+		#Range: 0.1 ~ 10.0
+		casualExhaustionMultiplier = 2.5
+		#Max exhaustion scale for Adventure. 0.75 means slightly faster hunger drain.
+		#Range: 0.1 ~ 10.0
+		adventureExhaustionMultiplier = 0.75
+		#Max exhaustion scale for Expert. 0.5 means hunger drains at 2x normal speed.
+		#Range: 0.1 ~ 10.0
+		expertExhaustionMultiplier = 0.5
+

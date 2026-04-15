@@ -1,0 +1,69 @@
+
+#Black Hole Physics Settings
+[physics]
+	#Default Schwarzschild radius in blocks (1 block = 1 meter).
+	#Real formula: Rs = 2GM/c^2.
+	#Range: 0.5 - 20.0
+	#Range: 0.5 ~ 20.0
+	defaultSchwarzschildRadius = 3.0
+	#Maximum range (blocks) for gravitational pull on entities.
+	#Range: 16.0 ~ 256.0
+	maxGravitationalRange = 64.0
+	#Maximum velocity (blocks/tick) an entity can be accelerated to.
+	#Range: 0.5 ~ 10.0
+	maxPullVelocity = 3.0
+	#Multiplier for gravitational acceleration. 0.0008 is the gameplay default.
+	#Range: 1.0E-4 ~ 1.0
+	gravityScale = 8.0E-4
+	#Destruction radius = Rs * this. Default 50 → 150 block radius at Rs=3.
+	#Range: 1.0 ~ 200.0
+	tidalDestructionMultiplier = 50.0
+	#Scale factor for block blast resistance vs tidal force.
+	#Range: 1.0 ~ 10000.0
+	resistanceScale = 100.0
+	#Maximum blocks destroyed per tick.
+	#Range: 1 ~ 16384
+	maxBlocksPerTick = 1024
+	#Ticks between block destruction passes.
+	#Range: 1 ~ 20
+	blockDestructionInterval = 1
+	#Enable Hawking radiation for small black holes (Rs < 1).
+	enableHawkingRadiation = true
+	#Whether items are destroyed when crossing the event horizon.
+	destroyItems = true
+	#Whether players are killed when crossing the event horizon.
+	killPlayers = true
+
+#Rendering Settings
+[rendering]
+	#Enable gravitational lensing post-processing shader.
+	enableLensing = true
+	#Enable the accretion disk visual effect.
+	enableAccretionDisk = true
+	#Number of angular segments for accretion disk geometry.
+	#Range: 32 ~ 256
+	accretionDiskSegments = 96
+	#Number of radial rings for accretion disk geometry.
+	#Range: 4 ~ 32
+	accretionDiskRings = 12
+	#Multiplier on the gravitational deflection.
+	#Range: 0.0 ~ 5.0
+	lensingStrength = 1.5
+	#Maximum number of black holes to apply lensing for simultaneously.
+	#Range: 1 ~ 8
+	maxLensedBlackHoles = 4
+	#Minecraftify mode: cube-shaped black hole, blocky disk, box jets.
+	minecraftify = false
+
+#Performance Settings
+[performance]
+	#Ticks between gravitational pull updates on entities.
+	#Range: 1 ~ 10
+	entityPullInterval = 1
+	#Maximum entities affected by gravity per black hole per tick.
+	#Range: 16 ~ 512
+	maxEntitiesPulled = 128
+	#Radius of chunks to force-load around each black hole.
+	#Range: 1 ~ 8
+	chunkLoadRadius = 3
+

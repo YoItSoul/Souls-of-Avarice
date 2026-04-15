@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/primal_metal"
+  },
+  "material": "soa_additions:primal_metal",
+  "needed": 9,
+  "value": 1
+}

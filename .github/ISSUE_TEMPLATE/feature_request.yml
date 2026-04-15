@@ -1,0 +1,56 @@
+name: Feature request
+description: Suggest an idea, balance change, or new content for the modpack.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement!
+
+        **Note:** Requests for new `soa_additions` content (quests, custom items,
+        custom loot, etc.) belong at https://github.com/YoItSoul/soa_additions/issues
+        — not here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What gap, frustration, or opportunity does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Area affected
+      multiple: true
+      options:
+        - Mod list (add/remove/update)
+        - Config tuning
+        - KubeJS scripts
+        - Recipes / crafting
+        - Progression / quests (non-soa_additions)
+        - Performance
+        - UI / UX (FancyMenu, etc.)
+        - Server-side behavior
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+    validations:
+      required: false

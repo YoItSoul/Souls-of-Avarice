@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:scorching"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:solar_powered"
+    }
+  ]
+}

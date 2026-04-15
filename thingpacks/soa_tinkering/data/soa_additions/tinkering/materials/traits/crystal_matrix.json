@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:crystalstrike"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:shock"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:insatiable"
+    }
+  ]
+}

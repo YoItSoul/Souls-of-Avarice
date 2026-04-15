@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:ingots/starmetal"
+  },
+  "material": "soa_additions:starmetal",
+  "needed": 1,
+  "value": 1
+}

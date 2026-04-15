@@ -1,0 +1,886 @@
+{
+  "id": "chapter_abyssalcraft",
+  "title": "AbyssalCraft",
+  "icon": "minecraft:crying_obsidian",
+  "sort_order": 170,
+  "description": "Quests for the AbyssalCraft progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "visibility": "invisible",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "ac_the_fearless",
+      "title": "The Fearless",
+      "icon": "soa_additions:bravery_certificate",
+      "x": 187,
+      "y": 58,
+      "description": [
+        "Only the brave ones who defeated Valkyrie in the Aether with a Bravery Certificate shall explore the Dreadlands"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bravery_certificate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_devil_s_lair",
+      "title": "Devil's Lair",
+      "icon": "minecraft:barrier",
+      "x": 0,
+      "y": 14,
+      "description": [
+        "Find a Shoggoth's Lair and kill some Lesser Shoggoths"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "abyssalcraft:lessershoggoth",
+          "count": 5
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_mystic_stone",
+      "title": "Mystic Stone",
+      "icon": "minecraft:barrier",
+      "x": 43,
+      "y": 14,
+      "description": [
+        "Original items: Barrier (minecraft)"
+      ],
+      "dependencies": [
+        "ac_devil_s_lair"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_annihilator",
+      "title": "Annihilator",
+      "icon": "abyssalcraft:oc",
+      "x": 72,
+      "y": 14,
+      "description": [
+        "Original items: Oc (abyssalcraft)"
+      ],
+      "dependencies": [
+        "ac_mystic_stone"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:oc",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_abyssal_wastelands",
+      "title": "Abyssal Wastelands",
+      "icon": "abyssalcraft:abyssal_stone",
+      "x": 115,
+      "y": 14,
+      "description": [
+        "Visit Abyssal Wastelands with your Gateway Key"
+      ],
+      "dependencies": [
+        "ac_annihilator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "abyssalcraft:abyssal_wastelands"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_face_the_fear",
+      "title": "Face the Fear",
+      "icon": "abyssalcraft:psdl",
+      "x": 144,
+      "y": 43,
+      "description": [
+        "Original items: Psdl (abyssalcraft)"
+      ],
+      "dependencies": [
+        "ac_abyssal_wastelands"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:psdl",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:gold_ingot",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:enchanting_table",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_deeper_knowledge",
+      "title": "Deeper Knowledge",
+      "icon": "minecraft:barrier",
+      "x": 130,
+      "y": 0,
+      "description": [
+        "Upgrade your necronomicon"
+      ],
+      "dependencies": [
+        "ac_abyssal_wastelands"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_look_into_the_abyss",
+      "title": "Look Into the Abyss",
+      "icon": "minecraft:barrier",
+      "x": 158,
+      "y": 0,
+      "description": [
+        "Defeat Asorah, the Fallen and get the Eye of the Abyss"
+      ],
+      "dependencies": [
+        "ac_deeper_knowledge"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 4500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_the_dreadlands",
+      "title": "The Dreadlands",
+      "icon": "abyssalcraft:gatewaykeydl",
+      "x": 187,
+      "y": 14,
+      "description": [
+        "Enter the Dreadlands"
+      ],
+      "dependencies": [
+        "ac_the_fearless",
+        "ac_face_the_fear",
+        "ac_look_into_the_abyss"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "abyssalcraft:the_dreadlands"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:splash_potion",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:water_candle",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_book_of_dread",
+      "title": "Book of Dread",
+      "icon": "minecraft:barrier",
+      "x": 216,
+      "y": 14,
+      "description": [
+        "Original items: Barrier (minecraft)"
+      ],
+      "dependencies": [
+        "ac_the_dreadlands"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_altar_of_chagaroth_bottom",
+      "title": "Altar of Chagaroth (Bottom)",
+      "icon": "abyssalcraft:dreadaltarbottom",
+      "x": 245,
+      "y": 43,
+      "description": [
+        "Original items: Dreadaltarbottom (abyssalcraft)"
+      ],
+      "dependencies": [
+        "ac_book_of_dread"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:dreadaltarbottom",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_altar_of_chagaroth_top",
+      "title": "Altar of Chagaroth (Top)",
+      "icon": "abyssalcraft:dreadaltartop",
+      "x": 245,
+      "y": 0,
+      "description": [
+        "Get the upper part of the Altar of Chagaroth"
+      ],
+      "dependencies": [
+        "ac_book_of_dread"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:dreadaltartop",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_conquer_fear",
+      "title": "Conquer Fear",
+      "icon": "abyssalcraft:dreadkey",
+      "x": 274,
+      "y": 14,
+      "description": [
+        "Defeat Chagaroth and get its key"
+      ],
+      "dependencies": [
+        "ac_altar_of_chagaroth_bottom",
+        "ac_altar_of_chagaroth_top"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:dreadkey",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_bottom_of_the_abyss",
+      "title": "Bottom of the Abyss",
+      "icon": "abyssalcraft:omothol_stone",
+      "x": 317,
+      "y": 14,
+      "description": [
+        "Transmute Chagaroth's key to reach the Omothol"
+      ],
+      "dependencies": [
+        "ac_conquer_fear"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "abyssalcraft:omothol"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:waystone",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_crystalizer",
+      "title": "Crystalizer",
+      "icon": "abyssalcraft:crystallizer",
+      "x": 216,
+      "y": 43,
+      "description": [
+        "Original items: Crystallizer (abyssalcraft)"
+      ],
+      "dependencies": [
+        "ac_book_of_dread"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:crystallizer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_abyssal_gatekeeper",
+      "title": "Abyssal Gatekeeper",
+      "icon": "abyssalcraft:gatekeeperessence",
+      "x": 346,
+      "y": 43,
+      "description": [
+        "Defeat J'zahar in the temple at the center of Omothol"
+      ],
+      "dependencies": [
+        "ac_bottom_of_the_abyss"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:gatekeeperessence",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p lunatic_cultist false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_book_of_omothol",
+      "title": "Book of Omothol",
+      "icon": "minecraft:barrier",
+      "x": 346,
+      "y": 0,
+      "description": [
+        "Original items: Barrier (minecraft)"
+      ],
+      "dependencies": [
+        "ac_bottom_of_the_abyss"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_where_am_i_let_me_outta_here",
+      "title": "Where am I? Let me outta here!",
+      "icon": "abyssalcraft:stone",
+      "x": 317,
+      "y": 72,
+      "description": [
+        "Fall into the void in Omothol to visit the Dark Realms"
+      ],
+      "dependencies": [
+        "ac_bottom_of_the_abyss"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "abyssalcraft:the_dark_realm"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:charm_void",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_book_of_abyss",
+      "title": "Book of Abyss",
+      "icon": "minecraft:barrier",
+      "x": 374,
+      "y": 14,
+      "description": [
+        "Original items: Barrier (minecraft)"
+      ],
+      "dependencies": [
+        "ac_abyssal_gatekeeper",
+        "ac_book_of_omothol"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 12000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_conquer_abyss",
+      "title": "Conquer Abyss",
+      "icon": "minecraft:barrier",
+      "x": 403,
+      "y": 14,
+      "description": [
+        "Original items: Barrier (minecraft)"
+      ],
+      "dependencies": [
+        "ac_book_of_abyss"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 20000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p lunatic_cultist false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_i_m_not_doomed_yet",
+      "title": "I'm not doomed yet",
+      "icon": "minecraft:barrier",
+      "x": 446,
+      "y": 14,
+      "description": [
+        "Defeat Sacthoth, the Harbinger of Doom and get its sword"
+      ],
+      "dependencies": [
+        "ac_conquer_abyss"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 40000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_drainstaff_upgrade",
+      "title": "Drainstaff Upgrade!",
+      "icon": "minecraft:barrier",
+      "x": 101,
+      "y": 0,
+      "description": [
+        "Upgrade your Drainstaff"
+      ],
+      "dependencies": [
+        "ac_abyssal_wastelands"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:barrier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_giant_chains",
+      "title": "Giant Chains",
+      "icon": "abyssalcraft:coralium_stone",
+      "x": 101,
+      "y": 43,
+      "description": [
+        "Mine some Coralium Stones at the top of the giant chains in Abyssal Wastelands"
+      ],
+      "dependencies": [
+        "ac_abyssal_wastelands"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:coralium_stone",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ac_transmutation",
+      "title": "Transmutation",
+      "icon": "abyssalcraft:transmutator",
+      "x": 101,
+      "y": 72,
+      "description": [
+        "Original items: Transmutator (abyssalcraft)"
+      ],
+      "dependencies": [
+        "ac_giant_chains"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:transmutator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

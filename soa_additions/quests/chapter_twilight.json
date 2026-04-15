@@ -1,0 +1,627 @@
+{
+  "id": "chapter_twilight",
+  "title": "Twilight Forest",
+  "icon": "twilightforest:twilight_portal_miniature_structure",
+  "sort_order": 60,
+  "description": "Quests for the Twilight Forest progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "tf_twilight_gem",
+      "title": "Key to the Twilight Forest",
+      "icon": "twilightforest:twilight_portal_miniature_structure",
+      "x": 0,
+      "y": 96,
+      "description": [
+        "Obtain a Twilight Gem"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:twilight_gem",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:poppy",
+          "count": 12
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_new_journey",
+      "title": "A New Journey",
+      "icon": "twilightforest:twilight_portal_miniature_structure",
+      "x": 48,
+      "y": 96,
+      "description": [
+        "Visit Twilight Forest"
+      ],
+      "dependencies": [
+        "tf_twilight_gem"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "twilightforest:twilight_forest"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:magic_map",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p twilight_forest false"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:root"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_naga",
+      "title": "Snake Game",
+      "icon": "twilightforest:naga_trophy",
+      "x": 96,
+      "y": 96,
+      "description": [
+        "Defeat Naga"
+      ],
+      "dependencies": [
+        "tf_new_journey"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:naga",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:splash_potion",
+          "count": 12
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:naga_scale",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_naga"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_lich",
+      "title": "The Lich",
+      "icon": "twilightforest:lich_trophy",
+      "shape": "square",
+      "x": 144,
+      "y": 96,
+      "description": [
+        "Defeat the Lich"
+      ],
+      "dependencies": [
+        "tf_naga"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:lich",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:ironwood_ingot",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:steeleaf_ingot",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:potion_infuser",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_lich"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_knight_phantom",
+      "title": "Like a Shadow",
+      "icon": "twilightforest:knight_phantom_trophy",
+      "x": 192,
+      "y": 96,
+      "description": [
+        "Defeat Knight Phantom"
+      ],
+      "dependencies": [
+        "tf_lich"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:knight_phantom",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:knightmetal_ingot",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_knights"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_minoshroom",
+      "title": "Looks Delicious",
+      "icon": "twilightforest:minoshroom_trophy",
+      "x": 192,
+      "y": 48,
+      "description": [
+        "Defeat Minoshroom"
+      ],
+      "dependencies": [
+        "tf_lich"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:minoshroom",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:mazebreaker_pickaxe",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cow_spawn_egg",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_labyrinth"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:mazebreaker"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_hydra",
+      "title": "Hail Hydra",
+      "icon": "twilightforest:hydra_trophy",
+      "x": 240,
+      "y": 48,
+      "description": [
+        "Defeat Hydra"
+      ],
+      "dependencies": [
+        "tf_minoshroom"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:hydra",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:fiery_ingot",
+          "count": 12
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:twilight_oak_sapling",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:hydra_chop",
+          "count": 12
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_hydra"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_alpha_yeti",
+      "title": "Thicc Guy",
+      "icon": "twilightforest:alpha_yeti_fur",
+      "x": 192,
+      "y": 160,
+      "description": [
+        "Defeat Alpha Yeti"
+      ],
+      "dependencies": [
+        "tf_lich"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:alpha_yeti",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:alpha_yeti_fur",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_yeti"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_ur_ghast",
+      "title": "Guardian of the Tower",
+      "icon": "twilightforest:ur_ghast_trophy",
+      "x": 240,
+      "y": 96,
+      "description": [
+        "Defeat Ur-Ghast"
+      ],
+      "dependencies": [
+        "tf_knight_phantom"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:ur_ghast",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:carminite",
+          "count": 12
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:twilight_oak_sapling",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:ghast_seeds",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_ur_ghast"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_snow_queen",
+      "title": "Do You Wanna Build a Snowman",
+      "icon": "twilightforest:snow_queen_trophy",
+      "x": 240,
+      "y": 160,
+      "description": [
+        "Defeat Snow Queen"
+      ],
+      "dependencies": [
+        "tf_alpha_yeti"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:snow_queen",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:ice_bow",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:ice_sword",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:twilight_oak_sapling",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_glacier"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_highlands",
+      "title": "A Journey's End Is the Beginning of Another",
+      "icon": "twilightforest:trollsteinn",
+      "shape": "square",
+      "x": 304,
+      "y": 96,
+      "description": [
+        "Challenge the Highlands"
+      ],
+      "dependencies": [
+        "tf_ur_ghast",
+        "tf_snow_queen",
+        "tf_hydra"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_merge"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tf_giant",
+      "title": "Giant in the Sky",
+      "icon": "twilightforest:giant_pickaxe",
+      "shape": "square",
+      "x": 368,
+      "y": 96,
+      "description": [
+        "Defeat the Giants, and find the Lamp of Cinders beneath the floating island"
+      ],
+      "dependencies": [
+        "tf_highlands"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:giant_sword",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:giant_pickaxe",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:lamp_of_cinders",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:flux_magnet",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:flux_saw",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:flux_drill",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:charm_torch",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/advancement grant @p only twilightforest:progress_troll"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

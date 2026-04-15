@@ -1,0 +1,997 @@
+{
+  "id": "chapter_bloodmagic",
+  "title": "Blood Magic",
+  "icon": "bloodmagic:altar",
+  "sort_order": 120,
+  "description": "Quests for the Blood Magic progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "blo_bloodmagic_qualification",
+      "title": "Bloodmagic Qualification",
+      "icon": "bloodmagic:weakbloodorb",
+      "x": 0,
+      "y": 64,
+      "description": [
+        "To begin Blood Magic research, you need to get the required gamestage which can be obtained from Astral Sorcery questline"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_soul_hunter",
+      "title": "Soul Hunter",
+      "icon": "bloodmagic:soulsnare",
+      "shape": "square",
+      "x": 64,
+      "y": 64,
+      "description": [
+        "Original items: Soulsnare (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_bloodmagic_qualification"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulsnare",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulsnare",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_soul_stealer",
+      "title": "Soul Stealer",
+      "icon": "bloodmagic:basemonstersoul",
+      "x": 112,
+      "y": 48,
+      "description": [
+        "Original items: Basemonstersoul (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_soul_hunter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:basemonstersoul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_tinkering_with_soul",
+      "title": "Tinkering With Soul",
+      "icon": "bloodmagic:soulforge",
+      "shape": "square",
+      "x": 160,
+      "y": 32,
+      "description": [
+        "Original items: Soulforge (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_soul_stealer"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulforge",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_soul_stone",
+      "title": "Soul Stone",
+      "icon": "bloodmagic:soulgempetty",
+      "x": 208,
+      "y": 16,
+      "description": [
+        "Original items: Soulgempetty (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_tinkering_with_soul"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgempetty",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_more_souls",
+      "title": "More Souls",
+      "icon": "bloodmagic:soulgemlesser",
+      "x": 256,
+      "y": 0,
+      "description": [
+        "Upgrade your Tartaric Gem"
+      ],
+      "dependencies": [
+        "blo_soul_stone"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgemlesser",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgempetty",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_soul_reaper",
+      "title": "Soul Reaper",
+      "icon": "bloodmagic:soulgemcommon",
+      "x": 304,
+      "y": 16,
+      "description": [
+        "Upgrade your Tartaric Gem even further"
+      ],
+      "dependencies": [
+        "blo_more_souls"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgemcommon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgempetty",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_beyond_soul",
+      "title": "Beyond Soul",
+      "icon": "bloodmagic:soulgemgreater",
+      "x": 352,
+      "y": 32,
+      "description": [
+        "Original items: Soulgemgreater (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_soul_reaper"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgemgreater",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:soulgempetty",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_why_not_use_chalk",
+      "title": "Why Not Use Chalk",
+      "icon": "bloodmagic:arcaneashes",
+      "x": 208,
+      "y": 48,
+      "description": [
+        "Original items: Arcaneashes (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_tinkering_with_soul"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:arcaneashes",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:arcaneashes",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_blood_altar",
+      "title": "Blood Altar",
+      "icon": "bloodmagic:altar",
+      "shape": "square",
+      "x": 112,
+      "y": 80,
+      "description": [
+        "Original items: Altar (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_soul_hunter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:altar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_mystic_stone_tablet",
+      "title": "Mystic Stone Tablet",
+      "icon": "bloodmagic:blankslate",
+      "x": 160,
+      "y": 96,
+      "description": [
+        "Original items: Blankslate (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_blood_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankslate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "prefab:block_compressed_stone",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_upgrade_altar",
+      "title": "Upgrade Altar!",
+      "icon": "bloodmagic:blankrune",
+      "x": 208,
+      "y": 112,
+      "description": [
+        "Original items: Blankrune (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_mystic_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_better_stone_tablet",
+      "title": "Better Stone Tablet",
+      "icon": "bloodmagic:reinforcedslate",
+      "x": 256,
+      "y": 128,
+      "description": [
+        "Upgrade slate with altar"
+      ],
+      "dependencies": [
+        "blo_upgrade_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:reinforcedslate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:accelerationrune",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_deluxe_stone_tablet",
+      "title": "Deluxe Stone Tablet",
+      "icon": "bloodmagic:infusedslate",
+      "x": 304,
+      "y": 112,
+      "description": [
+        "Continue to upgrade your slate"
+      ],
+      "dependencies": [
+        "blo_better_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:infusedslate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_deluxe_stone_tablet_2",
+      "title": "Deluxe Stone Tablet",
+      "icon": "bloodmagic:demonslate",
+      "x": 352,
+      "y": 96,
+      "description": [
+        "How many slates are there??"
+      ],
+      "dependencies": [
+        "blo_deluxe_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:demonslate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_gilded_stone_tablet",
+      "title": "Gilded Stone Tablet",
+      "icon": "bloodmagic:etherealslate",
+      "x": 400,
+      "y": 80,
+      "description": [
+        "I assure you this is the last tier of slate"
+      ],
+      "dependencies": [
+        "blo_deluxe_stone_tablet_2"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:etherealslate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:accelerationrune",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_dance_of_life",
+      "title": "Dance of Life",
+      "icon": "soa_additions:ba_blood_diamond_infused",
+      "x": 400,
+      "y": 48,
+      "description": [
+        "Original items: Blood Diamond (bloodarsenal)"
+      ],
+      "dependencies": [
+        "blo_gilded_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ba_blood_diamond_infused",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_overbled",
+      "title": "Overbled",
+      "icon": "soa_additions:crimsonite_ingot",
+      "x": 448,
+      "y": 64,
+      "description": [
+        "Original items: Crimsonite Ingot (additions)"
+      ],
+      "dependencies": [
+        "blo_gilded_stone_tablet",
+        "blo_dance_of_life"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:crimsonite_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_blood_sacrifce",
+      "title": "Blood Sacrifce",
+      "icon": "bloodmagic:sacrificialdagger",
+      "x": 160,
+      "y": 64,
+      "description": [
+        "Original items: Sacrificialdagger (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_blood_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:sacrificialdagger",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:bacon",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_blood_infused_wood",
+      "title": "Blood Infused Wood",
+      "icon": "soa_additions:ba_blood_infused_log",
+      "x": 208,
+      "y": 80,
+      "description": [
+        "Infuse wood with blood"
+      ],
+      "dependencies": [
+        "blo_blood_sacrifce"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ba_blood_infused_log",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_forged_with_blood",
+      "title": "Forged With Blood",
+      "icon": "soa_additions:ba_blood_infused_stick",
+      "shape": "square",
+      "x": 256,
+      "y": 64,
+      "description": [
+        "Original items: Base Item (bloodarsenal)"
+      ],
+      "dependencies": [
+        "blo_blood_infused_wood"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ba_blood_infused_stick",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_telepathy",
+      "title": "Telepathy",
+      "icon": "tconevo:blood_metal",
+      "x": 256,
+      "y": 32,
+      "description": [
+        "Original items: Blood Metal (tconevo)"
+      ],
+      "dependencies": [
+        "blo_soul_stone"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconevo:blood_metal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_soul_bound",
+      "title": "Soul Bound",
+      "icon": "tconevo:sentient_metal",
+      "x": 304,
+      "y": 48,
+      "description": [
+        "Original items: Sentient Metal (tconevo)"
+      ],
+      "dependencies": [
+        "blo_forged_with_blood",
+        "blo_telepathy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconevo:sentient_metal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_warp_engine",
+      "title": "Warp Engine",
+      "icon": "bloodmagic:teleposerfocus",
+      "x": 304,
+      "y": 80,
+      "description": [
+        "Original items: Teleposerfocus (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_deluxe_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:teleposerfocus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ender_pearl",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_see_the_soul",
+      "title": "See the Soul",
+      "icon": "bloodmagic:divinationsigil",
+      "x": 256,
+      "y": 96,
+      "description": [
+        "Original items: Divinationsigil (bloodmagic)"
+      ],
+      "dependencies": [
+        "blo_upgrade_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:divinationsigil",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:accelerationrune",
+          "count": 2
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_hyperspace_engine",
+      "title": "Hyperspace Engine",
+      "icon": "bloodmagic:teleposerfocus",
+      "x": 352,
+      "y": 64,
+      "description": [
+        "Upgrade your Teleposition Focus"
+      ],
+      "dependencies": [
+        "blo_deluxe_stone_tablet_2",
+        "blo_warp_engine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:teleposerfocus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ender_eye",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

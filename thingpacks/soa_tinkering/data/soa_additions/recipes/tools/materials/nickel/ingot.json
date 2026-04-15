@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:ingots/nickel"
+  },
+  "material": "soa_additions:nickel",
+  "needed": 1,
+  "value": 1
+}

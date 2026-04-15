@@ -1,0 +1,9 @@
+{
+  "type": "lootbags:loot",
+  "name": "Legendary Loot Crate",
+  "color": "#FFAA00",
+  "rarity": "legendary",
+  "output": {
+    "table": "greedycraft:lootbags/legendary"
+  }
+}
