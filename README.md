@@ -1,5 +1,17 @@
 # Souls of Avarice
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Minecraft-1.20.1-62B47A?style=for-the-badge&logo=curseforge" alt="Minecraft 1.20.1"/>
+  <img src="https://img.shields.io/badge/Forge-47.4.10-E04E14?style=for-the-badge&logo=curseforge" alt="Forge 47.4.10"/>
+  <img src="https://img.shields.io/badge/Loader-Forge-1B1F23?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Forge"/>
+  <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge" alt="All Rights Reserved"/>
+</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/yoitsoul"><img src="https://img.shields.io/badge/Ko--fi-Support%20YoItSoul-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi"/></a>
+  <a href="https://github.com/YoItSoul/soa_additions"><img src="https://img.shields.io/badge/Companion-soa__additions-8957E5?style=for-the-badge&logo=github&logoColor=white" alt="soa_additions companion repo"/></a>
+</p>
+
 Configuration, scripts, and modpack-side content for the **Souls of Avarice** Minecraft modpack.
 
 ## What's in this repo
@@ -37,6 +49,12 @@ Anything originating from the `soa_additions` companion (custom quests, custom l
 2. Edit only files under the tracked paths above.
 3. Test in-game before committing.
 4. Use clear commit messages (e.g. `config: tune apotheosis drop rates`, `kubejs: fix quest reward script`).
+
+## Support the project
+
+If you enjoy the pack and want to help keep it cooking, you can throw a coin in the jar:
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-ko--fi.com%2Fyoitsoul-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/yoitsoul)
 
 ## License
 
