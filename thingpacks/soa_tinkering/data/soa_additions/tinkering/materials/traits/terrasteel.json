@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:raging"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:necrotic"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:cultivated"
+    }
+  ]
+}

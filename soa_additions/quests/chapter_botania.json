@@ -1,0 +1,1467 @@
+{
+  "id": "chapter_botania",
+  "title": "Botania",
+  "icon": "botania:rune_mana",
+  "sort_order": 50,
+  "description": "Quests for the Botania progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "bot_flower_crafting",
+      "title": "Flower Crafting",
+      "icon": "botania:apothecary_default",
+      "x": 48,
+      "y": 208,
+      "description": [
+        "Craft a Petal Apothecary to begin your journey into Botania"
+      ],
+      "dependencies": [
+        "quest_mnw6qg0e"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:apothecary_default",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:fertilizer",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_magic_era",
+      "title": "Magic Era",
+      "icon": "botania:white_mystical_flower",
+      "x": 96,
+      "y": 208,
+      "description": [
+        "Obtain a Mystical Flower"
+      ],
+      "dependencies": [
+        "bot_flower_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:white_mystical_flower",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:flower_bag",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_magical_wood",
+      "title": "Magical Wood",
+      "icon": "botania:livingwood",
+      "x": 144,
+      "y": 208,
+      "description": [
+        "Obtain Livingwood"
+      ],
+      "dependencies": [
+        "bot_magic_era"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:livingwood",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:twig_wand",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_magic_stone",
+      "title": "Magic Stone",
+      "icon": "botania:livingrock",
+      "x": 96,
+      "y": 256,
+      "description": [
+        "Obtain Livingrock"
+      ],
+      "dependencies": [
+        "bot_magic_era"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:livingrock",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_mana",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_twig_wand",
+      "title": "The Force of Forest",
+      "icon": "botania:twig_wand",
+      "x": 144,
+      "y": 144,
+      "description": [
+        "Craft a Wand of the Forest"
+      ],
+      "dependencies": [
+        "bot_magical_wood"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:twig_wand",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:livingwood",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_mana_spreader",
+      "title": "Magic Conductor",
+      "icon": "botania:mana_spreader",
+      "x": 208,
+      "y": 208,
+      "description": [
+        "Craft a Mana Spreader to transport mana"
+      ],
+      "dependencies": [
+        "bot_magical_wood"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_spreader",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_mana_pool",
+      "title": "It's a Battery",
+      "icon": "botania:mana_pool",
+      "x": 144,
+      "y": 256,
+      "description": [
+        "Craft a Mana Pool to store mana"
+      ],
+      "dependencies": [
+        "bot_magic_stone"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_pool",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:black_mystical_flower",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:black_lotus",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_mana_tablet",
+      "title": "Pocket Mana",
+      "icon": "botania:mana_tablet",
+      "x": 48,
+      "y": 304,
+      "description": [
+        "Craft a Mana Tablet for portable mana storage"
+      ],
+      "dependencies": [
+        "bot_mana_pool"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_tablet",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 12
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_crafting_halo",
+      "title": "Elegant Crafting",
+      "icon": "botania:auto_crafting_halo",
+      "x": 96,
+      "y": 304,
+      "description": [
+        "Craft a Manufactory Halo"
+      ],
+      "dependencies": [
+        "bot_mana_pool"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:auto_crafting_halo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_rune_altar",
+      "title": "Rune Altar",
+      "icon": "botania:runic_altar",
+      "shape": "square",
+      "x": 208,
+      "y": 256,
+      "description": [
+        "Craft a Runic Altar"
+      ],
+      "dependencies": [
+        "bot_mana_spreader",
+        "bot_mana_pool"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:runic_altar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:livingrock",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:livingwood",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_rune_collector",
+      "title": "Rune Collector",
+      "icon": "botania:rune_mana",
+      "x": 256,
+      "y": 208,
+      "description": [
+        "Collect all 16 runes"
+      ],
+      "dependencies": [
+        "bot_rune_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_water",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_fire",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_earth",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_air",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_spring",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_summer",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_autumn",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_winter",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_mana",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_lust",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_gluttony",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_greed",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_sloth",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_wrath",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_envy",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rune_pride",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_terra_plate",
+      "title": "Terra Force",
+      "icon": "botania:terra_plate",
+      "shape": "square",
+      "x": 208,
+      "y": 304,
+      "description": [
+        "Craft a Terrestrial Agglomeration Plate"
+      ],
+      "dependencies": [
+        "bot_rune_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:terra_plate",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:black_lotus",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_terrasteel",
+      "title": "Essence of Earth",
+      "icon": "botania:terrasteel_ingot",
+      "x": 256,
+      "y": 304,
+      "description": [
+        "Obtain a Terrasteel Ingot"
+      ],
+      "dependencies": [
+        "bot_terra_plate"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:terrasteel_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_nature_pylon",
+      "title": "Crystal of Nature",
+      "icon": "botania:mana_pylon",
+      "x": 144,
+      "y": 352,
+      "description": [
+        "Craft a Mana Pylon"
+      ],
+      "dependencies": [
+        "bot_mana_pool"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_pylon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:terrasteel_seeds",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_alfheim_portal",
+      "title": "Not Actually a Portal",
+      "icon": "botania:alfheim_portal",
+      "x": 304,
+      "y": 304,
+      "description": [
+        "Craft an Elven Gateway Core"
+      ],
+      "dependencies": [
+        "bot_terrasteel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:alfheim_portal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:terrasteel_seeds",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_elementium",
+      "title": "Elementium Steel",
+      "icon": "botania:elementium_ingot",
+      "shape": "square",
+      "x": 304,
+      "y": 352,
+      "description": [
+        "Obtain an Elementium Ingot"
+      ],
+      "dependencies": [
+        "bot_alfheim_portal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:elementium_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_rainbow_rod",
+      "title": "Sunshine Rainbow Little Pony",
+      "icon": "botania:rainbow_rod",
+      "x": 368,
+      "y": 352,
+      "description": [
+        "Craft a Rod of the Bifrost"
+      ],
+      "dependencies": [
+        "bot_elementium"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:rainbow_rod",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:twilight_oak_sapling",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_rgb",
+      "title": "R G B",
+      "icon": "botania:fabulous_pool",
+      "x": 416,
+      "y": 352,
+      "description": [
+        "Craft a Fabulous Mana Pool"
+      ],
+      "dependencies": [
+        "bot_rainbow_rod"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:fabulous_pool",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:black_lotus",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_terra_crystal",
+      "title": "Terra Crystal",
+      "icon": "botania:gaia_pylon",
+      "x": 416,
+      "y": 464,
+      "description": [
+        "Craft a Gaia Pylon"
+      ],
+      "dependencies": [
+        "bot_alfsteel_pylon"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:gaia_pylon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_gaia_guardian",
+      "title": "Guardian of Earth",
+      "icon": "botania:life_essence",
+      "shape": "square",
+      "x": 480,
+      "y": 464,
+      "description": [
+        "Defeat the Gaia Guardian"
+      ],
+      "dependencies": [
+        "bot_terra_crystal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:life_essence",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:black_lotus",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_gaia_treasure",
+      "title": "Guardian's Treasure",
+      "icon": "botania:gaia_ingot",
+      "x": 528,
+      "y": 464,
+      "description": [
+        "Obtain a Gaia Spirit Ingot"
+      ],
+      "dependencies": [
+        "bot_gaia_guardian"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:gaia_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_powder",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_dice_of_fate",
+      "title": "Dice of Fate",
+      "icon": "botania:dice",
+      "shape": "square",
+      "x": 480,
+      "y": 512,
+      "description": [
+        "Summon the Gaia Guardian again with a Gaia Spirit Ingot and obtain the Dice of Fate"
+      ],
+      "dependencies": [
+        "bot_gaia_guardian"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:dice",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_alfsteel",
+      "title": "Alfsteel",
+      "icon": "mythicbotany:alfsteel_ingot",
+      "shape": "square",
+      "x": 368,
+      "y": 400,
+      "description": [
+        "Obtain an Alfsteel Ingot"
+      ],
+      "dependencies": [
+        "bot_mana_infuser"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:alfsteel_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_alfsteel_pylon",
+      "title": "Alfsteel Pylon",
+      "icon": "mythicbotany:alfsteel_pylon",
+      "x": 368,
+      "y": 464,
+      "description": [
+        "Craft an Alfsteel Pylon"
+      ],
+      "dependencies": [
+        "quest_mnw8xkd8",
+        "bot_alfsteel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:alfsteel_pylon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_mana_infuser",
+      "title": "Mana-Infuser",
+      "icon": "mythicbotany:mana_infuser",
+      "x": 304,
+      "y": 400,
+      "description": [
+        "Craft a Mana-Infuser"
+      ],
+      "dependencies": [
+        "bot_elementium"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:mana_infuser",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_rune_holder",
+      "title": "Rune Rituals",
+      "icon": "mythicbotany:central_rune_holder",
+      "shape": "circle",
+      "x": 480,
+      "y": 304,
+      "description": [
+        "Craft a Central Rune Holder to perform rune rituals"
+      ],
+      "dependencies": [
+        "quest_mnw991il"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:central_rune_holder",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:rune_holder",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_fimbultyr",
+      "title": "Tablet of Fimbultyr",
+      "icon": "mythicbotany:fimbultyr_tablet",
+      "shape": "square",
+      "x": 528,
+      "y": 304,
+      "description": [
+        "Craft the Rune Tablet of Fimbultyr"
+      ],
+      "dependencies": [
+        "bot_rune_holder",
+        "bot_gaia_treasure"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:fimbultyr_tablet",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_yggdrasil",
+      "title": "Branch of Yggdrasil",
+      "icon": "mythicbotany:yggdrasil_branch",
+      "x": 256,
+      "y": 256,
+      "description": [
+        "Obtain a Branch of Yggdrasil"
+      ],
+      "dependencies": [
+        "bot_terrasteel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:yggdrasil_branch",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_mjoellnir",
+      "title": "Mjöllnir",
+      "icon": "mythicbotany:mjoellnir",
+      "shape": "square",
+      "x": 528,
+      "y": 240,
+      "description": [
+        "Craft the mighty Mjöllnir"
+      ],
+      "dependencies": [
+        "bot_fimbultyr"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:mjoellnir",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_kvasir_mead",
+      "title": "Mead of Kvasir",
+      "icon": "mythicbotany:kvasir_mead",
+      "x": 576,
+      "y": 304,
+      "description": [
+        "Obtain the Mead of Kvasir"
+      ],
+      "dependencies": [
+        "bot_fimbultyr"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:kvasir_mead",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_andwari_ring",
+      "title": "Ring of Andwari",
+      "icon": "mythicbotany:andwari_ring",
+      "x": 480,
+      "y": 240,
+      "description": [
+        "Obtain the Ring of Andwari"
+      ],
+      "dependencies": [
+        "bot_rune_holder"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:andwari_ring",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw6qg0e",
+      "title": "THE MIGHTY LEXICON",
+      "icon": "botania:lexicon",
+      "x": 0,
+      "y": 208,
+      "description": "Obtain 1× Lexicon to progress in the Botania path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:lexicon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw6rcpe",
+      "title": "THE MIGHTY LEXICON... upgraded?",
+      "icon": "botania:lexicon",
+      "x": 304,
+      "y": 256,
+      "description": "Obtain 1× Lexicon to progress in the Botania path.",
+      "dependencies": [
+        "bot_alfheim_portal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:lexicon",
+          "count": 1,
+          "nbt": "{\"botania:elven_unlock\":1b}"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw8xkd8",
+      "title": "Alfsteel Pylon",
+      "icon": "botania:natura_pylon",
+      "x": 256,
+      "y": 464,
+      "description": [
+        "Craft an Alfsteel Pylon"
+      ],
+      "dependencies": [
+        "bot_nature_pylon",
+        "bot_terrasteel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:natura_pylon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnw991il",
+      "title": "Drink Of Mimir",
+      "icon": "mythicbotany:gjallar_horn_full",
+      "shape": "square",
+      "x": 368,
+      "y": 304,
+      "description": [
+        "Drink from a FULL Gjaller Horn."
+      ],
+      "dependencies": [
+        "bot_alfheim_portal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:gjallar_horn_full",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mythicbotany:gjallar_horn_empty",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

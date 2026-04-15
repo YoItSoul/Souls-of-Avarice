@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/manasteel"
+  },
+  "material": "soa_additions:manasteel",
+  "needed": 9,
+  "value": 1
+}

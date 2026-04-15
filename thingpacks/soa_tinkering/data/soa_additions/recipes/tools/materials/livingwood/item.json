@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "botania:livingwood"
+  },
+  "material": "soa_additions:livingwood",
+  "needed": 1,
+  "value": 1
+}

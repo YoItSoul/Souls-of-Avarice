@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:solid"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:smashing_ammo"
+    }
+  ]
+}

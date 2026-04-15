@@ -1,0 +1,879 @@
+{
+  "id": "chapter_forestry",
+  "title": "Forestry",
+  "icon": "minecraft:oak_sapling",
+  "sort_order": 150,
+  "description": "Quests for the Forestry progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "visibility": "invisible",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "for_agricultural_basics",
+      "title": "Agricultural Basics",
+      "icon": "forestry:sturdy_machine",
+      "x": 208,
+      "y": 0,
+      "description": [
+        "Original items: Sturdy Machine (forestry)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:sturdy_machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_013d4cfc",
+      "title": "Squeezer",
+      "icon": "forestry:squeezer",
+      "x": 104,
+      "y": 62,
+      "description": "Obtain 1× Squeezer to progress in the Forestry path.",
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:squeezer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_transform_the_nature",
+      "title": "Transform the Nature",
+      "icon": "gendustry:genetics_processor",
+      "x": 208,
+      "y": 62,
+      "description": [
+        "Original items: Genetics Processor (gendustry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:genetics_processor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_mutatron",
+      "title": "Mutatron",
+      "icon": "gendustry:mutatron",
+      "x": 208,
+      "y": 125,
+      "description": [
+        "Original items: Mutatron (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:mutatron",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_fabricator",
+      "title": "Fabricator",
+      "icon": "forestry:fabricator",
+      "x": 166,
+      "y": 62,
+      "description": [
+        "Original items: Fabricator (forestry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:fabricator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_bee_hunter",
+      "title": "Bee Hunter",
+      "icon": "forestry:scoop",
+      "x": 0,
+      "y": 125,
+      "description": [
+        "Original items: Scoop (forestry)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:scoop",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_home_sweet_home",
+      "title": "Home Sweet Home",
+      "icon": "forestry:bee_house",
+      "x": 62,
+      "y": 125,
+      "description": [
+        "Original items: Bee House (forestry)"
+      ],
+      "dependencies": [
+        "for_bee_hunter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:bee_house",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_4fbc9995",
+      "title": "Carpenter",
+      "icon": "forestry:carpenter",
+      "x": 62,
+      "y": 62,
+      "description": "Obtain 1× Carpenter to progress in the Forestry path.",
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:carpenter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_deluxe_bee_house",
+      "title": "Deluxe Bee House",
+      "icon": "forestry:apiary",
+      "x": 104,
+      "y": 125,
+      "description": [
+        "Original items: Apiary (forestry)"
+      ],
+      "dependencies": [
+        "for_home_sweet_home",
+        "for_quest_4fbc9995",
+        "for_quest_013d4cfc"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:apiary",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_bee_analyzer",
+      "title": "Bee Analyzer",
+      "icon": "forestry:portable_alyzer",
+      "x": 104,
+      "y": 166,
+      "description": [
+        "Original items: Portable Alyzer (forestry)"
+      ],
+      "dependencies": [
+        "for_deluxe_bee_house"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:portable_alyzer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_home_seeker",
+      "title": "Home Seeker",
+      "icon": "forestry:habitat_locator",
+      "x": 62,
+      "y": 166,
+      "description": [
+        "Original items: Habitat Locator (forestry)"
+      ],
+      "dependencies": [
+        "for_home_sweet_home"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:habitat_locator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_my_little_multiblock_farm",
+      "title": "My Little Multiblock Farm",
+      "icon": "forestry:ffarm",
+      "x": 166,
+      "y": 125,
+      "description": [
+        "Original items: Ffarm (forestry)"
+      ],
+      "dependencies": [
+        "for_fabricator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:ffarm",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_distillatior",
+      "title": "Distillatior",
+      "icon": "forestry:still",
+      "x": 0,
+      "y": 62,
+      "description": [
+        "Original items: Still (forestry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:still",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_mutagen_factory",
+      "title": "Mutagen Factory",
+      "icon": "gendustry:mutagen_producer",
+      "x": 312,
+      "y": 125,
+      "description": [
+        "Original items: Mutagen Producer (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:mutagen_producer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_genetic_sampling",
+      "title": "Genetic Sampling",
+      "icon": "gendustry:sampler",
+      "x": 270,
+      "y": 125,
+      "description": [
+        "Original items: Sampler (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:sampler",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_genetic_transformation",
+      "title": "Genetic Transformation",
+      "icon": "gendustry:transposer",
+      "x": 312,
+      "y": 166,
+      "description": [
+        "Original items: Transposer (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature",
+        "for_genetic_sampling"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:transposer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_pcr_machine",
+      "title": "PCR Machine",
+      "icon": "gendustry:replicator",
+      "x": 374,
+      "y": 166,
+      "description": [
+        "Original items: Replicator (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:replicator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_centrifuge_our_old_friend",
+      "title": "Centrifuge, Our Old Friend",
+      "icon": "forestry:centrifuge",
+      "x": 312,
+      "y": 62,
+      "description": [
+        "Original items: Centrifuge (forestry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:centrifuge",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_genetic_extraction",
+      "title": "Genetic Extraction",
+      "icon": "gendustry:extractor",
+      "x": 270,
+      "y": 166,
+      "description": [
+        "Original items: Extractor (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:extractor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_bottleneck",
+      "title": "Bottleneck",
+      "icon": "forestry:bottler",
+      "x": 374,
+      "y": 62,
+      "description": [
+        "Original items: Bottler (forestry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:bottler",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_genetic_imprinter",
+      "title": "Genetic Imprinter",
+      "icon": "gendustry:imprinter",
+      "x": 374,
+      "y": 125,
+      "description": [
+        "Original items: Imprinter (gendustry)"
+      ],
+      "dependencies": [
+        "for_transform_the_nature"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:imprinter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_moistener",
+      "title": "Moistener",
+      "icon": "forestry:moistener",
+      "x": 270,
+      "y": 62,
+      "description": [
+        "Original items: Moistener (forestry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:moistener",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_core_of_farm",
+      "title": "Core of Farm",
+      "icon": "forestry:ffarm",
+      "x": 166,
+      "y": 166,
+      "description": [
+        "Original items: Ffarm (forestry)"
+      ],
+      "dependencies": [
+        "for_my_little_multiblock_farm"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:ffarm",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_better_mutatron",
+      "title": "Better Mutatron",
+      "icon": "gendustry:mutatron_advanced",
+      "x": 208,
+      "y": 166,
+      "description": [
+        "Upgrade your mutator"
+      ],
+      "dependencies": [
+        "for_mutatron"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "gendustry:mutatron_advanced",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_well_fermented",
+      "title": "Well Fermented",
+      "icon": "forestry:fermenter",
+      "x": 416,
+      "y": 62,
+      "description": [
+        "Original items: Fermenter (forestry)"
+      ],
+      "dependencies": [
+        "for_agricultural_basics"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:fermenter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

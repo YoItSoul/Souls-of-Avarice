@@ -1,0 +1,17 @@
+{
+  "type": "lootbags:loot",
+  "name": "Worn Out Bag",
+  "rarity": "common",
+  "output": {
+    "entries": [
+      {
+        "stack": {
+          "item": "minecraft:red_bed",
+          "count": 1
+        },
+        "weight": 20
+      }
+    ],
+    "rolls": 1
+  }
+}

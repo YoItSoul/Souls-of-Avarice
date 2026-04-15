@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "projecte:red_matter"
+  },
+  "material": "soa_additions:red_matter",
+  "needed": 1,
+  "value": 1
+}

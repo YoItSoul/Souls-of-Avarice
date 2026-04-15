@@ -1,0 +1,35 @@
+# Normalize line endings for text-based modpack files
+*         text=auto eol=lf
+
+# Minecraft / modpack text formats
+*.json    text eol=lf
+*.json5   text eol=lf
+*.toml    text eol=lf
+*.cfg     text eol=lf
+*.conf    text eol=lf
+*.properties text eol=lf
+*.txt     text eol=lf
+*.md      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.js      text eol=lf
+*.ts      text eol=lf
+*.zs      text eol=lf
+*.mcfunction text eol=lf
+*.snbt    text eol=lf
+
+# NBT / binary formats — never touch
+*.nbt     binary
+*.dat     binary
+*.dat_old binary
+*.mca     binary
+*.mcc     binary
+*.mcr     binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ogg     binary
+*.wav     binary
+*.zip     binary
+*.jar     binary

@@ -1,0 +1,24 @@
+{
+  "type": "lootbags:loot",
+  "name": "Direwolf Bag",
+  "rarity": "rare",
+  "output": {
+    "entries": [
+      {
+        "stack": {
+          "item": "minecraft:cobblestone",
+          "count": 64
+        },
+        "weight": 20
+      },
+      {
+        "stack": {
+          "item": "minecraft:glass",
+          "count": 36
+        },
+        "weight": 20
+      }
+    ],
+    "rolls": 5
+  }
+}

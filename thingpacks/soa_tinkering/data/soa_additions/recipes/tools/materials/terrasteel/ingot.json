@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:ingots/terrasteel"
+  },
+  "material": "soa_additions:terrasteel",
+  "needed": 1,
+  "value": 1
+}

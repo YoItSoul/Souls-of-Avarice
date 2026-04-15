@@ -1,0 +1,31 @@
+{
+  "type": "lootbags:loot",
+  "name": "Soaryn Bag",
+  "rarity": "uncommon",
+  "output": {
+    "entries": [
+      {
+        "stack": {
+          "item": "minecraft:chest",
+          "count": 2
+        },
+        "weight": 20
+      },
+      {
+        "stack": {
+          "item": "minecraft:stick",
+          "count": 1
+        },
+        "weight": 20
+      },
+      {
+        "stack": {
+          "item": "minecraft:quartz",
+          "count": 4
+        },
+        "weight": 20
+      }
+    ],
+    "rolls": 3
+  }
+}

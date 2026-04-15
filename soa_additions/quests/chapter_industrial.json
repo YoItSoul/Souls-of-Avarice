@@ -1,0 +1,4709 @@
+{
+  "id": "chapter_industrial",
+  "title": "Industrial Age",
+  "icon": "thermal:machine_frame",
+  "sort_order": 110,
+  "description": "Quests for the Industrial Age progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "ind_gigantic_pencil_core",
+      "title": "Gigantic Pencil Core",
+      "icon": "bigreactors:graphite_ingot",
+      "x": 603,
+      "y": 333,
+      "description": [
+        "Original items: Ingotgraphite (bigreactors)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:graphite_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:graphite_ingot",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_infinity_capacitor",
+      "title": "Infinity Capacitor",
+      "icon": "avaritiaio:infinitecapacitor",
+      "x": 376,
+      "y": 480,
+      "description": [
+        "Original items: Infinitecapacitor (avaritiaio)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "avaritiaio:infinitecapacitor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 666666
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_reactor_io",
+      "title": "Reactor IO",
+      "icon": "bigreactors:basic_reactorcasing",
+      "x": 728,
+      "y": 333,
+      "description": [
+        "Original items: Reactorcoolantport (bigreactors), Reactorpowertaprf (bigreactors), Reactorpowertaptesla (bigreactors)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorpowertapfe_active",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorpowertapfe_passive",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_make_progress_in_thermal_serie",
+      "title": "Make progress in Thermal Series",
+      "icon": "minecraft:barrier",
+      "x": 21,
+      "y": 352,
+      "description": "Complete \"Make progress in Thermal Series\" to continue.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_bedrock_dust",
+      "title": "Bedrock Dust",
+      "icon": "enderio:grains_of_infinity",
+      "x": 64,
+      "y": 352,
+      "description": [
+        "Ignite a bedrock to acquire Grains of Infinity"
+      ],
+      "dependencies": [
+        "ind_make_progress_in_thermal_serie"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:grains_of_infinity",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:conductive_alloy_ingot",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_pulverizer_but_different",
+      "title": "Pulverizer but Different",
+      "icon": "enderio:sag_mill",
+      "x": 125,
+      "y": 352,
+      "description": [
+        "Original items: Block Simple Sag Mill (enderio)"
+      ],
+      "dependencies": [
+        "ind_bedrock_dust"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:sag_mill",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_better_machines_b_2",
+      "title": "Better Machines B",
+      "icon": "enderio:sag_mill",
+      "x": 168,
+      "y": 352,
+      "description": [
+        "Upgrade sagmill"
+      ],
+      "dependencies": [
+        "ind_pulverizer_but_different"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:sag_mill",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_even_more_upgrades",
+      "title": "Even More Upgrades",
+      "icon": "enderio:enticing_crystal",
+      "x": 229,
+      "y": 352,
+      "description": [
+        "Original items: Enticing Crystal (enderio)"
+      ],
+      "dependencies": [
+        "ind_better_machines_b_2"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:enticing_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:conductive_alloy_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p skilled_engineer false"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/tellraw @p {\"text\":\"Your world has been blessed with new rare metals.\"}"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_the_metal_that_never_rusts",
+      "title": "The Metal that Never Rusts",
+      "icon": "thermal:electrum_ingot",
+      "x": 229,
+      "y": 333,
+      "description": [
+        "Original items: Electrum Ingot (thermal)"
+      ],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:electrum_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_infinite_water",
+      "title": "Infinite Water",
+      "icon": "thermalexpansion:device",
+      "x": 21,
+      "y": 125,
+      "description": [
+        "Craft a Aqueous Accumulator, put it between two water sources to produce water automatically!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:device",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:water_bucket",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_steampunk_era_2",
+      "title": "Steampunk Era",
+      "icon": "thermalexpansion:dynamo",
+      "x": 21,
+      "y": 187,
+      "description": [
+        "Original items: Dynamo (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_infinite_water"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:dynamo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_turbo_boost",
+      "title": "Turbo Boost",
+      "icon": "thermal:dynamo_fuel_augment",
+      "x": 21,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_steampunk_era_2"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:dynamo_fuel_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_quartz_but_it_s_black",
+      "title": "Quartz but it's Black",
+      "icon": "actuallyadditions:iron_casing",
+      "x": 603,
+      "y": 83,
+      "description": [
+        "Original items: Iron Casing (actuallyadditions)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:iron_casing",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 60
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_super_laser",
+      "title": "Super Laser",
+      "icon": "actuallyadditions:block_atomic_reconstructor",
+      "x": 603,
+      "y": 40,
+      "description": [
+        "Original items: Block Atomic Reconstructor (actuallyadditions)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:block_atomic_reconstructor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_this_ain_t_a_decoration",
+      "title": "This Ain't a Decoration",
+      "icon": "actuallyadditions:block_display_stand",
+      "x": 645,
+      "y": 40,
+      "description": [
+        "Original items: Block Display Stand (actuallyadditions)"
+      ],
+      "dependencies": [
+        "ind_quartz_but_it_s_black",
+        "ind_super_laser"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:block_display_stand",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:clay",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_altar_but_in_science",
+      "title": "Altar but in Science",
+      "icon": "actuallyadditions:block_empowerer",
+      "x": 707,
+      "y": 40,
+      "description": [
+        "Original items: Block Empowerer (actuallyadditions)"
+      ],
+      "dependencies": [
+        "ind_this_ain_t_a_decoration"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:block_empowerer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_electrified_iron",
+      "title": "Electrified Iron",
+      "icon": "actuallyadditions:empowered_enori_crystal",
+      "x": 728,
+      "y": 83,
+      "description": [
+        "Empower ore crystals with an Empowerer"
+      ],
+      "dependencies": [
+        "ind_altar_but_in_science"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:empowered_enori_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_advanced_wires",
+      "title": "Advanced Wires",
+      "icon": "xnet:netcable_blue",
+      "x": 603,
+      "y": 125,
+      "description": [
+        "Acquire an XNet wire, it transfers fluid, energy and items and has minimum impact on performance."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "xnet:netcable_blue",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "xnet:netcable_blue",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_it_s_a_fridge",
+      "title": "It's a Fridge",
+      "icon": "thermalexpansion:machine",
+      "x": 272,
+      "y": 125,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_rainbow",
+      "title": "RAINBOW!",
+      "icon": "extrautils2:rainbowgenerator",
+      "x": 603,
+      "y": 395,
+      "description": [
+        "Original items: Rainbowgenerator (extrautils2)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "extrautils2:rainbowgenerator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 40000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_fluid_factory",
+      "title": "Fluid Factory",
+      "icon": "enderio:sag_mill",
+      "x": 333,
+      "y": 395,
+      "description": [
+        "Original items: Block Enhanced Vat (enderio)"
+      ],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:sag_mill",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_make_progress_in_ender_io",
+      "title": "Make progress in Ender IO",
+      "icon": "minecraft:barrier",
+      "x": 645,
+      "y": 272,
+      "description": "Complete \"Make progress in Ender IO\" to continue.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_access_port",
+      "title": "Access Port",
+      "icon": "bigreactors:basic_reactorsolidaccessport",
+      "x": 728,
+      "y": 291,
+      "description": [
+        "Original items: Reactoraccessport (bigreactors)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorsolidaccessport",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_alloy_forging",
+      "title": "Alloy Forging",
+      "icon": "enderio:primitive_alloy_smelter",
+      "x": 125,
+      "y": 395,
+      "description": [
+        "Original items: Block Simple Alloy Smelter (enderio)"
+      ],
+      "dependencies": [
+        "ind_bedrock_dust"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:primitive_alloy_smelter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:iron_ingot",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_dark_steel",
+      "title": "Dark Steel",
+      "icon": "enderio:dark_steel_ingot",
+      "x": 64,
+      "y": 480,
+      "description": [
+        "Obtain dark steel, which can be found in dungeons or made with alloy smelter"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:dark_steel_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:energetic_alloy_ingot",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_endsteel",
+      "title": "Endsteel",
+      "icon": "enderio:soularium_ingot",
+      "x": 125,
+      "y": 480,
+      "description": [
+        "Original items: Stellar Alloy Ingot (enderio)"
+      ],
+      "dependencies": [
+        "ind_alloy_forging",
+        "ind_dark_steel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:soularium_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:energetic_alloy_ingot",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_melodic_alloy",
+      "title": "Melodic Alloy",
+      "icon": "enderio:pulsating_alloy_ingot",
+      "x": 168,
+      "y": 480,
+      "description": [
+        "Original items: Crystalline Alloy Ingot (enderio)"
+      ],
+      "dependencies": [
+        "ind_endsteel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:pulsating_alloy_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:vibrant_alloy_ingot",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_stellar_alloy",
+      "title": "Stellar Alloy",
+      "icon": "enderio:energetic_alloy_ingot",
+      "x": 229,
+      "y": 480,
+      "description": [
+        "Original items: Melodic Alloy Ingot (enderio)"
+      ],
+      "dependencies": [
+        "ind_melodic_alloy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:energetic_alloy_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 7000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:vibrant_alloy_ingot",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_star_powered_capacitor",
+      "title": "Star Powered Capacitor",
+      "icon": "enderio:octadic_capacitor",
+      "x": 272,
+      "y": 480,
+      "description": [
+        "Original items: Item Capacitor Stellar (enderio)"
+      ],
+      "dependencies": [
+        "ind_stellar_alloy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:octadic_capacitor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:octadic_capacitor",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_ore_doubling",
+      "title": "Ore Doubling",
+      "icon": "thermalexpansion:machine",
+      "x": 64,
+      "y": 125,
+      "description": [
+        "Obtain a Pulverizer which double ores by turning them into 2x dust!"
+      ],
+      "dependencies": [
+        "ind_infinite_water"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:gold_ore",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_industrial_evolution_i",
+      "title": "Industrial Evolution I",
+      "icon": "thermalfoundation:upgrade",
+      "x": 64,
+      "y": 83,
+      "description": [
+        "Original items: Upgrade (thermalfoundation)"
+      ],
+      "dependencies": [
+        "ind_ore_doubling",
+        "ind_infinite_water"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalfoundation:upgrade",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_mystical_machine",
+      "title": "Mystical Machine",
+      "icon": "thermalexpansion:machine",
+      "x": 125,
+      "y": 125,
+      "description": [
+        "Obtain an Induction Smelter. This machine is very widely used."
+      ],
+      "dependencies": [
+        "ind_ore_doubling"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p novice_engineer false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_industrial_evolution_ii",
+      "title": "Industrial Evolution II",
+      "icon": "thermal:upgrade_augment_1",
+      "x": 125,
+      "y": 83,
+      "description": [
+        "Original items: Upgrade Augment 1 (thermal)"
+      ],
+      "dependencies": [
+        "ind_industrial_evolution_i",
+        "ind_mystical_machine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:upgrade_augment_1",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_industrial_evolution_iii",
+      "title": "Industrial Evolution III",
+      "icon": "thermal:upgrade_augment_2",
+      "x": 168,
+      "y": 83,
+      "description": [
+        "Original items: Upgrade Augment 2 (thermal)"
+      ],
+      "dependencies": [
+        "ind_industrial_evolution_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:upgrade_augment_2",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_diamond_but_better",
+      "title": "Diamond But Better",
+      "icon": "actuallyadditions:empowered_diamatine_crystal",
+      "x": 749,
+      "y": 40,
+      "description": [
+        "Empower ore crystals with an Empowerer"
+      ],
+      "dependencies": [
+        "ind_altar_but_in_science"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:empowered_diamatine_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_superspeed_charger",
+      "title": "Superspeed Charger",
+      "icon": "enderio:wired_charger",
+      "x": 333,
+      "y": 352,
+      "description": [
+        "Original items: Block Enhanced Wired Charger (enderio)"
+      ],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:wired_charger",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_easy_energy",
+      "title": "Easy Energy",
+      "icon": "enderio:stirling_generator",
+      "x": 64,
+      "y": 395,
+      "description": [
+        "Original items: Block Simple Stirling Generator (enderio)"
+      ],
+      "dependencies": [
+        "ind_bedrock_dust"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:stirling_generator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:grains_of_infinity_seeds",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_better_machines_a",
+      "title": "Better Machines A",
+      "icon": "enderio:alloy_smelter",
+      "x": 168,
+      "y": 395,
+      "description": [
+        "Upgrade alloy smelter"
+      ],
+      "dependencies": [
+        "ind_alloy_forging"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:alloy_smelter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:energetic_alloy_ingot",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_compressor",
+      "title": "Compressor",
+      "icon": "thermalexpansion:machine",
+      "x": 229,
+      "y": 125,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_mystical_machine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_money_is_power",
+      "title": "Money is Power",
+      "icon": "thermalexpansion:dynamo",
+      "x": 272,
+      "y": 187,
+      "description": [
+        "Original items: Dynamo (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_compressor"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:dynamo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_rage_of_the_villagers",
+      "title": "Rage of the Villagers",
+      "icon": "thermal:dynamo_throttle_augment",
+      "x": 272,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_money_is_power"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:dynamo_throttle_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:emerald",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_quest_33bb8983",
+      "title": "Quest",
+      "icon": "minecraft:barrier",
+      "x": 437,
+      "y": 291,
+      "description": "Complete \"Quest\" to continue.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_make_progress_in_ender_io_3",
+      "title": "Make progress in Ender IO",
+      "icon": "minecraft:barrier",
+      "x": 64,
+      "y": 248,
+      "description": "Complete \"Make progress in Ender IO\" to continue.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_novel_ore",
+      "title": "Novel Ore",
+      "icon": "mekanism:enrichment_chamber",
+      "x": 21,
+      "y": 291,
+      "description": [
+        "Original items: Oreblock (mekanism)"
+      ],
+      "dependencies": [
+        "ind_make_progress_in_ender_io_3"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:enrichment_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:osmium_ore",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_easy_as_it_seems",
+      "title": "Easy as it Seems",
+      "icon": "mekanism:enrichment_chamber",
+      "x": 64,
+      "y": 291,
+      "description": [
+        "Original items: Machineblock (mekanism)"
+      ],
+      "dependencies": [
+        "ind_novel_ore",
+        "ind_make_progress_in_ender_io_3"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:enrichment_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_2h2o_2h2_o2",
+      "title": "2H2O==2H2↑+O2↑",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 125,
+      "y": 291,
+      "description": [
+        "Craft a Electrolytic Separator which can separate hydrogen and oxygen from water"
+      ],
+      "dependencies": [
+        "ind_easy_as_it_seems"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_crush_em",
+      "title": "Crush 'em",
+      "icon": "mekanism:enrichment_chamber",
+      "x": 168,
+      "y": 291,
+      "description": [
+        "Obtain a Purification Chamber to crush ores into clumps"
+      ],
+      "dependencies": [
+        "ind_2h2o_2h2_o2"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:enrichment_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_pulverizer",
+      "title": "Pulverizer",
+      "icon": "mekanism:enrichment_chamber",
+      "x": 229,
+      "y": 291,
+      "description": [
+        "Obtain a Crusher which crushes ore clumps into dirty dust"
+      ],
+      "dependencies": [
+        "ind_crush_em"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:enrichment_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_dust_to_dust",
+      "title": "Dust to Dust",
+      "icon": "mekanism:enrichment_chamber",
+      "x": 272,
+      "y": 291,
+      "description": [
+        "Obtain an Enrichment Chamber which can purify ore dusts"
+      ],
+      "dependencies": [
+        "ind_pulverizer"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:enrichment_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_distillation_controller",
+      "title": "Distillation Controller",
+      "icon": "mekanism:teleporter_frame",
+      "x": 333,
+      "y": 272,
+      "description": [
+        "Original items: Teleporter Frame (mekanism)"
+      ],
+      "dependencies": [
+        "ind_dust_to_dust"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:teleporter_frame",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:ingot_osmium",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_distillation_io",
+      "title": "Distillation IO",
+      "icon": "mekanism:steel_casing",
+      "x": 333,
+      "y": 312,
+      "description": [
+        "Original items: Steel Casing (mekanism)"
+      ],
+      "dependencies": [
+        "ind_dust_to_dust"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:steel_casing",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:ingot_osmium",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_quadruple_ores",
+      "title": "Quadruple Ores",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 376,
+      "y": 291,
+      "description": [
+        "Original items: Machineblock2 (mekanism)"
+      ],
+      "dependencies": [
+        "ind_quest_33bb8983",
+        "ind_distillation_controller",
+        "ind_distillation_io"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p master_engineer false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_chemical_dissolving",
+      "title": "Chemical Dissolving",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 376,
+      "y": 333,
+      "description": [
+        "Original items: Machineblock2 (mekanism)"
+      ],
+      "dependencies": [
+        "ind_quadruple_ores"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_make_progress_in_ender_io_2",
+      "title": "Make progress in Ender IO",
+      "icon": "minecraft:barrier",
+      "x": 272,
+      "y": 0,
+      "description": "Complete \"Make progress in Ender IO\" to continue.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_i",
+      "title": "Environmentalist I",
+      "icon": "solarflux:sp_1",
+      "x": 21,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_1",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_1",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_ii",
+      "title": "Environmentalist II",
+      "icon": "solarflux:sp_2",
+      "x": 64,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_2",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_2",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_iii",
+      "title": "Environmentalist III",
+      "icon": "solarflux:sp_3",
+      "x": 125,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_3",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_3",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_iv",
+      "title": "Environmentalist IV",
+      "icon": "solarflux:sp_4",
+      "x": 168,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_iii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_4",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_4",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_v",
+      "title": "Environmentalist V",
+      "icon": "solarflux:sp_5",
+      "x": 229,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_make_progress_in_ender_io_2",
+        "ind_environmentalist_iv"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_5",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_5",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_soul_metal",
+      "title": "Soul Metal",
+      "icon": "enderio:end_steel_ingot",
+      "x": 229,
+      "y": 437,
+      "description": [
+        "Original items: End Steel Ingot (enderio)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:end_steel_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:soul_sand",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_essence",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_soul_injection",
+      "title": "Soul Injection",
+      "icon": "enderio:ender_crystal",
+      "x": 229,
+      "y": 395,
+      "description": [
+        "Original items: Ender Crystal (enderio)"
+      ],
+      "dependencies": [
+        "ind_better_machines_b_2",
+        "ind_soul_metal",
+        "ind_better_machines_a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:ender_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:wither_skeleton_skull",
+          "count": 12
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_soul_bound",
+      "title": "Soul Bound",
+      "icon": "enderio:soul_binder",
+      "x": 272,
+      "y": 437,
+      "description": [
+        "Original items: Block Soul Binder (enderio)"
+      ],
+      "dependencies": [
+        "ind_soul_injection"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:soul_binder",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_warmth_of_earth",
+      "title": "Warmth of Earth",
+      "icon": "thermalexpansion:machine",
+      "x": 333,
+      "y": 187,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_rare_ore",
+      "title": "Rare Ore",
+      "icon": "thermal:nickel_ore",
+      "x": 272,
+      "y": 333,
+      "description": [
+        "Original items: Nickel Ore (thermal)"
+      ],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:nickel_ore",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:enchanted_book",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_alchemical_energy",
+      "title": "Alchemical Energy",
+      "icon": "solarflux:sp_4",
+      "x": 64,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_4",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_1",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_brass_panel",
+      "title": "Brass Panel",
+      "icon": "solarflux:sp_5",
+      "x": 125,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_alchemical_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_5",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_2",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_infused_with_energy",
+      "title": "Infused With Energy",
+      "icon": "thermalexpansion:machine",
+      "x": 168,
+      "y": 144,
+      "description": [
+        "Obtain an Energetic Infuser which charges a lot of items"
+      ],
+      "dependencies": [
+        "ind_mystical_machine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_direct_energy",
+      "title": "Direct Energy",
+      "icon": "thermalexpansion:dynamo",
+      "x": 229,
+      "y": 187,
+      "description": [
+        "Original items: Dynamo (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_infused_with_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:dynamo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:redstone_block",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_better_machines_b",
+      "title": "Better Machines B",
+      "icon": "enderio:sag_mill",
+      "x": 272,
+      "y": 395,
+      "description": [
+        "Upgrade Sagmill"
+      ],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:sag_mill",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_afk_farming",
+      "title": "AFK Farming",
+      "icon": "cyclicmagic:harvester_block",
+      "x": 603,
+      "y": 437,
+      "description": [
+        "Original items: Harvester Block (cyclicmagic)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "cyclicmagic:harvester_block",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_gas_storage",
+      "title": "Gas Storage",
+      "icon": "mekanism:basic_chemical_tank",
+      "x": 168,
+      "y": 248,
+      "description": [
+        "Original items: Gastank (mekanism)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:basic_chemical_tank",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 350
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_three_forms_of_water",
+      "title": "Three Forms of Water",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 125,
+      "y": 248,
+      "description": [
+        "Original items: Machineblock2 (mekanism)"
+      ],
+      "dependencies": [
+        "ind_gas_storage",
+        "ind_make_progress_in_ender_io_3"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_want_some_nukes",
+      "title": "Want Some Nukes?",
+      "icon": "bigreactors:yellorite_ore",
+      "x": 603,
+      "y": 272,
+      "description": [
+        "Original items: Oreyellorite (bigreactors)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:yellorite_ore",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:yellorite_ore",
+          "count": 6
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_reactor_casing",
+      "title": "Reactor Casing",
+      "icon": "bigreactors:basic_reactorcasing",
+      "x": 645,
+      "y": 312,
+      "description": [
+        "Original items: Reactorcasing (bigreactors)"
+      ],
+      "dependencies": [
+        "ind_want_some_nukes",
+        "ind_gigantic_pencil_core",
+        "ind_make_progress_in_ender_io"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_reactor_lever",
+      "title": "Reactor Lever",
+      "icon": "bigreactors:basic_reactorcontrolrod",
+      "x": 707,
+      "y": 333,
+      "description": [
+        "Original items: Reactorcontrolrod (bigreactors)"
+      ],
+      "dependencies": [
+        "ind_reactor_casing"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcontrolrod",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_thaumic_energy",
+      "title": "Thaumic Energy",
+      "icon": "solarflux:sp_6",
+      "x": 168,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_brass_panel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_6",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_5",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_bigger_inventory",
+      "title": "Bigger Inventory",
+      "icon": "cyclicmagic:inventory_food",
+      "x": 645,
+      "y": 437,
+      "description": [
+        "Original items: Inventory Food (cyclicmagic)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "cyclicmagic:inventory_food",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_vi",
+      "title": "Environmentalist VI",
+      "icon": "solarflux:sp_6",
+      "x": 272,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_v"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_6",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_6",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_chemical_oxidation",
+      "title": "Chemical Oxidation",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 64,
+      "y": 333,
+      "description": [
+        "Original items: Machineblock2 (mekanism)"
+      ],
+      "dependencies": [
+        "ind_easy_as_it_seems"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_free_your_hands",
+      "title": "Free Your Hands",
+      "icon": "mekanism:enrichment_chamber",
+      "x": 437,
+      "y": 333,
+      "description": [
+        "Original items: Machineblock (mekanism)"
+      ],
+      "dependencies": [
+        "ind_chemical_dissolving"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:enrichment_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_vii",
+      "title": "Environmentalist VII",
+      "icon": "solarflux:sp_7",
+      "x": 333,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_vi"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_7",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_7",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_make_progress_in_mekanism",
+      "title": "Make progress in Mekanism",
+      "icon": "minecraft:barrier",
+      "x": 376,
+      "y": 0,
+      "description": "Complete \"Make progress in Mekanism\" to continue.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_environmentalist_viii",
+      "title": "Environmentalist VIII",
+      "icon": "solarflux:sp_8",
+      "x": 376,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_vii",
+        "ind_make_progress_in_mekanism"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_8",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_8",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 12800
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_neutron_energy",
+      "title": "Neutron Energy",
+      "icon": "solarflux:sp_avaritia.neutronium",
+      "x": 437,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_viii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_avaritia.neutronium",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_avaritia.neutronium",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_chemical_infusion",
+      "title": "Chemical infusion",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 125,
+      "y": 333,
+      "description": [
+        "Original items: Machineblock2 (mekanism)"
+      ],
+      "dependencies": [
+        "ind_chemical_oxidation"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_pure_fluid",
+      "title": "Pure Fluid",
+      "icon": "mekanism:electrolytic_separator",
+      "x": 168,
+      "y": 333,
+      "description": [
+        "Original items: Machineblock2 (mekanism)"
+      ],
+      "dependencies": [
+        "ind_chemical_infusion"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:electrolytic_separator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_wyvern_energy",
+      "title": "Wyvern Energy",
+      "icon": "solarflux:sp_de.wyvern",
+      "x": 437,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_environmentalist_viii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_de.wyvern",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 20000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_de.wyvern",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_solid_experience",
+      "title": "Solid Experience",
+      "icon": "actuallyadditions:block_xp_solidifier",
+      "x": 811,
+      "y": 40,
+      "description": [
+        "Original items: Block Xp Solidifier (actuallyadditions)"
+      ],
+      "dependencies": [
+        "ind_diamond_but_better"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:block_xp_solidifier",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_quest_5ead9b7e",
+      "title": "Machine",
+      "icon": "thermalexpansion:machine",
+      "x": 376,
+      "y": 187,
+      "description": "Obtain 1× Machine to progress in the Industrial Age path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_empowered_lapis",
+      "title": "Empowered Lapis",
+      "icon": "actuallyadditions:empowered_palis_crystal",
+      "x": 707,
+      "y": 104,
+      "description": [
+        "Empower ore crystals with an Empowerer"
+      ],
+      "dependencies": [
+        "ind_altar_but_in_science"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:empowered_palis_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_void_energy",
+      "title": "Void Energy",
+      "icon": "solarflux:sp_7",
+      "x": 229,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_thaumic_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_7",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_6",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_compressed_energy",
+      "title": "Compressed Energy",
+      "icon": "thermalexpansion:dynamo",
+      "x": 64,
+      "y": 187,
+      "description": [
+        "Original items: Dynamo (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_infinite_water"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:dynamo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:wheat_seeds",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_organic_infusing",
+      "title": "Organic Infusing",
+      "icon": "thermalexpansion:machine",
+      "x": 437,
+      "y": 83,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_cooldown_cycle",
+      "title": "Cooldown Cycle",
+      "icon": "thermal:machine_output_augment",
+      "x": 40,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_compressed_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:machine_output_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_reactor_stick",
+      "title": "Reactor Stick",
+      "icon": "bigreactors:basic_reactorfuelrod",
+      "x": 728,
+      "y": 312,
+      "description": [
+        "Original items: Reactorfuelrod (bigreactors)"
+      ],
+      "dependencies": [
+        "ind_reactor_casing"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorfuelrod",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_empowered_coal",
+      "title": "Empowered Coal",
+      "icon": "actuallyadditions:empowered_void_crystal",
+      "x": 749,
+      "y": 83,
+      "description": [
+        "Empower ore crystals with an Empowerer"
+      ],
+      "dependencies": [
+        "ind_altar_but_in_science"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:empowered_void_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_burn_them_to_dust",
+      "title": "Burn Them to Dust",
+      "icon": "thermal:machine_cycle_augment",
+      "x": 229,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_direct_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:machine_cycle_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_ultimate_gas_storage",
+      "title": "Ultimate Gas Storage",
+      "icon": "mekanism:basic_chemical_tank",
+      "x": 229,
+      "y": 248,
+      "description": [
+        "Original items: Gastank (mekanism)"
+      ],
+      "dependencies": [
+        "ind_gas_storage"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:basic_chemical_tank",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:basic_chemical_tank",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_cooking_oil_is_oil",
+      "title": "Cooking Oil is Oil",
+      "icon": "thermal:xp_storage_augment",
+      "x": 64,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_compressed_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:xp_storage_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_power_infused_metal",
+      "title": "Power Infused Metal",
+      "icon": "redstonearsenal:flux_ingot",
+      "x": 272,
+      "y": 83,
+      "description": [
+        "Original items: Flux Ingot (redstonearsenal)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "redstonearsenal:flux_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "redstone_arsenal:flux_ingot",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_instant_transport",
+      "title": "Instant Transport",
+      "icon": "thermaldynamics:energy_duct",
+      "x": 480,
+      "y": 83,
+      "description": [
+        "Original items: Energy Duct (thermaldynamics)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermaldynamics:energy_duct",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_centrifuge",
+      "title": "Centrifuge",
+      "icon": "thermalexpansion:machine",
+      "x": 376,
+      "y": 83,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_power_of_sunlight",
+      "title": "Power of Sunlight",
+      "icon": "mekanismgenerators:solar_generator",
+      "x": 272,
+      "y": 248,
+      "description": [
+        "Original items: Generator (mekanismgenerators)"
+      ],
+      "dependencies": [
+        "ind_dust_to_dust"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanismgenerators:solar_generator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_manufacturing",
+      "title": "Manufacturing",
+      "icon": "thermalexpansion:machine",
+      "x": 376,
+      "y": 125,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_apparently_death_is_power",
+      "title": "Apparently Death is Power",
+      "icon": "enderio:loot_capacitor",
+      "x": 333,
+      "y": 480,
+      "description": [
+        "Original items: Item Capacitor Totemic (enderio)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:loot_capacitor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6666
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:octadic_capacitor",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_reactor_controller",
+      "title": "Reactor Controller",
+      "icon": "bigreactors:basic_reactorcontroller",
+      "x": 707,
+      "y": 272,
+      "description": [
+        "Original items: Reactorcontroller (bigreactors)"
+      ],
+      "dependencies": [
+        "ind_reactor_casing"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcontroller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bigreactors:basic_reactorcasing",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_master_of_oil",
+      "title": "Master of Oil",
+      "icon": "thermal:dynamo_output_augment",
+      "x": 83,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_compressed_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:dynamo_output_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_water_cooling",
+      "title": "Water Cooling",
+      "icon": "thermalexpansion:device",
+      "x": 333,
+      "y": 83,
+      "description": [
+        "Obtain a Thermal Mediator which makes nearby machines more efficient!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:device",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_walkie_craftie",
+      "title": "Walkie Craftie",
+      "icon": "cyclicmagic:crafting_food",
+      "x": 707,
+      "y": 437,
+      "description": [
+        "Original items: Crafting Food (cyclicmagic)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "cyclicmagic:crafting_food",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_best_machines_a",
+      "title": "Best Machines A",
+      "icon": "enderio:alloy_smelter",
+      "x": 272,
+      "y": 352,
+      "description": [
+        "Upgrade alloy smelter"
+      ],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:alloy_smelter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_empowered_emerald",
+      "title": "Empowered Emerald",
+      "icon": "actuallyadditions:empowered_emeradic_crystal",
+      "x": 664,
+      "y": 83,
+      "description": [
+        "Empower ore crystals with an Empowerer"
+      ],
+      "dependencies": [
+        "ind_altar_but_in_science"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:empowered_emeradic_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_infinite_energy",
+      "title": "Infinite Energy",
+      "icon": "solarflux:sp_avaritia.infinity",
+      "x": 480,
+      "y": 40,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_neutron_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_avaritia.infinity",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_avaritia.infinity",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1048576
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p infinite_solar_energy false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_steampunk_era",
+      "title": "Steampunk Era",
+      "icon": "thermal:machine_catalyst_augment",
+      "x": 0,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_steampunk_era_2"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:machine_catalyst_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_rookie_alloy",
+      "title": "Rookie Alloy",
+      "icon": "thermal:lumium_ingot",
+      "x": 480,
+      "y": 125,
+      "description": [
+        "Original items: Lumium Ingot (thermal)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:lumium_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_crystalized_alloy",
+      "title": "Crystalized Alloy",
+      "icon": "enderio:vibrant_alloy_ingot",
+      "x": 168,
+      "y": 437,
+      "description": [
+        "Original items: Vivid Alloy Ingot (enderio)"
+      ],
+      "dependencies": [
+        "ind_better_machines_a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:vibrant_alloy_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:vibrant_alloy_ingot",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_industrial_evolution_iv",
+      "title": "Industrial Evolution IV",
+      "icon": "thermal:upgrade_augment_3",
+      "x": 229,
+      "y": 83,
+      "description": [
+        "Original items: Upgrade Augment 3 (thermal)"
+      ],
+      "dependencies": [
+        "ind_industrial_evolution_iii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:upgrade_augment_3",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_empowered_redstone",
+      "title": "Empowered Redstone",
+      "icon": "actuallyadditions:block_crystal_empowered",
+      "x": 688,
+      "y": 83,
+      "description": [
+        "Empower ore crystals with an Empowerer"
+      ],
+      "dependencies": [
+        "ind_altar_but_in_science"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "actuallyadditions:block_crystal_empowered",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_hard_but_fragile",
+      "title": "Hard But Fragile",
+      "icon": "thermal:obsidian_glass",
+      "x": 168,
+      "y": 104,
+      "description": [
+        "Original items: Obsidian Glass (thermal)"
+      ],
+      "dependencies": [
+        "ind_mystical_machine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:obsidian_glass",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_draconic_energy",
+      "title": "Draconic Energy",
+      "icon": "solarflux:sp_de.draconic",
+      "x": 480,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_wyvern_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_de.draconic",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_de.draconic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 150000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_chaotic_energy",
+      "title": "Chaotic Energy",
+      "icon": "solarflux:sp_de.chaotic",
+      "x": 541,
+      "y": 0,
+      "description": [
+        "Craft the required solar panel"
+      ],
+      "dependencies": [
+        "ind_draconic_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_de.chaotic",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_de.chaotic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_reactor_but_not_nuclear",
+      "title": "Reactor But Not Nuclear",
+      "icon": "thermalexpansion:dynamo",
+      "x": 168,
+      "y": 187,
+      "description": [
+        "Original items: Dynamo (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_mystical_machine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:dynamo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_geothermal_energy",
+      "title": "Geothermal Energy",
+      "icon": "thermalexpansion:dynamo",
+      "x": 125,
+      "y": 187,
+      "description": [
+        "Original items: Dynamo (thermalexpansion)"
+      ],
+      "dependencies": [
+        "ind_mystical_machine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:dynamo",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:magma_block",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_heat_overload",
+      "title": "Heat Overload",
+      "icon": "thermal:potion_amplifier_augment",
+      "x": 125,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_geothermal_energy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:potion_amplifier_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_how_the_steel_was_tempered",
+      "title": "How the Steel Was Tempered",
+      "icon": "thermal:bronze_ingot",
+      "x": 333,
+      "y": 125,
+      "description": [
+        "Original items: Bronze Ingot (thermal)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:bronze_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_getting_more_wood",
+      "title": "Getting More Wood",
+      "icon": "thermalexpansion:machine",
+      "x": 437,
+      "y": 125,
+      "description": [
+        "Original items: Machine (thermalexpansion)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermalexpansion:machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_ice_and_fire",
+      "title": "Ice and Fire",
+      "icon": "thermal:machine_speed_augment",
+      "x": 168,
+      "y": 208,
+      "description": [
+        "Install specialization to the Dynamos"
+      ],
+      "dependencies": [
+        "ind_reactor_but_not_nuclear"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:machine_speed_augment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ind_brain_of_the_network",
+      "title": "Brain of the Network",
+      "icon": "xnet:controller",
+      "x": 645,
+      "y": 125,
+      "description": [
+        "Obtain an XNet Controller, charge it with energy and connect it to the network with a Connector."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "xnet:controller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "xnet:advanced_connector_blue",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

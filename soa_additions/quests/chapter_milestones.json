@@ -1,0 +1,1155 @@
+{
+  "id": "chapter_milestones",
+  "title": "Milestones",
+  "icon": "minecraft:gold_block",
+  "sort_order": 130,
+  "description": "Quests for the Milestones progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "mil_monster_hunter_i",
+      "title": "Monster Hunter I",
+      "icon": "minecraft:wooden_sword",
+      "x": 96,
+      "y": 0,
+      "description": [
+        "Kill the required amount of mobs"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:mob_kills",
+          "threshold": 100
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tinymobfarm:wood_farm",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:diamond_sword",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_monster_hunter_ii",
+      "title": "Monster Hunter II",
+      "icon": "minecraft:stone_sword",
+      "x": 96,
+      "y": 64,
+      "description": [
+        "Kill the required amount of mobs"
+      ],
+      "dependencies": [
+        "mil_monster_hunter_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:mob_kills",
+          "threshold": 500
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tinymobfarm:iron_farm",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "dummmmmmy:target_dummy",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_monster_hunter_iii",
+      "title": "Monster Hunter III",
+      "icon": "minecraft:iron_sword",
+      "x": 96,
+      "y": 128,
+      "description": [
+        "Kill the required amount of mobs"
+      ],
+      "dependencies": [
+        "mil_monster_hunter_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:mob_kills",
+          "threshold": 2500
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tinymobfarm:diamond_farm",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_trekker_i",
+      "title": "Trekker I",
+      "icon": "minecraft:leather_boots",
+      "x": 160,
+      "y": 0,
+      "description": [
+        "Walk a long distance"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:walk_one_cm",
+          "threshold": 250000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "naturescompass:naturescompass",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_trekker_ii",
+      "title": "Trekker II",
+      "icon": "minecraft:chainmail_boots",
+      "x": 160,
+      "y": 64,
+      "description": [
+        "Walk a long distance"
+      ],
+      "dependencies": [
+        "mil_trekker_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:walk_one_cm",
+          "threshold": 1000000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_sojourner_i",
+      "title": "Sojourner I",
+      "icon": "minecraft:leather_helmet",
+      "x": 0,
+      "y": 0,
+      "description": [
+        "Keep playing the game for a long time"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:play_time",
+          "threshold": 69120
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:clock",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:red_bed",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_sojourner_ii",
+      "title": "Sojourner II",
+      "icon": "minecraft:chainmail_helmet",
+      "x": 0,
+      "y": 64,
+      "description": [
+        "Keep playing the game for a long time"
+      ],
+      "dependencies": [
+        "mil_sojourner_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:play_time",
+          "threshold": 345600
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "snad:snad",
+          "count": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_sojourner_iii",
+      "title": "Sojourner III",
+      "icon": "minecraft:iron_helmet",
+      "x": 0,
+      "y": 128,
+      "description": [
+        "Keep playing the game for a long time"
+      ],
+      "dependencies": [
+        "mil_sojourner_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:play_time",
+          "threshold": 1728000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_growth_accelerator",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_sojourner_iv",
+      "title": "Sojourner IV",
+      "icon": "minecraft:golden_helmet",
+      "x": 0,
+      "y": 192,
+      "description": [
+        "Keep playing the game for a long time"
+      ],
+      "dependencies": [
+        "mil_sojourner_iii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:play_time",
+          "threshold": 3720000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 25000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_purifier_i",
+      "title": "Purifier I",
+      "icon": "quark:pipe",
+      "x": 320,
+      "y": 0,
+      "description": [
+        "Kill the Wither for many times"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:wither",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:wither_skeleton_skull",
+          "count": 15
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:wither_skeleton_seeds",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:beacon",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:potion",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_purifier_ii",
+      "title": "Purifier II",
+      "icon": "netherex:wither_bone",
+      "x": 320,
+      "y": 64,
+      "description": [
+        "Kill the Wither for many times"
+      ],
+      "dependencies": [
+        "mil_purifier_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:wither",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:wither_skeleton_skull",
+          "count": 128
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:nether_star",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:quartz_block",
+          "count": 128
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:potion",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_purifier_iii",
+      "title": "Purifier III",
+      "icon": "mysticalagradditions:insanium_block",
+      "x": 320,
+      "y": 128,
+      "description": [
+        "Kill the Wither for many times"
+      ],
+      "dependencies": [
+        "mil_purifier_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:wither",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 16000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:nether_star",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:insanium_essence",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:nether_star_shard",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:potion",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_purifier_iv",
+      "title": "Purifier IV",
+      "icon": "mysticalagradditions:insanium_ingot",
+      "x": 320,
+      "y": 192,
+      "description": [
+        "Kill the Wither for many times"
+      ],
+      "dependencies": [
+        "mil_purifier_iii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:wither",
+          "count": 32
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 40000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:insanium_essence",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:nether_star_shard",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:singularity",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:nether_star",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_purifier_v",
+      "title": "Purifier V",
+      "icon": "minecraft:wither_skeleton_skull",
+      "x": 320,
+      "y": 256,
+      "description": [
+        "Kill the Wither for many times"
+      ],
+      "dependencies": [
+        "mil_purifier_iv"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:wither",
+          "count": 64
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 150000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:nether_star",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_guardian_i",
+      "title": "Guardian I",
+      "icon": "minecraft:leather_chestplate",
+      "x": 256,
+      "y": 0,
+      "description": [
+        "Take the required amount of damage"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:damage_taken",
+          "threshold": 10000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_guardian_ii",
+      "title": "Guardian II",
+      "icon": "minecraft:chainmail_chestplate",
+      "x": 256,
+      "y": 64,
+      "description": [
+        "Take the required amount of damage"
+      ],
+      "dependencies": [
+        "mil_guardian_i"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:damage_taken",
+          "threshold": 50000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_guardian_iii",
+      "title": "Guardian III",
+      "icon": "minecraft:iron_chestplate",
+      "x": 256,
+      "y": 128,
+      "description": [
+        "Take the required amount of damage"
+      ],
+      "dependencies": [
+        "mil_guardian_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:damage_taken",
+          "threshold": 200000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:totem_of_undying",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_monster_hunter_iv",
+      "title": "Monster Hunter IV",
+      "icon": "minecraft:golden_sword",
+      "x": 96,
+      "y": 192,
+      "description": [
+        "Kill the required amount of mobs"
+      ],
+      "dependencies": [
+        "mil_monster_hunter_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:mob_kills",
+          "threshold": 7500
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tinymobfarm:inferno_farm",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 25000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_monster_hunter_v",
+      "title": "Monster Hunter V",
+      "icon": "minecraft:diamond_sword",
+      "x": 96,
+      "y": 256,
+      "description": [
+        "Kill the required amount of mobs"
+      ],
+      "dependencies": [
+        "mil_monster_hunter_iv"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:mob_kills",
+          "threshold": 20000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tinymobfarm:ultimate_farm",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_trekker_iii",
+      "title": "Trekker III",
+      "icon": "minecraft:iron_boots",
+      "x": 160,
+      "y": 128,
+      "description": [
+        "Walk a long distance"
+      ],
+      "dependencies": [
+        "mil_trekker_ii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:walk_one_cm",
+          "threshold": 5000000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:charm_wing",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_trekker_iv",
+      "title": "Trekker IV",
+      "icon": "minecraft:golden_boots",
+      "x": 160,
+      "y": 192,
+      "description": [
+        "Walk a long distance"
+      ],
+      "dependencies": [
+        "mil_trekker_iii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:walk_one_cm",
+          "threshold": 15000000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:elytra",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "magicfeather:magic_feather",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 25000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_guardian_iv",
+      "title": "Guardian IV",
+      "icon": "minecraft:golden_chestplate",
+      "x": 256,
+      "y": 192,
+      "description": [
+        "Take the required amount of damage"
+      ],
+      "dependencies": [
+        "mil_guardian_iii"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:damage_taken",
+          "threshold": 500000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 25000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:charm_magicdefense",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_trekker_v",
+      "title": "Trekker V",
+      "icon": "minecraft:diamond_boots",
+      "x": 160,
+      "y": 256,
+      "description": [
+        "Walk a long distance"
+      ],
+      "dependencies": [
+        "mil_trekker_iv"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:walk_one_cm",
+          "threshold": 40000000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_sojourner_v",
+      "title": "Sojourner V",
+      "icon": "minecraft:diamond_helmet",
+      "x": 0,
+      "y": 256,
+      "description": [
+        "Keep playing the game for a long time"
+      ],
+      "dependencies": [
+        "mil_sojourner_iv"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:play_time",
+          "threshold": 8000000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:neutron_collector",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:infinity_ingot",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mil_guardian_v",
+      "title": "Guardian V",
+      "icon": "minecraft:diamond_chestplate",
+      "x": 256,
+      "y": 256,
+      "description": [
+        "Take the required amount of damage"
+      ],
+      "dependencies": [
+        "mil_guardian_iv"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:damage_taken",
+          "threshold": 1000000
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:soulstone",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "scalinghealth:heart_crystal",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "torchmaster:megatorch",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

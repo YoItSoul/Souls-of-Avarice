@@ -1,0 +1,9 @@
+{
+  "type": "lootbags:loot",
+  "name": "Common Loot Crate",
+  "color": "#55FF55",
+  "rarity": "common",
+  "output": {
+    "table": "greedycraft:lootbags/common"
+  }
+}

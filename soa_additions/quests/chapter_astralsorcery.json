@@ -1,0 +1,855 @@
+{
+  "id": "chapter_astralsorcery",
+  "title": "Astral Sorcery",
+  "icon": "minecraft:ender_eye",
+  "sort_order": 140,
+  "description": "Quests for the Astral Sorcery progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "visibility": "invisible",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "ast_gem_of_the_ocean",
+      "title": "Gem of the Ocean",
+      "icon": "astralsorcery:itemcraftingcomponent",
+      "x": 0,
+      "y": 256,
+      "description": [
+        "Mine some Aquamarine which can usually be found in sand in the rivers"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemcraftingcomponent",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 160
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:glass",
+          "count": 320
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_condensing_stars",
+      "title": "Condensing Stars",
+      "icon": "astralsorcery:aquamarine",
+      "x": 160,
+      "y": 256,
+      "description": [
+        "Original items: Aquamarine (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_gem_of_the_ocean"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:aquamarine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_mystic_shrine",
+      "title": "Mystic Shrine",
+      "icon": "minecraft:barrier",
+      "x": 0,
+      "y": 0,
+      "description": [
+        "Find an ancient marble shrine and observe the floating crystal in it"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 160
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:crafting_table",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:waystone",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_white_and_innocent",
+      "title": "White and Innocent",
+      "icon": "itemfilters:always_true",
+      "x": 0,
+      "y": 128,
+      "description": [
+        "Get a marble block"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "itemfilters:always_true",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 160
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_star_crafting_table",
+      "title": "Star Crafting Table",
+      "icon": "astralsorcery:blockaltar",
+      "x": 0,
+      "y": 64,
+      "description": [
+        "Craft a Luminous Crafting Table by letting a crafting table absorb the starlight from a floating crystal"
+      ],
+      "dependencies": [
+        "ast_mystic_shrine",
+        "ast_white_and_innocent"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockaltar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 320
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_may_the_stars_guide_my_way",
+      "title": "May the Stars Guide My Way",
+      "icon": "astralsorcery:itemwand",
+      "x": 96,
+      "y": 192,
+      "description": [
+        "Obtain a Resonating Wand which tells you where the Rock Crystal Ore is"
+      ],
+      "dependencies": [
+        "ast_white_and_innocent",
+        "ast_gem_of_the_ocean"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemwand",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 420
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ender_pearl",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_precious_crystal",
+      "title": "Precious Crystal",
+      "icon": "astralsorcery:itemrockcrystalsimple",
+      "x": 96,
+      "y": 128,
+      "description": [
+        "Find Rock Crystal with guidance from the Resonating Wand"
+      ],
+      "dependencies": [
+        "ast_may_the_stars_guide_my_way"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemrockcrystalsimple",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 420
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_star_well",
+      "title": "Star Well",
+      "icon": "astralsorcery:blockwell",
+      "x": 160,
+      "y": 128,
+      "description": [
+        "Obtain a Lightwell to produce liquid starlight"
+      ],
+      "dependencies": [
+        "ast_may_the_stars_guide_my_way",
+        "ast_precious_crystal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockwell",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 420
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_power_of_the_stars",
+      "title": "Power of the Stars",
+      "icon": "astralsorcery:blockaltar",
+      "x": 96,
+      "y": 64,
+      "description": [
+        "Original items: Blockaltar (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_star_crafting_table",
+        "ast_star_well",
+        "ast_precious_crystal",
+        "ast_mystic_shrine",
+        "ast_white_and_innocent"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockaltar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 420
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_explore_the_skies",
+      "title": "Explore the Skies",
+      "icon": "astralsorcery:blockmachine",
+      "x": 160,
+      "y": 0,
+      "description": [
+        "Original items: Blockmachine (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_power_of_the_stars"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockmachine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 420
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_alien_wood",
+      "title": "Alien Wood",
+      "icon": "astralsorcery:blockinfusedwood",
+      "x": 256,
+      "y": 64,
+      "description": [
+        "Original items: Blockinfusedwood (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_star_well"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockinfusedwood",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 520
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_star_altar",
+      "title": "Star Altar",
+      "icon": "astralsorcery:blockaltar",
+      "x": 320,
+      "y": 256,
+      "description": [
+        "Original items: Blockaltar (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_condensing_stars"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockaltar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p novice_wizard false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_nice_looking_crystal",
+      "title": "Nice Looking crystal",
+      "icon": "astralsorcery:itemcelestialcrystal",
+      "x": 256,
+      "y": 192,
+      "description": [
+        "Original items: Itemcelestialcrystal (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_star_well",
+        "ast_condensing_stars",
+        "ast_star_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemcelestialcrystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_leeuwenhoek",
+      "title": "Leeuwenhoek",
+      "icon": "astralsorcery:blocklens",
+      "x": 320,
+      "y": 128,
+      "description": [
+        "Original items: Blocklens (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_alien_wood",
+        "ast_nice_looking_crystal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blocklens",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:glass",
+          "count": 256
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_star_infusing",
+      "title": "Star Infusing",
+      "icon": "astralsorcery:blockstarlightinfuser",
+      "x": 416,
+      "y": 192,
+      "description": [
+        "Original items: Blockstarlightinfuser (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_leeuwenhoek",
+        "ast_star_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockstarlightinfuser",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2400
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_quest_7cee006c",
+      "title": "Blockprism",
+      "icon": "astralsorcery:blockprism",
+      "x": 480,
+      "y": 128,
+      "description": "Obtain 1× Blockprism to progress in the Astral Sorcery path.",
+      "dependencies": [
+        "ast_star_infusing"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockprism",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2400
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_ultimate_altar",
+      "title": "Ultimate Altar",
+      "icon": "astralsorcery:blockaltar",
+      "x": 480,
+      "y": 256,
+      "description": [
+        "Original items: Blockaltar (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_star_infusing"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockaltar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_a_better_beginning",
+      "title": "A Better Beginning",
+      "icon": "astralsorcery:itemshiftingstar",
+      "x": 576,
+      "y": 192,
+      "description": [
+        "Original items: Itemshiftingstar (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_quest_7cee006c",
+        "ast_ultimate_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemshiftingstar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_quest_6a09cb5d",
+      "title": "Arcane Crystal Ball",
+      "icon": "soa_additions:arcane_crystal_ball",
+      "x": 416,
+      "y": 320,
+      "description": "Obtain 1× Arcane Crystal Ball to progress in the Astral Sorcery path.",
+      "dependencies": [
+        "ast_ultimate_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:arcane_crystal_ball",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_link_them_together",
+      "title": "Link Them Together",
+      "icon": "astralsorcery:itemlinkingtool",
+      "x": 0,
+      "y": 320,
+      "description": [
+        "Original items: Itemlinkingtool (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_gem_of_the_ocean"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemlinkingtool",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 555
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_astral_metal",
+      "title": "Astral Metal",
+      "icon": "additions:astral_metal_ingot",
+      "x": 576,
+      "y": 320,
+      "description": [
+        "Original items: Astral Metal Ingot (additions)"
+      ],
+      "dependencies": [
+        "ast_ultimate_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "additions:astral_metal_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 5200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_star_probe",
+      "title": "Star Probe",
+      "icon": "astralsorcery:itemskyresonator",
+      "x": 96,
+      "y": 320,
+      "description": [
+        "Get a resonator to detect the starlight!"
+      ],
+      "dependencies": [
+        "ast_gem_of_the_ocean",
+        "ast_condensing_stars"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:itemskyresonator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 420
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ast_constellation_tuning",
+      "title": "Constellation Tuning",
+      "icon": "astralsorcery:blockattunementaltar",
+      "x": 256,
+      "y": 320,
+      "description": [
+        "Original items: Blockattunementaltar (astralsorcery)"
+      ],
+      "dependencies": [
+        "ast_condensing_stars"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "astralsorcery:blockattunementaltar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

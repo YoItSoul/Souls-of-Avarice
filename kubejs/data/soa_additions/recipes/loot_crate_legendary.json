@@ -1,0 +1,357 @@
+{
+  "type": "lootbags:loot",
+  "name": "Legendary Loot Crate",
+  "color": 16755200,
+  "rarity": "legendary",
+  "output": {
+    "rolls": 1,
+    "entries": [
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:ultimate_farm",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:ordinary_medal",
+          "count": 1
+        },
+        "weight": 4
+      },
+      {
+        "stack": {
+          "id": "soa_additions:creative_shard",
+          "count": 1
+        },
+        "weight": 4
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity_ingot",
+          "count": 8
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:ultimate_stew",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:cosmic_meatballs",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:endest_pearl",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "enderio:octadic_capacitor",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "enderio:octadic_capacitor",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:dark_matter",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:dark_matter",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:elytra",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:dragon_egg",
+          "count": 8
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:nether_star",
+          "count": 12
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_legendary\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_epic\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_rare\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "globalxp:xp_block",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tconstruct:amethyst_bronze_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:dark_matter",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagradditions:insanium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:inferno_farm",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:ultimate_farm",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:poop",
+          "count": 16
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:medkit_super",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:klein_star_ein",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:klein_star_ein",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tconstruct:amethyst_bronze_ingot",
+          "count": 32
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:ancient_tome_page",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:experience_singularity",
+          "count": 64
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:pearl_of_knowledge",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:bedrock",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity_ingot",
+          "count": 5
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "botania:tiny_potato",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:barrier",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:collector_mk3",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:orange_shulker_box",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:purifying_pill",
+          "count": 1
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

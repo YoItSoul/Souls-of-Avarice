@@ -1,0 +1,671 @@
+{
+  "id": "chapter_epilogue",
+  "title": "Epilogue",
+  "icon": "minecraft:nether_star",
+  "sort_order": 100,
+  "description": "Quests for the Epilogue progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "epi_a_journey_to_a_thousand_miles_",
+      "title": "A Journey to a Thousand Miles Begins With a Single Step",
+      "icon": "soa_additions:ordinary_medal",
+      "x": 224,
+      "y": 0,
+      "description": [
+        "Original items: Greedycraft-Ordinary Medal (additions)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ordinary_medal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_many_a_little_makes_a_mickle",
+      "title": "Many a Little Makes a Mickle",
+      "icon": "soa_additions:pioneer_medal",
+      "x": 224,
+      "y": 64,
+      "description": [
+        "Original items: Greedycraft-Pioneer Medal (additions)"
+      ],
+      "dependencies": [
+        "epi_a_journey_to_a_thousand_miles_"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:pioneer_medal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 50000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_15bc2a7b",
+      "title": "Primordial Metal",
+      "icon": "tconevo:primordial_metal",
+      "x": 192,
+      "y": 160,
+      "description": "Obtain 1× Primordial Metal to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconevo:primordial_metal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_almost_there",
+      "title": "Almost There!",
+      "icon": "soa_additions:greedy_medal",
+      "x": 224,
+      "y": 96,
+      "description": [
+        "Original items: Greedycraft-Greedy Medal (additions)"
+      ],
+      "dependencies": [
+        "epi_many_a_little_makes_a_mickle"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:greedy_medal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_45e2da00",
+      "title": "Creative Soul",
+      "icon": "soa_additions:creative_soul",
+      "x": 192,
+      "y": 288,
+      "description": "Obtain 1× Creative Soul to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:creative_soul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_652f7b38",
+      "title": "Dragon Soul",
+      "icon": "soa_additions:dragon_soul",
+      "x": 96,
+      "y": 352,
+      "description": "Obtain 1× Dragon Soul to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:dragon_soul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_81682e0c",
+      "title": "Wither Soul",
+      "icon": "soa_additions:wither_soul",
+      "x": 352,
+      "y": 352,
+      "description": "Obtain 1× Wither Soul to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:wither_soul",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_8c574fe3",
+      "title": "Infinity Ingot",
+      "icon": "avaritia:infinity_ingot",
+      "x": 352,
+      "y": 128,
+      "description": "Obtain 1× Infinity Ingot to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:infinity_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_a02176ac",
+      "title": "Treasurebox",
+      "icon": "extrabotany:treasurebox",
+      "x": 32,
+      "y": 288,
+      "description": "Obtain 1× Treasurebox to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "extrabotany:treasurebox",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_c0e657a2",
+      "title": "Anti Entropy Matter",
+      "icon": "soa_additions:anti_entropy_matter",
+      "x": 0,
+      "y": 224,
+      "description": "Obtain 8× Anti Entropy Matter to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:anti_entropy_matter",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_cf664880",
+      "title": "Uru Ingot",
+      "icon": "tconevo:uru_ingot",
+      "x": 96,
+      "y": 128,
+      "description": "Obtain 1× Uru Ingot to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconevo:uru_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_f7ddf492",
+      "title": "Infinity Sword",
+      "icon": "avaritia:infinity_sword",
+      "x": 288,
+      "y": 160,
+      "description": "Obtain 1× Infinity Sword to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:infinity_sword",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_ea112a40",
+      "title": "Lamp Of Cinders",
+      "icon": "twilightforest:lamp_of_cinders",
+      "x": 448,
+      "y": 224,
+      "description": "Obtain 1× Lamp Of Cinders to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "twilightforest:lamp_of_cinders",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_dac56733",
+      "title": "Sp Avaritia.infinity",
+      "icon": "solarflux:sp_avaritia.infinity",
+      "x": 32,
+      "y": 160,
+      "description": "Obtain 1× Sp Avaritia.infinity to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "solarflux:sp_avaritia.infinity",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_f49da124",
+      "title": "Draconic Staff",
+      "icon": "draconicevolution:draconic_staff",
+      "x": 416,
+      "y": 288,
+      "description": "Obtain 1× Draconic Staff to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:draconic_staff",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_b37b0241",
+      "title": "Ancient Tome",
+      "icon": "soa_additions:ancient_tome",
+      "x": 288,
+      "y": 288,
+      "description": "Obtain 1× Ancient Tome to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ancient_tome",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_quest_e5d19b4d",
+      "title": "Staff",
+      "icon": "abyssalcraft:staff",
+      "x": 416,
+      "y": 160,
+      "description": "Obtain 1× Staff to progress in the Epilogue path.",
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "abyssalcraft:staff",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_a_journey_s_end_a",
+      "title": "a Journey's End a",
+      "icon": "ftbquests:custom_icon",
+      "x": 224,
+      "y": 224,
+      "description": [
+        "Go prove yourself."
+      ],
+      "dependencies": [
+        "epi_quest_45e2da00",
+        "epi_quest_81682e0c",
+        "epi_quest_c0e657a2",
+        "epi_quest_cf664880",
+        "epi_quest_15bc2a7b",
+        "epi_almost_there",
+        "epi_quest_a02176ac",
+        "epi_quest_f7ddf492",
+        "epi_quest_ea112a40",
+        "epi_quest_8c574fe3",
+        "epi_quest_dac56733",
+        "epi_quest_652f7b38",
+        "epi_quest_f49da124",
+        "epi_quest_b37b0241",
+        "epi_quest_e5d19b4d"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:greedy_medal",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:amethyst_bronze_ingot",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:executor_terminal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:creative_essence",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:creative_item_cell",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2147483647
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:broken_spawner",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:infinity_ingot",
+          "count": 128
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "projecte:klein_star_omega",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:infinity_stone",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:creative_controller",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "avaritia:infinity",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:greedy_medal",
+          "count": 14
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:creative_soul",
+          "count": 320
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "projecte:collector_mk3",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_pool",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p graduated false"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p truehero false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_qualified_ocd",
+      "title": "Qualified OCD",
+      "icon": "ftbquests:custom_icon",
+      "x": 224,
+      "y": 416,
+      "description": [
+        "eat the game."
+      ],
+      "dependencies": [
+        "epi_a_journey_s_end_a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ocd_certificate",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p qualified_ocd false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

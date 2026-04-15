@@ -1,0 +1,24 @@
+{
+  "type": "lootbags:loot",
+  "name": "Bacon Bag",
+  "rarity": "common",
+  "output": {
+    "entries": [
+      {
+        "stack": {
+          "item": "minecraft:porkchop",
+          "count": 8
+        },
+        "weight": 20
+      },
+      {
+        "stack": {
+          "item": "minecraft:cooked_porkchop",
+          "count": 8
+        },
+        "weight": 20
+      }
+    ],
+    "rolls": 3
+  }
+}

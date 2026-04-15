@@ -1,0 +1,637 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:singularity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "tconstruct:manyullyn_ingot"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "tinymobfarm:ultimate_farm"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "name": "soa_additions:ordinary_medal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "name": "soa_additions:creative_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:crystal_matrix_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:ultimate_stew",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:cosmic_meatballs",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:endest_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "enderio:octadic_capacitor",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "draconicevolution:wyvern_capacitor"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "projecte:red_matter"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:elytra"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:dragon_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:nether_star",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 12
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "draconicevolution:awakened_core",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "globalxp:xp_block"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "projecte:dark_matter",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 18
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mysticalagriculture:supremium_essence",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 21
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mysticalagradditions:insanium_essence",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mysticalagriculture:awakened_supremium_essence",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 13
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "tinymobfarm:inferno_farm"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:poop",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 16,
+                "max": 64
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:medkit_super",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 9
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "projecte:klein_star_ein",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:ancient_tome_page",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:experience_singularity",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 64,
+                "max": 192
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:pearl_of_knowledge",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:diamond_lattice",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 5,
+                "max": 25
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "botania:tiny_potato"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:orange_shulker_box"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:purifying_pill"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:infernium_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 5,
+                "max": 25
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:neutron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:infinity_catalyst"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:infinity_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:star_fuel"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:enhancement_core"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:eternal_singularity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "avaritia:infinity_upgrade"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "draconicevolution:awakened_draconium_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "draconicevolution:chaotic_core"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "draconicevolution:dragon_heart"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "projecte:klein_star_drei"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "projecte:klein_star_vier"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "extendedcrafting:the_ultimate_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "extendedcrafting:ultimate_singularity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mysticalagradditions:insanium_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mysticalagradditions:insanium_gemstone"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:creative_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:dragon_soul"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:infinity_stone"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:matter_singularity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:flux_singularity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:mana_singularity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:pioneer_medal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:greedy_medal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:orb_of_avarice"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:black_hole_remnant"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:anti_entropy_matter"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "soa_additions:strange_matter"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "solarflux:sp_8"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "solarflux:sp_de.draconic"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "solarflux:sp_de.chaotic"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "solarflux:sp_avaritia.neutronium"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "solarflux:sp_avaritia.infinity"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "cataclysm:witherite_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mythicbotany:alfsteel_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "thermal:enderium_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "mekanism:alloy_atomic"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "bigreactors:blutonium_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:enchanted_golden_apple"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "scalinghealth:enchanted_heart"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "scalinghealth:cursed_heart"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "scalinghealth:chance_heart"
+        }
+      ]
+    }
+  ]
+}

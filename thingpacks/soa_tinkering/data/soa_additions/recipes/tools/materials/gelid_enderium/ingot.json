@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:ingots/gelid_enderium"
+  },
+  "material": "soa_additions:gelid_enderium",
+  "needed": 1,
+  "value": 1
+}

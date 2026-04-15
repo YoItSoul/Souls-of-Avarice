@@ -1,0 +1,140 @@
+{
+  "id": "packmode",
+  "title": "Pack Mode",
+  "icon": "minecraft:book",
+  "sort_order": 10,
+  "description": [],
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "quests": [
+    {
+      "id": "quest_mns9miju",
+      "title": "Casual",
+      "icon": "minecraft:shield",
+      "auto_claim": true,
+      "shape": "square",
+      "x": 32,
+      "y": 96,
+      "size": 128,
+      "exclusions": [
+        "quest_mnsa7vbh"
+      ],
+      "description": [],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:is_packmode",
+          "mode": "casual"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/soa quests task complete @p \"packmode/quest_mnsa7vbh\" 0"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnsa2qi8",
+      "title": "Adventure",
+      "icon": "botania:terra_sword",
+      "auto_claim": true,
+      "shape": "square",
+      "x": 240,
+      "y": 96,
+      "size": 128,
+      "exclusions": [
+        "quest_mnsa7vbh"
+      ],
+      "description": [],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:is_packmode",
+          "mode": "adventure"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/soa quests task complete @p \"packmode/quest_mnsa7vbh\" 0"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnsa52b7",
+      "title": "Expert",
+      "icon": "draconicevolution:large_chaos_frag",
+      "auto_claim": true,
+      "shape": "square",
+      "x": 432,
+      "y": 96,
+      "size": 128,
+      "exclusions": [
+        "quest_mnsa7vbh"
+      ],
+      "description": [],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:is_packmode",
+          "mode": "expert"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/soa quests task complete @p \"packmode/quest_mnsa7vbh\" 0"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mnsa7vbh",
+      "title": "Packmode lock",
+      "icon": "aether:bronze_dungeon_key",
+      "visibility": "invisible",
+      "auto_claim": true,
+      "shape": "square",
+      "x": 288,
+      "y": 64,
+      "description": [],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:trigger",
+          "trigger": "minecraft:stone"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/soa quests task complete @p \"1_remembering/quest_mnupsmd1\" 0"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

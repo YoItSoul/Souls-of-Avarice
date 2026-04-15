@@ -1,0 +1,83 @@
+
+[general]
+	#Amount of damage the Glass Sacrificial Dagger deals per use
+	#Range: 0.0 ~ 100.0
+	glassSacrificialDaggerHealth = 2.0
+	#LP multiplier for the Glass Dagger of Sacrifice
+	#Range: 1.0 ~ 1000.0
+	glassDaggerOfSacrificeLPMultiplier = 2.0
+	#Approximate LP given per use of the Glass Sacrificial Dagger (5x BM's default)
+	#Range: 0 ~ 10000
+	glassSacrificialDaggerLP = 500
+	#Maximum RF storage of the Blood Capacitor
+	#Range: > 1
+	bloodCapacitorStorage = 10000
+	#RF/tick transfer rate for the Blood Capacitor
+	#Range: > 1
+	bloodCapacitorTransfer = 1000
+	#Ticks between blood-infused tool auto-repair
+	#Range: 1 ~ 6000
+	toolRepairRate = 100
+	#LP cost per durability point repaired
+	#Range: 1 ~ 10000
+	toolRepairCost = 10
+
+[sigils]
+	#LP cost for the Swimming Sigil
+	#Range: 0 ~ 1000000
+	swimmingCost = 5000
+	#LP cost for the Ender Sigil
+	#Range: 0 ~ 1000000
+	enderCost = 5000
+	#Base LP cost for the Lightning Sigil (multiplied by level)
+	#Range: 0 ~ 1000000
+	lightningCost = 800
+	#LP cost for the Divinity Sigil
+	#Range: 0 ~ 10000000
+	divinityCost = 100000
+	#Base LP cost for the Sentience Sigil
+	#Range: 0 ~ 1000000
+	sentienceCost = 500
+
+[baubles]
+	#Healing multiplier for the Vampire Ring (healing = damage * this)
+	#Range: 0.0 ~ 100.0
+	vampireRingMultiplier = 0.5
+	#LP multiplier for the Sacrifice Amulet (LP = damage * this)
+	#Range: 0.0 ~ 100.0
+	sacrificeAmuletMultiplier = 20.0
+	#LP multiplier for the Self-Sacrifice Amulet (LP = damage * this)
+	#Range: 0.0 ~ 100.0
+	selfSacrificeAmuletMultiplier = 20.0
+
+[rituals]
+	#Enable the Sanguine Infusion ritual
+	enableSanguineInfusion = true
+	#Range: 0 ~ 1000000
+	infusionActivationCost = 10000
+	#Range: 0 ~ 1000000
+	infusionRefreshCost = 100
+	#Enable the Purification ritual
+	enablePurification = true
+	#Range: 0 ~ 1000000
+	purificationActivationCost = 10000
+	#Range: 0 ~ 1000000
+	purificationRefreshCost = 20
+	#Enable the Blood Burner ritual
+	enableBloodBurner = true
+	#Range: 0 ~ 1000000
+	burnerActivationCost = 10000
+	#Range: 0 ~ 1000000
+	burnerRefreshCost = 200
+	#LP cost for the Modifier Removal ritual
+	#Range: 0 ~ 1000000
+	modifierRemovalCost = 25000
+
+[stasisTools]
+	#LP drained per interval while a stasis tool is active
+	#Range: 0 ~ 10000
+	stasisDrainLP = 5
+	#Ticks between stasis tool LP drain ticks
+	#Range: 1 ~ 6000
+	stasisDrainInterval = 80
+

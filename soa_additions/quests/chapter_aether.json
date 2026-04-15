@@ -1,0 +1,406 @@
+{
+  "id": "chapter_aether",
+  "title": "The Aether",
+  "icon": "aether:aether_portal_frame",
+  "sort_order": 90,
+  "description": "Quests for the The Aether progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "ae_gateway",
+      "title": "Gateway to Heaven",
+      "icon": "aether:aether_portal_frame",
+      "shape": "square",
+      "x": 464,
+      "y": 240,
+      "description": [
+        "Build a nether portal shaped frame with glowstone and pour a bucket of water in it to get to the Aether!"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "aether:the_aether"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_ambrosium",
+      "title": "Crystal of the Heaven",
+      "icon": "aether:ambrosium_shard",
+      "x": 512,
+      "y": 240,
+      "description": [
+        "Obtain an Ambrosium Shard"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "aether:ambrosium_shard",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "aether:ambrosium_shard",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_ambrosium_torch",
+      "title": "The Light of God",
+      "icon": "aether:ambrosium_torch",
+      "x": 560,
+      "y": 240,
+      "description": [
+        "Craft an Ambrosium Torch"
+      ],
+      "dependencies": [
+        "ae_ambrosium"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "aether:ambrosium_torch",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "aether:ambrosium_torch",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_gravitite_ore",
+      "title": "Gravity Stone",
+      "icon": "aether:gravitite_ore",
+      "x": 464,
+      "y": 192,
+      "description": [
+        "Obtain Gravitite Ore"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "aether:gravitite_ore",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "aether:gravitite_ore",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_enchanted_gravitite",
+      "title": "Defeat the Gravity",
+      "icon": "aether:enchanted_gravitite",
+      "x": 512,
+      "y": 192,
+      "description": [
+        "Obtain Enchanted Gravitite from Aether Enchantment"
+      ],
+      "dependencies": [
+        "ae_ambrosium",
+        "ae_gravitite_ore"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "aether:enchanted_gravitite",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "aether:enchanted_gravitite",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_freezer",
+      "title": "God Blessed Fridge",
+      "icon": "aether:freezer",
+      "x": 416,
+      "y": 288,
+      "description": [
+        "Craft a Freezer"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "aether:freezer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ice",
+          "count": 64
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_valkyrie",
+      "title": "The Goddess of War",
+      "icon": "aether:valkyrie_lance",
+      "shape": "square",
+      "x": 416,
+      "y": 192,
+      "description": [
+        "Defeat the Valkyrie Queen"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aether:valkyrie_queen",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_mimic",
+      "title": "SURPRISE!!!",
+      "icon": "minecraft:chest",
+      "x": 512,
+      "y": 288,
+      "description": [
+        "Kill a Mimic"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aether:mimic",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ironchest:iron_chest",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:hopper",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae_sun_spirit",
+      "title": "Kill the Sun",
+      "icon": "aether:sun_altar",
+      "shape": "square",
+      "x": 464,
+      "y": 288,
+      "description": [
+        "Defeat the Sun Spirit"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aether:sun_spirit",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 10000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "da_aerwhale",
+      "title": "Aerwhale Rider",
+      "icon": "deep_aether:aerwhale_saddle",
+      "x": 352,
+      "y": 240,
+      "description": [
+        "Obtain an Aerwhale Saddle"
+      ],
+      "dependencies": [
+        "ae_gateway"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "deep_aether:aerwhale_saddle",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

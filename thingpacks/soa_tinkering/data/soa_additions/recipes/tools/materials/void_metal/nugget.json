@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/void_metal"
+  },
+  "material": "soa_additions:void_metal",
+  "needed": 9,
+  "value": 1
+}

@@ -1,0 +1,1409 @@
+{
+  "id": "chapter_thaumcraft",
+  "title": "Thaumcraft",
+  "icon": "minecraft:enchanting_table",
+  "sort_order": 160,
+  "description": "Quests for the Thaumcraft progression path.",
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "visibility": "invisible",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "tc_essence_of_the_world",
+      "title": "Essence of the World",
+      "icon": "thaumcraft:salis_mundus",
+      "x": 134,
+      "y": 101,
+      "description": [
+        "Craft Salis Mundus with enlightenment from the strange dream"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:salis_mundus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p FIRSTSTEPS"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_nitor",
+      "title": "Nitor",
+      "icon": "thaumcraft:nitor_yellow",
+      "x": 179,
+      "y": 123,
+      "description": [
+        "Obtain yellow nitor with Crucible"
+      ],
+      "dependencies": [
+        "tc_essence_of_the_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:nitor_yellow",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_infusion_crafting",
+      "title": "Infusion Crafting",
+      "icon": "thaumcraft:infusion_matrix",
+      "x": 224,
+      "y": 146,
+      "description": [
+        "Original items: Infusion Matrix (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_nitor"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:infusion_matrix",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_infusion_accelerator",
+      "title": "Infusion Accelerator",
+      "icon": "thaumcraft:matrix_speed",
+      "x": 224,
+      "y": 190,
+      "description": [
+        "Original items: Matrix Speed (thaumcraft), Matrix Cost (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_infusion_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:matrix_speed",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:matrix_cost",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1300
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_stable_infusion",
+      "title": "Stable Infusion",
+      "icon": "thaumcraft:stabilizer",
+      "x": 269,
+      "y": 213,
+      "description": [
+        "Original items: Stabilizer (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_infusion_accelerator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:stabilizer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_remnant_of_the_big_bang",
+      "title": "Remnant of the Big Bang",
+      "icon": "thaumcraft:primordial_pearl",
+      "x": 314,
+      "y": 190,
+      "description": [
+        "Original items: Primordial Pearl (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_stable_infusion"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:primordial_pearl",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p TCONEVO_BASE"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p TCONEVO_TCONINFUSIONENCH"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p TCONEVO_PRIMALMETAL"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_revealer_of_the_truth",
+      "title": "Revealer of the Truth",
+      "icon": "thaumcraft:thaumometer",
+      "x": 134,
+      "y": 146,
+      "description": [
+        "Original items: Thaumometer (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_essence_of_the_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:thaumometer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_sanity_check",
+      "title": "SANITY CHECK",
+      "icon": "thaumcraft:sanity_checker",
+      "x": 134,
+      "y": 190,
+      "description": [
+        "Original items: Sanity Checker (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_revealer_of_the_truth"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:sanity_checker",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_first_step_to_alchemy",
+      "title": "First Step to Alchemy",
+      "icon": "minecraft:enchanting_table",
+      "x": 179,
+      "y": 78,
+      "description": [
+        "Spread Salis Mundus to a cauldron to turn it into a crucible"
+      ],
+      "dependencies": [
+        "tc_essence_of_the_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:water_bucket",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:lava_bucket",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_magic_brass",
+      "title": "Magic Brass",
+      "icon": "thaumcraft:brass_ingot",
+      "x": 224,
+      "y": 56,
+      "description": [
+        "Original items: Brass Ingot (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_first_step_to_alchemy"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:brass_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_thaumic_metal",
+      "title": "Thaumic Metal",
+      "icon": "thaumcraft:ingot",
+      "x": 269,
+      "y": 78,
+      "description": [
+        "Original items: Ingot (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_magic_brass"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 750
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_bow_to_darkness",
+      "title": "Bow to Darkness",
+      "icon": "thaumcraft:void_metal_ingot",
+      "x": 314,
+      "y": 101,
+      "description": [
+        "Original items: Void Metal Ingot (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_thaumic_metal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:void_metal_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_mythril_but_cooler",
+      "title": "Mythril But Cooler",
+      "icon": "thaumadditions:mithrillium_ingot",
+      "x": 358,
+      "y": 123,
+      "description": [
+        "Original items: Mithrillium Ingot (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_bow_to_darkness"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:mithrillium_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_body_cleansing",
+      "title": "Body Cleansing",
+      "icon": "thaumcraft:bath_salts",
+      "x": 134,
+      "y": 235,
+      "description": [
+        "Original items: Bath Salts (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_sanity_check"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:bath_salts",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_mental_medicines",
+      "title": "Mental Medicines",
+      "icon": "soa_additions:purifying_pill",
+      "x": 134,
+      "y": 280,
+      "description": [
+        "Original items: Greedycraft-Purifying Pill (additions)"
+      ],
+      "dependencies": [
+        "tc_body_cleansing"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:purifying_pill",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 20000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_crystal_bore",
+      "title": "Crystal Bore",
+      "icon": "thaumadditions:crystal_bore",
+      "x": 224,
+      "y": 101,
+      "description": [
+        "Original items: Crystal Bore (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_thaumic_metal",
+        "tc_infusion_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:crystal_bore",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:quartz",
+          "count": 256
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_void_beacon",
+      "title": "Void Beacon",
+      "icon": "thaumicwonders:void_beacon",
+      "x": 358,
+      "y": 168,
+      "description": [
+        "Original items: Void Beacon (thaumicwonders)"
+      ],
+      "dependencies": [
+        "tc_remnant_of_the_big_bang"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumicwonders:void_beacon",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_beyond_reality",
+      "title": "Beyond Reality",
+      "icon": "thaumicwonders:coalescence_matrix_precursor",
+      "x": 403,
+      "y": 190,
+      "description": [
+        "Original items: Coalescence Matrix Precursor (thaumicwonders)"
+      ],
+      "dependencies": [
+        "tc_void_beacon"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumicwonders:coalescence_matrix_precursor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 12000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_aspect_smelting",
+      "title": "Aspect Smelting",
+      "icon": "thaumcraft:smelter_basic",
+      "x": 269,
+      "y": 34,
+      "description": [
+        "Original items: Smelter Basic (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_magic_brass"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:smelter_basic",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_better_smeltery",
+      "title": "Better Smeltery",
+      "icon": "thaumcraft:smelter_thaumium",
+      "x": 314,
+      "y": 56,
+      "description": [
+        "Original items: Smelter Thaumium (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_thaumic_metal",
+        "tc_aspect_smelting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:smelter_thaumium",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_highly_efficient",
+      "title": "Highly Efficient",
+      "icon": "thaumcraft:smelter_void",
+      "x": 358,
+      "y": 78,
+      "description": [
+        "Original items: Smelter Void (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_bow_to_darkness",
+        "tc_better_smeltery"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:smelter_void",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_even_better_smelter",
+      "title": "Even Better Smelter",
+      "icon": "thaumadditions:mithrillium_smelter",
+      "x": 403,
+      "y": 101,
+      "description": [
+        "Original items: Mithrillium Smelter (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_highly_efficient",
+        "tc_mythril_but_cooler"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:mithrillium_smelter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 7500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p TAR_MITHRILLIUM_SMELTER"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_adamant_but_cooler",
+      "title": "Adamant But Cooler",
+      "icon": "thaumadditions:adaminite_ingot",
+      "x": 403,
+      "y": 146,
+      "description": [
+        "Original items: Adaminite Ingot (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_mythril_but_cooler"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:adaminite_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 9000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_goodbye_flux",
+      "title": "Goodbye Flux",
+      "icon": "thaumadditions:adaminite_smelter",
+      "x": 448,
+      "y": 123,
+      "description": [
+        "Original items: Adaminite Smelter (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_even_better_smelter",
+        "tc_adamant_but_cooler"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:adaminite_smelter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 9000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p TAR_ADAMINITE_SMELTER"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_melee_wizard",
+      "title": "Melee Wizard",
+      "icon": "soa_additions:blueprint_wand",
+      "x": 179,
+      "y": 168,
+      "description": [
+        "Original items: Greedycraft-Blueprint Wand (additions)"
+      ],
+      "dependencies": [
+        "tc_infusion_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:blueprint_wand",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_arcane_crafting_terminal",
+      "title": "Arcane Crafting Terminal",
+      "icon": "thaumicenergistics:arcane_terminal",
+      "x": 0,
+      "y": 0,
+      "description": [
+        "Original items: Arcane Terminal (thaumicenergistics)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumicenergistics:arcane_terminal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_truth_is_not_enough",
+      "title": "Truth is Not Enough",
+      "icon": "thaumadditions:void_thaumometer",
+      "x": 269,
+      "y": 123,
+      "description": [
+        "Original items: Void Thaumometer (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_bow_to_darkness",
+        "tc_infusion_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:void_thaumometer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_can_i_eat_this",
+      "title": "Can I Eat This?",
+      "icon": "thaumicwonders:meaty_orb",
+      "x": 269,
+      "y": 168,
+      "description": [
+        "Original items: Meaty Orb (thaumicwonders)"
+      ],
+      "dependencies": [
+        "tc_remnant_of_the_big_bang",
+        "tc_infusion_crafting"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumicwonders:meaty_orb",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_precious_gift",
+      "title": "Precious Gift",
+      "icon": "thaumcraft:curious_bauble",
+      "x": 0,
+      "y": 34,
+      "description": [
+        "Original items: Curious Bauble (thaumcraft)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:curious_bauble",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 75
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_growth_chamber",
+      "title": "Growth Chamber",
+      "icon": "thaumadditions:growth_chamber",
+      "x": 90,
+      "y": 123,
+      "description": "Obtain 1× Growth Chamber to progress in the Thaumcraft path.",
+      "dependencies": [
+        "tc_essence_of_the_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:growth_chamber",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_omen_of_the_void",
+      "title": "Omen of the Void",
+      "icon": "thaumcraft:voidseer_charm",
+      "x": 358,
+      "y": 213,
+      "description": [
+        "Original items: Voidseer Charm (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_remnant_of_the_big_bang"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:voidseer_charm",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_primordial_metal",
+      "title": "Primordial Metal",
+      "icon": "tconevo:primordial_metal",
+      "x": 314,
+      "y": 235,
+      "description": [
+        "Original items: Primordial Metal (tconevo)"
+      ],
+      "dependencies": [
+        "tc_remnant_of_the_big_bang"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconevo:primordial_metal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 7000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_supreme_thaumic_metal",
+      "title": "Supreme Thaumic Metal",
+      "icon": "thaumadditions:mithminite_ingot",
+      "x": 448,
+      "y": 168,
+      "description": [
+        "Original items: Mithminite Ingot (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_adamant_but_cooler"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:mithminite_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 12000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_no_more_better_smeltries",
+      "title": "No More Better Smeltries",
+      "icon": "thaumadditions:mithminite_smelter",
+      "x": 493,
+      "y": 146,
+      "description": [
+        "Original items: Mithminite Smelter (thaumadditions)"
+      ],
+      "dependencies": [
+        "tc_goodbye_flux",
+        "tc_supreme_thaumic_metal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumadditions:mithminite_smelter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 12000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p TAR_MITHMINITE_SMELTER"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_sticky",
+      "title": "Sticky",
+      "icon": "thaumcraft:tallow",
+      "x": 134,
+      "y": 56,
+      "description": [
+        "Original items: Tallow (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_essence_of_the_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:tallow",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/thaumcraft research @p HEDGEALCHEMY"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_it_reads_gibberish",
+      "title": "It Reads Gibberish",
+      "icon": "thaumcraft:parchment",
+      "x": 45,
+      "y": 34,
+      "description": [
+        "Original items: Parchment (thaumcraft)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:parchment",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 75
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_flux_container",
+      "title": "Flux Container",
+      "icon": "thaumicwonders:flux_capacitor",
+      "x": 314,
+      "y": 146,
+      "description": [
+        "Original items: Flux Capacitor (thaumicwonders)"
+      ],
+      "dependencies": [
+        "tc_remnant_of_the_big_bang",
+        "tc_bow_to_darkness"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumicwonders:flux_capacitor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "tc_theoretical_wizard",
+      "title": "Theoretical Wizard",
+      "icon": "thaumcraft:table_wood",
+      "x": 90,
+      "y": 78,
+      "description": [
+        "Original items: Table Wood (thaumcraft)"
+      ],
+      "dependencies": [
+        "tc_essence_of_the_world"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "thaumcraft:table_wood",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:paper",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

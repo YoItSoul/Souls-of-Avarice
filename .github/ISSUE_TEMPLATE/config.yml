@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: soa_additions issues (custom mod / datapack content)
+    url: https://github.com/YoItSoul/soa_additions/issues
+    about: |
+      Issues with soa_additions content — custom quests, loot, recipes, items,
+      or anything shipped by the soa_additions mod/datapack — belong in that
+      repository, NOT here. This repo covers modpack-level bugs (config,
+      kubejs scripts, mod interactions, crashes). When unsure, check which
+      mod/file the bug originates from before filing.
+  - name: Modpack discussion / questions
+    url: https://github.com/YoItSoul/SoulsOfAvarice/discussions
+    about: For general questions, gameplay help, or ideas not yet fleshed out into a feature request.

@@ -1,0 +1,406 @@
+{
+  "type": "lootbags:loot",
+  "name": "Epic Loot Crate",
+  "color": 16711935,
+  "rarity": "epic",
+  "output": {
+    "rolls": 1,
+    "entries": [
+      {
+        "stack": {
+          "id": "minecraft:ender_pearl",
+          "count": 32
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:totem_of_undying",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:dark_matter",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "scalinghealth:heart_crystal",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity_ingot",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "waystones:waystone",
+          "count": 16
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:enderium_seeds",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tconstruct:amethyst_bronze_ingot",
+          "count": 8
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:wither_skeleton_seeds",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "prefab:item_warehouse",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "progressivebosses:nether_star_shard",
+          "count": 32
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "cyclic:charm_torch",
+          "count": 24
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "cyclic:charm_void",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "chancecubes:compact_giant_chance_cube",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "chisel:chisel",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tconstruct:amethyst_bronze_ingot",
+          "count": 8
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "enderio:basic_capacitor",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "enderio:double_layer_capacitor",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagradditions:insanium_essence",
+          "count": 8
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:diamond_farm",
+          "count": 2
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "solarflux:sp_7",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "solarflux:sp_6",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_epic\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_rare\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "count": 1,
+          "nbt": "{\"Loot\":\"soa_additions:loot_crate_legendary\"}"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:magenta_shulker_box",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagradditions:insanium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagradditions:insanium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "globalxp:xp_block",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_essence",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "tinymobfarm:emerald_farm",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:beacon",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:iridium_seeds",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:poop",
+          "count": 7
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:medkit_super",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:klein_star_ein",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mysticalagriculture:inferium_growth_accelerator",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:experience_singularity",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:wither_skeleton_skull",
+          "count": 15
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_block",
+          "count": 10
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:written_book",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "mekanismgenerators:solar_generator",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:true_blood_sigil",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "projecte:collector_mk3",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "avaritia:infinity_sword",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:delivery_order",
+          "count": 1
+        },
+        "weight": 2
+      },
+      {
+        "stack": {
+          "id": "chancecubes:silk_touch_pendant",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:one_punch",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:blueprint_laser_gun",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:food_bag",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:emerald_block",
+          "count": 16
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:plate_of_honor",
+          "count": 1
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "soa_additions:true_eye_of_ender",
+          "count": 1
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

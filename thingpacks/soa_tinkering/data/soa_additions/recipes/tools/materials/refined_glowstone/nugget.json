@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/refined_glowstone"
+  },
+  "material": "soa_additions:refined_glowstone",
+  "needed": 9,
+  "value": 1
+}

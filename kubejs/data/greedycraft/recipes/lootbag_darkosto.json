@@ -1,0 +1,17 @@
+{
+  "type": "lootbags:loot",
+  "name": "Darkosto Bag",
+  "rarity": "rare",
+  "output": {
+    "entries": [
+      {
+        "stack": {
+          "item": "minecraft:cake",
+          "count": 1
+        },
+        "weight": 20
+      }
+    ],
+    "rolls": 3
+  }
+}
