@@ -54,8 +54,8 @@ Every item ID in the PROPOSED sections was verified to exist in SoA's `items.jso
 | eternalsingularity | avaritia | Merged — `avaritia:eternal_singularity` (already gated in `chaotic`) |
 | astralsorcery | ars_nouveau + ars_elemental + ars_additions | Different magic family; distinct progression |
 | extrautils2 | — | Most features absorbed by cyclic / supplementaries |
-| botanicadds | mythicbotany | Norse-themed extension; `gaia_shard`/`gaia_plate` replaced by `alfsteel_*` progression |
-| extrabotany | appbot | Creative mana handled by `appbot:creative_mana_cell` |
+| botanicadds + extrabotany | mythicbotany | Both GC botania addons replaced by MythicBotany (Norse-themed). `gaia_shard`/`gaia_plate`/`gaiasteel_*`/`managenerator`/`bottledflame` all superseded by `alfsteel_*` → `mjoellnir` / `gjallar_horn_full` / `faded_nether_star` / `fimbultyr_tablet` progression |
+| (creative mana cell) | appbot | `extrabotany:managenerator` creative-mana function now lives in `appbot:creative_mana_cell` |
 | rftools | rftoolsbase only | Shields, builder, etc. gone |
 | actuallyadditions | — | No successor installed |
 | thaumcraft + thaumadditions + thaumictinkerer + thaumicwonders | thaumon | Decorative only, no magic progression |
@@ -73,19 +73,19 @@ These mods are present in GC's gating but absent from SoA's installed mods:
 - colytra (elytra layering)
 - conarm (Construct's Armory)
 - cqrepoured (Chocolate Quest Repoured — huge weapon list)
-- danknull (the dank storage item)
+- danknull (original "DankNull" storage item — **but see §6: a dank storage mod was recently added to SoA, post-export, so a replacement exists**)
 - darkutils
 - defiledlands
 - eternalsingularity (merged into avaritia)
 - extrabotany
 - extrautils2
-- hooked
+- hooked (original "Hooked" grappling hook mod — **but see §6: `rehooked` was recently added to SoA, post-export**)
 - modularmachinery
 - mysticalcreations
 - netherex
 - openblocks
 - openmodularturrets
-- plustic
+- ~~plustic~~ **— materials were ported into `soa_additions`**: `osmiridium_ingot` (gated at `skilled_engineer`), `osgloglas_ingot` (added to `hardmode` in §2)
 - projectex (replaced by projectextended — limited)
 - randomthings
 - rftools (only rftoolsbase remains)
@@ -102,22 +102,27 @@ These mods are present in GC's gating but absent from SoA's installed mods:
 
 No gating action possible for sunset mods — that content simply does not exist in SoA.
 
-### Mods NEW in SoA (no GC predecessor, need gating decision)
-These were never in GC but carry meaningful progression:
+### Mods carried over from GC but ungated in GC
+These shipped in GC's `mods/` folder but had no `ItemStages` entries in GC's `items.zs`.
+I originally (incorrectly) listed them as "new in SoA." Correction:
 
+- **fluxnetworks** — `FluxNetworks-1.12.2-4.1.1.34.jar` was in GC, appeared only in EMC values and dungeon loot. Never gated. Proposing SoA gates anyway in §2 (skilled_engineer tier) since the mod is endgame-caliber in 1.20.1.
+- **forestry / magicbees / morebees** — shipped in GC, fully ungated. Replaced by `productivebees` in SoA. No parity action required unless you want fresh SoA gates.
+
+### Mods NEW in SoA (not in GC at all)
 - ars_nouveau / ars_elemental / ars_additions — magic system replacing astralsorcery + thaumcraft
 - forbidden_arcanus — dark magic (darkstone → stellarite)
 - theurgy — alchemy (calcination/reformation pedestals)
 - cataclysm (Ice & Fire: Cataclysm) — boss gear: witherite, ignitium, monstrous_*, black_steel, infernal_forge
 - endrem (End Remastered) — End portal frame eyes scattered across dimensions
-- mythicbotany — Norse-themed botania extension (alfsteel → mjoellnir → gjallar_horn)
+- mythicbotany — Norse-themed botania extension (alfsteel → mjoellnir → gjallar_horn); replaces GC's `botanicadds` + `extrabotany`
+- **extendedcrafting** — Progressive crafting tables + crystaltine / flux_star / ender_star / the_ultimate_ingot. **Confirmed NOT in GC** (`extendedcrafting-*.jar` absent from GC `mods/`, zero script references). SoA-only addition; gating in §2 is fresh design, not a GC port.
 - packagedavaritia, packageddraconic — auto-crafting blocks for Avaritia/DE recipes
-- fluxnetworks — wireless energy (flux_controller, flux_plug/point, storage tiers)
-- appflux (partial — top cells already at `graduated`) / appbot / appmek — AE2 integration addons
-- extendedcrafting — progressive crafting tables (basic→ultimate) + crafting materials
-- bosses_of_mass_destruction, meetyourfight, mowziesmobs, sculkhorde, cataclysm — boss mobs
+- appflux (top cells already gated at `graduated`) / appbot / appmek — AE2 integration addons
+- productivebees — replaces GC's forestry/magicbees/morebees (all ungated in GC). No GC-parity gates needed.
+- bosses_of_mass_destruction, meetyourfight, mowziesmobs, sculkhorde — boss mobs
 - artifacts — trinkets
-- productivebees, friendsandfoes, savage_and_ravage — creature/farm mods (mostly benign)
+- friendsandfoes, savage_and_ravage — creature/farm mods (mostly benign)
 
 ---
 
@@ -318,7 +323,11 @@ ItemStages.restrict(<item:forbidden_arcanus:dark_rune_block>, "nether");
 ItemStages.restrict(<item:forbidden_arcanus:eternal_obsidian_skull>, "nether");
 ```
 
-### hardmode — add TF knightmetal + dungeon gear + forbidden_arcanus high + cataclysm templates
+### hardmode — add TF knightmetal + dungeon gear + forbidden_arcanus high + cataclysm templates + plustic osgloglas
+```
+// plustic osgloglas alloy (GC gated at hardmode; ported to soa_additions but currently ungated)
+ItemStages.restrict(<item:soa_additions:osgloglas_ingot>, "hardmode");
+```
 ```
 // Twilight Forest Dark Tower / Stronghold / Highlands tier (post-Wyvern/dark-forest bosses)
 ItemStages.restrict(<item:twilightforest:knightmetal_ingot>, "hardmode");
@@ -518,7 +527,7 @@ GC's `fearless_man` gated AbyssalCraft dreadium/dreadkey. AbyssalCraft isn't por
 
 ---
 
-## §4 Summary of Counts
+## §4 Summary of Counts (pre-rehooked/dank pass)
 
 - **Proposed new `ItemStages.restrict` lines:** ~235 across 13 stages
 - **Sunset mods (no action possible):** 30+
@@ -528,7 +537,37 @@ Current file is 537 lines; after approved additions it'll be roughly 750–800 l
 
 ---
 
-## §5 Next Step
+## §5 Post-Export Additions — Need Fresh IDs Before Gating
+
+Two mods were added to SoA **after** `soa_exports/items.json` was generated on 2026-04-15,
+so their items aren't in the verification dataset. They need to be gated but I can't
+propose exact IDs until a fresh export is available (or you paste the modid/item list).
+
+### rehooked (replaces GC `hooked`)
+GC gated:
+- `hooked:hook:3` → `nether` (grappling hook with reach extender / advanced hook)
+- `hooked:hook:4` → `ender_charm` (endgame ender hook)
+
+**Action needed:** re-run the export and tell me what `rehooked:*` items exist, or paste the
+creative-menu list. Then we can map the two tiers to `nether` and `ender_charm` accordingly.
+In GC the hooks escalated in reach + damage; expect similar `rehooked:basic_hook` /
+`rehooked:iron_hook` / `rehooked:ender_hook` naming and gate the top two.
+
+### dank storage (replaces GC `danknull`)
+GC gated:
+- `danknull:dank_null_6` → `graduated` (Tier 6 = creative-adjacent storage)
+
+**Action needed:** identify the specific tier-6 / creative / top-tier dank storage item
+in the new mod. Likely called `iron-jetpacks:*` wait no — the common 1.20.1 dank mod is
+`dankstorage:*` by Tfarcenim or `hyperbox` forks. Once we have the namespace, we'll gate
+its highest tier at `graduated` and possibly its mid-tiers at `master_engineer`.
+
+**Suggested next pass:** after this gating batch lands, I'll run a fresh export pass and
+append these two mod's items to `soa_item_stages.zs` in a small follow-up commit.
+
+---
+
+## §6 Next Step
 
 Mark up §2 (strike lines you disagree with, add notes) and answer §3 decisions. Once
 approved, I apply edits to `soa_item_stages.zs`, re-run a verification pass to ensure every

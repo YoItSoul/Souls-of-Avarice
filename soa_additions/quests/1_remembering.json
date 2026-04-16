@@ -207,7 +207,9 @@
       "shape": "square",
       "x": 64,
       "y": 128,
-      "description": [],
+      "description": [
+        "Using your new fancy knife, you should try cutting some grass to get plant fibers!"
+      ],
       "dependencies": [
         "6b0801783efff058"
       ],
