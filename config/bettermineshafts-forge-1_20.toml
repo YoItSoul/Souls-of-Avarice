@@ -80,11 +80,11 @@
 		# The spawn rate for minecarts holding chests in small shafts.
 		# Default: .00125
 		#Range: 0.0 ~ 1.0
-		"Small Shaft Chest Minecart Spawn Rate" = 0.00075
+		"Small Shaft Chest Minecart Spawn Rate" = 7.5E-4
 		# The spawn rate for minecarts holding TNT in small shafts.
 		# Default: .0025
 		#Range: 0.0 ~ 1.0
-		"Small Shaft TNT Minecart Spawn Rate" = 0.00065
+		"Small Shaft TNT Minecart Spawn Rate" = 6.5E-4
 		# The spawn rate for minecarts holding chests in the main shaft.
 		# Default: .01
 		#Range: 0.0 ~ 1.0
@@ -92,7 +92,7 @@
 		# The spawn rate for minecarts holding TNT in the main shaft.
 		# Default: .0025
 		#Range: 0.0 ~ 1.0
-		"Main Shaft TNT Minecart Spawn Rate" = 0.0005
+		"Main Shaft TNT Minecart Spawn Rate" = 5.0E-4
 		# Percent chance of an Abandoned Miners' Outpost to spawn at the end of a small mineshaft tunnel.
 		# Default: 2
 		#Range: 0 ~ 100
