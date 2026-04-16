@@ -6,14 +6,14 @@
     "entries": [
       {
         "stack": {
-          "item": "minecraft:cobblestone",
+          "id": "minecraft:cobblestone",
           "count": 64
         },
         "weight": 20
       },
       {
         "stack": {
-          "item": "minecraft:glass",
+          "id": "minecraft:glass",
           "count": 36
         },
         "weight": 20

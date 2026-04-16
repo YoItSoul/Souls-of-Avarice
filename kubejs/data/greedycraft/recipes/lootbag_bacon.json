@@ -6,14 +6,14 @@
     "entries": [
       {
         "stack": {
-          "item": "minecraft:porkchop",
+          "id": "minecraft:porkchop",
           "count": 8
         },
         "weight": 20
       },
       {
         "stack": {
-          "item": "minecraft:cooked_porkchop",
+          "id": "minecraft:cooked_porkchop",
           "count": 8
         },
         "weight": 20

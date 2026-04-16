@@ -4,61 +4,61 @@
 	#Determines which starting item a player gets on first world join. Valid values for this option are: "Starting House", "Moderate House", "Nothing". Server configuration overrides client.
 	"Starting Item" = "Starting House"
 	#Can new players for a world receive a starting item?. Server configuration overrides client.
-	"New Players Get Starting Item" = true
+	"New Players Get Starting Item" = false
 	#Determines if the spawners for the Monster Masher building are included. Server configuration overrides client.
-	"Include Spawners in Monster Masher" = true
+	"Include Spawners in Monster Masher" = false
 	#Determines if the Preview buttons in structure GUIs and other structure previews functions are enabled. Client side only.
 	"Include Structure Previews" = true
 	#Determines if the mineshaft chest is included when building mineshafts for various structures.
-	"Include Mineshaft Chest" = true
+	"Include Mineshaft Chest" = false
 	#Determines if the bulldozer item can create drops when it clears an area.
-	"Bulldozer Creates Drops" = true
+	"Bulldozer Creates Drops" = false
 	#Determines if water can be generated in structures when the current dimension is not the oveworld. Does not affect Nether
-	"Include Water In Non-Overworld Dimesions" = true
+	"Include Water In Non-Overworld Dimesions" = false
 	#Play Sound When Generating Blueprint
 	"Play Building Sound" = true
 
 	[general."chest contents"]
 		#Chest Options
 		#Determines if a Stone Sword is added the the chest when the house is created.
-		"Add Sword" = true
+		"Add Sword" = false
 		#Determines if a Stone Axe is added the the chest when the house is created.
-		"Add Axe" = true
+		"Add Axe" = false
 		#Determines if a Stone Shovel is added the the chest when the house is created.
-		"Add Shovel" = true
+		"Add Shovel" = false
 		#Determines if a Stone Hoe is added the the chest when the house is created.
-		"Add Hoe" = true
+		"Add Hoe" = false
 		#Determines if a Stone Pickaxe is added the the chest when the house is created.
-		"Add Pickaxe" = true
+		"Add Pickaxe" = false
 		#Determines if Leather Armor is added the the chest when the house is created.
-		"Add Armor" = true
+		"Add Armor" = false
 		#Determines if Bread is added the the chest when the house is created.
-		"Add Food" = true
+		"Add Food" = false
 		#Determines if seeds, potatoes and carrots are added the the chest when the house is created.
-		"Add Crops" = true
+		"Add Crops" = false
 		#Determines if a stack of dirt is added the the chest when the house is created.
-		"Add Dirt" = true
+		"Add Dirt" = false
 		#Determines if a stack of cobble is added the the chest when the house is created.
-		"Add Cobblestone" = true
+		"Add Cobblestone" = false
 		#Determines if a set of oak saplings are added the the chest when the house is created.
-		"Add Saplings" = true
+		"Add Saplings" = false
 		#Determines if a set of torches are added the the chest when the house is created.
-		"Add Torches" = true
+		"Add Torches" = false
 
 	[general."starter house"]
 		#Starter House Options
 		#Determines if the bed is included in the starter house. When playing on a server, the server configuration is used
-		"Add Bed" = true
+		"Add Bed" = false
 		#Determines if the crafting table is included in the starter house. When playing on a server, the server configuration is used
-		"Add Crafting Table" = true
+		"Add Crafting Table" = false
 		#Determines if the furnace is included in the starter house. When playing on a server, the server configuration is used
-		"Add Furnace" = true
+		"Add Furnace" = false
 		#Determines if chests are included in the starter house. When playing on a server, the server configuration is used
-		"Add Chests" = true
+		"Add Chests" = false
 		#Determines if the chest contents is included in the starter house. When playing on a server, the server configuration is used
-		"Add Chest Contents" = true
+		"Add Chest Contents" = false
 		#Determines if the mineshaft is included in the starter house. When playing on a server, the server configuration is used
-		"Add Mineshaft" = true
+		"Add Mineshaft" = false
 
 	[general.recipes]
 		#Determines if the recipe(s) associated with the Compressed Stone are enabled.

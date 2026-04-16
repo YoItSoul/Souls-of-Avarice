@@ -6,21 +6,21 @@
     "entries": [
       {
         "stack": {
-          "item": "minecraft:chest",
+          "id": "minecraft:chest",
           "count": 2
         },
         "weight": 20
       },
       {
         "stack": {
-          "item": "minecraft:stick",
+          "id": "minecraft:stick",
           "count": 1
         },
         "weight": 20
       },
       {
         "stack": {
-          "item": "minecraft:quartz",
+          "id": "minecraft:quartz",
           "count": 4
         },
         "weight": 20

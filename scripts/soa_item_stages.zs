@@ -214,6 +214,11 @@ ItemStages.restrict(<tag:items:forge:nuggets/iron>, "getting_started");
 ItemStages.restrict(<tag:items:forge:storage_blocks/gold>, "getting_started");
 ItemStages.restrict(<tag:items:forge:storage_blocks/iron>, "getting_started");
 ItemStages.restrict(<tag:items:forge:workbenches>, "getting_started");
+// Explicit vanilla fallbacks — forge:workbenches / forge:chests may not
+// include vanilla items reliably on all packs; restrict them directly.
+ItemStages.restrict(<item:minecraft:crafting_table>, "getting_started");
+ItemStages.restrict(<item:minecraft:chest>, "getting_started");
+ItemStages.restrict(<item:minecraft:trapped_chest>, "getting_started");
 ItemStages.restrict(<tag:items:minecraft:planks>, "getting_started");
 ItemStages.restrict(<item:minecraft:diamond_axe>, "getting_started");
 ItemStages.restrict(<item:minecraft:diamond_pickaxe>, "getting_started");

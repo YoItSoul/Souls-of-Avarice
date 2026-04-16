@@ -6,7 +6,7 @@
     "entries": [
       {
         "stack": {
-          "item": "minecraft:cake",
+          "id": "minecraft:cake",
           "count": 1
         },
         "weight": 20

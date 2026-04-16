@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(wc *)",
+      "Bash(python -c ' *)",
+      "Bash(python soa_additions/tools/regen_block_stages.py)"
+    ]
+  }
+}

@@ -3,7 +3,9 @@
   "title": "Epilogue",
   "icon": "minecraft:nether_star",
   "sort_order": 100,
-  "description": "Quests for the Epilogue progression path.",
+  "description": [
+    "Quests for the Epilogue progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -92,7 +94,9 @@
       "icon": "tconevo:primordial_metal",
       "x": 192,
       "y": 160,
-      "description": "Obtain 1× Primordial Metal to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Primordial Metal to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -155,7 +159,9 @@
       "icon": "soa_additions:creative_soul",
       "x": 192,
       "y": 288,
-      "description": "Obtain 1× Creative Soul to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Creative Soul to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -182,7 +188,9 @@
       "icon": "soa_additions:dragon_soul",
       "x": 96,
       "y": 352,
-      "description": "Obtain 1× Dragon Soul to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Dragon Soul to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -209,7 +217,9 @@
       "icon": "soa_additions:wither_soul",
       "x": 352,
       "y": 352,
-      "description": "Obtain 1× Wither Soul to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Wither Soul to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -236,7 +246,9 @@
       "icon": "avaritia:infinity_ingot",
       "x": 352,
       "y": 128,
-      "description": "Obtain 1× Infinity Ingot to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Infinity Ingot to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -263,7 +275,9 @@
       "icon": "extrabotany:treasurebox",
       "x": 32,
       "y": 288,
-      "description": "Obtain 1× Treasurebox to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Treasurebox to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -290,7 +304,9 @@
       "icon": "soa_additions:anti_entropy_matter",
       "x": 0,
       "y": 224,
-      "description": "Obtain 8× Anti Entropy Matter to progress in the Epilogue path.",
+      "description": [
+        "Obtain 8× Anti Entropy Matter to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -318,7 +334,9 @@
       "icon": "tconevo:uru_ingot",
       "x": 96,
       "y": 128,
-      "description": "Obtain 1× Uru Ingot to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Uru Ingot to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -345,7 +363,9 @@
       "icon": "avaritia:infinity_sword",
       "x": 288,
       "y": 160,
-      "description": "Obtain 1× Infinity Sword to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Infinity Sword to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -372,7 +392,9 @@
       "icon": "twilightforest:lamp_of_cinders",
       "x": 448,
       "y": 224,
-      "description": "Obtain 1× Lamp Of Cinders to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Lamp Of Cinders to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -399,7 +421,9 @@
       "icon": "solarflux:sp_avaritia.infinity",
       "x": 32,
       "y": 160,
-      "description": "Obtain 1× Sp Avaritia.infinity to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Sp Avaritia.infinity to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -426,7 +450,9 @@
       "icon": "draconicevolution:draconic_staff",
       "x": 416,
       "y": 288,
-      "description": "Obtain 1× Draconic Staff to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Draconic Staff to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -457,7 +483,9 @@
       "icon": "soa_additions:ancient_tome",
       "x": 288,
       "y": 288,
-      "description": "Obtain 1× Ancient Tome to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Ancient Tome to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -484,7 +512,9 @@
       "icon": "abyssalcraft:staff",
       "x": 416,
       "y": 160,
-      "description": "Obtain 1× Staff to progress in the Epilogue path.",
+      "description": [
+        "Obtain 1× Staff to progress in the Epilogue path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -508,7 +538,7 @@
     {
       "id": "epi_a_journey_s_end_a",
       "title": "a Journey's End a",
-      "icon": "ftbquests:custom_icon",
+      "icon": "soa_additions:greedy_medal",
       "x": 224,
       "y": 224,
       "description": [
@@ -561,7 +591,7 @@
         },
         {
           "type": "soa_additions:xp",
-          "amount": 2147483647
+          "amount": 214748364
         },
         {
           "type": "soa_additions:item",

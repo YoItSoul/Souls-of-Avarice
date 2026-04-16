@@ -6,14 +6,14 @@
     "entries": [
       {
         "stack": {
-          "item": "minecraft:emerald_block",
+          "id": "minecraft:emerald_block",
           "count": 64
         },
         "weight": 3
       },
       {
         "stack": {
-          "item": "minecraft:diamond_block",
+          "id": "minecraft:diamond_block",
           "count": 64
         },
         "weight": 4
