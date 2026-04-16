@@ -10,6 +10,7 @@ etf_warnings.json
 ferritecore-mixin.toml
 fml.toml
 inventory_pets_illuminati_blacklist.json
+memorysettings.json
 MouseTweaks.cfg
 polymorph-integrations.toml
 resourceful-config-web.json

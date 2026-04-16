@@ -2,8 +2,6 @@
 [soa_additions]
 	#If true, breaking high-tier ores without the required tool deals heavy damage to the tool.
 	enableToolRequirements = false
-	#If true, Grove Boon blocks apply their effects.
-	enableGroveBoons = true
 	#Damage multiplier applied to tools that break blocks they cannot mine.
 	#Range: 1.0 ~ 100.0
 	toolDamageMultiplier = 10.0

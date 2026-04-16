@@ -74,7 +74,7 @@
         {
           "type": "soa_additions:mine",
           "block": "minecraft:gravel",
-          "count": 3
+          "count": 10
         }
       ],
       "rewards": [
@@ -101,7 +101,9 @@
       "x": 32,
       "y": 64,
       "description": [
-        "Great! You've gotten som raw flint, now bash it against a rock and see what happens!"
+        "Great! You've gotten som raw flint, now bash it against a rock and see what happens!",
+        "",
+        "Note: This process isn't garunteed to work!"
       ],
       "dependencies": [
         "46db3dfeaa372b67"
@@ -174,9 +176,7 @@
       "x": 32,
       "y": 128,
       "description": [
-        "Some say it's a prmitive start... some say it's tough beginnings!",
-        "",
-        "Gather some flint!"
+        "Some say it's a prmitive start... some say it's a tough beginning!!"
       ],
       "dependencies": [
         "6e9f7bc3f279459e"
@@ -241,7 +241,8 @@
       "y": 128,
       "description": [],
       "dependencies": [
-        "298f1fee4cdc4bf0"
+        "298f1fee4cdc4bf0",
+        "11297238b0af7c2c"
       ],
       "tasks": [
         {
@@ -307,8 +308,8 @@
       "title": "Flint Axe",
       "icon": "tough_beginnings:flint_axe",
       "shape": "square",
-      "x": 112,
-      "y": 160,
+      "x": 64,
+      "y": 192,
       "description": [],
       "dependencies": [
         "42e7831424aa17f8"
@@ -363,6 +364,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_common",
           "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p getting_started true"
         }
       ],
       "modes": [
@@ -789,26 +794,12 @@
       ],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/give @p tconstruct:tooltables{tag:{textureBlock:{id:\"minecraft:planks\",Count:1,Damage:0}},Damage:1} 1"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "tconstruct:tooltables",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "conarm:armorstation",
-          "count": 1
-        },
-        {
           "type": "soa_additions:xp",
           "amount": 50
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p tconstruct:tooltables{tag:{textureBlock:{id:\"minecraft:log\",Count:1,Damage:0}},Damage:2} 1"
+          "command": "/gamestage add @p novice_tinker false"
         }
       ],
       "modes": [
@@ -837,26 +828,8 @@
       ],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/give @p tconstruct:tooltables{tag:{textureBlock:{id:\"minecraft:planks\",Count:1,Damage:0}},Damage:1} 1"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "tconstruct:tooltables",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "conarm:armorstation",
-          "count": 1
-        },
-        {
           "type": "soa_additions:xp",
           "amount": 50
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p tconstruct:tooltables{tag:{textureBlock:{id:\"minecraft:log\",Count:1,Damage:0}},Damage:2} 1"
         }
       ],
       "modes": [
@@ -1297,6 +1270,10 @@
         {
           "type": "soa_additions:xp",
           "amount": 3000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p energy_matter_core false"
         }
       ],
       "modes": [
@@ -1342,6 +1319,10 @@
           "type": "soa_additions:item",
           "item": "avaritia:extreme_crafting_table",
           "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p transmutation_table false"
         }
       ],
       "modes": [
@@ -1578,6 +1559,10 @@
           "type": "soa_additions:item",
           "item": "bountifulbaubles:potionwormhole",
           "count": 16
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p nether false"
         }
       ],
       "modes": [
@@ -1768,6 +1753,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p wither_slayer false"
         }
       ],
       "modes": [
@@ -1867,6 +1856,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p hardmode false"
         }
       ],
       "modes": [
@@ -1903,6 +1896,10 @@
         {
           "type": "soa_additions:xp",
           "amount": 12500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p fusion_matrix false"
         }
       ],
       "modes": [
@@ -2207,6 +2204,10 @@
           "type": "soa_additions:item",
           "item": "avaritia:neutron_collector",
           "count": 3
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p wielder_of_infinity false"
         }
       ],
       "modes": [
@@ -2371,6 +2372,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p wyvern false"
         }
       ],
       "modes": [
@@ -2592,6 +2597,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:medkit_super",
           "count": 3
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p awakened false"
         }
       ],
       "modes": [
@@ -2644,6 +2653,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 1
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p chaotic_dominator false"
         }
       ],
       "modes": [
@@ -2692,6 +2705,10 @@
           "type": "soa_additions:item",
           "item": "soa_additions:creative_shard",
           "count": 2
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p chaotic false"
         }
       ],
       "modes": [
@@ -2912,6 +2929,10 @@
           "type": "soa_additions:item",
           "item": "tconevo:metal",
           "count": 10
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p staff_wielder false"
         }
       ],
       "modes": [
@@ -2924,6 +2945,8 @@
       "id": "quest_game_guide",
       "title": "Game Guide",
       "icon": "patchouli:guide_book",
+      "visibility": "invisible",
+      "optional": true,
       "x": 64,
       "y": 32,
       "description": [

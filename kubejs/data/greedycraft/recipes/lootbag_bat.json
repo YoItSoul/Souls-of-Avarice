@@ -6,7 +6,7 @@
     "entries": [
       {
         "stack": {
-          "item": "minecraft:bat_spawn_egg",
+          "id": "minecraft:bat_spawn_egg",
           "count": 1
         },
         "weight": 20

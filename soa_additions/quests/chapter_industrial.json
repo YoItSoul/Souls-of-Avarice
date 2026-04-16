@@ -3,7 +3,9 @@
   "title": "Industrial Age",
   "icon": "thermal:machine_frame",
   "sort_order": 110,
-  "description": "Quests for the Industrial Age progression path.",
+  "description": [
+    "Quests for the Industrial Age progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -141,7 +143,9 @@
       "icon": "minecraft:barrier",
       "x": 21,
       "y": 352,
-      "description": "Complete \"Make progress in Thermal Series\" to continue.",
+      "description": [
+        "Complete \"Make progress in Thermal Series\" to continue."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -787,7 +791,9 @@
       "icon": "minecraft:barrier",
       "x": 645,
       "y": 272,
-      "description": "Complete \"Make progress in Ender IO\" to continue.",
+      "description": [
+        "Complete \"Make progress in Ender IO\" to continue."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -1553,7 +1559,9 @@
       "icon": "minecraft:barrier",
       "x": 437,
       "y": 291,
-      "description": "Complete \"Quest\" to continue.",
+      "description": [
+        "Complete \"Quest\" to continue."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -1582,7 +1590,9 @@
       "icon": "minecraft:barrier",
       "x": 64,
       "y": 248,
-      "description": "Complete \"Make progress in Ender IO\" to continue.",
+      "description": [
+        "Complete \"Make progress in Ender IO\" to continue."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -1984,7 +1994,9 @@
       "icon": "minecraft:barrier",
       "x": 272,
       "y": 0,
-      "description": "Complete \"Make progress in Ender IO\" to continue.",
+      "description": [
+        "Complete \"Make progress in Ender IO\" to continue."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -3046,7 +3058,9 @@
       "icon": "minecraft:barrier",
       "x": 376,
       "y": 0,
-      "description": "Complete \"Make progress in Mekanism\" to continue.",
+      "description": [
+        "Complete \"Make progress in Mekanism\" to continue."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -3305,7 +3319,9 @@
       "icon": "thermalexpansion:machine",
       "x": 376,
       "y": 187,
-      "description": "Obtain 1× Machine to progress in the Industrial Age path.",
+      "description": [
+        "Obtain 1× Machine to progress in the Industrial Age path."
+      ],
       "dependencies": [],
       "tasks": [
         {

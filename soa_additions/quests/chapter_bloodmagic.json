@@ -864,6 +864,10 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p skilled_wizard false"
         }
       ],
       "modes": [
