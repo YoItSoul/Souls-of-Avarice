@@ -11,8 +11,8 @@
     "detectBiomeData": true,
     "detectDimensionData": true,
     "detectWorldData": true,
-    "clientId": "450485984333660181",
-    "defaultIcon": "grass",
+    "clientId": "1491901023353176217",
+    "defaultIcon": "soa_logo",
     "enableJoinRequests": false,
     "preferredClientLevel": 3,
     "resetTimeOnInit": false,
@@ -22,7 +22,7 @@
     "fallbackBiomeIcon": "unknown",
     "biomeData": {
       "default": {
-        "textOverride": "Playing in {biome.name}"
+        "textOverride": "Exploring {biome.name}"
       }
     }
   },
@@ -30,7 +30,63 @@
     "fallbackDimensionIcon": "unknown",
     "dimensionData": {
       "default": {
-        "textOverride": "In the {dimension.name}"
+        "textOverride": "Traversing {dimension.name}"
+      },
+      "minecraft:overworld": {
+        "textOverride": "Wandering the Overworld",
+        "iconOverride": "overworld"
+      },
+      "minecraft:the_nether": {
+        "textOverride": "Braving the Nether",
+        "iconOverride": "nether"
+      },
+      "minecraft:the_end": {
+        "textOverride": "Facing the End",
+        "iconOverride": "end"
+      },
+      "aether:the_aether": {
+        "textOverride": "Soaring through the Aether",
+        "iconOverride": "aether"
+      },
+      "twilightforest:twilight_forest": {
+        "textOverride": "Lost in the Twilight Forest",
+        "iconOverride": "twilight_forest"
+      },
+      "twilightforest:twilight_forest_type": {
+        "textOverride": "Lost in the Twilight Forest",
+        "iconOverride": "twilight_forest"
+      },
+      "mining_dimension:mining": {
+        "textOverride": "Mining the Depths",
+        "iconOverride": "mining_dimension"
+      },
+      "blue_skies:everbright": {
+        "textOverride": "Shining in the Everbright",
+        "iconOverride": "everbright"
+      },
+      "blue_skies:everdawn": {
+        "textOverride": "Walking the Everdawn",
+        "iconOverride": "everdawn"
+      },
+      "deeperdarker:otherside": {
+        "textOverride": "Trapped in the Otherside",
+        "iconOverride": "otherside"
+      },
+      "mythicbotany:alfheim": {
+        "textOverride": "Wandering Alfheim",
+        "iconOverride": "alfheim"
+      },
+      "bloodmagic:dungeon": {
+        "textOverride": "Descending a Blood Dungeon",
+        "iconOverride": "blood_magic_dungeon"
+      },
+      "compactmachines:compact_world": {
+        "textOverride": "Inside a Compact Machine",
+        "iconOverride": "compact_machines"
+      },
+      "ae2:spatial_storage": {
+        "textOverride": "Stored in AE2 Spatial Storage",
+        "iconOverride": "ae2_spatial"
       }
     }
   },
@@ -40,7 +96,11 @@
     "fallbackServerMotd": "A Minecraft Server",
     "serverData": {
       "default": {
-        "textOverride": "Playing on {server.motd.raw}"
+        "textOverride": "On {server.name} | {custom.players}"
+      },
+      "connect.soulsofavarice.com": {
+        "textOverride": "Souls of Avarice Official | {custom.players}",
+        "iconOverride": "soa_server"
       }
     },
     "pingRateInterval": 5,
@@ -48,16 +108,18 @@
   },
   "statusMessages": {
     "mainMenuData": {
-      "textOverride": "In the Main Menu"
+      "textOverride": "Browsing the Main Menu",
+      "iconOverride": "soa_logo"
     },
     "loadingData": {
-      "textOverride": "Loading..."
+      "textOverride": "Loading Souls of Avarice...",
+      "iconOverride": "soa_logo"
     },
     "lanData": {
-      "textOverride": "Playing on a LAN Server"
+      "textOverride": "Playing on a LAN World"
     },
     "singleplayerData": {
-      "textOverride": "Playing Singleplayer"
+      "textOverride": "Forging a Solo Adventure"
     },
     "realmData": {
       "textOverride": "Playing on {server.motd.raw}"
@@ -71,7 +133,7 @@
     "debugMode": false,
     "verboseMode": false,
     "refreshRate": 2,
-    "allowPlaceholderPreviews": false,
+    "allowPlaceholderPreviews": true,
     "guiSettings": {
       "fallbackGuiIcon": "unknown",
       "guiData": {
@@ -118,34 +180,54 @@
       "activityType": 0,
       "statusDisplayType": 0,
       "partyPrivacy": 1,
-      "details": "{getFirst(menu.message, dimension.message)}",
+      "details": "{getFirst(menu.message, dimension.message)} | {getOrDefault(custom.biome_line)}",
       "detailsUrl": "",
-      "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
+      "gameState": "{getFirst(server.message, custom.singleplayer_line)}",
       "gameStateUrl": "",
       "appName": "",
-      "largeImageKey": "{getFirst(menu.icon, dimension.icon)}",
-      "largeImageText": "{getFirst(menu.message, dimension.message)}",
+      "largeImageKey": "{getFirst(menu.icon, dimension.icon, pack.icon)}",
+      "largeImageText": "{getFirst(menu.message, custom.world_info)} | {getOrDefault(custom.coords)}",
       "largeImageUrl": "",
-      "smallImageKey": "{getFirst(server.icon, pack.icon)}",
-      "smallImageText": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
+      "smallImageKey": "{getFirst(player.icon, pack.icon)}",
+      "smallImageText": "{getOrDefault(custom.player_line)}",
       "smallImageUrl": "",
       "startTimestamp": "{data.general.time}",
       "endTimestamp": "",
-      "buttons": {}
+      "buttons": {
+        "button_1": {
+          "label": "Souls of Avarice",
+          "url": "https://www.curseforge.com/minecraft/modpacks/souls-of-avarice"
+        },
+        "button_2": {
+          "label": "Join the Server",
+          "url": "https://soulsofavarice.com"
+        }
+      }
     },
     "dynamicIcons": {
-      "connect.soulsofavarice.com": "https://api.mcsrvstat.us/icon/connect.soulsofavarice.com"
+      "default": "soa_logo",
+      "pack": "soa_logo",
+      "connect.soulsofavarice.com": "https://api.mcsrvstat.us/icon/connect.soulsofavarice.com",
+      "player": "https://mc-heads.net/avatar/{getOrDefault(player.uuid.short, player.name)}",
+      "SoulShark04": "https://mc-heads.net/avatar/3686e0264b144f9daccb678b61ee478d"
     },
     "dynamicVariables": {
-      "mods": "{general.mods} Mod(s)",
+      "mods": "{general.mods} Mods",
+      "pack": "Souls of Avarice",
+      "biome_line": "{biome.name}",
+      "coords": "XYZ: {player.position.x}, {player.position.y}, {player.position.z}",
+      "world_info": "Playing on {world.name}",
+      "players": "{server.players.current}/{server.players.max} Online",
+      "singleplayer_line": "Souls of Avarice | {getOrDefault(custom.mods)}",
+      "player_line": "{player.name} | HP {player.health.current}/{player.health.max} | {getOrDefault(custom.coords)}",
       "player_info_coordinate": "At {player.position.x}, {player.position.z}",
-      "players": "{server.players.current} / {server.players.max} Players",
-      "player_info_in": "({custom.player_info.health})",
+      "player_info_in": "({custom.player_info_health})",
       "player_info_items": "Items: {item.main_hand.message}",
       "player_info_out": "As {player.name}",
       "player_info_health": "Health: {player.health.current}/{player.health.max}",
-      "world_info": "On {world.name}",
-      "pack": "{pack.name}"
+      "world_name": "{world.name}",
+      "xp_level": "Lvl {player.experience.level}",
+      "depth": "Y {player.position.y}"
     }
   }
 }
