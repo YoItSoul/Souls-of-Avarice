@@ -1,0 +1,623 @@
+# Souls of Avarice - Ambient music channel
+# Port of GreedyCraft's ambience.properties structure into MusicTriggers v7 TOML.
+# Priority ladder (top = wins): mob > structure > dimension > biome > time/height > generic.
+
+[songs]
+
+  # ====== Menu / Loading ======
+  [songs.menu_a]
+    title = "Main Menu A"
+    from = "village1"
+    triggers = ["menu"]
+  [songs.menu_b]
+    title = "Main Menu B"
+    from = "village2"
+    triggers = ["menu"]
+  [songs.menu_c]
+    title = "Main Menu C"
+    from = "village5"
+    triggers = ["menu"]
+  [songs.menu_d]
+    title = "Main Menu D"
+    from = "village6"
+    triggers = ["menu"]
+
+  [songs.loading_a]
+    title = "Loading A"
+    from = "village3"
+    triggers = ["loading"]
+  [songs.loading_b]
+    title = "Loading B"
+    from = "village7"
+    triggers = ["loading"]
+  [songs.loading_c]
+    title = "Loading C"
+    from = "day4"
+    triggers = ["loading"]
+  [songs.loading_d]
+    title = "Loading D"
+    from = "twilight"
+    triggers = ["loading"]
+
+  # ====== Bosses (highest priority) ======
+  # Ender Dragon: boss0,1,4,5 (per GC)
+  [songs.dragon_a]
+    title = "Ender Dragon A"
+    from = "boss0"
+    triggers = ["boss_dragon"]
+  [songs.dragon_b]
+    title = "Ender Dragon B"
+    from = "boss1"
+    triggers = ["boss_dragon"]
+  [songs.dragon_c]
+    title = "Ender Dragon C"
+    from = "boss4"
+    triggers = ["boss_dragon"]
+  [songs.dragon_d]
+    title = "Ender Dragon D"
+    from = "boss5"
+    triggers = ["boss_dragon"]
+
+  # Wither: boss2,3,6,7 (per GC)
+  [songs.wither_a]
+    title = "Wither A"
+    from = "boss2"
+    triggers = ["boss_wither"]
+  [songs.wither_b]
+    title = "Wither B"
+    from = "boss3"
+    triggers = ["boss_wither"]
+  [songs.wither_c]
+    title = "Wither C"
+    from = "boss6"
+    triggers = ["boss_wither"]
+  [songs.wither_d]
+    title = "Wither D"
+    from = "boss7"
+    triggers = ["boss_wither"]
+
+  # Twilight Forest bosses - full pool
+  [songs.tf_boss_0]
+    title = "TF Boss 0"
+    from = "boss0"
+    triggers = ["boss_twilight"]
+  [songs.tf_boss_1]
+    title = "TF Boss 1"
+    from = "boss1"
+    triggers = ["boss_twilight"]
+  [songs.tf_boss_2]
+    title = "TF Boss 2"
+    from = "boss2"
+    triggers = ["boss_twilight"]
+  [songs.tf_boss_3]
+    title = "TF Boss 3"
+    from = "boss3"
+    triggers = ["boss_twilight"]
+  [songs.tf_boss_4]
+    title = "TF Boss 4"
+    from = "boss4"
+    triggers = ["boss_twilight"]
+
+  # Aether bosses
+  [songs.aether_boss_a]
+    title = "Aether Boss A"
+    from = "boss5"
+    triggers = ["boss_aether"]
+  [songs.aether_boss_b]
+    title = "Aether Boss B"
+    from = "boss6"
+    triggers = ["boss_aether"]
+  [songs.aether_boss_c]
+    title = "Aether Boss C"
+    from = "boss7"
+    triggers = ["boss_aether"]
+
+  # Warden (Otherside/Deep Dark) - forced silence feel
+  [songs.warden_silence]
+    title = "Warden - Silence"
+    from = "silence0"
+    triggers = ["boss_warden"]
+
+  # Generic boss pool for everything else (Elder Guardian, etc.)
+  [songs.boss_generic_0]
+    title = "Boss Pool 0"
+    from = "boss0"
+    triggers = ["boss_generic"]
+  [songs.boss_generic_1]
+    title = "Boss Pool 1"
+    from = "boss1"
+    triggers = ["boss_generic"]
+  [songs.boss_generic_2]
+    title = "Boss Pool 2"
+    from = "boss2"
+    triggers = ["boss_generic"]
+  [songs.boss_generic_3]
+    title = "Boss Pool 3"
+    from = "boss3"
+    triggers = ["boss_generic"]
+
+  # ====== Horde combat (multiple hostiles) ======
+  [songs.horde_a]
+    title = "Horde A"
+    from = "battle0"
+    triggers = ["horde"]
+  [songs.horde_b]
+    title = "Horde B"
+    from = "battle1"
+    triggers = ["horde"]
+  [songs.horde_c]
+    title = "Horde C"
+    from = "battle2"
+    triggers = ["horde"]
+  [songs.horde_d]
+    title = "Horde D"
+    from = "battle3"
+    triggers = ["horde"]
+  [songs.horde_e]
+    title = "Horde E"
+    from = "battle4"
+    triggers = ["horde"]
+
+  # ====== Dimensions ======
+
+  # Nether
+  [songs.nether_a]
+    title = "Nether A"
+    from = "nether0"
+    triggers = ["dim_nether"]
+  [songs.nether_b]
+    title = "Nether B"
+    from = "nether1"
+    triggers = ["dim_nether"]
+  [songs.nether_c]
+    title = "Nether C"
+    from = "nether2"
+    triggers = ["dim_nether"]
+  [songs.nether_d]
+    title = "Nether D"
+    from = "nether3"
+    triggers = ["dim_nether"]
+  [songs.nether_e]
+    title = "Nether E"
+    from = "nether4"
+    triggers = ["dim_nether"]
+
+  # End
+  [songs.end_a]
+    title = "End A"
+    from = "end0"
+    triggers = ["dim_end"]
+  [songs.end_b]
+    title = "End B"
+    from = "end1"
+    triggers = ["dim_end"]
+  [songs.end_c]
+    title = "End C"
+    from = "end2"
+    triggers = ["dim_end"]
+
+  # Twilight Forest
+  [songs.twilight_forest]
+    title = "Twilight Forest"
+    from = "twilight"
+    triggers = ["dim_twilight"]
+
+  # Otherside (Deeper Darker)
+  [songs.otherside]
+    title = "Otherside"
+    from = "deep_dark"
+    triggers = ["dim_otherside"]
+
+  # Aether - peaceful celestial feel
+  [songs.aether_a]
+    title = "Aether A"
+    from = "village0"
+    triggers = ["dim_aether"]
+  [songs.aether_b]
+    title = "Aether B"
+    from = "village3"
+    triggers = ["dim_aether"]
+  [songs.aether_c]
+    title = "Aether C"
+    from = "village4"
+    triggers = ["dim_aether"]
+  [songs.aether_d]
+    title = "Aether D"
+    from = "day4"
+    triggers = ["dim_aether"]
+
+  # Alfheim - elvish peaceful
+  [songs.alfheim_a]
+    title = "Alfheim A"
+    from = "village0"
+    triggers = ["dim_alfheim"]
+  [songs.alfheim_b]
+    title = "Alfheim B"
+    from = "village4"
+    triggers = ["dim_alfheim"]
+  [songs.alfheim_c]
+    title = "Alfheim C"
+    from = "day0"
+    triggers = ["dim_alfheim"]
+  [songs.alfheim_d]
+    title = "Alfheim D"
+    from = "day2"
+    triggers = ["dim_alfheim"]
+
+  # Blue Skies - Everbright (sunny)
+  [songs.everbright_a]
+    title = "Everbright A"
+    from = "day0"
+    triggers = ["dim_everbright"]
+  [songs.everbright_b]
+    title = "Everbright B"
+    from = "day1"
+    triggers = ["dim_everbright"]
+  [songs.everbright_c]
+    title = "Everbright C"
+    from = "day2"
+    triggers = ["dim_everbright"]
+  [songs.everbright_d]
+    title = "Everbright D"
+    from = "day3"
+    triggers = ["dim_everbright"]
+
+  # Blue Skies - Everdawn (twilight)
+  [songs.everdawn_a]
+    title = "Everdawn A"
+    from = "night0"
+    triggers = ["dim_everdawn"]
+  [songs.everdawn_b]
+    title = "Everdawn B"
+    from = "night1"
+    triggers = ["dim_everdawn"]
+  [songs.everdawn_c]
+    title = "Everdawn C"
+    from = "night2"
+    triggers = ["dim_everdawn"]
+  [songs.everdawn_d]
+    title = "Everdawn D"
+    from = "corruption"
+    triggers = ["dim_everdawn"]
+
+  # Mining Dimension - underground feel
+  [songs.mining_a]
+    title = "Mining A"
+    from = "underground0"
+    triggers = ["dim_mining"]
+  [songs.mining_b]
+    title = "Mining B"
+    from = "underground1"
+    triggers = ["dim_mining"]
+  [songs.mining_c]
+    title = "Mining C"
+    from = "underground2"
+    triggers = ["dim_mining"]
+  [songs.mining_d]
+    title = "Mining D"
+    from = "underground3"
+    triggers = ["dim_mining"]
+  [songs.mining_e]
+    title = "Mining E"
+    from = "underground4"
+    triggers = ["dim_mining"]
+
+  # Blood Magic Dungeon - boss/dungeon mood
+  [songs.bm_dungeon_a]
+    title = "Blood Dungeon A"
+    from = "boss2"
+    triggers = ["dim_bloodmagic"]
+  [songs.bm_dungeon_b]
+    title = "Blood Dungeon B"
+    from = "boss3"
+    triggers = ["dim_bloodmagic"]
+  [songs.bm_dungeon_c]
+    title = "Blood Dungeon C"
+    from = "boss6"
+    triggers = ["dim_bloodmagic"]
+  [songs.bm_dungeon_d]
+    title = "Blood Dungeon D"
+    from = "boss7"
+    triggers = ["dim_bloodmagic"]
+
+  # Compact Machines / AE2 Spatial - silent pocket dimensions
+  [songs.compact_silence]
+    title = "Compact Silence"
+    from = "silence2"
+    triggers = ["dim_compact"]
+  [songs.spatial_silence]
+    title = "Spatial Silence"
+    from = "silence5"
+    triggers = ["dim_spatial"]
+
+  # ====== Overworld - underground (y<0 in overworld) ======
+  [songs.underground_a]
+    title = "Underground A"
+    from = "underground0"
+    triggers = ["overworld_underground"]
+  [songs.underground_b]
+    title = "Underground B"
+    from = "underground1"
+    triggers = ["overworld_underground"]
+  [songs.underground_c]
+    title = "Underground C"
+    from = "underground2"
+    triggers = ["overworld_underground"]
+  [songs.underground_d]
+    title = "Underground D"
+    from = "underground3"
+    triggers = ["overworld_underground"]
+  [songs.underground_e]
+    title = "Underground E"
+    from = "underground4"
+    triggers = ["overworld_underground"]
+  [songs.underground_f]
+    title = "Underground F"
+    from = "underground5"
+    triggers = ["overworld_underground"]
+  [songs.underground_g]
+    title = "Underground G"
+    from = "underground6"
+    triggers = ["overworld_underground"]
+
+  # ====== Overworld - night ======
+  [songs.night_a]
+    title = "Night A"
+    from = "night0"
+    triggers = ["overworld_night"]
+  [songs.night_b]
+    title = "Night B"
+    from = "night1"
+    triggers = ["overworld_night"]
+  [songs.night_c]
+    title = "Night C"
+    from = "night2"
+    triggers = ["overworld_night"]
+  [songs.night_d]
+    title = "Night D"
+    from = "night3"
+    triggers = ["overworld_night"]
+  [songs.night_e]
+    title = "Night E"
+    from = "night4"
+    triggers = ["overworld_night"]
+  [songs.night_calm_a]
+    title = "Night Calm A"
+    from = "silence0"
+    triggers = ["overworld_night"]
+  [songs.night_calm_b]
+    title = "Night Calm B"
+    from = "silence3"
+    triggers = ["overworld_night"]
+
+  # ====== Overworld - day (fallback) ======
+  [songs.day_a]
+    title = "Day A"
+    from = "day0"
+    triggers = ["overworld_day"]
+  [songs.day_b]
+    title = "Day B"
+    from = "day1"
+    triggers = ["overworld_day"]
+  [songs.day_c]
+    title = "Day C"
+    from = "day2"
+    triggers = ["overworld_day"]
+  [songs.day_d]
+    title = "Day D"
+    from = "day3"
+    triggers = ["overworld_day"]
+  [songs.day_e]
+    title = "Day E"
+    from = "day4"
+    triggers = ["overworld_day"]
+  [songs.day_silence_a]
+    title = "Day Calm A"
+    from = "silence1"
+    triggers = ["overworld_day"]
+  [songs.day_silence_b]
+    title = "Day Calm B"
+    from = "silence2"
+    triggers = ["overworld_day"]
+
+  # ====== Generic fallback (lowest) ======
+  [songs.generic_a]
+    title = "Ambient Silence A"
+    from = "silence4"
+    triggers = ["generic"]
+  [songs.generic_b]
+    title = "Ambient Silence B"
+    from = "silence5"
+    triggers = ["generic"]
+  [songs.generic_c]
+    title = "Ambient Silence C"
+    from = "silence6"
+    triggers = ["generic"]
+  [songs.generic_d]
+    title = "Ambient Silence D"
+    from = "silence7"
+    triggers = ["generic"]
+  [songs.generic_e]
+    title = "Ambient Silence E"
+    from = "silence8"
+    triggers = ["generic"]
+  [songs.generic_f]
+    title = "Ambient Silence F"
+    from = "silence9"
+    triggers = ["generic"]
+
+
+[triggers]
+
+  # Universal defaults - applied to every trigger below unless overridden
+  [triggers.universal]
+    active_cooldown = "0"
+    fade_in = "60"
+    fade_out = "80"
+    persistence = "0"
+    ticks_before_active = "20"
+    ticks_before_audio = "0"
+    ticks_between_audio = "200"
+
+  # ==== Menus (priority 100) ====
+  [triggers.menu]
+    type = "menu"
+    priority = "100"
+    fade_in = "40"
+    fade_out = "60"
+
+  [triggers.loading]
+    type = "loading"
+    priority = "95"
+    fade_in = "20"
+    fade_out = "40"
+
+  # ==== Bosses (priority 90 - interrupts everything) ====
+  [triggers.boss_dragon]
+    type = "mob"
+    resource_name = ["minecraft:ender_dragon"]
+    priority = "90"
+    persistence = "100"
+    fade_in = "30"
+    fade_out = "60"
+
+  [triggers.boss_wither]
+    type = "mob"
+    resource_name = ["minecraft:wither"]
+    priority = "90"
+    persistence = "100"
+
+  [triggers.boss_warden]
+    type = "mob"
+    resource_name = ["minecraft:warden"]
+    priority = "90"
+    persistence = "100"
+
+  [triggers.boss_twilight]
+    type = "mob"
+    resource_name = [
+      "twilightforest:naga",
+      "twilightforest:lich",
+      "twilightforest:hydra",
+      "twilightforest:ur_ghast",
+      "twilightforest:minoshroom",
+      "twilightforest:knight_phantom",
+      "twilightforest:snow_queen",
+      "twilightforest:alpha_yeti"
+    ]
+    priority = "90"
+    persistence = "100"
+
+  [triggers.boss_aether]
+    type = "mob"
+    resource_name = [
+      "aether:slider",
+      "aether:valkyrie_queen",
+      "aether:sun_spirit"
+    ]
+    priority = "90"
+    persistence = "100"
+
+  [triggers.boss_generic]
+    type = "mob"
+    resource_name = [
+      "minecraft:elder_guardian"
+    ]
+    priority = "85"
+
+  # ==== Horde combat - 3+ hostile mobs nearby (priority 70) ====
+  # Note: combat_music mod also handles this. If overlap is noisy, disable one.
+  [triggers.horde]
+    type = "mob"
+    resource_name = ["minecraft:zombie","minecraft:skeleton","minecraft:spider","minecraft:creeper","minecraft:husk","minecraft:stray"]
+    priority = "70"
+    targets_required = "3"
+    detection_range = "24"
+
+  # ==== Special dimensions (priority 60) ====
+  [triggers.dim_nether]
+    type = "dimension"
+    resource_name = ["minecraft:the_nether"]
+    priority = "60"
+
+  [triggers.dim_end]
+    type = "dimension"
+    resource_name = ["minecraft:the_end"]
+    priority = "60"
+
+  [triggers.dim_twilight]
+    type = "dimension"
+    resource_name = ["twilightforest:twilight_forest"]
+    priority = "60"
+
+  [triggers.dim_otherside]
+    type = "dimension"
+    resource_name = ["deeperdarker:otherside"]
+    priority = "60"
+
+  [triggers.dim_aether]
+    type = "dimension"
+    resource_name = ["aether:the_aether"]
+    priority = "60"
+
+  [triggers.dim_alfheim]
+    type = "dimension"
+    resource_name = ["mythicbotany:alfheim"]
+    priority = "60"
+
+  [triggers.dim_everbright]
+    type = "dimension"
+    resource_name = ["blue_skies:everbright"]
+    priority = "60"
+
+  [triggers.dim_everdawn]
+    type = "dimension"
+    resource_name = ["blue_skies:everdawn"]
+    priority = "60"
+
+  [triggers.dim_mining]
+    type = "dimension"
+    resource_name = ["mining_dimension:mining"]
+    priority = "60"
+
+  [triggers.dim_bloodmagic]
+    type = "dimension"
+    resource_name = ["bloodmagic:dungeon"]
+    priority = "60"
+
+  [triggers.dim_compact]
+    type = "dimension"
+    resource_name = ["compactmachines:compact_world"]
+    priority = "60"
+
+  [triggers.dim_spatial]
+    type = "dimension"
+    resource_name = ["ae2:spatial_storage"]
+    priority = "60"
+
+  # ==== Overworld conditional (priority 40) ====
+  # Underground: y <= 40 in overworld
+  [triggers.overworld_underground]
+    type = "height"
+    resource_name = ["minecraft:overworld"]
+    max_y = "40"
+    priority = "40"
+
+  # Overworld night: 13000-23000 game ticks
+  [triggers.overworld_night]
+    type = "time"
+    resource_name = ["minecraft:overworld"]
+    min_time = "13000"
+    max_time = "23000"
+    priority = "30"
+
+  # Overworld day: default
+  [triggers.overworld_day]
+    type = "dimension"
+    resource_name = ["minecraft:overworld"]
+    priority = "20"
+
+  # ==== Generic fallback (priority 1) ====
+  [triggers.generic]
+    type = "generic"
+    priority = "1"

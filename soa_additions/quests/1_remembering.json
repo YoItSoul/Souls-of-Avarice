@@ -342,6 +342,7 @@
       "id": "11297238b0af7c2c",
       "title": "Make a Mark",
       "icon": "minecraft:oak_log",
+      "auto_claim": true,
       "x": 112,
       "y": 192,
       "description": [],
@@ -642,8 +643,8 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark",
-          "text": "Observe minecraft:bedrock"
+          "type": "soa_additions:observe",
+          "target": "minecraft:bedrock"
         }
       ],
       "rewards": [
@@ -690,7 +691,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "tag": "minecraft:raw_gold",
+          "item": "minecraft:raw_gold",
           "count": 1
         }
       ],
@@ -822,8 +823,7 @@
         {
           "type": "soa_additions:item",
           "item": "tconstruct:materials_and_you",
-          "count": 1,
-          "nbt": "{mantle:{book:{current_page:\"melee_harvest_materials.tconstruct:copper\"}}}"
+          "count": 1
         }
       ],
       "rewards": [
@@ -994,8 +994,7 @@
         {
           "type": "soa_additions:item",
           "item": "tconstruct:tinkers_gadgetry",
-          "count": 1,
-          "nbt": "{mantle:{book:{current_page:\"\"}}}"
+          "count": 1
         }
       ],
       "rewards": [
@@ -1246,6 +1245,7 @@
       "id": "quest_mnv6z1g9",
       "title": "E=mc^2",
       "icon": "soa_additions:energy_matter_core",
+      "auto_claim": true,
       "x": 272,
       "y": 208,
       "description": [
