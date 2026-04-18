@@ -3,7 +3,9 @@
   "title": "Challenges",
   "icon": "minecraft:diamond",
   "sort_order": 80,
-  "description": "Quests for the Challenges progression path.",
+  "description": [
+    "Quests for the Challenges progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -65,6 +67,7 @@
       "id": "cha_accessory_reforge",
       "title": "Accessory Reforge",
       "icon": "bountifulbaubles:reforger",
+      "visibility": "invisible",
       "x": 48,
       "y": 96,
       "description": [
@@ -200,8 +203,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_a false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_a",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -373,6 +377,7 @@
       "id": "cha_a_blessing_of_the_lord",
       "title": "A Blessing of the Lord",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 192,
       "y": 240,
       "description": [
@@ -539,8 +544,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_f false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_f",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -592,6 +598,7 @@
       "id": "cha_the_destroyer",
       "title": "The Destroyer",
       "icon": "defiledlands:essence_destroyer",
+      "visibility": "invisible",
       "x": 0,
       "y": 144,
       "description": [
@@ -621,6 +628,7 @@
       "id": "cha_dancing_on_fire",
       "title": "Dancing on Fire",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 336,
       "y": 48,
       "description": [
@@ -729,6 +737,7 @@
       "id": "cha_feel_the_motion",
       "title": "Feel the Motion",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 192,
       "y": 288,
       "description": [
@@ -846,6 +855,7 @@
       "id": "cha_i_love_math",
       "title": "I Love Math",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 96,
       "y": 336,
       "description": [
@@ -1052,6 +1062,7 @@
       "id": "cha_einstein_rosen_bridge",
       "title": "Einstein-Rosen Bridge",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 288,
       "y": 288,
       "description": [
@@ -1131,6 +1142,7 @@
       "id": "cha_tofu_power",
       "title": "Tofu Power",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 336,
       "y": 144,
       "description": [
@@ -1164,6 +1176,7 @@
       "id": "cha_a_peaceful_life",
       "title": "A Peaceful Life",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 432,
       "y": 0,
       "description": [
@@ -1302,8 +1315,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_d false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_d",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -1354,6 +1368,7 @@
       "id": "cha_i_m_in_charge_of_this_game",
       "title": "I'm in Charge of This Game",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 240,
       "y": 288,
       "description": [
@@ -1532,6 +1547,7 @@
       "id": "cha_underground_treasure",
       "title": "Underground Treasure",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 144,
       "y": 336,
       "description": [
@@ -1606,6 +1622,7 @@
       "id": "cha_quick_house_moving",
       "title": "Quick House Moving",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 144,
       "y": 240,
       "description": [
@@ -1642,6 +1659,7 @@
       "id": "cha_the_depressed_man",
       "title": "The Depressed Man",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 48,
       "y": 144,
       "description": [
@@ -1711,6 +1729,7 @@
       "id": "cha_never_fills_up",
       "title": "Never Fills Up",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 288,
       "y": 48,
       "description": [
@@ -2063,8 +2082,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_b false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_b",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -2409,8 +2429,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_e false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_e",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -2427,16 +2448,19 @@
     {
       "id": "cha_experienced_player",
       "title": "Experienced Player",
-      "icon": "minecraft:barrier",
+      "icon": "nocubescreateexp:exp_block",
       "x": 96,
       "y": 48,
       "description": [
-        "Submit 100 levels of XP"
+        "Submit 10 blocks of COMPACTED experience."
       ],
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "nocubescreateexp:exp_block",
+          "count": 10,
+          "consume": true
         }
       ],
       "rewards": [
@@ -2663,6 +2687,7 @@
       "id": "cha_you_can_t_eat_this",
       "title": "You Can't Eat This",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 336,
       "y": 384,
       "description": [
@@ -2949,6 +2974,7 @@
       "id": "cha_quest_display",
       "title": "Quest Display",
       "icon": "ftbquests:screen",
+      "visibility": "invisible",
       "x": 96,
       "y": 96,
       "description": [
@@ -2981,7 +3007,7 @@
     {
       "id": "cha_quick_make_a_wish_oh_wait_oh_n",
       "title": "Quick, make a wish... oh wait... oh no!",
-      "icon": "nyx:meteor_ingot",
+      "icon": "soa_additions:meteor_ingot",
       "x": 0,
       "y": 48,
       "description": [
@@ -2991,7 +3017,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "nyx:meteor_ingot",
+          "item": "soa_additions:meteor_ingot",
           "count": 1
         }
       ],
@@ -3327,7 +3353,7 @@
     {
       "id": "cha_even_larger_storage",
       "title": "Even Larger Storage",
-      "icon": "actuallyadditions:block_giant_chest_large",
+      "icon": "dankstorage:dank_6",
       "x": 144,
       "y": 192,
       "description": [
@@ -3339,7 +3365,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:block_giant_chest_large",
+          "item": "dankstorage:dank_6",
           "count": 1
         }
       ],
@@ -3464,6 +3490,7 @@
       "id": "cha_moving_in_style",
       "title": "Moving in Style",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 384,
       "y": 0,
       "description": [
@@ -3757,8 +3784,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_g false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_g",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -3878,8 +3906,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_all false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_all",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",
@@ -3968,6 +3997,7 @@
       "id": "cha_hell_sailor",
       "title": "Hell Sailor",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 96,
       "y": 288,
       "description": [
@@ -4190,6 +4220,7 @@
       "id": "cha_tower_conquerer",
       "title": "Tower Conquerer",
       "icon": "minecraft:barrier",
+      "visibility": "invisible",
       "x": 144,
       "y": 0,
       "description": [
@@ -4330,8 +4361,9 @@
       "tasks": [],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p challenger_c false"
+          "type": "soa_additions:grant_stage",
+          "stage": "challenger_c",
+          "scope": "player"
         },
         {
           "type": "soa_additions:item",

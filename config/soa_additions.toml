@@ -95,34 +95,3 @@
 		#Range: 0.1 ~ 10.0
 		expertExhaustionMultiplier = 0.5
 
-	[soa_additions.autoUpdate]
-		#Pulls a scripts directory from a GitHub repository on startup and on a fixed interval,
-		#overwriting the matching game directory so CraftTweaker/KubeJS/datapack authors can push
-		#hotfixes without shipping a new mod/pack build.
-		#
-		#Only non-JAR files are synced — the mod's own JAR cannot be hot-swapped and still requires a
-		#game restart. After a successful sync on a dedicated/integrated server, '/reload' is run so
-		#datapack and script changes apply live.
-		#Master switch for the auto-updater. Default: true.
-		enabled = true
-		#GitHub repository in 'owner/repo' form.
-		repo = "YoItSoul/Souls-of-Avarice"
-		#Branch to track on the repository.
-		branch = "main"
-		#How often (in minutes) to re-check GitHub for new commits. Default: 10.
-		#Range: 1 ~ 1440
-		intervalMinutes = 10
-		#Subdirectory within the repository to sync. Only files under this path are pulled.
-		#Use an empty string to sync from the repo root. Default: 'scripts'.
-		sourcePath = "scripts"
-		#Game-directory-relative directory to write synced files into.
-		#Default: 'scripts' (the standard CraftTweaker scripts directory).
-		targetPath = "scripts"
-		#Repository-relative paths or prefixes to exclude from the sync (case-insensitive).
-		#Any entry in the zip whose repo-relative path starts with one of these prefixes is skipped.
-		#The '.git' directory is always implicitly excluded (zipball archives do not contain it).
-		blacklist = [".git", ".gitignore", ".gitattributes", ".github", "README.md", "README.txt", "LICENSE", "LICENSE.txt"]
-		#Run '/reload' on the server after a successful sync so datapack/script changes apply
-		#immediately without a restart. Default: true.
-		autoReload = true
-

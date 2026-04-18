@@ -3,7 +3,9 @@
   "title": "Blood Magic",
   "icon": "bloodmagic:altar",
   "sort_order": 120,
-  "description": "Quests for the Blood Magic progression path.",
+  "description": [
+    "Quests for the Blood Magic progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -804,7 +806,7 @@
     {
       "id": "blo_telepathy",
       "title": "Telepathy",
-      "icon": "tconevo:blood_metal",
+      "icon": "soa_additions:bound_metal_ingot",
       "x": 256,
       "y": 32,
       "description": [
@@ -816,7 +818,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconevo:blood_metal",
+          "item": "soa_additions:bound_metal_ingot",
           "count": 1
         }
       ],
@@ -839,7 +841,7 @@
     {
       "id": "blo_soul_bound",
       "title": "Soul Bound",
-      "icon": "tconevo:sentient_metal",
+      "icon": "soa_additions:sentient_metal_ingot",
       "x": 304,
       "y": 48,
       "description": [
@@ -852,7 +854,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconevo:sentient_metal",
+          "item": "soa_additions:sentient_metal_ingot",
           "count": 1
         }
       ],
@@ -866,8 +868,9 @@
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p skilled_wizard false"
+          "type": "soa_additions:grant_stage",
+          "stage": "skilled_wizard",
+          "scope": "player"
         }
       ],
       "modes": [

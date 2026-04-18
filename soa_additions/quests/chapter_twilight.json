@@ -87,8 +87,9 @@
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p twilight_forest false"
+          "type": "soa_additions:grant_stage",
+          "stage": "twilight_forest",
+          "scope": "player"
         },
         {
           "type": "soa_additions:command",

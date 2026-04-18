@@ -3,7 +3,9 @@
   "title": "Botania",
   "icon": "botania:rune_mana",
   "sort_order": 50,
-  "description": "Quests for the Botania progression path.",
+  "description": [
+    "Quests for the Botania progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -1323,7 +1325,9 @@
       "icon": "botania:lexicon",
       "x": 0,
       "y": 208,
-      "description": "Obtain 1× Lexicon to progress in the Botania path.",
+      "description": [
+        "Obtain 1× Lexicon to progress in the Botania path."
+      ],
       "dependencies": [],
       "tasks": [
         {
@@ -1352,10 +1356,12 @@
     {
       "id": "quest_mnw6rcpe",
       "title": "THE MIGHTY LEXICON... upgraded?",
-      "icon": "botania:lexicon",
+      "icon": "botania:lexicon{\"botania:elven_unlock\":1b}",
       "x": 304,
       "y": 256,
-      "description": "Obtain 1× Lexicon to progress in the Botania path.",
+      "description": [
+        "Obtain 1× Lexicon to progress in the Botania path."
+      ],
       "dependencies": [
         "bot_alfheim_portal"
       ],

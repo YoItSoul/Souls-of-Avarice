@@ -1,0 +1,168 @@
+
+#General toggles for the TConstructEvo content pack.
+[general]
+	#Enable the Sceptre tool type and Magic Missile entity.
+	enableSceptre = true
+	#Enable the legendary artifact items and their loot table integration.
+	enableArtifacts = true
+	#Global multiplier applied to every per-chest-table artifact drop chance. 1.0 = use the per-table values verbatim; 0.0 disables all loot drops (artifacts can still be obtained from creative).
+	#Range: 0.0 ~ 1.0
+	artifactDropChance = 1.0
+
+#Combat tuning that mirrors the 1.12.2 coremod transforms still relevant on 1.20.1.
+[combat]
+	#Disable TConstruct's damage cutoff so endgame tools can deal their full attack damage.
+	#Without this, attack damage above ~30 is sharply reduced.
+	disableDamageCutoff = true
+	#Allow sufficiently powerful TConstruct tools to break otherwise unbreakable blocks (Draconic chest, etc.).
+	#The tool's harvest level must meet or exceed `breakUnbreakableHarvestLevel`.
+	breakUnbreakable = true
+	#Minimum harvest tier (0=wood, 4=cobalt, 5=hepatizon, 6=manyullyn, 7+=draconic-tier) required to break unbreakable blocks.
+	#Range: 0 ~ 99
+	breakUnbreakableHarvestLevel = 7
+
+#Master toggles per-integration. Setting any of these to false skips that integration entirely even if the target mod is loaded.
+[integrations]
+	draconicEvolution = true
+	avaritia = true
+	botania = true
+	mekanism = true
+	enderio = true
+	thermal = true
+	solarflux = true
+	projecte = true
+	appliedEnergistics2 = true
+	curios = true
+	bloodmagic = true
+	gamestages = true
+	tinkersLevelling = true
+
+#Draconic Evolution integration tuning.
+[draconic]
+	#RF capacity granted per level of the Draconic Energy modifier.
+	#Range: > 1
+	energyCapacityPerLevel = 1000000
+	#Base RF capacity contributed by one level of the Evolved trait. Tier doubles each additional level.
+	#Range: > 1
+	evolvedBaseRfCapacity = 8000000
+	#RF drained per point of durability damage absorbed by the Evolved trait.
+	#Range: > 0
+	evolvedEnergyCostTools = 500
+	#Flat bonus to the tool's velocity stat per level of the Draconic Arrow Speed modifier.
+	#Range: 0.0 ~ 100.0
+	draconicArrowSpeedBonus = 1.0
+	#Fraction of melee damage that the Primordial modifier converts into bonus armour-bypassing chaos damage per level.
+	#Range: 0.0 ~ 1.0
+	primordialConversionPerLevel = 0.04
+	#Fraction of each equipped RF-storing item's energy that Flux Burn drains on hit per level.
+	#Range: 0.0 ~ 1.0
+	fluxBurnFractionPerLevel = 0.01
+	#Lower bound on the RF Flux Burn drains from a single item per level, even if the fractional amount is smaller.
+	#Range: > 0
+	fluxBurnMinPerLevel = 256
+	#Upper bound on the RF Flux Burn drains from a single item per level; 0 disables the cap.
+	#Range: > 0
+	fluxBurnMaxPerLevel = 320000
+	#RF drained per point of bonus damage Flux Burn inflicts. Lower = more damage per drained RF.
+	#Range: 1.0 ~ 1.0E12
+	fluxBurnEnergyPerDamage = 16000.0
+	#Radius (in blocks) around the primary target that Draconic Attack AoE sweeps per level. Tier 4 (Chaotic) at default gives 3-block reach.
+	#Range: 0.0 ~ 16.0
+	draconicAttackAoeRadiusPerLevel = 0.75
+	#Fraction of the primary hit's damage dealt to each AoE-swept secondary target.
+	#Range: 0.0 ~ 1.0
+	draconicAttackAoeDamageFraction = 0.8
+	#Block-break AoE cube half-extent added per level of Draconic Dig AoE. Tier 4 at default sweeps a 9×9×9 cube around the primary block.
+	#Range: 0 ~ 8
+	draconicDigAoeRadiusPerLevel = 1
+
+#Per-trait tuning. These match the original tconevo numbers unless noted.
+[traits]
+	#Fraction of damage dealt healed back per level of the Vampiric trait.
+	#Range: 0.0 ~ 5.0
+	vampiricLifestealPerLevel = 0.2
+	#Healing-received multiplier applied while a victim suffers Mortal Wounds (1.0 = unchanged, 0.0 = no healing).
+	#Range: 0.0 ~ 1.0
+	mortalWoundsHealReduction = 0.25
+	#Seconds between auto-repair ticks granted by the Rejuvenating trait at level 1.
+	#Range: 1 ~ 600
+	rejuvenatingRepairSeconds = 8
+	#RF capacity added by one level of the Energized trait (contributes to TConstruct's max_energy stat).
+	#Range: > 1
+	energizedCapacityPerLevel = 1600000
+	#RF drained from the Energized pool per point of durability damage prevented (higher = more expensive).
+	#Range: > 0
+	energizedEnergyCostTools = 50
+	#RF produced per point of melee damage dealt at level 1 of the Piezoelectric trait; scales linearly with level.
+	#Range: > 0
+	piezoelectricRfPerDamage = 36
+	#RF generated per second per level of the Photovoltaic trait at full sunlight; scales linearly with sky light.
+	#Range: > 0
+	photovoltaicRfPerLevelPerSecond = 640
+	#RF capacity added by one level of the Fluxed modifier.
+	#1.12.2 tconevo read this value from the energy cell used to apply the modifier; this port uses a flat per-level config value instead since Tinkers' 3.x modifier-application flow no longer surfaces the applied item stack.
+	#Range: > 1
+	fluxedCapacityPerLevel = 1000000
+	#RF drained per point of durability damage prevented by the Fluxed modifier.
+	#Range: > 0
+	fluxedEnergyCostTools = 320
+	#Fraction of accuracy added per level of the Accuracy modifier (0.05 = 5% per level). Consumed against the hypothetical tconevo.evasion attribute once it lands.
+	#Range: 0.0 ~ 1.0
+	accuracyChancePerLevel = 0.05
+	#Upper bound on the tconevo.accuracy entity attribute, above the base value of 1.0. Sum of all sources is clamped here.
+	#Range: 0.0 ~ 10.0
+	accuracyAttrMax = 1.0
+
+#Avaritia-specific trait tuning.
+[avaritia]
+	#Per-level probability of the Condensing trait dropping an Avaritia neutron pile on a successful kill or effective block break.
+	#Range: 0.0 ~ 1.0
+	condensingDropProbability = 0.005
+	#Whether the Omnipotence trait can damage players in creative mode (invuln-bypass path). Mirrors 1.12.2 behaviour.
+	omnipotenceHitsCreative = false
+
+#Blood Magic-specific trait tuning.
+[bloodmagic]
+	#Life Points drained per point of durability damage absorbed by the Bloodbound trait.
+	#Range: > 0
+	bloodboundToolCost = 100
+	#Probability that Crystalys drops a Weak Blood Shard on a successful hostile kill.
+	#Range: 0.0 ~ 1.0
+	crystalysDropProbability = 0.05
+	#Probability that Willful drops a Petty Tartaric Gem on a successful kill.
+	#Range: 0.0 ~ 1.0
+	willfulDropProbability = 0.05
+	#Demon Will amount the dropped Petty Gem is pre-filled with.
+	#Range: 0.0 ~ 1000.0
+	willfulGemWillAmount = 2.0
+	#Demon Will amount required to advance one Sentient tier. Tier = floor(totalWill / step), capped at 8.
+	#Range: 1.0 ~ 1000000.0
+	sentientTierStep = 16.0
+	#Flat bonus attack damage added per Sentient tier to a held weapon whose wielder has demon will in their inventory.
+	#Range: 0.0 ~ 100.0
+	sentientDamagePerTier = 1.0
+
+#Botania-specific trait tuning. All values feed Botania's ManaItemHandler / entity APIs directly.
+[botania]
+	#Mana dispatched to the wielder's mana-storage items per point of melee damage dealt (Aura Siphon).
+	#Range: 0.0 ~ 1000000.0
+	auraSiphonMultiplier = 40.0
+	#Per-hit chance that Fae Voice summons a Pixie to strike the target.
+	#Range: 0.0 ~ 1.0
+	faeVoicePixieChance = 0.25
+	#Damage dealt by a Fae Voice-summoned Pixie.
+	#Range: 0.0 ~ 1000.0
+	faeVoicePixieDamage = 4.0
+	#Mana drained per point of durability absorbed by Mana-Infused, and per auto-repair tick. Routed through ManaItemHandler.requestManaExactForTool so Botania's own discount/proficiency logic applies.
+	#Range: > 0
+	manaInfusedCost = 60
+	#Mana charged into the burst fired by Gaia Wrath on left-click-empty. Also used as starting mana / min-mana-loss threshold for the projectile.
+	#Range: > 0
+	gaiaWrathManaCost = 6000
+
+#ProjectE-specific trait tuning.
+[projecte]
+	#EMC produced per level of Eternal Density per point of melee damage dealt; distributed into any IItemEmcHolder item in the wielder's inventory.
+	#Range: 0.0 ~ 1.0E9
+	eternalDensityEmcPerDamage = 4.0
+
