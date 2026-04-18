@@ -587,8 +587,9 @@
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p lunatic_cultist false"
+          "type": "soa_additions:grant_stage",
+          "stage": "lunatic_cultist",
+          "scope": "player"
         }
       ],
       "modes": [
@@ -736,8 +737,9 @@
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p lunatic_cultist false"
+          "type": "soa_additions:grant_stage",
+          "stage": "lunatic_cultist",
+          "scope": "player"
         }
       ],
       "modes": [

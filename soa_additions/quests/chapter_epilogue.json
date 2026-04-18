@@ -91,7 +91,7 @@
     {
       "id": "epi_quest_15bc2a7b",
       "title": "Primordial Metal",
-      "icon": "tconevo:primordial_metal",
+      "icon": "soa_additions:primal_metal_ingot",
       "x": 192,
       "y": 160,
       "description": [
@@ -101,7 +101,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconevo:primordial_metal",
+          "item": "soa_additions:primal_metal_ingot",
           "count": 1
         }
       ],
@@ -331,7 +331,7 @@
     {
       "id": "epi_quest_cf664880",
       "title": "Uru Ingot",
-      "icon": "tconevo:uru_ingot",
+      "icon": "soa_additions:uru_ingot",
       "x": 96,
       "y": 128,
       "description": [
@@ -341,7 +341,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconevo:uru_ingot",
+          "item": "soa_additions:uru_ingot",
           "count": 1
         }
       ],
@@ -649,12 +649,14 @@
           "count": 64
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p graduated false"
+          "type": "soa_additions:grant_stage",
+          "stage": "graduated",
+          "scope": "player"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p truehero false"
+          "type": "soa_additions:grant_stage",
+          "stage": "truehero",
+          "scope": "player"
         }
       ],
       "modes": [
@@ -687,8 +689,9 @@
           "count": 1
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p qualified_ocd false"
+          "type": "soa_additions:grant_stage",
+          "stage": "qualified_ocd",
+          "scope": "player"
         }
       ],
       "modes": [

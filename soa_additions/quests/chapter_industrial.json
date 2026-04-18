@@ -312,8 +312,9 @@
           "count": 1
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p skilled_engineer false"
+          "type": "soa_additions:grant_stage",
+          "stage": "skilled_engineer",
+          "scope": "player"
         },
         {
           "type": "soa_additions:command",
@@ -330,8 +331,8 @@
       "id": "ind_the_metal_that_never_rusts",
       "title": "The Metal that Never Rusts",
       "icon": "thermal:electrum_ingot",
-      "x": 229,
-      "y": 333,
+      "x": 224,
+      "y": 320,
       "description": [
         "Original items: Electrum Ingot (thermal)"
       ],
@@ -364,7 +365,7 @@
     {
       "id": "ind_infinite_water",
       "title": "Infinite Water",
-      "icon": "thermalexpansion:device",
+      "icon": "thermal:device_water_gen",
       "x": 21,
       "y": 125,
       "description": [
@@ -374,7 +375,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:device",
+          "item": "thermal:device_water_gen",
           "count": 1
         }
       ],
@@ -403,8 +404,8 @@
       "id": "ind_steampunk_era_2",
       "title": "Steampunk Era",
       "icon": "thermalexpansion:dynamo",
-      "x": 21,
-      "y": 187,
+      "x": 16,
+      "y": 160,
       "description": [
         "Original items: Dynamo (thermalexpansion)"
       ],
@@ -438,8 +439,8 @@
       "id": "ind_turbo_boost",
       "title": "Turbo Boost",
       "icon": "thermal:dynamo_fuel_augment",
-      "x": 21,
-      "y": 208,
+      "x": 48,
+      "y": 176,
       "description": [
         "Install specialization to the Dynamos"
       ],
@@ -1101,9 +1102,9 @@
     {
       "id": "ind_ore_doubling",
       "title": "Ore Doubling",
-      "icon": "thermalexpansion:machine",
-      "x": 64,
-      "y": 125,
+      "icon": "thermal:machine_pulverizer",
+      "x": 80,
+      "y": 128,
       "description": [
         "Obtain a Pulverizer which double ores by turning them into 2x dust!"
       ],
@@ -1113,7 +1114,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_pulverizer",
           "count": 1
         }
       ],
@@ -1145,7 +1146,7 @@
     {
       "id": "ind_industrial_evolution_i",
       "title": "Industrial Evolution I",
-      "icon": "thermalfoundation:upgrade",
+      "icon": "thermal:upgrade_augment_1",
       "x": 64,
       "y": 83,
       "description": [
@@ -1158,7 +1159,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalfoundation:upgrade",
+          "item": "thermal:upgrade_augment_1",
           "count": 1
         }
       ],
@@ -1181,7 +1182,7 @@
     {
       "id": "ind_mystical_machine",
       "title": "Mystical Machine",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_smelter",
       "x": 125,
       "y": 125,
       "description": [
@@ -1193,7 +1194,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_smelter",
           "count": 1
         }
       ],
@@ -1207,8 +1208,9 @@
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p novice_engineer false"
+          "type": "soa_additions:grant_stage",
+          "stage": "novice_engineer",
+          "scope": "player"
         }
       ],
       "modes": [
@@ -1476,7 +1478,7 @@
     {
       "id": "ind_money_is_power",
       "title": "Money is Power",
-      "icon": "thermalexpansion:dynamo",
+      "icon": "minecraft:air",
       "x": 272,
       "y": 187,
       "description": [
@@ -1488,7 +1490,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:dynamo",
+          "item": "minecraft:air",
           "count": 1
         }
       ],
@@ -1943,8 +1945,9 @@
           "amount": 2500
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p master_engineer false"
+          "type": "soa_additions:grant_stage",
+          "stage": "master_engineer",
+          "scope": "player"
         }
       ],
       "modes": [
@@ -2495,7 +2498,7 @@
     {
       "id": "ind_infused_with_energy",
       "title": "Infused With Energy",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:charge_bench",
       "x": 168,
       "y": 144,
       "description": [
@@ -2507,7 +2510,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:charge_bench",
           "count": 1
         }
       ],
@@ -2536,8 +2539,8 @@
       "id": "ind_direct_energy",
       "title": "Direct Energy",
       "icon": "thermalexpansion:dynamo",
-      "x": 229,
-      "y": 187,
+      "x": 224,
+      "y": 176,
       "description": [
         "Original items: Dynamo (thermalexpansion)"
       ],
@@ -3425,8 +3428,8 @@
       "id": "ind_compressed_energy",
       "title": "Compressed Energy",
       "icon": "thermalexpansion:dynamo",
-      "x": 64,
-      "y": 187,
+      "x": 96,
+      "y": 160,
       "description": [
         "Original items: Dynamo (thermalexpansion)"
       ],
@@ -3498,8 +3501,8 @@
       "id": "ind_cooldown_cycle",
       "title": "Cooldown Cycle",
       "icon": "thermal:machine_output_augment",
-      "x": 40,
-      "y": 208,
+      "x": 96,
+      "y": 240,
       "description": [
         "Install specialization to the Dynamos"
       ],
@@ -3683,8 +3686,8 @@
       "id": "ind_cooking_oil_is_oil",
       "title": "Cooking Oil is Oil",
       "icon": "thermal:xp_storage_augment",
-      "x": 64,
-      "y": 208,
+      "x": 48,
+      "y": 224,
       "description": [
         "Install specialization to the Dynamos"
       ],
@@ -3968,7 +3971,7 @@
       "id": "ind_master_of_oil",
       "title": "Master of Oil",
       "icon": "thermal:dynamo_output_augment",
-      "x": 83,
+      "x": 80,
       "y": 208,
       "description": [
         "Install specialization to the Dynamos"
@@ -4173,8 +4176,9 @@
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p infinite_solar_energy false"
+          "type": "soa_additions:grant_stage",
+          "stage": "infinite_solar_energy",
+          "scope": "player"
         }
       ],
       "modes": [
@@ -4188,7 +4192,7 @@
       "title": "Steampunk Era",
       "icon": "thermal:machine_catalyst_augment",
       "x": 0,
-      "y": 208,
+      "y": 192,
       "description": [
         "Install specialization to the Dynamos"
       ],

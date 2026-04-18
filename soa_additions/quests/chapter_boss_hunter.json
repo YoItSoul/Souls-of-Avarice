@@ -19,43 +19,10 @@
   "parent_chapter": "chapter_soa",
   "quests": [
     {
-      "id": "bh_ravager",
-      "title": "Ravager",
-      "icon": "minecraft:saddle",
-      "x": 48,
-      "y": 48,
-      "description": [
-        "Slay a Ravager during a pillager raid."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "minecraft:ravager",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 200
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "bh_elder_guardian",
       "title": "Elder Guardian",
       "icon": "minecraft:prismarine_shard",
-      "x": 96,
+      "x": 48,
       "y": 48,
       "description": [
         "Clear an Ocean Monument by slaying all three Elder Guardians."
@@ -88,7 +55,7 @@
       "id": "bh_wither",
       "title": "The Wither",
       "icon": "minecraft:nether_star",
-      "x": 144,
+      "x": 96,
       "y": 48,
       "description": [
         "Summon and kill the Wither."
@@ -121,7 +88,7 @@
       "id": "bh_warden",
       "title": "Warden",
       "icon": "minecraft:echo_shard",
-      "x": 192,
+      "x": 144,
       "y": 48,
       "description": [
         "Defeat the Warden in the deep dark. It does not forgive."
@@ -154,7 +121,7 @@
       "id": "bh_ender_dragon",
       "title": "Ender Dragon",
       "icon": "minecraft:dragon_egg",
-      "x": 240,
+      "x": 192,
       "y": 48,
       "description": [
         "Slay the Ender Dragon."
@@ -714,39 +681,6 @@
       ]
     },
     {
-      "id": "bh_ez_wither_cat",
-      "title": "Wither Cat",
-      "icon": "minecraft:coal",
-      "x": 96,
-      "y": 240,
-      "description": [
-        "Kill a Wither Cat (spawns when a Wither Witch is threatened)."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "enderzoology:wither_cat",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 200
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "bh_ez_wither_witch",
       "title": "Wither Witch",
       "icon": "minecraft:glass_bottle",
@@ -945,308 +879,11 @@
       ]
     },
     {
-      "id": "bh_cm_ender_golem",
-      "title": "Ender Golem",
-      "icon": "minecraft:ender_pearl",
-      "x": 48,
-      "y": 336,
-      "description": [
-        "Defeat the Ender Golem guarding its ruined stronghold."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ender_golem",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_ender_guardian",
-      "title": "Ender Guardian",
-      "icon": "minecraft:ender_eye",
-      "x": 96,
-      "y": 336,
-      "description": [
-        "Defeat the Ender Guardian in the End."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ender_guardian",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_coralssus",
-      "title": "Coralssus",
-      "icon": "minecraft:fire_coral",
-      "x": 144,
-      "y": 336,
-      "description": [
-        "Defeat the Coralssus hiding in warm ocean ruins."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:coralssus",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_scylla",
-      "title": "Scylla",
-      "icon": "minecraft:heart_of_the_sea",
-      "x": 192,
-      "y": 336,
-      "description": [
-        "Defeat Scylla in the deep ocean."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:scylla",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_modern_remnant",
-      "title": "Modern Remnant",
-      "icon": "minecraft:netherite_ingot",
-      "x": 240,
-      "y": 336,
-      "description": [
-        "Defeat the Modern Remnant."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:modern_remnant",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_ignis",
-      "title": "Ignis",
-      "icon": "minecraft:magma_block",
-      "x": 48,
-      "y": 384,
-      "description": [
-        "Defeat Ignis in the Blazing Citadel of the Nether."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ignis",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_netherite_monstrosity",
-      "title": "Netherite Monstrosity",
-      "icon": "minecraft:netherite_block",
-      "x": 96,
-      "y": 384,
-      "description": [
-        "Bring down the Netherite Monstrosity."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:netherite_monstrosity",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_maledictus",
-      "title": "Maledictus",
-      "icon": "minecraft:totem_of_undying",
-      "x": 144,
-      "y": 384,
-      "description": [
-        "Defeat Maledictus in the cursed desert tomb."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:maledictus",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_leviathan",
-      "title": "The Leviathan",
-      "icon": "minecraft:kelp",
-      "x": 192,
-      "y": 384,
-      "description": [
-        "Bait and slay The Leviathan in the ocean."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:the_leviathan",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "bh_botania_gaia",
       "title": "Gaia Guardian",
       "icon": "minecraft:player_head",
       "x": 48,
-      "y": 432,
+      "y": 336,
       "description": [
         "Summon and defeat the Gaia Guardian atop the Beacon ritual."
       ],
@@ -1275,77 +912,11 @@
       ]
     },
     {
-      "id": "bh_cm_ancient_remnant",
-      "title": "Ancient Remnant",
-      "icon": "minecraft:netherite_scrap",
-      "x": 192,
-      "y": 432,
-      "description": [
-        "Defeat the Ancient Remnant — oldest of the buried guardians."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ancient_remnant",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 2500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_cm_harbinger",
-      "title": "The Harbinger",
-      "icon": "minecraft:dragon_breath",
-      "x": 144,
-      "y": 432,
-      "description": [
-        "Defeat The Harbinger."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:the_harbinger",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 2500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "bh_botania_gaia_ii",
       "title": "Gaia Guardian II",
       "icon": "botania:dice",
       "x": 96,
-      "y": 432,
+      "y": 336,
       "description": [
         "Summon the Hard Mode Gaia Guardian (the Mythic Botany-enhanced fight) using four Gaia Pylons and defeat it.",
         "",
@@ -1381,8 +952,8 @@
       "id": "bh_de_chaos_guardian",
       "title": "Chaos Guardian",
       "icon": "draconicevolution:chaos_shard",
-      "x": 288,
-      "y": 432,
+      "x": 240,
+      "y": 48,
       "description": [
         "Slay the Chaos Guardian in the outer End islands — the final hunt."
       ],
@@ -1404,6 +975,182 @@
           "amount": 2500
         }
       ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lkqwj",
+      "title": "Ender Guardian",
+      "icon": "minecraft:paper",
+      "x": 352,
+      "y": 368,
+      "description": [
+        "500"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4ln2b7",
+      "title": "Netherite Monstronsity",
+      "icon": "minecraft:paper",
+      "x": 352,
+      "y": 208,
+      "description": [
+        "901"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lq3ca",
+      "title": "The Harbriner",
+      "icon": "minecraft:paper",
+      "x": 352,
+      "y": 336,
+      "description": [
+        "506"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lrcip",
+      "title": "The Leviathan",
+      "icon": "minecraft:paper",
+      "x": 352,
+      "y": 304,
+      "description": [
+        "601"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4ltw9i",
+      "title": "Ancient Remnant",
+      "icon": "minecraft:paper",
+      "x": 320,
+      "y": 224,
+      "description": [
+        "677"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lypt9",
+      "title": "Inis",
+      "icon": "minecraft:paper",
+      "x": 384,
+      "y": 224,
+      "description": [
+        "677"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4m14zb",
+      "title": "Maledictus",
+      "icon": "minecraft:paper",
+      "x": 352,
+      "y": 240,
+      "description": [
+        "632"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4m2sgd",
+      "title": "Scylla",
+      "icon": "minecraft:paper",
+      "x": 352,
+      "y": 272,
+      "description": [
+        "587"
+      ],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4ob6rc",
+      "title": "Umvuthi, the Sunbird",
+      "icon": "minecraft:paper",
+      "x": 144,
+      "y": 144,
+      "description": [],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4oc1i7",
+      "title": "Tongbi, the Sculptor",
+      "icon": "minecraft:paper",
+      "x": 192,
+      "y": 144,
+      "description": [],
+      "dependencies": [],
+      "tasks": [],
+      "rewards": [],
       "modes": [
         "casual",
         "adventure",

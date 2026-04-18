@@ -446,8 +446,9 @@
           "amount": 1200
         },
         {
-          "type": "soa_additions:command",
-          "command": "/gamestage add @p novice_wizard false"
+          "type": "soa_additions:grant_stage",
+          "stage": "novice_wizard",
+          "scope": "player"
         }
       ],
       "modes": [
