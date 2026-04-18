@@ -368,7 +368,7 @@
         },
         {
           "type": "soa_additions:command",
-          "command": "/gamestage add @p getting_started true"
+          "command": "/gamestage add @p getting_started false"
         }
       ],
       "modes": [
@@ -3059,6 +3059,70 @@
         {
           "type": "soa_additions:xp",
           "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo3jn76h",
+      "title": "Stage recovery",
+      "icon": "minecraft:paper",
+      "optional": true,
+      "x": 112,
+      "y": 224,
+      "repeatable": true,
+      "description": [
+        "Gamestages is a bit weird sometimes! Let's recover tha stage for you."
+      ],
+      "dependencies": [
+        "11297238b0af7c2c"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Acknowledge"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p getting_started false"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo3l73h3",
+      "title": "Stage recovery",
+      "icon": "minecraft:paper",
+      "optional": true,
+      "x": 160,
+      "y": 64,
+      "repeatable": true,
+      "description": [
+        "Gamestages is a bit weird sometimes! Let's recover tha stage for you."
+      ],
+      "dependencies": [
+        "294fca0347c456aa"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Acknowledge"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/gamestage add @p novice_tinker false"
         }
       ],
       "modes": [
