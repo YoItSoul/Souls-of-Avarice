@@ -10,6 +10,8 @@
 // Creative / spectator players bypass all checks.
 // ============================================================
 
+console.info('[soa_scripts] soa_block_stages.js loading')
+
 let GameStageHelper = null
 try {
     GameStageHelper = Java.loadClass("net.darkhax.gamestages.GameStageHelper")
@@ -874,6 +876,8 @@ function missingStage(player, itemId) {
     }
     return null
 }
+
+console.info('[soa_scripts] soa_block_stages.js: registering BlockEvents.rightClicked hook')
 
 BlockEvents.rightClicked(event => {
     const player = event.player

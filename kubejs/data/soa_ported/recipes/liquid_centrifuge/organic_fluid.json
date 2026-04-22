@@ -1,0 +1,145 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:liquid_centrifuge",
+  "time": 10,
+  "requirements": [
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "soa_additions:organic_fluid",
+      "amount": 100,
+      "tank": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 20
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "soa_additions:resin",
+      "amount": 10,
+      "tank": "outf1"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "tconstruct:slimeball",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.0015
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:vine",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:plant_fibre",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.02
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "enderio:enriched_vibrant_crystal",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.002
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "enderio:basic_capacitor",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.001
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:jungle_log",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.004
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:jungle_leaves",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.02
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mysticalagriculture:fertilized_essence",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.0125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mysticalagriculture:mystical_fertilizer",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.0025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:sugar_cane",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mysticalagriculture:nature_essence",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

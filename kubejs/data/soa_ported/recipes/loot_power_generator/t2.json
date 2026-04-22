@@ -1,0 +1,50 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:loot_power_generator",
+  "time": 200,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:dungeon_loot_tier2",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "output",
+      "amount": 1000
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

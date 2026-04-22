@@ -1,0 +1,153 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:solid_centrifuge",
+  "time": 20,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:sandstone",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 50
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 50,
+      "tank": "water"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:flint",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.03
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:bone",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.05
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "aquaculture:fishing_line",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.02
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "ae2:certus_quartz_dust",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.08
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:bitumen",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:basalz_rod",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.0075
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:tar",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "enderio:grains_of_infinity",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.05
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:dead_bush",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:apatite_dust",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:cinnabar",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.0125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:sulfur_dust",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.0075
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

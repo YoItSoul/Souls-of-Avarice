@@ -1,0 +1,201 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:solid_centrifuge",
+  "time": 20,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:stone",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 50
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 50,
+      "tank": "water"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:coal",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:iron_ore",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.015
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:gold_ore",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.0035
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:copper_ore",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.0125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:tin_ore",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:silver_ore",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.002
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:lead_ore",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.0025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:nickel_ore",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.0035
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:platinum_ore",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.0025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:iridium_ore",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.0015
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:mithril_ore",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.0005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:coal_coke",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.02
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:redstone",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.0045
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:lapis_block",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.0015
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:lapis_lazuli",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.0035
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:diamond",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.0008
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:emerald",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.0003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:blitz_rod",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.006
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

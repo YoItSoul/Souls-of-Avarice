@@ -1,0 +1,78 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:chromasteel_forge",
+  "time": 100,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:ingots/infernium",
+      "amount": 1,
+      "slot": "in1"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:ingots/cryonium",
+      "amount": 1,
+      "slot": "in2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:ingots/cytosinite",
+      "amount": 1,
+      "slot": "in3"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:ingots/titanium",
+      "amount": 1,
+      "slot": "in4"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 50000
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:terra_alloy_ingot",
+      "amount": 2,
+      "slot": "out"
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:chromasteel_forge",
+  "time": 18144,
+  "requirements": [
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 103674816
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:aeonsteel_ingot",
+      "amount": 1,
+      "slot": "in1"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:terra_alloy_ingot",
+      "amount": 1,
+      "slot": "in2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:shadowium_ingot",
+      "amount": 1,
+      "slot": "in3"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:gaia_steel_ingot",
+      "amount": 1,
+      "slot": "in4"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:ethaxium_ingot",
+      "amount": 1,
+      "slot": "in5"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:mirion_ingot",
+      "amount": 1,
+      "slot": "in6"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:terrestrial_artifact",
+      "amount": 1,
+      "slot": "in7"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "mekanism:atomic_alloy",
+      "amount": 1,
+      "slot": "in8"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:reinforced_ingot",
+      "amount": 1,
+      "slot": "in9"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "tconstruct:manyullyn_ingot",
+      "amount": 1,
+      "slot": "in10"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:alumite_ingot",
+      "amount": 1,
+      "slot": "in11"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "avaritia:infinity_ingot",
+      "amount": 1,
+      "slot": "in12"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:protonium_ingot",
+      "amount": 1,
+      "slot": "cat1"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "mysticalagradditions:insanium_essence",
+      "amount": 1,
+      "slot": "cat2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:aurora_heart",
+      "amount": 1,
+      "slot": "cat3"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:chromasteel_ingot",
+      "amount": 6,
+      "slot": "out"
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

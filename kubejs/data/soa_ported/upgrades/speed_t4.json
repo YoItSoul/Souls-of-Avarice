@@ -1,0 +1,18 @@
+{
+  "item": "avaritia:crystal_matrix_ingot",
+  "machines": [
+    "soa_ported:alloy_decomposer"
+  ],
+  "tooltips": [
+    "Speed Tier 4 — ×0.33 recipe time",
+    "GC: modularmachinery:blockcasing@5 (blockcasing@4 was unused)"
+  ],
+  "modifiers": [
+    {
+      "requirement": "custommachinery:speed",
+      "mode": "input",
+      "operation": "multiplication",
+      "modifier": 0.33
+    }
+  ]
+}

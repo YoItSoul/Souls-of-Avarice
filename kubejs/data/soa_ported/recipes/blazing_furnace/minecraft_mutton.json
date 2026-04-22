@@ -1,0 +1,71 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:blazing_furnace",
+  "time": 1,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "minecraft:mutton",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 400
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "cofh_core:experience",
+      "amount": 5,
+      "tank": "xp"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "thermal:pyrotheum",
+      "amount": 2,
+      "tank": "pyro"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:cooked_mutton",
+      "amount": 1,
+      "slot": "out"
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

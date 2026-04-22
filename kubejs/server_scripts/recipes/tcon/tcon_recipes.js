@@ -1,4 +1,7 @@
+console.info('[soa_scripts] tcon_recipes.js loading')
+
 ServerEvents.recipes(event => {
+    console.info('[soa_scripts] tcon_recipes.js: registering recipes')
     event.custom({
         type: 'tconstruct:melting',
         ingredient: { item: 'minecraft:andesite' },
@@ -83,4 +86,5 @@ ServerEvents.recipes(event => {
             count: 1
         }
     })
+    console.info('[soa_scripts] tcon_recipes.js: DONE')
 })

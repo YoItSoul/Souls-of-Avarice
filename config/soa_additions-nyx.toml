@@ -1,0 +1,95 @@
+
+[general]
+	allowedDimensions = ["minecraft:overworld"]
+	lunarWater = true
+	#Range: 0.0 ~ 1.0
+	meteorShardGuardianChance = 0.05
+	mobDuplicationBlacklist = []
+	isMobDuplicationWhitelist = false
+	moonEventTint = true
+	lunarWaterTicks = [1200, -1, 4800, 4800, 3600, 3600, 2400, 2400, 600, -1]
+	eventNotifications = true
+
+[fullMoon]
+	fullMoon = true
+	addPotionEffects = true
+	#Range: 0 ~ 1000
+	additionalMobsChance = 5
+
+[enchantments]
+	enchantments = true
+	lunarEdgeXp = true
+	disallowDayEnchanting = true
+	enchantingWhitelistDimensions = ["minecraft:the_nether", "minecraft:the_end"]
+
+[harvestMoon]
+	harvestMoonOnFull = true
+	#Range: 0 ~ 100
+	harvestMoonGrowAmount = 15
+	#Range: 1 ~ 100
+	harvestMoonGrowInterval = 10
+	#Range: 0.0 ~ 1.0
+	harvestMoonChance = 0.05
+	#Range: 0 ~ 1000
+	harvestMoonStartNight = 0
+	#Range: 0 ~ 1000
+	harvestMoonInterval = 0
+	#Range: 0 ~ 1000
+	harvestMoonGracePeriod = 0
+
+[fallingStars]
+	fallingStars = true
+	#Range: 0.0 ~ 1.0
+	fallingStarRarity = 0.01
+	#Range: 0.0 ~ 1.0
+	starShowersChance = 0.05
+	#Range: 0 ~ 1000
+	starShowersStartNight = 0
+	#Range: 0 ~ 1000
+	starShowersInterval = 0
+	#Range: 0 ~ 1000
+	starShowersGracePeriod = 0
+
+[bloodMoon]
+	bloodMoonSleeping = false
+	#Range: 1 ~ 1000
+	bloodMoonSpawnMultiplier = 2
+	bloodMoonVanish = true
+	#Range: 0 ~ 128
+	bloodMoonSpawnRadius = 20
+	bloodMoonOnFull = true
+	#Range: 0.0 ~ 1.0
+	bloodMoonChance = 0.05
+	#Range: 0 ~ 1000
+	bloodMoonStartNight = 0
+	#Range: 0 ~ 1000
+	bloodMoonInterval = 0
+	#Range: 0 ~ 1000
+	bloodMoonGracePeriod = 0
+
+[meteors]
+	meteors = true
+	#Range: 0.0 ~ 1.0
+	meteorChance = 1.4E-4
+	#Range: 0.0 ~ 1.0
+	meteorChanceNight = 0.0024
+	meteorGateDimension = "minecraft:the_nether"
+	#Range: 0.0 ~ 1.0
+	meteorChanceAfterGate = 2.0E-4
+	#Range: 0.0 ~ 1.0
+	meteorChanceAfterGateNight = 0.003
+	#Range: 0.0 ~ 1.0
+	meteorChanceStarShower = 0.0075
+	#Range: 0.0 ~ 1.0
+	meteorChanceEnd = 0.003
+	#Range: 1 ~ 10000
+	meteorSpawnRadius = 1000
+	#Range: 0 ~ 256
+	meteorDisallowRadius = 16
+	#Range: 1 ~ 240000
+	meteorDisallowTime = 12000
+	#Range: 1 ~ 1000000
+	crystalDurability = 1000
+	#Range: 1 ~ 1000
+	hammerDamage = 15
+

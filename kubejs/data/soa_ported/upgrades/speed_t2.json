@@ -1,0 +1,18 @@
+{
+  "item": "tconstruct:scorched_bricks",
+  "machines": [
+    "soa_ported:alloy_decomposer"
+  ],
+  "tooltips": [
+    "Speed Tier 2 — ×0.66 recipe time",
+    "GC: modularmachinery:blockcasing@2"
+  ],
+  "modifiers": [
+    {
+      "requirement": "custommachinery:speed",
+      "mode": "input",
+      "operation": "multiplication",
+      "modifier": 0.66
+    }
+  ]
+}

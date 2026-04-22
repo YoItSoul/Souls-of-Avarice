@@ -1,4 +1,7 @@
+console.info('[soa_scripts] tb_recipes.js loading')
+
 ServerEvents.recipes(event => {
+    console.info('[soa_scripts] tb_recipes.js: registering recipes')
     event.remove({id: 'tough_beginnings:woodblock'})
     event.remove({id: 'tough_beginnings:woodblock_2'})
     
@@ -35,4 +38,5 @@ ServerEvents.recipes(event => {
             count: 1
         }
     })
+    console.info('[soa_scripts] tb_recipes.js: DONE')
 })

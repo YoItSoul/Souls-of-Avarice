@@ -1,0 +1,371 @@
+{
+  "name": "Cosmic Forge",
+  "color": 2495310,
+  "hardness": 10.0,
+  "resistance": 40.0,
+  "tooltips": [
+    "Forges cosmilite ingots using catalyst reagents. Apex tier."
+  ],
+  "components": [
+    {
+      "type": "custommachinery:item",
+      "id": "in1",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in2",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in3",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in4",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in5",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in6",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in7",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in8",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in9",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in10",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in11",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in12",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in13",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat1",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat2",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat3",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat4",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat5",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat6",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat7",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat8",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "cat9",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "out",
+      "mode": "output",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:energy",
+      "capacity": 2000000000,
+      "maxInput": 100000000,
+      "maxOutput": 0
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:background",
+      "x": 0,
+      "y": 0,
+      "width": 176,
+      "height": 166
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 8,
+      "y": 83
+    },
+    {
+      "type": "custommachinery:progress",
+      "x": 76,
+      "y": 35,
+      "width": 24,
+      "height": 17,
+      "direction": "RIGHT"
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in1",
+      "x": 8,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in2",
+      "x": 26,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in3",
+      "x": 44,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in4",
+      "x": 62,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in5",
+      "x": 8,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in6",
+      "x": 26,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in7",
+      "x": 44,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in8",
+      "x": 62,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in9",
+      "x": 8,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in10",
+      "x": 26,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in11",
+      "x": 44,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in12",
+      "x": 62,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in13",
+      "x": 8,
+      "y": 70
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat1",
+      "x": 86,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat2",
+      "x": 104,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat3",
+      "x": 122,
+      "y": 16
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat4",
+      "x": 86,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat5",
+      "x": 104,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat6",
+      "x": 122,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat7",
+      "x": 86,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat8",
+      "x": 104,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "cat9",
+      "x": 122,
+      "y": 52
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "out",
+      "x": 146,
+      "y": 34
+    },
+    {
+      "type": "custommachinery:energy",
+      "x": 160,
+      "y": 18,
+      "width": 14,
+      "height": 54
+    }
+  ],
+  "processor": {
+    "type": "custommachinery:machine"
+  }
+}

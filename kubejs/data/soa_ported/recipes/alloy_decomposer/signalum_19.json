@@ -1,0 +1,71 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:alloy_decomposer",
+  "time": 10,
+  "requirements": [
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "tconstruct:molten_signalum",
+      "amount": 72,
+      "tank": "input"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 20
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "tconstruct:molten_copper",
+      "amount": 54,
+      "tank": "out1"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "tconstruct:molten_silver",
+      "amount": 18,
+      "tank": "out2"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "tconstruct:molten_redstone",
+      "amount": 125,
+      "tank": "out3"
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

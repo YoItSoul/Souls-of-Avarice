@@ -1,0 +1,18 @@
+{
+  "item": "soa_additions:modularium_ingot",
+  "machines": [
+    "soa_ported:alloy_decomposer"
+  ],
+  "tooltips": [
+    "Speed Tier 3 — ×0.50 recipe time",
+    "GC: modularmachinery:blockcasing@3"
+  ],
+  "modifiers": [
+    {
+      "requirement": "custommachinery:speed",
+      "mode": "input",
+      "operation": "multiplication",
+      "modifier": 0.50
+    }
+  ]
+}

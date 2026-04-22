@@ -1,0 +1,128 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:liquid_centrifuge",
+  "time": 10,
+  "requirements": [
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "bloodmagic:life_essence_fluid",
+      "amount": 100,
+      "tank": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 20
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "cofh_core:experience",
+      "amount": 10,
+      "tank": "outf1"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "soa_additions:organic_fluid",
+      "amount": 10,
+      "tank": "outf2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:bone",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.04
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:raw_human_meat",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.008
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:porkchop",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.006
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:beef",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:mutton",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:chicken",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:experience_ingot",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "tconstruct:bacon",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.012
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

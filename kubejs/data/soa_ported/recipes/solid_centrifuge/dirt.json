@@ -1,0 +1,185 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:solid_centrifuge",
+  "time": 20,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:dirt",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 50
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 50,
+      "tank": "water"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:oak_sapling",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.02
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:stick",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.06
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:plant_fibre",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.15
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:poop",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.00125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "biomesoplenty:mud_ball",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:slime_ball",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.006
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:coal",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.009
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:diamond",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.0002
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:wheat_seeds",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.06
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "aquaculture:worm",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.0003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:beetroot_seeds",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:pumpkin_seeds",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.008
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:melon_seeds",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.006
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:potato",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.004
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:carrot",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:delivery_order",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.000375
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

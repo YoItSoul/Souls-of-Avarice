@@ -1,0 +1,120 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:liquid_centrifuge",
+  "time": 10,
+  "requirements": [
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "soa_additions:crude_oil",
+      "amount": 100,
+      "tank": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 20
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "thermal:petrotheum",
+      "amount": 10,
+      "tank": "outf1"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "soa_additions:refined_oil",
+      "amount": 60,
+      "tank": "outf2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:tar",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.05
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:bitumen",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.03
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:coal",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:charcoal",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:gunpowder",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:slime_ball",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.004
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mekanism:hdpe_pellet",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.003
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

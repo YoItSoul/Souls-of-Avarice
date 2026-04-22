@@ -27,6 +27,8 @@
   "cookingforblockheads:sink": null,
   "cookingforblockheads:toaster": null,
   "corpse:corpse": null,
+  "custommachinery:machine_component_provider": null,
+  "custommachinery:machine_server_data_provider": null,
   "extendedcrafting:advanced_auto_table": null,
   "extendedcrafting:advanced_table": null,
   "extendedcrafting:auto_ender_crafter": null,

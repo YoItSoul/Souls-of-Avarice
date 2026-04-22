@@ -1,0 +1,89 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:solid_centrifuge",
+  "time": 20,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "minecraft:logs",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 50
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 50,
+      "tank": "water"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:sawdust",
+      "amount": 6,
+      "slot": "out1",
+      "chance": 0.8
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:sugar_cane",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.05
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:stick",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.4
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mysticalagriculture:wood_essence",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.05
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}
