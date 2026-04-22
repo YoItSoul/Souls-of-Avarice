@@ -1,0 +1,136 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:liquid_centrifuge",
+  "time": 10,
+  "requirements": [
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 100,
+      "tank": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 20
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "tconstruct:creosote",
+      "amount": 2,
+      "tank": "outf1"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "soa_additions:seed_oil",
+      "amount": 2,
+      "tank": "outf2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:sand",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.015
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:gravel",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:cod",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:salmon",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.002
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:tropical_fish",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.0003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:pufferfish",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.0004
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:clay_ball",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.0125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mysticalagriculture:water_essence",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.0125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:lily_pad",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.0025
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

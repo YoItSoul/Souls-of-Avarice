@@ -1,4 +1,7 @@
+console.info('[soa_scripts] frostmaw_ritual_recipe.js loading')
+
 ServerEvents.recipes(event => {
+    console.info('[soa_scripts] frostmaw_ritual_recipe.js: registering recipes')
     event.recipes.summoningrituals
         .altar('minecraft:emerald_block')
         .id('kubejs:frostmaw_ritual')
@@ -22,4 +25,5 @@ ServerEvents.recipes(event => {
         .sacrificeRegion(13, 13)
         .recipeTime(300)
         .blockBelow('minecraft:packed_ice')
+    console.info('[soa_scripts] frostmaw_ritual_recipe.js: DONE')
 })

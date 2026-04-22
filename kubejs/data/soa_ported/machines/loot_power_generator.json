@@ -1,0 +1,63 @@
+{
+  "name": "Dungeon Loot Power Generator",
+  "color": 11766058,
+  "hardness": 3.0,
+  "resistance": 6.0,
+  "tooltips": [
+    "Burns dungeon loot to generate Forge Energy."
+  ],
+  "components": [
+    {
+      "type": "custommachinery:item",
+      "id": "in",
+      "mode": "input",
+      "capacity": 64,
+      "maxInput": 64,
+      "maxOutput": 64
+    },
+    {
+      "type": "custommachinery:energy",
+      "capacity": 10000000,
+      "maxInput": 0,
+      "maxOutput": 20000
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:background",
+      "x": 0,
+      "y": 0,
+      "width": 176,
+      "height": 166
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 8,
+      "y": 83
+    },
+    {
+      "type": "custommachinery:progress",
+      "x": 76,
+      "y": 35,
+      "width": 24,
+      "height": 17,
+      "direction": "RIGHT"
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in",
+      "x": 44,
+      "y": 35
+    },
+    {
+      "type": "custommachinery:energy",
+      "x": 160,
+      "y": 18,
+      "width": 14,
+      "height": 54
+    }
+  ],
+  "processor": {
+    "type": "custommachinery:machine"
+  }
+}

@@ -10,7 +10,7 @@
   "forge:ingots/iridium": "null",
   "forge:dusts/niter": "thermal:niter_dust",
   "forge:ingots/chrome": "null",
-  "forge:ingots/titanium": "null",
+  "forge:ingots/titanium": "soa_additions:titanium_ingot",
   "forge:rubber": "null",
   "forge:gems/peridot": "null"
 }

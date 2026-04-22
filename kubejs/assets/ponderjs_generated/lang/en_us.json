@@ -1,1 +1,9 @@
-{}
+{
+  "kubejs.ponder.alloy_decomposer_structure.header": "Alloy Decomposer — Structure",
+  "kubejs.ponder.alloy_decomposer_structure.text_1": "Layer 1 — Iron Block floor (3x3)",
+  "kubejs.ponder.alloy_decomposer_structure.text_2": "Layer 2 corners — Iron Block (x4)",
+  "kubejs.ponder.alloy_decomposer_structure.text_3": "Layer 2 sides — Glass windows (x3)",
+  "kubejs.ponder.alloy_decomposer_structure.text_4": "Alloy Decomposer controller (front face — right-click here)",
+  "kubejs.ponder.alloy_decomposer_structure.text_5": "Layer 3 — Iron Block roof (8 of 9)",
+  "kubejs.ponder.alloy_decomposer_structure.text_6": "Copper Block — accent (identifies this machine)"
+}

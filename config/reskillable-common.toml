@@ -76,4 +76,6 @@ enableSecondSkillPage = false
 #Maximum total number of skill levels a player can spend across all skills. Set to -1 for unlimited.
 #Range: > -1
 maxTotalSpentLevels = -1
+#Where the built-in/custom page arrows should appear. Valid: TOP, BOTTOM, LEFT, RIGHT.
+subpageNavPosition = "BOTTOM"
 

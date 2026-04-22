@@ -1,0 +1,168 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:liquid_centrifuge",
+  "time": 10,
+  "requirements": [
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:lava",
+      "amount": 100,
+      "tank": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 20
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "tconstruct:molten_iron",
+      "amount": 5,
+      "tank": "outf1"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "tconstruct:molten_gold",
+      "amount": 2,
+      "tank": "outf2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:netherrack",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.015
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:magma_cream",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:sulfur_dust",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:niter_dust",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:blaze_powder",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.0007
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:netherite_scrap",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 1e-06
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "tconstruct:jerky",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.0003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:soul_sand",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.008
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "aquaculture:cooked_tuna",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.00025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "taiga:basalt_block",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:obsidian",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.0025
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "mysticalagriculture:fire_essence",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.0125
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "aquaculture:legendary_fishing_rod",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 7.5e-05
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

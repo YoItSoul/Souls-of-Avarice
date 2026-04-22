@@ -1,0 +1,63 @@
+{
+  "name": "Exp Power Generator",
+  "color": 3843595,
+  "hardness": 3.0,
+  "resistance": 6.0,
+  "tooltips": [
+    "Burns liquid experience to generate Forge Energy."
+  ],
+  "components": [
+    {
+      "type": "custommachinery:fluid",
+      "id": "xp",
+      "capacity": 16000,
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:energy",
+      "capacity": 10000000,
+      "maxInput": 0,
+      "maxOutput": 20000
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:background",
+      "x": 0,
+      "y": 0,
+      "width": 176,
+      "height": 166
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 8,
+      "y": 83
+    },
+    {
+      "type": "custommachinery:progress",
+      "x": 76,
+      "y": 35,
+      "width": 24,
+      "height": 17,
+      "direction": "RIGHT"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "x": 20,
+      "y": 18,
+      "width": 18,
+      "height": 54,
+      "id": "xp"
+    },
+    {
+      "type": "custommachinery:energy",
+      "x": 160,
+      "y": 18,
+      "width": 14,
+      "height": 54
+    }
+  ],
+  "processor": {
+    "type": "custommachinery:machine"
+  }
+}

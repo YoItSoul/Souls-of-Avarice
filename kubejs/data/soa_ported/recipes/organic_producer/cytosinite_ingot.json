@@ -1,0 +1,64 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:organic_producer",
+  "time": 180,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:ingots/cytosinite",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 3600,
+      "tank": "water"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 270
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "output",
+      "fluid": "soa_additions:organic_fluid",
+      "amount": 3600,
+      "tank": "out"
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

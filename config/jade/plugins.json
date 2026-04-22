@@ -81,6 +81,9 @@
     "registry_name": "OFF",
     "mod_name": true
   },
+  "custommachinery": {
+    "machine_component_provider": true
+  },
   "ae2": {
     "part_icon": true,
     "charger": true,

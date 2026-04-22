@@ -99,6 +99,17 @@
         "value": 100
       }
     },
+    "tconevo:accuracy": {
+      "enabled": false,
+      "min": {
+        "default": 1,
+        "value": 1
+      },
+      "max": {
+        "default": 2,
+        "value": 2
+      }
+    },
     "soa_additions:tconevo/accuracy": {
       "enabled": false,
       "min": {

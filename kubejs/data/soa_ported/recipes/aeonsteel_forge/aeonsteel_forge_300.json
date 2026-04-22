@@ -1,0 +1,113 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:aeonsteel_forge",
+  "time": 3120,
+  "requirements": [
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 6654960
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:durasteel_ingot",
+      "amount": 1,
+      "slot": "in1"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:unstable_matrix",
+      "amount": 1,
+      "slot": "in2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "draconicevolution:draconium_ingot",
+      "amount": 1,
+      "slot": "in3"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "enderio:crude_steel_ingot",
+      "amount": 1,
+      "slot": "in4"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:cytosinite_ingot",
+      "amount": 1,
+      "slot": "in5"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:catalyst_star",
+      "amount": 1,
+      "slot": "cat1"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:rainbow_petal",
+      "amount": 1,
+      "slot": "cat2"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "thaumcraft:void_ingot",
+      "amount": 1,
+      "slot": "cat3"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "item": "soa_additions:ethaxium_ingot",
+      "amount": 1,
+      "slot": "cat4"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "soa_additions:aeonsteel_ingot",
+      "amount": 6,
+      "slot": "out"
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "type": "custommachinery:machine",
+  "machine": "soa_ported:solid_centrifuge",
+  "time": 20,
+  "requirements": [
+    {
+      "type": "custommachinery:item",
+      "mode": "input",
+      "tag": "forge:end_stones",
+      "amount": 1,
+      "slot": "in"
+    },
+    {
+      "type": "custommachinery:energy",
+      "mode": "input",
+      "amount": 50
+    },
+    {
+      "type": "custommachinery:fluid",
+      "mode": "input",
+      "fluid": "minecraft:water",
+      "amount": 50,
+      "tank": "water"
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:ender_pearl",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.007
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:purpur_block",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 0.001
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:chorus_fruit",
+      "amount": 1,
+      "slot": "out3",
+      "chance": 0.002
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:popped_chorus_fruit",
+      "amount": 1,
+      "slot": "out4",
+      "chance": 0.003
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "thermal:slag",
+      "amount": 1,
+      "slot": "out5",
+      "chance": 0.01
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "quark:biotite",
+      "amount": 1,
+      "slot": "out6",
+      "chance": 0.002
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:obsidian",
+      "amount": 1,
+      "slot": "out1",
+      "chance": 0.005
+    },
+    {
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "minecraft:elytra",
+      "amount": 1,
+      "slot": "out2",
+      "chance": 3e-06
+    },
+    {
+      "type": "custommachinery:speed",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:structure",
+      "mode": "input",
+      "action": "CHECK",
+      "pattern": [
+        [
+          "III",
+          "III",
+          "III"
+        ],
+        [
+          "I$I",
+          "G G",
+          "IGI"
+        ],
+        [
+          "III",
+          "ICI",
+          "III"
+        ]
+      ],
+      "keys": {
+        "I": "tconstruct:seared_bricks",
+        "G": "minecraft:glass",
+        "C": "tconstruct:seared_melter"
+      }
+    }
+  ]
+}

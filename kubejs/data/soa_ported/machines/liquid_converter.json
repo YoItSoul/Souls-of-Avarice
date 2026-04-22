@@ -1,0 +1,77 @@
+{
+  "name": "Liquid Converter",
+  "color": 4227296,
+  "hardness": 3.0,
+  "resistance": 6.0,
+  "tooltips": [
+    "Converts between equivalent fluids (same substance, different registrations)."
+  ],
+  "components": [
+    {
+      "type": "custommachinery:fluid",
+      "id": "in",
+      "capacity": 16000,
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "id": "out",
+      "capacity": 16000,
+      "mode": "output"
+    },
+    {
+      "type": "custommachinery:energy",
+      "capacity": 100000,
+      "maxInput": 10000,
+      "maxOutput": 0
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:background",
+      "x": 0,
+      "y": 0,
+      "width": 176,
+      "height": 166
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 8,
+      "y": 83
+    },
+    {
+      "type": "custommachinery:progress",
+      "x": 76,
+      "y": 35,
+      "width": 24,
+      "height": 17,
+      "direction": "RIGHT"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "x": 20,
+      "y": 18,
+      "width": 18,
+      "height": 54,
+      "id": "in"
+    },
+    {
+      "type": "custommachinery:fluid",
+      "x": 140,
+      "y": 18,
+      "width": 18,
+      "height": 54,
+      "id": "out"
+    },
+    {
+      "type": "custommachinery:energy",
+      "x": 160,
+      "y": 18,
+      "width": 14,
+      "height": 54
+    }
+  ],
+  "processor": {
+    "type": "custommachinery:machine"
+  }
+}
