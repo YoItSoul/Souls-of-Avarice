@@ -53,10 +53,10 @@ element {
   auto_sizing_base_screen_width = 2562
   auto_sizing_base_screen_height = 1422
   sticky_anchor = false
-  anchor_point = element
+  anchor_point = top-centered
   anchor_point_element = minecraft_logo_widget
-  x = -72
-  y = 0
+  x = -200
+  y = 30
   width = 400
   height = 100
   stretch_x = false

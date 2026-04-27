@@ -77,7 +77,7 @@ const HALVED = {
 
 ItemEvents.modification(event => {
     for (const id in HALVED) {
-        const hunger = HALVED[id]
+        let hunger = HALVED[id]
         event.modify(id, item => {
             item.foodProperties = food => food.hunger(hunger)
         })
