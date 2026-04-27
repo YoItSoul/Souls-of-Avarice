@@ -2,7 +2,7 @@
   "id": "chapter_soa",
   "title": "Souls of Avarice",
   "icon": "soa_additions:death_coin",
-  "sort_order": 15,
+  "sort_order": 20,
   "description": [
     "Souls of Avarice-specific content: new progression tracks and hunter contracts unique to the 1.20.1 port."
   ],

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/uru"
+  },
+  "material": "soa_additions:uru",
+  "needed": 9,
+  "value": 1
+}

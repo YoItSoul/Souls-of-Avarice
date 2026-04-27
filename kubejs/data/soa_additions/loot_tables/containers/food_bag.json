@@ -1,0 +1,49 @@
+{
+  "_comment": "GC port — food bag drop. GC built this from a 1211-entry foodList of OreDict + explicit items. 1.20.1 port uses forge:foods/* tag categories + select items from installed food mods (farmersdelight, create-food, nethersdelight, twilightdelight, aquaculturedelight, oceansdelight). Each draw rolls 6-14 items.",
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 6, "max": 14 },
+      "entries": [
+        { "type": "minecraft:tag", "name": "forge:foods/breads",       "weight": 6, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/cheese",       "weight": 5, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/cooked_meats", "weight": 8, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/raw_meats",    "weight": 3, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/cooked_fishes","weight": 5, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/raw_fishes",   "weight": 2, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/fruits",       "weight": 7, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/vegetables",   "weight": 7, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/soups",        "weight": 4, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/candies",      "weight": 4, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/cakes",        "weight": 2, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/pies",         "weight": 3, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/cookies",      "weight": 3, "expand": true },
+        { "type": "minecraft:tag", "name": "forge:foods/salads",       "weight": 3, "expand": true },
+
+        { "type": "minecraft:item", "name": "minecraft:bread",            "weight": 4, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_beef",      "weight": 4, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_chicken",   "weight": 4, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_porkchop",  "weight": 4, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_mutton",    "weight": 3, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_rabbit",    "weight": 3, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_cod",       "weight": 3, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_salmon",    "weight": 3, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:apple",            "weight": 5, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:carrot",           "weight": 5, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:potato",           "weight": 5, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:baked_potato",     "weight": 4, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:beetroot",         "weight": 3, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:beetroot_soup",    "weight": 2, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 1 } }] },
+        { "type": "minecraft:item", "name": "minecraft:mushroom_stew",    "weight": 2, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 1 } }] },
+        { "type": "minecraft:item", "name": "minecraft:rabbit_stew",      "weight": 2, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 1 } }] },
+        { "type": "minecraft:item", "name": "minecraft:suspicious_stew",  "weight": 1, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 1 } }] },
+        { "type": "minecraft:item", "name": "minecraft:pumpkin_pie",      "weight": 2, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 2 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cookie",           "weight": 4, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 8 } }] },
+        { "type": "minecraft:item", "name": "minecraft:honey_bottle",     "weight": 2, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 1 } }] },
+        { "type": "minecraft:item", "name": "minecraft:milk_bucket",      "weight": 1, "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 1 } }] },
+        { "type": "minecraft:item", "name": "minecraft:dried_kelp",       "weight": 3, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 12 } }] },
+        { "type": "minecraft:item", "name": "minecraft:bread",            "weight": 0 }
+      ]
+    }
+  ]
+}

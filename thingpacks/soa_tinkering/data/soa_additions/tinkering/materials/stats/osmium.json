@@ -3,7 +3,7 @@
     "tconstruct:head": {
       "durability": 500,
       "melee_attack": 5.5,
-      "mining_speed": 7.5,
+      "mining_speed": 5.625,
       "mining_tier": "minecraft:iron"
     },
     "tconstruct:handle": {

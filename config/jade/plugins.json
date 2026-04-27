@@ -194,5 +194,9 @@
     "infused_farmland": true,
     "crop": true,
     "inferium_crop": true
+  },
+  "tr": {
+    "monocle_entity_aspects": true,
+    "monocle_aspects": true
   }
 }

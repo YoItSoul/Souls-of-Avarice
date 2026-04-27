@@ -2,8 +2,10 @@
   "id": "chapter_milestones",
   "title": "Milestones",
   "icon": "minecraft:gold_block",
-  "sort_order": 130,
-  "description": "Quests for the Milestones progression path.",
+  "sort_order": 150,
+  "description": [
+    "Quests for the Milestones progression path."
+  ],
   "modes": [
     "casual",
     "adventure",

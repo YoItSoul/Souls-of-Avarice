@@ -79,6 +79,23 @@ ServerEvents.recipes(event => {
         time: 200
     })
 
+    // ---- Remaining transmutations from pure_daisy_transmutations.zs ----
+    // Each is { input: source-block, output: target-block, time: 200 }.
+    // Absent-mod entries (defiledlands/abyssalcraft/thaumcraft/biomesoplenty)
+    // skipped; only vanilla + Botania entries portable.
+    const PD = (inBlock, outItem) => event.custom({
+        type: 'botania:pure_daisy',
+        input: { type: 'block', block: inBlock },
+        output: { name: outItem },
+        time: 200
+    })
+    PD('minecraft:netherrack', 'minecraft:cobblestone')
+    PD('minecraft:end_stone',  'minecraft:cobblestone')
+    PD('minecraft:soul_sand',  'minecraft:gravel')
+    PD('botania:blaze_block',  'minecraft:obsidian')   // 1.20 Botania renamed blazeblock → blaze_block
+    PD('minecraft:gravel',     'minecraft:sand')
+    PD('minecraft:mycelium',   'minecraft:grass_block')
+
     // PureDaisy.removeRecipe(<botania:livingwood>);
     event.remove({ type: 'botania:pure_daisy', output: 'botania:livingwood_log' })
     // PureDaisy.removeRecipe(<botania:livingrock>);

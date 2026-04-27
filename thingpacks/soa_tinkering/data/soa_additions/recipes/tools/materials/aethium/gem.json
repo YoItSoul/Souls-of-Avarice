@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:gems/aethium"
+  },
+  "material": "soa_additions:aethium",
+  "needed": 1,
+  "value": 1
+}

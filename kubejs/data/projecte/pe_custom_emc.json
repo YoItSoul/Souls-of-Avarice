@@ -1,0 +1,42 @@
+{
+  "_comment": "ProjectE EMC overrides — port of GreedyCraft scripts/compat/custom_emc.zs. Books/manuals 0 EMC, endgame items capped, MA rebalance, anti-rail-printing.",
+  "values": [
+    { "item": "akashictome:tome",                       "emc": "0" },
+    { "item": "theoneprobe:probenote",                  "emc": "0" },
+    { "item": "draconicevolution:info_tablet",          "emc": "0" },
+    { "item": "ftbquests:book",                         "emc": "0" },
+    { "item": "patchouli:guide_book",                   "emc": "0" },
+    { "item": "scalinghealth:crystal_shard",            "emc": "0" },
+
+    { "item": "soa_additions:infinity_block_block_block", "emc": "9223372036854775807" },
+    { "item": "avaritia:infinity_ingot",                "emc": "2147483647" },
+    { "item": "avaritia:infinity_block",                "emc": "19327352823" },
+
+    { "item": "botania:special_flower",                 "emc": "2500" },
+    { "item": "soa_additions:poop",                     "emc": "114514" },
+    { "item": "minecraft:dragon_breath",                "emc": "0" },
+
+    { "item": "minecraft:rail",                         "emc": "0" },
+    { "item": "minecraft:activator_rail",               "emc": "0" },
+    { "item": "minecraft:powered_rail",                 "emc": "0" },
+    { "item": "minecraft:detector_rail",                "emc": "0" },
+
+    { "item": "minecraft:zombie_head",                  "emc": "1024" },
+    { "item": "minecraft:player_head",                  "emc": "1024" },
+    { "item": "minecraft:skeleton_skull",               "emc": "1024" },
+    { "item": "minecraft:wither_skeleton_skull",        "emc": "12933" },
+    { "item": "minecraft:creeper_head",                 "emc": "32" },
+
+    { "item": "mysticalagriculture:wither_skeleton_essence", "emc": "1600" },
+    { "item": "mysticalagriculture:wither_skeleton_seeds",   "emc": "4200" },
+    { "item": "mysticalagriculture:diamond_seeds",      "emc": "3000" },
+    { "item": "mysticalagriculture:emerald_seeds",      "emc": "4800" },
+    { "item": "mysticalagriculture:emerald_essence",    "emc": "0" },
+    { "item": "mysticalagriculture:diamond_essence",    "emc": "0" },
+    { "item": "mysticalagriculture:soulium_dust",       "emc": "0" },
+    { "item": "mysticalagriculture:soulium_ingot",      "emc": "0" },
+
+    { "item": "soa_additions:lucky_clover",             "emc": "0" },
+    { "item": "redstone_arsenal:flux_alloy_ingot",      "emc": "1500" }
+  ]
+}

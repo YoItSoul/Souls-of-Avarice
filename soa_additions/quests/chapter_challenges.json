@@ -2,7 +2,7 @@
   "id": "chapter_challenges",
   "title": "Challenges",
   "icon": "minecraft:diamond",
-  "sort_order": 80,
+  "sort_order": 100,
   "description": [
     "Quests for the Challenges progression path."
   ],
