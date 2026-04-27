@@ -2,7 +2,7 @@
   "id": "chapter_industrial",
   "title": "Industrial Age",
   "icon": "thermal:machine_frame",
-  "sort_order": 110,
+  "sort_order": 130,
   "description": [
     "Quests for the Industrial Age progression path."
   ],

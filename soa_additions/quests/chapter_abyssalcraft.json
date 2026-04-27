@@ -2,8 +2,10 @@
   "id": "chapter_abyssalcraft",
   "title": "AbyssalCraft",
   "icon": "minecraft:crying_obsidian",
-  "sort_order": 170,
-  "description": "Quests for the AbyssalCraft progression path.",
+  "sort_order": 190,
+  "description": [
+    "Quests for the AbyssalCraft progression path."
+  ],
   "modes": [
     "casual",
     "adventure",

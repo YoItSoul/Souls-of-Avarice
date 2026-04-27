@@ -2,7 +2,7 @@
   "id": "chapter_epilogue",
   "title": "Epilogue",
   "icon": "minecraft:nether_star",
-  "sort_order": 100,
+  "sort_order": 120,
   "description": [
     "Quests for the Epilogue progression path."
   ],

@@ -2,8 +2,10 @@
   "id": "chapter_forestry",
   "title": "Forestry",
   "icon": "minecraft:oak_sapling",
-  "sort_order": 150,
-  "description": "Quests for the Forestry progression path.",
+  "sort_order": 170,
+  "description": [
+    "Quests for the Forestry progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -52,7 +54,9 @@
       "icon": "forestry:squeezer",
       "x": 104,
       "y": 62,
-      "description": "Obtain 1× Squeezer to progress in the Forestry path.",
+      "description": [
+        "Obtain 1× Squeezer to progress in the Forestry path."
+      ],
       "dependencies": [
         "for_agricultural_basics"
       ],
@@ -254,7 +258,9 @@
       "icon": "forestry:carpenter",
       "x": 62,
       "y": 62,
-      "description": "Obtain 1× Carpenter to progress in the Forestry path.",
+      "description": [
+        "Obtain 1× Carpenter to progress in the Forestry path."
+      ],
       "dependencies": [
         "for_agricultural_basics"
       ],

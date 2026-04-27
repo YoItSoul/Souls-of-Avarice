@@ -70,20 +70,20 @@
 [meteors]
 	meteors = true
 	#Range: 0.0 ~ 1.0
-	meteorChance = 1.4E-4
+	meteorChance = 9.0E-5
 	#Range: 0.0 ~ 1.0
-	meteorChanceNight = 0.0024
+	meteorChanceNight = 5.5E-4
 	meteorGateDimension = "minecraft:the_nether"
 	#Range: 0.0 ~ 1.0
-	meteorChanceAfterGate = 2.0E-4
+	meteorChanceAfterGate = 1.8E-4
 	#Range: 0.0 ~ 1.0
-	meteorChanceAfterGateNight = 0.003
+	meteorChanceAfterGateNight = 0.0011
 	#Range: 0.0 ~ 1.0
-	meteorChanceStarShower = 0.0075
+	meteorChanceStarShower = 0.005
 	#Range: 0.0 ~ 1.0
-	meteorChanceEnd = 0.003
+	meteorChanceEnd = 0.0016
 	#Range: 1 ~ 10000
-	meteorSpawnRadius = 1000
+	meteorSpawnRadius = 256
 	#Range: 0 ~ 256
 	meteorDisallowRadius = 16
 	#Range: 1 ~ 240000

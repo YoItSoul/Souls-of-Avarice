@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:gems/erodium"
+  },
+  "material": "soa_additions:erodium",
+  "needed": 1,
+  "value": 1
+}

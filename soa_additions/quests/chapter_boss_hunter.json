@@ -2,9 +2,11 @@
   "id": "chapter_boss_hunter",
   "title": "Boss Hunter",
   "icon": "minecraft:wither_skeleton_skull",
-  "sort_order": 81,
+  "sort_order": 30,
   "description": [
-    "Bounty contracts on every boss in the pack. Higher-tier kills award larger loot crates and XP."
+    "Bounty contracts on every boss in the pack. Higher-tier kills award larger loot crates and XP.",
+    "",
+    "Quests are organized in rows by difficulty: easy at the top, legendary at the bottom."
   ],
   "modes": [
     "casual",
@@ -19,13 +21,422 @@
   "parent_chapter": "chapter_soa",
   "quests": [
     {
-      "id": "bh_elder_guardian",
-      "title": "Elder Guardian",
-      "icon": "minecraft:prismarine_shard",
+      "id": "bh_tf_naga",
+      "title": "Naga",
+      "icon": "minecraft:green_wool",
+      "shape": "square",
+      "x": 96,
+      "y": 48,
+      "description": [
+        "Defeat the Naga Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:naga",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_knight_phantom",
+      "title": "Knight Phantoms",
+      "icon": "minecraft:iron_sword",
+      "shape": "square",
       "x": 48,
       "y": 48,
       "description": [
-        "Clear an Ocean Monument by slaying all three Elder Guardians."
+        "Defeat the Knight Phantoms Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:knight_phantom",
+          "count": 3
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_aether_slider",
+      "title": "Slider",
+      "icon": "minecraft:blue_ice",
+      "shape": "square",
+      "x": 288,
+      "y": 48,
+      "description": [
+        "Defeat the Slider Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aether:slider",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_minotaur",
+      "title": "Minoshroom",
+      "icon": "minecraft:iron_axe",
+      "shape": "square",
+      "x": 240,
+      "y": 48,
+      "description": [
+        "Defeat the Minoshroom Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:minoshroom",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lkqwj",
+      "title": "Ender Guardian",
+      "icon": "cataclysm:ender_guardian_spawn_egg",
+      "shape": "square",
+      "x": 192,
+      "y": 96,
+      "description": [
+        "Defeat the Ender Guardian Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:ender_guardian",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_aq_cornelia",
+      "title": "Captain Cornelia",
+      "icon": "aquamirae:captain_cornelia_spawn_egg",
+      "shape": "square",
+      "x": 144,
+      "y": 48,
+      "description": [
+        "Defeat the Captain Cornelia Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aquamirae:captain_cornelia",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lq3ca",
+      "title": "The Harbinger",
+      "icon": "cataclysm:the_harbinger_spawn_egg",
+      "shape": "square",
+      "x": 336,
+      "y": 96,
+      "description": [
+        "Defeat the Harbinger Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:the_harbinger",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4m2sgd",
+      "title": "Scylla",
+      "icon": "cataclysm:scylla_spawn_egg",
+      "shape": "square",
+      "x": 192,
+      "y": 144,
+      "description": [
+        "Defeat the Scylla Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:scylla",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lrcip",
+      "title": "The Leviathan",
+      "icon": "cataclysm:the_leviathan_spawn_egg",
+      "shape": "square",
+      "x": 288,
+      "y": 192,
+      "description": [
+        "Defeat the Leviathan Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:the_leviathan",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4m14zb",
+      "title": "Maledictus",
+      "icon": "cataclysm:maledictus_spawn_egg",
+      "shape": "square",
+      "x": 144,
+      "y": 144,
+      "description": [
+        "Defeat the Maledictus Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:maledictus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4ltw9i",
+      "title": "Ancient Remnant",
+      "icon": "cataclysm:ancient_remnant_spawn_egg",
+      "shape": "square",
+      "x": 48,
+      "y": 144,
+      "description": [
+        "Defeat the Ancient Remnant Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:ancient_remnant",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4lypt9",
+      "title": "Ignis",
+      "icon": "cataclysm:ignis_spawn_egg",
+      "shape": "square",
+      "x": 144,
+      "y": 288,
+      "description": [
+        "Defeat the Ignis Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:ignis",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_elder_guardian",
+      "title": "Elder Guardian",
+      "icon": "minecraft:prismarine_shard",
+      "shape": "square",
+      "x": 192,
+      "y": 48,
+      "description": [
+        "Defeat the Elder Guardian Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -38,11 +449,827 @@
       "rewards": [
         {
           "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_lich",
+      "title": "Twilight Lich",
+      "icon": "minecraft:ender_pearl",
+      "shape": "square",
+      "x": 384,
+      "y": 96,
+      "description": [
+        "Defeat the Twilight Lich Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:lich",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
         },
         {
           "type": "soa_additions:xp",
-          "amount": 800
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_hydra",
+      "title": "Hydra",
+      "icon": "minecraft:blaze_rod",
+      "shape": "square",
+      "x": 96,
+      "y": 144,
+      "description": [
+        "Defeat the Hydra Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:hydra",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_ur_ghast",
+      "title": "Ur-Ghast",
+      "icon": "minecraft:ghast_tear",
+      "shape": "square",
+      "x": 336,
+      "y": 144,
+      "description": [
+        "Defeat the Ur-Ghast Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:ur_ghast",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_alpha_yeti",
+      "title": "Alpha Yeti",
+      "icon": "minecraft:snowball",
+      "shape": "square",
+      "x": 48,
+      "y": 96,
+      "description": [
+        "Defeat the Alpha Yeti Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:alpha_yeti",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_tf_snow_queen",
+      "title": "Snow Queen",
+      "icon": "minecraft:snow_block",
+      "shape": "square",
+      "x": 240,
+      "y": 144,
+      "description": [
+        "Defeat the Snow Queen Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "twilightforest:snow_queen",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_mz_ferrous",
+      "title": "Ferrous Wroughtnaut",
+      "icon": "minecraft:iron_ingot",
+      "shape": "square",
+      "x": 48,
+      "y": 192,
+      "description": [
+        "Defeat the Ferrous Wroughtnaut Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "mowziesmobs:ferrous_wroughtnaut",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_mz_frostmaw",
+      "title": "Frostmaw",
+      "icon": "minecraft:ice",
+      "shape": "square",
+      "x": 240,
+      "y": 96,
+      "description": [
+        "Defeat the Frostmaw Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "mowziesmobs:frostmaw",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4ob6rc",
+      "title": "Umvuthi, the Sunbird",
+      "icon": "mowziesmobs:umvuthi_spawn_egg",
+      "shape": "square",
+      "x": 336,
+      "y": 192,
+      "description": [
+        "Defeat the Umvuthi, the Sunbird Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "mowziesmobs:umvuthi",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4oc1i7",
+      "title": "Tongbi, the Sculptor",
+      "icon": "mowziesmobs:sculptor_spawn_egg",
+      "shape": "square",
+      "x": 288,
+      "y": 240,
+      "description": [
+        "Defeat the Tongbi, the Sculptor Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "mowziesmobs:sculptor",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_aether_sun_spirit",
+      "title": "Sun Spirit",
+      "icon": "minecraft:fire_charge",
+      "shape": "square",
+      "x": 288,
+      "y": 144,
+      "description": [
+        "Defeat the Sun Spirit Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aether:sun_spirit",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_ars_wilden_guardian",
+      "title": "Wilden Chimera",
+      "icon": "ars_nouveau:wilden_horn",
+      "shape": "square",
+      "x": 384,
+      "y": 240,
+      "description": [
+        "Defeat the Wilden Chimera Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "ars_nouveau:wilden_boss",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bomd_gauntlet",
+      "title": "Gauntlet",
+      "icon": "minecraft:iron_block",
+      "shape": "square",
+      "x": 288,
+      "y": 96,
+      "description": [
+        "Defeat the Gauntlet Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "bosses_of_mass_destruction:gauntlet",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bomd_lich",
+      "title": "Night Lich",
+      "icon": "minecraft:wither_skeleton_skull",
+      "shape": "square",
+      "x": 96,
+      "y": 192,
+      "description": [
+        "Defeat the Night Lich Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "bosses_of_mass_destruction:lich",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bomd_obsidilith",
+      "title": "Obsidilith",
+      "icon": "minecraft:crying_obsidian",
+      "shape": "square",
+      "x": 144,
+      "y": 192,
+      "description": [
+        "Defeat the Obsidilith Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "bosses_of_mass_destruction:obsidilith",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bomd_void_blossom",
+      "title": "Void Blossom",
+      "icon": "minecraft:wither_rose",
+      "shape": "square",
+      "x": 336,
+      "y": 240,
+      "description": [
+        "Defeat the Void Blossom Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "bosses_of_mass_destruction:void_blossom",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_myf_bellringer",
+      "title": "Bellringer",
+      "icon": "meetyourfight:bellringer_spawn_egg",
+      "shape": "square",
+      "x": 96,
+      "y": 96,
+      "description": [
+        "Defeat the Bellringer Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "meetyourfight:bellringer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_myf_dame_fortuna",
+      "title": "Dame Fortuna",
+      "icon": "meetyourfight:dame_fortuna_spawn_egg",
+      "shape": "square",
+      "x": 144,
+      "y": 96,
+      "description": [
+        "Defeat the Dame Fortuna Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "meetyourfight:dame_fortuna",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_myf_rosalyne",
+      "title": "Rosalyne, Blade of Dusk",
+      "icon": "meetyourfight:rosalyne_spawn_egg",
+      "shape": "square",
+      "x": 192,
+      "y": 240,
+      "description": [
+        "Defeat the Rosalyne, Blade of Dusk Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "meetyourfight:rosalyne",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_myf_swampjaw",
+      "title": "Swampjaw",
+      "icon": "meetyourfight:swampjaw_spawn_egg",
+      "shape": "square",
+      "x": 240,
+      "y": 192,
+      "description": [
+        "Defeat the Swampjaw Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "meetyourfight:swampjaw",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bs_summoner",
+      "title": "Summoner",
+      "icon": "blue_skies:summoner_spawn_egg",
+      "shape": "square",
+      "x": 192,
+      "y": 192,
+      "description": [
+        "Defeat the Summoner Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "blue_skies:summoner",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1100
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bs_alchemist",
+      "title": "Alchemist",
+      "icon": "blue_skies:alchemist_spawn_egg",
+      "shape": "square",
+      "x": 48,
+      "y": 240,
+      "description": [
+        "Defeat the Alchemist Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "blue_skies:alchemist",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bs_starlit_crusher",
+      "title": "Starlit Crusher",
+      "icon": "blue_skies:starlit_crusher_spawn_egg",
+      "shape": "square",
+      "x": 240,
+      "y": 288,
+      "description": [
+        "Defeat the Starlit Crusher Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "blue_skies:starlit_crusher",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_bs_arachnarch",
+      "title": "Arachnarch",
+      "icon": "blue_skies:arachnarch_spawn_egg",
+      "shape": "square",
+      "x": 48,
+      "y": 288,
+      "description": [
+        "Defeat the Arachnarch Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "blue_skies:arachnarch",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mo4ln2b7",
+      "title": "Netherite Monstrosity",
+      "icon": "cataclysm:netherite_monstrosity_spawn_egg",
+      "shape": "square",
+      "x": 192,
+      "y": 288,
+      "description": [
+        "Defeat the Netherite Monstrosity Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "cataclysm:netherite_monstrosity",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
         }
       ],
       "modes": [
@@ -55,10 +1282,11 @@
       "id": "bh_wither",
       "title": "The Wither",
       "icon": "minecraft:nether_star",
-      "x": 96,
-      "y": 48,
+      "shape": "square",
+      "x": 240,
+      "y": 240,
       "description": [
-        "Summon and kill the Wither."
+        "Defeat the Wither Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -88,10 +1316,11 @@
       "id": "bh_warden",
       "title": "Warden",
       "icon": "minecraft:echo_shard",
-      "x": 144,
-      "y": 48,
+      "shape": "square",
+      "x": 48,
+      "y": 336,
       "description": [
-        "Defeat the Warden in the deep dark. It does not forgive."
+        "Defeat the Warden Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -104,308 +1333,11 @@
       "rewards": [
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_ender_dragon",
-      "title": "Ender Dragon",
-      "icon": "minecraft:dragon_egg",
-      "x": 192,
-      "y": 48,
-      "description": [
-        "Slay the Ender Dragon."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "minecraft:ender_dragon",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
         },
         {
           "type": "soa_additions:xp",
-          "amount": 2500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_naga",
-      "title": "Naga",
-      "icon": "minecraft:green_wool",
-      "x": 48,
-      "y": 96,
-      "description": [
-        "Defeat the Naga in the Twilight Forest courtyard."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:naga",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_lich",
-      "title": "Twilight Lich",
-      "icon": "minecraft:ender_pearl",
-      "x": 96,
-      "y": 96,
-      "description": [
-        "Break the Lich's shield mobs and slay him in the Lich Tower."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:lich",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_minotaur",
-      "title": "Minoshroom",
-      "icon": "minecraft:iron_axe",
-      "x": 144,
-      "y": 96,
-      "description": [
-        "Defeat the Minoshroom in the Labyrinth."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:minotaur",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_hydra",
-      "title": "Hydra",
-      "icon": "minecraft:blaze_rod",
-      "x": 192,
-      "y": 96,
-      "description": [
-        "Defeat the three-headed Hydra in the Twilight Forest swamp."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:hydra",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_knight_phantom",
-      "title": "Knight Phantoms",
-      "icon": "minecraft:iron_sword",
-      "x": 240,
-      "y": 96,
-      "description": [
-        "Defeat the Knight Phantoms in the Goblin Stronghold."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:knight_phantom",
-          "count": 3
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_ur_ghast",
-      "title": "Ur-Ghast",
-      "icon": "minecraft:ghast_tear",
-      "x": 288,
-      "y": 96,
-      "description": [
-        "Defeat the Ur-Ghast atop the Dark Tower."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:ur_ghast",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_alpha_yeti",
-      "title": "Alpha Yeti",
-      "icon": "minecraft:snowball",
-      "x": 336,
-      "y": 96,
-      "description": [
-        "Defeat the Alpha Yeti in the Yeti Cave."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:alpha_yeti",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_tf_snow_queen",
-      "title": "Snow Queen",
-      "icon": "minecraft:snow_block",
-      "x": 384,
-      "y": 96,
-      "description": [
-        "Defeat the Snow Queen atop the Aurora Palace."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "twilightforest:snow_queen",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
+          "amount": 2200
         }
       ],
       "modes": [
@@ -420,10 +1352,11 @@
       "icon": "minecraft:obsidian",
       "visibility": "invisible",
       "optional": true,
-      "x": 432,
-      "y": 96,
+      "shape": "square",
+      "x": 96,
+      "y": 288,
       "description": [
-        "Conquer the final Twilight Plateau boss."
+        "Defeat the Final Twilight Plateau Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -440,403 +1373,7 @@
         },
         {
           "type": "soa_additions:xp",
-          "amount": 1500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_mz_ferrous",
-      "title": "Ferrous Wroughtnaut",
-      "icon": "minecraft:iron_ingot",
-      "x": 48,
-      "y": 144,
-      "description": [
-        "Awaken and defeat the Ferrous Wroughtnaut in his throne room."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "mowziesmobs:ferrous_wroughtnaut",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_mz_frostmaw",
-      "title": "Frostmaw",
-      "icon": "minecraft:ice",
-      "x": 96,
-      "y": 144,
-      "description": [
-        "Hunt the sleeping Frostmaw in a snowy biome."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "mowziesmobs:frostmaw",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_gauntlet",
-      "title": "Gauntlet",
-      "icon": "minecraft:iron_block",
-      "x": 48,
-      "y": 192,
-      "description": [
-        "Defeat the Gauntlet in its obsidian arena."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:gauntlet",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_lich",
-      "title": "Night Lich",
-      "icon": "minecraft:wither_skeleton_skull",
-      "x": 96,
-      "y": 192,
-      "description": [
-        "Defeat the Night Lich in his ruined tower."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:lich",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_obsidilith",
-      "title": "Obsidilith",
-      "icon": "minecraft:crying_obsidian",
-      "x": 144,
-      "y": 192,
-      "description": [
-        "Defeat the Obsidilith in the End."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:obsidilith",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_void_blossom",
-      "title": "Void Blossom",
-      "icon": "minecraft:wither_rose",
-      "x": 192,
-      "y": 192,
-      "description": [
-        "Destroy the Void Blossom growing in a deep lush cave."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:void_blossom",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_ars_wilden_guardian",
-      "title": "Wilden Guardian",
-      "icon": "minecraft:oak_sapling",
-      "x": 48,
-      "y": 240,
-      "description": [
-        "Ritual-summon and defeat the Wilden Guardian."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "ars_nouveau:wilden_guardian",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_ez_wither_witch",
-      "title": "Wither Witch",
-      "icon": "minecraft:glass_bottle",
-      "x": 144,
-      "y": 240,
-      "description": [
-        "Take down a Wither Witch."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "enderzoology:wither_witch",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 200
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_sm_kingghast",
-      "title": "King Ghast",
-      "icon": "minecraft:ghast_tear",
-      "x": 192,
-      "y": 240,
-      "description": [
-        "Slay a King Ghast in the Nether."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "specialmobs:kingghast",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 200
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_sm_queenghast",
-      "title": "Queen Ghast",
-      "icon": "minecraft:ghast_tear",
-      "x": 240,
-      "y": 240,
-      "description": [
-        "Slay a Queen Ghast in the Nether."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "specialmobs:queenghast",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 200
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_aether_slider",
-      "title": "Slider",
-      "icon": "minecraft:blue_ice",
-      "x": 48,
-      "y": 288,
-      "description": [
-        "Defeat the Slider in the Bronze Dungeon."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "aether:slider",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_aether_sun_spirit",
-      "title": "Sun Spirit",
-      "icon": "minecraft:fire_charge",
-      "x": 96,
-      "y": 288,
-      "description": [
-        "Defeat the Sun Spirit in the Gold Dungeon."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "aether:sun_spirit",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
+          "amount": 1800
         }
       ],
       "modes": [
@@ -849,10 +1386,11 @@
       "id": "bh_aether_valkyrie",
       "title": "Valkyrie Queen",
       "icon": "minecraft:golden_sword",
-      "x": 144,
+      "shape": "square",
+      "x": 288,
       "y": 288,
       "description": [
-        "Challenge and defeat the Valkyrie Queen in the Silver Dungeon."
+        "Defeat the Valkyrie Queen Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -869,7 +1407,7 @@
         },
         {
           "type": "soa_additions:xp",
-          "amount": 1500
+          "amount": 1800
         }
       ],
       "modes": [
@@ -882,10 +1420,11 @@
       "id": "bh_botania_gaia",
       "title": "Gaia Guardian",
       "icon": "minecraft:player_head",
-      "x": 48,
-      "y": 336,
+      "shape": "square",
+      "x": 432,
+      "y": 240,
       "description": [
-        "Summon and defeat the Gaia Guardian atop the Beacon ritual."
+        "Defeat the Gaia Guardian Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -912,23 +1451,88 @@
       ]
     },
     {
-      "id": "bh_botania_gaia_ii",
-      "title": "Gaia Guardian II",
-      "icon": "botania:dice",
+      "id": "bh_de_aether_eots",
+      "title": "Eye of the Storm",
+      "icon": "minecraft:lightning_rod",
+      "shape": "square",
       "x": 96,
-      "y": 336,
+      "y": 240,
       "description": [
-        "Summon the Hard Mode Gaia Guardian (the Mythic Botany-enhanced fight) using four Gaia Pylons and defeat it.",
-        "",
-        "Turn in a Dice of Fate — it only drops from the hardmode fight."
+        "Defeat the Eye of the Storm Boss."
       ],
-      "dependencies": [
-        "bh_botania_gaia"
-      ],
+      "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "botania:dice",
+          "type": "soa_additions:kill",
+          "entity": "deep_aether:eots_controller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_aq_maze_mother",
+      "title": "Mother of the Maze",
+      "icon": "aquamirae:maze_mother_spawn_egg",
+      "shape": "square",
+      "x": 144,
+      "y": 240,
+      "description": [
+        "Defeat the Mother of the Maze Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "aquamirae:maze_mother",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bh_ender_dragon",
+      "title": "Ender Dragon",
+      "icon": "minecraft:dragon_egg",
+      "shape": "square",
+      "x": 144,
+      "y": 336,
+      "description": [
+        "Defeat the Ender Dragon Boss."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "minecraft:ender_dragon",
           "count": 1
         }
       ],
@@ -952,10 +1556,11 @@
       "id": "bh_de_chaos_guardian",
       "title": "Chaos Guardian",
       "icon": "draconicevolution:chaos_shard",
-      "x": 240,
-      "y": 48,
+      "shape": "square",
+      "x": 96,
+      "y": 336,
       "description": [
-        "Slay the Chaos Guardian in the outer End islands — the final hunt."
+        "Defeat the Chaos Guardian Boss."
       ],
       "dependencies": [],
       "tasks": [
@@ -982,175 +1587,35 @@
       ]
     },
     {
-      "id": "quest_mo4lkqwj",
-      "title": "Ender Guardian",
-      "icon": "minecraft:paper",
-      "x": 352,
-      "y": 368,
-      "description": [
-        "500"
-      ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4ln2b7",
-      "title": "Netherite Monstronsity",
-      "icon": "minecraft:paper",
-      "x": 352,
-      "y": 208,
-      "description": [
-        "901"
-      ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4lq3ca",
-      "title": "The Harbriner",
-      "icon": "minecraft:paper",
-      "x": 352,
+      "id": "bh_botania_gaia_ii",
+      "title": "Gaia Guardian II",
+      "icon": "botania:dice",
+      "shape": "square",
+      "x": 432,
       "y": 336,
       "description": [
-        "506"
+        "Defeat the Hardmode Gaia Guardian Boss."
       ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4lrcip",
-      "title": "The Leviathan",
-      "icon": "minecraft:paper",
-      "x": 352,
-      "y": 304,
-      "description": [
-        "601"
+      "dependencies": [
+        "bh_botania_gaia"
       ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4ltw9i",
-      "title": "Ancient Remnant",
-      "icon": "minecraft:paper",
-      "x": 320,
-      "y": 224,
-      "description": [
-        "677"
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:dice",
+          "count": 1
+        }
       ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4lypt9",
-      "title": "Inis",
-      "icon": "minecraft:paper",
-      "x": 384,
-      "y": 224,
-      "description": [
-        "677"
+      "rewards": [
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        }
       ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4m14zb",
-      "title": "Maledictus",
-      "icon": "minecraft:paper",
-      "x": 352,
-      "y": 240,
-      "description": [
-        "632"
-      ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4m2sgd",
-      "title": "Scylla",
-      "icon": "minecraft:paper",
-      "x": 352,
-      "y": 272,
-      "description": [
-        "587"
-      ],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4ob6rc",
-      "title": "Umvuthi, the Sunbird",
-      "icon": "minecraft:paper",
-      "x": 144,
-      "y": 144,
-      "description": [],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4oc1i7",
-      "title": "Tongbi, the Sculptor",
-      "icon": "minecraft:paper",
-      "x": 192,
-      "y": 144,
-      "description": [],
-      "dependencies": [],
-      "tasks": [],
-      "rewards": [],
       "modes": [
         "casual",
         "adventure",

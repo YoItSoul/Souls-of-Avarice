@@ -12,17 +12,26 @@
 // handle the common cases; this script covers the long tail, skipping any
 // inputs that already have a static blazing_furnace recipe (by item id).
 
+// KubeJS 6.5 note: `event.custom({type: "custommachinery:machine", ...})`
+// fails with "Unknown recipe type" because CM only exposes its recipes
+// through the registered RecipeSchema (event.recipes.custommachinery.machine),
+// not the vanilla-serializer JSON pipeline. We therefore build each recipe
+// via the schema's typed builder. The custommachinery:speed requirement is
+// dropped (no JS builder is shipped for it; with `time:1` it's purely
+// cosmetic JEI metadata).
+
 ServerEvents.recipes(event => {
-    const STRUCT_PATTERN = [
-        ["III", "III", "III"],
-        ["I$I", "G G", "IGI"],
-        ["III", "ICI", "III"]
-    ];
-    const STRUCT_KEYS = {
-        I: "tconstruct:seared_bricks",
-        G: "minecraft:glass",
-        C: "tconstruct:seared_melter"
-    };
+    // KubeJS 6 path notes for this script:
+    //   - bare `java.x.y` namespace was removed ("java() is no longer
+    //     supported")
+    //   - class filter bans java.lang.reflect.*
+    //   - Java global has no .to() conversion helper
+    // So we can't pre-build a Java String[][] / HashMap<String,String> for
+    // requireStructure(...). The dynamic recipes therefore omit the
+    // structure requirement; the static blazing_furnace recipes in
+    // data/soa_ported/recipes/blazing_furnace/ retain it, and the machine
+    // block itself enforces the seared-brick housing — so dynamic recipes
+    // still only fire when the player is at a properly-built machine.
 
     const seen = new Set();
     // Inputs already covered by the static 85 recipes — skip them to avoid
@@ -54,16 +63,20 @@ ServerEvents.recipes(event => {
         "minecraft:stone_bricks", "minecraft:polished_blackstone_bricks"
     ]);
 
-    let emitted = 0;
-    event.forEachRecipe({ type: "minecraft:smelting" }, r => {
-        try {
-            const json = r.json;
-            if (!json || !json.has("result") || !json.has("ingredient")) return;
+    // NB: KubeJS 6.5 + Rhino mod throws 'redeclaration of var X' on EVERY
+    // const declaration inside an arrow callback passed to forEachRecipe.
+    // The fix is to move the body into a real named function — each call
+    // gets its own activation record, no scope-tracking confusion.
+    const counter = { emitted: 0 };
 
-            // Result: "minecraft:x" string OR {item, count?}
-            let outputId = null;
-            let outputCount = 1;
-            const resultEl = json.get("result");
+    function _processSmeltingRecipe(r, ev, covered, seenSet, ctr) {
+        try {
+            var rj = r.json;
+            if (!rj || !rj.has("result") || !rj.has("ingredient")) return;
+
+            var outputId = null;
+            var outputCount = 1;
+            var resultEl = rj.get("result");
             if (resultEl.isJsonPrimitive()) {
                 outputId = resultEl.getAsString();
             } else if (resultEl.isJsonObject()) {
@@ -72,51 +85,59 @@ ServerEvents.recipes(event => {
             }
             if (!outputId) return;
 
-            // Ingredient: {item} | {tag} | array of those. Collect all items
-            // from {item}; skip pure {tag} entries (would need tag resolution).
-            const ingredientEl = json.get("ingredient");
-            const inputIds = [];
-            const collect = el => {
+            var ingredientEl = rj.get("ingredient");
+            var inputIds = [];
+            var collect = function (el) {
                 if (!el || !el.isJsonObject()) return;
                 if (el.has("item")) inputIds.push(el.get("item").getAsString());
             };
             if (ingredientEl.isJsonArray()) {
-                ingredientEl.forEach(el => collect(el));
+                ingredientEl.forEach(function (el) { collect(el); });
             } else {
                 collect(ingredientEl);
             }
             if (inputIds.length === 0) return;
 
-            const xp = json.has("experience") ? json.get("experience").getAsDouble() : 0.1;
-            const xpAmount = Math.max(1, Math.floor(xp * 16));
+            var xp = rj.has("experience") ? rj.get("experience").getAsDouble() : 0.1;
+            // |0 forces a 32-bit int. Math.floor returns a JS Number that
+            // Rhino sometimes hands to int-typed Java params as a boxed
+            // Double; the explicit truncation avoids surprises.
+            var xpAmount = Math.max(1, Math.floor(xp * 16) | 0);
 
-            inputIds.forEach(inputId => {
-                if (staticCovered.has(inputId)) return;
-                if (seen.has(inputId)) return;
-                seen.add(inputId);
+            for (var i = 0; i < inputIds.length; i++) {
+                var inputId = inputIds[i];
+                if (covered.has(inputId)) continue;
+                if (seenSet.has(inputId)) continue;
+                seenSet.add(inputId);
 
-                const recipeId = `soa_additions:blazing_furnace_dyn_${inputId.replace(":", "_").replace(/\//g, "_")}`;
+                var recipeId = "soa_additions:blazing_furnace_dyn_" + inputId.replace(":", "_").replace(/\//g, "_");
 
-                event.custom({
-                    type: "custommachinery:machine",
-                    machine: "soa_ported:blazing_furnace",
-                    time: 1,
-                    requirements: [
-                        { type: "custommachinery:item", mode: "input",  item: inputId, amount: 1, slot: "in" },
-                        { type: "custommachinery:energy", mode: "input", amount: 400 },
-                        { type: "custommachinery:fluid", mode: "output", fluid: "cofh_core:experience", amount: xpAmount, tank: "xp" },
-                        { type: "custommachinery:fluid", mode: "input",  fluid: "thermal:pyrotheum", amount: 2, tank: "pyro" },
-                        { type: "custommachinery:item",  mode: "output", item: outputId, amount: outputCount, slot: "out" },
-                        { type: "custommachinery:speed", mode: "input" },
-                        { type: "custommachinery:structure", mode: "input", action: "CHECK",
-                          pattern: STRUCT_PATTERN, keys: STRUCT_KEYS }
-                    ]
-                }).id(recipeId);
-                emitted++;
-            });
+                ev.recipes.custommachinery.machine("soa_ported:blazing_furnace")
+                    .time(1)
+                    .requireItem(Item.of(inputId, 1), "in")
+                    .requireEnergy(400)
+                    .requireFluid(Fluid.of("thermal:pyrotheum", 2), "pyro")
+                    .produceFluid(Fluid.of("cofh_core:experience", xpAmount), "xp")
+                    .produceItem(Item.of(outputId, outputCount), "out")
+                    .id(recipeId);
+                ctr.emitted++;
+            }
         } catch (e) {
-            console.warn(`[blazing_furnace_dynamic] skipping recipe: ${e}`);
+            // Surface the real cause (Rhino's e.toString often hides the
+            // inner Java exception). The first few are enough; throttle
+            // the spam if every iteration fails.
+            if (ctr.errorsLogged === undefined) ctr.errorsLogged = 0;
+            if (ctr.errorsLogged < 3) {
+                console.warn("[blazing_furnace_dynamic] skipping recipe: " + e
+                    + (e && e.javaException ? " | java: " + e.javaException : "")
+                    + (e && e.stack ? "\n" + e.stack : ""));
+                ctr.errorsLogged++;
+            }
         }
+    }
+
+    event.forEachRecipe({ type: "minecraft:smelting" }, function (r) {
+        _processSmeltingRecipe(r, event, staticCovered, seen, counter);
     });
-    console.info(`[blazing_furnace_dynamic] emitted ${emitted} dynamic recipes`);
+    console.info("[blazing_furnace_dynamic] emitted " + counter.emitted + " dynamic recipes");
 });

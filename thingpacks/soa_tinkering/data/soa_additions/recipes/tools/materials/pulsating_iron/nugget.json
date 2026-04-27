@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/pulsating_iron"
+  },
+  "material": "soa_additions:pulsating_iron",
+  "needed": 9,
+  "value": 1
+}

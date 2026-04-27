@@ -129,6 +129,8 @@
   "supplementaries:present": null,
   "supplementaries:safe": null,
   "theurgy:mercury_flux": null,
+  "tr:monocle_aspects": null,
+  "tr:monocle_entity_aspects": null,
   "twilightforest:quest_ram_wool": null,
   "waystones:waystone": null
 }

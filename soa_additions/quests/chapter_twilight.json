@@ -2,8 +2,10 @@
   "id": "chapter_twilight",
   "title": "Twilight Forest",
   "icon": "twilightforest:twilight_portal_miniature_structure",
-  "sort_order": 60,
-  "description": "Quests for the Twilight Forest progression path.",
+  "sort_order": 80,
+  "description": [
+    "Quests for the Twilight Forest progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -46,6 +48,10 @@
           "type": "soa_additions:item",
           "item": "minecraft:poppy",
           "count": 12
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "twilight_forest"
         }
       ],
       "modes": [
@@ -616,6 +622,38 @@
         {
           "type": "soa_additions:command",
           "command": "/advancement grant @p only twilightforest:progress_troll"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_mof48kke",
+      "title": "Restore Stage",
+      "icon": "soa_additions:guide_book",
+      "optional": true,
+      "x": 0,
+      "y": 144,
+      "repeatable": true,
+      "description": [
+        "Sometimes thigns get weird when claiming stages, here's a way to reclaim the stage if it bugged out."
+      ],
+      "dependencies": [
+        "tf_twilight_gem"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Restore my stage please!"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "twilight_forest"
         }
       ],
       "modes": [

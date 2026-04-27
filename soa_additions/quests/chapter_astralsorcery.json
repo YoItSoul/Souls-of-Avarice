@@ -2,8 +2,10 @@
   "id": "chapter_astralsorcery",
   "title": "Astral Sorcery",
   "icon": "minecraft:ender_eye",
-  "sort_order": 140,
-  "description": "Quests for the Astral Sorcery progression path.",
+  "sort_order": 160,
+  "description": [
+    "Quests for the Astral Sorcery progression path."
+  ],
   "modes": [
     "casual",
     "adventure",
@@ -577,7 +579,9 @@
       "icon": "astralsorcery:blockprism",
       "x": 480,
       "y": 128,
-      "description": "Obtain 1× Blockprism to progress in the Astral Sorcery path.",
+      "description": [
+        "Obtain 1× Blockprism to progress in the Astral Sorcery path."
+      ],
       "dependencies": [
         "ast_star_infusing"
       ],
@@ -681,7 +685,9 @@
       "icon": "soa_additions:arcane_crystal_ball",
       "x": 416,
       "y": 320,
-      "description": "Obtain 1× Arcane Crystal Ball to progress in the Astral Sorcery path.",
+      "description": [
+        "Obtain 1× Arcane Crystal Ball to progress in the Astral Sorcery path."
+      ],
       "dependencies": [
         "ast_ultimate_altar"
       ],

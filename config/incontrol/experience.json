@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "dimension": "minecraft:overworld",
+        "minheight": 50,
+        "hostile": true,
+        "multxp": 0.5
+    }
+]

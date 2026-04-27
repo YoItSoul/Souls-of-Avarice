@@ -2,7 +2,7 @@
   "id": "chapter_botania",
   "title": "Botania",
   "icon": "botania:rune_mana",
-  "sort_order": 50,
+  "sort_order": 70,
   "description": [
     "Quests for the Botania progression path."
   ],

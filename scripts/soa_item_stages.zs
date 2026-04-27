@@ -1,179 +1,150 @@
 // ============================================================
-// SoA Item Stages - Ported from GreedyCraft
-// Generated: 2026-04-13 | Updated: 2026-04-15
-// Only includes VERIFIED items and standard forge tags.
-// Items from uninstalled mods are omitted. 1.20.1 mod ID
-// equivalents used where GreedyCraft targeted 1.12 variants.
-// Pickup interception handled by GreedyBag item (soa_additions).
+// SoA Item Stages - Re-ported from GreedyCraft items.zs
+// Source: D:/Minecraft/Instances/GreedyCraft/scripts/gamestages/items.zs
+// Generated: 2026-04-26 (regen via /tmp/port_gc_stages.py)
 //
-// Note: GreedyCraft's addModId() blanket mod-gating doesn't exist
-// in ItemStages for 1.20.1; equivalent coverage is achieved by
-// gating the key items from each mod individually below.
+// Translation rules:
+//   <ore:X>            -> <tag:items:forge:Y> (camelCase -> snake_case)
+//   additions:greedycraft-* -> soa_additions:*
+//   additions:tcsponsors-*  -> tcsponsors:*
+//   cyclicmagic:*           -> cyclic:*
+//   thermal{foundation,expansion,innovation,cultivation}:* -> thermal:*
+//   appliedenergistics2:*   -> ae2:*
+//   {extrabotany,botanicadds}:* -> mythicbotany:*
+//   {thaumicwonders,thaumictinkerer}:* -> thaumcraft:*
+//   {nyx,thaumadditions,tconevo,bloodarsenal,plustic}:* -> soa_additions:*
+//   tconstruct:tooltables:N -> tconstruct:crafting_station / part_builder /
+//                              part_chest / tinkers_anvil / tinkers_chest /
+//                              tinkers_gadgetry
+//   danknull:dank_null_N -> dankstorage:dank_N
+//   eternalsingularity:eternal_singularity -> avaritia:eternal_singularity
+//   solarflux:solar_panel_infinity -> solarflux:sp_avaritia.infinity
+//   hooked:hook:3/4 -> rehooked:diamond_hook / ender_hook
+//   .withTag({...}) and trailing :meta variants stripped (1.20.1 merged)
+//
+// Lines prefixed `// OMIT_MOD` reference items whose mod is not bundled
+// with SoA. Kept commented for traceability and future enabling.
+//
+// Pickup interception handled by GreedyBag item (soa_additions).
 // ============================================================
 
 import mods.itemstages.ItemStages;
 
+
 // === abyssal_conquerer ===
-// SoA Additions mirion (no forge tag registered)
-ItemStages.restrict(<item:soa_additions:mirion_ingot>, "abyssal_conquerer");
-ItemStages.restrict(<tag:items:forge:nether_stars>, "abyssal_conquerer");
 ItemStages.restrict(<item:soa_additions:north_star>, "abyssal_conquerer");
+ItemStages.restrict(<tag:items:forge:nether_stars>, "abyssal_conquerer");
+ItemStages.restrict(<item:minecraft:wither_skeleton_skull>, "abyssal_conquerer");
+ItemStages.restrict(<tag:items:forge:ingots/mirion>, "abyssal_conquerer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/mirion>, "abyssal_conquerer");
 
 // === awakened ===
-ItemStages.restrict(<item:avaritia:neutron_compressor>, "awakened");
-ItemStages.restrict(<item:draconicevolution:chaos_shard>, "awakened");
-ItemStages.restrict(<tag:items:forge:dusts/draconium_awakened>, "awakened");
-ItemStages.restrict(<tag:items:forge:ingots/draconium_awakened>, "awakened");
-ItemStages.restrict(<tag:items:forge:nuggets/draconium_awakened>, "awakened");
-ItemStages.restrict(<tag:items:forge:storage_blocks/draconium_awakened>, "awakened");
-// SoA Additions custom alloys (no forge item-tags registered — restrict items directly)
-ItemStages.restrict(<item:soa_additions:chromasteel_ingot>, "awakened");
-ItemStages.restrict(<item:soa_additions:protonium_ingot>, "awakened");
-ItemStages.restrict(<item:soa_additions:terra_alloy_ingot>, "awakened");
-ItemStages.restrict(<item:soa_additions:titanium_ingot>, "awakened");
-ItemStages.restrict(<item:soa_additions:titanium_nugget>, "awakened");
-ItemStages.restrict(<item:mysticalagriculture:titanium_essence>, "awakened");
-ItemStages.restrict(<item:mysticalagriculture:titanium_seeds>, "awakened");
+ItemStages.restrict(<item:tconstruct:rod_cast>, "awakened");
+ItemStages.restrict(<tag:items:forge:ingots/draconic_metal>, "awakened");
+ItemStages.restrict(<tag:items:forge:storage_blocks/draconic_metal>, "awakened");
+ItemStages.restrict(<tag:items:forge:nuggets/draconic_metal>, "awakened");
+ItemStages.restrict(<tag:items:forge:dusts/draconic_metal>, "awakened");
+ItemStages.restrict(<tag:items:forge:nuggets/titanium>, "awakened");
+ItemStages.restrict(<tag:items:forge:ingots/titanium>, "awakened");
+ItemStages.restrict(<tag:items:forge:ores/titanium>, "awakened");
+ItemStages.restrict(<tag:items:forge:dusts/titanium>, "awakened");
+ItemStages.restrict(<tag:items:forge:storage_blocks/titanium>, "awakened");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:chicken_ring>, "awakened");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:angel_ring>, "awakened");
 ItemStages.restrict(<item:inventorypets:pet_cloud>, "awakened");
+// BAD_ID (item not registered: cyclic:glowing_chorus_fruit): ItemStages.restrict(<item:cyclic:glowing_chorus_fruit>, "awakened");
+// OMIT_MOD (mod missing: toolprogression): ItemStages.restrict(<item:toolprogression:magic_mushroom>, "awakened");
+ItemStages.restrict(<tag:items:forge:storage_blocks/terra_alloy>, "awakened");
+ItemStages.restrict(<tag:items:forge:ingots/terra_alloy>, "awakened");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:laser_relay_item>, "awakened");
 ItemStages.restrict(<item:magicfeather:magic_feather>, "awakened");
-// Draconic Evolution draconic tier tools/armor (uses awakened_draconium)
-ItemStages.restrict(<item:draconicevolution:draconic_axe>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_bow>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_pickaxe>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_shovel>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_hoe>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_sword>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_chestpiece>, "awakened");
-ItemStages.restrict(<item:draconicevolution:draconic_capacitor>, "awakened");
-// Draconic Additions draconic harness/necklace
-ItemStages.restrict(<item:draconicadditions:draconic_harness>, "awakened");
-ItemStages.restrict(<item:draconicadditions:draconic_necklace>, "awakened");
+// EMPTY_TAG (empty tag: forge:bedrock): ItemStages.restrict(<tag:items:forge:bedrock>, "awakened");
+ItemStages.restrict(<tag:items:forge:ingots/protonium>, "awakened");
+ItemStages.restrict(<tag:items:forge:storage_blocks/protonium>, "awakened");
+// OMIT_MOD (mod missing: modularmachinery): ItemStages.restrict(<item:modularmachinery:blockcasing_creative>, "awakened");
+ItemStages.restrict(<tag:items:forge:ingots/chromasteel>, "awakened");
+ItemStages.restrict(<tag:items:forge:storage_blocks/chromasteel>, "awakened");
+// OMIT_MOD (mod missing: openmodularturrets): ItemStages.restrict(<item:openmodularturrets:turret_base>, "awakened");
 
 // === challenger_a ===
-ItemStages.restrict(<tag:items:forge:dusts/inferium>, "challenger_a");
-ItemStages.restrict(<tag:items:forge:gems/inferium>, "challenger_a");
+// EMPTY_TAG (empty tag: forge:seeds/tier_1): ItemStages.restrict(<tag:items:forge:seeds/tier_1>, "challenger_a");
+ItemStages.restrict(<tag:items:forge:essences/inferium>, "challenger_a");
 ItemStages.restrict(<tag:items:forge:ingots/inferium>, "challenger_a");
-ItemStages.restrict(<tag:items:forge:nuggets/inferium>, "challenger_a");
-ItemStages.restrict(<tag:items:forge:ores/inferium>, "challenger_a");
-ItemStages.restrict(<tag:items:forge:storage_blocks/inferium>, "challenger_a");
 ItemStages.restrict(<item:tinymobfarm:stone_farm>, "challenger_a");
 
 // === challenger_b ===
-ItemStages.restrict(<tag:items:forge:gems/prudentium>, "challenger_b");
+// EMPTY_TAG (empty tag: forge:seeds/tier_2): ItemStages.restrict(<tag:items:forge:seeds/tier_2>, "challenger_b");
+ItemStages.restrict(<tag:items:forge:essences/prudentium>, "challenger_b");
 ItemStages.restrict(<tag:items:forge:ingots/prudentium>, "challenger_b");
-ItemStages.restrict(<tag:items:forge:nuggets/prudentium>, "challenger_b");
-ItemStages.restrict(<tag:items:forge:storage_blocks/prudentium>, "challenger_b");
 ItemStages.restrict(<item:tinymobfarm:iron_farm>, "challenger_b");
 
 // === challenger_c ===
+// EMPTY_TAG (empty tag: forge:seeds/tier_3): ItemStages.restrict(<tag:items:forge:seeds/tier_3>, "challenger_c");
+ItemStages.restrict(<tag:items:forge:essences/intermedium>, "challenger_c");
+ItemStages.restrict(<tag:items:forge:ingots/intermedium>, "challenger_c");
 ItemStages.restrict(<item:tinymobfarm:gold_farm>, "challenger_c");
 
 // === challenger_d ===
+// EMPTY_TAG (empty tag: forge:seeds/tier_4): ItemStages.restrict(<tag:items:forge:seeds/tier_4>, "challenger_d");
+ItemStages.restrict(<tag:items:forge:essences/superium>, "challenger_d");
+ItemStages.restrict(<tag:items:forge:ingots/superium>, "challenger_d");
 ItemStages.restrict(<item:tinymobfarm:diamond_farm>, "challenger_d");
 
 // === challenger_e ===
-ItemStages.restrict(<tag:items:forge:gems/awakened_supremium>, "challenger_e");
-ItemStages.restrict(<tag:items:forge:gems/supremium>, "challenger_e");
-ItemStages.restrict(<tag:items:forge:ingots/awakened_supremium>, "challenger_e");
+// EMPTY_TAG (empty tag: forge:seeds/tier_5): ItemStages.restrict(<tag:items:forge:seeds/tier_5>, "challenger_e");
+ItemStages.restrict(<tag:items:forge:essences/supremium>, "challenger_e");
 ItemStages.restrict(<tag:items:forge:ingots/supremium>, "challenger_e");
-ItemStages.restrict(<tag:items:forge:nuggets/awakened_supremium>, "challenger_e");
-ItemStages.restrict(<tag:items:forge:nuggets/supremium>, "challenger_e");
-ItemStages.restrict(<tag:items:forge:storage_blocks/awakened_supremium>, "challenger_e");
-ItemStages.restrict(<tag:items:forge:storage_blocks/supremium>, "challenger_e");
 ItemStages.restrict(<item:tinymobfarm:emerald_farm>, "challenger_e");
 
 // === challenger_f ===
-ItemStages.restrict(<tag:items:forge:gems/insanium>, "challenger_f");
+ItemStages.restrict(<tag:items:forge:essences/insanium>, "challenger_f");
 ItemStages.restrict(<tag:items:forge:ingots/insanium>, "challenger_f");
-ItemStages.restrict(<tag:items:forge:nuggets/insanium>, "challenger_f");
-ItemStages.restrict(<tag:items:forge:storage_blocks/insanium>, "challenger_f");
 ItemStages.restrict(<item:tinymobfarm:inferno_farm>, "challenger_f");
 
 // === challenger_g ===
+// EMPTY_TAG (empty tag: forge:seeds/tier_6): ItemStages.restrict(<tag:items:forge:seeds/tier_6>, "challenger_g");
 ItemStages.restrict(<item:tinymobfarm:ultimate_farm>, "challenger_g");
 
 // === chaotic ===
-// SoA Additions custom chaotic-tier material
-ItemStages.restrict(<item:soa_additions:cosmilite_ingot>, "chaotic");
-ItemStages.restrict(<item:avaritia:eternal_singularity>, "chaotic");
+ItemStages.restrict(<tag:items:forge:ingots/chaotic_metal>, "chaotic");
+ItemStages.restrict(<tag:items:forge:storage_blocks/chaotic_metal>, "chaotic");
+ItemStages.restrict(<tag:items:forge:nuggets/chaotic_metal>, "chaotic");
+ItemStages.restrict(<tag:items:forge:dusts/chaotic_metal>, "chaotic");
+ItemStages.restrict(<tag:items:forge:ingots/cosmilite>, "chaotic");
+ItemStages.restrict(<tag:items:forge:storage_blocks/cosmilite>, "chaotic");
 ItemStages.restrict(<item:soa_additions:flux_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:mana_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:experience_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:matter_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:anti_entropy_matter>, "chaotic");
-// Draconic Evolution chaotic tier tools/armor/machines
-ItemStages.restrict(<item:draconicevolution:chaotic_axe>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_bow>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_pickaxe>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_shovel>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_hoe>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_staff>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_sword>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_chestpiece>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_capacitor>, "chaotic");
-ItemStages.restrict(<item:draconicevolution:chaotic_crafting_injector>, "chaotic");
-// Draconic Additions chaos machinery & gear
-ItemStages.restrict(<item:draconicadditions:chaos_heart>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaos_crystalizer>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaos_extractor>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaos_infuser>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaos_liquifier>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaos_container>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaotic_harness>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:chaotic_necklace>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:item_stable_chaos>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:item_semi_stable_chaos>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:item_unstable_chaos>, "chaotic");
-ItemStages.restrict(<item:draconicadditions:item_chaos_injector>, "chaotic");
-// Packaged Avaritia sculk-tier auto crafter
-ItemStages.restrict(<item:packagedavaritia:sculk_crafter>, "chaotic");
+ItemStages.restrict(<item:solarflux:sp_avaritia.infinity>, "chaotic");
+ItemStages.restrict(<item:avaritia:eternal_singularity>, "chaotic");
 
 // === chaotic_dominator ===
-ItemStages.restrict(<item:draconicevolution:chaotic_core>, "chaotic_dominator");
+ItemStages.restrict(<item:soa_additions:death_coin>, "chaotic_dominator");
+// BAD_ID (item not registered: scalinghealth:difficultychanger): ItemStages.restrict(<item:scalinghealth:difficultychanger>, "chaotic_dominator");
+ItemStages.restrict(<item:soa_additions:difficulty_changer>, "chaotic_dominator");
+// BAD_ID (item not registered: avaritia:infinitato): ItemStages.restrict(<item:avaritia:infinitato>, "chaotic_dominator");
 ItemStages.restrict(<item:draconicevolution:chaotic_energy_core>, "chaotic_dominator");
-// NOTE: these items require BOTH chaotic_dominator AND wielder_of_infinity
-ItemStages.restrict(<item:soa_additions:death_coin>, "chaotic_dominator", "wielder_of_infinity");
-ItemStages.restrict(<item:soa_additions:difficulty_changer>, "chaotic_dominator", "wielder_of_infinity");
 
 // === descendant_of_the_sun ===
+ItemStages.restrict(<tag:items:forge:ingots/infernium>, "descendant_of_the_sun");
+ItemStages.restrict(<tag:items:forge:nuggets/infernium>, "descendant_of_the_sun");
+ItemStages.restrict(<tag:items:forge:storage_blocks/infernium>, "descendant_of_the_sun");
+// EMPTY_TAG (empty tag: forge:dusts/infernium): ItemStages.restrict(<tag:items:forge:dusts/infernium>, "descendant_of_the_sun");
 ItemStages.restrict(<item:soa_additions:infernium_ingot>, "descendant_of_the_sun");
+ItemStages.restrict(<item:soa_additions:infernium_block>, "descendant_of_the_sun");
 ItemStages.restrict(<item:soa_additions:infernium_nugget>, "descendant_of_the_sun");
 ItemStages.restrict(<item:soa_additions:infernium_ore_block>, "descendant_of_the_sun");
-ItemStages.restrict(<item:draconicevolution:awakened_core>, "descendant_of_the_sun");
 
 // === ender_charm ===
-ItemStages.restrict(<tag:items:forge:end_stones>, "ender_charm");
-ItemStages.restrict(<item:minecraft:end_portal_frame>, "ender_charm");
 ItemStages.restrict(<item:minecraft:end_rod>, "ender_charm");
 ItemStages.restrict(<item:minecraft:end_stone_bricks>, "ender_charm");
-// End Remastered eyes & ancient portal frame (End access gating)
-ItemStages.restrict(<item:endrem:wither_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:nether_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:witch_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:corrupted_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:cursed_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:undead_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:undead_soul>, "ender_charm");
-ItemStages.restrict(<item:endrem:evil_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:cold_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:old_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:exotic_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:lost_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:guardian_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:rogue_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:black_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:magical_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:cryptic_eye>, "ender_charm");
-ItemStages.restrict(<item:endrem:ancient_portal_frame>, "ender_charm");
-ItemStages.restrict(<item:endrem:witch_pupil>, "ender_charm");
-// ReHooked top-tier hooks & chains (ender teleport / creative flight)
+ItemStages.restrict(<item:minecraft:end_portal_frame>, "ender_charm");
+ItemStages.restrict(<item:prefab:item_ender_gateway>, "ender_charm");
+// EMPTY_TAG (empty tag: forge:endstone): ItemStages.restrict(<tag:items:forge:endstone>, "ender_charm");
+// EMPTY_TAG (empty tag: forge:crop_chorusfruit): ItemStages.restrict(<tag:items:forge:crop_chorusfruit>, "ender_charm");
 ItemStages.restrict(<item:rehooked:ender_hook>, "ender_charm");
-ItemStages.restrict(<item:rehooked:ender_chain>, "ender_charm");
-ItemStages.restrict(<item:rehooked:red_hook>, "ender_charm");
-// RFTools Power endergenic chain (requires ender pearls / End-tier timing setup)
-ItemStages.restrict(<item:rftoolspower:endergenic>, "ender_charm");
-ItemStages.restrict(<item:rftoolspower:ender_monitor>, "ender_charm");
-ItemStages.restrict(<item:rftoolspower:pearl_injector>, "ender_charm");
 
 // === expert ===
 ItemStages.restrict(<item:soa_additions:fake_philosopher_stone>, "expert");
@@ -183,710 +154,566 @@ ItemStages.restrict(<item:soa_additions:adrenaline>, "expert");
 ItemStages.restrict(<item:soa_additions:shield_gum>, "expert");
 ItemStages.restrict(<item:soa_additions:goodie_bag>, "expert");
 
+// === fearless_man ===
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:dreadkey>, "fearless_man");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:gatewaykeydl>, "fearless_man");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:dreadshard>, "fearless_man");
+ItemStages.restrict(<tag:items:forge:ingots/dreadium>, "fearless_man");
+
 // === fusion_matrix ===
-ItemStages.restrict(<tag:items:forge:dusts/draconium>, "fusion_matrix");
-ItemStages.restrict(<tag:items:forge:ingots/draconium>, "fusion_matrix");
-ItemStages.restrict(<tag:items:forge:nuggets/draconium>, "fusion_matrix");
-ItemStages.restrict(<tag:items:forge:ores/draconium>, "fusion_matrix");
-ItemStages.restrict(<tag:items:forge:storage_blocks/draconium>, "fusion_matrix");
-// SoA Additions electronium (custom fusion-tier alloy)
-ItemStages.restrict(<item:soa_additions:electronium_ingot>, "fusion_matrix");
 ItemStages.restrict(<item:soa_additions:beast_hand>, "fusion_matrix");
-// Draconic Evolution cores & crafting injector (fusion crafting gate)
-ItemStages.restrict(<item:draconicevolution:draconic_energy_core>, "fusion_matrix");
-ItemStages.restrict(<item:draconicevolution:wyvern_core>, "fusion_matrix");
-ItemStages.restrict(<item:draconicevolution:awakened_crafting_injector>, "fusion_matrix");
-// Mystical Agriculture draconium essence
-ItemStages.restrict(<item:mysticalagriculture:draconium_essence>, "fusion_matrix");
-ItemStages.restrict(<item:mysticalagriculture:awakened_draconium_essence>, "fusion_matrix");
-// Packaged Draconic auto-crafter for fusion recipes
-ItemStages.restrict(<item:packageddraconic:fusion_crafter>, "fusion_matrix");
+// OMIT_MOD (mod missing: zensummoning): ItemStages.restrict(<item:zensummoning:altar>, "fusion_matrix");
+ItemStages.restrict(<tag:items:forge:ores/draconium>, "fusion_matrix");
+ItemStages.restrict(<tag:items:forge:ingots/draconium>, "fusion_matrix");
+ItemStages.restrict(<tag:items:forge:dusts/draconium>, "fusion_matrix");
+ItemStages.restrict(<tag:items:forge:storage_blocks/draconium>, "fusion_matrix");
+ItemStages.restrict(<tag:items:forge:ingots/electronium>, "fusion_matrix");
+ItemStages.restrict(<tag:items:forge:storage_blocks/electronium>, "fusion_matrix");
+ItemStages.restrict(<item:soa_additions:fusion_matrix_ingot>, "fusion_matrix");
+ItemStages.restrict(<item:soa_additions:fusion_matrix_block>, "fusion_matrix");
 
 // === getting_started ===
-ItemStages.restrict(<tag:items:forge:chests>, "getting_started");
-ItemStages.restrict(<tag:items:forge:cobblestone>, "getting_started");
-ItemStages.restrict(<tag:items:forge:dusts/gold>, "getting_started");
-ItemStages.restrict(<tag:items:forge:dusts/iron>, "getting_started");
-ItemStages.restrict(<tag:items:forge:ingots/gold>, "getting_started");
-ItemStages.restrict(<tag:items:forge:ingots/iron>, "getting_started");
-ItemStages.restrict(<tag:items:forge:nuggets/gold>, "getting_started");
-ItemStages.restrict(<tag:items:forge:nuggets/iron>, "getting_started");
-ItemStages.restrict(<tag:items:forge:storage_blocks/gold>, "getting_started");
-ItemStages.restrict(<tag:items:forge:storage_blocks/iron>, "getting_started");
 ItemStages.restrict(<tag:items:forge:workbenches>, "getting_started");
-// Explicit vanilla fallbacks — forge:workbenches / forge:chests may not
-// include vanilla items reliably on all packs; restrict them directly.
-ItemStages.restrict(<item:minecraft:crafting_table>, "getting_started");
-ItemStages.restrict(<item:minecraft:chest>, "getting_started");
-ItemStages.restrict(<item:minecraft:trapped_chest>, "getting_started");
 ItemStages.restrict(<tag:items:minecraft:planks>, "getting_started");
-ItemStages.restrict(<item:minecraft:diamond_axe>, "getting_started");
-ItemStages.restrict(<item:minecraft:diamond_pickaxe>, "getting_started");
-ItemStages.restrict(<item:minecraft:golden_axe>, "getting_started");
-ItemStages.restrict(<item:minecraft:golden_pickaxe>, "getting_started");
-ItemStages.restrict(<item:minecraft:iron_axe>, "getting_started");
-ItemStages.restrict(<item:minecraft:iron_pickaxe>, "getting_started");
-ItemStages.restrict(<item:minecraft:stone_axe>, "getting_started");
-ItemStages.restrict(<item:minecraft:stone_pickaxe>, "getting_started");
-ItemStages.restrict(<item:minecraft:wooden_axe>, "getting_started");
+ItemStages.restrict(<tag:items:forge:chests>, "getting_started");
 ItemStages.restrict(<item:minecraft:wooden_pickaxe>, "getting_started");
-// Tinkers' Construct tool tables/stations (was <tconstruct:tooltables:*> in GC)
+ItemStages.restrict(<item:minecraft:stone_pickaxe>, "getting_started");
+ItemStages.restrict(<item:minecraft:diamond_pickaxe>, "getting_started");
+ItemStages.restrict(<item:minecraft:golden_pickaxe>, "getting_started");
+ItemStages.restrict(<item:minecraft:iron_pickaxe>, "getting_started");
+ItemStages.restrict(<item:minecraft:wooden_axe>, "getting_started");
+ItemStages.restrict(<item:minecraft:stone_axe>, "getting_started");
+ItemStages.restrict(<item:minecraft:diamond_axe>, "getting_started");
+ItemStages.restrict(<item:minecraft:golden_axe>, "getting_started");
+ItemStages.restrict(<item:minecraft:iron_axe>, "getting_started");
+ItemStages.restrict(<tag:items:forge:cobblestone>, "getting_started");
 ItemStages.restrict(<item:tconstruct:crafting_station>, "getting_started");
-ItemStages.restrict(<item:tconstruct:part_builder>, "getting_started");
 ItemStages.restrict(<item:tconstruct:part_chest>, "getting_started");
+// OMIT_MOD (mod missing: conarm): ItemStages.restrict(<item:conarm:armorstation>, "getting_started");
+ItemStages.restrict(<item:tconstruct:part_builder>, "getting_started");
+ItemStages.restrict(<item:tconstruct:tinkers_gadgetry>, "getting_started");
 ItemStages.restrict(<item:tconstruct:tinkers_anvil>, "getting_started");
 ItemStages.restrict(<item:tconstruct:tinkers_chest>, "getting_started");
-ItemStages.restrict(<item:tconstruct:tinkers_gadgetry>, "getting_started");
+ItemStages.restrict(<tag:items:forge:ingots/iron>, "getting_started");
+ItemStages.restrict(<tag:items:forge:ingots/gold>, "getting_started");
+ItemStages.restrict(<tag:items:forge:nuggets/iron>, "getting_started");
+ItemStages.restrict(<tag:items:forge:nuggets/gold>, "getting_started");
+ItemStages.restrict(<tag:items:forge:dusts/iron>, "getting_started");
+ItemStages.restrict(<tag:items:forge:dusts/gold>, "getting_started");
+ItemStages.restrict(<tag:items:forge:storage_blocks/iron>, "getting_started");
+ItemStages.restrict(<tag:items:forge:storage_blocks/gold>, "getting_started");
 
 // === graduated ===
-ItemStages.restrict(<item:botania:creative_pool>, "graduated");
-ItemStages.restrict(<item:chancecubes:creative_pendant>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_energy>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_passive_generator>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_destruction_wand>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_builders_wand>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_harvest>, "graduated");
 ItemStages.restrict(<item:draconicevolution:creative_capacitor>, "graduated");
-ItemStages.restrict(<item:draconicevolution:creative_op_capacitor>, "graduated");
-ItemStages.restrict(<item:projecte:tome>, "graduated");
-ItemStages.restrict(<item:projecte:watch_of_flowing_time>, "graduated");
-ItemStages.restrict(<item:storagedrawers:creative_storage_upgrade>, "graduated");
-ItemStages.restrict(<item:soa_additions:ocd_certificate>, "graduated");
-ItemStages.restrict(<item:ae2wtlib:wireless_universal_terminal>, "graduated");
-// AE2 creative cells
-ItemStages.restrict(<item:ae2:creative_energy_cell>, "graduated");
-ItemStages.restrict(<item:ae2:creative_fluid_cell>, "graduated");
-ItemStages.restrict(<item:ae2:creative_item_cell>, "graduated");
-// Mekanism creative storage
-ItemStages.restrict(<item:mekanism:creative_bin>, "graduated");
-ItemStages.restrict(<item:mekanism:creative_chemical_tank>, "graduated");
-ItemStages.restrict(<item:mekanism:creative_energy_cube>, "graduated");
-ItemStages.restrict(<item:mekanism:creative_fluid_tank>, "graduated");
-// Create creative blocks
-ItemStages.restrict(<item:create:creative_crate>, "graduated");
-ItemStages.restrict(<item:create:creative_motor>, "graduated");
-ItemStages.restrict(<item:create:creative_fluid_tank>, "graduated");
-ItemStages.restrict(<item:create:creative_blaze_cake>, "graduated");
-// Applied Flux high-capacity FE storage cells (top tiers)
-ItemStages.restrict(<item:appflux:fe_16m_cell>, "graduated");
-ItemStages.restrict(<item:appflux:fe_16m_portable_cell>, "graduated");
-ItemStages.restrict(<item:appflux:fe_64m_cell>, "graduated");
-ItemStages.restrict(<item:appflux:fe_64m_portable_cell>, "graduated");
-ItemStages.restrict(<item:appflux:fe_256m_cell>, "graduated");
-ItemStages.restrict(<item:appflux:fe_256m_portable_cell>, "graduated");
-// NOTE: creative_controller requires BOTH graduated AND wielder_of_infinity
-ItemStages.restrict(<item:soa_additions:creative_controller>, "graduated", "wielder_of_infinity");
-// Dank Storage graduated tier (matches GC dank_null_6 gate)
+// BAD_ID (item not registered: ae2:creative_storage_cell): ItemStages.restrict(<item:ae2:creative_storage_cell>, "graduated");
+ItemStages.restrict(<item:thermal:watering_can>, "graduated");
+// BAD_ID (item not registered: thermal:injector_creative): ItemStages.restrict(<item:thermal:injector_creative>, "graduated");
+ItemStages.restrict(<item:botania:creative_pool>, "graduated");
+ItemStages.restrict(<item:mysticalagradditions:creative_essence>, "graduated");
+ItemStages.restrict(<item:soa_additions:creative_controller>, "graduated");
 ItemStages.restrict(<item:dankstorage:dank_6>, "graduated");
-ItemStages.restrict(<item:dankstorage:5_to_6>, "graduated");
-// RFTools Power creative dimensional cell
-ItemStages.restrict(<item:rftoolspower:dimensionalcell_creative>, "graduated");
+ItemStages.restrict(<item:projecte:watch_of_flowing_time>, "graduated");
+ItemStages.restrict(<item:projecte:tome>, "graduated");
+// BAD_ID (item not registered: thermal:upgrade_creative): ItemStages.restrict(<item:thermal:upgrade_creative>, "graduated");
+ItemStages.restrict(<item:chancecubes:creative_pendant>, "graduated");
+ItemStages.restrict(<item:ae2wtlib:wireless_universal_terminal>, "graduated");
+ItemStages.restrict(<item:storagedrawers:creative_storage_upgrade>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_spike>, "graduated");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_chest>, "graduated");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:creative_essentia_jar>, "graduated");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:creative_player_interface>, "graduated");
+// BAD_ID (item not registered: draconicevolution:creative_exchanger): ItemStages.restrict(<item:draconicevolution:creative_exchanger>, "graduated");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:spectrecoil_genesis>, "graduated");
+ItemStages.restrict(<item:soa_additions:ocd_certificate>, "graduated");
 
 // === hardmode ===
-// Ethaxium (soa_additions) — only ingot & storage_block tags register
-ItemStages.restrict(<tag:items:forge:ingots/ethaxium>, "hardmode");
-ItemStages.restrict(<tag:items:forge:storage_blocks/ethaxium>, "hardmode");
-// SoA Additions custom hardmode alloys (no forge tags registered)
-ItemStages.restrict(<item:soa_additions:cryonium_ingot>, "hardmode");
-ItemStages.restrict(<item:soa_additions:cytosinite_ingot>, "hardmode");
-ItemStages.restrict(<item:soa_additions:shadowium_ingot>, "hardmode");
-// SoA Additions gems (amber, malachite, peridot, tanzanite, topaz — no forge tags)
-ItemStages.restrict(<item:soa_additions:amber>, "hardmode");
-ItemStages.restrict(<item:soa_additions:malachite>, "hardmode");
-ItemStages.restrict(<item:soa_additions:peridot>, "hardmode");
-ItemStages.restrict(<item:soa_additions:tanzanite>, "hardmode");
-ItemStages.restrict(<item:soa_additions:topaz>, "hardmode");
-// Gem ores that exist as item tags in SoA
-ItemStages.restrict(<tag:items:forge:ores/ruby>, "hardmode");
-ItemStages.restrict(<tag:items:forge:ores/sapphire>, "hardmode");
-// Mystical Agriculture peridot essences/seeds
-ItemStages.restrict(<item:mysticalagriculture:peridot_essence>, "hardmode");
-ItemStages.restrict(<item:mysticalagriculture:peridot_seeds>, "hardmode");
-ItemStages.restrict(<item:minecraft:dragon_egg>, "hardmode");
-ItemStages.restrict(<item:minecraft:elytra>, "hardmode");
+ItemStages.restrict(<tag:items:forge:essences/tier6>, "hardmode");
 ItemStages.restrict(<item:minecraft:popped_chorus_fruit>, "hardmode");
+// BAD_ID (item not registered: tconstruct:materials): ItemStages.restrict(<item:tconstruct:materials>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_booster>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_placer>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantomface>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_energyface>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_liquiface>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_redstoneface>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:item_disenchanting_lens>, "hardmode");
 ItemStages.restrict(<item:soa_additions:forbidden_bible>, "hardmode");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:machine>, "hardmode");
+// BAD_ID (item not registered: mythicbotany:bottledflame): ItemStages.restrict(<item:mythicbotany:bottledflame>, "hardmode");
 ItemStages.restrict(<item:soa_additions:true_blood_sigil>, "hardmode");
 ItemStages.restrict(<item:soa_additions:ordinary_medal>, "hardmode");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:gatewaykeyjzh>, "hardmode");
+ItemStages.restrict(<item:minecraft:dragon_egg>, "hardmode");
 ItemStages.restrict(<item:soa_additions:medkit_super>, "hardmode");
 ItemStages.restrict(<item:soa_additions:wither_soul>, "hardmode");
 ItemStages.restrict(<item:soa_additions:dragon_soul>, "hardmode");
-ItemStages.restrict(<item:soa_additions:creative_shard>, "hardmode");
-ItemStages.restrict(<item:soa_additions:glider>, "hardmode");
-// SoA Additions osgloglas (plustic material successor)
-ItemStages.restrict(<item:soa_additions:osgloglas_ingot>, "hardmode");
-// Cataclysm ignitium set (blaze-king / late-nether boss gear)
-ItemStages.restrict(<item:cataclysm:ignitium_ingot>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_block>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_helmet>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_chestplate>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_leggings>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_boots>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_elytra_chestplate>, "hardmode");
-ItemStages.restrict(<item:cataclysm:ignitium_upgrade_smithing_template>, "hardmode");
-ItemStages.restrict(<item:cataclysm:monstrous_horn>, "hardmode");
-ItemStages.restrict(<item:cataclysm:monstrous_eye>, "hardmode");
-ItemStages.restrict(<item:cataclysm:monstrous_helm>, "hardmode");
-ItemStages.restrict(<item:cataclysm:infernal_forge>, "hardmode");
-// Twilight Forest post-boss gear (knightmetal, yeti, scepters, fiery top tier)
-ItemStages.restrict(<item:twilightforest:knightmetal_ingot>, "hardmode");
-ItemStages.restrict(<item:twilightforest:knightmetal_block>, "hardmode");
-ItemStages.restrict(<item:twilightforest:knightmetal_axe>, "hardmode");
-ItemStages.restrict(<item:twilightforest:knightmetal_sword>, "hardmode");
-ItemStages.restrict(<item:twilightforest:knightmetal_pickaxe>, "hardmode");
-ItemStages.restrict(<item:twilightforest:knightmetal_shield>, "hardmode");
-ItemStages.restrict(<item:twilightforest:alpha_yeti_fur>, "hardmode");
-ItemStages.restrict(<item:twilightforest:yeti_helmet>, "hardmode");
-ItemStages.restrict(<item:twilightforest:yeti_chestplate>, "hardmode");
-ItemStages.restrict(<item:twilightforest:yeti_leggings>, "hardmode");
-ItemStages.restrict(<item:twilightforest:yeti_boots>, "hardmode");
-ItemStages.restrict(<item:twilightforest:alpha_yeti_boss_spawner>, "hardmode");
-ItemStages.restrict(<item:twilightforest:knight_phantom_boss_spawner>, "hardmode");
 ItemStages.restrict(<item:twilightforest:fortification_scepter>, "hardmode");
-ItemStages.restrict(<item:twilightforest:lifedrain_scepter>, "hardmode");
-ItemStages.restrict(<item:twilightforest:twilight_scepter>, "hardmode");
-ItemStages.restrict(<item:twilightforest:zombie_scepter>, "hardmode");
-ItemStages.restrict(<item:twilightforest:mazebreaker_pickaxe>, "hardmode");
-ItemStages.restrict(<item:twilightforest:diamond_minotaur_axe>, "hardmode");
-ItemStages.restrict(<item:twilightforest:giant_pickaxe>, "hardmode");
-ItemStages.restrict(<item:twilightforest:giant_sword>, "hardmode");
-ItemStages.restrict(<item:twilightforest:hydra_chop>, "hardmode");
-ItemStages.restrict(<item:twilightforest:lamp_of_cinders>, "hardmode");
-ItemStages.restrict(<item:twilightforest:moonworm_queen>, "hardmode");
-ItemStages.restrict(<item:twilightforest:block_and_chain>, "hardmode");
-ItemStages.restrict(<item:twilightforest:glass_sword>, "hardmode");
+// BAD_ID (item not registered: soa_additions:material): ItemStages.restrict(<item:soa_additions:material>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/fusion_matrix>, "hardmode");
+ItemStages.restrict(<item:soa_additions:creative_shard>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ingots/cryonium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/cryonium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ores/cryonium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:dusts/cryonium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:nuggets/cryonium>, "hardmode");
+// BAD_ID (item not registered: soa_additions:osgloglasingot): ItemStages.restrict(<item:soa_additions:osgloglasingot>, "hardmode");
+ItemStages.restrict(<item:minecraft:elytra>, "hardmode");
+// OMIT_MOD (mod missing: colytra): ItemStages.restrict(<item:colytra:elytra_bauble>, "hardmode");
+// BAD_ID (item not registered: soa_additions:osmiridiumingot): ItemStages.restrict(<item:soa_additions:osmiridiumingot>, "hardmode");
+// BAD_ID (item not registered: biomesoplenty:gem): ItemStages.restrict(<item:biomesoplenty:gem>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ingots/cytosinite>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/cytosinite>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ores/cytosinite>, "hardmode");
+// EMPTY_TAG (empty tag: forge:nuggets/cytosinite): ItemStages.restrict(<tag:items:forge:nuggets/cytosinite>, "hardmode");
+ItemStages.restrict(<tag:items:forge:dusts/cytosinite>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ingots/shadowium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/shadowium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:nuggets/shadowium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:dusts/shadowium>, "hardmode");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:teleporter>, "hardmode");
+// OMIT_MOD (mod missing: openblocks): ItemStages.restrict(<item:openblocks:hang_glider>, "hardmode");
+ItemStages.restrict(<item:minecraft:enchanted_book>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:item_tele_staff>, "hardmode");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_misc>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ores/ruby>, "hardmode");
+// EMPTY_TAG (empty tag: forge:ores/peridot): ItemStages.restrict(<tag:items:forge:ores/peridot>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ores/topaz>, "hardmode");
+// EMPTY_TAG (empty tag: forge:ores/tanzanite): ItemStages.restrict(<tag:items:forge:ores/tanzanite>, "hardmode");
+// EMPTY_TAG (empty tag: forge:ores/malachite): ItemStages.restrict(<tag:items:forge:ores/malachite>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ores/sapphire>, "hardmode");
+// EMPTY_TAG (empty tag: forge:ores/amber): ItemStages.restrict(<tag:items:forge:ores/amber>, "hardmode");
+ItemStages.restrict(<item:soa_additions:terrestrial_artifact>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/ethaxium>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ingots/ethaxium>, "hardmode");
+// EMPTY_TAG (empty tag: forge:nuggets/ethaxium): ItemStages.restrict(<tag:items:forge:nuggets/ethaxium>, "hardmode");
+// EMPTY_TAG (empty tag: forge:ingots/ethaxium_brick): ItemStages.restrict(<tag:items:forge:ingots/ethaxium_brick>, "hardmode");
+// EMPTY_TAG (empty tag: forge:gems/ender_biotite): ItemStages.restrict(<tag:items:forge:gems/ender_biotite>, "hardmode");
+// OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:swordkinu>, "hardmode");
+// OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:swordmomen>, "hardmode");
+// OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:swordsolid>, "hardmode");
+// OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:swordmetal>, "hardmode");
+// OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:sworddiamond>, "hardmode");
+// OMIT_MOD (mod missing: netherex): ItemStages.restrict(<item:netherex:amethyst_ore>, "hardmode");
+// OMIT_MOD (mod missing: netherex): ItemStages.restrict(<item:netherex:amethyst_crystal>, "hardmode");
+// OMIT_MOD (mod missing: netherex): ItemStages.restrict(<item:netherex:amethyst_block>, "hardmode");
+// OMIT_MOD (mod missing: modularmachinery): ItemStages.restrict(<item:modularmachinery:blockcasing>, "hardmode");
+ItemStages.restrict(<tag:items:forge:ingots/aeonsteel>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/aeonsteel>, "hardmode");
+// OMIT_MOD (mod missing: openmodularturrets): ItemStages.restrict(<item:openmodularturrets:turret_base>, "hardmode");
 
 // === master_engineer ===
-ItemStages.restrict(<item:cyclic:user>, "master_engineer");
-ItemStages.restrict(<item:cyclic:miner>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_directional_breaker>, "master_engineer");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:quarry>, "master_engineer");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:quarryproxy>, "master_engineer");
+// EMPTY_TAG (empty tag: forge:alloy_ultimate): ItemStages.restrict(<tag:items:forge:alloy_ultimate>, "master_engineer");
+// EMPTY_TAG (empty tag: forge:circuit_ultimate): ItemStages.restrict(<tag:items:forge:circuit_ultimate>, "master_engineer");
 ItemStages.restrict(<item:solarflux:sp_8>, "master_engineer");
-ItemStages.restrict(<item:solarflux:sp_avaritia.neutronium>, "master_engineer");
-ItemStages.restrict(<item:solarflux:sp_de.chaotic>, "master_engineer");
-ItemStages.restrict(<item:solarflux:sp_de.draconic>, "master_engineer");
+// BAD_ID (item not registered: enderio:block_killer_joe): ItemStages.restrict(<item:enderio:block_killer_joe>, "master_engineer");
+ItemStages.restrict(<item:cyclic:user>, "master_engineer");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:animation_tablet>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_miner>, "master_engineer");
 ItemStages.restrict(<item:solarflux:sp_de.wyvern>, "master_engineer");
-// Mekanism late-game automation / generation
-ItemStages.restrict(<item:mekanism:antiprotonic_nucleosynthesizer>, "master_engineer");
-ItemStages.restrict(<item:mekanism:dimensional_stabilizer>, "master_engineer");
-ItemStages.restrict(<item:mekanism:atomic_disassembler>, "master_engineer");
-ItemStages.restrict(<item:mekanismgenerators:fusion_reactor_controller>, "master_engineer");
-ItemStages.restrict(<item:mekanismgenerators:fusion_reactor_frame>, "master_engineer");
-ItemStages.restrict(<item:mekanismgenerators:fusion_reactor_logic_adapter>, "master_engineer");
-ItemStages.restrict(<item:mekanismgenerators:fusion_reactor_port>, "master_engineer");
-// Packaged Avaritia nether-tier auto crafter (late-game automation)
-ItemStages.restrict(<item:packagedavaritia:nether_crafter>, "master_engineer");
+ItemStages.restrict(<item:solarflux:sp_de.draconic>, "master_engineer");
+ItemStages.restrict(<item:solarflux:sp_de.chaotic>, "master_engineer");
+ItemStages.restrict(<item:solarflux:sp_avaritia.neutronium>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_breaker>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_breaker>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_fluid_placer>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_dropper>, "master_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_fluid_collector>, "master_engineer");
+// OMIT_MOD (mod missing: rftools): ItemStages.restrict(<item:rftools:shield_block3>, "master_engineer");
+// OMIT_MOD (mod missing: rftools): ItemStages.restrict(<item:rftools:shield_block4>, "master_engineer");
 
 // === master_wizard ===
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:primordial_pearl>, "master_wizard");
 ItemStages.restrict(<item:soa_additions:purifying_pill>, "master_wizard");
 ItemStages.restrict(<item:soa_additions:energy_matter_core>, "master_wizard");
-// Mythic Botany greatest rings (top-tier rings)
-ItemStages.restrict(<item:mythicbotany:andwari_ring>, "master_wizard");
-ItemStages.restrict(<item:mythicbotany:cursed_andwari_ring>, "master_wizard");
-ItemStages.restrict(<item:mythicbotany:aura_ring_greatest>, "master_wizard");
-ItemStages.restrict(<item:mythicbotany:mana_ring_greatest>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:plate>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:ingot>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:void_seed>, "master_wizard");
+ItemStages.restrict(<tag:items:forge:ingots/primordial>, "master_wizard");
+ItemStages.restrict(<tag:items:forge:storage_blocks/primordial>, "master_wizard");
+ItemStages.restrict(<tag:items:forge:nuggets/primordial>, "master_wizard");
+ItemStages.restrict(<tag:items:forge:dusts/primordial>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:causality_collapser>, "master_wizard");
+ItemStages.restrict(<item:soa_additions:mithrillium_ingot>, "master_wizard");
+ItemStages.restrict(<item:soa_additions:adaminite_ingot>, "master_wizard");
+ItemStages.restrict(<item:soa_additions:mithminite_ingot>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:mithrillium_plate): ItemStages.restrict(<item:soa_additions:mithrillium_plate>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:adaminite_plate): ItemStages.restrict(<item:soa_additions:adaminite_plate>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:mithminite_plate): ItemStages.restrict(<item:soa_additions:mithminite_plate>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:void_beacon>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:coalescence_matrix_precursor>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:meaty_orb>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:mithrillium_nugget): ItemStages.restrict(<item:soa_additions:mithrillium_nugget>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:adaminite_nugget): ItemStages.restrict(<item:soa_additions:adaminite_nugget>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:mithminite_nugget): ItemStages.restrict(<item:soa_additions:mithminite_nugget>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:mithminite_smelter): ItemStages.restrict(<item:soa_additions:mithminite_smelter>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:adaminite_smelter): ItemStages.restrict(<item:soa_additions:adaminite_smelter>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:mithrillium_smelter): ItemStages.restrict(<item:soa_additions:mithrillium_smelter>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:void_anvil): ItemStages.restrict(<item:soa_additions:void_anvil>, "master_wizard");
+// BAD_ID (item not registered: soa_additions:shadow_enchanter): ItemStages.restrict(<item:soa_additions:shadow_enchanter>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:flux_capacitor>, "master_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:coalescence_matrix>, "master_wizard");
 
 // === nether ===
-// Meteor & Ravaging (item tags present)
-ItemStages.restrict(<tag:items:forge:ingots/meteor>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/meteor>, "nether");
-ItemStages.restrict(<tag:items:forge:ingots/ravaging>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/ravaging>, "nether");
-// SoA Additions custom nether-tier alloys (no forge tags registered)
-ItemStages.restrict(<item:soa_additions:aeroite_ingot>, "nether");
-ItemStages.restrict(<item:soa_additions:aqualite_ingot>, "nether");
-ItemStages.restrict(<item:soa_additions:asgardium_ingot>, "nether");
-ItemStages.restrict(<item:soa_additions:durasteel_ingot>, "nether");
-ItemStages.restrict(<item:soa_additions:gaiasteel_ingot>, "nether");
-// Active tags
-ItemStages.restrict(<tag:items:forge:bones/wither>, "nether");
-ItemStages.restrict(<tag:items:forge:wither_bones>, "nether");
-ItemStages.restrict(<tag:items:forge:dusts/cobalt>, "nether");
-ItemStages.restrict(<tag:items:forge:dusts/fluix>, "nether");
-ItemStages.restrict(<tag:items:forge:dusts/glowstone>, "nether");
-ItemStages.restrict(<tag:items:forge:dusts/lumium>, "nether");
-ItemStages.restrict(<tag:items:forge:dusts/netherite>, "nether");
-ItemStages.restrict(<tag:items:forge:dusts/quartz>, "nether");
-ItemStages.restrict(<tag:items:forge:gears/lumium>, "nether");
+ItemStages.restrict(<item:mythicbotany:mana_infuser>, "nether");
+// BAD_ID (item not registered: mythicbotany:terra_catalyst): ItemStages.restrict(<item:mythicbotany:terra_catalyst>, "nether");
+// BAD_ID (item not registered: mythicbotany:gaia_shard): ItemStages.restrict(<item:mythicbotany:gaia_shard>, "nether");
+// OMIT_MOD (mod missing: threng): ItemStages.restrict(<item:threng:material>, "nether");
+// BAD_ID (item not registered: ae2:material): ItemStages.restrict(<item:ae2:material>, "nether");
 ItemStages.restrict(<tag:items:forge:gems/fluix>, "nether");
-ItemStages.restrict(<tag:items:forge:gems/quartz>, "nether");
-ItemStages.restrict(<tag:items:forge:ingots/cobalt>, "nether");
-ItemStages.restrict(<tag:items:forge:ingots/lumium>, "nether");
-ItemStages.restrict(<tag:items:forge:ingots/netherite>, "nether");
-ItemStages.restrict(<tag:items:forge:ingots/netherite_scrap>, "nether");
-ItemStages.restrict(<tag:items:forge:nuggets/cobalt>, "nether");
-ItemStages.restrict(<tag:items:forge:nuggets/lumium>, "nether");
-ItemStages.restrict(<tag:items:forge:nuggets/netherite>, "nether");
-ItemStages.restrict(<tag:items:forge:ores/cobalt>, "nether");
-ItemStages.restrict(<tag:items:forge:ores/netherite_scrap>, "nether");
-ItemStages.restrict(<tag:items:forge:ores/quartz>, "nether");
-ItemStages.restrict(<tag:items:forge:plates/lumium>, "nether");
-ItemStages.restrict(<tag:items:forge:raw_materials/cobalt>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/cobalt>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/fluix>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/glowstone>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/lumium>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/netherite>, "nether");
-ItemStages.restrict(<tag:items:forge:storage_blocks/quartz>, "nether");
-ItemStages.restrict(<item:botania:enchanter>, "nether");
-ItemStages.restrict(<item:inventorypets:pet_nether_portal>, "nether");
-ItemStages.restrict(<item:inventorypets:pet_squid>, "nether");
-ItemStages.restrict(<item:minecraft:anvil>, "nether");
-ItemStages.restrict(<item:minecraft:beacon>, "nether");
-ItemStages.restrict(<item:minecraft:blaze_powder>, "nether");
-ItemStages.restrict(<item:minecraft:blaze_rod>, "nether");
-ItemStages.restrict(<item:minecraft:brewing_stand>, "nether");
-ItemStages.restrict(<item:minecraft:enchanted_book>, "nether");
-ItemStages.restrict(<item:minecraft:enchanting_table>, "nether");
-ItemStages.restrict(<item:minecraft:ender_eye>, "nether");
-ItemStages.restrict(<item:minecraft:ghast_tear>, "nether");
-ItemStages.restrict(<item:minecraft:magma_cream>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/fluix>, "nether");
+// BAD_ID (item not registered: ae2:part): ItemStages.restrict(<item:ae2:part>, "nether");
+// EMPTY_TAG (empty tag: forge:crystals/quartz_pure): ItemStages.restrict(<tag:items:forge:crystals/quartz_pure>, "nether");
+// EMPTY_TAG (empty tag: forge:crystals/fluix_pure): ItemStages.restrict(<tag:items:forge:crystals/fluix_pure>, "nether");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:eoa>, "nether");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:oc>, "nether");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:powerstonetracker>, "nether");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:gatewaykey>, "nether");
+// OMIT_MOD (mod missing: defiledlands): ItemStages.restrict(<item:defiledlands:idol_sorrow>, "nether");
 ItemStages.restrict(<item:quark:blaze_lantern>, "nether");
+// BAD_ID (item not registered: thermal:dust_lumium): ItemStages.restrict(<item:thermal:dust_lumium>, "nether");
 ItemStages.restrict(<item:treasure2:skull_sword>, "nether");
 ItemStages.restrict(<item:soa_additions:shining_star>, "nether");
+// EMPTY_TAG (empty tag: forge:eternal_life_essence): ItemStages.restrict(<tag:items:forge:eternal_life_essence>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/gaia>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/netherite>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/netherite>, "nether");
+// EMPTY_TAG (empty tag: forge:gems/ancient_debris): ItemStages.restrict(<tag:items:forge:gems/ancient_debris>, "nether");
+// EMPTY_TAG (empty tag: forge:ores/ancient_debris): ItemStages.restrict(<tag:items:forge:ores/ancient_debris>, "nether");
+ItemStages.restrict(<item:minecraft:beacon>, "nether");
+ItemStages.restrict(<tag:items:forge:ores/ardite>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/ardite>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/ardite>, "nether");
+ItemStages.restrict(<tag:items:forge:ores/cobalt>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/cobalt>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/cobalt>, "nether");
+ItemStages.restrict(<item:minecraft:blaze_rod>, "nether");
+ItemStages.restrict(<item:minecraft:blaze_powder>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/glowstone>, "nether");
+// OMIT_MOD (mod missing: tcsponsors): ItemStages.restrict(<item:tcsponsors:sponsors_chest>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/glowstone>, "nether");
 ItemStages.restrict(<item:soa_additions:medkit_big>, "nether");
 ItemStages.restrict(<item:soa_additions:blood_sigil>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/quartz>, "nether");
+ItemStages.restrict(<tag:items:forge:gems/quartz>, "nether");
+ItemStages.restrict(<tag:items:forge:ores/quartz>, "nether");
 ItemStages.restrict(<item:soa_additions:bloody_sacrifice>, "nether");
+ItemStages.restrict(<item:minecraft:ender_eye>, "nether");
+ItemStages.restrict(<item:minecraft:enchanted_book>, "nether");
+ItemStages.restrict(<item:minecraft:anvil>, "nether");
+ItemStages.restrict(<item:enderio:dark_steel_sword>, "nether");
+ItemStages.restrict(<item:minecraft:enchanting_table>, "nether");
+ItemStages.restrict(<item:inventorypets:pet_nether_portal>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/demonic_metal>, "nether");
 ItemStages.restrict(<item:soa_additions:awakened_eye>, "nether");
-ItemStages.restrict(<item:soa_additions:overflux_capacitor>, "nether");
-// Cataclysm black steel tier (overworld mid-nether progression)
-ItemStages.restrict(<item:cataclysm:black_steel_ingot>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_block>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_axe>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_sword>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_pickaxe>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_shovel>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_hoe>, "nether");
-ItemStages.restrict(<item:cataclysm:black_steel_targe>, "nether");
-// Twilight Forest fiery set (requires nether ingredients)
-ItemStages.restrict(<item:twilightforest:fiery_ingot>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_blood>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_tears>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_sword>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_pickaxe>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_helmet>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_chestplate>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_leggings>, "nether");
-ItemStages.restrict(<item:twilightforest:fiery_boots>, "nether");
-// Twilight Forest ironwood set (mid-tier)
-ItemStages.restrict(<item:twilightforest:ironwood_ingot>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_pickaxe>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_sword>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_axe>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_helmet>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_chestplate>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_leggings>, "nether");
-ItemStages.restrict(<item:twilightforest:ironwood_boots>, "nether");
-// Mekanism mid/late teleporter + digital miner + boiler / reactor chassis (reactor mid-tier)
-ItemStages.restrict(<item:mekanism:digital_miner>, "nether");
-ItemStages.restrict(<item:mekanism:quantum_entangloporter>, "nether");
-ItemStages.restrict(<item:mekanism:teleporter>, "nether");
-ItemStages.restrict(<item:mekanism:portable_teleporter>, "nether");
-ItemStages.restrict(<item:mekanism:teleporter_frame>, "nether");
-ItemStages.restrict(<item:mekanism:seismic_vibrator>, "nether");
-ItemStages.restrict(<item:mekanism:seismic_reader>, "nether");
-ItemStages.restrict(<item:mekanism:flamethrower>, "nether");
-ItemStages.restrict(<item:mekanism:robit>, "nether");
-ItemStages.restrict(<item:mekanism:boiler_casing>, "nether");
-ItemStages.restrict(<item:mekanism:boiler_valve>, "nether");
-// ReHooked mid/late hooks & chains (diamond, blaze — nether-material tier)
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:great_sword_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:great_sword_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:great_sword_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:great_sword_monking>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:spear_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:spear_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:staff_healing>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:sword_moonlight>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:dagger_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:dagger_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:dagger_ninja>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:dagger_monking>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:sword_turtle>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:sword_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:staff_poison>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:staff_thunder>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:staff_wind>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:sword_sunshine>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:battle_axe_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:sword_walker>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_walker_king>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:staff_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:staff_gun>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:revolver>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:musket>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:musket_dagger_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:musket_dagger_monking>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:musket_dagger_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:captain_revolver>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_slime>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_slime>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_slime>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_slime>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_turtle>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_turtle>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_turtle>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_turtle>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_inquisition>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_inquisition>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_inquisition>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_inquisition>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_heavy_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_heavy_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_heavy_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_heavy_diamond>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_heavy_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_heavy_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_heavy_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_heavy_iron>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_diamond_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_diamond_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_diamond_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_diamond_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_iron_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:chestplate_iron_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:leggings_iron_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:boots_iron_dyable>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:helmet_dragon>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/demonic_metal>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_bull>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_carl>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_dragonslayer>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_fire>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_goblin>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_monking>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_moon>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_mummy>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_pigman>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_pirate>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_pirate2>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_rainbow>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_reflective>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_rusted>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_skeleton_friends>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_specter>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_spider>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_sun>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_tomb>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_triton>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_turtle>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_walker>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_warped>, "nether");
+// OMIT_MOD (mod missing: cqrepoured): ItemStages.restrict(<item:cqrepoured:shield_zombie>, "nether");
+ItemStages.restrict(<item:botania:enchanter>, "nether");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:osmotic_enchanter>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/aeroite>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/aeroite>, "nether");
+ItemStages.restrict(<tag:items:forge:nuggets/aeroite>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/aeroite>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/asgardium>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/asgardium>, "nether");
+ItemStages.restrict(<tag:items:forge:nuggets/asgardium>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/asgardium>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/meteor>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/meteor>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/meteor>, "nether");
+// OMIT_MOD (mod missing: openblocks): ItemStages.restrict(<item:openblocks:auto_anvil>, "nether");
 ItemStages.restrict(<item:rehooked:diamond_hook>, "nether");
-ItemStages.restrict(<item:rehooked:blaze_hook>, "nether");
-ItemStages.restrict(<item:rehooked:diamond_chain>, "nether");
-ItemStages.restrict(<item:rehooked:blaze_chain>, "nether");
-// Dank Storage mid tier
-ItemStages.restrict(<item:dankstorage:dank_5>, "nether");
-ItemStages.restrict(<item:dankstorage:4_to_5>, "nether");
-// RFTools Power blazing generator chain (requires nether blaze rods)
-ItemStages.restrict(<item:rftoolspower:blazing_rod>, "nether");
-ItemStages.restrict(<item:rftoolspower:blazing_generator>, "nether");
-ItemStages.restrict(<item:rftoolspower:blazing_agitator>, "nether");
-ItemStages.restrict(<item:rftoolspower:blazing_infuser>, "nether");
+// OMIT_MOD (mod missing: tcsponsors): ItemStages.restrict(<item:tcsponsors:sponsor_chest_fragment>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/lumium>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/lumium>, "nether");
+ItemStages.restrict(<tag:items:forge:nuggets/lumium>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/lumium>, "nether");
+ItemStages.restrict(<tag:items:forge:gears/lumium>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/valkyrie>, "nether");
+// EMPTY_TAG (empty tag: forge:nuggets/valkyrie): ItemStages.restrict(<tag:items:forge:nuggets/valkyrie>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/valkyrie>, "nether");
+// EMPTY_TAG (empty tag: forge:essences/destroyer): ItemStages.restrict(<tag:items:forge:essences/destroyer>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/ravaging>, "nether");
+// OMIT_MOD (mod missing: defiledlands): ItemStages.restrict(<item:defiledlands:calling_stone>, "nether");
+// EMPTY_TAG (empty tag: forge:essences/mourner): ItemStages.restrict(<tag:items:forge:essences/mourner>, "nether");
+ItemStages.restrict(<tag:items:forge:gems/remorseful>, "nether");
+// EMPTY_TAG (empty tag: forge:slime_crystals/magma): ItemStages.restrict(<tag:items:forge:slime_crystals/magma>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/quartz>, "nether");
+ItemStages.restrict(<item:minecraft:brewing_stand>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/aqualite>, "nether");
+ItemStages.restrict(<tag:items:forge:nuggets/aqualite>, "nether");
+ItemStages.restrict(<tag:items:forge:dusts/aqualite>, "nether");
+ItemStages.restrict(<tag:items:forge:ores/aqualite>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/aqualite>, "nether");
+ItemStages.restrict(<item:inventorypets:pet_squid>, "nether");
+ItemStages.restrict(<item:minecraft:ghast_tear>, "nether");
+// EMPTY_TAG (empty tag: forge:bone_withered): ItemStages.restrict(<tag:items:forge:bone_withered>, "nether");
+// OMIT_MOD (mod missing: netherex): ItemStages.restrict(<item:netherex:wither_bone>, "nether");
+// OMIT_MOD (mod missing: darkutils): ItemStages.restrict(<item:darkutils:material>, "nether");
+// EMPTY_TAG (empty tag: forge:dropofevil): ItemStages.restrict(<tag:items:forge:dropofevil>, "nether");
+// BAD_ID (item not registered: quark:black_ash): ItemStages.restrict(<item:quark:black_ash>, "nether");
+ItemStages.restrict(<item:minecraft:magma_cream>, "nether");
+// OMIT_MOD (mod missing: modularmachinery): ItemStages.restrict(<item:modularmachinery:blockcasing>, "nether");
+ItemStages.restrict(<tag:items:forge:ingots/durasteel>, "nether");
+ItemStages.restrict(<tag:items:forge:storage_blocks/durasteel>, "nether");
+// OMIT_MOD (mod missing: openmodularturrets): ItemStages.restrict(<item:openmodularturrets:turret_base>, "nether");
+ItemStages.restrict(<item:minecraft:quartz>, "nether");
+// EMPTY_TAG (empty tag: forge:nitor): ItemStages.restrict(<tag:items:forge:nitor>, "nether");
 
 // === novice_engineer ===
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_battery_box>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_item_viewer_hopping>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_bio_reactor>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_farmer>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_empowerer>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_shock_suppressor>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_display_stand>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_player_interface>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_item_viewer>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_crystal_empowered>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_enervator>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_energizer>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_lava_factory_controller>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_canola_press>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_coffee_machine>, "novice_engineer");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_atomic_reconstructor>, "novice_engineer");
 ItemStages.restrict(<item:enderio:dark_steel_sword>, "novice_engineer");
-// Dank Storage early tier
-ItemStages.restrict(<item:dankstorage:dank_3>, "novice_engineer");
-ItemStages.restrict(<item:dankstorage:2_to_3>, "novice_engineer");
 
 // === novice_wizard ===
-// Blood Magic progression (altars, sigils, rituals, soul-forge)
-ItemStages.restrict(<item:bloodmagic:incensealtar>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:demoncrucible>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:demonpylon>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:demoncrystallizer>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulforge>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:masterritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:ritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:ritualdiviner>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:ritualdivinerdusk>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:ritualtinkerer>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:divinationsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:airsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:lavasigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:watersigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:voidsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:growthsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:icesigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:miningsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:telepositionsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:bloodlightsigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:seersigil>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:sigilofholding>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:sigilofmagnetism>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:sigilofsuppression>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulgempetty>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulgemlesser>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulgemcommon>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulgemgreater>, "novice_wizard");
-// Blood Magic materials & crystals
-ItemStages.restrict(<item:bloodmagic:demonslate>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:rawdemonite>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:demonitefragment>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:demonitegravel>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:rawdemoniteblock>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:rawdemoncrystal>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:corrosivedemoncrystal>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:destructivedemoncrystal>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:vengefuldemoncrystal>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:steadfastdemoncrystal>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:basemonstersoul>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:demonwillgauge>, "novice_wizard");
-// Blood Magic sentient/soul weapons
-ItemStages.restrict(<item:bloodmagic:soulaxe>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulpickaxe>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulsword>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulshovel>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulscythe>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:soulsnare>, "novice_wizard");
-// Blood Magic elemental ritual stones
-ItemStages.restrict(<item:bloodmagic:waterritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:fireritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:earthritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:airritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:duskritualstone>, "novice_wizard");
-ItemStages.restrict(<item:bloodmagic:lightritualstone>, "novice_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:infusion_matrix>, "novice_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:plate>, "novice_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:ingot>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:ingots/bound_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:storage_blocks/bound_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:nuggets/bound_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:dusts/bound_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:ingots/sentient_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:storage_blocks/sentient_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:nuggets/sentient_metal>, "novice_wizard");
+ItemStages.restrict(<tag:items:forge:dusts/sentient_metal>, "novice_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:mechanism_complex>, "novice_wizard");
 
 // === skilled_engineer ===
-// Active tags
-ItemStages.restrict(<tag:items:forge:dusts/cyanite>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:dusts/enderium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:dusts/yellorium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:gears/enderium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:ingots/cyanite>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:ingots/enderium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:ingots/yellorium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:nuggets/enderium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:nuggets/yellorium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:plates/enderium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:raw_materials/yellorium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:storage_blocks/cyanite>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:storage_blocks/enderium>, "skilled_engineer");
-ItemStages.restrict(<tag:items:forge:storage_blocks/yellorium>, "skilled_engineer");
-// SoA Additions osmiridium (replaces GC "iridium")
-ItemStages.restrict(<item:soa_additions:osmiridium_ingot>, "skilled_engineer");
-// Platinum items from various mods (no unified forge tag in this pack)
-ItemStages.restrict(<item:create:crushed_raw_platinum>, "skilled_engineer");
-ItemStages.restrict(<item:embers:platinum_crystal_seed>, "skilled_engineer");
-ItemStages.restrict(<item:potionsmaster:platinum_powder>, "skilled_engineer");
-ItemStages.restrict(<item:potionsmaster:calcinatedplatinum_powder>, "skilled_engineer");
-// Mystical Agriculture iridium & platinum essences/seeds
-ItemStages.restrict(<item:mysticalagriculture:iridium_essence>, "skilled_engineer");
-ItemStages.restrict(<item:mysticalagriculture:iridium_seeds>, "skilled_engineer");
-ItemStages.restrict(<item:mysticalagriculture:platinum_essence>, "skilled_engineer");
-ItemStages.restrict(<item:mysticalagriculture:platinum_seeds>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:anglesite_ore>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:benitoite_ore>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ingots/iridium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:nuggets/iridium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/iridium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ores/iridium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:dusts/iridium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:dusts/platinum>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ingots/platinum>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:nuggets/platinum>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ores/platinum>, "skilled_engineer");
 ItemStages.restrict(<item:solarflux:sp_5>, "skilled_engineer");
 ItemStages.restrict(<item:solarflux:sp_6>, "skilled_engineer");
 ItemStages.restrict(<item:solarflux:sp_7>, "skilled_engineer");
-// Redstone Arsenal flux-powered tools/weapons
-ItemStages.restrict(<item:redstone_arsenal:flux_sword>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_axe>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_pickaxe>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_shovel>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_bow>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_crossbow>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_hammer>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_excavator>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_fishing_rod>, "skilled_engineer");
-// Redstone Arsenal flux armor
-ItemStages.restrict(<item:redstone_arsenal:flux_helmet>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_chestplate>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_leggings>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_boots>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_elytra>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_shield>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_quiver>, "skilled_engineer");
-// Redstone Arsenal flux materials/components
-ItemStages.restrict(<item:redstone_arsenal:flux_ingot>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_nugget>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_gear>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_plating>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_gem>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_gem_block>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_metal_block>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_dust>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_obsidian_rod>, "skilled_engineer");
-ItemStages.restrict(<item:redstone_arsenal:flux_controller>, "skilled_engineer");
-// Big Reactors basic reactor & turbine components + top-tier energy core (GC reactor gate)
-ItemStages.restrict(<item:bigreactors:basic_reactorcasing>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_reactorcontroller>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_reactorfuelrod>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_reactorcontrolrod>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_turbinecasing>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_turbinecontroller>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_turbinerotorbearing>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_turbinerotorshaft>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:basic_turbinerotorblade>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:blutonium_ingot>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:blutonium_block>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:ludicrite_block>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:energycore>, "skilled_engineer");
-ItemStages.restrict(<item:bigreactors:energizercontroller>, "skilled_engineer");
-// Flux Networks wireless power network (GC had mod installed; gate matches tier)
-ItemStages.restrict(<item:fluxnetworks:basic_flux_storage>, "skilled_engineer");
-ItemStages.restrict(<item:fluxnetworks:flux_controller>, "skilled_engineer");
-ItemStages.restrict(<item:fluxnetworks:flux_plug>, "skilled_engineer");
-ItemStages.restrict(<item:fluxnetworks:flux_point>, "skilled_engineer");
-ItemStages.restrict(<item:fluxnetworks:gargantuan_flux_storage>, "skilled_engineer");
-ItemStages.restrict(<item:fluxnetworks:herculean_flux_storage>, "skilled_engineer");
-// Extended Crafting tables (table-tier progression; ultimate handled in wielder_of_infinity)
-ItemStages.restrict(<item:extendedcrafting:basic_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:advanced_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:elite_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:epic_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:basic_auto_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:advanced_auto_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:elite_auto_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:epic_auto_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:handheld_table>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:ender_crafter>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:flux_crafter>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:auto_ender_crafter>, "skilled_engineer");
-ItemStages.restrict(<item:extendedcrafting:auto_flux_crafter>, "skilled_engineer");
-// Dank Storage engineer tier
-ItemStages.restrict(<item:dankstorage:dank_4>, "skilled_engineer");
-ItemStages.restrict(<item:dankstorage:3_to_4>, "skilled_engineer");
-// RFTools Base — machine-frame tier materials, security, and infuser
-ItemStages.restrict(<item:rftoolsbase:machine_frame>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:machine_base>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:machine_infuser>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:dimensionalshard>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:dimensionalshard_overworld>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:dimensionalshard_nether>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:dimensionalshard_end>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:infused_diamond>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:infused_enderpearl>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolsbase:information_screen>, "skilled_engineer");
-// RFTools Control — programmable automation (processor / program cards / modules)
-ItemStages.restrict(<item:rftoolscontrol:programmer>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:processor>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:craftingstation>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:node>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:workbench>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:tank>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:program_card>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:card_base>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:cpu_core_500>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:cpu_core_1000>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:cpu_core_2000>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:ram_chip>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:network_card>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:advanced_network_card>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:network_identifier>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:graphics_card>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:variable_module>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:interaction_module>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:console_module>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:vectorart_module>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:tablet_processor>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolscontrol:token>, "skilled_engineer");
-// RFTools Power — power cells, cores, coal/dimensional gens, monitors
-ItemStages.restrict(<item:rftoolspower:power_core1>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:power_core2>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:power_core3>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:powercell_card>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:cell1>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:cell2>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:cell3>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:dimensionalcell>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:dimensionalcell_simple>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:dimensionalcell_advanced>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:coalgenerator>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:power_monitor>, "skilled_engineer");
-ItemStages.restrict(<item:rftoolspower:power_level>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/platinum>, "skilled_engineer");
+// OMIT_MOD (mod missing: rftools): ItemStages.restrict(<item:rftools:builder>, "skilled_engineer");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:passivegenerator>, "skilled_engineer");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:machine>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:biomeradar>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:redstoneobserver>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:irondropper>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:onlinedetector>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:dyeingmachine>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:enderbridge>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:prismarineenderbridge>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:enderanchor>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:imbuingstation>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:spectreblock>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:analogemitter>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:fluiddisplay>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:advancedredstoneinterface>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:fertilizeddirt>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:playerinterface>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:basicredstoneinterface>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:rainshield>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:spectrecoil_number>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:spectrecoil_normal>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:spectrecoil_redstone>, "skilled_engineer");
+// OMIT_MOD (mod missing: randomthings): ItemStages.restrict(<item:randomthings:spectrecoil_ender>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ores/yellorium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ingots/yellorium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:dusts/yellorium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ingots/enderium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/enderium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:nuggets/enderium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:dusts/enderium>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:gears/enderium>, "skilled_engineer");
+// EMPTY_TAG (empty tag: forge:gems/gelid): ItemStages.restrict(<tag:items:forge:gems/gelid>, "skilled_engineer");
+// EMPTY_TAG (empty tag: forge:storage_blocks/gelid_gem): ItemStages.restrict(<tag:items:forge:storage_blocks/gelid_gem>, "skilled_engineer");
+// EMPTY_TAG (empty tag: forge:storage_blocks/gelid_enderium): ItemStages.restrict(<tag:items:forge:storage_blocks/gelid_enderium>, "skilled_engineer");
+// EMPTY_TAG (empty tag: forge:ingots/gelid_enderium): ItemStages.restrict(<tag:items:forge:ingots/gelid_enderium>, "skilled_engineer");
+// EMPTY_TAG (empty tag: forge:nuggets/gelid_enderium): ItemStages.restrict(<tag:items:forge:nuggets/gelid_enderium>, "skilled_engineer");
+// BAD_ID (item not registered: bigreactors:orebenitoite): ItemStages.restrict(<item:bigreactors:orebenitoite>, "skilled_engineer");
+// BAD_ID (item not registered: bigreactors:oreanglesite): ItemStages.restrict(<item:bigreactors:oreanglesite>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:ingots/cyanite>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/cyanite>, "skilled_engineer");
 
 // === skilled_wizard ===
-// SoA Additions custom wizard-tier alloys (no forge tags registered)
-ItemStages.restrict(<item:soa_additions:astral_metal_ingot>, "skilled_wizard");
-ItemStages.restrict(<item:soa_additions:crimsonite_ingot>, "skilled_wizard");
+// BAD_ID (item not registered: soa_additions:void_thaumometer): ItemStages.restrict(<item:soa_additions:void_thaumometer>, "skilled_wizard");
+// BAD_ID (item not registered: soa_additions:crystal_bore): ItemStages.restrict(<item:soa_additions:crystal_bore>, "skilled_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:matrix_speed>, "skilled_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:matrix_cost>, "skilled_wizard");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:stabilizer>, "skilled_wizard");
+// OMIT_MOD (mod missing: astralsorcery): ItemStages.restrict(<item:astralsorcery:blockstarlightinfuser>, "skilled_wizard");
+// OMIT_MOD (mod missing: astralsorcery): ItemStages.restrict(<item:astralsorcery:blockattunementaltar>, "skilled_wizard");
+// OMIT_MOD (mod missing: astralsorcery): ItemStages.restrict(<item:astralsorcery:blockaltar>, "skilled_wizard");
+// OMIT_MOD (mod missing: astralsorcery): ItemStages.restrict(<item:astralsorcery:blockprism>, "skilled_wizard");
+// OMIT_MOD (mod missing: astralsorcery): ItemStages.restrict(<item:astralsorcery:itemshiftingstar>, "skilled_wizard");
+// OMIT_MOD (mod missing: astralsorcery): ItemStages.restrict(<item:astralsorcery:itemcraftingcomponent>, "skilled_wizard");
 ItemStages.restrict(<item:soa_additions:arcane_crystal_ball>, "skilled_wizard");
-// Mythic Botany alfsteel (successor to extrabotany / botanicadds)
-ItemStages.restrict(<item:mythicbotany:alfsteel_ingot>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_block>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_nugget>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_pylon>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_axe>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_pick>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_sword>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_helmet>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_chestplate>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_leggings>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_boots>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:alfsteel_template>, "skilled_wizard");
-// Mythic Botany Norse-saga items (excludes mjoellnir + gjallar_horn_full per balance)
-ItemStages.restrict(<item:mythicbotany:gjallar_horn_empty>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:faded_nether_star>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:kvasir_blood>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:kvasir_mead>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:fimbultyr_tablet>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:central_rune_holder>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:mana_collector>, "skilled_wizard");
-ItemStages.restrict(<item:mythicbotany:mana_infuser>, "skilled_wizard");
+ItemStages.restrict(<tag:items:forge:storage_blocks/astral_metal>, "skilled_wizard");
+ItemStages.restrict(<tag:items:forge:ingots/astral_metal>, "skilled_wizard");
+ItemStages.restrict(<tag:items:forge:storage_blocks/crimsonite>, "skilled_wizard");
+ItemStages.restrict(<tag:items:forge:ingots/crimsonite>, "skilled_wizard");
 
 // === wielder_of_infinity ===
-ItemStages.restrict(<item:draconicevolution:draconic_staff>, "wielder_of_infinity");
-ItemStages.restrict(<item:solarflux:sp_avaritia.infinity>, "wielder_of_infinity");
+// OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:thaumonomicon>, "wielder_of_infinity");
 ItemStages.restrict(<item:soa_additions:pioneer_medal>, "wielder_of_infinity");
 ItemStages.restrict(<item:soa_additions:greedy_medal>, "wielder_of_infinity");
+ItemStages.restrict(<tag:items:forge:storage_blocks/compressed_infinity>, "wielder_of_infinity");
+ItemStages.restrict(<tag:items:forge:storage_blocks/double_compressed_infinity>, "wielder_of_infinity");
+// BAD_ID (item not registered: mythicbotany:managenerator): ItemStages.restrict(<item:mythicbotany:managenerator>, "wielder_of_infinity");
+// OMIT_MOD (mod missing: ambience): ItemStages.restrict(<item:ambience:horn>, "wielder_of_infinity");
+// OMIT_MOD (mod missing: ambience): ItemStages.restrict(<item:ambience:ocarina>, "wielder_of_infinity");
 ItemStages.restrict(<item:soa_additions:creative_soul>, "wielder_of_infinity");
-ItemStages.restrict(<item:soa_additions:infinity_stone>, "wielder_of_infinity");
-// Avaritia infinity tools/weapons
-ItemStages.restrict(<item:avaritia:infinity_sword>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_bow>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_crossbow>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_pickaxe>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_shovel>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_axe>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_hoe>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_trident>, "wielder_of_infinity");
-// Avaritia infinity armor
-ItemStages.restrict(<item:avaritia:infinity_helmet>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_chestplate>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_pants>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_boots>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_elytra>, "wielder_of_infinity");
-// Avaritia infinity curios / utility / resources
-ItemStages.restrict(<item:avaritia:infinity_ingot>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_nugget>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_catalyst>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_upgrade>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_ring>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_shield>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_totem>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_bucket>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_chest>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_clock>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:infinity_umbrella>, "wielder_of_infinity");
-// Avaritia compressed crafting tables
-ItemStages.restrict(<item:avaritia:compressed_crafting_table>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:double_compressed_crafting_table>, "wielder_of_infinity");
-// Avaritia extreme crafting station, anvil, smithing table (top-tier crafting)
-ItemStages.restrict(<item:avaritia:extreme_crafting_table>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:extreme_smithing_table>, "wielder_of_infinity");
-ItemStages.restrict(<item:avaritia:extreme_anvil>, "wielder_of_infinity");
-// Extended Crafting ultimate ingot (final material of EC progression)
-ItemStages.restrict(<item:extendedcrafting:the_ultimate_ingot>, "wielder_of_infinity");
-ItemStages.restrict(<item:extendedcrafting:ultimate_table>, "wielder_of_infinity");
-ItemStages.restrict(<item:extendedcrafting:ultimate_auto_table>, "wielder_of_infinity");
-// Packaged Avaritia top-tier auto crafters
-ItemStages.restrict(<item:packagedavaritia:end_crafter>, "wielder_of_infinity");
-ItemStages.restrict(<item:packagedavaritia:extreme_crafter>, "wielder_of_infinity");
-// Packaged Draconic top-tier injectors
-ItemStages.restrict(<item:packageddraconic:marked_chaotic_injector>, "wielder_of_infinity");
-ItemStages.restrict(<item:packageddraconic:marked_draconic_injector>, "wielder_of_infinity");
-ItemStages.restrict(<item:packageddraconic:marked_draconium_injector>, "wielder_of_infinity");
-// Applied Botanics creative mana cell (infinite mana, top-tier magic)
-ItemStages.restrict(<item:appbot:creative_mana_cell>, "wielder_of_infinity");
-// Dank Storage top tier
-ItemStages.restrict(<item:dankstorage:dank_7>, "wielder_of_infinity");
-ItemStages.restrict(<item:dankstorage:6_to_7>, "wielder_of_infinity");
+ItemStages.restrict(<item:soa_additions:difficulty_changer>, "wielder_of_infinity");
+ItemStages.restrict(<item:soa_additions:creative_controller>, "wielder_of_infinity");
+ItemStages.restrict(<item:minecraft:diamond_sword>, "wielder_of_infinity");
+ItemStages.restrict(<item:minecraft:diamond_pickaxe>, "wielder_of_infinity");
+ItemStages.restrict(<item:minecraft:diamond_helmet>, "wielder_of_infinity");
+ItemStages.restrict(<item:minecraft:diamond_chestplate>, "wielder_of_infinity");
+ItemStages.restrict(<item:minecraft:diamond_leggings>, "wielder_of_infinity");
+ItemStages.restrict(<item:minecraft:diamond_boots>, "wielder_of_infinity");
+ItemStages.restrict(<item:soa_additions:infinity_block_block>, "wielder_of_infinity");
+ItemStages.restrict(<item:soa_additions:infinity_block_block_block>, "wielder_of_infinity");
+ItemStages.restrict(<item:draconicevolution:draconic_staff>, "wielder_of_infinity");
+// OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:rainbowgenerator>, "wielder_of_infinity");
+ItemStages.restrict(<item:solarflux:sp_avaritia.infinity>, "wielder_of_infinity");
+// OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:item_growth_ring>, "wielder_of_infinity");
 
 // === wither_slayer ===
-// Cataclysm witherite (Wither-derived metal, unlocked by beating the Wither)
-ItemStages.restrict(<item:cataclysm:witherite_ingot>, "wither_slayer");
-ItemStages.restrict(<item:cataclysm:witherite_block>, "wither_slayer");
+ItemStages.restrict(<item:soa_additions:gaiasteel_ingot>, "wither_slayer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/gaiasteel>, "wither_slayer");
+ItemStages.restrict(<item:soa_additions:bravery_certificate>, "wither_slayer");
 ItemStages.restrict(<item:enderio:reinforced_obsidian_block>, "wither_slayer");
-ItemStages.restrict(<item:minecraft:end_crystal>, "wither_slayer");
 ItemStages.restrict(<item:mysticalagriculture:witherproof_block>, "wither_slayer");
 ItemStages.restrict(<item:mysticalagriculture:witherproof_glass>, "wither_slayer");
-ItemStages.restrict(<item:soa_additions:bravery_certificate>, "wither_slayer");
 ItemStages.restrict(<item:soa_additions:ender_charm>, "wither_slayer");
+ItemStages.restrict(<tag:items:forge:ingots/evil_metal>, "wither_slayer");
+ItemStages.restrict(<tag:items:forge:storage_blocks/evil_metal>, "wither_slayer");
+// OMIT_MOD (mod missing: rftools): ItemStages.restrict(<item:rftools:shield_template_block>, "wither_slayer");
+// OMIT_MOD (mod missing: rftools): ItemStages.restrict(<item:rftools:shield_block1>, "wither_slayer");
+// OMIT_MOD (mod missing: rftools): ItemStages.restrict(<item:rftools:shield_block2>, "wither_slayer");
+ItemStages.restrict(<item:minecraft:end_crystal>, "wither_slayer");
+ItemStages.restrict(<tag:items:forge:ingots/stellar_alloy>, "wither_slayer");
+// EMPTY_TAG (empty tag: forge:storage_blocks/stellar_alloy): ItemStages.restrict(<tag:items:forge:storage_blocks/stellar_alloy>, "wither_slayer");
+// EMPTY_TAG (empty tag: forge:nuggets/stellar_alloy): ItemStages.restrict(<tag:items:forge:nuggets/stellar_alloy>, "wither_slayer");
+// OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:soulreaper>, "wither_slayer");
 
 // === wyvern ===
+ItemStages.restrict(<tag:items:forge:ingots/wyvern_metal>, "wyvern");
+ItemStages.restrict(<tag:items:forge:storage_blocks/wyvern_metal>, "wyvern");
+ItemStages.restrict(<tag:items:forge:nuggets/wyvern_metal>, "wyvern");
+ItemStages.restrict(<tag:items:forge:dusts/wyvern_metal>, "wyvern");
 ItemStages.restrict(<item:soa_additions:solarium_star>, "wyvern");
 ItemStages.restrict(<item:soa_additions:sun_totem>, "wyvern");
 ItemStages.restrict(<item:soa_additions:solar_seed>, "wyvern");
 ItemStages.restrict(<item:soa_additions:broken_solarium_star>, "wyvern");
-// Avaritia neutron collector (cosmic neutronium progression)
-ItemStages.restrict(<item:avaritia:neutron_collector>, "wyvern");
-// Draconic Evolution wyvern tier tools/armor
-ItemStages.restrict(<item:draconicevolution:wyvern_axe>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_bow>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_pickaxe>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_shovel>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_hoe>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_sword>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_chestpiece>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_capacitor>, "wyvern");
-ItemStages.restrict(<item:draconicevolution:wyvern_crafting_injector>, "wyvern");
-// Draconic Additions wyvern harness/necklace
-ItemStages.restrict(<item:draconicadditions:wyvern_harness>, "wyvern");
-ItemStages.restrict(<item:draconicadditions:wyvern_necklace>, "wyvern");
-// Packaged Draconic wyvern auto-injector
-ItemStages.restrict(<item:packageddraconic:marked_wyvern_injector>, "wyvern");
 
-// ============================================================
-// Pickup interception handled by GreedyBag item (soa_additions)
-// Multi-stage items:
-//   death_coin, difficulty_changer (chaotic_dominator + wielder_of_infinity)
-//   creative_controller (graduated + wielder_of_infinity)
-//
-// 1.20.1 MOD ID MAPPINGS FROM GREEDYCRAFT (1.12):
-//   cyclicmagic:* → cyclic:*
-//   projecte:item.pe_tome → projecte:tome
-//   projecte:item.pe_time_watch → projecte:watch_of_flowing_time
-//   tconstruct:tooltables:0-5 → tconstruct:crafting_station / part_builder
-//                               / part_chest / tinkers_anvil / tinkers_chest
-//                               / tinkers_gadgetry
-//   additions:greedycraft-* → soa_additions:*
-//   eternalsingularity:eternal_singularity → avaritia:eternal_singularity
-//   draconicevolution:draconic_staff_of_power → draconicevolution:draconic_staff
-//   draconicevolution:wyvern_core / draconic_core → same name in 1.20.1
-//   solarflux:solar_panel_infinity → solarflux:sp_avaritia.infinity
-//   extrabotany / botanicadds → mythicbotany (alfsteel tier, Norse items, rings)
-//   hook:3 / hook:4 → rehooked:diamond_hook / rehooked:ender_hook tiers
-//   dank_null_6 → dankstorage:dank_6 (full tier ladder 1-7 applied)
-//   plustic materials → soa_additions:osgloglas_ingot (hardmode)
-//   endrem (End Remastered) → endrem:*_eye gated to ender_charm (dimension access)
-//   packagedavaritia / packageddraconic → tiered auto-crafters for avaritia/DE
-//   twilightforest:shield_scepter → twilightforest:fortification_scepter
-//
-// OMITTED (mod not in SoA):
-//   fearless_man stage (abyssalcraft entirely removed)
-//   thaumcraft/thaumadditions/thaumictinkerer/thaumicwonders content
-//     (thaumon provides blocks only, no magic progression)
-//   astralsorcery (replaced by ars_nouveau; intentionally LEFT UNGATED)
-//   ars_nouveau / ars_elemental / ars_additions (progression intentionally
-//     left ungated — handled via in-mod research mechanics)
-//   forbidden_arcanus (intentionally LEFT UNGATED — self-contained research)
-//   cqrepoured, defiledlands, netherex, darkutils
-//   extrautils2, actuallyadditions, randomthings
-//   rftools main (builder/shield_* blocks) — replaced by split modules
-//     rftoolsbase + rftoolscontrol + rftoolspower (all gated skilled_engineer+)
-//   extrabotany, projectex (replaced by projectextended)
-//   cyclicmagic (replaced by cyclic)
-//   ambience, hooked (replaced by rehooked), openblocks
-//   openmodularturrets, modularmachinery
-//   plustic (materials → soa_additions), tofucraft, toolprogression
-//   conarm, colytra, tconevo
-//   wct/wit/wft (replaced by ae2wtlib:wireless_universal_terminal)
-// DELIBERATELY UNGATED (per user balance decision):
-//   mythicbotany:mjoellnir, mythicbotany:gjallar_horn_full
-//   forbidden_arcanus:eternal_stella (plus all other forbidden_arcanus)
-//
-// SoA Additions registers most custom materials as direct items
-// (soa_additions:*_ingot) rather than via forge item tags, so they're
-// restricted individually above. Materials with NO item in SoA have
-// been dropped entirely:
-//   novice_wizard: bound_metal, sentient_metal (no items)
-//   master_wizard: primordial (no items)
-//   nether: ardite, demonic_metal, valkyrie (only aether gear,
-//           already dimension-gated)
-//   wither_slayer: evil_metal, stellar_alloy (no items)
-//   wyvern: wyvern_metal (wyvern tools already restricted directly)
-// ============================================================

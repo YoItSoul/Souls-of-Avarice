@@ -2,7 +2,7 @@
   "id": "1_remembering",
   "title": "Main Questline",
   "icon": "minecraft:book",
-  "sort_order": 30,
+  "sort_order": 50,
   "description": [],
   "modes": [
     "casual",

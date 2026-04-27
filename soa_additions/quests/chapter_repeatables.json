@@ -2,7 +2,7 @@
   "id": "chapter_repeatables",
   "title": "Repeatables",
   "icon": "minecraft:experience_bottle",
-  "sort_order": 70,
+  "sort_order": 90,
   "description": [
     "Quests for the Repeatables progression path."
   ],
