@@ -43,14 +43,20 @@ ServerEvents.recipes(event => {
     event.remove({ type: 'bloodmagic:soulforge', input: ['bloodmagic:soulgempetty', 'soa_additions:fusion_matrix_ingot'] })
 
     // TartaricForge.addRecipe(<tconevo:metal:30>, [<bloodmagic:soul_gem>, <additions:stainless_steel_ingot>], 2.0, 2.0);
-    // tconevo:metal:30 = Sentient Ingot -> forge tag #forge:ingots/sentient_metal
+    // 1.20 BM soulforge requires 4 NON-EMPTY input slots (verified against
+    //   data/bloodmagic/recipes/soulforge/*.json — minecraft:air rejected with
+    //   "Empty ingredient not allowed here") and `output` must be an item, not a tag.
+    // The 1.12 GC recipe was 2-input → sentient ingot. Pad with 3x more
+    //   stainless_steel to keep the same intent (steel → sentient metal) while
+    //   satisfying the 4-slot schema; resolve the tag to its sole member
+    //   `soa_additions:sentient_metal_ingot` (per soa_exports/tags.json).
     event.custom({
         type: 'bloodmagic:soulforge',
         input0: { item: 'bloodmagic:soulgempetty' },
         input1: { item: 'soa_additions:stainless_steel_ingot' },
-        input2: { item: 'minecraft:air' },
-        input3: { item: 'minecraft:air' },
-        output: { tag: 'forge:ingots/sentient_metal', count: 1 }, // FIXME: output may need item, not tag; check BM soulforge JSON
+        input2: { item: 'soa_additions:stainless_steel_ingot' },
+        input3: { item: 'soa_additions:stainless_steel_ingot' },
+        output: { item: 'soa_additions:sentient_metal_ingot', count: 1 },
         minimumDrain: 2.0,
         drain: 2.0
     })
@@ -81,11 +87,13 @@ ServerEvents.recipes(event => {
     // BloodAltar.addRecipe(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}), <additions:greedycraft-compressed_experience_block>, 2, 25000, 100, 100);
     // FIXME: compressed_experience_block not registered in SoA -> recipe NOT ported.
     // BloodAltar.addRecipe(<tconevo:metal:25>, <additions:durasteel_ingot>, 2, 10000, 200, 200);
-    // tconevo:metal:25 = Bound Ingot -> tag #forge:ingots/bound_metal
+    // BM 1.20 altar `output` must be {item:...}, not a tag (verified vs
+    //   data/bloodmagic/recipes/altar/*.json). Resolve the original
+    //   `forge:ingots/bound_metal` tag to its sole member.
     event.custom({
         type: 'bloodmagic:altar',
         input:  { item: 'soa_additions:durasteel_ingot' },
-        output: { tag: 'forge:ingots/bound_metal' }, // FIXME: output may need item form
+        output: { item: 'soa_additions:bound_metal_ingot' },
         upgradeLevel: 2, altarSyphon: 10000, consumptionRate: 200, drainRate: 200
     })
     // BloodAltar.addRecipe(<twilightforest:fiery_blood>, <minecraft:glass_bottle>, 3, 7000, 120, 120);
@@ -152,12 +160,14 @@ ServerEvents.recipes(event => {
     })
 
     // AlchemyArray.addRecipe(<bloodarsenal:blood_diamond:3>, <bloodmagic:component:8>, <bloodarsenal:blood_diamond:2>, ".../bindingarray.png");
+    // 1.20 ids live under the `bloodarsenal:` namespace directly (the GC alias
+    //   `soa_additions:ba_blood_diamond_*` was never registered).
     event.custom({
         type: 'bloodmagic:array',
         baseinput:  { item: 'bloodmagic:reagentbinding' },
-        addedinput: { item: 'soa_additions:ba_blood_diamond_infused' },
-        output:     { item: 'soa_additions:ba_blood_diamond_bound' },
-        texture:    'bloodmagic:textures/models/AlchemyArrays/bindingarray.png'
+        addedinput: { item: 'bloodarsenal:blood_diamond_infused' },
+        output:     { item: 'bloodarsenal:blood_diamond_bound' },
+        texture:    'bloodmagic:textures/models/alchemyarrays/bindingarray.png'
     })
     // AlchemyArray.addRecipe(<bloodmagic:blood_shard:1>, <bloodmagic:slate:3>, <bloodmagic:blood_shard>, ".../bindingarray.png");
     // blood_shard:1 (demonic) DOES NOT EXIST in BM 1.20.1 -> recipe NOT portable; preserved as documentation.

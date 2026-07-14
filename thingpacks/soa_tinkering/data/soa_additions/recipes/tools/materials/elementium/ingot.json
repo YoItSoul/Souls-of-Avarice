@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:ingots/elementium"
-  },
-  "material": "soa_additions:elementium",
-  "needed": 1,
-  "value": 1
-}

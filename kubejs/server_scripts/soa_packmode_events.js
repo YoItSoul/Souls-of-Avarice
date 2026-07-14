@@ -68,9 +68,10 @@ PlayerEvents.loggedIn(event => {
     // current mode stage is present. Fires "mode changed" splash if any
     // foreign mode stage was actually present.
     if (GameStageHelper) {
-        const all = ['casual', 'adventure', 'expert']
-        let changed = false
-        for (const s of all) {
+        var all = ['casual', 'adventure', 'expert']
+        var changed = false
+        for (var ai = 0; ai < all.length; ai++) {
+            var s = all[ai]
             if (s !== MODE_STAGE[mode] && GameStageHelper.hasStage(player, s)) {
                 GameStageHelper.removeStage(player, s)
                 changed = true
@@ -83,7 +84,7 @@ PlayerEvents.loggedIn(event => {
         // Casual mode unlocks all stages + adds 'iswuss' marker (mirrors
         // GC casual/onjoin.zs unlockallstages behavior).
         if (mode === 'casual') {
-            const ALL_STAGES = [
+            var ALL_STAGES = [
                 'getting_started','nether','wither_slayer','ender_charm','hardmode',
                 'descendant_of_the_sun','novice_engineer','skilled_engineer','master_engineer',
                 'novice_wizard','skilled_wizard','master_wizard','wyvern','awakened',
@@ -92,7 +93,7 @@ PlayerEvents.loggedIn(event => {
                 'challenger_a','challenger_b','challenger_c','challenger_d',
                 'challenger_e','challenger_f','challenger_g',
             ]
-            for (const s of ALL_STAGES) GameStageHelper.addStage(player, s)
+            for (var asi = 0; asi < ALL_STAGES.length; asi++) GameStageHelper.addStage(player, ALL_STAGES[asi])
             GameStageHelper.addStage(player, 'iswuss')
             player.tell(Component.translatable('greedycraft.event.casual.unlock_all_stages').gold())
         }
@@ -107,39 +108,7 @@ PlayerEvents.loggedIn(event => {
         }
     }
 
-    // (2) Sidebar scoreboard — packmode label + version + cheat badge
-    setupSidebar(player, mode)
 })
-
-function setupSidebar(player, mode) {
-    try {
-        // Wipe any prior sidebar
-        player.runCommand('scoreboard objectives remove title')
-        player.runCommand('scoreboard objectives add title dummy {"translate":"greedycraft.scoreboard.title"}')
-
-        // Lines (numeric value = vertical position; higher = further up)
-        const modeKey  = MODE_LABEL[mode]
-        const modeName = '[' + mode.toUpperCase() + ']'
-        player.runCommand('scoreboard players set "' + modeName + '" title 2')
-        player.runCommand('scoreboard players set "§b" title 3')
-        player.runCommand('scoreboard players set "§7Souls of Avarice" title 4')
-
-        // Cheat / truehero badge (line 1)
-        if (GameStageHelper) {
-            if (GameStageHelper.hasStage(player, 'iswuss')) {
-                const lbl = player.creative ? '§e[CREATIVE]' : '§c[CHEAT]'
-                player.runCommand('scoreboard players set "' + lbl + '" title 1')
-            } else if (GameStageHelper.hasStage(player, 'truehero') &&
-                       player.server.playerList.players.size() <= 1) {
-                player.runCommand('scoreboard players set "§b★ ' + player.username + '" title 1')
-            }
-        }
-
-        player.runCommand('scoreboard objectives setdisplay sidebar title')
-    } catch (e) {
-        console.warn('[soa_packmode_events] sidebar setup: ' + e)
-    }
-}
 
 // Expert-mode goodie_bag chest addition lives in startup_scripts/loot_dungeon.js
 // (LootJS.modifiers must run there, not in server_scripts).

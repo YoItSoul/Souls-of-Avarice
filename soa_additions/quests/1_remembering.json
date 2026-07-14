@@ -26,9 +26,7 @@
       "description": [
         "Begin the new journey."
       ],
-      "dependencies": [
-        "quest_mnupsmd1"
-      ],
+      "dependencies": [],
       "tasks": [
         {
           "type": "soa_additions:dimension",
@@ -47,8 +45,13 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:greedy_bag",
-          "count": 1
+          "item": "createfood:berry_ice_cream_bowl",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "createfood:potato_chip_bowl",
+          "count": 8
         }
       ],
       "modes": [
@@ -192,6 +195,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 15
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
         }
       ],
       "modes": [
@@ -224,6 +232,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 15
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
         }
       ],
       "modes": [
@@ -343,6 +356,7 @@
       "title": "Make a Mark",
       "icon": "minecraft:oak_log",
       "auto_claim": true,
+      "shape": "rhombus",
       "x": 112,
       "y": 192,
       "description": [],
@@ -435,7 +449,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "minecraft:log",
+          "item": "minecraft:dark_oak_log",
           "count": 16
         },
         {
@@ -449,11 +463,11 @@
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p minecraft:paper{tag:{display:{Lore:[\"It reads:\",\"I've been waiting for you for ages, claim your quest rewards by pressing E and clicking 'Quests' at the top left RIGHT NOW!!\"],Name:\"A Sticky Note\"}}} 1"
+          "command": "/give @p minecraft:paper{tag:{display:{Lore:[\"It reads:\",\"I've been waiting for you for ages, claim your quest rewards by pressing E and clicking 'Quests' at the top center RIGHT NOW!!\"],Name:\"A Sticky Note\"}}} 1"
         },
         {
           "type": "soa_additions:item",
-          "item": "pouchofunknown:pouch",
+          "item": "soa_additions:greedy_bag",
           "count": 1
         }
       ],
@@ -570,6 +584,26 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p minecraft:leather_boots{tag:{display:{color:16744619,Name:\"Fairy Shoes\"}}} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:leather_helmet",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:leather_chestplate",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:leather_leggings",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:leather_boots",
+          "count": 1
         }
       ],
       "modes": [
@@ -612,7 +646,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "minecraft:shulker_box",
+          "item": "dankstorage:dank_3",
           "count": 1
         },
         {
@@ -622,7 +656,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "minecraft:crafting_table",
+          "item": "prefab:item_house",
           "count": 1
         }
       ],
@@ -670,7 +704,12 @@
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p minecraft:potion{tag:{Potion:\"quark:long_haste\"}} 1"
+          "command": "/give @p minecraft:potion{tag:{Potion:\"cyclic:strong_haste\"}} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:potion",
+          "count": 1
         }
       ],
       "modes": [
@@ -781,6 +820,7 @@
       "id": "294fca0347c456aa",
       "title": "Rookie Artisan",
       "icon": "tconstruct:pattern",
+      "shape": "rhombus",
       "x": 144,
       "y": 80,
       "description": [],
@@ -803,6 +843,31 @@
           "type": "soa_additions:grant_stage",
           "stage": "novice_tinker",
           "scope": "player"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:part_chest",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:part_builder",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:crafting_station",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:tinker_station",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:tinkers_chest",
+          "count": 1
         }
       ],
       "modes": [
@@ -844,6 +909,7 @@
       "id": "1d30b4b2ab17d735",
       "title": "Seared Heat",
       "icon": "tconstruct:seared_melter",
+      "shape": "square",
       "x": 208,
       "y": 80,
       "description": [],
@@ -874,7 +940,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:materials",
+          "item": "tconstruct:obsidian_reinforcement",
           "count": 257
         },
         {
@@ -884,7 +950,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:casting",
+          "item": "tconstruct:seared_basin",
           "count": 10
         }
       ],
@@ -898,6 +964,7 @@
       "id": "0a06f9ed8ae8946e",
       "title": "The smeltery... my love!",
       "icon": "tconstruct:smeltery_controller",
+      "shape": "square",
       "x": 240,
       "y": 80,
       "description": [],
@@ -923,7 +990,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:materials",
+          "item": "tconstruct:obsidian_reinforcement",
           "count": 256
         },
         {
@@ -938,7 +1005,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared",
+          "item": "tconstruct:seared_bricks",
           "count": 64
         }
       ],
@@ -1020,6 +1087,7 @@
       "id": "4dab3e16b1dd5bc8",
       "title": "Lots Of Liquids!",
       "icon": "tconstruct:foundry_controller",
+      "shape": "square",
       "x": 304,
       "y": 80,
       "description": [],
@@ -1037,7 +1105,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:materials",
+          "item": "tconstruct:seared_brick",
           "count": 256
         },
         {
@@ -1093,44 +1161,6 @@
       ]
     },
     {
-      "id": "quest_mnupsmd1",
-      "title": "Choose your difficulty",
-      "icon": "minecraft:paper",
-      "x": 0,
-      "y": 0,
-      "description": [
-        "This is important!",
-        "In the \"pack mode\" chapter, you must select your pack mode BEFORE completing this quest!",
-        "",
-        "If you don't, you will potentially be locked into a pack mode you don't want to play."
-      ],
-      "dependencies": [
-        "quest_mnsa7vbh"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:trigger",
-          "trigger": "soa_additions:my_trigger"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 100
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "quest_mnv6n0g9",
       "title": "A step forward",
       "icon": "minecraft:wooden_axe",
@@ -1169,7 +1199,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:cast",
+          "item": "tconstruct:blank_sand_cast",
           "count": 4
         },
         {
@@ -1179,17 +1209,17 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "oeintegration:excavatemodifier",
+          "item": "tconstruct:excavator",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:materials",
+          "item": "tconstruct:obsidian_reinforcement",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "conarm:resist_mat",
+          "item": "tconstruct:obsidian_reinforcement",
           "count": 1
         },
         {
@@ -1248,6 +1278,7 @@
       "title": "E=mc^2",
       "icon": "soa_additions:energy_matter_core",
       "auto_claim": true,
+      "shape": "rhombus",
       "x": 272,
       "y": 208,
       "description": [
@@ -1289,7 +1320,7 @@
       "id": "quest_mnv700ft",
       "title": "Matter Conversion",
       "icon": "projecte:transmutation_table",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 272,
       "y": 240,
       "description": [],
@@ -1310,7 +1341,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "projecte:item.pe_matter",
+          "item": "projecte:red_matter",
           "count": 20
         },
         {
@@ -1364,7 +1395,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "projectex:matter",
+          "item": "projecte:dark_matter",
           "count": 2
         }
       ],
@@ -1408,7 +1439,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "inventorypets:meta_pet",
+          "item": "inventorypets:pet_meta",
           "count": 1
         }
       ],
@@ -1441,7 +1472,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:draconic_core",
+          "item": "draconicevolution:draconium_core",
           "count": 8
         },
         {
@@ -1491,8 +1522,9 @@
       ],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/give @p draconicevolution:draconium_capacitor{tag:{Energy:64000000}} 1"
+          "type": "soa_additions:item",
+          "item": "draconicevolution:wyvern_capacitor",
+          "count": 1
         },
         {
           "type": "soa_additions:xp",
@@ -1500,7 +1532,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:particle_generator",
+          "item": "draconicevolution:energy_core_stabilizer",
           "count": 4
         },
         {
@@ -1519,6 +1551,7 @@
       "id": "quest_mnvyhsib",
       "title": "Welcome to Hell",
       "icon": "minecraft:netherrack",
+      "shape": "rhombus",
       "x": 352,
       "y": 128,
       "description": [
@@ -1546,28 +1579,39 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "bountifulbaubles:potionrecall",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_rare",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "minecraft:reeds",
-          "count": 32
+          "item": "inventorypets:nugget_ender",
+          "count": 9,
+          "scope": "team"
         },
         {
           "type": "soa_additions:item",
-          "item": "bountifulbaubles:potionwormhole",
-          "count": 16
+          "item": "inventorypets:pet_house",
+          "count": 1
         },
         {
           "type": "soa_additions:grant_stage",
           "stage": "nether",
           "scope": "player"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:return_scroll",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:sugar_cane",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "waystones:warp_stone",
+          "count": 16
         }
       ],
       "modes": [
@@ -1597,10 +1641,6 @@
       ],
       "rewards": [
         {
-          "type": "soa_additions:command",
-          "command": "/give @p tinymobfarm:lasso{tag:{capturedMob:{mobName:\"Enderman\",mobHostile:1,mobMaxHealth:177.52914428710938,mobLootTableLocation:\"minecraft:entities/enderman\",mobData:{HurtByTimestamp:0,ForgeData:{scalinghealth:difficulty:200,Potion Core - Health Fix:177.52914,thebetweenlands.has_no_equipment:1,Potion Core - Jump Boost Updated:1},RelativeAABB:[-0.30000001192092896,0,-0.30000001192092896,0.30000001192092896,2.9000000953674316,0.30000001192092896],Attributes:[{Base:-2,Modifiers:[{UUIDMost:2189974539282499600,UUIDLeast:-6477178668949725000,Amount:1,Operation:0,Name:\"normal\"}],Name:\"tc.mobmod\"},{Base:0,Name:\"tc.mobmodtaint\"},{Base:1,Name:\"potioncore.projectileDamage\"},{Base:1,Name:\"potioncore.magicDamage\"},{Base:1,Name:\"potioncore.jumpHeight\"},{Base:1,Name:\"potioncore.damageResistance\"},{Base:0,Name:\"potioncore.magicShielding\"},{Base:1,Name:\"xat.entityRace\"},{Base:40,Modifiers:[{UUIDMost:-4557935957806527000,UUIDLeast:-4950522221421206000,Amount:3.4382286071777344,Operation:1,Name:\"ScalingHealth.HealthModifier\"}],Name:\"generic.maxHealth\"},{Base:0,Name:\"generic.knockbackResistance\"},{Base:0.30000001192092896,Modifiers:[{UUIDMost:-7949229004988661000,UUIDLeast:-7828611303000832000,Amount:0.20000000298023224,Operation:2,Name:\"effect.moveSpeed 0\"}],Name:\"generic.movementSpeed\"},{Base:0,Name:\"generic.armor\"},{Base:0,Name:\"generic.armorToughness\"},{Base:1,Name:\"forge.swimSpeed\"},{Base:64,Modifiers:[{UUIDMost:8221059435545710000,UUIDLeast:-8394297424606590000,Amount:-0.05909744628544672,Operation:1,Name:\"Random spawn bonus\"}],Name:\"generic.followRange\"},{Base:7,Modifiers:[{UUIDMost:-3218372695593237000,UUIDLeast:-8743736172551150000,Amount:15.66901683807373,Operation:0,Name:\"ScalingHealth.DamageModifier\"}],Name:\"generic.attackDamage\"}],Invulnerable:0,FallFlying:0,PortalCooldown:0,AbsorptionAmount:0,FallDistance:0,DeathTime:0,ForgeCaps:{dsurround:data:{a:0,f:0},xat:race:{default_height:0,default_width:0,race:\"Human\",bonus_mana:0,prev_race:\"Human\",login:1,first_login:0,target:100,size:100,mana:100,width:0,transformed:0,fake:0,height:0,affinity:1},thebetweenlands:custom_step_sound:{},kathairis:wasinkathairis:{wasInKathairis:0},thebetweenlands:puppet:{ticks:0,guard:0,recruitmentCost:0,stay:0},twilightforest:cap_shield:{permshields:0,tempshields:0},everlastingabilities:org.cyclops.everlastingabilities.api.capability.imutableabilitystore:[],bettercombatmod:ioffhandattack:0,tinkertoolleveling:entityxp:[],thebetweenlands:entity_gems:{gems:[]},bettercombatmod:isecondhurttimer:0,champions:championship:{tier:0},thebetweenlands:equipment:{amuletSlots:1},thaumicaugmentation:portal_state:{inPortal:0}},HandDropChances:[0.085,0.085],PersistenceRequired:0,id:\"minecraft:enderman\",Motion:[0.002078838150302115,-0.0784000015258789,0],Leashed:0,UUIDLeast:-8769700281786107000,Health:177.52914,LeftHanded:0,Air:300,OnGround:1,Dimension:0,UpdateBlocked:0,HandItems:[{},{}],ArmorDropChances:[0.085,0.085,0.085,0.085],UUIDMost:7081603684159277000,Pos:[237.96199462550422,71,-92.91974573795696],Fire:-1,ArmorItems:[{},{},{},{}],CanPickUpLoot:0,HurtTime:0,ActiveEffects:[{Ambient:0,CurativeItems:[{id:\"minecraft:milk_bucket\",Count:1,Damage:0}],ShowParticles:1,Duration:11985,Id:1,Amplifier:0}]},mobHealth:177.5}}} 1"
-        },
-        {
           "type": "soa_additions:item",
           "item": "minecraft:bookshelf",
           "count": 15
@@ -1611,12 +1651,22 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "netherex:ghast_meat_cooked",
+          "item": "twilightdelight:grilled_ghast",
           "count": 16
         },
         {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tinymobfarm:lasso",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:enderman_spawn_egg",
           "count": 1
         }
       ],
@@ -1641,7 +1691,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:manyullyn_ingot",
+          "item": "tconstruct:cobalt_ingot",
           "count": 1
         }
       ],
@@ -1653,7 +1703,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:manyullyn_ingot",
+          "item": "tconstruct:cobalt_ingot",
           "count": 10
         },
         {
@@ -1713,7 +1763,7 @@
       "id": "quest_rough_battle",
       "title": "Rough Battle",
       "icon": "minecraft:nether_star",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 528,
       "y": 80,
       "description": [
@@ -1750,19 +1800,23 @@
           "amount": 7500
         },
         {
+          "type": "soa_additions:grant_stage",
+          "stage": "wither_slayer",
+          "scope": "player"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:greedy_bag",
+          "count": 1
+        },
+        {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 1
         },
         {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "wither_slayer",
-          "scope": "player"
+          "type": "soa_additions:command",
+          "command": "/tellraw @p {\"text\":\"§4§oThe withered soul of the Wither is about to bring death and evil to your world.\"}"
         }
       ],
       "modes": [
@@ -1816,7 +1870,7 @@
       "id": "quest_dragon_slayer",
       "title": "Dragon Slayer",
       "icon": "minecraft:dragon_head",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 496,
       "y": 128,
       "description": [
@@ -1854,19 +1908,27 @@
           "amount": 10000
         },
         {
+          "type": "soa_additions:grant_stage",
+          "stage": "hardmode",
+          "scope": "player"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:greedy_bag",
+          "count": 1
+        },
+        {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 1
         },
         {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
+          "type": "soa_additions:command",
+          "command": "/tellraw @p {\"text\":\"§5§oThe evil spirit within the ancient dragon has been unleashed.\"}"
         },
         {
-          "type": "soa_additions:grant_stage",
-          "stage": "hardmode",
-          "scope": "player"
+          "type": "soa_additions:command",
+          "command": "/tellraw @p {\"text\":\"§2§oYour world has been blessed with new ores!\"}"
         }
       ],
       "modes": [
@@ -1878,7 +1940,8 @@
     {
       "id": "quest_coalescence_matrix",
       "title": "Coalescence Matrix",
-      "icon": "soa_additions:tconevo/coalescence_matrix",
+      "icon": "tconevo:coalescence_matrix",
+      "shape": "rhombus",
       "x": 528,
       "y": 128,
       "description": [
@@ -1890,7 +1953,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:tconevo/coalescence_matrix",
+          "item": "tconevo:coalescence_matrix",
           "count": 1
         }
       ],
@@ -2101,7 +2164,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "avaritia:neutron_collector",
+          "item": "avaritia:neutron_compressor",
           "count": 1
         }
       ],
@@ -2150,7 +2213,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "eternalsingularity:eternal_singularity",
+          "item": "avaritia:eternal_singularity",
           "count": 1
         },
         {
@@ -2173,6 +2236,7 @@
       "id": "quest_power_infinity",
       "title": "Power of Infinity",
       "icon": "avaritia:infinity_catalyst",
+      "shape": "rhombus",
       "x": 704,
       "y": 80,
       "description": [
@@ -2205,7 +2269,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "avaritia:neutronium_compressor",
+          "item": "avaritia:neutron_compressor",
           "count": 1
         },
         {
@@ -2250,8 +2314,9 @@
           "amount": 1919810
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p avaritia:infinity_pickaxe{tag:{Enchantments:[{id:\"minecraft:fortune\",lvl:10s}]}} 1"
+          "type": "soa_additions:item",
+          "item": "avaritia:infinity_pickaxe",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -2270,11 +2335,6 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:materials",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 1
         },
@@ -2285,7 +2345,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "projectex:collector",
+          "item": "projecte:collector_mk3",
           "count": 2
         }
       ],
@@ -2327,7 +2387,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:draconic_core",
+          "item": "draconicevolution:draconium_core",
           "count": 5
         },
         {
@@ -2351,7 +2411,7 @@
       "id": "quest_wyvern_core",
       "title": "Wyvern Core",
       "icon": "draconicevolution:wyvern_core",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 400,
       "y": 240,
       "description": [
@@ -2418,8 +2478,9 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:crafting_injector",
-          "count": 4
+          "item": "draconicevolution:wyvern_crafting_injector",
+          "count": 4,
+          "scope": "team"
         },
         {
           "type": "soa_additions:xp",
@@ -2466,7 +2527,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:draconic_block",
+          "item": "draconicevolution:draconium_block",
           "count": 4
         },
         {
@@ -2518,7 +2579,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:crafting_injector",
+          "item": "draconicevolution:awakened_crafting_injector",
           "count": 3
         },
         {
@@ -2528,7 +2589,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:draconic_block",
+          "item": "draconicevolution:awakened_draconium_block",
           "count": 4
         },
         {
@@ -2564,54 +2625,34 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_core",
+          "item": "draconicevolution:awakened_draconium_block",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_ingot",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_core",
-          "count": 1
+          "item": "draconicevolution:awakened_draconium_block",
+          "count": 4
         },
         {
           "type": "soa_additions:xp",
-          "amount": 16000
+          "amount": 5250
         },
         {
           "type": "soa_additions:item",
-          "item": "mysticalagradditions:special",
+          "item": "draconicevolution:dragon_heart",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:end_crystal",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
           "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "mysticalagradditions:awakened_draconium_seeds",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:nether_star",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:medkit_super",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "awakened",
-          "scope": "player"
         }
       ],
       "modes": [
@@ -2624,7 +2665,7 @@
       "id": "quest_land_of_chaos",
       "title": "Land of Chaos",
       "icon": "draconicevolution:chaos_shard",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 560,
       "y": 176,
       "description": [
@@ -2681,7 +2722,7 @@
       "id": "quest_chaotic_force",
       "title": "Chaotic Force",
       "icon": "draconicevolution:chaotic_core",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 560,
       "y": 240,
       "description": [
@@ -2758,7 +2799,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "draconicevolution:crafting_injector",
+          "item": "draconicevolution:chaotic_crafting_injector",
           "count": 3
         },
         {
@@ -2805,8 +2846,9 @@
           "amount": 1000000
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p draconicevolution:draconium_capacitor{tag:{DEUpgrades:{rfCap:4},Energy:768000000},Damage:1} 1"
+          "type": "soa_additions:item",
+          "item": "draconicevolution:draconic_capacitor",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -2877,7 +2919,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:chaotic_ingot",
+          "item": "soa_additions:draconic_metal_ingot",
           "count": 1
         }
       ],
@@ -2912,7 +2954,7 @@
       "id": "quest_force_awakens",
       "title": "The Force Awakens",
       "icon": "draconicevolution:draconic_staff",
-      "shape": "square",
+      "shape": "rhombus",
       "x": 496,
       "y": 288,
       "description": [
@@ -2940,7 +2982,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconevo:metal",
+          "item": "soa_additions:draconic_metal_ingot",
           "count": 10
         },
         {
@@ -2959,7 +3001,6 @@
       "id": "quest_game_guide",
       "title": "Game Guide",
       "icon": "patchouli:guide_book",
-      "visibility": "invisible",
       "optional": true,
       "x": 64,
       "y": 32,
@@ -2991,7 +3032,7 @@
     {
       "id": "quest_glimpse_abyss",
       "title": "A Glimpse of the Abyss",
-      "icon": "abyssalcraft:eoa",
+      "icon": "deeperdarker:heart_of_the_deep",
       "x": 496,
       "y": 32,
       "description": [
@@ -3001,7 +3042,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "abyssalcraft:eoa",
+          "item": "deeperdarker:heart_of_the_deep",
           "count": 1
         }
       ],
@@ -3009,10 +3050,13 @@
         {
           "type": "soa_additions:xp",
           "amount": 1000
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "abyssal_conquerer"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -3043,10 +3087,13 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_rare",
           "count": 1
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "twilight_shield"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -3073,10 +3120,13 @@
         {
           "type": "soa_additions:xp",
           "amount": 1500
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "ender_charm"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -3141,6 +3191,255 @@
           "type": "soa_additions:grant_stage",
           "stage": "novice_tinker",
           "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_moj30p7i",
+      "title": "Thin Air",
+      "icon": "thinair:respirator",
+      "visibility": "hidden_until_deps",
+      "show_deps": false,
+      "shape": "square",
+      "x": 96,
+      "y": 32,
+      "description": [
+        "It's really hard to breathe in places like underwater or in caves! Prepare a respirator so you don't die!"
+      ],
+      "dependencies": [
+        "3971243b011b5434"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:advancement",
+          "advancement": "thinair:protection_from_red"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "thinair:respirator",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:pufferfish_bucket",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_moj33wqe",
+      "title": "Headshots!",
+      "icon": "minecraft:player_head",
+      "visibility": "hidden_until_deps",
+      "show_deps": false,
+      "x": 144,
+      "y": 32,
+      "description": [
+        "Hey! How did I die so fast? Well, you probably were shot in the head. try a helmet next time..."
+      ],
+      "dependencies": [
+        "3971243b011b5434"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:stat",
+          "stat_type": "minecraft:custom",
+          "stat_value": "minecraft:deaths",
+          "threshold": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:iron_helmet",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:shield",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_chaotic_force_metal",
+      "title": "Chaotic Force",
+      "icon": "soa_additions:chaotic_ingot",
+      "x": 640,
+      "y": 240,
+      "description": [
+        "Obtain a Chaotic Ingot, forged from the essence of chaos itself."
+      ],
+      "dependencies": [
+        "quest_chaotic_fusion"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:chaotic_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 150000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 2"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:chaotic_core",
+          "count": 5
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_giant_furnace",
+      "title": "Giant Furnace",
+      "icon": "tconstruct:foundry_controller",
+      "x": 288,
+      "y": 32,
+      "description": [
+        "Craft the controller of a Foundry — the giant furnace of the Tinkers' world."
+      ],
+      "dependencies": [
+        "0a06f9ed8ae8946e"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:foundry_controller",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:gold_ore",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:obsidian_reinforcement",
+          "count": 256
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:ichor_slime_crystal",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:seared_basin",
+          "count": 10
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_awakened_core_craft",
+      "title": "Awakened Core",
+      "icon": "draconicevolution:awakened_core",
+      "x": 576,
+      "y": 128,
+      "description": [
+        "Craft an Awakened Core"
+      ],
+      "dependencies": [
+        "quest_rough_battle",
+        "quest_awakened_core"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:awakened_core",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 16000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:draconium_ingot",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:awakened_core",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagradditions:awakened_draconium_crux",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:awakened_draconium_seeds",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:nether_star",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:medkit_super",
+          "count": 3
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "awakened"
         }
       ],
       "modes": [

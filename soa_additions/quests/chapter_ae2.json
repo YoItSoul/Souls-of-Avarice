@@ -169,7 +169,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
+          "item": "ae2:cell_component_1k",
           "count": 4
         },
         {
@@ -245,7 +245,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "ae2:formation_core",
+          "item": "ae2:fluix_smart_cable",
           "count": 32
         },
         {
@@ -278,17 +278,32 @@
       ],
       "rewards": [
         {
-          "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
-          "count": 4
-        },
-        {
           "type": "soa_additions:xp",
           "amount": 200
         },
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:calculation_processor_press",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:engineering_processor_press",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:logic_processor_press",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:silicon_press",
+          "count": 1
         }
       ],
       "modes": [
@@ -422,6 +437,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "prettypipes:pipe",
+          "count": 128
         }
       ],
       "modes": [
@@ -498,8 +518,8 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
-          "count": 33
+          "item": "ae2:cell_component_1k",
+          "count": 32
         },
         {
           "type": "soa_additions:xp",
@@ -508,6 +528,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:cell_component_16k",
+          "count": 1
         }
       ],
       "modes": [
@@ -539,8 +564,8 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "ae2:formation_core",
-          "count": 36
+          "item": "ae2:fluix_smart_dense_cable",
+          "count": 32
         },
         {
           "type": "soa_additions:xp",
@@ -549,6 +574,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:crafting_terminal",
+          "count": 4
         }
       ],
       "modes": [
@@ -619,12 +649,7 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 1000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
+          "amount": 2000
         }
       ],
       "modes": [
@@ -655,17 +680,22 @@
       ],
       "rewards": [
         {
-          "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
-          "count": 80
-        },
-        {
           "type": "soa_additions:xp",
           "amount": 700
         },
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:fluix_dust",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:wireless_booster",
+          "count": 16
         }
       ],
       "modes": [
@@ -684,7 +714,8 @@
         "Craft a Wireless Crafting Terminal for on-the-go access"
       ],
       "dependencies": [
-        "ae2_wireless"
+        "ae2_wireless",
+        "ae2_security"
       ],
       "tasks": [
         {
@@ -700,7 +731,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "ae2:capacity_card",
+          "item": "ae2wtlib:magnet_card",
           "count": 1
         },
         {
@@ -744,7 +775,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
+          "item": "ae2:cell_component_4k",
           "count": 8
         },
         {
@@ -784,8 +815,8 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
-          "count": 48
+          "item": "ae2:fluix_crystal",
+          "count": 32
         },
         {
           "type": "soa_additions:xp",
@@ -794,6 +825,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:fluix_steel_ingot",
+          "count": 16
         }
       ],
       "modes": [
@@ -900,6 +936,11 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_common",
           "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:quartz",
+          "count": 16
         }
       ],
       "modes": [
@@ -912,6 +953,7 @@
       "id": "quest_mnw4unls",
       "title": "ME Cooking",
       "icon": "appliedcooking:kitchen_station",
+      "shape": "square",
       "x": 288,
       "y": 176,
       "description": [
@@ -1189,6 +1231,47 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_security",
+      "title": "My Privacy Matters",
+      "icon": "mekanism:security_desk",
+      "x": 432,
+      "y": 64,
+      "description": [
+        "Obtain a Security Desk to keep your network and machines safe from prying hands."
+      ],
+      "dependencies": [
+        "ae2_drive",
+        "ae2_me_chest"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:security_desk",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 2"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:fluix_pearl",
+          "count": 4
         }
       ],
       "modes": [

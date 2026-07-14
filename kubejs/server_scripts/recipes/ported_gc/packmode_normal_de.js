@@ -1,9 +1,10 @@
 // Ported from GreedyCraft: scripts/recipes/packmode/normal/mods/draconicevolution.zs
 // 1.12.2 CraftTweaker (moretweaker.FusionCrafting) -> 1.20.1 KubeJS.
 //
-// Gated by global.SOA_PACKMODE (see _packmode.js); the expert counterpart lives
-// in packmode_expert_mods.js. Both files emit draconicevolution:fusion_crafting
-// recipes; only one set registers per server load based on SOA_PACKMODE.
+// Gated on SOA_PACKMODE === 'adventure' (the SoA mode that maps to GC's
+// "normal" tier — SoA modes are casual/adventure/expert; see _packmode.js).
+// The expert counterpart lives in packmode_expert_mods.js. Only one set
+// registers per server load based on SOA_PACKMODE.
 //
 // draconicevolution:fusion_crafting schema (same as packmode_expert_mods.js):
 //   { type, catalyst, ingredients[], result, tier, total_energy }
@@ -37,8 +38,8 @@
 console.info('[soa_ported] packmode_normal_de.js loading')
 
 ServerEvents.recipes(event => {
-    if (global.SOA_PACKMODE !== 'normal') {
-        console.info('[soa_ported] packmode_normal_de.js: skipped (SOA_PACKMODE is not normal)')
+    if (global.SOA_PACKMODE !== 'adventure') {
+        console.info('[soa_ported] packmode_normal_de.js: skipped (SOA_PACKMODE is not adventure)')
         return
     }
     console.info('[soa_ported] packmode_normal_de.js: registering recipes')

@@ -41,3 +41,15 @@ config/**/.cache/
 **/*.bak
 **/*.old
 **/*.tmp
+
+# AI-assistant working files — never ship
+**/.claude/
+**/CLAUDE.md
+
+# Local analysis tooling + generated audit reports (dev-only, not pack content)
+soa_additions/tools/audit/
+soa_additions/quests/AUDIT_REPORT.md
+
+# Runtime-generated UI/JEI state
+config/fancymenu/ui_themes/
+config/jei/world/

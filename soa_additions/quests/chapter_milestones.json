@@ -216,6 +216,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "rehooked:red_hook",
+          "count": 1
         }
       ],
       "modes": [
@@ -301,6 +306,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:rf_coil_augment",
+          "count": 10
         }
       ],
       "modes": [
@@ -395,7 +405,9 @@
       "description": [
         "Kill the Wither for many times"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_rough_battle"
+      ],
       "tasks": [
         {
           "type": "soa_additions:kill",
@@ -525,12 +537,12 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "mysticalagradditions:insanium_essence",
+          "item": "mysticalagriculture:nether_star_essence",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "mysticalagradditions:nether_star_shard",
+          "item": "mysticalagriculture:nether_star_seeds",
           "count": 1
         },
         {
@@ -541,6 +553,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:machine_furnace",
+          "count": 1
         }
       ],
       "modes": [
@@ -575,12 +592,12 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "mysticalagradditions:insanium_essence",
+          "item": "mysticalagriculture:nether_star_essence",
           "count": 8
         },
         {
           "type": "soa_additions:item",
-          "item": "mysticalagradditions:nether_star_shard",
+          "item": "mysticalagriculture:nether_star_seeds",
           "count": 8
         },
         {
@@ -635,7 +652,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:creative_shard",
           "count": 1
         },
         {
@@ -646,6 +663,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:awakened_core",
+          "count": 6
         }
       ],
       "modes": [
@@ -721,6 +743,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "tconstruct:ichor_slime_crystal",
+          "count": 16
         }
       ],
       "modes": [
@@ -762,6 +789,26 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "artifacts:flame_pendant",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "artifacts:shock_pendant",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "artifacts:thorn_pendant",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "aether:golden_pendant",
+          "count": 1
         }
       ],
       "modes": [
@@ -843,7 +890,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:creative_shard",
           "count": 1
         },
         {
@@ -976,12 +1023,17 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "cyclic:charm_magicdefense",
+          "item": "cyclic:heart",
           "count": 1
         },
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:charm_magicdefense",
+          "count": 1
         }
       ],
       "modes": [
@@ -1017,7 +1069,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:creative_shard",
           "count": 1
         },
         {
@@ -1028,6 +1080,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "rehooked:ender_hook",
+          "count": 1
         }
       ],
       "modes": [
@@ -1068,12 +1125,12 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "avaritia:infinity_ingot",
+          "item": "avaritia:neutron_ingot",
           "count": 4
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:creative_shard",
           "count": 1
         },
         {
@@ -1124,7 +1181,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "scalinghealth:heart_crystal",
+          "item": "cyclic:heart",
           "count": 5
         },
         {

@@ -129,6 +129,14 @@
     "energy": true,
     "tooltip_renderer": true
   },
+  "valoria": {
+    "jewelry": true,
+    "manipulator": true,
+    "keg": true,
+    "key": true,
+    "crusher": true,
+    "entity_weakness": true
+  },
   "appliedcooking": {
     "kitchen_station": true
   },

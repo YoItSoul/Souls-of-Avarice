@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:ingots/infinity"
-  },
-  "material": "soa_additions:infinity_metal",
-  "needed": 1,
-  "value": 1
-}

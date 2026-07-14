@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:nuggets/iridium"
-  },
-  "material": "soa_additions:iridium",
-  "needed": 9,
-  "value": 1
-}

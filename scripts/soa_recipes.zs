@@ -297,12 +297,10 @@ craftingTable.addShaped("soa_energy_matter_core", <item:soa_additions:energy_mat
 //  ARCANE CRYSTAL BALL
 // ============================================================
 
-// [BLOCKED] Original recipe unknown - creating a thematic recipe
-craftingTable.addShaped("soa_arcane_crystal_ball", <item:soa_additions:arcane_crystal_ball>, [
-    [<item:minecraft:air>, <item:minecraft:amethyst_shard>, <item:minecraft:air>],
-    [<item:minecraft:amethyst_shard>, <item:minecraft:ender_eye>, <item:minecraft:amethyst_shard>],
-    [<item:minecraft:air>, <item:minecraft:amethyst_shard>, <item:minecraft:air>]
-]);
+// Crafted via Malum Spirit Infusion. See:
+//   kubejs/server_scripts/recipes/custom/malum_arcane_crystal_ball.js
+// The previous shaped crafting-table recipe was removed as too cheap for
+// what right-clicking the ball unlocks (master_wizard gamestage).
 
 // ============================================================
 //  PEARL OF KNOWLEDGE

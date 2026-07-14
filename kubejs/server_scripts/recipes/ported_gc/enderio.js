@@ -84,99 +84,105 @@ ServerEvents.recipes(event => {
 
     // ---- AlloySmelter ----
 
+    // EIO 1.20 alloy_smelting schema (verified from data/enderio/recipes/alloy_smelting/cake_base.json):
+    //   inputs: [{ count, ingredient: { item|tag } }, ...]
+    //   result: { count, item }
+    // GC's old shape (inputs:[{tag/item, count}], output:{}) silently fails parse with
+    // "Item cannot be null".
+
     // AlloySmelter.removeRecipe(<thermalfoundation:material:160>);    // enderium ingot
     event.remove({ type: 'enderio:alloy_smelting', output: 'thermal:enderium_ingot' })
     // AlloySmelter.removeRecipe(<enderio:item_alloy_ingot:8>);         // end steel
     event.remove({ type: 'enderio:alloy_smelting', output: 'enderio:end_steel_ingot' })
     // AlloySmelter.removeRecipe(<enderio:item_material:54>);           // enhanced end-steel machine chassis
-    event.remove({ type: 'enderio:alloy_smelting', output: 'enderio:enhanced_machine_chassis' }) // FIXME: confirm 1.20 EIO ID
+    // SKIPPED: enderio:enhanced_machine_chassis does not exist in 1.20 EIO 6.2.18 (confirmed via
+    // soa_exports/items.json — only ensouled_chassis and void_chassis ship). Both the remove
+    // and the corresponding add below are dropped.
 
     // AlloySmelter.addRecipe(<modularmachinery:itemmodularium>*2, [<ore:ingotIron>, <ore:ingotBronze>, <ore:dustRedstone>], 2000, 10.0f);
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [{ tag: 'forge:ingots/iron' }, { tag: 'forge:ingots/bronze' }, { tag: 'forge:dusts/redstone' }],
-        output: { item: 'soa_additions:modularium_ingot', count: 2 },
         energy: 2000,
-        experience: 10.0
+        experience: 10.0,
+        inputs: [
+            { count: 1, ingredient: { tag: 'forge:ingots/iron' } },
+            { count: 1, ingredient: { tag: 'forge:ingots/bronze' } },
+            { count: 1, ingredient: { tag: 'forge:dusts/redstone' } }
+        ],
+        result: { count: 2, item: 'soa_additions:modularium_ingot' }
     })
     // AlloySmelter.addRecipe(<modularmachinery:itemmodularium>*2, [<ore:ingotConductiveIron>, <ore:ingotBronze>], 2000, 10.0f);
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [{ item: 'enderio:conductive_alloy_ingot' }, { tag: 'forge:ingots/bronze' }],
-        output: { item: 'soa_additions:modularium_ingot', count: 2 },
         energy: 2000,
-        experience: 10.0
+        experience: 10.0,
+        inputs: [
+            { count: 1, ingredient: { item: 'enderio:conductive_alloy_ingot' } },
+            { count: 1, ingredient: { tag: 'forge:ingots/bronze' } }
+        ],
+        result: { count: 2, item: 'soa_additions:modularium_ingot' }
     })
     // AlloySmelter.addRecipe(<tconevo:material>*2, [<ore:ingotAdamant>, <ore:ingotManyullyn>*2, <ore:ingotEnderium>*2], 7500, 30.0f);
     // tconevo:material -> soa_additions:fusion_matrix_ingot
+    // forge:ingots/adamant tag does not exist in this pack (only taiga:tinker_materials/adamant).
+    // Fall back to the direct item id taiga:adamant_ingot.
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [
-            { tag: 'forge:ingots/adamant' }, // FIXME: tag may not exist -- "adamant" was GC ore dict
-            { tag: 'forge:ingots/manyullyn', count: 2 },
-            { tag: 'forge:ingots/enderium',  count: 2 }
-        ],
-        output: { item: 'soa_additions:fusion_matrix_ingot', count: 2 },
         energy: 7500,
-        experience: 30.0
+        experience: 30.0,
+        inputs: [
+            { count: 1, ingredient: { item: 'taiga:adamant_ingot' } },
+            { count: 2, ingredient: { tag: 'forge:ingots/manyullyn' } },
+            { count: 2, ingredient: { tag: 'forge:ingots/enderium' } }
+        ],
+        result: { count: 2, item: 'soa_additions:fusion_matrix_ingot' }
     })
     // AlloySmelter.addRecipe(<additions:netherite_ingot>, [<ore:gemAncientDebris>*4, <ore:ingotGold>*4], 6000, 50.0f);
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [
-            { item: 'minecraft:ancient_debris', count: 4 },
-            { tag: 'forge:ingots/gold',         count: 4 }
-        ],
-        output: { item: 'minecraft:netherite_ingot' },
         energy: 6000,
-        experience: 50.0
+        experience: 50.0,
+        inputs: [
+            { count: 4, ingredient: { item: 'minecraft:ancient_debris' } },
+            { count: 4, ingredient: { tag: 'forge:ingots/gold' } }
+        ],
+        result: { count: 1, item: 'minecraft:netherite_ingot' }
     })
     // AlloySmelter.addRecipe(<additions:stainless_steel_ingot>*4, [<ore:ingotManganeseSteel>*4, <ore:ingotNickel>, <ore:ingotChromium>], 4000, 12.0f);
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [
-            { tag: 'forge:ingots/manganese_steel', count: 4 },
-            { tag: 'forge:ingots/nickel' },
-            { tag: 'forge:ingots/chromium' }
-        ],
-        output: { item: 'soa_additions:stainless_steel_ingot', count: 4 },
         energy: 4000,
-        experience: 12.0
+        experience: 12.0,
+        inputs: [
+            { count: 4, ingredient: { tag: 'forge:ingots/manganese_steel' } },
+            { count: 1, ingredient: { tag: 'forge:ingots/nickel' } },
+            { count: 1, ingredient: { tag: 'forge:ingots/chromium' } }
+        ],
+        result: { count: 4, item: 'soa_additions:stainless_steel_ingot' }
     })
     // AlloySmelter.addRecipe(<additions:manganese_steel_ingot>*2, [<ore:ingotSteel>*2, <ore:ingotManganese>], 1200, 4.0f);
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [
-            { tag: 'forge:ingots/steel', count: 2 },
-            { tag: 'forge:ingots/manganese' }
-        ],
-        output: { item: 'soa_additions:manganese_steel_ingot', count: 2 },
         energy: 1200,
-        experience: 4.0
+        experience: 4.0,
+        inputs: [
+            { count: 2, ingredient: { tag: 'forge:ingots/steel' } },
+            { count: 1, ingredient: { tag: 'forge:ingots/manganese' } }
+        ],
+        result: { count: 2, item: 'soa_additions:manganese_steel_ingot' }
     })
     // AlloySmelter.addRecipe(<enderio:item_alloy_ingot:8>*2, [<ore:obsidian>, <ore:ingotDarkSteel>*2, <ore:enderpearl>], 800, 2.0f);
     event.custom({
         type: 'enderio:alloy_smelting',
-        inputs: [
-            { tag: 'forge:obsidian' },
-            { item: 'enderio:dark_steel_ingot', count: 2 },
-            { tag: 'forge:ender_pearls' }
-        ],
-        output: { item: 'enderio:end_steel_ingot', count: 2 },
         energy: 800,
-        experience: 2.0
-    })
-    // AlloySmelter.addRecipe(<enderio:item_material:54>, [<ore:itemEndSteelMachineChassi>, <ore:dyeEnhancedMachine>, <ore:ingotDurasteel>*2], 24000, 60.0f);
-    event.custom({
-        type: 'enderio:alloy_smelting',
+        experience: 2.0,
         inputs: [
-            { tag: 'forge:end_steel_machine_chassis' },     // FIXME: tag/id
-            { tag: 'forge:enhanced_machine_dye' },          // FIXME: tag/id
-            { item: 'soa_additions:durasteel_ingot', count: 2 }
+            { count: 1, ingredient: { tag: 'forge:obsidian' } },
+            { count: 2, ingredient: { item: 'enderio:dark_steel_ingot' } },
+            { count: 1, ingredient: { tag: 'forge:ender_pearls' } }
         ],
-        output: { item: 'enderio:enhanced_machine_chassis' }, // FIXME: confirm 1.20 EIO ID
-        energy: 24000,
-        experience: 60.0
+        result: { count: 2, item: 'enderio:end_steel_ingot' }
     })
+    // SKIPPED: AlloySmelter.addRecipe(enhanced_machine_chassis, ...) — output item not present in 1.20 EIO.
     console.info('[soa_ported] enderio.js: DONE')
 })

@@ -1,0 +1,17 @@
+{
+  "type": "lootbags:loot",
+  "name": "Bat Bag",
+  "rarity": "uncommon",
+  "output": {
+    "entries": [
+      {
+        "stack": {
+          "id": "minecraft:bat_spawn_egg",
+          "count": 1
+        },
+        "weight": 20
+      }
+    ],
+    "rolls": 1
+  }
+}

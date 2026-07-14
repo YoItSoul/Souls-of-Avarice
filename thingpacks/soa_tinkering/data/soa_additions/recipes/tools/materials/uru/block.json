@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:storage_blocks/uru"
-  },
-  "material": "soa_additions:uru",
-  "needed": 1,
-  "value": 9
-}

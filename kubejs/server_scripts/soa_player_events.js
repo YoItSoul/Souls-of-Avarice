@@ -55,8 +55,8 @@ EntityEvents.death(event => {
     const level = player.level
     if (level.isClientSide()) return
 
-    const src = event.source
-    let killerName = ''
+    var src = event.source
+    var killerName = ''
     if (src && src.actual && src.actual.id !== player.id) {
         // Killer present and not the player themselves
         killerName = src.actual.hasCustomName() ? String(src.actual.customName.string)
@@ -64,11 +64,11 @@ EntityEvents.death(event => {
     }
 
     // Build augmented msg: "§c☠ §7<vanilla msg> §9@ §7(§3X§7, §3Y§7, §3Z§7)"
-    const x = Math.floor(player.x), y = Math.floor(player.y), z = Math.floor(player.z)
-    const baseMsg = src && src.localizedDeathMessage
+    var x = Math.floor(player.x), y = Math.floor(player.y), z = Math.floor(player.z)
+    var baseMsg = src && src.localizedDeathMessage
         ? String(src.localizedDeathMessage.string)
         : (player.username + ' died')
-    const augmented = ' §c☠ §7' + baseMsg.replace(/§r/g, '§7') +
+    var augmented = ' §c☠ §7' + baseMsg.replace(/§r/g, '§7') +
                       ' §9@ §7(§3' + x + '§7, §3' + y + '§7, §3' + z + '§7)'
 
     player.server.tell(Component.literal(augmented))
@@ -85,8 +85,8 @@ PlayerEvents.loggedIn(event => {
 
     // -- Cheat detection: creative-mode auto-staging --
     if (GameStageHelper) {
-        const isTrueHero = GameStageHelper.hasStage(player, 'truehero')
-        const isWuss     = GameStageHelper.hasStage(player, 'iswuss')
+        var isTrueHero = GameStageHelper.hasStage(player, 'truehero')
+        var isWuss     = GameStageHelper.hasStage(player, 'iswuss')
 
         if (isTrueHero && !isWuss) {
             player.tell(Component.translatable('greedycraft.event.true_hero.join',
@@ -104,23 +104,23 @@ PlayerEvents.loggedIn(event => {
             player.tell(Component.translatable('greedycraft.event.creative_cheat.chat'))
             // GC ran /unlockallstages here — SDM GameStages doesn't ship that
             // command. Iterate known stages and add each:
-            const ALL_STAGES = ['getting_started','nether','wither_slayer','ender_charm',
+            var ALL_STAGES = ['getting_started','nether','wither_slayer','ender_charm',
                 'hardmode','wyvern','awakened','chaotic','infinity','expert','graduated',
                 'descendant_of_the_sun','novice_engineer','skilled_engineer','master_engineer',
                 'novice_wizard','skilled_wizard','master_wizard','fusion_matrix',
                 'chaotic_dominator','abyssal_conquerer','wielder_of_infinity',
                 'challenger_a','challenger_b','challenger_c','challenger_d',
                 'challenger_e','challenger_f','challenger_g']
-            for (const s of ALL_STAGES) GameStageHelper.addStage(player, s)
+            for (var si = 0; si < ALL_STAGES.length; si++) GameStageHelper.addStage(player, ALL_STAGES[si])
             player.tell(Component.translatable('greedycraft.event.creative_stage_unlocked'))
         }
     }
 
     // -- Welcome quote broadcast (random tip from soa_quote_pools.js) --
     try {
-        const pool = global.SOA_WELCOME_QUOTES
+        var pool = global.SOA_WELCOME_QUOTES
         if (pool && pool.length > 0) {
-            const quote = pool[Math.floor(Math.random() * pool.length)]
+            var quote = pool[Math.floor(Math.random() * pool.length)]
             player.tell(Component.literal(quote))
         }
     } catch (e) { /* pool not loaded yet */ }
@@ -132,8 +132,8 @@ PlayerEvents.loggedIn(event => {
         GameStageHelper.addStage(player, 'first_join_message_shown')
     } else {
         // -- Per-season greeting (only on subsequent logins) --
-        let key = 'greedycraft.event.welcome.general0'
-        let key1 = 'greedycraft.event.welcome.general1'
+        var key = 'greedycraft.event.welcome.general0'
+        var key1 = 'greedycraft.event.welcome.general1'
         if (isChristmas())          { key = 'greedycraft.event.welcome.christmas0';     key1 = 'greedycraft.event.welcome.christmas1' }
         else if (isHalloween())     { key = 'greedycraft.event.welcome.halloween0';     key1 = 'greedycraft.event.welcome.halloween1' }
         else if (isNewYear())       { key = 'greedycraft.event.welcome.new_year0';      key1 = 'greedycraft.event.welcome.new_year2' }
@@ -143,10 +143,6 @@ PlayerEvents.loggedIn(event => {
             .append(Component.translatable(key1)))
     }
 
-    // -- /advancement revoke for elysia/root (no-op until advancements ported) --
-    try {
-        player.runCommand('advancement revoke ' + player.username + ' through soa_additions:elysia/root')
-    } catch (e) { /* advancement tree not present yet */ }
 })
 
 // ============================================================
@@ -176,9 +172,9 @@ PlayerEvents.respawned(event => {
     try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* default */ }
     if (mode === 'casual') return
 
-    for (const type of RESPAWN_KILL_TYPES) {
+    for (var ti = 0; ti < RESPAWN_KILL_TYPES.length; ti++) {
         try {
-            player.runCommand('execute as @e[type=' + type + '] run kill @s')
+            player.runCommand('execute as @e[type=' + RESPAWN_KILL_TYPES[ti] + '] run kill @s')
         } catch (e) { /* type not registered (mod absent) — silently skip */ }
     }
 })

@@ -66,8 +66,7 @@
     {
       "id": "cha_accessory_reforge",
       "title": "Accessory Reforge",
-      "icon": "bountifulbaubles:reforger",
-      "visibility": "invisible",
+      "icon": "minecraft:smithing_table",
       "x": 48,
       "y": 96,
       "description": [
@@ -77,7 +76,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "bountifulbaubles:reforger",
+          "item": "minecraft:smithing_table",
           "count": 1
         }
       ],
@@ -89,6 +88,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ars_nouveau:ritual_disintegration",
+          "count": 1
         }
       ],
       "modes": [
@@ -265,7 +269,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mysticalagriculture:tinkering_table",
+          "item": "mysticalagriculture:inferium_essence",
           "count": 1
         }
       ],
@@ -282,6 +286,21 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:wither_skeleton_seeds",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:enderman_seeds",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:ghast_seeds",
+          "count": 1
         }
       ],
       "modes": [
@@ -377,7 +396,6 @@
       "id": "cha_a_blessing_of_the_lord",
       "title": "A Blessing of the Lord",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 192,
       "y": 240,
       "description": [
@@ -386,7 +404,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "cataclysm:vitality_ankh",
+          "count": 1
         }
       ],
       "rewards": [
@@ -597,8 +617,7 @@
     {
       "id": "cha_the_destroyer",
       "title": "The Destroyer",
-      "icon": "defiledlands:essence_destroyer",
-      "visibility": "invisible",
+      "icon": "sculkhorde:chunk_o_brain",
       "x": 0,
       "y": 144,
       "description": [
@@ -608,7 +627,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "defiledlands:essence_destroyer",
+          "item": "kubejs:ravaging_catalyst",
           "count": 1
         }
       ],
@@ -616,6 +635,21 @@
         {
           "type": "soa_additions:xp",
           "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ravaging_ingot",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.scarlite",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:scarlite",
+          "count": 2
         }
       ],
       "modes": [
@@ -628,7 +662,6 @@
       "id": "cha_dancing_on_fire",
       "title": "Dancing on Fire",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 336,
       "y": 48,
       "description": [
@@ -637,7 +670,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "cyclic:charm_fire",
+          "count": 1
         }
       ],
       "rewards": [
@@ -720,11 +755,16 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 1000
+          "amount": 5000
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bounty_hunter_medal_silver",
+          "count": 3
         }
       ],
       "modes": [
@@ -737,7 +777,6 @@
       "id": "cha_feel_the_motion",
       "title": "Feel the Motion",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 192,
       "y": 288,
       "description": [
@@ -746,7 +785,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "minecraft:elytra",
+          "count": 1
         }
       ],
       "rewards": [
@@ -816,7 +857,7 @@
     {
       "id": "cha_cosmos_in_your_hand",
       "title": "Cosmos in Your Hand",
-      "icon": "additions:cosmilite_ingot",
+      "icon": "soa_additions:cosmilite_ingot",
       "x": 240,
       "y": 384,
       "description": [
@@ -826,7 +867,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "additions:cosmilite_ingot",
+          "item": "soa_additions:cosmilite_ingot",
           "count": 1
         }
       ],
@@ -843,6 +884,11 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:cosmilite_ingot",
+          "count": 2
         }
       ],
       "modes": [
@@ -855,7 +901,6 @@
       "id": "cha_i_love_math",
       "title": "I Love Math",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 96,
       "y": 336,
       "description": [
@@ -864,7 +909,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "jecalculation:item_calculator_math",
+          "count": 1
         }
       ],
       "rewards": [
@@ -895,7 +942,84 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "minecraft:white_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:orange_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:magenta_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:light_blue_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:yellow_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:lime_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:pink_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:gray_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:light_gray_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:cyan_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:purple_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:blue_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:brown_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:green_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:red_dye",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:black_dye",
+          "count": 1
         }
       ],
       "rewards": [
@@ -910,7 +1034,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "twilightforest:twilight_oak_sapling",
+          "item": "twilightforest:sorting_sapling",
           "count": 1
         },
         {
@@ -975,7 +1099,7 @@
     {
       "id": "cha_one_stop_agricultural_market",
       "title": "One-stop Agricultural Market",
-      "icon": "farmingforblockheads:market",
+      "icon": "minecraft:emerald_block",
       "x": 288,
       "y": 192,
       "description": [
@@ -985,7 +1109,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "farmingforblockheads:market",
+          "item": "minecraft:emerald_block",
           "count": 1
         }
       ],
@@ -1043,7 +1167,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "tconstruct:obsidian_reinforcement",
           "count": 256
         },
         {
@@ -1062,7 +1186,6 @@
       "id": "cha_einstein_rosen_bridge",
       "title": "Einstein-Rosen Bridge",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 288,
       "y": 288,
       "description": [
@@ -1071,7 +1194,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "waystones:warp_stone",
+          "count": 1
         }
       ],
       "rewards": [
@@ -1142,7 +1267,6 @@
       "id": "cha_tofu_power",
       "title": "Tofu Power",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 336,
       "y": 144,
       "description": [
@@ -1176,7 +1300,6 @@
       "id": "cha_a_peaceful_life",
       "title": "A Peaceful Life",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 432,
       "y": 0,
       "description": [
@@ -1185,7 +1308,8 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:breed",
+          "count": 2
         }
       ],
       "rewards": [
@@ -1368,7 +1492,6 @@
       "id": "cha_i_m_in_charge_of_this_game",
       "title": "I'm in Charge of This Game",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 240,
       "y": 288,
       "description": [
@@ -1377,7 +1500,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "soa_additions:difficulty_changer",
+          "count": 1
         }
       ],
       "rewards": [
@@ -1391,7 +1516,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "scalinghealth:heart_crystal",
+          "item": "cyclic:heart",
           "count": 4
         }
       ],
@@ -1431,6 +1556,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "prefab:item_house_improved",
+          "count": 1
         }
       ],
       "modes": [
@@ -1480,7 +1610,7 @@
     {
       "id": "cha_super_chilling",
       "title": "Super Chilling",
-      "icon": "additions:cryonium_ingot",
+      "icon": "soa_additions:cryonium_ingot",
       "x": 96,
       "y": 384,
       "description": [
@@ -1502,6 +1632,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 7000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:cryonium_ingot",
+          "count": 3
         }
       ],
       "modes": [
@@ -1535,6 +1670,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ender_chest",
+          "count": 1
         }
       ],
       "modes": [
@@ -1547,7 +1687,6 @@
       "id": "cha_underground_treasure",
       "title": "Underground Treasure",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 144,
       "y": 336,
       "description": [
@@ -1556,7 +1695,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:observe",
+          "target": "pots_and_mimics:treasure_pot",
+          "count": 1
         }
       ],
       "rewards": [
@@ -1588,7 +1729,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "scalinghealth:medkit",
+          "item": "cyclic:heart",
           "count": 1
         }
       ],
@@ -1596,7 +1737,7 @@
         {
           "type": "soa_additions:item",
           "item": "minecraft:golden_apple",
-          "count": 6
+          "count": 5
         },
         {
           "type": "soa_additions:item",
@@ -1610,6 +1751,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:enchanted_golden_apple",
+          "count": 1
         }
       ],
       "modes": [
@@ -1622,7 +1768,6 @@
       "id": "cha_quick_house_moving",
       "title": "Quick House Moving",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 144,
       "y": 240,
       "description": [
@@ -1631,7 +1776,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "cyclic:tile_transporter",
+          "count": 1
         }
       ],
       "rewards": [
@@ -1647,6 +1794,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:tile_transporter",
+          "count": 4
         }
       ],
       "modes": [
@@ -1659,7 +1811,6 @@
       "id": "cha_the_depressed_man",
       "title": "The Depressed Man",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 48,
       "y": 144,
       "description": [
@@ -1679,6 +1830,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 2300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:ravaging_ingot",
+          "count": 10
         }
       ],
       "modes": [
@@ -1717,6 +1873,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "create:experience_nugget",
+          "count": 32
         }
       ],
       "modes": [
@@ -1729,7 +1890,6 @@
       "id": "cha_never_fills_up",
       "title": "Never Fills Up",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 288,
       "y": 48,
       "description": [
@@ -1738,7 +1898,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "dankstorage:dank_6",
+          "count": 1
         }
       ],
       "rewards": [
@@ -1749,6 +1911,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "dankstorage:dock",
+          "count": 1
         }
       ],
       "modes": [
@@ -1798,7 +1965,7 @@
     {
       "id": "cha_reliable_guardians",
       "title": "Reliable Guardians",
-      "icon": "openmodularturrets:turret_base",
+      "icon": "guardvillagers:guard_spawn_egg",
       "x": 432,
       "y": 240,
       "description": [
@@ -1808,7 +1975,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "openmodularturrets:turret_base",
+          "item": "guardvillagers:guard_spawn_egg",
           "count": 1
         }
       ],
@@ -1820,6 +1987,16 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "guardvillagers:guard_spawn_egg",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:arrow",
+          "count": 1280
         }
       ],
       "modes": [
@@ -2111,7 +2288,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mysticalagriculture:tinkering_table",
+          "item": "mysticalagriculture:supremium_ingot",
           "count": 1
         }
       ],
@@ -2123,11 +2300,31 @@
         {
           "type": "soa_additions:item",
           "item": "mysticalagriculture:inferium_essence",
-          "count": 148
+          "count": 132
         },
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:inferium_ingot",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:prudentium_ingot",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:tertium_ingot",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mysticalagriculture:imperium_ingot",
+          "count": 4
         }
       ],
       "modes": [
@@ -2162,7 +2359,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "minecraft:white_dye",
+          "item": "minecraft:lapis_lazuli",
           "count": 64
         },
         {
@@ -2288,7 +2485,7 @@
     {
       "id": "cha_a_small_tree",
       "title": "A small tree",
-      "icon": "bonsaitrees:bonsaipot",
+      "icon": "botanypots:terracotta_botany_pot",
       "x": 0,
       "y": 240,
       "description": [
@@ -2298,7 +2495,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "bonsaitrees:bonsaipot",
+          "item": "botanypots:terracotta_botany_pot",
           "count": 1
         }
       ],
@@ -2315,6 +2512,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botanypots:terracotta_botany_pot",
+          "count": 1
         }
       ],
       "modes": [
@@ -2457,10 +2659,8 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "nocubescreateexp:exp_block",
-          "count": 10,
-          "consume": true
+          "type": "soa_additions:xp",
+          "value": 31600
         }
       ],
       "rewards": [
@@ -2476,6 +2676,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:device_xp_condenser",
+          "count": 1
         }
       ],
       "modes": [
@@ -2487,7 +2692,7 @@
     {
       "id": "cha_shooting_stars",
       "title": "Shooting Stars",
-      "icon": "nyx:fallen_star",
+      "icon": "soa_additions:fallen_star",
       "x": 288,
       "y": 336,
       "description": [
@@ -2497,7 +2702,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "nyx:fallen_star",
+          "item": "soa_additions:fallen_star",
           "count": 1
         }
       ],
@@ -2509,6 +2714,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:fallen_star",
+          "count": 1
         }
       ],
       "modes": [
@@ -2673,8 +2883,13 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "prefab:block_compressed_stone",
+          "item": "prefab:block_triple_compressed_stone",
           "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:compressed_cobblestone",
+          "count": 4
         }
       ],
       "modes": [
@@ -2687,7 +2902,6 @@
       "id": "cha_you_can_t_eat_this",
       "title": "You Can't Eat This",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 336,
       "y": 384,
       "description": [
@@ -2696,7 +2910,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "minecraft:suspicious_stew",
+          "count": 1
         }
       ],
       "rewards": [
@@ -2778,6 +2994,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "create:experience_nugget",
+          "count": 16
         }
       ],
       "modes": [
@@ -2860,12 +3081,12 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "enderio:dark_steel_ingot",
+          "item": "enderio:yeta_wrench",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "ae2:certus_quartz_crystal",
+          "item": "ae2:certus_quartz_wrench",
           "count": 1
         },
         {
@@ -2880,6 +3101,26 @@
         {
           "type": "soa_additions:item",
           "item": "bigreactors:wrench",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "create:wrench",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "chiselsandbits:wrench",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "prettypipes:wrench",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "cyclic:cable_wrench",
           "count": 1
         }
       ],
@@ -2917,7 +3158,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "storagedrawers:upgrade_template",
+          "item": "storagedrawers:creative_storage_upgrade",
           "count": 4
         }
       ],
@@ -2947,7 +3188,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "scalinghealth:heart_crystal",
+          "item": "cyclic:heart",
           "count": 3
         },
         {
@@ -2973,8 +3214,7 @@
     {
       "id": "cha_quest_display",
       "title": "Quest Display",
-      "icon": "ftbquests:screen",
-      "visibility": "invisible",
+      "icon": "create:display_board",
       "x": 96,
       "y": 96,
       "description": [
@@ -2984,7 +3224,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "ftbquests:screen",
+          "item": "create:display_board",
           "count": 1
         }
       ],
@@ -3067,7 +3307,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "storagedrawers:upgrade_template",
+          "item": "storagedrawers:emerald_storage_upgrade",
           "count": 4
         },
         {
@@ -3166,7 +3406,7 @@
     {
       "id": "cha_nature_s_blessing",
       "title": "Nature's Blessing",
-      "icon": "additions:terra_alloy_ingot",
+      "icon": "soa_additions:terra_alloy_ingot",
       "x": 192,
       "y": 384,
       "description": [
@@ -3176,7 +3416,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "additions:terra_alloy_ingot",
+          "item": "soa_additions:terra_alloy_ingot",
           "count": 1
         }
       ],
@@ -3188,6 +3428,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 25000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:terra_alloy_ingot",
+          "count": 3
         }
       ],
       "modes": [
@@ -3254,7 +3499,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "ironchest:iron_chest",
+          "item": "ironchest:diamond_chest",
           "count": 1
         }
       ],
@@ -3265,7 +3510,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "ironchest:iron_chest",
+          "item": "ironchest:diamond_chest",
           "count": 3
         },
         {
@@ -3282,7 +3527,7 @@
     {
       "id": "cha_music",
       "title": "Music!",
-      "icon": "ambience:soundnizer",
+      "icon": "musictriggers:music_recorder",
       "x": 336,
       "y": 336,
       "description": [
@@ -3292,7 +3537,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "ambience:soundnizer",
+          "item": "musictriggers:music_recorder",
           "count": 1
         }
       ],
@@ -3304,6 +3549,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "musictriggers:record",
+          "count": 1
         }
       ],
       "modes": [
@@ -3377,6 +3627,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "dankstorage:dank_7",
+          "count": 1
         }
       ],
       "modes": [
@@ -3490,7 +3745,6 @@
       "id": "cha_moving_in_style",
       "title": "Moving in Style",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 384,
       "y": 0,
       "description": [
@@ -3499,7 +3753,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "rehooked:ender_hook",
+          "count": 1
         }
       ],
       "rewards": [
@@ -3533,14 +3789,14 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "projecte:dark_matter",
+          "item": "projecte:red_matter",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "projecte:dark_matter",
+          "item": "projecte:red_matter",
           "count": 2
         },
         {
@@ -3583,6 +3839,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 12000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:infernium_ingot",
+          "count": 3
         }
       ],
       "modes": [
@@ -3935,7 +4196,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "appflux:charged_redstone",
+          "item": "fluxnetworks:flux_dust",
           "count": 1
         }
       ],
@@ -3980,11 +4241,16 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 1000
+          "amount": 200
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bountiful:bountyboard",
+          "count": 1
         }
       ],
       "modes": [
@@ -3997,7 +4263,6 @@
       "id": "cha_hell_sailor",
       "title": "Hell Sailor",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 96,
       "y": 288,
       "description": [
@@ -4006,7 +4271,9 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:item",
+          "item": "minecraft:saddle",
+          "count": 1
         }
       ],
       "rewards": [
@@ -4089,6 +4356,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "createfood:white_chocolate_toast",
+          "count": 3
         }
       ],
       "modes": [
@@ -4138,7 +4410,7 @@
     {
       "id": "cha_flux_control",
       "title": "Flux Control",
-      "icon": "fluxnetworks:fluxcontroller",
+      "icon": "fluxnetworks:flux_controller",
       "x": 48,
       "y": 384,
       "description": [
@@ -4150,7 +4422,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "fluxnetworks:fluxcontroller",
+          "item": "fluxnetworks:flux_controller",
           "count": 1
         }
       ],
@@ -4220,7 +4492,6 @@
       "id": "cha_tower_conquerer",
       "title": "Tower Conquerer",
       "icon": "minecraft:barrier",
-      "visibility": "invisible",
       "x": 144,
       "y": 0,
       "description": [
@@ -4235,11 +4506,6 @@
         }
       ],
       "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "lootbags:loot_bag",
-          "count": 4
-        },
         {
           "type": "soa_additions:xp",
           "amount": 250

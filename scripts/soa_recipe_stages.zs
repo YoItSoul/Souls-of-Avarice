@@ -508,7 +508,9 @@ Recipes.setRecipeStage("skilled_engineer", <item:redstone_arsenal:flux_controlle
 //  SKILLED_WIZARD
 // ============================================================
 
-Recipes.setRecipeStage("skilled_wizard", <resource:soa_additions:soa_arcane_crystal_ball>);
+// Recipe-id gate removed alongside the shaped crafting recipe; the item-id
+// gate below still applies to the Malum spirit_infusion recipe in
+// kubejs/server_scripts/recipes/custom/malum_arcane_crystal_ball.js.
 Recipes.setRecipeStage("skilled_wizard", <item:soa_additions:arcane_crystal_ball>);
 Recipes.setRecipeStage("skilled_wizard", <item:soa_additions:astral_metal_ingot>);
 Recipes.setRecipeStage("skilled_wizard", <item:soa_additions:crimsonite_ingot>);

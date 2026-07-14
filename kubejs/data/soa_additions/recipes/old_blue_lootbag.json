@@ -1,0 +1,8 @@
+{
+  "type": "lootbags:loot",
+  "name": "Old Blue Loot Bag",
+  "rarity": "rare",
+  "output": {
+    "table": "minecraft:chests/woodland_mansion"
+  }
+}

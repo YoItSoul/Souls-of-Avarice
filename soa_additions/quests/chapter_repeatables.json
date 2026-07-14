@@ -29,7 +29,9 @@
       "description": [
         "Located at coordinates where x and z can be divided by 10000"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_awakened_core"
+      ],
       "tasks": [
         {
           "type": "soa_additions:kill",
@@ -45,6 +47,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:chaos_shard",
+          "count": 5
         }
       ],
       "modes": [
@@ -57,7 +64,6 @@
       "id": "rep_mana_overload",
       "title": "Mana Overload",
       "icon": "botania:mana_pool",
-      "visibility": "invisible",
       "optional": true,
       "x": 0,
       "y": 64,
@@ -65,10 +71,13 @@
       "description": [
         "Submit the required amount of Mana"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_chaotic_force"
+      ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:mana",
+          "value": 10000000
         }
       ],
       "rewards": [
@@ -88,16 +97,18 @@
       "id": "rep_overfluxed",
       "title": "Overfluxed",
       "icon": "minecraft:redstone_block",
-      "visibility": "invisible",
       "x": 64,
       "y": 0,
       "description": [
         "Submit the required amount of RF or FE"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_chaotic_force"
+      ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:energy",
+          "value": 150000000000
         }
       ],
       "rewards": [
@@ -111,13 +122,13 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "repeatable": true
     },
     {
       "id": "rep_too_much_xp",
       "title": "Too Much Experience",
       "icon": "minecraft:experience_bottle",
-      "visibility": "invisible",
       "optional": true,
       "x": 64,
       "y": 48,
@@ -125,10 +136,13 @@
       "description": [
         "Submit the required amount of EXP"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_chaotic_force"
+      ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:xp",
+          "value": 2500000
         }
       ],
       "rewards": [
@@ -148,7 +162,6 @@
       "id": "rep_inequivalent",
       "title": "Inequivalent Exchange",
       "icon": "projecte:transmutation_table",
-      "visibility": "invisible",
       "optional": true,
       "x": 128,
       "y": 64,
@@ -156,10 +169,13 @@
       "description": [
         "Submit the required amount of EMC"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_chaotic_force"
+      ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:emc",
+          "value": 80000000
         }
       ],
       "rewards": [
@@ -187,7 +203,9 @@
       "description": [
         "In charge of everything in the universe."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_chaotic_force"
+      ],
       "tasks": [
         {
           "type": "soa_additions:item",
@@ -219,22 +237,22 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:creative_shard",
-          "count": 4
+          "count": 3
         },
         {
           "type": "soa_additions:item",
           "item": "soa_additions:ordinary_medal",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
           "count": 3
         },
         {
           "type": "soa_additions:item",
           "item": "soa_additions:anti_entropy_matter",
           "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 2
         }
       ],
       "modes": [

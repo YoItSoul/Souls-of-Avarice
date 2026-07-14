@@ -164,7 +164,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "botania:rune_mana",
+          "item": "botania:rune_water",
           "count": 1
         },
         {
@@ -330,6 +330,16 @@
           "type": "soa_additions:item",
           "item": "botania:mana_powder",
           "count": 12
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_diamond",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:manasteel_ingot",
+          "count": 8
         }
       ],
       "modes": [
@@ -360,7 +370,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_powder",
+          "item": "botania:mana_pearl",
           "count": 5
         },
         {
@@ -416,7 +426,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_powder",
+          "item": "botania:mana_pearl",
           "count": 6
         },
         {
@@ -578,6 +588,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:mana_diamond",
+          "count": 10
         }
       ],
       "modes": [
@@ -612,7 +627,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_powder",
+          "item": "botania:terrasteel_ingot",
           "count": 5
         },
         {
@@ -641,7 +656,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_pylon",
+          "item": "botania:natura_pylon",
           "count": 1
         }
       ],
@@ -729,7 +744,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_powder",
+          "item": "botania:elementium_ingot",
           "count": 6
         },
         {
@@ -773,7 +788,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "twilightforest:twilight_oak_sapling",
+          "item": "twilightforest:sorting_sapling",
           "count": 64
         },
         {
@@ -849,7 +864,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_powder",
+          "item": "botania:elementium_ingot",
           "count": 5
         },
         {
@@ -930,7 +945,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "botania:mana_powder",
+          "item": "botania:gaia_ingot",
           "count": 3
         },
         {
@@ -1031,7 +1046,8 @@
         "Craft an Alfsteel Pylon"
       ],
       "dependencies": [
-        "quest_mnw8xkd8",
+        "bot_nature_pylon",
+        "bot_terrasteel",
         "bot_alfsteel"
       ],
       "tasks": [
@@ -1391,43 +1407,6 @@
       ]
     },
     {
-      "id": "quest_mnw8xkd8",
-      "title": "Alfsteel Pylon",
-      "icon": "botania:natura_pylon",
-      "x": 256,
-      "y": 464,
-      "description": [
-        "Craft an Alfsteel Pylon"
-      ],
-      "dependencies": [
-        "bot_nature_pylon",
-        "bot_terrasteel"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "botania:natura_pylon",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 400
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "quest_mnw991il",
       "title": "Drink Of Mimir",
       "icon": "mythicbotany:gjallar_horn_full",
@@ -1461,6 +1440,41 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "quest_monn7h1c",
+      "title": "Rainbow Rune",
+      "icon": "soa_additions:rainbow_rune",
+      "x": 304,
+      "y": 208,
+      "description": [
+        "Sometimes you just don't have the mana..."
+      ],
+      "dependencies": [
+        "bot_rune_collector"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:rainbow_rune",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:command",
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 3"
         }
       ],
       "modes": [

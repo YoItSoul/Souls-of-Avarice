@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:storage_blocks/pink_metal"
-  },
-  "material": "soa_additions:pink_metal",
-  "needed": 1,
-  "value": 9
-}

@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:storage_blocks/energetic_alloy"
-  },
-  "material": "soa_additions:energetic_alloy",
-  "needed": 1,
-  "value": 9
-}

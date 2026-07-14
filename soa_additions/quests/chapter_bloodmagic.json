@@ -27,7 +27,9 @@
       "description": [
         "To begin Blood Magic research, you need to get the required gamestage which can be obtained from Astral Sorcery questline"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "mal_spirit_crucible"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -37,14 +39,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 250
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -266,7 +263,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "bloodmagic:soulgempetty",
+          "item": "bloodmagic:soulgemlesser",
           "count": 1
         }
       ],
@@ -306,7 +303,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "bloodmagic:soulgempetty",
+          "item": "bloodmagic:soulgemgreater",
           "count": 1
         }
       ],
@@ -418,7 +415,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "prefab:block_compressed_stone",
+          "item": "prefab:block_triple_compressed_stone",
           "count": 1
         },
         {
@@ -497,7 +494,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "bloodmagic:accelerationrune",
+          "item": "bloodmagic:blankrune",
           "count": 16
         }
       ],
@@ -529,11 +526,16 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 250
+          "amount": 1600
         },
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:speedrune",
+          "count": 3
         }
       ],
       "modes": [
@@ -564,11 +566,26 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 250
+          "amount": 2000
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:sacrificerune",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:accelerationrune",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:dislocationrune",
+          "count": 1
         }
       ],
       "modes": [
@@ -609,6 +626,21 @@
           "type": "soa_additions:item",
           "item": "bloodmagic:accelerationrune",
           "count": 3
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:orbcapacityrune",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:altarcapacityrune",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:bettercapacityrune",
+          "count": 1
         }
       ],
       "modes": [
@@ -620,7 +652,7 @@
     {
       "id": "blo_dance_of_life",
       "title": "Dance of Life",
-      "icon": "soa_additions:ba_blood_diamond_infused",
+      "icon": "bloodarsenal:blood_diamond_infused",
       "x": 400,
       "y": 48,
       "description": [
@@ -632,7 +664,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:ba_blood_diamond_infused",
+          "item": "bloodarsenal:blood_diamond_infused",
           "count": 1
         }
       ],
@@ -644,6 +676,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodarsenal:blood_diamond_infused",
+          "count": 1
         }
       ],
       "modes": [
@@ -684,6 +721,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:crimsonite_ingot",
+          "count": 3
         }
       ],
       "modes": [
@@ -735,7 +777,7 @@
     {
       "id": "blo_blood_infused_wood",
       "title": "Blood Infused Wood",
-      "icon": "soa_additions:ba_blood_infused_log",
+      "icon": "bloodarsenal:blood_infused_log",
       "x": 208,
       "y": 80,
       "description": [
@@ -747,7 +789,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:ba_blood_infused_log",
+          "item": "bloodarsenal:blood_infused_log",
           "count": 1
         }
       ],
@@ -759,6 +801,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodarsenal:blood_infused_log",
+          "count": 8
         }
       ],
       "modes": [
@@ -770,7 +817,7 @@
     {
       "id": "blo_forged_with_blood",
       "title": "Forged With Blood",
-      "icon": "soa_additions:ba_blood_infused_stick",
+      "icon": "bloodarsenal:blood_infused_stick",
       "shape": "square",
       "x": 256,
       "y": 64,
@@ -783,7 +830,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:ba_blood_infused_stick",
+          "item": "bloodarsenal:blood_infused_stick",
           "count": 1
         }
       ],
@@ -795,6 +842,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 1250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodarsenal:blood_infused_iron_ingot",
+          "count": 3
         }
       ],
       "modes": [
@@ -818,7 +870,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:bound_metal_ingot",
+          "item": "soa_additions:sentient_metal_ingot",
           "count": 1
         }
       ],
@@ -830,6 +882,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 1250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:sentient_metal_ingot",
+          "count": 4
         }
       ],
       "modes": [
@@ -842,6 +899,7 @@
       "id": "blo_soul_bound",
       "title": "Soul Bound",
       "icon": "soa_additions:sentient_metal_ingot",
+      "shape": "rhombus",
       "x": 304,
       "y": 48,
       "description": [
@@ -854,14 +912,14 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:sentient_metal_ingot",
+          "item": "soa_additions:bound_metal_ingot",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 250
+          "amount": 1600
         },
         {
           "type": "soa_additions:command",
@@ -871,6 +929,11 @@
           "type": "soa_additions:grant_stage",
           "stage": "skilled_wizard",
           "scope": "player"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:bound_metal_ingot",
+          "count": 3
         }
       ],
       "modes": [

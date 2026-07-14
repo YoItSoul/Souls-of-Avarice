@@ -57,6 +57,8 @@ ServerEvents.recipes(event => {
 
     // Apothecary.addRecipe(<additions:greedycraft-bag_of_dyes>,
     //   [<ore:petalGreen>, <ore:petalRed>, <ore:petalBlue>, <ore:petalYellow>, x2]);
+    // 1.20 Botania petal_apothecary REQUIRES a `reagent` field (parser throws
+    //   "Item cannot be null" if missing). Vanilla recipes all use the seed tag.
     event.custom({
         type: 'botania:petal_apothecary',
         ingredients: [
@@ -65,7 +67,8 @@ ServerEvents.recipes(event => {
             { tag: 'botania:petals/green' },  { tag: 'botania:petals/red' },
             { tag: 'botania:petals/blue' },   { tag: 'botania:petals/yellow' }
         ],
-        output: { item: 'soa_additions:bag_of_dyes' }
+        output:  { item: 'soa_additions:bag_of_dyes' },
+        reagent: { tag: 'botania:seed_apothecary_reagent' }
     })
 
 

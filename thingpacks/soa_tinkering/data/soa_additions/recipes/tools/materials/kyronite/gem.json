@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:gems/kyronite"
-  },
-  "material": "soa_additions:kyronite",
-  "needed": 1,
-  "value": 1
-}

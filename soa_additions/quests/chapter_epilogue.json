@@ -37,13 +37,13 @@
       ],
       "rewards": [
         {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_rare",
           "count": 10
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 5000
         }
       ],
       "modes": [
@@ -73,13 +73,13 @@
       ],
       "rewards": [
         {
+          "type": "soa_additions:xp",
+          "amount": 50000
+        },
+        {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 10
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 50000
         }
       ],
       "modes": [
@@ -138,13 +138,13 @@
       ],
       "rewards": [
         {
+          "type": "soa_additions:xp",
+          "amount": 500000
+        },
+        {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 10
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500000
         }
       ],
       "modes": [
@@ -272,7 +272,7 @@
     {
       "id": "epi_quest_a02176ac",
       "title": "Treasurebox",
-      "icon": "extrabotany:treasurebox",
+      "icon": "treasure2:celestial_chest",
       "x": 32,
       "y": 288,
       "description": [
@@ -282,7 +282,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "extrabotany:treasurebox",
+          "item": "treasure2:celestial_chest",
           "count": 1
         }
       ],
@@ -312,7 +312,7 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:anti_entropy_matter",
-          "count": 8
+          "count": 1
         }
       ],
       "rewards": [
@@ -465,10 +465,6 @@
         {
           "type": "soa_additions:xp",
           "amount": 1000
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 1"
         }
       ],
       "modes": [
@@ -509,7 +505,7 @@
     {
       "id": "epi_quest_e5d19b4d",
       "title": "Staff",
-      "icon": "abyssalcraft:staff",
+      "icon": "sculkhorde:heart_of_the_horde",
       "x": 416,
       "y": 160,
       "description": [
@@ -519,7 +515,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "abyssalcraft:staff",
+          "item": "sculkhorde:heart_of_the_horde",
           "count": 1
         }
       ],
@@ -565,13 +561,13 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:greedy_medal",
-          "count": 4
+          "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:creative_shard",
           "count": 320
         },
         {
@@ -591,21 +587,21 @@
         },
         {
           "type": "soa_additions:xp",
-          "amount": 214748364
+          "amount": 2147483647
         },
         {
           "type": "soa_additions:item",
-          "item": "enderio:broken_spawner",
+          "item": "avaritia:neutron",
           "count": 64
         },
         {
           "type": "soa_additions:item",
-          "item": "avaritia:infinity_ingot",
+          "item": "avaritia:infinity_catalyst",
           "count": 128
         },
         {
           "type": "soa_additions:item",
-          "item": "projecte:klein_star_omega",
+          "item": "botania:creative_pool",
           "count": 64
         },
         {
@@ -617,11 +613,6 @@
           "type": "soa_additions:item",
           "item": "soa_additions:creative_controller",
           "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 320
         },
         {
           "type": "soa_additions:item",
@@ -657,13 +648,24 @@
           "type": "soa_additions:grant_stage",
           "stage": "truehero",
           "scope": "player"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:creative_op_capacitor",
+          "count": 64
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 320
         }
       ],
       "modes": [
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "repeatable": true
     },
     {
       "id": "epi_qualified_ocd",
@@ -675,7 +677,19 @@
         "eat the game."
       ],
       "dependencies": [
-        "epi_a_journey_s_end_a"
+        "chapter:1_remembering",
+        "chapter:chapter_ae2",
+        "chapter:chapter_aether",
+        "chapter:chapter_bloodmagic",
+        "chapter:chapter_boss_hunter",
+        "chapter:chapter_botania",
+        "chapter:chapter_challenges",
+        "chapter:chapter_forbidden_arcanus",
+        "chapter:chapter_industrial",
+        "chapter:chapter_malum",
+        "chapter:chapter_milestones",
+        "chapter:chapter_twilight",
+        "chapter:chapter_valoria"
       ],
       "tasks": [
         {

@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "tag": "forge:ingots/electrum_flux"
-  },
-  "material": "soa_additions:fluxed_electrum",
-  "needed": 1,
-  "value": 1
-}

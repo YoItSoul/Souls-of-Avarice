@@ -66,9 +66,7 @@ ServerEvents.recipes(event => {
     spawnEgg('minecraft:enderman', 'minecraft:ender_pearl',     'enderman')
     spawnEgg('minecraft:ghast',    '#minecraft:glass_blocks',   'ghast_glass')
 
-    // shapeless death_counter (was in original file as a one-off shapeless)
-    event.shapeless('soa_additions:death_counter',
-        ['tconstruct:pattern', 'minecraft:bone']).id('soa_ported:death_counter')
+    // (death_counter recipe lives at kubejs/data/soa_additions/recipes/death_counter.json)
 
     // ----------------------------------------------------------------
 // 130 portable recipes auto-generated from GC vanilla/crafting_table/shaped.zs

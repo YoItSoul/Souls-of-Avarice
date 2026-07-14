@@ -110,13 +110,27 @@ ServerEvents.recipes(event => {
                 if (seenSet.has(inputId)) continue;
                 seenSet.add(inputId);
 
-                var recipeId = "soa_additions:blazing_furnace_dyn_" + inputId.replace(":", "_").replace(/\//g, "_");
+                // Coerce inputId to a JS string before regex .replace — `inputId`
+                // arrives as a Java String, and Rhino can't auto-convert a JS
+                // RegExp into a CharSequence for Java's String.replace, which
+                // throws "Cannot find default value for object" and skips the
+                // whole recipe.
+                var recipeId = "soa_additions:blazing_furnace_dyn_"
+                    + String(inputId).replace(/:/g, "_").replace(/\//g, "_");
 
+                // GC's `thermal:pyrotheum` was dropped in Thermal 1.20.1 — the
+                // unregistered id makes Fluid.of(...) return an invalid stack, and
+                // requireFluid(invalidStack, ...) throws "Cannot find default value
+                // for object". Substitute `tconstruct:blazing_blood` (TC3, hot,
+                // confirmed in soa_exports/fluids.json). The 85 static JSONs in
+                // data/soa_ported/recipes/blazing_furnace/ still reference the old
+                // pyrotheum id; they parse fine but won't match at runtime — fix
+                // them in a separate pass when the fluid choice is finalised.
                 ev.recipes.custommachinery.machine("soa_ported:blazing_furnace")
                     .time(1)
                     .requireItem(Item.of(inputId, 1), "in")
                     .requireEnergy(400)
-                    .requireFluid(Fluid.of("thermal:pyrotheum", 2), "pyro")
+                    .requireFluid(Fluid.of("tconstruct:blazing_blood", 2), "pyro")
                     .produceFluid(Fluid.of("cofh_core:experience", xpAmount), "xp")
                     .produceItem(Item.of(outputId, outputCount), "out")
                     .id(recipeId);

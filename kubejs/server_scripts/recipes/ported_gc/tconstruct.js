@@ -66,15 +66,19 @@ ServerEvents.recipes(event => {
     // adamant = nihilite*1 + iox*3              -> all FIXME(fluid-pending)
 
     // Alloy.addRecipe(<liquid:emerald>*2, [<liquid:experience>*3, <liquid:redstone>*2, <liquid:glowstone>*2]);
+    // TC3 1.20 FluidStack schema uses `fluid: "<id>"` (or `tag: "<fluid_tag>"`),
+    //   NOT `name:` — the `name:` field is silently treated as missing and fails
+    //   parse with "FluidStack cannot be empty". Verified via
+    //   data/tconstruct/recipes/smeltery/alloys/molten_obsidian.json.
     event.custom({
         type: 'tconstruct:alloy',
         inputs: [
-            { name: 'cofh_core:experience', amount: 3 },
-            { name: 'thermal:redstone',     amount: 2 },
-            { name: 'thermal:glowstone',    amount: 2 }
+            { fluid: 'cofh_core:experience', amount: 3 },
+            { fluid: 'thermal:redstone',     amount: 2 },
+            { fluid: 'thermal:glowstone',    amount: 2 }
         ],
-        result: { name: 'tconstruct:molten_emerald', amount: 2 },
-        temperature: 500 // FIXME: GC didn't specify; TC3 requires temperature >= lowest fluid mp
+        result: { fluid: 'tconstruct:molten_emerald', amount: 2 },
+        temperature: 500
     })
 
     // Alloy.addRecipe(<liquid:end_steel>*288, [<liquid:obsidian>*288, <liquid:dark_steel>*288, <liquid:ender>*250]);
@@ -105,10 +109,10 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:alloy',
         inputs: [
-            { name: 'tconstruct:molten_gold',   amount: 576 },
-            { name: 'tconstruct:molten_debris', amount: 576 }
+            { fluid: 'tconstruct:molten_gold',   amount: 576 },
+            { fluid: 'tconstruct:molten_debris', amount: 576 }
         ],
-        result: { name: 'tconstruct:molten_netherite', amount: 144 },
+        result: { fluid: 'tconstruct:molten_netherite', amount: 144 },
         temperature: 1000
     })
 
@@ -151,7 +155,7 @@ ServerEvents.recipes(event => {
         type: 'tconstruct:casting_basin',
         cast: null, // no cast required
         cast_consumed: false,
-        fluid: { name: 'tconstruct:molten_netherite', amount: BLOCK },
+        fluid: { fluid: 'tconstruct:molten_netherite', amount: BLOCK },
         result: 'minecraft:netherite_block',
         cooling_time: 300
     })
@@ -165,7 +169,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:casting_table',
         cast: CAST_INGOT, cast_consumed: false,
-        fluid: { name: 'tconstruct:molten_netherite', amount: INGOT },
+        fluid: { fluid: 'tconstruct:molten_netherite', amount: INGOT },
         result: 'minecraft:netherite_ingot',
         cooling_time: 200
     })
@@ -173,7 +177,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:casting_table',
         cast: CAST_INGOT, cast_consumed: false,
-        fluid: { name: 'tconstruct:molten_debris', amount: 160 },
+        fluid: { fluid: 'tconstruct:molten_debris', amount: 160 },
         result: 'minecraft:netherite_scrap',
         cooling_time: 200
     })
@@ -212,35 +216,35 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:entity_melting',
         entity: { type: 'minecraft:cow' },
-        result: { name: 'minecraft:milk', amount: 20 },
+        result: { fluid: 'minecraft:milk', amount: 20 },
         damage: 2
     })
     // enderman -> ender
     event.custom({
         type: 'tconstruct:entity_melting',
         entity: { type: 'minecraft:enderman' },
-        result: { name: 'tconstruct:molten_ender', amount: 20 },
+        result: { fluid: 'tconstruct:molten_ender', amount: 20 },
         damage: 2
     })
     // snowman -> water
     event.custom({
         type: 'tconstruct:entity_melting',
         entity: { type: 'minecraft:snow_golem' }, // 1.13 rename
-        result: { name: 'minecraft:water', amount: 20 },
+        result: { fluid: 'minecraft:water', amount: 20 },
         damage: 2
     })
     // villager_golem -> iron
     event.custom({
         type: 'tconstruct:entity_melting',
         entity: { type: 'minecraft:iron_golem' }, // 1.13 rename
-        result: { name: 'tconstruct:molten_iron', amount: 20 },
+        result: { fluid: 'tconstruct:molten_iron', amount: 20 },
         damage: 2
     })
     // zombie_pigman -> gold
     event.custom({
         type: 'tconstruct:entity_melting',
         entity: { type: 'minecraft:zombified_piglin' }, // 1.16 rename
-        result: { name: 'tconstruct:molten_gold', amount: 20 },
+        result: { fluid: 'tconstruct:molten_gold', amount: 20 },
         damage: 2
     })
 
@@ -259,7 +263,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:melting',
         ingredient: { tag: 'forge:storage_blocks/ancient_debris' }, // FIXME: GC used "gemAncientDebris"; tag best-guess
-        result: { name: 'tconstruct:molten_debris', amount: 160 },
+        result: { fluid: 'tconstruct:molten_debris', amount: 160 },
         temperature: 1320,
         time: 100
     })
@@ -267,7 +271,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:melting',
         ingredient: { tag: 'forge:ores/ancient_debris' },
-        result: { name: 'tconstruct:molten_debris', amount: 320 },
+        result: { fluid: 'tconstruct:molten_debris', amount: 320 },
         temperature: 1320,
         time: 150
     })
@@ -277,7 +281,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:melting',
         ingredient: { tag: 'forge:coals' },
-        result: { name: 'jaopca:molten.coal', amount: INGOT }, // verified in fluids.json
+        result: { fluid: 'jaopca:molten.coal', amount: INGOT }, // verified in fluids.json
         temperature: 600,
         time: 60
     })
@@ -286,7 +290,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:melting',
         ingredient: { tag: 'forge:ingots/netherite' },
-        result: { name: 'tconstruct:molten_netherite', amount: INGOT },
+        result: { fluid: 'tconstruct:molten_netherite', amount: INGOT },
         temperature: 1500,
         time: 80
     })
@@ -294,7 +298,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tconstruct:melting',
         ingredient: { tag: 'forge:storage_blocks/netherite' },
-        result: { name: 'tconstruct:molten_netherite', amount: BLOCK },
+        result: { fluid: 'tconstruct:molten_netherite', amount: BLOCK },
         temperature: 1500,
         time: 200
     })
@@ -315,17 +319,23 @@ ServerEvents.recipes(event => {
     //   netherite(*), terra_alloy, fierymetal, insanium, fusion_matrix, meteor,
     //   crimsonite
     // (*) netherite IS registered; including its fuel entry:
+    // melting_fuel schema (verified vs data/tconstruct/recipes/smeltery/melting/fuel/lava.json):
+    //   { fluid:{fluid:..., amount:...}, duration, rate, temperature }
+    //   `rate` is REQUIRED; missing it fails parse with "Missing JSON field 'rate'".
+    //   Lava is rate=10 / blaze rate=15 — high-tier metals warrant rate ~30-40.
     event.custom({
         type: 'tconstruct:melting_fuel',
-        fluid: { name: 'tconstruct:molten_netherite', amount: 1 },
+        fluid: { fluid: 'tconstruct:molten_netherite', amount: 1 },
         duration: 200,
+        rate: 40,
         temperature: 1500
     })
     // ancient_debris (molten_debris) is registered; include its fuel entry:
     event.custom({
         type: 'tconstruct:melting_fuel',
-        fluid: { name: 'tconstruct:molten_debris', amount: 1 },
+        fluid: { fluid: 'tconstruct:molten_debris', amount: 1 },
         duration: 200,
+        rate: 30,
         temperature: 1320
     })
     console.info('[soa_ported] tconstruct.js: DONE')

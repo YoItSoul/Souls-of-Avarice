@@ -1,0 +1,1944 @@
+{
+  "id": "chapter_malum",
+  "title": "Malum",
+  "icon": "malum:encyclopedia_arcana",
+  "sort_order": 180,
+  "description": [
+    "Walk the path of the Spirit. Reap souls, focus the void into matter, and bind the celestial."
+  ],
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "mal_soulstone_awakens",
+      "title": "Soulstone Awakens",
+      "icon": "malum:processed_soulstone",
+      "x": 0,
+      "y": 16,
+      "description": [
+        "Mine soulstone ore and smelt it into Processed Soulstone. The keystone of all spirit work."
+      ],
+      "dependencies": [
+        "mal_encyclopedia"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:processed_soulstone",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:processed_soulstone",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_encyclopedia",
+      "title": "Encyclopedia Arcana",
+      "icon": "malum:encyclopedia_arcana",
+      "shape": "square",
+      "x": 0,
+      "y": 64,
+      "description": [
+        "Begin your study of the spirit arts.",
+        "Mine soulstone, smelt it into Processed Soulstone, then bind a book with one. The Encyclopedia will guide you through every infusion, ritual, and rune.",
+        "Original items: Encyclopedia Arcana (malum)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:encyclopedia_arcana",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_runewood",
+      "title": "The Tree That Bleeds",
+      "icon": "malum:runewood_log",
+      "x": 64,
+      "y": 16,
+      "description": [
+        "Find a Runewood Tree in the world. Soulwood comes later, by transmuting a Runewood sapling.",
+        "Original items: Runewood Log (malum)"
+      ],
+      "dependencies": [
+        "mal_soulstone_awakens"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "tag": "malum:runewood_logs",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 100
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:runewood_sapling",
+          "count": 2
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_crude_scythe",
+      "title": "A Crude Tool",
+      "icon": "malum:crude_scythe",
+      "shape": "square",
+      "x": 0,
+      "y": 112,
+      "description": [
+        "Craft a Crude Scythe. Killing mobs with a scythe is the only way to extract their spirits.",
+        "Original items: Crude Scythe (malum)"
+      ],
+      "dependencies": [
+        "mal_encyclopedia"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:crude_scythe",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_spirit_altar",
+      "title": "The Spirit Altar",
+      "icon": "malum:spirit_altar",
+      "shape": "square",
+      "x": 128,
+      "y": 64,
+      "description": [
+        "Build a Spirit Altar. This is where every infusion takes place: throw the input, then surround it with the right essences.",
+        "Original items: Spirit Altar (malum)"
+      ],
+      "dependencies": [
+        "mal_runewood",
+        "mal_encyclopedia"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:spirit_altar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_first_spirits",
+      "title": "First Harvest",
+      "icon": "malum:wicked_spirit",
+      "x": 128,
+      "y": 112,
+      "description": [
+        "Reap your first spirits. Strike a mob with a scythe to harvest the spirit aligned with its nature.",
+        "Original items: any Spirit Essence (malum)"
+      ],
+      "dependencies": [
+        "mal_crude_scythe"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "tag": "malum:aspected_spirits",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:gunpowder",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_hex_ash",
+      "title": "Hex Ash",
+      "icon": "malum:hex_ash",
+      "x": 192,
+      "y": 80,
+      "description": [
+        "Your first infusion. Throw gunpowder onto the Spirit Altar with one Arcane Spirit.",
+        "Original items: Hex Ash (malum)"
+      ],
+      "dependencies": [
+        "mal_spirit_altar",
+        "mal_first_spirits"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:hex_ash",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:hex_ash",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_spirit_pouch",
+      "title": "Spirit Pouch",
+      "icon": "malum:spirit_pouch",
+      "x": 192,
+      "y": 32,
+      "description": [
+        "Weave a pouch from spirit fabric to carry your essences without filling your inventory.",
+        "Original items: Spirit Pouch (malum)"
+      ],
+      "dependencies": [
+        "mal_hex_ash"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:spirit_pouch",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:spirit_jar",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_tainted_twisted",
+      "title": "Tainted and Twisted",
+      "icon": "malum:tainted_rock",
+      "x": 192,
+      "y": 128,
+      "description": [
+        "Bless and curse the stones. You will need stacks of both before this is over.",
+        "Original items: Tainted Rock, Twisted Rock (malum)"
+      ],
+      "dependencies": [
+        "mal_hex_ash"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:tainted_rock",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:twisted_rock",
+          "count": 32
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_hallowed_gold",
+      "title": "Hallowed Gold",
+      "icon": "malum:hallowed_gold_ingot",
+      "x": 256,
+      "y": 32,
+      "description": [
+        "Sanctify gold by infusing it with quartz, sacred essence, and arcane essence. The frame of every reliquary you will build.",
+        "Original items: Hallowed Gold Ingot (malum)"
+      ],
+      "dependencies": [
+        "mal_spirit_pouch"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:hallowed_gold_ingot",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_soul_stained_steel",
+      "title": "Soul-Stained Steel",
+      "icon": "malum:soul_stained_steel_ingot",
+      "shape": "square",
+      "x": 256,
+      "y": 80,
+      "description": [
+        "Infuse iron with the wicked, the earthen, and the arcane. The first true mark of an apprentice spirit-worker.",
+        "Original items: Soul Stained Steel Ingot (malum)"
+      ],
+      "dependencies": [
+        "mal_hex_ash"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_ingot",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_ingot",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_alchemical_calx",
+      "title": "Alchemical Calx",
+      "icon": "malum:alchemical_calx",
+      "x": 256,
+      "y": 128,
+      "description": [
+        "Refine clay into the substrate every alchemical apparatus is built upon.",
+        "Original items: Alchemical Calx (malum)"
+      ],
+      "dependencies": [
+        "mal_tainted_twisted"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:alchemical_calx",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 350
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:alchemical_calx",
+          "count": 8
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_spirit_fabric",
+      "title": "Cloth of the Reaper",
+      "icon": "malum:spirit_fabric",
+      "x": 304,
+      "y": 32,
+      "description": [
+        "Weave wool through hex ash and spirits. The base for soul-hunter robes and pouches.",
+        "Original items: Spirit Fabric (malum)"
+      ],
+      "dependencies": [
+        "mal_hallowed_gold"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:spirit_fabric",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:esoteric_spool",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_living_flesh",
+      "title": "Living Flesh",
+      "icon": "malum:living_flesh",
+      "x": 256,
+      "y": 176,
+      "description": [
+        "Coax life back into rotten meat with sacred and wicked essence. Required for the mending diffuser and growing-flesh ring.",
+        "Original items: Living Flesh (malum)"
+      ],
+      "dependencies": [
+        "mal_alchemical_calx"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:living_flesh",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_sss_armory",
+      "title": "Soul-Stained Armory",
+      "icon": "malum:soul_stained_steel_pickaxe",
+      "x": 352,
+      "y": 80,
+      "description": [
+        "Forge a full set of Soul-Stained Steel tools. They reap spirits like a finer scythe.",
+        "Original items: Soul Stained Steel Sword, Pickaxe, Axe, Shovel (malum)"
+      ],
+      "dependencies": [
+        "mal_soul_stained_steel"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_sword",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_pickaxe",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_axe",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_shovel",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_sss_armor",
+      "title": "Plated in Soul",
+      "icon": "malum:soul_stained_steel_chestplate",
+      "x": 384,
+      "y": 32,
+      "description": [
+        "Infuse iron armor with soul-stained plating. Heavier than steel, lighter on the soul.",
+        "Original items: Soul Stained Steel Helmet, Chestplate, Leggings, Boots (malum)"
+      ],
+      "dependencies": [
+        "mal_sss_armory",
+        "mal_spirit_fabric"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_chestplate",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_leggings",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_helmet",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_boots",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_soul_hunter",
+      "title": "Soul Hunter Robes",
+      "icon": "malum:soul_hunter_robe",
+      "x": 304,
+      "y": 128,
+      "description": [
+        "Cloak yourself in spirit fabric and leather. Reaping bonuses for those who walk softly.",
+        "Original items: Soul Hunter Robe, Cloak, Leggings, Boots (malum)"
+      ],
+      "dependencies": [
+        "mal_living_flesh",
+        "mal_spirit_fabric"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_hunter_robe",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_hunter_cloak",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_sss_scythe",
+      "title": "A Reaper's Reaper",
+      "icon": "malum:soul_stained_steel_scythe",
+      "shape": "square",
+      "x": 352,
+      "y": 176,
+      "description": [
+        "Re-temper a crude scythe with soul-stained steel and hex ash. Spirit yields multiply.",
+        "Original items: Soul Stained Steel Scythe (malum)"
+      ],
+      "dependencies": [
+        "mal_sss_armory"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soul_stained_steel_scythe",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_spirit_crucible",
+      "title": "The Spirit Crucible",
+      "icon": "malum:spirit_crucible",
+      "shape": "rhombus",
+      "x": 384,
+      "y": 128,
+      "description": [
+        "Build a Spirit Crucible. Combined with an Alchemical Impetus, it focuses spirits into raw matter — your first true mastery of the spirit arts.",
+        "Original items: Spirit Crucible (malum)"
+      ],
+      "dependencies": [
+        "mal_sss_scythe",
+        "mal_alchemical_calx"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:spirit_crucible",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "novice_wizard",
+          "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_alchemical_impetus",
+      "title": "Alchemical Impetus",
+      "icon": "malum:alchemical_impetus",
+      "x": 432,
+      "y": 32,
+      "description": [
+        "The first focus stone. Place it in the crucible and pour spirits to harvest redstone, glowstone, quartz, and more.",
+        "Original items: Alchemical Impetus (malum)"
+      ],
+      "dependencies": [
+        "mal_spirit_crucible"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:alchemical_impetus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:redstone",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:glowstone_dust",
+          "count": 32
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_runewood_obelisk",
+      "title": "Runewood Obelisk",
+      "icon": "malum:runewood_obelisk",
+      "x": 432,
+      "y": 128,
+      "description": [
+        "An obelisk multiplies altar throughput. Place a few around the altar for difficult infusions.",
+        "Original items: Runewood Obelisk (malum)"
+      ],
+      "dependencies": [
+        "mal_spirit_crucible"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:runewood_obelisk",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_runewood_tablet",
+      "title": "Runewood Tablet",
+      "icon": "malum:runewood_tablet",
+      "x": 464,
+      "y": 80,
+      "description": [
+        "The first tablet. Carved from runewood and processed soulstone, used as the base for runeworking.",
+        "Original items: Runewood Tablet (malum)"
+      ],
+      "dependencies": [
+        "mal_alchemical_impetus"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:runewood_tablet",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_soulwood_tablet",
+      "title": "Soulwood Tablet",
+      "icon": "malum:soulwood_tablet",
+      "x": 512,
+      "y": 32,
+      "description": [
+        "The bleeding tree's tablet. Required for runes of the seas, hells, and aether.",
+        "&6Hint:&r Soulwood doesn't grow naturally. Transmute a runewood sapling using the &eArcane Rite&r (Totemic Staff channeled on a runewood totem with arcane-aligned runes). The rite converts the sapling into a soulwood sapling — plant it, wait for it to grow, then harvest the bleeding logs.",
+        "Original items: Soulwood Tablet, Soulwood Log (malum)"
+      ],
+      "dependencies": [
+        "mal_runewood_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soulwood_tablet",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_tainted_tablet",
+      "title": "Tainted Rock Tablet",
+      "icon": "malum:tainted_rock_tablet",
+      "shape": "square",
+      "x": 512,
+      "y": 96,
+      "description": [
+        "An eldritch-leaning tablet. Gates the highest runes and the Void Tablet itself.",
+        "Original items: Tainted Rock Tablet (malum)"
+      ],
+      "dependencies": [
+        "mal_runewood_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:tainted_rock_tablet",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_runic_workbench",
+      "title": "Runic Workbench",
+      "icon": "malum:runic_workbench",
+      "x": 560,
+      "y": 32,
+      "description": [
+        "The bench where tablets are bound to spirits. The bridge to runeworking.",
+        "Original items: Runic Workbench (malum)"
+      ],
+      "dependencies": [
+        "mal_soulwood_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:runic_workbench",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_first_rune",
+      "title": "Inscribed in Spirit",
+      "icon": "malum:rune_of_haste",
+      "x": 560,
+      "y": 144,
+      "description": [
+        "Pour 32 spirits over a tablet at the runic workbench. Any rune counts.",
+        "Original items: any Malum Rune"
+      ],
+      "dependencies": [
+        "mal_runic_workbench"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:rune_of_haste",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_totemic_staff",
+      "title": "Totemic Staff",
+      "icon": "malum:totemic_staff",
+      "x": 512,
+      "y": 144,
+      "description": [
+        "The conductor's wand. Required to perform rituals and to channel a totem before raising it.",
+        "Original items: Totemic Staff (malum)"
+      ],
+      "dependencies": [
+        "mal_tainted_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:totemic_staff",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:runewood_totem_base",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:soulwood_totem_base",
+          "count": 2
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_cthonic_gold",
+      "title": "Cthonic Gold",
+      "icon": "malum:cthonic_gold",
+      "shape": "square",
+      "x": 640,
+      "y": 128,
+      "description": [
+        "Mine Cthonic Gold Ore in the deep-stone layers (Y -48 to 0). It generates rarely, so dig wide.",
+        "Crush the ore in a Create Millstone or Crushing Wheel — 3-4 fragments per ore. Eight fragments craft into one Cthonic Gold ingot.",
+        "Note: the Cthonic Conversion ritual is broken in this version of Malum (it requires a phantom item that never registers). Use the mining path instead.",
+        "Original items: Cthonic Gold Ore, Cthonic Gold Fragment, Cthonic Gold (malum)"
+      ],
+      "dependencies": [
+        "mal_brilliance"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:cthonic_gold",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_iron_impetus",
+      "title": "Iron Impetus",
+      "icon": "malum:iron_impetus",
+      "x": 592,
+      "y": 192,
+      "description": [
+        "Upgrade the Alchemical Impetus into a metal-bearing one. With this in the crucible you can focus iron, gold, copper, aluminum, and more from raw spirit.",
+        "Original items: Iron Impetus (malum)"
+      ],
+      "dependencies": [
+        "mal_cthonic_gold",
+        "mal_first_rune"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:iron_impetus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_brilliance",
+      "title": "A Cluster of Brilliance",
+      "icon": "malum:cluster_of_brilliance",
+      "x": 592,
+      "y": 96,
+      "description": [
+        "Mine deep. Brilliant Stone hides far below the world. Smelt a chunk and grow it into a cluster.",
+        "Original items: Cluster of Brilliance (malum)"
+      ],
+      "dependencies": [
+        "mal_first_rune"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:chunk_of_brilliance",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:cluster_of_brilliance",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_anomalous_design",
+      "title": "Anomalous Design",
+      "icon": "malum:anomalous_design",
+      "x": 640,
+      "y": 80,
+      "description": [
+        "Drop an iron block into the void. The Devourer returns it twisted.",
+        "Original items: Anomalous Design (malum)"
+      ],
+      "dependencies": [
+        "mal_brilliance"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:anomalous_design",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_complete_design",
+      "title": "Complete Design",
+      "icon": "malum:complete_design",
+      "x": 688,
+      "y": 144,
+      "description": [
+        "Eight spirits, four of each. Throw them all on the altar with the Anomalous Design and watch the geometry settle.",
+        "Original items: Complete Design (malum)"
+      ],
+      "dependencies": [
+        "mal_anomalous_design",
+        "mal_iron_impetus"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:complete_design",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_fused_consciousness",
+      "title": "Fused Consciousness",
+      "icon": "malum:fused_consciousness",
+      "shape": "square",
+      "x": 688,
+      "y": 192,
+      "description": [
+        "Drop the Complete Design into the void. The Devourer answers with a Fused Consciousness — the catalyst for every endgame artifact.",
+        "Original items: Fused Consciousness (malum)"
+      ],
+      "dependencies": [
+        "mal_complete_design"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:fused_consciousness",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_void_materials",
+      "title": "What the Void Returns",
+      "icon": "malum:void_salts",
+      "x": 736,
+      "y": 192,
+      "description": [
+        "Feed the Devourer. Hex Ash returns as Void Salts, Processed Soulstone as Null Slate, Blaze Powder as Auric Embers, Chunk of Brilliance as a Mnemonic Fragment, Cthonic Gold as Malignant Lead.",
+        "Original items: Void Salts, Null Slate, Auric Embers, Mnemonic Fragment, Malignant Lead (malum)"
+      ],
+      "dependencies": [
+        "mal_fused_consciousness"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:void_salts",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:null_slate",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:auric_embers",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:mnemonic_fragment",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:malignant_lead",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_void_tablet",
+      "title": "Void Tablet",
+      "icon": "malum:void_tablet",
+      "x": 736,
+      "y": 144,
+      "description": [
+        "Re-infuse a tainted-rock tablet with null slate and void salts. The tablet of the heretic.",
+        "Original items: Void Tablet (malum)"
+      ],
+      "dependencies": [
+        "mal_void_materials"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:void_tablet",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_malignant_pewter",
+      "title": "Malignant Pewter",
+      "icon": "malum:malignant_pewter_ingot",
+      "shape": "square",
+      "x": 784,
+      "y": 144,
+      "description": [
+        "Bind iron, malignant lead, null slate, and netherite scrap into the densest metal in the mod. Earthen and eldritch demand much.",
+        "Original items: Malignant Pewter Ingot (malum)"
+      ],
+      "dependencies": [
+        "mal_void_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:malignant_pewter_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_mnemonic_hex_staff",
+      "title": "Mnemonic Hex Staff",
+      "icon": "malum:mnemonic_hex_staff",
+      "x": 736,
+      "y": 240,
+      "description": [
+        "Imprint a totemic staff with mnemonic fragments and soul-stained steel. The base for both endgame staves.",
+        "Original items: Mnemonic Hex Staff (malum)"
+      ],
+      "dependencies": [
+        "mal_void_materials"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:mnemonic_hex_staff",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_tyrving",
+      "title": "Tyrving",
+      "icon": "malum:tyrving",
+      "x": 832,
+      "y": 96,
+      "description": [
+        "Re-forge a soul-stained sword in twisted rock, soulwood, obsidian, and hex ash. The blade that hates blades.",
+        "Original items: Tyrving (malum)"
+      ],
+      "dependencies": [
+        "mal_malignant_pewter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:tyrving",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_edge_of_deliverance",
+      "title": "Edge of Deliverance",
+      "icon": "malum:edge_of_deliverance",
+      "x": 848,
+      "y": 144,
+      "description": [
+        "Wrap malignant pewter around the soul-stained scythe. Reaping at its truest.",
+        "Original items: Edge of Deliverance (malum)"
+      ],
+      "dependencies": [
+        "mal_malignant_pewter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:edge_of_deliverance",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_staff_auric_flame",
+      "title": "Staff of the Auric Flame",
+      "icon": "malum:staff_of_the_auric_flame",
+      "x": 784,
+      "y": 240,
+      "description": [
+        "Bind the Mnemonic Hex Staff to a Fused Consciousness, auric embers, and void salts. The wand of the master.",
+        "Original items: Staff of the Auric Flame (malum)"
+      ],
+      "dependencies": [
+        "mal_mnemonic_hex_staff",
+        "mal_malignant_pewter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:staff_of_the_auric_flame",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_malignant_stronghold",
+      "title": "Malignant Stronghold",
+      "icon": "malum:malignant_stronghold_chestplate",
+      "x": 784,
+      "y": 64,
+      "description": [
+        "Plate every piece of soul-stained armor with malignant pewter. The strongest armor the mod can make.",
+        "Original items: Malignant Stronghold Helmet, Chestplate, Leggings, Boots (malum)"
+      ],
+      "dependencies": [
+        "mal_malignant_pewter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:malignant_stronghold_chestplate",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:malignant_stronghold_leggings",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:malignant_stronghold_helmet",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "malum:malignant_stronghold_boots",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_belt_limitless",
+      "title": "Belt of the Limitless",
+      "icon": "malum:belt_of_the_limitless",
+      "shape": "square",
+      "x": 912,
+      "y": 144,
+      "description": [
+        "The capstone curio. Re-bind the Belt of the Magebane around a Fused Consciousness, void salts, null slate, and mnemonic fragments.",
+        "Original items: Belt of the Limitless (malum)"
+      ],
+      "dependencies": [
+        "mal_tyrving",
+        "mal_edge_of_deliverance",
+        "mal_staff_auric_flame"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:belt_of_the_limitless",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 5000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_arcane_crystal_ball",
+      "title": "Arcane Crystal Ball",
+      "icon": "soa_additions:arcane_crystal_ball",
+      "shape": "rhombus",
+      "x": 736,
+      "y": 32,
+      "description": [
+        "The pinnacle of arcane study. Bind a Complete Design on the Spirit Altar surrounded by 4 Soul-Stained Steel, 4 Nether Stars, 4 Chunks of Brilliance, 12 Clusters of Brilliance, and 6 Astral Metal Ingots — 32 Arcane, 16 Eldritch, 16 Sacred spirits.",
+        "Right-click the finished ball to consume it and ascend to mastery (master_wizard).",
+        "Original items: Arcane Crystal Ball (soa_additions)"
+      ],
+      "dependencies": [
+        "mal_malignant_pewter",
+        "mal_astral_metal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:arcane_crystal_ball",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 8000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "master_wizard",
+          "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_grim_talc",
+      "title": "Grim Talc",
+      "icon": "malum:grim_talc",
+      "x": 0,
+      "y": 176,
+      "description": [
+        "Reap skeletons, strays, zoglins, or zombified piglins with a Malum scythe to harvest Grim Talc — the bone-essence dust used in many earthen rituals.",
+        "Skeleton: 20% chance, 2-4 per kill. Stray: 20%, 2-4. Zoglin/Zombified Piglin: 10%, 1-2 (secondary drop alongside rotting_essence).",
+        "Original items: Grim Talc (malum)"
+      ],
+      "dependencies": [
+        "mal_crude_scythe"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:grim_talc",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_rotting_essence",
+      "title": "Rotting Essence",
+      "icon": "malum:rotting_essence",
+      "x": 48,
+      "y": 176,
+      "description": [
+        "Reap zombies, husks, zombie villagers, zoglins, or zombified piglins with a Malum scythe to harvest Rotting Essence — the wicked-aligned drop fueling the Grotesque Expulsion ritual.",
+        "Zombie: 10% chance, 1-3 per kill. Husk: 15%, 1-2. Zombie Villager / Zoglin / Zombified Piglin: 10%, 1-3.",
+        "Original items: Rotting Essence (malum)"
+      ],
+      "dependencies": [
+        "mal_crude_scythe"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:rotting_essence",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_astral_weave",
+      "title": "Astral Weave",
+      "icon": "malum:astral_weave",
+      "x": 96,
+      "y": 176,
+      "description": [
+        "Reap ghasts or phantoms with a Malum scythe for Astral Weave — sky-borne fabric used in aerial-rune work.",
+        "Ghast: 50% chance, 1-3 per kill. Phantom: 25%, 1-2.",
+        "Original items: Astral Weave (malum)"
+      ],
+      "dependencies": [
+        "mal_crude_scythe"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:astral_weave",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_warp_flux",
+      "title": "Warp Flux",
+      "icon": "malum:warp_flux",
+      "x": 144,
+      "y": 176,
+      "description": [
+        "Reap endermen with a Malum scythe to harvest Warp Flux — eldritch-aligned essence channeled into void rituals.",
+        "Enderman: 10% chance, 2-4 per kill. End Highlands and warped forests are the most efficient hunting grounds.",
+        "Original items: Warp Flux (malum)"
+      ],
+      "dependencies": [
+        "mal_crude_scythe"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "malum:warp_flux",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "mal_astral_metal",
+      "title": "Astral Metal",
+      "icon": "soa_additions:astral_metal_ingot",
+      "shape": "square",
+      "x": 608,
+      "y": 32,
+      "description": [
+        "Build the Astral Forge — the GC AS Trait Altar replacement — and feed it the constellation reagents: 4 starmetal, 4 meteor dust, 1 fusion matrix center, 4 clusters of brilliance, 4 meteor ingots, 4 fallen stars.",
+        "Out comes 4 ingots of astral metal. Required by the Arcane Crystal Ball.",
+        "Original items: Astral Metal Ingot (soa_additions)"
+      ],
+      "dependencies": [
+        "mal_brilliance"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:astral_metal_ingot",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

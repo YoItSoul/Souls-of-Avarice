@@ -1,0 +1,1256 @@
+{
+  "id": "chapter_valoria",
+  "title": "Valoria",
+  "icon": "valoria:eye_necklace",
+  "sort_order": 190,
+  "description": [
+    "The corrupted RPG path. Valoria replaces AbyssalCraft's role — same dread, different lore.",
+    "Quest beats follow Valoria's actual advancement tree + codex hints, not name-matched substitutes."
+  ],
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [
+    "quest_mnsa7vbh"
+  ],
+  "visibility": "hidden_until_deps",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "val_path_of_valoria",
+      "title": "Path of Valoria",
+      "icon": "valoria:eye_necklace",
+      "x": 0,
+      "y": 64,
+      "description": [
+        "The veil thins. Begin your journey through Valoria — corrupted lands of necromancy, fallen emperors, and forgotten fortresses."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "square"
+    },
+    {
+      "id": "val_aloe_piece",
+      "title": "Herbal Healing",
+      "icon": "valoria:aloe_piece",
+      "x": 64,
+      "y": 32,
+      "description": [
+        "Find Aloe in the wild and harvest a piece. Valoria's medicine starts here.",
+        "Original items: Aloe Piece (valoria) — mirrors the valoria:aloe_piece advancement"
+      ],
+      "dependencies": [
+        "val_path_of_valoria"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:aloe_piece",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 150
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_first_help",
+      "title": "First Help",
+      "icon": "valoria:aloe_bandage",
+      "x": 128,
+      "y": 32,
+      "description": [
+        "Craft an Aloe Bandage and use it to heal yourself. Mirrors the valoria:first_help advancement.",
+        "Original items: Aloe Bandage (valoria)"
+      ],
+      "dependencies": [
+        "val_aloe_piece"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:aloe_bandage",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_basic_medicine",
+      "title": "Basic Medicine",
+      "icon": "valoria:aloe_bandage_upgraded",
+      "x": 192,
+      "y": 32,
+      "description": [
+        "Upgrade your Aloe Bandage. Mirrors the valoria:basic_medicine advancement.",
+        "Original items: Aloe Bandage Upgraded (valoria)"
+      ],
+      "dependencies": [
+        "val_first_help"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:aloe_bandage_upgraded",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_geodes",
+      "title": "Uncommon Stone",
+      "icon": "valoria:stone_geode",
+      "x": 64,
+      "y": 96,
+      "description": [
+        "Mine a geode for hidden treasures. Mirrors the valoria:geodes advancement.",
+        "Original items: any item from #valoria:geodes (Stone Geode or Dirt Geode)"
+      ],
+      "dependencies": [
+        "val_path_of_valoria"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "tag": "valoria:geodes",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_black_gold",
+      "title": "Black Gold",
+      "icon": "valoria:black_gold_ingot",
+      "x": 128,
+      "y": 96,
+      "description": [
+        "Alloy gold and cobalt into Black Gold — Valoria's gateway metal.",
+        "Codex: \"Alloy of Gold and Cobalt\"",
+        "Original items: Black Gold Ingot (valoria)"
+      ],
+      "dependencies": [
+        "val_geodes"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:black_gold_ingot",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_heavy_workbench",
+      "title": "The Tinkerer's Bench",
+      "icon": "valoria:heavy_workbench",
+      "x": 192,
+      "y": 96,
+      "description": [
+        "Build the Heavy Workbench. Codex: \"A workbench used by Tinkerers.\"",
+        "Original items: Heavy Workbench (valoria)"
+      ],
+      "dependencies": [
+        "val_black_gold"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:heavy_workbench",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_alchemy_station",
+      "title": "Alchemy Station",
+      "icon": "valoria:alchemy_station_tier_1",
+      "x": 256,
+      "y": 96,
+      "description": [
+        "Set up the basic Alchemy Station. Crafts brews and runes.",
+        "Original items: Alchemy Station Tier 1 (valoria)"
+      ],
+      "dependencies": [
+        "val_heavy_workbench"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:alchemy_station_tier_1",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_elemental_crystal",
+      "title": "Colorful Crystal",
+      "icon": "valoria:elemental_crystal",
+      "x": 320,
+      "y": 64,
+      "description": [
+        "Slay an Elemental and harvest its crystal. Mirrors the valoria:elemental_crystal advancement.",
+        "Original items: Elemental Crystal (valoria)"
+      ],
+      "dependencies": [
+        "val_basic_medicine",
+        "val_alchemy_station"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:elemental_crystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_manipulator",
+      "title": "Elemental Fusion",
+      "icon": "valoria:elemental_manipulator",
+      "x": 384,
+      "y": 64,
+      "description": [
+        "Craft the Elemental Manipulator — the forge for the four elemental cores.",
+        "Mirrors the valoria:elemental_manipulator advancement.",
+        "Original items: Elemental Manipulator (valoria)"
+      ],
+      "dependencies": [
+        "val_elemental_crystal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:elemental_manipulator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "rhombus"
+    },
+    {
+      "id": "val_aquarius_core",
+      "title": "Core of Depths",
+      "icon": "valoria:aquarius_core",
+      "x": 448,
+      "y": 16,
+      "description": [
+        "Forge the Aquarius Core — water elemental focus.",
+        "Mirrors the valoria:aquarius_core advancement (parallel sibling)."
+      ],
+      "dependencies": [
+        "val_manipulator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:aquarius_core",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_harmony_core",
+      "title": "Core of Harmony",
+      "icon": "valoria:nature_core",
+      "x": 448,
+      "y": 64,
+      "description": [
+        "Forge the Nature Core — harmony/forest focus.",
+        "Codex: \"Living Forests . . .\"",
+        "Mirrors the valoria:harmony_core advancement (parallel sibling)."
+      ],
+      "dependencies": [
+        "val_manipulator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:nature_core",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_infernal_core",
+      "title": "Core of Flames",
+      "icon": "valoria:infernal_core",
+      "x": 448,
+      "y": 112,
+      "description": [
+        "Forge the Infernal Core — fire elemental focus.",
+        "Mirrors the valoria:infernal_core advancement (parallel sibling)."
+      ],
+      "dependencies": [
+        "val_manipulator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:infernal_core",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_void_core",
+      "title": "Core of Destruction",
+      "icon": "valoria:void_core",
+      "x": 448,
+      "y": 160,
+      "description": [
+        "Forge the Void Core — destruction focus.",
+        "Mirrors the valoria:void_core advancement (parallel sibling)."
+      ],
+      "dependencies": [
+        "val_manipulator"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:void_core",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_harmony_heart",
+      "title": "Heart of Harmony",
+      "icon": "valoria:harmony_heart",
+      "x": 320,
+      "y": 144,
+      "description": [
+        "Slay an Ent and harvest the Harmony Heart. Mirrors the valoria:harmony_heart advancement.",
+        "Original items: Harmony Heart (valoria)"
+      ],
+      "dependencies": [
+        "val_kill_ents"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:harmony_heart",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_devil_heart",
+      "title": "Heart of Flames",
+      "icon": "valoria:devil_heart",
+      "x": 384,
+      "y": 144,
+      "description": [
+        "Hunt Devils for the rare Devil Heart (5% on player kill). Mirrors the valoria:devil_heart advancement.",
+        "Original items: Devil Heart (valoria)"
+      ],
+      "dependencies": [
+        "val_kill_devils"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:devil_heart",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_necromancer_grimoire",
+      "title": "The Grimoire",
+      "icon": "valoria:necromancer_grimoire",
+      "x": 512,
+      "y": 64,
+      "description": [
+        "Hunt Sorcerers and Draugrs for the Necromancer Grimoire — a rare drop.",
+        "Codex: \"To kill the Necromancer firstly obtain a Necromancer Grimoire from killing Draugrs or Sorcerers.\"",
+        "Original items: Necromancer Grimoire (valoria)"
+      ],
+      "dependencies": [
+        "val_kill_draugrs"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:necromancer_grimoire",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "square"
+    },
+    {
+      "id": "val_find_crypt",
+      "title": "The Buried Tombs",
+      "icon": "valoria:cryptic_altar",
+      "x": 576,
+      "y": 64,
+      "description": [
+        "Find a Crypt structure and locate its Cryptic Altar. Place the Grimoire there to awaken the Necromancer.",
+        "&6Tip:&r A &eExplorer's Compass&r will point you straight at the nearest Necromancer Crypt.",
+        "Codex: \"Many of Necromancers descended underground, leaving empty tombs.\"",
+        "Codex: \"To awaken the Necromancer, find buried crypt and place the grimoire upon the ancient altar...\"",
+        "Original items: Cryptic Altar (valoria)"
+      ],
+      "dependencies": [
+        "val_necromancer_grimoire"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:cryptic_altar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_necromancer",
+      "title": "The Last Rite",
+      "icon": "valoria:necromancer_treasure_bag",
+      "x": 640,
+      "y": 64,
+      "description": [
+        "Defeat the Necromancer — the first true boss. He is a single-phase spellcaster: he summons undead, applies effects, heals self and target, and knocks players around.",
+        "HP 500, 5 attack damage. Use the Grimoire on the Cryptic Altar to summon him, OR craft a Ravaging Catalyst (post-Dryador) to use on a Summoning Pedestal.",
+        "Mirrors the valoria:necromancer advancement."
+      ],
+      "dependencies": [
+        "val_find_crypt"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:necromancer_treasure_bag",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "square"
+    },
+    {
+      "id": "val_dryador",
+      "title": "The Forest Weeps",
+      "icon": "valoria:dryador_treasure_bag",
+      "x": 768,
+      "y": 64,
+      "description": [
+        "Defeat Dryador, the Fallen Emperor of Nature. HP 1000, 4 attack damage, 5 armor. Pixie summons, radial acorn barrage, ground stomp.",
+        "Codex: \"if the most peaceable Emperor has gone berserk, we need to investigate further.\"",
+        "Mirrors the valoria:dryador advancement."
+      ],
+      "dependencies": [
+        "val_necromancer"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:dryador_treasure_bag",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 4000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "square"
+    },
+    {
+      "id": "val_visit_valoria",
+      "title": "The Forgotten Lands",
+      "icon": "valoria:valoria_portal_frame",
+      "x": 832,
+      "y": 64,
+      "description": [
+        "Build a Valoria Portal and step into The Valoria. The corrupted dimension awaits.",
+        "Codex: \"Obtain - Valoria Portal Frame Shard.\"",
+        "Mirrors the valoria:visit_the_valoria advancement (which is GATED ON DRYADOR — don't try to enter early)."
+      ],
+      "dependencies": [
+        "val_dryador"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:dimension",
+          "dimension": "valoria:the_valoria"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "square"
+    },
+    {
+      "id": "val_jade",
+      "title": "Shiny!",
+      "icon": "valoria:jade",
+      "x": 896,
+      "y": 16,
+      "description": [
+        "Mine Jade in The Valoria dimension. Mirrors the valoria:jade advancement.",
+        "Original items: Jade (valoria)"
+      ],
+      "dependencies": [
+        "val_visit_valoria"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:jade",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_pyratite",
+      "title": "Explosive One",
+      "icon": "valoria:pyratite",
+      "x": 896,
+      "y": 64,
+      "description": [
+        "Mine Pyratite in The Valoria dimension. Volatile material.",
+        "Mirrors the valoria:pyratite advancement.",
+        "Original items: Pyratite (valoria)"
+      ],
+      "dependencies": [
+        "val_visit_valoria"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:pyratite",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_void_fortress",
+      "title": "The Void Fortress",
+      "icon": "valoria:wicked_altar",
+      "x": 832,
+      "y": 112,
+      "description": [
+        "Find the Void Fortress structure. Codex: \"Take a visit to the Void Fortress.\"",
+        "It contains the Wicked Altar — used to awaken the Wicked Crystal with a Crystal Summon Book.",
+        "&6Tip:&r A &eExplorer's Compass&r locked to the Void Fortress will guide you to it inside The Valoria.",
+        "Original items: Wicked Altar (valoria)"
+      ],
+      "dependencies": [
+        "val_kill_wicked_scorpions",
+        "val_dryador"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:wicked_altar",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_wicked_crystal",
+      "title": "Heart of the Fortress",
+      "icon": "valoria:wicked_crystal_treasure_bag",
+      "x": 896,
+      "y": 112,
+      "description": [
+        "Defeat the Wicked Crystal — the final boss. HP 2000, 0 melee damage but devastating spells: Crystal Storm rains 6-damage projectiles, Radial Attack hits 1.5-block AoE for 6, summons Wicked Shields (25 HP) and Crystal minions (35 HP), pulls players toward it. Two phases.",
+        "Mirrors the valoria:wicked_crystal advancement.",
+        "GRANTS lunatic_cultist — Valoria's chapter completion stage (slots in for GC's AbyssalCraft progression)."
+      ],
+      "dependencies": [
+        "val_void_fortress"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:wicked_crystal_treasure_bag",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 6000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "lunatic_cultist",
+          "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "shape": "rhombus"
+    },
+    {
+      "id": "val_reaper_scythe",
+      "title": "I'm Not Doomed Yet",
+      "icon": "valoria:reaper_scythe",
+      "x": 768,
+      "y": 144,
+      "description": [
+        "Forge the Reaper Scythe — Valoria's literal name match for AC's Soulreaper. Wither-slayer-tier kill weapon.",
+        "Original items: Reaper Scythe (valoria)"
+      ],
+      "dependencies": [
+        "val_dryador"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:reaper_scythe",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_firron",
+      "title": "The Mobile Blade",
+      "icon": "valoria:firron_spawn_egg",
+      "x": 896,
+      "y": 160,
+      "description": [
+        "Summon Firron via the Summoning Pedestal. Catalyst (held): 1× Devil Heart. Sacrifices: 1× Ravaging Catalyst + 1× Ethereal Shard + 1× Infernal Stone.",
+        "Firron is WIP in the Valoria mod itself (no native spawn). The summon ritual is a SoA addition that mirrors GC's Idol-of-Sorrow pattern using Necromancer + Devil + Dryador drops.",
+        "HP 1500, 15 melee damage, 20 armor — hits hard. 4 attack patterns + 2 phases.",
+        "Original items: kill valoria:firron"
+      ],
+      "dependencies": [
+        "val_devil_heart"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "valoria:firron",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 4500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_kill_draugrs",
+      "title": "Bones of the Crypt",
+      "icon": "valoria:necromancer_grimoire",
+      "x": 512,
+      "y": 144,
+      "description": [
+        "Cull 10 Draugrs from the world. They drop the Necromancer Grimoire — the item you need to summon the Necromancer.",
+        "&7Where to find them:&r Draugrs spawn inside &eNecromancer Crypt&r structures — buried tombs that generate in cold/wooded biomes. Look in &btaiga&r, &bsnowy taiga&r, &bmangrove swamp&r, &bgrove&r, &bwindswept hills&r, &bwindswept forest&r, and &bwindswept gravelly hills&r. The crypt opening is on the surface; descend to find the rooms full of Draugrs.",
+        "&6Tip:&r Use an &eExplorer's Compass&r to lock onto the nearest Necromancer Crypt — saves a lot of wandering.",
+        "&aBetter Grimoire path:&r &eSorcerers&r drop the Grimoire at &b2.5%&r (vs Draugr's &b0.15%&r — about 17x better). They spawn anywhere in the Overworld at night (any biome, 1-2 per pack). They also have a &b5%&r chance to drop a &eCrypt Explorer Map&r that pinpoints a Necromancer Crypt with a red X.",
+        "Codex: \"Many of Necromancers descended underground, leaving empty tombs.\"",
+        "Codex: \"To kill the Necromancer firstly obtain a Necromancer Grimoire from killing Draugrs or Sorcerers.\""
+      ],
+      "dependencies": [
+        "val_devil_heart"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "valoria:draugr",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:bone",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:skeletal_vambrace",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:necromancer_grimoire",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_kill_ents",
+      "title": "The Living Forests",
+      "icon": "valoria:harmony_heart",
+      "x": 256,
+      "y": 176,
+      "description": [
+        "Cull 10 Ents from the corrupted forests. They drop Harmony Hearts and Nature Gifts — keys to Dryador's lore and the catalyst chain.",
+        "&7Where to find them:&r Ents spawn in &eany forest biome&r in the Overworld — vanilla forest, dark forest, birch forest, flower forest, old growth forests, etc. Spawn groups are 2-4 per pack with high frequency, so a long walk through any treed area should turn up plenty.",
+        "Codex: \"Living Forests . . .\""
+      ],
+      "dependencies": [
+        "val_alchemy_station"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "valoria:ent",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:nature_gift",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:harmony_heart",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:elemental_crystal",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_kill_devils",
+      "title": "Hunting the Damned",
+      "icon": "valoria:devil_heart",
+      "x": 320,
+      "y": 192,
+      "description": [
+        "Cull 10 Devils from the corrupted lands. They drop the rare Devil Heart (5% per kill), Infernal Stone, and Devil Meat.",
+        "&7Where to find them:&r Devils spawn &eanywhere in the Nether&r — every nether biome (nether wastes, soul sand valley, crimson forest, warped forest, basalt deltas). Spawn groups are 1-2 per pack, so plan to cover ground. Bring fire resistance.",
+        "Devil drops feed the Ravaging Catalyst recipe needed to summon Firron."
+      ],
+      "dependencies": [
+        "val_kill_ents"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "valoria:devil",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:devil_meat",
+          "count": 10
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:infernal_stone",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:devil_heart",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_kill_wicked_scorpions",
+      "title": "Pests of the Fortress",
+      "icon": "valoria:nihility_shard",
+      "x": 832,
+      "y": 16,
+      "description": [
+        "Cull 10 Wicked Scorpions from the Void Fortress. They drop Nihility Shards and Toxins Bottles.",
+        "&7Where to find them:&r Wicked Scorpions ONLY spawn in &eThe Valoria&r dimension — they are not in the Overworld or Nether. Highest density is in &bVoid Desert&r biomes (the primary hunting ground). Lower density in &bBarren Ecotone&r, &bShaded Ecotone&r, &bEcotone&r, &bShaded Barrens&r, and trace amounts in &bVoid Hills&r and &bVoid Barren&r. You'll need to enter The Valoria first (post-Dryador gate).",
+        "Pre-fight cleanup before approaching the Wicked Altar."
+      ],
+      "dependencies": [
+        "val_dryador"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:kill",
+          "entity": "valoria:wicked_scorpion",
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:nihility_shard",
+          "count": 5
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "valoria:toxins_bottle",
+          "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

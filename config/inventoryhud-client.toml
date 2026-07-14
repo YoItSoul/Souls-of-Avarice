@@ -15,7 +15,7 @@
 	#Hide background if inventory is empty
 	hideBackground = false
 	#Show Inventory HUD when debug menu is open
-	invWithDebug = true
+	invWithDebug = false
 
 #Settings for ArmorStatus HUD
 [armorhud]
@@ -219,5 +219,5 @@
 	#Last notified mod version
 	lastNotifiedVersion = "4.3.2508"
 	#Notify more than once
-	keepNotifying = true
+	keepNotifying = false
 

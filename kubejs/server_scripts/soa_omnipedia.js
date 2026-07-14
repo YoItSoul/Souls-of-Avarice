@@ -31,7 +31,7 @@ PlayerEvents.loggedIn(event => {
     if (GameStageHelper.hasStage(player, 'omnipedia_given')) return
 
     try {
-        const tome = Item.of('akashictome:tome').withNBT({
+        var tome = Item.of('akashictome:tome').withNBT({
             'akashictome:is_morphing': 1,
             display: {
                 Name: '{"translate":"greedycraft.omnipedia.name","color":"gold"}',

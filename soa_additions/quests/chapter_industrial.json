@@ -59,7 +59,7 @@
     {
       "id": "ind_infinity_capacitor",
       "title": "Infinity Capacitor",
-      "icon": "avaritiaio:infinitecapacitor",
+      "icon": "draconicevolution:chaotic_capacitor",
       "x": 376,
       "y": 480,
       "description": [
@@ -69,7 +69,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "avaritiaio:infinitecapacitor",
+          "item": "draconicevolution:chaotic_capacitor",
           "count": 1
         }
       ],
@@ -81,6 +81,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 666666
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "draconicevolution:chaotic_capacitor",
+          "count": 1
         }
       ],
       "modes": [
@@ -146,7 +151,9 @@
       "description": [
         "Complete \"Make progress in Thermal Series\" to continue."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "ind_mystical_machine"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -156,14 +163,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 100
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -190,7 +192,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "enderio:conductive_alloy_ingot",
+          "item": "enderio:grains_of_infinity",
           "count": 8
         },
         {
@@ -265,11 +267,16 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 100
+          "amount": 800
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:copper_alloy_ingot",
+          "count": 32
         }
       ],
       "modes": [
@@ -342,7 +349,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermal:electrum_ingot",
+          "item": "soa_additions:iridium_ingot",
           "count": 1
         }
       ],
@@ -354,6 +361,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:iridium_ingot",
+          "count": 4
         }
       ],
       "modes": [
@@ -392,6 +404,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:machine_frame",
+          "count": 5
         }
       ],
       "modes": [
@@ -415,18 +432,23 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:dynamo",
+          "item": "thermal:dynamo_stirling",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 100
+          "amount": 200
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:coal",
+          "count": 64
         }
       ],
       "modes": [
@@ -473,7 +495,7 @@
     {
       "id": "ind_quartz_but_it_s_black",
       "title": "Quartz but it's Black",
-      "icon": "actuallyadditions:iron_casing",
+      "icon": "jaopca:storage_blocks.black_quartz",
       "x": 603,
       "y": 83,
       "description": [
@@ -483,7 +505,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:iron_casing",
+          "item": "jaopca:storage_blocks.black_quartz",
           "count": 1
         }
       ],
@@ -495,6 +517,16 @@
         {
           "type": "soa_additions:xp",
           "amount": 60
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:restonia_crystal",
+          "count": 12
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.black_quartz",
+          "count": 10
         }
       ],
       "modes": [
@@ -506,7 +538,7 @@
     {
       "id": "ind_super_laser",
       "title": "Super Laser",
-      "icon": "actuallyadditions:block_atomic_reconstructor",
+      "icon": "mekanism:laser",
       "x": 603,
       "y": 40,
       "description": [
@@ -516,7 +548,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:block_atomic_reconstructor",
+          "item": "mekanism:laser",
           "count": 1
         }
       ],
@@ -528,6 +560,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:restonia_crystal",
+          "count": 16
         }
       ],
       "modes": [
@@ -539,7 +576,7 @@
     {
       "id": "ind_this_ain_t_a_decoration",
       "title": "This Ain't a Decoration",
-      "icon": "actuallyadditions:block_display_stand",
+      "icon": "extendedcrafting:pedestal",
       "x": 645,
       "y": 40,
       "description": [
@@ -552,7 +589,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:block_display_stand",
+          "item": "extendedcrafting:pedestal",
           "count": 1
         }
       ],
@@ -580,7 +617,7 @@
     {
       "id": "ind_altar_but_in_science",
       "title": "Altar but in Science",
-      "icon": "actuallyadditions:block_empowerer",
+      "icon": "extendedcrafting:crafting_core",
       "x": 707,
       "y": 40,
       "description": [
@@ -592,7 +629,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:block_empowerer",
+          "item": "extendedcrafting:crafting_core",
           "count": 1
         }
       ],
@@ -604,6 +641,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "extendedcrafting:pedestal",
+          "count": 3
         }
       ],
       "modes": [
@@ -615,7 +657,7 @@
     {
       "id": "ind_electrified_iron",
       "title": "Electrified Iron",
-      "icon": "actuallyadditions:empowered_enori_crystal",
+      "icon": "jaopca:storage_blocks.enori_crystal",
       "x": 728,
       "y": 83,
       "description": [
@@ -627,7 +669,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:empowered_enori_crystal",
+          "item": "jaopca:storage_blocks.enori_crystal",
           "count": 1
         }
       ],
@@ -639,6 +681,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.enori_crystal",
+          "count": 4
         }
       ],
       "modes": [
@@ -698,7 +745,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_chiller",
           "count": 1
         }
       ],
@@ -721,7 +768,7 @@
     {
       "id": "ind_rainbow",
       "title": "RAINBOW!",
-      "icon": "extrautils2:rainbowgenerator",
+      "icon": "cyclic:laser_cannon",
       "x": 603,
       "y": 395,
       "description": [
@@ -731,7 +778,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "extrautils2:rainbowgenerator",
+          "item": "cyclic:laser_cannon",
           "count": 1
         }
       ],
@@ -795,7 +842,9 @@
       "description": [
         "Complete \"Make progress in Ender IO\" to continue."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -805,15 +854,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 300
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -924,7 +967,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "enderio:energetic_alloy_ingot",
+          "item": "enderio:dark_steel_ingot",
           "count": 5
         },
         {
@@ -954,7 +997,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "enderio:soularium_ingot",
+          "item": "enderio:end_steel_ingot",
           "count": 1
         }
       ],
@@ -969,7 +1012,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "enderio:energetic_alloy_ingot",
+          "item": "enderio:end_steel_ingot",
           "count": 5
         }
       ],
@@ -1171,6 +1214,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:invar_ingot",
+          "count": 16
         }
       ],
       "modes": [
@@ -1235,7 +1283,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermal:upgrade_augment_1",
+          "item": "thermal:upgrade_augment_2",
           "count": 1
         }
       ],
@@ -1247,6 +1295,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:electrum_ingot",
+          "count": 16
         }
       ],
       "modes": [
@@ -1282,6 +1335,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:signalum_ingot",
+          "count": 16
         }
       ],
       "modes": [
@@ -1293,7 +1351,7 @@
     {
       "id": "ind_diamond_but_better",
       "title": "Diamond But Better",
-      "icon": "actuallyadditions:empowered_diamatine_crystal",
+      "icon": "soa_additions:diamantine_crystal",
       "x": 749,
       "y": 40,
       "description": [
@@ -1305,7 +1363,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:empowered_diamatine_crystal",
+          "item": "soa_additions:diamantine_crystal",
           "count": 1
         }
       ],
@@ -1426,7 +1484,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "enderio:energetic_alloy_ingot",
+          "item": "enderio:dark_steel_ingot",
           "count": 32
         },
         {
@@ -1455,7 +1513,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_press",
           "count": 1
         }
       ],
@@ -1490,7 +1548,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "minecraft:air",
+          "item": "thermal:dynamo_numismatic",
           "count": 1
         }
       ],
@@ -1507,6 +1565,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:iron_coin",
+          "count": 128
         }
       ],
       "modes": [
@@ -1564,7 +1627,9 @@
       "description": [
         "Complete \"Quest\" to continue."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_dragon_slayer"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -1574,14 +1639,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 100
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -1595,7 +1655,9 @@
       "description": [
         "Complete \"Make progress in Ender IO\" to continue."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -1605,15 +1667,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 300
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -1633,7 +1689,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:enrichment_chamber",
+          "item": "mekanism:osmium_ore",
           "count": 1
         }
       ],
@@ -1674,7 +1730,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:enrichment_chamber",
+          "item": "mekanism:metallurgic_infuser",
           "count": 1
         }
       ],
@@ -1744,7 +1800,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:enrichment_chamber",
+          "item": "mekanism:purification_chamber",
           "count": 1
         }
       ],
@@ -1779,7 +1835,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:enrichment_chamber",
+          "item": "mekanism:crusher",
           "count": 1
         }
       ],
@@ -1849,14 +1905,14 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:teleporter_frame",
+          "item": "mekanism:thermal_evaporation_controller",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:ingot_osmium",
+          "item": "mekanism:thermal_evaporation_block",
           "count": 20
         },
         {
@@ -1889,14 +1945,14 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:steel_casing",
+          "item": "mekanism:thermal_evaporation_valve",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:ingot_osmium",
+          "item": "mekanism:thermal_evaporation_block",
           "count": 20
         },
         {
@@ -1931,7 +1987,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:electrolytic_separator",
+          "item": "mekanism:chemical_injection_chamber",
           "count": 1
         }
       ],
@@ -1971,7 +2027,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:electrolytic_separator",
+          "item": "mekanism:chemical_dissolution_chamber",
           "count": 1
         }
       ],
@@ -2000,7 +2056,9 @@
       "description": [
         "Complete \"Make progress in Ender IO\" to continue."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "ind_even_more_upgrades"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -2010,15 +2068,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 300
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -2235,7 +2287,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "enderio:end_steel_ingot",
+          "item": "enderio:soularium_ingot",
           "count": 1
         }
       ],
@@ -2289,8 +2341,8 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "minecraft:wither_skeleton_skull",
-          "count": 12
+          "item": "minecraft:skeleton_skull",
+          "count": 4
         },
         {
           "type": "soa_additions:xp",
@@ -2299,6 +2351,16 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:zombie_head",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:creeper_head",
+          "count": 4
         }
       ],
       "modes": [
@@ -2329,11 +2391,16 @@
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 100
+          "amount": 1000
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "enderio:enderman_head",
+          "count": 3
         }
       ],
       "modes": [
@@ -2355,7 +2422,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_crucible",
           "count": 1
         }
       ],
@@ -2437,7 +2504,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "solarflux:sp_1",
+          "item": "solarflux:sp_4",
           "count": 1
         },
         {
@@ -2477,7 +2544,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "solarflux:sp_2",
+          "item": "solarflux:sp_5",
           "count": 1
         },
         {
@@ -2527,6 +2594,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:flux_capacitor",
+          "count": 1
         }
       ],
       "modes": [
@@ -2550,7 +2622,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:dynamo",
+          "item": "thermal:dynamo_disenchantment",
           "count": 1
         }
       ],
@@ -2590,18 +2662,18 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "enderio:sag_mill",
+          "item": "enderio:double_layer_capacitor",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 100
+          "amount": 4000
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\"} 1"
         }
       ],
       "modes": [
@@ -2613,7 +2685,7 @@
     {
       "id": "ind_afk_farming",
       "title": "AFK Farming",
-      "icon": "cyclicmagic:harvester_block",
+      "icon": "cyclic:harvester",
       "x": 603,
       "y": 437,
       "description": [
@@ -2623,7 +2695,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "cyclicmagic:harvester_block",
+          "item": "cyclic:harvester",
           "count": 1
         }
       ],
@@ -2692,7 +2764,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:electrolytic_separator",
+          "item": "mekanism:rotary_condensentrator",
           "count": 1
         }
       ],
@@ -2854,7 +2926,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "solarflux:sp_5",
+          "item": "solarflux:sp_6",
           "count": 1
         },
         {
@@ -2875,7 +2947,7 @@
     {
       "id": "ind_bigger_inventory",
       "title": "Bigger Inventory",
-      "icon": "cyclicmagic:inventory_food",
+      "icon": "cyclic:inventory_cake",
       "x": 645,
       "y": 437,
       "description": [
@@ -2885,7 +2957,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "cyclicmagic:inventory_food",
+          "item": "cyclic:inventory_cake",
           "count": 1
         }
       ],
@@ -2960,7 +3032,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:electrolytic_separator",
+          "item": "mekanism:chemical_oxidizer",
           "count": 1
         }
       ],
@@ -2995,7 +3067,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:enrichment_chamber",
+          "item": "mekanism:digital_miner",
           "count": 1
         }
       ],
@@ -3064,7 +3136,9 @@
       "description": [
         "Complete \"Make progress in Mekanism\" to continue."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "ind_quadruple_ores"
+      ],
       "tasks": [
         {
           "type": "soa_additions:checkmark"
@@ -3074,14 +3148,9 @@
         {
           "type": "soa_additions:xp",
           "amount": 100
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
         }
       ],
       "modes": [
-        "casual",
         "adventure",
         "expert"
       ]
@@ -3186,7 +3255,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:electrolytic_separator",
+          "item": "mekanism:chemical_infuser",
           "count": 1
         }
       ],
@@ -3221,7 +3290,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:electrolytic_separator",
+          "item": "mekanism:chemical_washer",
           "count": 1
         }
       ],
@@ -3284,7 +3353,7 @@
     {
       "id": "ind_solid_experience",
       "title": "Solid Experience",
-      "icon": "actuallyadditions:block_xp_solidifier",
+      "icon": "globalxp:xp_block",
       "x": 811,
       "y": 40,
       "description": [
@@ -3296,7 +3365,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:block_xp_solidifier",
+          "item": "globalxp:xp_block",
           "count": 1
         }
       ],
@@ -3308,6 +3377,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 3500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "create:experience_nugget",
+          "count": 320
         }
       ],
       "modes": [
@@ -3329,7 +3403,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_furnace",
           "count": 1
         }
       ],
@@ -3352,7 +3426,7 @@
     {
       "id": "ind_empowered_lapis",
       "title": "Empowered Lapis",
-      "icon": "actuallyadditions:empowered_palis_crystal",
+      "icon": "jaopca:storage_blocks.palis_crystal",
       "x": 707,
       "y": 104,
       "description": [
@@ -3364,7 +3438,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:empowered_palis_crystal",
+          "item": "jaopca:storage_blocks.palis_crystal",
           "count": 1
         }
       ],
@@ -3376,6 +3450,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.palis_crystal",
+          "count": 4
         }
       ],
       "modes": [
@@ -3406,7 +3485,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "solarflux:sp_6",
+          "item": "solarflux:sp_7",
           "count": 1
         },
         {
@@ -3439,7 +3518,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:dynamo",
+          "item": "thermal:dynamo_compression",
           "count": 1
         }
       ],
@@ -3477,7 +3556,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_insolator",
           "count": 1
         }
       ],
@@ -3575,7 +3654,7 @@
     {
       "id": "ind_empowered_coal",
       "title": "Empowered Coal",
-      "icon": "actuallyadditions:empowered_void_crystal",
+      "icon": "jaopca:storage_blocks.void_crystal",
       "x": 749,
       "y": 83,
       "description": [
@@ -3587,7 +3666,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:empowered_void_crystal",
+          "item": "jaopca:storage_blocks.void_crystal",
           "count": 1
         }
       ],
@@ -3599,6 +3678,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.void_crystal",
+          "count": 4
         }
       ],
       "modes": [
@@ -3657,7 +3741,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:basic_chemical_tank",
+          "item": "mekanism:ultimate_chemical_tank",
           "count": 1
         }
       ],
@@ -3720,7 +3804,7 @@
     {
       "id": "ind_power_infused_metal",
       "title": "Power Infused Metal",
-      "icon": "redstonearsenal:flux_ingot",
+      "icon": "soa_additions:flux_crystal",
       "x": 272,
       "y": 83,
       "description": [
@@ -3730,14 +3814,14 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "redstonearsenal:flux_ingot",
+          "item": "soa_additions:flux_crystal",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "redstone_arsenal:flux_ingot",
+          "item": "soa_additions:flux_crystal",
           "count": 6
         },
         {
@@ -3758,7 +3842,7 @@
     {
       "id": "ind_instant_transport",
       "title": "Instant Transport",
-      "icon": "thermaldynamics:energy_duct",
+      "icon": "fluxnetworks:flux_plug",
       "x": 480,
       "y": 83,
       "description": [
@@ -3768,7 +3852,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermaldynamics:energy_duct",
+          "item": "fluxnetworks:flux_plug",
           "count": 1
         }
       ],
@@ -3780,6 +3864,11 @@
         {
           "type": "soa_additions:xp",
           "amount": 2800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "fluxnetworks:flux_plug",
+          "count": 16
         }
       ],
       "modes": [
@@ -3801,7 +3890,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_centrifuge",
           "count": 1
         }
       ],
@@ -3869,7 +3958,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "create:mechanical_crafter",
           "count": 1
         }
       ],
@@ -4015,7 +4104,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:device",
+          "item": "thermal:fluid_cell",
           "count": 1
         }
       ],
@@ -4038,7 +4127,7 @@
     {
       "id": "ind_walkie_craftie",
       "title": "Walkie Craftie",
-      "icon": "cyclicmagic:crafting_food",
+      "icon": "cyclic:crafting_bag",
       "x": 707,
       "y": 437,
       "description": [
@@ -4048,7 +4137,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "cyclicmagic:crafting_food",
+          "item": "cyclic:crafting_bag",
           "count": 1
         }
       ],
@@ -4106,7 +4195,7 @@
     {
       "id": "ind_empowered_emerald",
       "title": "Empowered Emerald",
-      "icon": "actuallyadditions:empowered_emeradic_crystal",
+      "icon": "jaopca:storage_blocks.emeraldic_crystal",
       "x": 664,
       "y": 83,
       "description": [
@@ -4118,7 +4207,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:empowered_emeradic_crystal",
+          "item": "jaopca:storage_blocks.emeraldic_crystal",
           "count": 1
         }
       ],
@@ -4130,6 +4219,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.emeraldic_crystal",
+          "count": 4
         }
       ],
       "modes": [
@@ -4202,18 +4296,18 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermal:machine_catalyst_augment",
+          "item": "thermal:fluid_tank_augment",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:xp",
-          "amount": 100
+          "amount": 600
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
         }
       ],
       "modes": [
@@ -4235,7 +4329,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermal:lumium_ingot",
+          "item": "thermal:bronze_ingot",
           "count": 1
         }
       ],
@@ -4247,6 +4341,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:bronze_ingot",
+          "count": 8
         }
       ],
       "modes": [
@@ -4318,6 +4417,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:enderium_ingot",
+          "count": 16
         }
       ],
       "modes": [
@@ -4329,7 +4433,7 @@
     {
       "id": "ind_empowered_redstone",
       "title": "Empowered Redstone",
-      "icon": "actuallyadditions:block_crystal_empowered",
+      "icon": "jaopca:storage_blocks.restonia_crystal",
       "x": 688,
       "y": 83,
       "description": [
@@ -4341,7 +4445,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "actuallyadditions:block_crystal_empowered",
+          "item": "jaopca:storage_blocks.restonia_crystal",
           "count": 1
         }
       ],
@@ -4353,6 +4457,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "jaopca:storage_blocks.restonia_crystal",
+          "count": 4
         }
       ],
       "modes": [
@@ -4495,7 +4604,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:dynamo",
+          "item": "thermal:dynamo_lapidary",
           "count": 1
         }
       ],
@@ -4503,6 +4612,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "create:cogwheel",
+          "count": 16
         }
       ],
       "modes": [
@@ -4526,7 +4640,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:dynamo",
+          "item": "thermal:dynamo_magmatic",
           "count": 1
         }
       ],
@@ -4543,6 +4657,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "thermal:florb",
+          "count": 8
         }
       ],
       "modes": [
@@ -4599,7 +4718,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermal:bronze_ingot",
+          "item": "mekanism:ingot_steel",
           "count": 1
         }
       ],
@@ -4611,6 +4730,11 @@
         {
           "type": "soa_additions:command",
           "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\"} 1"
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "mekanism:ingot_steel",
+          "count": 8
         }
       ],
       "modes": [
@@ -4632,7 +4756,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "thermalexpansion:machine",
+          "item": "thermal:machine_sawmill",
           "count": 1
         }
       ],

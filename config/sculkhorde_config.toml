@@ -70,6 +70,10 @@
 	enable_gpu_compatibility_mode = false
 	#Should the Sculk Horde be active while there are no players online. (Default false)
 	isHordeActiveWithNoPlayers = true
+	#Should hit squad event feature be enabled? (Default true)
+	hit_squad_event_enabled = true
+	#Should ghast deployment event feature be enabled? (Default true)
+	ghast_deployment_event_enabled = true
 
 ["Trigger Automatically Variables"]
 	#Should the Sculk Horde start automatically? Requires that chunk loading is enabled to work reliably, otherwise will only trigger if the ancient node's chunk is loaded. If enabled on a save where previously disabled, the node will trigger automatically if the time conditions are met. (Default false)
@@ -114,6 +118,8 @@
 	#How many minutes should pass before another Sculk node can spawn? (Default 120)
 	#Range: > 0
 	sculk_node_spawn_cooldown_minutes = 120
+	#Can nodes relocate themselves to new areas? (Default true)
+	enable_node_relocation = true
 
 ["Sculk Mite Variables"]
 	#Should sculk mites spawn in deep dark? (Default false)
@@ -132,8 +138,6 @@
 	experimental_features_enabled = false
 	#Should the experimental brood hatcher be enabled? (Default false)
 	experimental_brood_hatcher_enabled = false
-	#Should experimental hit squad event feature be enabled? (Default false)
-	experimental_hit_squad_event_enabled = false
 
 ["Sculk Raid Variables"]
 	#Should sculk raids be enabled? (Default true)
