@@ -1,7 +1,23 @@
 {
-  "_comment": "Firron loot table override. Valoria 1.0.2.10 ships Firron without a loot table; we add drops thematic to a 'mobile blade duelist' archetype, keeping the boss mid-tier between Dryador and Wicked Crystal. Three pools: (1) Ravaging Ingot — homage to GC's 'The Mourner' (defiledlands:the_mourner), the flying gloomy boss whose ravaging_ingot was a mid-progression material. (2) Valoria-dimension ores/gems — what you'd mine in The Valoria, just delivered faster via boss kill. (3) Alchemical Coal (ProjectE) 1-8. Player-killed-only condition on the rare firron_spawn_egg discourages AFK farming; other drops happen on any kill so summon-and-leave doesn't 100% block resources.",
+  "_comment": "Firron loot table override. Valoria 1.0.2.10 ships Firron without a loot table; we add drops thematic to a 'mobile blade duelist' archetype, keeping the boss mid-tier between Dryador and Wicked Crystal. Pools: (0) Portal Frame Shards x4 GUARANTEED — Firron is the ONLY source of valoria_portal_frame_shard (4 shards craft 12 frames = one portal), so this pool is what makes The Valoria reachable at all; do not remove. (1) Ravaging Ingot — homage to GC's 'The Mourner' (defiledlands:the_mourner), the flying gloomy boss whose ravaging_ingot was a mid-progression material. (2) Valoria-dimension ores/gems — what you'd mine in The Valoria, just delivered faster via boss kill. (3) Alchemical Coal (ProjectE) 1-8. Player-killed-only condition on the rare firron_spawn_egg discourages AFK farming; other drops happen on any kill so summon-and-leave doesn't 100% block resources.",
   "type": "minecraft:entity",
   "pools": [
+    {
+      "name": "portal_frame_shards",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "valoria:valoria_portal_frame_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    },
     {
       "name": "ravaging_homage",
       "rolls": 1,

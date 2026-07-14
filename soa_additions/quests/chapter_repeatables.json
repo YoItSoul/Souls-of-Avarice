@@ -66,7 +66,7 @@
       "icon": "botania:mana_pool",
       "optional": true,
       "x": 0,
-      "y": 64,
+      "y": 80,
       "repeatable": true,
       "description": [
         "Submit the required amount of Mana"
@@ -99,6 +99,7 @@
       "icon": "minecraft:redstone_block",
       "x": 64,
       "y": 0,
+      "repeatable": true,
       "description": [
         "Submit the required amount of RF or FE"
       ],
@@ -122,8 +123,7 @@
         "casual",
         "adventure",
         "expert"
-      ],
-      "repeatable": true
+      ]
     },
     {
       "id": "rep_too_much_xp",
@@ -164,7 +164,7 @@
       "icon": "projecte:transmutation_table",
       "optional": true,
       "x": 128,
-      "y": 64,
+      "y": 80,
       "repeatable": true,
       "description": [
         "Submit the required amount of EMC"

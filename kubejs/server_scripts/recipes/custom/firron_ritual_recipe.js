@@ -25,7 +25,9 @@
 // trigger, mirroring GC's Black Heart-tier centerpiece role).
 //
 // Difficulty placement: between Dryador (1000 HP) and Wicked Crystal (2000 HP).
-// Fits the lunatic_cultist tier in chapter_valoria.
+// Progression placement (user decision 2026-07-14): POST-DRAGON, like every
+// summoning-altar boss — the altar is ItemStaged 'fusion_matrix' and the
+// ravaging_catalyst 'hardmode', so Valoria dimension entry follows the dragon.
 //
 // Drops: see kubejs/data/valoria/loot_tables/entities/firron.json
 // ============================================================
@@ -47,7 +49,13 @@ ServerEvents.recipes(event => {
         .input('1x valoria:infernal_stone')
         .sacrificeRegion(13, 13)
         .recipeTime(400)
-        .blockBelow('valoria:ambane_stone_brick')
+        // Base block must be obtainable BEFORE the dimension this ritual
+        // unlocks. valoria:tombstone is the overworld necromancer-crypt stone
+        // (mined where the Necromancer chain already sends you). The previous
+        // 'valoria:ambane_stone_brick' was doubly broken: not a real block id
+        // (only ambane_stone_bricks exists), and ambane generates only inside
+        // The Valoria — a circular lock on the portal boss.
+        .blockBelow('valoria:tombstone')
 
     console.info('[soa_scripts] firron_ritual_recipe.js: DONE')
 })

@@ -250,6 +250,20 @@ ItemStages.restrict(<item:minecraft:popped_chorus_fruit>, "hardmode");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_phantom_redstoneface>, "hardmode");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:item_disenchanting_lens>, "hardmode");
 ItemStages.restrict(<item:soa_additions:forbidden_bible>, "hardmode");
+// -- 2026-07-14 boss-gate audit additions --
+// Meet Your Fight summon items (GC analog: defiledlands calling_stone /
+// idol_sorrow were staged 'nether'; MYF's own tier ladder spreads them out).
+ItemStages.restrict(<item:meetyourfight:haunted_bell>, "nether");       // Bellringer
+ItemStages.restrict(<item:meetyourfight:fossil_bait>, "nether");        // Swampjaw
+ItemStages.restrict(<item:meetyourfight:devils_ante>, "wither_slayer"); // Dame Fortuna
+ItemStages.restrict(<item:meetyourfight:wilted_ideals>, "hardmode");    // Rosalyne
+ItemStages.restrict(<item:meetyourfight:dusk_key>, "hardmode");         // Rosalyne (dusk chamber)
+// BOMD Night Lich summon item.
+ItemStages.restrict(<item:bosses_of_mass_destruction:soul_star>, "wither_slayer");
+// Firron ritual token — post-dragon like all altar summons (user decision;
+// altar itself is fusion_matrix, this keeps the catalyst craftable a hair
+// earlier so players can prep the fight).
+ItemStages.restrict(<item:kubejs:ravaging_catalyst>, "hardmode");
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:machine>, "hardmode");
 // BAD_ID (item not registered: mythicbotany:bottledflame): ItemStages.restrict(<item:mythicbotany:bottledflame>, "hardmode");
 ItemStages.restrict(<item:soa_additions:true_blood_sigil>, "hardmode");
@@ -843,6 +857,12 @@ ItemStages.restrict(<item:draconicevolution:draconium_chest>, "fusion_matrix"); 
 ItemStages.restrict(<item:mysticalagriculture:draconium_essence>, "fusion_matrix");  // Draconium Essence
 ItemStages.restrict(<item:draconicevolution:draconium_nugget>, "fusion_matrix");  // Draconium Nugget
 ItemStages.restrict(<item:cyclic:lightning_scepter>, "fusion_matrix");  // Engraved Thunder
+// 2026-07-14 audit: altar was restricted TWICE (here + a duplicate 'nether'
+// entry further down, both enforced). USER DECISION: all altar summons are
+// post-dragon content, so the altar keeps GC's 'fusion_matrix' stage; the
+// duplicate entry below was removed. Per-boss catalysts add their own tiers
+// (sun_totem=wyvern, beast_hand=fusion_matrix, forbidden_bible=hardmode,
+// ravaging_catalyst=hardmode).
 ItemStages.restrict(<item:summoningrituals:altar>, "fusion_matrix");  // Summoning Altar
 ItemStages.restrict(<item:draconicevolution:wyvern_core>, "fusion_matrix");  // Wyvern Core
 
@@ -1476,7 +1496,7 @@ ItemStages.restrict(<item:cyclic:wand_missile>, "nether");  // Spirit Seeker
 ItemStages.restrict(<item:cyclic:sprinkler>, "nether");  // Sprinkler
 ItemStages.restrict(<item:cyclic:stirrups>, "nether");  // Stirrups
 ItemStages.restrict(<item:cyclic:storage_bag>, "nether");  // Storage Bag
-ItemStages.restrict(<item:summoningrituals:altar>, "nether");  // Summoning Altar
+// (duplicate altar restrict removed 2026-07-14 — see the fusion_matrix entry)
 ItemStages.restrict(<item:aether:sun_altar>, "nether");  // Sun Altar
 ItemStages.restrict(<item:aether:swet_ball>, "nether");  // Swet Ball
 ItemStages.restrict(<item:aether:swet_cape>, "nether");  // Swet Cape

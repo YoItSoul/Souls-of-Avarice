@@ -3206,8 +3206,8 @@
       "visibility": "hidden_until_deps",
       "show_deps": false,
       "shape": "square",
-      "x": 96,
-      "y": 32,
+      "x": 0,
+      "y": 224,
       "description": [
         "It's really hard to breathe in places like underwater or in caves! Prepare a respirator so you don't die!"
       ],
@@ -3244,8 +3244,8 @@
       "icon": "minecraft:player_head",
       "visibility": "hidden_until_deps",
       "show_deps": false,
-      "x": 144,
-      "y": 32,
+      "x": 0,
+      "y": 256,
       "description": [
         "Hey! How did I die so fast? Well, you probably were shot in the head. try a helmet next time..."
       ],

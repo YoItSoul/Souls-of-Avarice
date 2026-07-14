@@ -6,10 +6,11 @@
 // `mods.mobstages.MobStages.addStage(stage, entityId)` API.
 //
 // Translations from GC's mob list:
-//   - enderiozoo:* mobs (concussioncreeper, direslime, direwolf, enderminy,
-//     epicsquid, fallenknight, fallenmount, lovechild, withercat,
-//     witherwitch) — EnderIO 6.x in 1.20.1 dropped the Zoo addon entirely.
-//     SKIP those entries.
+//   - enderiozoo:* mobs — GC gated 10 of them at hardmode. The standalone
+//     EnderZoology mod (enderzoology: namespace) IS installed in SoA and
+//     carries 7 of the 10 (no direslime/epicsquid/lovechild in 1.20);
+//     gated below at hardmode like GC. (An earlier port pass wrongly
+//     assumed the Zoo was gone entirely — 2026-07-14 audit fixed that.)
 //   - touhou_little_maid — mod absent. SKIP.
 //   - thaumcraft:eldritchguardian, cultistportallesser — mod absent. SKIP.
 //   - mowziesmobs:umvuthi (1.20 rename of barako) / frostmaw — both installed; gated as in GC.
@@ -68,6 +69,44 @@ val mobStageMap as string[string] = {
     // -- Sculk Horde (sculkhorde mod) --
     "sculkhorde:sculk_zombie":   "ender_charm",
     "sculkhorde:sculk_creeper":  "ender_charm",
+
+    // -- EnderZoology (GC parity: enderiozoo mobs were hardmode in GC) --
+    "enderzoology:concussion_creeper": "hardmode",
+    "enderzoology:dire_wolf":          "hardmode",
+    "enderzoology:enderminy":          "hardmode",
+    "enderzoology:fallen_knight":      "hardmode",
+    "enderzoology:fallen_mount":       "hardmode",
+    "enderzoology:wither_cat":         "hardmode",
+    "enderzoology:wither_witch":       "hardmode",
+    "enderzoology:infested_zombie":    "hardmode", // no GC analog; same family
+
+    // -- L_Enders Cataclysm 3.31 additions (tier-analogy vs the six above;
+    //    REVIEW: tune stages to taste) --
+    "cataclysm:maledictus":    "hardmode",      // Frosted Prison boss
+    "cataclysm:scylla":        "hardmode",      // storm ocean boss (leviathan-tier)
+    "cataclysm:aptrgangr":     "hardmode",      // Frosted Prison elite
+    "cataclysm:wadjet":        "ender_charm",   // Cursed Pyramid (remnant-tier)
+    "cataclysm:kobolediator":  "wither_slayer", // kobold arena boss
+    "cataclysm:coralssus":     "wither_slayer", // Sunken City miniboss
+
+    // -- Bosses of Mass Destruction (tier-analogy; REVIEW) --
+    "bosses_of_mass_destruction:void_blossom": "nether",
+    "bosses_of_mass_destruction:gauntlet":     "wither_slayer",
+    "bosses_of_mass_destruction:lich":         "wither_slayer",
+    "bosses_of_mass_destruction:obsidilith":   "ender_charm",
+
+    // -- Aquamirae (Ice Maze; tier-analogy; REVIEW) --
+    "aquamirae:captain_cornelia": "wither_slayer",
+    "aquamirae:maze_mother":      "wither_slayer",
+
+    // -- Valoria overworld bosses (AbyssalCraft-replacement tiers: AC keys
+    //    were 'nether', Asorah granted lunatic_cultist in GC) --
+    "valoria:necromancer":    "nether",
+    "valoria:dryador":        "lunatic_cultist",
+    "valoria:wicked_crystal": "hardmode", // in-dimension; dimension entry is post-dragon (Firron)
+    // valoria:firron deliberately NOT mob-staged: it only exists via the
+    // summoning ritual, which is already gated by its catalyst items —
+    // a mob stage here could eat the ritual ingredients on a denied spawn.
 } as string[string];
 
 // sdmmobstages signature is addStage(String stage, EntityType<Entity> entity).
