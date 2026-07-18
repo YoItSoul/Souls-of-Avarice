@@ -21,7 +21,8 @@ ReDimensionStages.restrict("minecraft:the_end", "ender_charm");
 
 // === The Aether ===
 // Requires hardmode stage (same as GreedyCraft)
-ReDimensionStages.restrict("aether:the_aether", "hardmode");
+// Strict GC pacing (2026-07-17): GC gated dim 4 (Aether) behind 'nether'.
+ReDimensionStages.restrict("aether:the_aether", "nether");
 
 // === Mythic Botany: Alfheim ===
 // Requires gaia stage (Botania progression - defeat Gaia Guardian first)

@@ -1,5 +1,5 @@
 {
-  "item": "tconstruct:seared_bricks",
+  "item": "smithery:furnace_bricks",
   "machines": [
     "soa_ported:alloy_decomposer"
   ],

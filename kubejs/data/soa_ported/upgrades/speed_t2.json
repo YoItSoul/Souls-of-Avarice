@@ -1,5 +1,5 @@
 {
-  "item": "tconstruct:scorched_bricks",
+  "item": "smithery:part_press",
   "machines": [
     "soa_ported:alloy_decomposer"
   ],

@@ -819,7 +819,7 @@
     {
       "id": "294fca0347c456aa",
       "title": "Rookie Artisan",
-      "icon": "tconstruct:pattern",
+      "icon": "smithery:part_press",
       "shape": "rhombus",
       "x": 144,
       "y": 80,
@@ -830,7 +830,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:pattern",
+          "item": "smithery:part_press",
           "count": 1
         }
       ],
@@ -846,27 +846,17 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:part_chest",
+          "item": "smithery:part_press",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:part_builder",
+          "item": "smithery:casting_table",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:crafting_station",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "tconstruct:tinker_station",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "tconstruct:tinkers_chest",
+          "item": "smithery:casting_sand",
           "count": 1
         }
       ],
@@ -879,7 +869,7 @@
     {
       "id": "200eb992d93375ac",
       "title": "Materials and You",
-      "icon": "tconstruct:materials_and_you",
+      "icon": "patchouli:guide_book",
       "x": 176,
       "y": 80,
       "description": [],
@@ -889,8 +879,9 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:materials_and_you",
-          "count": 1
+          "item": "patchouli:guide_book",
+          "count": 1,
+          "nbt": "{\"patchouli:book\":\"smithery:smithery_book\"}"
         }
       ],
       "rewards": [
@@ -908,7 +899,7 @@
     {
       "id": "1d30b4b2ab17d735",
       "title": "Seared Heat",
-      "icon": "tconstruct:seared_melter",
+      "icon": "smithery:forge_controller",
       "shape": "square",
       "x": 208,
       "y": 80,
@@ -919,12 +910,12 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_melter",
+          "item": "smithery:forge_controller",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_heater",
+          "item": "smithery:forge_fuel_port",
           "count": 1
         }
       ],
@@ -950,7 +941,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_basin",
+          "item": "smithery:casting_table",
           "count": 10
         }
       ],
@@ -963,7 +954,7 @@
     {
       "id": "0a06f9ed8ae8946e",
       "title": "The smeltery... my love!",
-      "icon": "tconstruct:smeltery_controller",
+      "icon": "smithery:forge_controller",
       "shape": "square",
       "x": 240,
       "y": 80,
@@ -974,12 +965,12 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:smeltery_controller",
+          "item": "smithery:forge_controller",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_drain",
+          "item": "smithery:forge_drain",
           "count": 1
         }
       ],
@@ -995,7 +986,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_glass",
+          "item": "smithery:furnace_bricks",
           "count": 64
         },
         {
@@ -1005,7 +996,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_bricks",
+          "item": "smithery:furnace_bricks",
           "count": 64
         }
       ],
@@ -1018,7 +1009,7 @@
     {
       "id": "20e815609d2b6e90",
       "title": "A Different Anvil?",
-      "icon": "tconstruct:tinkers_anvil",
+      "icon": "minecraft:anvil",
       "x": 272,
       "y": 80,
       "description": [],
@@ -1028,41 +1019,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:tinkers_anvil",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 300
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "769cf5f4bf9492a0",
-      "title": "Tinker's Gadgetry",
-      "icon": "tconstruct:tinkers_gadgetry",
-      "x": 176,
-      "y": 48,
-      "description": [],
-      "dependencies": [
-        "200eb992d93375ac"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tconstruct:tinkers_gadgetry",
+          "item": "minecraft:anvil",
           "count": 1
         }
       ],
@@ -1086,7 +1043,7 @@
     {
       "id": "4dab3e16b1dd5bc8",
       "title": "Lots Of Liquids!",
-      "icon": "tconstruct:foundry_controller",
+      "icon": "smithery:forge_controller",
       "shape": "square",
       "x": 304,
       "y": 80,
@@ -1098,14 +1055,14 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:foundry_controller",
+          "item": "smithery:forge_controller",
           "count": 1
         }
       ],
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_brick",
+          "item": "smithery:furnace_bricks",
           "count": 256
         },
         {
@@ -1199,7 +1156,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:blank_sand_cast",
+          "item": "smithery:casting_sand",
           "count": 4
         },
         {
@@ -1209,7 +1166,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:excavator",
+          "item": "smithery:excavator",
           "count": 1
         },
         {
@@ -1224,7 +1181,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_glass",
+          "item": "smithery:furnace_bricks",
           "count": 64
         }
       ],
@@ -3308,7 +3265,7 @@
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\"} 2"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\",Type:\"LEGENDARY\",Name:\"Legendary Loot Crate\",Color:16755200} 2"
         },
         {
           "type": "soa_additions:item",
@@ -3325,11 +3282,11 @@
     {
       "id": "quest_giant_furnace",
       "title": "Giant Furnace",
-      "icon": "tconstruct:foundry_controller",
+      "icon": "smithery:forge_controller",
       "x": 288,
       "y": 32,
       "description": [
-        "Craft the controller of a Foundry — the giant furnace of the Tinkers' world."
+        "Craft the controller of a Forge — the giant furnace of the Smithery world."
       ],
       "dependencies": [
         "0a06f9ed8ae8946e"
@@ -3337,7 +3294,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:foundry_controller",
+          "item": "smithery:forge_controller",
           "count": 1
         }
       ],
@@ -3348,7 +3305,7 @@
         },
         {
           "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\"} 1"
+          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\",Type:\"COMMON\",Name:\"Common Loot Crate\",Color:5635925} 1"
         },
         {
           "type": "soa_additions:item",
@@ -3367,7 +3324,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:seared_basin",
+          "item": "smithery:casting_table",
           "count": 10
         }
       ],

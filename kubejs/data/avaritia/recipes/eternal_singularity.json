@@ -1,0 +1,141 @@
+{
+  "_comment": "GC parity port (avaritia.zs eternal_singularity): GC consumed all avaritia singularities + all JAOPCA material singularities for x2 output. The avaritia:eternal_singularity type auto-requires Re-Avaritia's own singularities; 'ingredients' adds the pack's ExtendedCrafting material singularities (the 1.20 counterpart of GC's JAOPCA set), 'count' restores GC's doubled output.",
+  "type": "avaritia:eternal_singularity",
+  "category": "misc",
+  "count": 2,
+  "ingredients": [
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:aluminum"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:bronze"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:coal"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:copper"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:diamond"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:electrum"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:emerald"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:glowstone"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:gold"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:invar"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:iron"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:lapis_lazuli"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:lead"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:nickel"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:platinum"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:redstone"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:silver"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:steel"
+      }
+    },
+    {
+      "type": "forge:nbt",
+      "item": "extendedcrafting:singularity",
+      "nbt": {
+        "Id": "extendedcrafting:tin"
+      }
+    }
+  ]
+}

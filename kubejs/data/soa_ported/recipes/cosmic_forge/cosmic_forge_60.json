@@ -18,7 +18,7 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "tconstruct:pig_iron_ingot",
+      "item": "soa_additions:pigiron_ingot",
       "amount": 1,
       "slot": "in2"
     },
@@ -149,7 +149,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -160,9 +160,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

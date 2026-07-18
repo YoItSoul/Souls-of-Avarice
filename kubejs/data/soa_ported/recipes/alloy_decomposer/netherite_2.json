@@ -6,7 +6,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "tconstruct:molten_netherite",
+      "fluid": "smithery:molten_netherite",
       "amount": 144,
       "tank": "input"
     },
@@ -18,14 +18,14 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_gold",
+      "fluid": "smithery:molten_gold",
       "amount": 576,
       "tank": "out1"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_debris",
+      "fluid": "smithery:molten_ancient_debris",
       "amount": 576,
       "tank": "out2"
     },
@@ -44,7 +44,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -55,9 +55,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

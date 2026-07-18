@@ -284,13 +284,15 @@ Recipes.setRecipeStage("getting_started", <item:minecraft:golden_pickaxe>);
 Recipes.setRecipeStage("getting_started", <item:minecraft:golden_axe>);
 Recipes.setRecipeStage("getting_started", <item:minecraft:diamond_pickaxe>);
 Recipes.setRecipeStage("getting_started", <item:minecraft:diamond_axe>);
-// Tinkers' Construct tool stations
-Recipes.setRecipeStage("getting_started", <item:tconstruct:crafting_station>);
-Recipes.setRecipeStage("getting_started", <item:tconstruct:part_builder>);
-Recipes.setRecipeStage("getting_started", <item:tconstruct:part_chest>);
-Recipes.setRecipeStage("getting_started", <item:tconstruct:tinkers_anvil>);
-Recipes.setRecipeStage("getting_started", <item:tconstruct:tinkers_chest>);
-Recipes.setRecipeStage("getting_started", <item:tconstruct:tinkers_gadgetry>);
+// Smithery workstations (replaced Tinkers' Construct tool stations)
+Recipes.setRecipeStage("getting_started", <item:smithery:casting_table>);
+Recipes.setRecipeStage("getting_started", <item:smithery:part_press>);
+Recipes.setRecipeStage("getting_started", <item:smithery:forge_controller>);
+Recipes.setRecipeStage("getting_started", <item:smithery:forge_drain>);
+Recipes.setRecipeStage("getting_started", <item:smithery:forge_item_port>);
+Recipes.setRecipeStage("getting_started", <item:smithery:forge_fuel_port>);
+Recipes.setRecipeStage("getting_started", <item:smithery:furnace_bricks>);
+Recipes.setRecipeStage("getting_started", <item:smithery:fluid_pipe>);
 
 // ============================================================
 //  GRADUATED (Creative tier)
@@ -599,3 +601,31 @@ Recipes.setRecipeStage("wyvern", <item:draconicevolution:wyvern_crafting_injecto
 // Draconic Additions wyvern harness/necklace
 Recipes.setRecipeStage("wyvern", <item:draconicadditions:wyvern_harness>);
 Recipes.setRecipeStage("wyvern", <item:draconicadditions:wyvern_necklace>);
+
+// parity_score.py gap closure (2026-07-17): GC containers.zs staged whole mod
+// packages behind commonStages; RecipeStages 1.20 setPackageStages mirrors it.
+// (1.12 cofh -> thermal; rftools/mcjty -> the rftools family mods.)
+Recipes.setPackageStages("thermal", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("rftoolsbase", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("rftoolspower", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("rftoolscontrol", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("xnet", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("packagedauto", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+
+// endrem eye gating (2026-07-17) — hide eye recipes until their stage
+Recipes.setRecipeStage("twilight_shield", <item:endrem:old_eye>);
+Recipes.setRecipeStage("wither_slayer", <item:endrem:black_eye>);
+Recipes.setRecipeStage("hardmode", <item:endrem:cold_eye>);
+Recipes.setRecipeStage("skilled_wizard", <item:endrem:corrupted_eye>);
+Recipes.setRecipeStage("master_wizard", <item:endrem:cryptic_eye>);
+Recipes.setRecipeStage("master_wizard", <item:endrem:cursed_eye>);
+Recipes.setRecipeStage("zealot", <item:endrem:evil_eye>);
+Recipes.setRecipeStage("nether", <item:endrem:exotic_eye>);
+Recipes.setRecipeStage("twilight_shield", <item:endrem:guardian_eye>);
+Recipes.setRecipeStage("twilight_shield", <item:endrem:lost_eye>);
+Recipes.setRecipeStage("qualified_botanian", <item:endrem:magical_eye>);
+Recipes.setRecipeStage("nether", <item:endrem:nether_eye>);
+Recipes.setRecipeStage("twilight_shield", <item:endrem:rogue_eye>);
+Recipes.setRecipeStage("twilight_shield", <item:endrem:undead_eye>);
+Recipes.setRecipeStage("alchemist", <item:endrem:witch_eye>);
+Recipes.setRecipeStage("wither_slayer", <item:endrem:wither_eye>);

@@ -236,6 +236,13 @@ PlayerEvents.tick(event => {
 })
 
 function onStageAdded(player, stage) {
+    // GC granted 'fearless_man' via the Lost Cities quest "The Fearless"
+    // (adventure/expert). Lost Cities isn't in the 1.20 pack, so grant it with
+    // 'hardmode' - the closest milestone - until that quest line is re-homed.
+    if (stage === 'hardmode' && GameStageHelper && !GameStageHelper.hasStage(player, 'fearless_man')) {
+        GameStageHelper.addStage(player, 'fearless_man')
+    }
+
     let mode = 'adventure'
     try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* */ }
     if (mode === 'casual' || player.creative) return

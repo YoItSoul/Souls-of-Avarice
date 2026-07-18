@@ -1,0 +1,5 @@
+{
+  "_comment": "SOA override (2026-07-17): End Remastered eye loot disabled \u2014 eyes are quest rewards / pillar crafts only. skeleton_horse (undead_soul) and witch (witch_pupil) injections stay live as crafting components.",
+  "type": "minecraft:entity",
+  "pools": []
+}

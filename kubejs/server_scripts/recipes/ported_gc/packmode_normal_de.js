@@ -102,8 +102,8 @@ ServerEvents.recipes(event => {
         type: 'draconicevolution:fusion_crafting',
         catalyst: { item: 'minecraft:crafting_table' },
         ingredients: [
-            { item: 'avaritia:crystal_matrix_block' }, // FIXME: GC block_resource:2 best-guess
-            { item: 'avaritia:crystal_matrix_block' },
+            { item: 'avaritia:crystal_matrix' }, // block_resource:2 = crystal_matrix BlockItem
+            { item: 'avaritia:crystal_matrix' },
             { item: 'avaritia:crystal_matrix' },        // resource:1
             { item: 'avaritia:crystal_matrix' },
             { item: 'draconicevolution:wyvern_core' },
@@ -155,7 +155,7 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:energy_matter_core' }
         ],
         result: { item: 'projecte:condenser_mk1' },
-        tier: 'BASIC',
+        tier: 'DRACONIUM',
         total_energy: 80000000
     })
 
@@ -186,7 +186,7 @@ ServerEvents.recipes(event => {
         catalyst: { item: 'soa_additions:blueprint' },
         ingredients: Array(4).fill({ item: 'draconicevolution:draconium_ingot' }),
         result: { item: 'soa_additions:blueprint_tactic' },
-        tier: 'BASIC',
+        tier: 'DRACONIUM',
         total_energy: 4000000
     })
 
@@ -227,7 +227,7 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:cryonium_ingot' }
         ],
         result: { item: 'draconicevolution:wyvern_core' },
-        tier: 'BASIC',
+        tier: 'DRACONIUM',
         total_energy: 1600000
     })
 
@@ -286,8 +286,8 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:cosmilite_ingot' },
             { tag: 'forge:ingots/draconium_awakened' },
             { tag: 'forge:ingots/draconium_awakened' },
-            { item: 'draconicadditions:chaotic_energy_core' },
-            { item: 'draconicadditions:chaotic_energy_core' },
+            { item: 'draconicevolution:chaotic_energy_core' },
+            { item: 'draconicevolution:chaotic_energy_core' },
             { item: 'soa_additions:terra_alloy_ingot' },
             { item: 'soa_additions:terra_alloy_ingot' }
         ],

@@ -18,14 +18,14 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_iron",
+      "fluid": "smithery:molten_iron",
       "amount": 2,
       "tank": "out1"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "thermal:pyrotheum",
+      "fluid": "smithery:molten_blaze",
       "amount": 1,
       "tank": "out2"
     },
@@ -51,7 +51,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -62,9 +62,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

@@ -1830,6 +1830,11 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_common",
           "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "endrem:corrupted_eye",
+          "count": 1
         }
       ],
       "modes": [

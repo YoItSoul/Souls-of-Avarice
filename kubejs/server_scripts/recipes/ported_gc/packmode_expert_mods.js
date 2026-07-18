@@ -6,9 +6,9 @@
 // DUPLICATION CHECK (user-flagged concern):
 //   SoA's packmode-style fusion content lives in
 //   src/main/resources/data/soa_additions/recipes/components/
-//     - wyvern_ingot_fusion.json      (-> soa_additions:wyvern_ingot)
-//     - chaotic_ingot_fusion.json     (-> soa_additions:chaotic_ingot)
-//     - primal_metal_ingot_fusion.json (-> soa_additions:primal_metal_ingot)
+//     - wyvern_ingot_fusion.json      (-> tconevo:wyvern_ingot)
+//     - chaotic_ingot_fusion.json     (-> tconevo:chaotic_ingot)
+//     - primal_metal_ingot_fusion.json (-> tconevo:primal_metal_ingot)
 //   NONE of those outputs overlap with GC's expert DE fusion recipes.
 //
 // draconicevolution:fusion_crafting schema (confirmed in DE decompiled JSONs):
@@ -151,7 +151,7 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:energy_matter_core' }
         ],
         result: { item: 'projecte:condenser_mk1' },
-        tier: 'BASIC',
+        tier: 'DRACONIUM',
         total_energy: 320000000
     })
 
@@ -181,7 +181,7 @@ ServerEvents.recipes(event => {
         catalyst: { item: 'soa_additions:blueprint' },
         ingredients: Array(4).fill({ item: 'draconicevolution:draconium_ingot' }),
         result: { item: 'soa_additions:blueprint_tactic' },
-        tier: 'BASIC',
+        tier: 'DRACONIUM',
         total_energy: 16000000
     })
 
@@ -222,7 +222,7 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:cryonium_ingot' }
         ],
         result: { item: 'draconicevolution:wyvern_core' },
-        tier: 'BASIC',
+        tier: 'DRACONIUM',
         total_energy: 6400000
     })
 

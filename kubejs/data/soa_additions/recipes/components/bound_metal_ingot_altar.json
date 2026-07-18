@@ -10,7 +10,7 @@
     "tag": "forge:ingots/steel"
   },
   "output": {
-    "item": "soa_additions:bound_metal_ingot"
+    "item": "tconevo:bound_metal_ingot"
   },
   "upgradeLevel": 2
 }

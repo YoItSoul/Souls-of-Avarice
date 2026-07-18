@@ -13,9 +13,9 @@
 //   {extrabotany,botanicadds}:* -> mythicbotany:*
 //   {thaumicwonders,thaumictinkerer}:* -> thaumcraft:*
 //   {nyx,thaumadditions,tconevo,bloodarsenal,plustic}:* -> soa_additions:*
-//   tconstruct:tooltables:N -> tconstruct:crafting_station / part_builder /
-//                              part_chest / tinkers_anvil / tinkers_chest /
-//                              tinkers_gadgetry
+//   tconstruct:tooltables:N -> smithery:casting_table / part_press /
+//                              forge_controller / forge_drain / forge_item_port /
+//                              forge_fuel_port / furnace_bricks (TC removed for Smithery)
 //   danknull:dank_null_N -> dankstorage:dank_N
 //   eternalsingularity:eternal_singularity -> avaritia:eternal_singularity
 //   solarflux:solar_panel_infinity -> solarflux:sp_avaritia.infinity
@@ -39,7 +39,7 @@ ItemStages.restrict(<tag:items:forge:ingots/mirion>, "abyssal_conquerer");
 ItemStages.restrict(<tag:items:forge:storage_blocks/mirion>, "abyssal_conquerer");
 
 // === awakened ===
-ItemStages.restrict(<item:tconstruct:rod_cast>, "awakened");
+// BAD_ID (removed with TConstruct; Smithery has no rod cast equivalent): ItemStages.restrict(<item:tconstruct:rod_cast>, "awakened");
 ItemStages.restrict(<tag:items:forge:ingots/draconic_metal>, "awakened");
 ItemStages.restrict(<tag:items:forge:storage_blocks/draconic_metal>, "awakened");
 ItemStages.restrict(<tag:items:forge:nuggets/draconic_metal>, "awakened");
@@ -194,13 +194,16 @@ ItemStages.restrict(<item:minecraft:diamond_axe>, "getting_started");
 ItemStages.restrict(<item:minecraft:golden_axe>, "getting_started");
 ItemStages.restrict(<item:minecraft:iron_axe>, "getting_started");
 ItemStages.restrict(<tag:items:forge:cobblestone>, "getting_started");
-ItemStages.restrict(<item:tconstruct:crafting_station>, "getting_started");
-ItemStages.restrict(<item:tconstruct:part_chest>, "getting_started");
+// Smithery workstations (replaced Tinkers' Construct tool stations)
+ItemStages.restrict(<item:smithery:casting_table>, "getting_started");
+ItemStages.restrict(<item:smithery:part_press>, "getting_started");
 // OMIT_MOD (mod missing: conarm): ItemStages.restrict(<item:conarm:armorstation>, "getting_started");
-ItemStages.restrict(<item:tconstruct:part_builder>, "getting_started");
-ItemStages.restrict(<item:tconstruct:tinkers_gadgetry>, "getting_started");
-ItemStages.restrict(<item:tconstruct:tinkers_anvil>, "getting_started");
-ItemStages.restrict(<item:tconstruct:tinkers_chest>, "getting_started");
+ItemStages.restrict(<item:smithery:forge_controller>, "getting_started");
+ItemStages.restrict(<item:smithery:forge_drain>, "getting_started");
+ItemStages.restrict(<item:smithery:forge_item_port>, "getting_started");
+ItemStages.restrict(<item:smithery:forge_fuel_port>, "getting_started");
+ItemStages.restrict(<item:smithery:furnace_bricks>, "getting_started");
+ItemStages.restrict(<item:smithery:fluid_pipe>, "getting_started");
 ItemStages.restrict(<tag:items:forge:ingots/iron>, "getting_started");
 ItemStages.restrict(<tag:items:forge:ingots/gold>, "getting_started");
 ItemStages.restrict(<tag:items:forge:nuggets/iron>, "getting_started");
@@ -427,6 +430,13 @@ ItemStages.restrict(<tag:items:forge:dusts/ardite>, "nether");
 ItemStages.restrict(<tag:items:forge:ores/cobalt>, "nether");
 ItemStages.restrict(<tag:items:forge:ingots/cobalt>, "nether");
 ItemStages.restrict(<tag:items:forge:dusts/cobalt>, "nether");
+// Explicit valoria entries: the cobalt tags above are filled by
+// kubejs/data/forge/tags (post-TC), invisible to the offline tags.json
+// export that regen_block_stages.py reads — keep these so block stages
+// still gate the ore blocks.
+ItemStages.restrict(<item:valoria:cobalt_ore>, "nether");
+ItemStages.restrict(<item:valoria:deepslate_cobalt_ore>, "nether");
+ItemStages.restrict(<item:valoria:raw_cobalt_ore>, "nether");
 ItemStages.restrict(<item:minecraft:blaze_rod>, "nether");
 ItemStages.restrict(<item:minecraft:blaze_powder>, "nether");
 ItemStages.restrict(<tag:items:forge:dusts/glowstone>, "nether");
@@ -1407,7 +1417,7 @@ ItemStages.restrict(<item:aether:light_angelic_stone>, "nether");  // Light Ange
 ItemStages.restrict(<item:aether:light_hellfire_stone>, "nether");  // Light Hellfire Stone
 ItemStages.restrict(<item:aether:lightning_knife>, "nether");  // Lightning Knife
 ItemStages.restrict(<item:aether:lightning_sword>, "nether");  // Lightning Sword
-ItemStages.restrict(<item:tconstruct:mattock>, "nether");  // Mattock
+ItemStages.restrict(<item:smithery:paxel>, "nether");  // Mattock (TC) -> Smithery paxel
 ItemStages.restrict(<item:embers:melter>, "nether");  // Melter
 ItemStages.restrict(<item:productivebees:milk_bottle>, "nether");  // Milk
 ItemStages.restrict(<item:cyclic:magic_net>, "nether");  // Monster Ball
@@ -1416,7 +1426,7 @@ ItemStages.restrict(<item:aether:mossy_holystone_slab>, "nether");  // Mossy Hol
 ItemStages.restrict(<item:aether:mossy_holystone_stairs>, "nether");  // Mossy Holystone Stairs
 ItemStages.restrict(<item:aether:mossy_holystone_wall>, "nether");  // Mossy Holystone Wall
 ItemStages.restrict(<item:aether:nature_staff>, "nether");  // Nature Staff
-ItemStages.restrict(<item:tconstruct:necrotic_bone>, "nether");  // Necrotic Bone
+// BAD_ID (removed with TConstruct; no 1.20 necrotic bone equivalent): ItemStages.restrict(<item:tconstruct:necrotic_bone>, "nether");  // Necrotic Bone
 ItemStages.restrict(<item:aether:neptune_gloves>, "nether");  // Neptune Gloves
 ItemStages.restrict(<item:cyclic:netherbrick_axe>, "nether");  // Nether Axe
 ItemStages.restrict(<item:cyclic:netherbrick_hoe>, "nether");  // Nether Hoe
@@ -2030,3 +2040,123 @@ ItemStages.restrict(<item:avaritia:neutron>, "wyvern");  // Neutronium Block
 ItemStages.restrict(<item:avaritia:neutron_ingot>, "wyvern");  // Neutronium Ingot
 ItemStages.restrict(<item:avaritia:neutron_nugget>, "wyvern");  // Neutronium Nugget
 ItemStages.restrict(<item:avaritia:neutron_pile>, "wyvern");  // Pile of Neutrons
+
+// ============================================================
+// parity_score.py gap closure (2026-07-17)
+// ============================================================
+// direct GC matches previously missed
+ItemStages.restrict(<item:valoria:cobalt_ingot>, "nether");            // GC tconstruct:ingots:0 Cobalt Ingot
+ItemStages.restrict(<item:aether:altar>, "nether");                    // GC aether_legacy:enchanter Summoning Altar
+// GC tinkers_stages.zs materials mitigated at item level
+ItemStages.restrict(<item:soa_additions:manyullyn_ingot>, "nether");
+ItemStages.restrict(<item:soa_additions:manyullyn_nugget>, "nether");
+ItemStages.restrict(<item:rftoolsbase:dimensionalshard>, "nether");    // GC 'dimansional_shard'
+// ambiguous-name resolutions: stage every plausible 1.20 candidate
+ItemStages.restrict(<item:bloodarsenal:block_blood_burned_string>, "novice_wizard");
+ItemStages.restrict(<item:bloodarsenal:glass_shard>, "novice_wizard");
+ItemStages.restrict(<item:bloodarsenal:stasis_plate>, "novice_wizard");
+ItemStages.restrict(<item:bloodarsenal:stasis_plate_item>, "novice_wizard");
+ItemStages.restrict(<item:soa_additions:amber>, "nether");
+ItemStages.restrict(<item:valoria:amber_gem>, "nether");
+ItemStages.restrict(<item:productivebees:amber>, "nether");
+ItemStages.restrict(<item:botania:pebble>, "nether");
+ItemStages.restrict(<item:soa_additions:pebble>, "nether");
+ItemStages.restrict(<item:enderio:enchanter>, "nether");
+ItemStages.restrict(<item:mysticalagriculture:enchanter>, "nether");
+ItemStages.restrict(<item:enderio:clear_glass_d>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_d>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_da>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_da>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_dm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_dm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_dna>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_dna>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_dnm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_dnm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_dnp>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_dnp>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_dp>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_dp>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_e>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_e>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_ea>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_ea>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_em>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_em>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_ena>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_ena>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_enm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_enm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_enp>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_enp>, "novice_engineer");
+ItemStages.restrict(<item:enderio:clear_glass_ep>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_ep>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_a>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_m>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_na>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_nm>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_np>, "novice_engineer");
+ItemStages.restrict(<item:enderio:fused_quartz_p>, "novice_engineer");
+ItemStages.restrict(<item:bno:copper_nugget>, "skilled_engineer");
+ItemStages.restrict(<item:create:copper_nugget>, "skilled_engineer");
+ItemStages.restrict(<item:cyclic:copper_nugget>, "skilled_engineer");
+ItemStages.restrict(<item:embers:copper_nugget>, "skilled_engineer");
+ItemStages.restrict(<item:malum:copper_nugget>, "skilled_engineer");
+ItemStages.restrict(<item:thermal:copper_nugget>, "skilled_engineer");
+
+// ============================================================
+// endrem eye gating (2026-07-17): End Remastered eyes are pillar
+// rewards/crafts — staged so structure-loot finds can't skip ahead.
+// ============================================================
+ItemStages.restrict(<item:endrem:old_eye>, "twilight_shield");
+ItemStages.restrict(<item:endrem:black_eye>, "wither_slayer");
+ItemStages.restrict(<item:endrem:cold_eye>, "hardmode");
+ItemStages.restrict(<item:endrem:corrupted_eye>, "skilled_wizard");
+ItemStages.restrict(<item:endrem:cryptic_eye>, "master_wizard");
+ItemStages.restrict(<item:endrem:cursed_eye>, "master_wizard");
+ItemStages.restrict(<item:endrem:evil_eye>, "zealot");
+ItemStages.restrict(<item:endrem:exotic_eye>, "nether");
+ItemStages.restrict(<item:endrem:guardian_eye>, "twilight_shield");
+ItemStages.restrict(<item:endrem:lost_eye>, "twilight_shield");
+ItemStages.restrict(<item:endrem:magical_eye>, "qualified_botanian");
+ItemStages.restrict(<item:endrem:nether_eye>, "nether");
+ItemStages.restrict(<item:endrem:rogue_eye>, "twilight_shield");
+ItemStages.restrict(<item:endrem:undead_eye>, "twilight_shield");
+ItemStages.restrict(<item:endrem:witch_eye>, "alchemist");
+ItemStages.restrict(<item:endrem:wither_eye>, "wither_slayer");
+
+// ============================================================
+// Mod-wide locks (SOA-only, not from GreedyCraft).
+// createModRestriction stages EVERY item owned by the mod id;
+// individual items cannot be exempted from these.
+// Block interaction gating for these namespaces is mirrored in
+// kubejs/server_scripts/soa_block_stages.js (regen script parses
+// the lines below — keep the exact call format).
+// ============================================================
+
+// === nouveau_lock (Ars Nouveau + addons) ===
+ItemStages.createModRestriction("ars_nouveau", "nouveau_lock");
+ItemStages.createModRestriction("ars_elemental", "nouveau_lock");
+ItemStages.createModRestriction("ars_additions", "nouveau_lock");
+ItemStages.createModRestriction("ars_technica", "nouveau_lock");     // Ars x Create crossover
+ItemStages.createModRestriction("ars_creo", "nouveau_lock");         // Ars x Create crossover
+ItemStages.createModRestriction("arseng", "nouveau_lock");           // Ars Energistique (AE2 addon)
+ItemStages.createModRestriction("custommachineryars", "nouveau_lock");
+
+// === create_lock (Create + addons) ===
+ItemStages.createModRestriction("create", "create_lock");
+ItemStages.createModRestriction("createaddition", "create_lock");            // Crafts & Additions
+ItemStages.createModRestriction("createfood", "create_lock");
+ItemStages.createModRestriction("createappliedkinetics", "create_lock");
+ItemStages.createModRestriction("sculkcatalyticchamber", "create_lock");     // Create: Abyss Catalysis
+ItemStages.createModRestriction("create_jetpack_curios", "create_lock");
+ItemStages.createModRestriction("nocubescreateexp", "create_lock");          // Create Compact Exp
+
+// === embers_lock (Embers Rekindled — not in GreedyCraft, gated until quest integration) ===
+ItemStages.createModRestriction("embers", "embers_lock");
+
+// === enigmatic_lock (Enigmatic Legacy + addons — gated until quest integration) ===
+ItemStages.createModRestriction("enigmaticlegacy", "enigmatic_lock");
+ItemStages.createModRestriction("enigmaticaddons", "enigmatic_lock");
+ItemStages.createModRestriction("enigmaticdelicacy", "enigmatic_lock");

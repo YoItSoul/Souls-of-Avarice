@@ -296,7 +296,7 @@ ServerEvents.recipes(event => {
 
     shp('draconicevolution:grinder',
         ['ABA', 'BCB', 'ABA'],
-        { A: 'minecraft:iron_block', B: 'draconicevolution:awakened_core', C: 'tconevo:metal_block' },
+        { A: 'minecraft:iron_block', B: 'draconicevolution:awakened_core', C: 'tconevo:draconic_metal_block' },
         'auto_gen_-893381298')
 
     shp('cyclic:wireless_item',
@@ -359,7 +359,7 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:death_coin',
         ['ABA', 'CDC', 'AEA'],
-        { A: 'draconicevolution:awakened_core', B: 'soa_additions:ancient_tome_fragment', C: 'tconevo:metal', D: 'soa_additions:bounty_hunter_medal', E: '#forge:shards/creative' },
+        { A: 'draconicevolution:awakened_core', B: 'soa_additions:ancient_tome_fragment', C: 'tconevo:wyvern_ingot', D: 'soa_additions:bounty_hunter_medal', E: '#forge:shards/creative' },
         'auto_gen_-1606461473')
 
     shp('soa_additions:infernium_ingot',

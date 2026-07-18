@@ -74,7 +74,7 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "tconstruct:manyullyn_ingot",
+      "item": "soa_additions:manyullyn_ingot",
       "amount": 1,
       "slot": "in10"
     },
@@ -128,7 +128,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -139,9 +139,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

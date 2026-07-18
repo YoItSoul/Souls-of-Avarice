@@ -1,8 +1,0 @@
-{
-  "type": "lootbags:loot",
-  "name": "Uncommon Loot Bag",
-  "rarity": "uncommon",
-  "output": {
-    "table": "minecraft:chests/simple_dungeon"
-  }
-}

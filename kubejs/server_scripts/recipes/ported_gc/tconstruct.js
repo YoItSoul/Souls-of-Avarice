@@ -53,6 +53,15 @@ const CAST_GEM    = { tag: 'forge:casts/gem' }; // FIXME: GC cast_custom:2 usage
 console.info('[soa_ported] tconstruct.js loading')
 
 ServerEvents.recipes(event => {
+    // Smithery replaces TConstruct's recipe serializers (tconstruct:alloy,
+    // tconstruct:melting, tconstruct:casting_table, etc.) — none of the
+    // event.custom() calls below can register because those types don't
+    // exist. Skip to avoid 18 "Unknown recipe type" log errors.
+    // Melting/alloy/casting recipes are handled by soa_additions'
+    // SoaSmitheryMelting / SoaSmitheryAlloys integration instead.
+    console.info('[soa_ported] tconstruct.js: SKIPPED (Smithery replaces TC recipe serializers)')
+    return
+    // --- Original recipes below (dead code until TC recipe types return) ---
     console.info('[soa_ported] tconstruct.js: registering recipes')
 
     // ================================================================

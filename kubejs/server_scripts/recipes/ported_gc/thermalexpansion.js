@@ -16,7 +16,7 @@
 //   thaumadditions:adaminite_ingot / mithrillium_ingot / mithminite_ingot
 //                                    -> soa_additions:<same>
 //   nyx:meteor_* (dust/shard/block)  -> NOT REGISTERED in SoA as items
-//                                       (only soa_additions:meteor_ingot exists)
+//                                       (only nyx:meteor_ingot exists)
 //
 // DROPPED in 1.20 (recipes cannot port):
 //   thermal:pyrotheum_dust           (pyrotheum no longer an InductionSmelter input)
@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
     // Pulverizer.addRecipe(<nyx:meteor_dust>, <nyx:meteor_ingot>, 600);
     // Pulverizer.addRecipe(<nyx:meteor_dust>*9, <nyx:meteor_block>, 600);
     // Pulverizer.addRecipe(<nyx:meteor_dust>, <nyx:meteor_shard>, 600);
-    // FIXME: soa_additions:meteor_dust / meteor_shard / meteor_block are NOT
+    // FIXME: nyx:meteor_dust / meteor_shard / meteor_block are NOT
     // registered in items.json (only meteor_ingot exists). These recipes
     // cannot produce a valid output and are left out pending block/item
     // registration in soa_additions.

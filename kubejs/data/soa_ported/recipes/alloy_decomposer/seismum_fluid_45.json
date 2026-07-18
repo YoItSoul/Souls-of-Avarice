@@ -18,7 +18,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_obsidian",
+      "fluid": "smithery:molten_obsidian",
       "amount": 4,
       "tank": "out1"
     },
@@ -51,7 +51,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -62,9 +62,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

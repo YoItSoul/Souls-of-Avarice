@@ -28,7 +28,7 @@
     "type": "forbidden_arcanus:create_item",
     "result_item": {
       "Count": 1,
-      "id": "soa_additions:primal_metal_ingot"
+      "id": "tconevo:primal_metal_ingot"
     }
   }
 }

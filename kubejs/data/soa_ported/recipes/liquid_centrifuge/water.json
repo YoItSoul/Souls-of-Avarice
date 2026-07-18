@@ -18,7 +18,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:creosote",
+      "fluid": "thermal:creosote",
       "amount": 2,
       "tank": "outf1"
     },
@@ -116,7 +116,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -127,9 +127,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

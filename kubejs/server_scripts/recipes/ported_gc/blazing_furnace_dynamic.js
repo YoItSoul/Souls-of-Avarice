@@ -12,26 +12,18 @@
 // handle the common cases; this script covers the long tail, skipping any
 // inputs that already have a static blazing_furnace recipe (by item id).
 
-// KubeJS 6.5 note: `event.custom({type: "custommachinery:machine", ...})`
-// fails with "Unknown recipe type" because CM only exposes its recipes
-// through the registered RecipeSchema (event.recipes.custommachinery.machine),
-// not the vanilla-serializer JSON pipeline. We therefore build each recipe
-// via the schema's typed builder. The custommachinery:speed requirement is
-// dropped (no JS builder is shipped for it; with `time:1` it's purely
-// cosmetic JEI metadata).
+// KubeJS 6.5 (2001.6.5) + CM 0.10.8 API, probed in-game 2026-07-17:
+//   event.recipes.custommachinery.custom_machine(machineId, timeTicks)
+//     .requireItem/.requireFluid/.../.requireStructure(...).id(...)
+// is the ONLY working path. Pitfalls that cost several probe rounds:
+//   - the function is named after the RecipeType (`custom_machine`), not the
+//     serializer (`machine`); `.machine` is a non-callable leftover object.
+//   - event.custom({type:"custommachinery:machine"}) and raw-JSON
+//     `requirements` both fail — KubeJS returns a silent ErroredRecipeJS
+//     instead of throwing, which fakes out try/catch probing.
+//   - the only schema constructor is (machine, time) — 1- or 3-arg calls fail.
 
 ServerEvents.recipes(event => {
-    // KubeJS 6 path notes for this script:
-    //   - bare `java.x.y` namespace was removed ("java() is no longer
-    //     supported")
-    //   - class filter bans java.lang.reflect.*
-    //   - Java global has no .to() conversion helper
-    // So we can't pre-build a Java String[][] / HashMap<String,String> for
-    // requireStructure(...). The dynamic recipes therefore omit the
-    // structure requirement; the static blazing_furnace recipes in
-    // data/soa_ported/recipes/blazing_furnace/ retain it, and the machine
-    // block itself enforces the seared-brick housing — so dynamic recipes
-    // still only fire when the player is at a properly-built machine.
 
     const seen = new Set();
     // Inputs already covered by the static 85 recipes — skip them to avoid
@@ -74,13 +66,19 @@ ServerEvents.recipes(event => {
             var rj = r.json;
             if (!rj || !rj.has("result") || !rj.has("ingredient")) return;
 
+            // Coerce every Gson getAsString() to a JS string IMMEDIATELY.
+            // The Java String wrappers blow up long before the regex at the
+            // recipeId line: `seenSet.has(javaString)` on a JS Set needs
+            // toPrimitive on the wrapper and throws "Cannot find default
+            // value for object" — which is why every recipe was skipped and
+            // 0 dynamic recipes were emitted despite the String() fix below.
             var outputId = null;
             var outputCount = 1;
             var resultEl = rj.get("result");
             if (resultEl.isJsonPrimitive()) {
-                outputId = resultEl.getAsString();
+                outputId = String(resultEl.getAsString());
             } else if (resultEl.isJsonObject()) {
-                if (resultEl.has("item")) outputId = resultEl.get("item").getAsString();
+                if (resultEl.has("item")) outputId = String(resultEl.get("item").getAsString());
                 if (resultEl.has("count")) outputCount = resultEl.get("count").getAsInt();
             }
             if (!outputId) return;
@@ -89,7 +87,7 @@ ServerEvents.recipes(event => {
             var inputIds = [];
             var collect = function (el) {
                 if (!el || !el.isJsonObject()) return;
-                if (el.has("item")) inputIds.push(el.get("item").getAsString());
+                if (el.has("item")) inputIds.push(String(el.get("item").getAsString()));
             };
             if (ingredientEl.isJsonArray()) {
                 ingredientEl.forEach(function (el) { collect(el); });
@@ -118,21 +116,29 @@ ServerEvents.recipes(event => {
                 var recipeId = "soa_additions:blazing_furnace_dyn_"
                     + String(inputId).replace(/:/g, "_").replace(/\//g, "_");
 
-                // GC's `thermal:pyrotheum` was dropped in Thermal 1.20.1 — the
-                // unregistered id makes Fluid.of(...) return an invalid stack, and
-                // requireFluid(invalidStack, ...) throws "Cannot find default value
-                // for object". Substitute `tconstruct:blazing_blood` (TC3, hot,
-                // confirmed in soa_exports/fluids.json). The 85 static JSONs in
-                // data/soa_ported/recipes/blazing_furnace/ still reference the old
-                // pyrotheum id; they parse fine but won't match at runtime — fix
-                // them in a separate pass when the fluid choice is finalised.
-                ev.recipes.custommachinery.machine("soa_ported:blazing_furnace")
-                    .time(1)
+                // FINAL, verified API (kubejs 2001.6.5 + CM 0.10.8, probed
+                // in-game 2026-07-17): the schema function is
+                // event.recipes.custommachinery.custom_machine (RecipeType
+                // name, NOT the serializer name `machine`), its ONLY
+                // constructor is (machine, time), and requirements are added
+                // via CM's Java builder methods on the returned recipe.
+                // Everything else (event.custom, raw-JSON requirements,
+                // other arities) returns a silent ErroredRecipeJS.
+                // No speed builder exists; with time=1 it was cosmetic.
+                // Pyrotheum is gone from Thermal 1.20.1 → smithery:molten_blaze.
+                ev.recipes.custommachinery.custom_machine("soa_ported:blazing_furnace", 1)
                     .requireItem(Item.of(inputId, 1), "in")
                     .requireEnergy(400)
-                    .requireFluid(Fluid.of("tconstruct:blazing_blood", 2), "pyro")
+                    .requireFluid(Fluid.of("smithery:molten_blaze", 2), "pyro")
                     .produceFluid(Fluid.of("cofh_core:experience", xpAmount), "xp")
                     .produceItem(Item.of(outputId, outputCount), "out")
+                    // Machine-position char is lowercase 'm' (bytecode: the
+                    // Builder exempts 'm' and ' '; 'M' is its internal marker,
+                    // and '$'/'M' both fail with "Blocks for character(s) X
+                    // are missing").
+                    .requireStructure(
+                        [["III", "III", "III"], ["ImI", "G G", "IGI"], ["III", "ICI", "III"]],
+                        { "I": "smithery:furnace_bricks", "G": "minecraft:glass", "C": "minecraft:blast_furnace" })
                     .id(recipeId);
                 ctr.emitted++;
             }

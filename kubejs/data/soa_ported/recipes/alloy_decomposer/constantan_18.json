@@ -6,7 +6,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "tconstruct:molten_constantan",
+      "fluid": "smithery:molten_constantan",
       "amount": 2,
       "tank": "input"
     },
@@ -18,14 +18,14 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_copper",
+      "fluid": "smithery:molten_copper",
       "amount": 1,
       "tank": "out1"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_nickel",
+      "fluid": "smithery:molten_nickel",
       "amount": 1,
       "tank": "out2"
     },
@@ -44,7 +44,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -55,9 +55,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

@@ -24,7 +24,7 @@
 //   additions:<metal>_ingot                -> soa_additions:<metal>_ingot
 //   additions:greedycraft-titanium_nugget  -> soa_additions:titanium_nugget
 //   tconevo:material (meta 0)              -> soa_additions:fusion_matrix_ingot
-//   nyx:meteor_ingot                       -> soa_additions:meteor_ingot
+//   nyx:meteor_ingot                       -> nyx:meteor_ingot
 
 console.info('[soa_ported] mysticalagriculture.js loading')
 
@@ -80,7 +80,7 @@ ServerEvents.recipes(event => {
     // registerSeedRecipe(<mysticalcreations:meteor_seeds>, <nyx:meteor_ingot>, 5, 1, <mysticalcreations:meteor_essence>, <nyx:meteor_ingot>);
     // FIXME: meteor_essence not registered; pending MC datapack entry.
     // event.shaped(
-    //     Item.of('soa_additions:meteor_ingot', 1),
+    //     Item.of('nyx:meteor_ingot', 1),
     //     ['EEE', 'E E', 'EEE'],
     //     { E: 'mysticalcreations:meteor_essence' }
     // ).id('soa_ported:meteor_seeds_essence')

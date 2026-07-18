@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    { "item": "tconstruct:pattern" },
+    { "item": "minecraft:compass" },
     { "item": "minecraft:bone" }
   ],
   "result": { "item": "soa_additions:death_counter" }

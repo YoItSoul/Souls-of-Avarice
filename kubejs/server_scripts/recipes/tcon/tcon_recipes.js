@@ -1,6 +1,16 @@
 console.info('[soa_scripts] tcon_recipes.js loading')
 
 ServerEvents.recipes(event => {
+    // [SoA] TC removed for Smithery, which has no datapack recipe types
+    // (tconstruct:melting/alloy/casting_* are unknown; melting & alloys are
+    // code-driven via soa_additions SoaSmitheryMelting/SoaSmitheryAlloys).
+    // Create's andesite alloy keeps its own vanilla/mixing recipes; the
+    // tconstruct:pattern recipes are dead (item no longer exists). If the
+    // molten-andesite smeltery route should return, add andesite to the
+    // soa_additions Smithery integration instead.
+    console.info('[soa_scripts] tcon_recipes.js: SKIPPED (Smithery replaces TC recipe serializers)')
+    return
+    // --- Original recipes below (dead code until ported to Smithery) ---
     console.info('[soa_scripts] tcon_recipes.js: registering recipes')
     event.custom({
         type: 'tconstruct:melting',

@@ -6,7 +6,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "tconstruct:molten_emerald",
+      "fluid": "smithery:molten_emerald",
       "amount": 2,
       "tank": "input"
     },
@@ -25,14 +25,14 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_redstone",
+      "fluid": "smithery:molten_redstone",
       "amount": 2,
       "tank": "out2"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_glowstone",
+      "fluid": "smithery:molten_glowstone",
       "amount": 2,
       "tank": "out3"
     },
@@ -51,7 +51,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -62,9 +62,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

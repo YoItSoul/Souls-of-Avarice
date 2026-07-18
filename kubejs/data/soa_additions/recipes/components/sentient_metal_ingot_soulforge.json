@@ -12,6 +12,6 @@
     "tag": "forge:ingots/steel"
   },
   "output": {
-    "item": "soa_additions:sentient_metal_ingot"
+    "item": "tconevo:sentient_metal_ingot"
   }
 }

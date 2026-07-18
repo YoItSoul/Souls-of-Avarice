@@ -7,17 +7,17 @@
   ],
   "key": {
     "m": {
-      "tag": "forge:storage_blocks/manyullyn"
+      "tag": "forge:ingots/manyullyn"
     },
     "d": {
       "tag": "forge:storage_blocks/diamond"
     },
     "c": {
-      "tag": "tconstruct:casts"
+      "item": "smithery:casting_sand"
     }
   },
   "result": {
-    "item": "soa_additions:artifact_unsealer",
+    "item": "tconevo:artifact_unsealer",
     "count": 1
   },
   "category": "misc"

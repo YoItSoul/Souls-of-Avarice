@@ -57,7 +57,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "tconstruct:cobalt_ore",
+      "item": "valoria:cobalt_ore",
       "amount": 1,
       "slot": "out5",
       "chance": 0.003
@@ -65,7 +65,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "tconstruct:cobalt_ore",
+      "item": "valoria:cobalt_ore",
       "amount": 1,
       "slot": "out6",
       "chance": 0.003
@@ -133,7 +133,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -144,9 +144,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

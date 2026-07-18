@@ -1,8 +1,0 @@
-{
-  "type": "lootbags:loot",
-  "name": "Artifact Loot Bag",
-  "rarity": "legendary",
-  "output": {
-    "table": "minecraft:chests/bastion_treasure"
-  }
-}

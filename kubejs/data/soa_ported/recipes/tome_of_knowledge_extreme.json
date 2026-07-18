@@ -1,0 +1,29 @@
+{
+  "_comment": "GC parity port (avaritia.zs custom_avaritia_recipe_29): Tome of Knowledge on the 9x9 extreme table. ProjectEX is absent in 1.20, so its items map to lineage equivalents: knowledge_sharing_book -> soa_additions:pearl_of_knowledge (the pack's knowledge capstone), colossal_star_omega -> projecte:klein_star_omega (max base-mod EMC star), final_star_shard -> soa_additions:matter_singularity (the pack's ProjectE-track singularity). Creative shard/soul ring and the plain book core are GC-exact.",
+  "type": "avaritia:shaped_table",
+  "category": "misc",
+  "key": {
+    "s": { "item": "soa_additions:creative_shard" },
+    "o": { "item": "soa_additions:creative_soul" },
+    "K": { "item": "soa_additions:pearl_of_knowledge" },
+    "C": { "item": "projecte:klein_star_omega" },
+    "F": { "item": "soa_additions:matter_singularity" },
+    "B": { "item": "minecraft:book" }
+  },
+  "pattern": [
+    "         ",
+    " sssosss ",
+    " sKCCCKs ",
+    " sCFFFCs ",
+    " oCFBFCo ",
+    " sCFFFCs ",
+    " sKCCCKs ",
+    " sssosss ",
+    "         "
+  ],
+  "result": {
+    "item": "projecte:tome"
+  },
+  "show_notification": true,
+  "tier": 4
+}

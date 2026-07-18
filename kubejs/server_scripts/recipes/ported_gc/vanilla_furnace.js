@@ -25,19 +25,19 @@ ServerEvents.recipes(event => {
     // GC removed furnace recipes for <tconstruct:materials> (wildcard) and
     // <extrabotany:material:5>. TC3 materials is no longer a single meta item,
     // and extrabotany is replaced by mythicbotany (no material:5 analog).
-    event.remove({ output: 'tconstruct:seared_brick', type: 'minecraft:smelting' })
-    event.remove({ output: 'tconstruct:scorched_brick', type: 'minecraft:smelting' })
+    // [SoA] TC removed for Smithery — no seared/scorched brick recipes to remove.
+    // event.remove({ output: 'tconstruct:seared_brick', type: 'minecraft:smelting' })
+    // event.remove({ output: 'tconstruct:scorched_brick', type: 'minecraft:smelting' })
 
     // --- Smelting recipes (furnaceXp = 2.0 in GC) ---
     const xp = 2.0
     const add = (out, input, id) =>
         event.smelting(out, input).xp(xp).id('soa_ported:furnace_' + id)
 
-    // ingotBrick -> tconstruct:seared_brick (GC: tconstruct:materials)
-    add('tconstruct:seared_brick', '#forge:ingots/brick', 'seared_brick')
-
-    // brick_block -> tconstruct:seared_bricks (GC: tconstruct:seared:3)
-    add('tconstruct:seared_bricks', 'minecraft:bricks', 'seared_bricks')
+    // [SoA] TC removed for Smithery — seared brick items have no 1.20 analog
+    // (Smithery only has seared as a tool material + molten_seared fluid).
+    // add('tconstruct:seared_brick', '#forge:ingots/brick', 'seared_brick')
+    // add('tconstruct:seared_bricks', 'minecraft:bricks', 'seared_bricks')
 
     // raw -> cooked human meat
     add('soa_additions:cooked_human_meat', 'soa_additions:raw_human_meat', 'cooked_human_meat')
@@ -68,9 +68,9 @@ ServerEvents.recipes(event => {
     event.smelting(Item.of('minecraft:netherite_scrap', 2), '#forge:ores/ancient_debris')
         .xp(xp).id('soa_ported:furnace_ancient_debris_x2')
 
-    // seared brick + seared block (GC tcomplement -> TC3 scorched)
-    add('tconstruct:scorched_brick', '#forge:ingots/seared_brick', 'scorched_brick')
-    add('tconstruct:scorched_bricks', 'tconstruct:seared_bricks', 'scorched_bricks')
+    // [SoA] TC removed for Smithery — scorched brick items have no 1.20 analog.
+    // add('tconstruct:scorched_brick', '#forge:ingots/seared_brick', 'scorched_brick')
+    // add('tconstruct:scorched_bricks', 'tconstruct:seared_bricks', 'scorched_bricks')
 
     // dustShadowium -> shadowium_ingot
     add('soa_additions:shadowium_ingot', '#forge:dusts/shadowium', 'shadowium_dust')

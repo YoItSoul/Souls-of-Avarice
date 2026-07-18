@@ -1,0 +1,11 @@
+{
+  "_comment": "GC parity: GreedyCraft set frostmaw generation_chance=0.0 — Frostmaw is SUMMON-ONLY (beast_hand ritual at the summoning altar). Empty structures list disables natural generation; placement kept so the set stays schema-valid.",
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 23317578,
+    "separation": 8,
+    "spacing": 25,
+    "spread_type": "triangular"
+  },
+  "structures": []
+}

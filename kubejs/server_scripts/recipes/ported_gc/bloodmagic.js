@@ -49,14 +49,14 @@ ServerEvents.recipes(event => {
     // The 1.12 GC recipe was 2-input → sentient ingot. Pad with 3x more
     //   stainless_steel to keep the same intent (steel → sentient metal) while
     //   satisfying the 4-slot schema; resolve the tag to its sole member
-    //   `soa_additions:sentient_metal_ingot` (per soa_exports/tags.json).
+    //   `tconevo:sentient_metal_ingot` (per soa_exports/tags.json).
     event.custom({
         type: 'bloodmagic:soulforge',
         input0: { item: 'bloodmagic:soulgempetty' },
         input1: { item: 'soa_additions:stainless_steel_ingot' },
         input2: { item: 'soa_additions:stainless_steel_ingot' },
         input3: { item: 'soa_additions:stainless_steel_ingot' },
-        output: { item: 'soa_additions:sentient_metal_ingot', count: 1 },
+        output: { item: 'tconevo:sentient_metal_ingot', count: 1 },
         minimumDrain: 2.0,
         drain: 2.0
     })
@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'bloodmagic:altar',
         input:  { item: 'soa_additions:durasteel_ingot' },
-        output: { item: 'soa_additions:bound_metal_ingot' },
+        output: { item: 'tconevo:bound_metal_ingot' },
         upgradeLevel: 2, altarSyphon: 10000, consumptionRate: 200, drainRate: 200
     })
     // BloodAltar.addRecipe(<twilightforest:fiery_blood>, <minecraft:glass_bottle>, 3, 7000, 120, 120);

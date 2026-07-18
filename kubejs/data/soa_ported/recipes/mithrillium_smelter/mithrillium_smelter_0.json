@@ -32,7 +32,7 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "soa_additions:fallen_star",
+      "item": "nyx:fallen_star",
       "amount": 1,
       "slot": "in4"
     },

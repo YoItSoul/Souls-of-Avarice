@@ -14,7 +14,6 @@ ServerEvents.recipes(event => {
     event.shaped(Item.of('thermal:machine_smelter', 1), ["ABA", "ACA", "ADA"], {A: '#forge:ingots/invar', B: '#forge:gears/lumium', C: 'thermal:machine_frame', D: 'thermal:signalum_gear'}).id('soa_parity:auto_gen_585799077')  // GC: Induction Smelter
     event.shapeless(Item.of('minecraft:skeleton_skull', 1), ['minecraft:name_tag', 'minecraft:skeleton_skull']).id('soa_parity:nametag_to_head')  // GC: Skeleton Skull
     event.shaped(Item.of('simplybackpacks:commonbackpack', 1), ["A A", "BCB", "BDB"], {A: '#forge:string', B: '#forge:leather', C: '#forge:ingots/iron', D: '#forge:chests'}).id('soa_parity:backpack_func_0')  // GC: Common Backpack
-    event.shaped(Item.of('simplybackpacks:uncommonbackpack', 1), ["ABA", "CDC", "CEC"], {A: '#forge:string', B: '#forge:ingots/steel', C: 'tconstruct:cobalt_reinforcement', D: '#forge:storage_blocks/gold', E: 'simplybackpacks:commonbackpack'}).id('soa_parity:backpack_func_1')  // GC: Uncommon Backpack
     event.shaped(Item.of('projecte:harvest_goddess_band', 1), ["ABA", "BCB", "ABA"], {A: 'soa_additions:creative_soul', B: 'minecraft:vine', C: 'projecte:iron_band'}).id('soa_parity:auto_gen_1124990531')  // GC: Harvest Goddess Band
     event.shaped(Item.of('projecte:nova_catalyst', 1), ["AAA", "BCB", "AAA"], {A: 'projecte:mobius_fuel', B: 'projecte:red_matter', C: 'minecraft:tnt'}).id('soa_parity:auto_gen__132199471')  // GC: Nova Catalyst
     event.shaped(Item.of('projecte:nova_cataclysm', 1), ["AAA", "AAA", "AAA"], {A: 'projecte:nova_catalyst'}).id('soa_parity:auto_gen_1281372914')  // GC: Nova Cataclysm
@@ -25,11 +24,12 @@ ServerEvents.recipes(event => {
     event.shaped(Item.of('mekanismgenerators:advanced_solar_generator', 1), ["AAA", "ABA", "CCC"], {A: 'mekanismgenerators:solar_generator', B: 'mekanism:alloy_atomic', C: 'mekanism:alloy_infused'}).id('soa_parity:auto_gen_685141373')  // GC: Advanced Solar Generator
     event.shaped(Item.of('projecte:soul_stone', 1), ["ABA", "CDC", "ABA"], {A: 'minecraft:gold_ingot', B: 'draconicevolution:awakened_core', C: 'botania:mana_diamond_block', D: 'soa_additions:creative_shard'}).id('soa_parity:auto_gen__1399323772')  // GC: Soul Stone
     event.shaped(Item.of('projecte:body_stone', 1), ["AAA", "BCB", "AAA"], {A: 'minecraft:gold_ingot', B: 'soa_additions:creative_shard', C: 'draconicevolution:chaotic_core'}).id('soa_parity:auto_gen__1815095390')  // GC: Body Stone
-    event.shaped(Item.of('tconstruct:crafting_station', 1), ["AA", "AA"], {A: '#minecraft:planks'}).id('soa_parity:auto_gen__444867109')  // GC: Crafting Station
+    // [SoA] Disabled — TC removed for Smithery; Smithery ships its own workstation recipes.
+    // event.shaped(Item.of('tconstruct:crafting_station', 1), ["AA", "AA"], {A: '#minecraft:planks'}).id('soa_parity:auto_gen__444867109')  // GC: Crafting Station
     event.shaped(Item.of('ironchest:diamond_chest', 1), ["AAA", "BCB", "AAA"], {A: 'minecraft:glass', B: 'minecraft:diamond', C: 'minecraft:gold_block'}).id('soa_parity:auto_gen_893026726')  // GC: Diamond Chest
     event.shaped(Item.of('projecte:interdiction_torch', 1), [" A ", "BCB", "DDD"], {A: 'soa_additions:creative_shard', B: 'projecte:red_matter', C: 'minecraft:torch', D: 'minecraft:glowstone_dust'}).id('soa_parity:auto_gen__626897020')  // GC: Interdiction Torch
     event.shaped(Item.of('valoria:iron_ring', 1), ["AAA", "A A", "AAA"], {A: '#forge:nuggets/iron'}).id('soa_parity:auto_gen__378684063')  // GC: Iron Ring
-    event.shaped(Item.of('draconicevolution:grinder', 1), ["ABA", "BCB", "ABA"], {A: 'minecraft:iron_block', B: 'draconicevolution:awakened_core', C: 'soa_additions:draconic_metal_block'}).id('soa_parity:auto_gen__893381298')  // GC: Mob Grinder
+    event.shaped(Item.of('draconicevolution:grinder', 1), ["ABA", "BCB", "ABA"], {A: 'minecraft:iron_block', B: 'draconicevolution:awakened_core', C: 'tconevo:draconic_metal_block'}).id('soa_parity:auto_gen__893381298')  // GC: Mob Grinder
     event.shaped(Item.of('cyclic:wireless_item', 1), ["ABA", "BCB", "ABA"], {A: 'thermal:enderium_ingot', B: 'minecraft:ender_eye', C: 'minecraft:chest'}).id('soa_parity:auto_gen__1542308372')  // GC: Item Transfer Node
     event.shaped(Item.of('cyclic:wireless_energy', 1), ["ABA", "BCB", "ABA"], {A: 'thermal:enderium_ingot', B: 'minecraft:ender_eye', C: 'minecraft:redstone_block'}).id('soa_parity:auto_gen_142121176')  // GC: Energy Transfer Node
     event.shaped(Item.of('cyclic:wireless_fluid', 1), ["ABA", "BCB", "ABA"], {A: 'thermal:enderium_ingot', B: 'minecraft:ender_eye', C: 'minecraft:bucket'}).id('soa_parity:auto_gen__1750189736')  // GC: Fluid Transfer Node
@@ -85,6 +85,9 @@ ServerEvents.recipes(event => {
     event.shapeless(Item.of('treasure2:sapphire_key', 1), ['#forge:dusts/glowstone', 'treasure2:gold_key', 'treasure2:treasure_tool', '#forge:gems/sapphire']).id('soa_parity:blue_key')  // GC: Sapphire Key
     event.shapeless(Item.of('avaritia:neutron_ingot', 2), ['#forge:ingots/protonium', '#forge:ingots/electronium']).id('soa_parity:neutronium_combination')  // GC: Neutronium Ingot
     event.shapeless(Item.of('avaritia:neutron', 2), ['#forge:storage_blocks/protonium', '#forge:storage_blocks/electronium']).id('soa_parity:neutronium_block_combination')  // GC: Neutronium Block
+    // [SoA] Disabled — duplicate of kubejs/data/soa_additions/recipes/death_counter.json
+    // (now compass + bone; TC pattern removed with TConstruct).
+    // event.shapeless('soa_additions:death_counter', ['tconstruct:pattern', 'minecraft:bone']).id('soa_parity:death_counter')  // GC: Death Counter
 
     // GC removed these outputs' crafting-table recipes (harder replacements
     // exist above / in avaritia.js). Crafting types only — smelting etc. kept.
@@ -133,12 +136,7 @@ ServerEvents.recipes(event => {
 })
 
 // [BLOCKED] — GC recipes whose ingredients have no 1.20 counterpart yet:
-//   Eternal Singularity: ingredient jaopca:item_singularityabyssalnite:0 unmappable (recipes\mods\avaritia.zs)
-//   Creative Chance Pendant: ingredient biomesoplenty:gem:0 unmappable (recipes\mods\avaritia.zs)
-//   Tome of Knowledge: ingredient projectex:knowledge_sharing_book:0 unmappable (recipes\mods\avaritia.zs)
-//   Rare Backpack: ingredient thaumcraft:fabric:0 unmappable (recipes\vanilla\crafting_table\recipe_functions.zs)
-//   Epic Backpack: ingredient ore:clothNylon unmappable (recipes\vanilla\crafting_table\recipe_functions.zs)
-//   Battery: ingredient thaumcraft:nugget:10 unmappable (recipes\vanilla\crafting_table\shaped.zs)
-//   Repair Talisman: ingredient tconstruct:materials:19 unmappable (recipes\vanilla\crafting_table\shaped.zs)
-//   Battle Tower Chest (Unlocked): ingredient additions:tower_chest:0 unmappable (recipes\vanilla\crafting_table\shapeless.zs)
+// [SKIPPED] Eternal Singularity (deliberate: SOA early-game redesign)
+// [SKIPPED] Tome of Knowledge (deliberate: SOA early-game redesign)
 // [SKIPPED] Crafting Table (deliberate: SOA early-game redesign)
+// [SKIPPED] Battle Tower Chest (Unlocked) (deliberate: SOA early-game redesign)

@@ -31,7 +31,9 @@ OreStages.addOreStage("nether", <blockstate:minecraft:nether_quartz_ore>, <block
 OreStages.addOreStage("nether", <blockstate:minecraft:nether_gold_ore>, <blockstate:minecraft:netherrack>, false);
 OreStages.addOreStage("nether", <blockstate:minecraft:ancient_debris>, <blockstate:minecraft:netherrack>, false);
 OreStages.addOreStage("nether", <blockstate:minecraft:gilded_blackstone>, <blockstate:minecraft:blackstone>, false);
-OreStages.addOreStage("nether", <blockstate:tconstruct:cobalt_ore>, <blockstate:minecraft:netherrack>, false);
+// Cobalt moved from TConstruct (nether ore) to Valoria (overworld stone/deepslate ore)
+OreStages.addOreStage("nether", <blockstate:valoria:cobalt_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("nether", <blockstate:valoria:deepslate_cobalt_ore>, <blockstate:minecraft:deepslate>, false);
 
 // ============================================================
 //  SKILLED_ENGINEER
@@ -124,3 +126,11 @@ OreStages.addOreStage("ender_charm", <blockstate:minecraft:end_portal_frame>, <b
 // Aether ores (block until 'nether' stage so players go to Nether first)
 OreStages.addOreStage("nether", <blockstate:soa_additions:aeroite_ore>,  <blockstate:aether:blue_aercloud>, false);
 OreStages.addOreStage("nether", <blockstate:soa_additions:aqualite_ore>, <blockstate:minecraft:prismarine>, false);
+
+// parity_score.py gap closure (2026-07-17): GC hid workstations pre-'nether'
+// (ore_replacement.zs) behind the Unknown Block, mirroring 1:1.
+OreStages.addOreStage("nether", <blockstate:minecraft:anvil>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:minecraft:chipped_anvil>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:minecraft:damaged_anvil>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:minecraft:beacon>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:minecraft:enchanting_table>, <blockstate:soa_additions:unknown_block>, false);

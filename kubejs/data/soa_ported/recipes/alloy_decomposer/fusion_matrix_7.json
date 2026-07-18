@@ -18,7 +18,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_manyullyn",
+      "fluid": "smithery:molten_manyullyn",
       "amount": 2,
       "tank": "out1"
     },
@@ -32,7 +32,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_enderium",
+      "fluid": "smithery:molten_enderium",
       "amount": 2,
       "tank": "out3"
     },
@@ -51,7 +51,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -62,9 +62,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

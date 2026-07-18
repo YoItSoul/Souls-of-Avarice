@@ -1,0 +1,21 @@
+{
+  "_comment": "SOA override (2026-07-17): End Remastered eye replaced with a taunt book \u2014 eyes are quest rewards / pillar crafts only.",
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Finders Keepers\",author:\"A Faster Adventurer\",pages:['{\"text\":\"I got here first\u2026 finders keepers!\"}']}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

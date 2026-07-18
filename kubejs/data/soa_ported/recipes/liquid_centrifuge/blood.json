@@ -88,7 +88,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "tconstruct:bacon",
+      "item": "createfood:bacon_bits",
       "amount": 1,
       "slot": "out2",
       "chance": 0.012
@@ -108,7 +108,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -119,9 +119,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

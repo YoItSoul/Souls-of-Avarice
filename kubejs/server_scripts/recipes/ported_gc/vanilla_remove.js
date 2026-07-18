@@ -156,13 +156,6 @@ ServerEvents.recipes(event => {
         'extrabotany:material','extrautils2:compound_bow','mekanism:electric_bow',
         'sereneseasons:greenhouse_glass','actuallyadditions:player_interface',
         'tcomplement:high_oven_io','openblocks:sprinkler',
-        // nyx meteor armor/tools: map to soa_additions:meteor_* but memory says only meteor_ingot exists -> FIXME
-        'soa_additions:meteor_helmet','soa_additions:meteor_chestplate',
-        'soa_additions:meteor_leggings','soa_additions:meteor_boots',
-        'soa_additions:meteor_hammer','soa_additions:meteor_sword','soa_additions:meteor_bow',
-        'soa_additions:meteor_pickaxe','soa_additions:meteor_hoe','soa_additions:meteor_shovel',
-        'soa_additions:meteor_axe',
-        // 'soa_additions:meteor_dust' -- not registered; skip
         'extrautils2:lawsword',
         'enderio:grains_of_infinity', // item_material:10 best-guess
         'cyclicmagic:bundled_pipe',

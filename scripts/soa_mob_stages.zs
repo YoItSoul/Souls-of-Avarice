@@ -62,9 +62,11 @@ val mobStageMap as string[string] = {
     "twilightforest:alpha_yeti":   "hardmode",
 
     // -- Aether 1.20.1 bosses --
-    "aether:slider":              "hardmode",
-    "aether:valkyrie_queen":      "hardmode",
-    "aether:sun_spirit":          "hardmode",
+    // Strict GC pacing (2026-07-17): aligned to the dimension's 'nether' gate —
+    // GC opened the Aether at 'nether' with no boss gating inside it.
+    "aether:slider":              "nether",
+    "aether:valkyrie_queen":      "nether",
+    "aether:sun_spirit":          "nether",
 
     // -- Sculk Horde (sculkhorde mod) --
     "sculkhorde:sculk_zombie":   "ender_charm",

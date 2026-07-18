@@ -1,0 +1,11 @@
+{
+  "_comment": "GC parity: GreedyCraft set barako generation_chance=0.0 — Umvuthi (Barako) is SUMMON-ONLY (sun_totem ritual at the summoning altar). Empty structures list disables natural grove generation; placement kept so the set stays schema-valid.",
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 23311138,
+    "separation": 8,
+    "spacing": 25,
+    "spread_type": "triangular"
+  },
+  "structures": []
+}

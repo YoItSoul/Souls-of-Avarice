@@ -18,14 +18,14 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_iron",
+      "fluid": "smithery:molten_iron",
       "amount": 5,
       "tank": "outf1"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:molten_gold",
+      "fluid": "smithery:molten_gold",
       "amount": 2,
       "tank": "outf2"
     },
@@ -80,7 +80,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "tconstruct:jerky",
+      "item": "createfood:rabbit_jerky",
       "amount": 1,
       "slot": "out1",
       "chance": 0.0003
@@ -148,7 +148,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -159,9 +159,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

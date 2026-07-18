@@ -1148,6 +1148,11 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_legendary",
           "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "endrem:cursed_eye",
+          "count": 1
         }
       ],
       "modes": [
@@ -1706,7 +1711,7 @@
       "y": 96,
       "description": [
         "Two paths: shapeless craft 1 ender pearl into 4 fragments, OR hunt endermen for 0-2 fragments per kill (drops alongside the pearl).",
-        "Used as a Tinker's Construct material in SoA — F&A's craftable weapons/armor are removed in favor of Tinker's recipes that consume these fragments.",
+        "Used as a Smithery material in SoA — F&A's craftable weapons/armor are removed in favor of Smithery recipes that consume these fragments.",
         "Original items: Ender Pearl Fragment (forbidden_arcanus)"
       ],
       "dependencies": [
@@ -1743,7 +1748,7 @@
       "x": 384,
       "y": 0,
       "description": [
-        "Refine raw dragon scales into two specialty variants — Tinker's-side recipes consume these for water- and gold-aligned tool/armor parts.",
+        "Refine raw dragon scales into two specialty variants — Smithery recipes consume these for water- and gold-aligned tool/armor parts.",
         "&71)&r &eAquatic Scale&r — shapeless: dragon_scale + prismarine_shard + prismarine_crystals + arcane_crystal_dust.",
         "&72)&r &eGolden Scale&r — shaped: 4 deorum_ingot around 1 dragon_scale.",
         "Original items: Aquatic Dragon Scale, Golden Dragon Scale (forbidden_arcanus)"

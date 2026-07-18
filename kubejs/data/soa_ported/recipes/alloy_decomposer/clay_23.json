@@ -6,7 +6,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "tconstruct:molten_clay",
+      "fluid": "smithery:molten_clay",
       "amount": 144,
       "tank": "input"
     },
@@ -25,16 +25,9 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "tconstruct:seared_stone",
+      "fluid": "smithery:molten_seared",
       "amount": 72,
       "tank": "out2"
-    },
-    {
-      "type": "custommachinery:fluid",
-      "mode": "output",
-      "fluid": "tconstruct:molten_dirt",
-      "amount": 144,
-      "tank": "out3"
     },
     {
       "type": "custommachinery:speed",
@@ -51,7 +44,7 @@
           "III"
         ],
         [
-          "I$I",
+          "ImI",
           "G G",
           "IGI"
         ],
@@ -62,9 +55,9 @@
         ]
       ],
       "keys": {
-        "I": "tconstruct:seared_bricks",
+        "I": "smithery:furnace_bricks",
         "G": "minecraft:glass",
-        "C": "tconstruct:seared_melter"
+        "C": "minecraft:blast_furnace"
       }
     }
   ]

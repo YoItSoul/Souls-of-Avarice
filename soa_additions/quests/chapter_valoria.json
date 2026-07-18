@@ -686,6 +686,11 @@
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
           "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "endrem:old_eye",
+          "count": 1
         }
       ],
       "modes": [
@@ -1094,6 +1099,11 @@
         {
           "type": "soa_additions:item",
           "item": "valoria:necromancer_grimoire",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "endrem:undead_eye",
           "count": 1
         }
       ],

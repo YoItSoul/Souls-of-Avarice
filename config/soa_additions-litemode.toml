@@ -1,0 +1,13 @@
+
+[liteMode]
+	#Master toggle for Lite Mode. When true, the mod applies maximum-performance
+	#client settings on every launch: clouds off, particles minimal, dynamic lights off,
+	#emissive textures off, Botania shaders off, etc. Individual vanilla and mod configs
+	#are overwritten each startup while this is true — disable to regain manual control.
+	enabled = false
+	#Render distance override for lite mode (chunks). Default 5.
+	#Range: 2 ~ 16
+	renderDistance = 5
+	#If true, lite mode also lowers render distance to the value above.
+	reduceRenderDistance = true
+

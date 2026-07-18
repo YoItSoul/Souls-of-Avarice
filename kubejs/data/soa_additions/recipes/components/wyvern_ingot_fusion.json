@@ -13,7 +13,7 @@
     { "tag": "forge:ingots/draconium" }
   ],
   "result": {
-    "item": "soa_additions:wyvern_ingot"
+    "item": "tconevo:wyvern_ingot"
   },
   "tier": "DRACONIUM",
   "total_energy": 250000

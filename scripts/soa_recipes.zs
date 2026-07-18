@@ -161,9 +161,8 @@ craftingTable.addShaped("soa_difficulty_syncer", <item:soa_additions:difficulty_
 //  DEATH COUNTER
 // ============================================================
 
-craftingTable.addShapeless("soa_death_counter", <item:soa_additions:death_counter>, [
-    <item:tconstruct:pattern>, <item:minecraft:bone>
-]);
+// Recipe lives in kubejs/data/soa_additions/recipes/death_counter.json
+// (compass + bone; original TC pattern removed with TConstruct).
 
 // ============================================================
 //  SOLARIUM STAR
@@ -434,7 +433,7 @@ craftingTable.addShaped("soa_crude_hatchet", <item:soa_additions:crude_hatchet>,
 //  GRAVEL -> RAW FLINT (replaces Tinkers' 3 gravel -> 1 flint)
 // ============================================================
 
-craftingTable.removeByName("tconstruct:common/flint");
+// tconstruct:common/flint removal no longer needed - TC removed for Smithery
 craftingTable.addShapeless("soa_gravel_to_raw_flint", <item:tough_beginnings:raw_flint>, [
     <item:minecraft:gravel>, <item:minecraft:gravel>, <item:minecraft:gravel>
 ]);

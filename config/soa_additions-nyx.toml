@@ -1,54 +1,54 @@
 
 [general]
-	allowedDimensions = ["minecraft:overworld"]
+	allowedDimensions = ["minecraft:overworld", "twilightforest:twilight_forest"]
 	lunarWater = true
 	#Range: 0.0 ~ 1.0
 	meteorShardGuardianChance = 0.05
-	mobDuplicationBlacklist = []
-	isMobDuplicationWhitelist = false
+	mobDuplicationBlacklist = ["minecraft:zombie", "minecraft:skeleton", "minecraft:enderman", "minecraft:creeper", "minecraft:spider", "minecraft:cave_spider", "minecraft:zombified_piglin"]
+	isMobDuplicationWhitelist = true
 	moonEventTint = true
 	lunarWaterTicks = [1200, -1, 4800, 4800, 3600, 3600, 2400, 2400, 600, -1]
 	eventNotifications = true
 
 [fullMoon]
 	fullMoon = true
-	addPotionEffects = true
+	addPotionEffects = false
 	#Range: 0 ~ 1000
-	additionalMobsChance = 5
+	additionalMobsChance = 10
 
 [enchantments]
-	enchantments = true
+	enchantments = false
 	lunarEdgeXp = true
-	disallowDayEnchanting = true
+	disallowDayEnchanting = false
 	enchantingWhitelistDimensions = ["minecraft:the_nether", "minecraft:the_end"]
 
 [harvestMoon]
-	harvestMoonOnFull = true
+	harvestMoonOnFull = false
 	#Range: 0 ~ 100
-	harvestMoonGrowAmount = 15
-	#Range: 1 ~ 100
-	harvestMoonGrowInterval = 10
+	harvestMoonGrowAmount = 10
+	#Range: 1 ~ 1000
+	harvestMoonGrowInterval = 100
 	#Range: 0.0 ~ 1.0
-	harvestMoonChance = 0.05
+	harvestMoonChance = 0.04
 	#Range: 0 ~ 1000
-	harvestMoonStartNight = 0
+	harvestMoonStartNight = 1
 	#Range: 0 ~ 1000
 	harvestMoonInterval = 0
 	#Range: 0 ~ 1000
-	harvestMoonGracePeriod = 0
+	harvestMoonGracePeriod = 4
 
 [fallingStars]
 	fallingStars = true
 	#Range: 0.0 ~ 1.0
 	fallingStarRarity = 0.01
 	#Range: 0.0 ~ 1.0
-	starShowersChance = 0.05
+	starShowersChance = 0.065
 	#Range: 0 ~ 1000
 	starShowersStartNight = 0
 	#Range: 0 ~ 1000
 	starShowersInterval = 0
 	#Range: 0 ~ 1000
-	starShowersGracePeriod = 0
+	starShowersGracePeriod = 4
 
 [bloodMoon]
 	bloodMoonSleeping = false
@@ -56,16 +56,16 @@
 	bloodMoonSpawnMultiplier = 2
 	bloodMoonVanish = true
 	#Range: 0 ~ 128
-	bloodMoonSpawnRadius = 20
-	bloodMoonOnFull = true
+	bloodMoonSpawnRadius = 12
+	bloodMoonOnFull = false
 	#Range: 0.0 ~ 1.0
 	bloodMoonChance = 0.05
 	#Range: 0 ~ 1000
-	bloodMoonStartNight = 0
+	bloodMoonStartNight = 4
 	#Range: 0 ~ 1000
 	bloodMoonInterval = 0
 	#Range: 0 ~ 1000
-	bloodMoonGracePeriod = 0
+	bloodMoonGracePeriod = 4
 
 [meteors]
 	meteors = true
@@ -89,7 +89,7 @@
 	#Range: 1 ~ 240000
 	meteorDisallowTime = 12000
 	#Range: 1 ~ 1000000
-	crystalDurability = 1000
+	crystalDurability = 150
 	#Range: 1 ~ 1000
-	hammerDamage = 15
+	hammerDamage = 8
 

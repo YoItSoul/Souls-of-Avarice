@@ -1,8 +1,0 @@
-{
-  "type": "lootbags:loot",
-  "name": "Artificial Loot Bag",
-  "rarity": "rare",
-  "output": {
-    "table": "minecraft:chests/jungle_temple"
-  }
-}

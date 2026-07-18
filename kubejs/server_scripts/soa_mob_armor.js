@@ -112,8 +112,8 @@ const POST_NETHER = {
         // Crossbow
         { items: { mainhand: 'minecraft:crossbow', offhand: 'minecraft:arrow' }, weight: 8 },
         // SoA-tier weapons (custom items from the absorbed mods)
-        { items: { mainhand: 'soa_additions:meteor_sword' }, weight: 5 },
-        { items: { mainhand: 'soa_additions:scythe' }, weight: 4 },
+        { items: { mainhand: 'nyx:meteor_sword' }, weight: 5 },
+        { items: { mainhand: 'nyx:scythe' }, weight: 4 },
         // Shield offhand
         { items: { offhand: Item.of('minecraft:shield').enchant('minecraft:unbreaking', 2) }, weight: 12 },
     ]
@@ -129,9 +129,9 @@ const POST_HARDMODE = {
                    feet: Item.of('minecraft:netherite_boots').enchant('minecraft:protection', 4),
                    mainhand: Item.of('minecraft:netherite_sword').enchant('minecraft:sharpness', 5) }, weight: 10 },
         // Meteor armor set (Nyx port)
-        { items: { head: 'soa_additions:meteor_helm', chest: 'soa_additions:meteor_chest',
-                   legs: 'soa_additions:meteor_pants', feet: 'soa_additions:meteor_boots',
-                   mainhand: 'soa_additions:meteor_sword' }, weight: 5 },
+        { items: { head: 'nyx:meteor_helm', chest: 'nyx:meteor_chest',
+                   legs: 'nyx:meteor_pants', feet: 'nyx:meteor_boots',
+                   mainhand: 'nyx:meteor_sword' }, weight: 5 },
         // Bow with sharpness-equivalent
         { items: { mainhand: Item.of('minecraft:bow').enchant('minecraft:power', 5).enchant('minecraft:flame', 1),
                    offhand: 'minecraft:arrow' }, weight: 5 },
@@ -139,8 +139,8 @@ const POST_HARDMODE = {
         { items: { mainhand: Item.of('minecraft:crossbow').enchant('minecraft:quick_charge', 3),
                    offhand: 'minecraft:firework_rocket' }, weight: 5 },
         // Custom soa_additions hammers/scythes
-        { items: { mainhand: 'soa_additions:meteor_hammer' }, weight: 4 },
-        { items: { mainhand: 'soa_additions:meteor_axe' }, weight: 4 },
+        { items: { mainhand: 'nyx:meteor_hammer' }, weight: 4 },
+        { items: { mainhand: 'nyx:meteor_axe' }, weight: 4 },
     ]
 }
 

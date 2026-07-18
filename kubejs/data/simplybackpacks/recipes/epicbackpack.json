@@ -1,0 +1,23 @@
+{
+  "_comment": "GC parity port (recipe_functions.zs backpack_func_3), fully faithful: GC's contenttweaker nylon string/cloth and durasteel were all ported into soa_additions. Keeps Simply Backpacks' NBT-preserving upgrade type so contents survive.",
+  "type": "simplybackpacks:backpack_upgrade",
+  "category": "misc",
+  "key": {
+    "N": { "item": "soa_additions:nylon_string" },
+    "D": { "item": "soa_additions:durasteel_ingot" },
+    "C": { "item": "soa_additions:nylon_cloth" },
+    "X": { "item": "minecraft:nether_star" },
+    "B": {
+      "type": "simplybackpacks:nbt_target",
+      "item": "simplybackpacks:rarebackpack"
+    }
+  },
+  "pattern": [
+    "NDN",
+    "CXC",
+    "CBC"
+  ],
+  "result": {
+    "item": "simplybackpacks:epicbackpack"
+  }
+}

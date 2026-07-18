@@ -1,0 +1,27 @@
+{
+  "_comment": "GC parity port (avaritia.zs custom_avaritia_recipe_2): Creative Chance Pendant on the 9x9 extreme table. biomesoplenty amber -> valoria:amber_gem (BOP absent; Valoria carries the gem line). String necklace + creative soul diamond around an amber/gold core, exactly GC's pattern.",
+  "type": "avaritia:shaped_table",
+  "category": "misc",
+  "key": {
+    "S": { "item": "minecraft:string" },
+    "C": { "item": "soa_additions:creative_soul" },
+    "A": { "item": "valoria:amber_gem" },
+    "G": { "item": "minecraft:gold_block" }
+  },
+  "pattern": [
+    "  SSSSS  ",
+    " S     S ",
+    " S     S ",
+    "  SSSSS  ",
+    "    C    ",
+    "   CAC   ",
+    "  CAGAC  ",
+    "   CAC   ",
+    "    C    "
+  ],
+  "result": {
+    "item": "chancecubes:creative_pendant"
+  },
+  "show_notification": true,
+  "tier": 4
+}
