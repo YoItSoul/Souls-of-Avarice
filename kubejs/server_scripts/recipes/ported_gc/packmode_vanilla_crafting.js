@@ -32,14 +32,41 @@ ServerEvents.recipes(event => {
     console.info('[soa_ported] packmode_vanilla_crafting.js: registering for mode=' + _MODE)
 
     // --------------------------------------------------------
+    //  Twilight Gem — ENTER recipe scales with packmode (1:1 GC).
+    //  GC used thaumcraft:salis_mundus; SoA's equivalent is thaumon:mutagen
+    //  ("Also known as salis mundus"). The always-on RETURN recipe (Twilight
+    //  loot) stays as the datapack JSON kubejs/data/soa_additions/recipes/
+    //  twilight_gem.json, so every mode still has an escape recipe.
+    //    casual    : Saplings + Botania Fertilizer + Mana Diamond (loosest)
+    //    adventure : GC normal — Saplings + Fertilizer + Mutagen + Mana Diamond
+    //    expert    : GC expert — Diamond Dust + Aquamarine + Mutagen + Mana Diamond
+    // --------------------------------------------------------
+    try {
+        if (_MODE === 'casual') {
+            event.shaped('soa_additions:twilight_gem', ['SFS', 'FDF', 'SFS'], {
+                S: '#minecraft:saplings', F: 'botania:fertilizer', D: 'botania:mana_diamond',
+            }).id('soa_ported:twilight_gem_enter_casual')
+        } else if (_MODE === 'adventure') {
+            event.shaped('soa_additions:twilight_gem', ['SFS', 'MDM', 'SFS'], {
+                S: '#minecraft:saplings', F: 'botania:fertilizer', M: 'thaumon:mutagen', D: 'botania:mana_diamond',
+            }).id('soa_ported:twilight_gem_enter_adventure')
+        } else if (_MODE === 'expert') {
+            event.shaped('soa_additions:twilight_gem', ['UAU', 'MDM', 'UAU'], {
+                U: 'thermal:diamond_dust', A: 'soa_additions:aquamarine', M: 'thaumon:mutagen', D: 'botania:mana_diamond',
+            }).id('soa_ported:twilight_gem_enter_expert')
+        }
+    } catch (e) { console.warn('[packmode_vanilla] twilight_gem enter: ' + e) }
+
+    // --------------------------------------------------------
     //  Adventure + Expert overrides
     // --------------------------------------------------------
     if (_MODE === 'adventure' || _MODE === 'expert') {
 
         // -- Enchanting Table --
-        // GC adventure: book + 2x diamond_block + black_wool + 3x compressed XP block
-        // GC expert:    book + 2x diamond_block + astralstarmetal + 3x compressed XP block
-        // (astral_starmetal absent → fall back to wool for both modes)
+        // GC adventure: book + 2x diamond_block + wool + 3x compressed XP block
+        // GC expert:    book + 2x diamond_block + astral starmetal + 3x compressed XP block
+        // Astral Sorcery is absent, but SoA ships Starmetal (soa_additions:starmetal_ingot,
+        // #forge:ingots/starmetal) — so expert now uses starmetal 1:1; adventure keeps wool.
         try {
             event.remove({ output: 'minecraft:enchanting_table' })
             event.shaped('minecraft:enchanting_table', [
@@ -49,28 +76,48 @@ ServerEvents.recipes(event => {
             ], {
                 B: 'minecraft:book',
                 D: 'minecraft:diamond_block',
-                W: 'minecraft:black_wool',
+                W: (_MODE === 'expert' ? 'soa_additions:starmetal_ingot' : 'minecraft:black_wool'),
                 E: 'soa_additions:compressed_experience_block',
             }).id('soa_ported:packmode_enchanting_table_' + _MODE)
         } catch (e) { console.warn('[packmode_vanilla] enchanting_table: ' + e) }
 
         // -- Twilight Shield --
-        // GC adventure: ironwood + knightmetal + ironwood / fiery + alpha_yeti_fur + fiery / _ + carminite + _
-        // (Expert had a different recipe involving steeleaf/hydra_chop/lamp_of_cinders/meef_stroganoff
-        //  — most of those items are TF 1.12-only, so we use the adventure recipe for both modes.)
+        // GC adventure: ironwood/knightmetal + fiery/alpha_yeti_fur + carminite
+        // GC expert:    steeleaf/hydra_chop/ironwood · fiery/lamp_of_cinders/naga_scale ·
+        //               meef_stroganoff/carminite/alpha_yeti_fur. The two 1.12-only TF foods
+        //               map to Twilight Delight: hydra_chop → hydra_piece,
+        //               meef_stroganoff → mushgloom_meef_pasta.
         try {
             event.remove({ output: 'soa_additions:twilight_shield' })
-            event.shaped('soa_additions:twilight_shield', [
-                'IKI',
-                'FAF',
-                ' C '
-            ], {
-                I: 'twilightforest:ironwood_ingot',
-                K: 'twilightforest:knightmetal_ingot',
-                F: 'twilightforest:fiery_ingot',
-                A: 'twilightforest:alpha_yeti_fur',  // 1.20 TF rename (was alpha_fur in 1.12)
-                C: 'twilightforest:carminite',
-            }).id('soa_ported:packmode_twilight_shield')
+            if (_MODE === 'expert') {
+                event.shaped('soa_additions:twilight_shield', [
+                    'SHI',
+                    'FLN',
+                    'MCA'
+                ], {
+                    S: 'twilightforest:steeleaf_ingot',
+                    H: 'twilightforest:hydra_chop',  // TF 1.20 has the original
+                    I: 'twilightforest:ironwood_ingot',
+                    F: 'twilightforest:fiery_ingot',
+                    L: 'twilightforest:lamp_of_cinders',
+                    N: 'twilightforest:naga_scale',
+                    M: 'twilightforest:meef_stroganoff',
+                    C: 'twilightforest:carminite',
+                    A: 'twilightforest:alpha_yeti_fur',
+                }).id('soa_ported:packmode_twilight_shield_expert')
+            } else {
+                event.shaped('soa_additions:twilight_shield', [
+                    'IKI',
+                    'FAF',
+                    ' C '
+                ], {
+                    I: 'twilightforest:ironwood_ingot',
+                    K: 'twilightforest:knightmetal_ingot',
+                    F: 'twilightforest:fiery_ingot',
+                    A: 'twilightforest:alpha_yeti_fur',  // 1.20 TF rename (was alpha_fur in 1.12)
+                    C: 'twilightforest:carminite',
+                }).id('soa_ported:packmode_twilight_shield_adventure')
+            }
         } catch (e) { console.warn('[packmode_vanilla] twilight_shield: ' + e) }
     }
 
@@ -102,6 +149,15 @@ ServerEvents.recipes(event => {
                 N: 'minecraft:nether_star',
             }).id('soa_ported:packmode_ender_charm_adventure')
         } catch (e) { console.warn('[packmode_vanilla] ender_charm(adv): ' + e) }
+
+        // -- Blueprint Shuriken -- GC normal: blueprint + Elite Alloy (shapeless)
+        // (alloyElite → #forge:alloys/elite = mekanism:alloy_reinforced)
+        try {
+            event.remove({ output: 'soa_additions:blueprint_shuriken' })
+            event.shapeless('soa_additions:blueprint_shuriken', [
+                'soa_additions:blueprint', '#forge:alloys/elite',
+            ]).id('soa_ported:packmode_blueprint_shuriken_adventure')
+        } catch (e) { console.warn('[packmode_vanilla] blueprint_shuriken(adv): ' + e) }
     }
 
     // --------------------------------------------------------
@@ -120,9 +176,36 @@ ServerEvents.recipes(event => {
             }).id('soa_ported:packmode_blueprint_expert')
         } catch (e) { console.warn('[packmode_vanilla] blueprint(exp): ' + e) }
 
-        // (ender_charm expert recipe uses dreadkey from absent AbyssalCraft → JSON default applies)
-        // (twilight_gem normal+expert both use salis_mundus → Thaumcraft absent → JSON default applies)
-        // (blueprint_shuriken normal+expert use alloyElite/alloyUltimate → no SoA equivalent → JSON default)
+        // -- Blueprint Shuriken -- GC expert: blueprint + Ultimate Alloy (shapeless)
+        // (alloyUltimate → #forge:alloys/ultimate = mekanism:alloy_atomic)
+        try {
+            event.remove({ output: 'soa_additions:blueprint_shuriken' })
+            event.shapeless('soa_additions:blueprint_shuriken', [
+                'soa_additions:blueprint', '#forge:alloys/ultimate',
+            ]).id('soa_ported:packmode_blueprint_shuriken_expert')
+        } catch (e) { console.warn('[packmode_vanilla] blueprint_shuriken(exp): ' + e) }
+
+        // -- Ender Charm -- GC expert: enderium dust + gaia ingot / nether star + DREADKEY + nether star /
+        //   netherite + durasteel block. GC's dreadkey was the final AbyssalCraft boss drop; SoA's
+        //   equivalent is valoria:crystal_shard — an exclusive drop of the Valoria crystal boss
+        //   (valoria:wicked_crystal) that spawns nowhere else, so it's a true trophy gate.
+        try {
+            event.remove({ output: 'soa_additions:ender_charm' })
+            event.shaped('soa_additions:ender_charm', [
+                'UGU',
+                'NKN',
+                'TBT'
+            ], {
+                U: '#forge:dusts/enderium',
+                G: 'botania:gaia_ingot',
+                N: 'minecraft:nether_star',
+                K: 'valoria:crystal_shard',
+                T: 'minecraft:netherite_ingot',
+                B: 'soa_additions:durasteel_block',
+            }).id('soa_ported:packmode_ender_charm_expert')
+        } catch (e) { console.warn('[packmode_vanilla] ender_charm(exp): ' + e) }
+
+        // (twilight_gem: IMPLEMENTED above — salis_mundus → thaumon:mutagen)
     }
 
     console.info('[soa_ported] packmode_vanilla_crafting.js: registration complete')

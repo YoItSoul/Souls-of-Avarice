@@ -1,5 +1,5 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:liquid_centrifuge",
   "time": 10,
   "requirements": [
@@ -21,13 +21,6 @@
       "fluid": "soa_additions:crude_oil",
       "amount": 10,
       "tank": "outf1"
-    },
-    {
-      "type": "custommachinery:fluid",
-      "mode": "output",
-      "fluid": "thermal:aerotheum",
-      "amount": 5,
-      "tank": "outf2"
     },
     {
       "type": "custommachinery:item",
@@ -104,33 +97,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

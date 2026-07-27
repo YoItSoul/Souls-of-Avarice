@@ -1,12 +1,12 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:alloy_decomposer",
   "time": 10,
   "requirements": [
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "taiga:molten_dyonite",
+      "fluid": "smithery:molten_dyonite",
       "amount": 3,
       "tank": "input"
     },
@@ -18,61 +18,27 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "taiga:molten_triberium",
+      "fluid": "smithery:molten_triberium",
       "amount": 3,
       "tank": "out1"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "taiga:molten_fractum",
+      "fluid": "smithery:molten_fractum",
       "amount": 1,
       "tank": "out2"
     },
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "taiga:molten_seismum",
+      "fluid": "smithery:molten_seismum",
       "amount": 1,
       "tank": "out3"
     },
     {
-      "type": "custommachinery:fluid",
-      "mode": "output",
-      "fluid": "taiga:molten_osram",
-      "amount": 1,
-      "tank": "out4"
-    },
-    {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

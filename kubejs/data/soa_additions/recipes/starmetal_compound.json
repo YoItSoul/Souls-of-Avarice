@@ -1,0 +1,19 @@
+{
+  "__comment": "Astral-Sorcery-replacement starmetal path, step 1. Bind iron + Aquamarine (AS starlight gem) with Salis Mundus (thaumon:mutagen) and clay into 4 raw compounds, then smelt each into a Starmetal Ingot (see starmetal_ingot_from_compound*.json).",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AIA",
+    "IMI",
+    "ACA"
+  ],
+  "key": {
+    "A": { "item": "soa_additions:aquamarine" },
+    "I": { "item": "minecraft:iron_ingot" },
+    "M": { "item": "thaumon:mutagen" },
+    "C": { "item": "minecraft:clay_ball" }
+  },
+  "result": {
+    "item": "kubejs:starmetal_compound",
+    "count": 4
+  }
+}

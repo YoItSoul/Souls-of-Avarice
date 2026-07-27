@@ -1,5 +1,5 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:liquid_centrifuge",
   "time": 10,
   "requirements": [
@@ -96,7 +96,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "aquaculture:cooked_tuna",
+      "item": "minecraft:cooked_cod",
       "amount": 1,
       "slot": "out3",
       "chance": 0.00025
@@ -128,7 +128,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "aquaculture:legendary_fishing_rod",
+      "item": "aquaculture:neptunium_fishing_rod",
       "amount": 1,
       "slot": "out1",
       "chance": 7.5e-05
@@ -136,33 +136,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

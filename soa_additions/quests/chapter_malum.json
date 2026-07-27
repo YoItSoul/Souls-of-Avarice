@@ -55,7 +55,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_encyclopedia",
@@ -66,8 +67,7 @@
       "y": 48,
       "description": [
         "Begin your study of the spirit arts.",
-        "Mine soulstone, smelt it into Processed Soulstone, then bind a book with one. The Encyclopedia will guide you through every infusion, ritual, and rune.",
-        "Original items: Encyclopedia Arcana (malum)"
+        "Mine soulstone, smelt it into Processed Soulstone, then bind a book with one. The Encyclopedia will guide you through every infusion, ritual, and rune."
       ],
       "dependencies": [
         "mal_soulstone_awakens"
@@ -94,7 +94,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_runewood",
@@ -103,8 +104,7 @@
       "x": 0,
       "y": 144,
       "description": [
-        "Find a Runewood Tree in the world. Soulwood comes later, by transmuting a Runewood sapling.",
-        "Original items: Runewood Log (malum)"
+        "Find a Runewood Tree in the world. Soulwood comes later, by transmuting a Runewood sapling."
       ],
       "dependencies": [],
       "tasks": [
@@ -129,7 +129,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_crude_scythe",
@@ -139,8 +140,7 @@
       "x": 96,
       "y": 0,
       "description": [
-        "Craft a Crude Scythe. Killing mobs with a scythe is the only way to extract their spirits.",
-        "Original items: Crude Scythe (malum)"
+        "Craft a Crude Scythe. Killing mobs with a scythe is the only way to extract their spirits."
       ],
       "dependencies": [
         "mal_encyclopedia"
@@ -167,7 +167,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_spirit_altar",
@@ -177,8 +178,7 @@
       "x": 96,
       "y": 48,
       "description": [
-        "Build a Spirit Altar. This is where every infusion takes place: throw the input, then surround it with the right essences.",
-        "Original items: Spirit Altar (malum)"
+        "Build a Spirit Altar. This is where every infusion takes place: throw the input, then surround it with the right essences."
       ],
       "dependencies": [
         "mal_runewood",
@@ -206,7 +206,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_first_spirits",
@@ -215,8 +216,7 @@
       "x": 144,
       "y": 96,
       "description": [
-        "Reap your first spirits. Strike a mob with a scythe to harvest the spirit aligned with its nature.",
-        "Original items: any Spirit Essence (malum)"
+        "Reap your first spirits. Strike a mob with a scythe to harvest the spirit aligned with its nature."
       ],
       "dependencies": [
         "mal_crude_scythe"
@@ -243,7 +243,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_hex_ash",
@@ -252,8 +253,7 @@
       "x": 192,
       "y": 144,
       "description": [
-        "Your first infusion. Throw gunpowder onto the Spirit Altar with one Arcane Spirit.",
-        "Original items: Hex Ash (malum)"
+        "Your first infusion. Throw gunpowder onto the Spirit Altar with one Arcane Spirit."
       ],
       "dependencies": [
         "mal_spirit_altar",
@@ -286,7 +286,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_spirit_pouch",
@@ -295,8 +296,7 @@
       "x": 288,
       "y": 384,
       "description": [
-        "Weave a pouch from spirit fabric to carry your essences without filling your inventory.",
-        "Original items: Spirit Pouch (malum)"
+        "Weave a pouch from spirit fabric to carry your essences without filling your inventory."
       ],
       "dependencies": [
         "mal_spirit_fabric"
@@ -323,7 +323,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_tainted_twisted",
@@ -332,8 +333,7 @@
       "x": 192,
       "y": 192,
       "description": [
-        "Bless and curse the stones. You will need stacks of both before this is over.",
-        "Original items: Tainted Rock, Twisted Rock (malum)"
+        "Bless and curse the stones. You will need stacks of both before this is over."
       ],
       "dependencies": [
         "mal_spirit_altar",
@@ -366,7 +366,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_hallowed_gold",
@@ -375,8 +376,7 @@
       "x": 192,
       "y": 240,
       "description": [
-        "Sanctify gold by infusing it with quartz, sacred essence, and arcane essence. The frame of every reliquary you will build.",
-        "Original items: Hallowed Gold Ingot (malum)"
+        "Sanctify gold by infusing it with quartz, sacred essence, and arcane essence. The frame of every reliquary you will build."
       ],
       "dependencies": [
         "mal_spirit_altar",
@@ -404,7 +404,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_soul_stained_steel",
@@ -414,8 +415,7 @@
       "x": 192,
       "y": 48,
       "description": [
-        "Infuse iron with the wicked, the earthen, and the arcane. The first true mark of an apprentice spirit-worker.",
-        "Original items: Soul Stained Steel Ingot (malum)"
+        "Infuse iron with the wicked, the earthen, and the arcane. The first true mark of an apprentice spirit-worker."
       ],
       "dependencies": [
         "mal_spirit_altar",
@@ -448,7 +448,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_alchemical_calx",
@@ -457,8 +458,7 @@
       "x": 192,
       "y": 96,
       "description": [
-        "Refine clay into the substrate every alchemical apparatus is built upon.",
-        "Original items: Alchemical Calx (malum)"
+        "Refine clay into the substrate every alchemical apparatus is built upon."
       ],
       "dependencies": [
         "mal_spirit_altar",
@@ -486,7 +486,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_spirit_fabric",
@@ -495,8 +496,7 @@
       "x": 240,
       "y": 336,
       "description": [
-        "Weave wool through hex ash and spirits. The base for soul-hunter robes and pouches.",
-        "Original items: Spirit Fabric (malum)"
+        "Weave wool through hex ash and spirits. The base for soul-hunter robes and pouches."
       ],
       "dependencies": [
         "mal_hex_ash"
@@ -523,7 +523,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_living_flesh",
@@ -532,8 +533,7 @@
       "x": 240,
       "y": 96,
       "description": [
-        "Coax life back into rotten meat with sacred and wicked essence. Required for the mending diffuser and growing-flesh ring.",
-        "Original items: Living Flesh (malum)"
+        "Coax life back into rotten meat with sacred and wicked essence. Required for the mending diffuser and growing-flesh ring."
       ],
       "dependencies": [
         "mal_alchemical_calx"
@@ -560,7 +560,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_sss_armory",
@@ -569,8 +570,7 @@
       "x": 240,
       "y": 240,
       "description": [
-        "Forge a full set of Soul-Stained Steel tools. They reap spirits like a finer scythe.",
-        "Original items: Soul Stained Steel Sword, Pickaxe, Axe, Shovel (malum)"
+        "Forge a full set of Soul-Stained Steel tools. They reap spirits like a finer scythe."
       ],
       "dependencies": [
         "mal_soul_stained_steel"
@@ -612,7 +612,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_sss_armor",
@@ -621,8 +622,7 @@
       "x": 288,
       "y": 96,
       "description": [
-        "Infuse iron armor with soul-stained plating. Heavier than steel, lighter on the soul.",
-        "Original items: Soul Stained Steel Helmet, Chestplate, Leggings, Boots (malum)"
+        "Infuse iron armor with soul-stained plating. Heavier than steel, lighter on the soul."
       ],
       "dependencies": [
         "mal_sss_armory",
@@ -665,7 +665,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_soul_hunter",
@@ -674,8 +675,7 @@
       "x": 288,
       "y": 336,
       "description": [
-        "Cloak yourself in spirit fabric and leather. Reaping bonuses for those who walk softly.",
-        "Original items: Soul Hunter Robe, Cloak, Leggings, Boots (malum)"
+        "Cloak yourself in spirit fabric and leather. Reaping bonuses for those who walk softly."
       ],
       "dependencies": [
         "mal_spirit_fabric"
@@ -707,7 +707,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_sss_scythe",
@@ -717,8 +718,7 @@
       "x": 240,
       "y": 144,
       "description": [
-        "Re-temper a crude scythe with soul-stained steel and hex ash. Spirit yields multiply.",
-        "Original items: Soul Stained Steel Scythe (malum)"
+        "Re-temper a crude scythe with soul-stained steel and hex ash. Spirit yields multiply."
       ],
       "dependencies": [
         "mal_soul_stained_steel",
@@ -746,7 +746,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_spirit_crucible",
@@ -756,8 +757,7 @@
       "x": 240,
       "y": 432,
       "description": [
-        "Build a Spirit Crucible. Combined with an Alchemical Impetus, it focuses spirits into raw matter — your first true mastery of the spirit arts.",
-        "Original items: Spirit Crucible (malum)"
+        "Build a Spirit Crucible. Combined with an Alchemical Impetus, it focuses spirits into raw matter — your first true mastery of the spirit arts."
       ],
       "dependencies": [
         "mal_hex_ash",
@@ -790,7 +790,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_alchemical_impetus",
@@ -799,8 +800,7 @@
       "x": 240,
       "y": 288,
       "description": [
-        "The first focus stone. Place it in the crucible and pour spirits to harvest redstone, glowstone, quartz, and more.",
-        "Original items: Alchemical Impetus (malum)"
+        "The first focus stone. Place it in the crucible and pour spirits to harvest redstone, glowstone, quartz, and more."
       ],
       "dependencies": [
         "mal_alchemical_calx",
@@ -833,7 +833,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_runewood_obelisk",
@@ -842,8 +843,7 @@
       "x": 240,
       "y": 528,
       "description": [
-        "An obelisk multiplies altar throughput. Place a few around the altar for difficult infusions.",
-        "Original items: Runewood Obelisk (malum)"
+        "An obelisk multiplies altar throughput. Place a few around the altar for difficult infusions."
       ],
       "dependencies": [
         "mal_hallowed_gold",
@@ -871,7 +871,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_runewood_tablet",
@@ -880,8 +881,7 @@
       "x": 240,
       "y": 384,
       "description": [
-        "The first tablet. Carved from runewood and processed soulstone, used as the base for runeworking.",
-        "Original items: Runewood Tablet (malum)"
+        "The first tablet. Carved from runewood and processed soulstone, used as the base for runeworking."
       ],
       "dependencies": [
         "mal_hex_ash"
@@ -908,7 +908,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_soulwood_tablet",
@@ -918,8 +919,7 @@
       "y": 288,
       "description": [
         "The bleeding tree's tablet. Required for runes of the seas, hells, and aether.",
-        "&6Hint:&r Soulwood doesn't grow naturally. Transmute a runewood sapling using the &eArcane Rite&r (Totemic Staff channeled on a runewood totem with arcane-aligned runes). The rite converts the sapling into a soulwood sapling — plant it, wait for it to grow, then harvest the bleeding logs.",
-        "Original items: Soulwood Tablet, Soulwood Log (malum)"
+        "&6Hint:&r Soulwood doesn't grow naturally. Transmute a runewood sapling using the &eArcane Rite&r (Totemic Staff channeled on a runewood totem with arcane-aligned runes). The rite converts the sapling into a soulwood sapling — plant it, wait for it to grow, then harvest the bleeding logs."
       ],
       "dependencies": [
         "mal_runewood_tablet",
@@ -947,7 +947,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_tainted_tablet",
@@ -957,8 +958,7 @@
       "x": 240,
       "y": 480,
       "description": [
-        "An eldritch-leaning tablet. Gates the highest runes and the Void Tablet itself.",
-        "Original items: Tainted Rock Tablet (malum)"
+        "An eldritch-leaning tablet. Gates the highest runes and the Void Tablet itself."
       ],
       "dependencies": [
         "mal_tainted_twisted"
@@ -985,7 +985,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_runic_workbench",
@@ -994,8 +995,7 @@
       "x": 240,
       "y": 576,
       "description": [
-        "The bench where tablets are bound to spirits. The bridge to runeworking.",
-        "Original items: Runic Workbench (malum)"
+        "The bench where tablets are bound to spirits. The bridge to runeworking."
       ],
       "dependencies": [
         "mal_hallowed_gold"
@@ -1022,7 +1022,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_first_rune",
@@ -1031,8 +1032,7 @@
       "x": 288,
       "y": 480,
       "description": [
-        "Pour 32 spirits over a tablet at the runic workbench. Any rune counts.",
-        "Original items: any Malum Rune"
+        "Pour 32 spirits over a tablet at the runic workbench. Any rune counts."
       ],
       "dependencies": [
         "mal_runic_workbench",
@@ -1060,7 +1060,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_totemic_staff",
@@ -1069,8 +1070,7 @@
       "x": 48,
       "y": 96,
       "description": [
-        "The conductor's wand. Required to perform rituals and to channel a totem before raising it.",
-        "Original items: Totemic Staff (malum)"
+        "The conductor's wand. Required to perform rituals and to channel a totem before raising it."
       ],
       "dependencies": [
         "mal_runewood"
@@ -1102,7 +1102,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_cthonic_gold",
@@ -1114,8 +1115,7 @@
       "description": [
         "Mine Cthonic Gold Ore in the deep-stone layers (Y -48 to 0). It generates rarely, so dig wide.",
         "Crush the ore in a Create Millstone or Crushing Wheel — 3-4 fragments per ore. Eight fragments craft into one Cthonic Gold ingot.",
-        "Note: the Cthonic Conversion ritual is broken in this version of Malum (it requires a phantom item that never registers). Use the mining path instead.",
-        "Original items: Cthonic Gold Ore, Cthonic Gold Fragment, Cthonic Gold (malum)"
+        "Note: the Cthonic Conversion ritual is broken in this version of Malum (it requires a phantom item that never registers). Use the mining path instead."
       ],
       "dependencies": [],
       "tasks": [
@@ -1140,7 +1140,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_iron_impetus",
@@ -1149,8 +1150,7 @@
       "x": 288,
       "y": 192,
       "description": [
-        "Upgrade the Alchemical Impetus into a metal-bearing one. With this in the crucible you can focus iron, gold, copper, aluminum, and more from raw spirit.",
-        "Original items: Iron Impetus (malum)"
+        "Upgrade the Alchemical Impetus into a metal-bearing one. With this in the crucible you can focus iron, gold, copper, aluminum, and more from raw spirit."
       ],
       "dependencies": [
         "mal_cthonic_gold",
@@ -1178,7 +1178,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_brilliance",
@@ -1187,8 +1188,7 @@
       "x": 0,
       "y": 0,
       "description": [
-        "Mine deep. Brilliant Stone hides far below the world. Smelt a chunk and grow it into a cluster.",
-        "Original items: Cluster of Brilliance (malum)"
+        "Mine deep. Brilliant Stone hides far below the world. Smelt a chunk and grow it into a cluster."
       ],
       "dependencies": [],
       "tasks": [
@@ -1223,7 +1223,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_anomalous_design",
@@ -1232,8 +1233,7 @@
       "x": 0,
       "y": 48,
       "description": [
-        "Drop an iron block into the void. The Devourer returns it twisted.",
-        "Original items: Anomalous Design (malum)"
+        "Drop an iron block into the void. The Devourer returns it twisted."
       ],
       "dependencies": [],
       "tasks": [
@@ -1258,7 +1258,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_complete_design",
@@ -1267,8 +1268,7 @@
       "x": 192,
       "y": 0,
       "description": [
-        "Eight spirits, four of each. Throw them all on the altar with the Anomalous Design and watch the geometry settle.",
-        "Original items: Complete Design (malum)"
+        "Eight spirits, four of each. Throw them all on the altar with the Anomalous Design and watch the geometry settle."
       ],
       "dependencies": [
         "mal_anomalous_design",
@@ -1297,7 +1297,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_fused_consciousness",
@@ -1307,8 +1308,7 @@
       "x": 240,
       "y": 48,
       "description": [
-        "Drop the Complete Design into the void. The Devourer answers with a Fused Consciousness — the catalyst for every endgame artifact.",
-        "Original items: Fused Consciousness (malum)"
+        "Drop the Complete Design into the void. The Devourer answers with a Fused Consciousness — the catalyst for every endgame artifact."
       ],
       "dependencies": [
         "mal_complete_design"
@@ -1335,7 +1335,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_void_materials",
@@ -1344,8 +1345,7 @@
       "x": 240,
       "y": 192,
       "description": [
-        "Feed the Devourer. Hex Ash returns as Void Salts, Processed Soulstone as Null Slate, Blaze Powder as Auric Embers, Chunk of Brilliance as a Mnemonic Fragment, Cthonic Gold as Malignant Lead.",
-        "Original items: Void Salts, Null Slate, Auric Embers, Mnemonic Fragment, Malignant Lead (malum)"
+        "Feed the Devourer. Hex Ash returns as Void Salts, Processed Soulstone as Null Slate, Blaze Powder as Auric Embers, Chunk of Brilliance as a Mnemonic Fragment, Cthonic Gold as Malignant Lead."
       ],
       "dependencies": [
         "mal_hex_ash"
@@ -1392,7 +1392,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_void_tablet",
@@ -1401,8 +1402,7 @@
       "x": 288,
       "y": 432,
       "description": [
-        "Re-infuse a tainted-rock tablet with null slate and void salts. The tablet of the heretic.",
-        "Original items: Void Tablet (malum)"
+        "Re-infuse a tainted-rock tablet with null slate and void salts. The tablet of the heretic."
       ],
       "dependencies": [
         "mal_void_materials",
@@ -1430,7 +1430,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_malignant_pewter",
@@ -1440,8 +1441,7 @@
       "x": 288,
       "y": 144,
       "description": [
-        "Bind iron, malignant lead, null slate, and netherite scrap into the densest metal in the mod. Earthen and eldritch demand much.",
-        "Original items: Malignant Pewter Ingot (malum)"
+        "Bind iron, malignant lead, null slate, and netherite scrap into the densest metal in the mod. Earthen and eldritch demand much."
       ],
       "dependencies": [
         "mal_void_materials",
@@ -1469,7 +1469,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_mnemonic_hex_staff",
@@ -1478,8 +1479,7 @@
       "x": 288,
       "y": 0,
       "description": [
-        "Imprint a totemic staff with mnemonic fragments and soul-stained steel. The base for both endgame staves.",
-        "Original items: Mnemonic Hex Staff (malum)"
+        "Imprint a totemic staff with mnemonic fragments and soul-stained steel. The base for both endgame staves."
       ],
       "dependencies": [
         "mal_void_materials",
@@ -1509,7 +1509,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_tyrving",
@@ -1518,8 +1519,7 @@
       "x": 288,
       "y": 240,
       "description": [
-        "Re-forge a soul-stained sword in twisted rock, soulwood, obsidian, and hex ash. The blade that hates blades.",
-        "Original items: Tyrving (malum)"
+        "Re-forge a soul-stained sword in twisted rock, soulwood, obsidian, and hex ash. The blade that hates blades."
       ],
       "dependencies": [
         "mal_sss_armory"
@@ -1546,7 +1546,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_edge_of_deliverance",
@@ -1555,8 +1556,7 @@
       "x": 336,
       "y": 96,
       "description": [
-        "Wrap malignant pewter around the soul-stained scythe. Reaping at its truest.",
-        "Original items: Edge of Deliverance (malum)"
+        "Wrap malignant pewter around the soul-stained scythe. Reaping at its truest."
       ],
       "dependencies": [
         "mal_sss_scythe",
@@ -1584,7 +1584,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_staff_auric_flame",
@@ -1593,8 +1594,7 @@
       "x": 336,
       "y": 0,
       "description": [
-        "Bind the Mnemonic Hex Staff to a Fused Consciousness, auric embers, and void salts. The wand of the master.",
-        "Original items: Staff of the Auric Flame (malum)"
+        "Bind the Mnemonic Hex Staff to a Fused Consciousness, auric embers, and void salts. The wand of the master."
       ],
       "dependencies": [
         "mal_mnemonic_hex_staff",
@@ -1622,7 +1622,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_malignant_stronghold",
@@ -1631,8 +1632,7 @@
       "x": 336,
       "y": 48,
       "description": [
-        "Plate every piece of soul-stained armor with malignant pewter. The strongest armor the mod can make.",
-        "Original items: Malignant Stronghold Helmet, Chestplate, Leggings, Boots (malum)"
+        "Plate every piece of soul-stained armor with malignant pewter. The strongest armor the mod can make."
       ],
       "dependencies": [
         "mal_malignant_pewter",
@@ -1675,7 +1675,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_belt_limitless",
@@ -1685,8 +1686,7 @@
       "x": 288,
       "y": 48,
       "description": [
-        "The capstone curio. Re-bind the Belt of the Magebane around a Fused Consciousness, void salts, null slate, and mnemonic fragments.",
-        "Original items: Belt of the Limitless (malum)"
+        "The capstone curio. Re-bind the Belt of the Magebane around a Fused Consciousness, void salts, null slate, and mnemonic fragments."
       ],
       "dependencies": [
         "mal_fused_consciousness",
@@ -1715,7 +1715,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_arcane_crystal_ball",
@@ -1726,8 +1727,7 @@
       "y": 0,
       "description": [
         "The pinnacle of arcane study. Bind a Complete Design on the Spirit Altar surrounded by 4 Soul-Stained Steel, 4 Nether Stars, 4 Chunks of Brilliance, 12 Clusters of Brilliance, and 6 Astral Metal Ingots — 32 Arcane, 16 Eldritch, 16 Sacred spirits.",
-        "Right-click the finished ball to consume it and ascend to mastery (master_wizard).",
-        "Original items: Arcane Crystal Ball (soa_additions)"
+        "Right-click the finished ball to consume it and ascend to mastery (master_wizard)."
       ],
       "dependencies": [
         "mal_astral_metal",
@@ -1760,7 +1760,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_grim_talc",
@@ -1770,8 +1771,7 @@
       "y": 48,
       "description": [
         "Reap skeletons, strays, zoglins, or zombified piglins with a Malum scythe to harvest Grim Talc — the bone-essence dust used in many earthen rituals.",
-        "Skeleton: 20% chance, 2-4 per kill. Stray: 20%, 2-4. Zoglin/Zombified Piglin: 10%, 1-2 (secondary drop alongside rotting_essence).",
-        "Original items: Grim Talc (malum)"
+        "Skeleton: 20% chance, 2-4 per kill. Stray: 20%, 2-4. Zoglin/Zombified Piglin: 10%, 1-2 (secondary drop alongside rotting_essence)."
       ],
       "dependencies": [
         "mal_crude_scythe"
@@ -1798,7 +1798,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_rotting_essence",
@@ -1808,8 +1809,7 @@
       "y": 144,
       "description": [
         "Reap zombies, husks, zombie villagers, zoglins, or zombified piglins with a Malum scythe to harvest Rotting Essence — the wicked-aligned drop fueling the Grotesque Expulsion ritual.",
-        "Zombie: 10% chance, 1-3 per kill. Husk: 15%, 1-2. Zombie Villager / Zoglin / Zombified Piglin: 10%, 1-3.",
-        "Original items: Rotting Essence (malum)"
+        "Zombie: 10% chance, 1-3 per kill. Husk: 15%, 1-2. Zombie Villager / Zoglin / Zombified Piglin: 10%, 1-3."
       ],
       "dependencies": [
         "mal_crude_scythe"
@@ -1841,7 +1841,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_astral_weave",
@@ -1851,8 +1852,7 @@
       "y": 0,
       "description": [
         "Reap ghasts or phantoms with a Malum scythe for Astral Weave — sky-borne fabric used in aerial-rune work.",
-        "Ghast: 50% chance, 1-3 per kill. Phantom: 25%, 1-2.",
-        "Original items: Astral Weave (malum)"
+        "Ghast: 50% chance, 1-3 per kill. Phantom: 25%, 1-2."
       ],
       "dependencies": [
         "mal_crude_scythe"
@@ -1879,7 +1879,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_warp_flux",
@@ -1889,8 +1890,7 @@
       "y": 192,
       "description": [
         "Reap endermen with a Malum scythe to harvest Warp Flux — eldritch-aligned essence channeled into void rituals.",
-        "Enderman: 10% chance, 2-4 per kill. End Highlands and warped forests are the most efficient hunting grounds.",
-        "Original items: Warp Flux (malum)"
+        "Enderman: 10% chance, 2-4 per kill. End Highlands and warped forests are the most efficient hunting grounds."
       ],
       "dependencies": [
         "mal_crude_scythe"
@@ -1917,7 +1917,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     },
     {
       "id": "mal_astral_metal",
@@ -1928,8 +1929,7 @@
       "y": 0,
       "description": [
         "Build the Astral Forge — the GC AS Trait Altar replacement — and feed it the constellation reagents: 4 starmetal, 4 meteor dust, 1 fusion matrix center, 4 clusters of brilliance, 4 meteor ingots, 4 fallen stars.",
-        "Out comes 4 ingots of astral metal. Required by the Arcane Crystal Ball.",
-        "Original items: Astral Metal Ingot (soa_additions)"
+        "Out comes 4 ingots of astral metal. Required by the Arcane Crystal Ball."
       ],
       "dependencies": [
         "mal_brilliance"
@@ -1956,7 +1956,8 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "show_deps": false
     }
   ]
 }

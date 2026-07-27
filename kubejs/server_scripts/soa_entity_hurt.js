@@ -62,14 +62,18 @@ const SKELETON_TYPES = new Set([
     'minecraft:bogged',
 ])
 
-// Approximate ScalingHealth difficulty without the addon API (peer mod call
-// would need a Java helper). Falls back to MC difficulty (Easy=1, Normal=2,
-// Hard=3) scaled into 0..100 range. Override via global.SOA_DIFFICULTY_OVERRIDE
-// for tuning in normal/expert packmodes.
+// ScalingHealth difficulty, stage-derived. soa_world_events.js writes the
+// player's stage-map difficulty (GC difficulty_mapping.zs values, 0..2400)
+// to persistentData whenever a stage is gained (and once on login as a
+// repair pass) — the same value it pushes into ScalingHealth via
+// /sh_difficulty. GC's onEntityLivingHurt.zs read player.difficulty
+// directly; this mirrors it without a Java API bridge. Override via
+// global.SOA_DIFFICULTY_OVERRIDE for tuning.
 function getDifficulty(player) {
     if (typeof global.SOA_DIFFICULTY_OVERRIDE !== 'undefined') return global.SOA_DIFFICULTY_OVERRIDE
-    const lvl = player.level.difficulty.id  // 0=peaceful 1=easy 2=normal 3=hard
-    return lvl * 25  // 0/25/50/75 — mild scaling without ScalingHealth wired in
+    const pd = player.persistentData
+    if (pd.contains('soa_sh_difficulty')) return pd.getInt('soa_sh_difficulty')
+    return 0  // no stages yet — GC starting difficulty is 0
 }
 
 EntityEvents.hurt(event => {

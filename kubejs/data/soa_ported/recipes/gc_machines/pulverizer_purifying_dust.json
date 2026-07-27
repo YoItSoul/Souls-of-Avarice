@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "botania:pure_daisy"
+  },
+  "result": [
+    {
+      "item": "soa_additions:purifying_dust",
+      "count": 8
+    }
+  ],
+  "energy": 600
+}

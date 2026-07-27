@@ -129,6 +129,9 @@
     "energy": true,
     "tooltip_renderer": true
   },
+  "projectexpansion": {
+    "provider": true
+  },
   "valoria": {
     "jewelry": true,
     "manipulator": true,
@@ -202,9 +205,5 @@
     "infused_farmland": true,
     "crop": true,
     "inferium_crop": true
-  },
-  "tr": {
-    "monocle_entity_aspects": true,
-    "monocle_aspects": true
   }
 }

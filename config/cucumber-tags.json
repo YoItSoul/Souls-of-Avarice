@@ -12,5 +12,5 @@
   "forge:ingots/chrome": "null",
   "forge:ingots/titanium": "soa_additions:titanium_ingot",
   "forge:rubber": "null",
-  "forge:gems/peridot": "null"
+  "forge:gems/peridot": "soa_additions:peridot"
 }

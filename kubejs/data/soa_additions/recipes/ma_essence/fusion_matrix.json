@@ -1,0 +1,23 @@
+{
+  "type": "cucumber:shaped_no_mirror",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagriculture:fusion_matrix"
+    }
+  ],
+  "pattern": [
+    "EEE",
+    "E E",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagriculture:fusion_matrix_essence"
+    }
+  },
+  "result": {
+    "item": "soa_additions:fusion_matrix_ingot",
+    "count": 3
+  }
+}

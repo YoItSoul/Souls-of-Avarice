@@ -1,0 +1,16 @@
+{
+  "type": "botania:elven_trade",
+  "ingredients": [
+    {
+      "tag": "forge:gems/quartz"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": [
+    {
+      "item": "actuallyadditions:black_quartz"
+    }
+  ]
+}

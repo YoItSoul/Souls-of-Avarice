@@ -1,5 +1,5 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:chromasteel_forge",
   "time": 4838,
   "requirements": [
@@ -60,35 +60,35 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "mekanism:atomic_alloy",
+      "item": "mekanism:alloy_atomic",
       "amount": 1,
       "slot": "in8"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "soa_additions:reinforced_ingot",
+      "item": "tconevo:draconic_metal_ingot",
       "amount": 1,
       "slot": "in9"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "soa_additions:manyullyn_ingot",
+      "item": "tconevo:wyvern_ingot",
       "amount": 1,
       "slot": "in10"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "soa_additions:alumite_ingot",
+      "item": "tconevo:primal_metal_ingot",
       "amount": 1,
       "slot": "in11"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "avaritia:infinity_ingot",
+      "item": "avaritia:crystal_matrix_ingot",
       "amount": 1,
       "slot": "in12"
     },
@@ -137,33 +137,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

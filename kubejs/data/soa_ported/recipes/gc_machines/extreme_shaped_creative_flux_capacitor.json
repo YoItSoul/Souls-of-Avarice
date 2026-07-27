@@ -1,0 +1,24 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "M   A   M",
+    " SSSASSS ",
+    " SCSASCS ",
+    " SSCACSS ",
+    "AAAADAAAA",
+    " SSCACSS ",
+    " SCSASCS ",
+    " SSSASSS ",
+    "M   A   M"
+  ],
+  "key": {
+    "M": { "item": "tconevo:draconic_metal_block" },
+    "A": { "item": "draconicevolution:awakened_core" },
+    "S": { "item": "soa_additions:creative_soul" },
+    "C": { "item": "avaritia:infinity_catalyst" },
+    "D": { "item": "draconicevolution:draconic_capacitor" }
+  },
+  "result": {
+    "item": "draconicevolution:creative_capacitor"
+  }
+}

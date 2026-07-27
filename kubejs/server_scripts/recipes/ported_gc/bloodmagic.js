@@ -85,7 +85,13 @@ ServerEvents.recipes(event => {
     // BloodAltar.addRecipe(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}), <astralsorcery:itemcraftingcomponent:1>, 1, 5000, 80, 80);
     // astralsorcery absent -> recipe NOT ported.
     // BloodAltar.addRecipe(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}), <additions:greedycraft-compressed_experience_block>, 2, 25000, 100, 100);
-    // FIXME: compressed_experience_block not registered in SoA -> recipe NOT ported.
+    // [SoA] Enabled 2026-07-23: soa_additions:compressed_experience_block now exists.
+    event.custom({
+        type: 'bloodmagic:altar',
+        input:  { item: 'soa_additions:compressed_experience_block' },
+        output: { item: 'bloodmagic:magicianbloodorb' },
+        upgradeLevel: 2, altarSyphon: 25000, consumptionRate: 100, drainRate: 100
+    })
     // BloodAltar.addRecipe(<tconevo:metal:25>, <additions:durasteel_ingot>, 2, 10000, 200, 200);
     // BM 1.20 altar `output` must be {item:...}, not a tag (verified vs
     //   data/bloodmagic/recipes/altar/*.json). Resolve the original

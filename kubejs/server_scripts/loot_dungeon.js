@@ -13,8 +13,9 @@
 //   - quark pirate chest
 //   - twilightforest hill / hedge_maze / aurora chests (NEW: GC didn't target
 //     these; intentionally added since TF is a major loot source in SoA)
-// Skipped tables (mods absent): aether_legacy, abyssalcraft, cqrepoured,
-//   defiledlands, lostcities.
+// Skipped tables (mods absent): aether_legacy, abyssalcraft, cqrepoured.
+// lostcities + defiledlands tables re-added 2026-07-27 when those mods
+// returned to the pack.
 //
 // Item ID translations (1.12 → 1.20.1, per project_gc_port_id_mapping memory):
 //   additions:greedycraft-* → soa_additions:* (prefix stripped)
@@ -72,6 +73,11 @@ const TABLES = [
     'aether:chests/dungeon/bronze_dungeon',
     'aether:chests/dungeon/silver_dungeon',
     'aether:chests/dungeon/gold_dungeon',
+    // Lost Cities (re-added 2026-07-27) — same tables GC injected
+    'lostcities:chests/lostcitychest',
+    'lostcities:chests/raildungeonchest',
+    // Defiled Lands 1.20 port — GC injected this table too
+    'defiledlands:chests/dungeon_defiled',
 ]
 
 // Each row: [item, weight, min, max]. Quality and conditions handled separately.

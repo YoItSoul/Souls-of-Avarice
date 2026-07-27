@@ -1,0 +1,25 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "         ",
+    " A    A  ",
+    "    A    ",
+    "   AAA   ",
+    "  AABAA  ",
+    "  AAAAA  ",
+    "   AAA   ",
+    "         ",
+    "         "
+  ],
+  "key": {
+    "A": {
+      "item": "soa_additions:creative_shard"
+    },
+    "B": {
+      "item": "mysticalagradditions:insanium_essence"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:creative_essence"
+  }
+}

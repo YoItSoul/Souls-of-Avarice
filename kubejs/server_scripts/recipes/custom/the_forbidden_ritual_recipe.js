@@ -45,12 +45,9 @@ ServerEvents.recipes(event => {
                 .spread(7, 3, 7)
                 .data(`{CustomName:'{"text":"Forbidden Acolyte","color":"dark_purple"}',IsBaby:1b,Health:${MINION_HP}f,Attributes:[{Name:"generic.max_health",Base:${MINION_HP}d}]}`)
         )
-        .input('1x minecraft:nether_star')
-        .input('1x minecraft:wither_skeleton_skull')
-        .input('1x minecraft:wither_skeleton_skull')
-        .input('1x minecraft:wither_skeleton_skull')
-        .input('4x minecraft:soul_sand')
-        .input('1x soa_additions:dragon_soul')
+        // GC parity: NO reagents (the_forbidden.zs setReagents([]) — catalyst
+        // only). GC's nether-only check has no summoningrituals equivalent;
+        // the soul-sand foundation is its 1.20 echo.
         .sacrificeRegion(13, 13)
         .recipeTime(600)
         .blockBelow('minecraft:soul_sand')

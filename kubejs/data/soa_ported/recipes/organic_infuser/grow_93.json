@@ -1,113 +1,18 @@
 {
-  "type": "custommachinery:machine",
-  "machine": "soa_ported:organic_infuser",
-  "time": 100,
-  "requirements": [
+  "__comment": "Disabled: GC grew mysticalagriculture:glowstone_ingot_seeds, but the glowstone_ingot crop was not restored in 1.20 (its material has no equivalent). Never-true condition keeps this file inert; delete freely.",
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
     {
-      "type": "custommachinery:item",
-      "mode": "input",
-      "item": "mysticalagriculture:glowstone_ingot_seeds",
-      "amount": 1,
-      "slot": "in"
-    },
-    {
-      "type": "custommachinery:energy",
-      "mode": "input",
-      "amount": 320
-    },
-    {
-      "type": "custommachinery:fluid",
-      "mode": "input",
-      "fluid": "soa_additions:organic_fluid",
-      "amount": 600,
-      "tank": "fuel"
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:glowstone_ingot_seeds",
-      "amount": 1,
-      "slot": "out1",
-      "chance": 0.08
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:glowstone_ingot_seeds",
-      "amount": 1,
-      "slot": "out2",
-      "chance": 0.08
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:glowstone_ingot_essence",
-      "amount": 1,
-      "slot": "out3",
-      "chance": 1.0
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:glowstone_ingot_essence",
-      "amount": 1,
-      "slot": "out4",
-      "chance": 0.5
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:glowstone_ingot_essence",
-      "amount": 1,
-      "slot": "out5",
-      "chance": 0.25
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:glowstone_ingot_essence",
-      "amount": 1,
-      "slot": "out6",
-      "chance": 0.125
-    },
-    {
-      "type": "custommachinery:item",
-      "mode": "output",
-      "item": "mysticalagriculture:fertilized_essence",
-      "amount": 1,
-      "slot": "out6",
-      "chance": 0.01
-    },
-    {
-      "type": "custommachinery:speed",
-      "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
+      "type": "forge:mod_loaded",
+      "modid": "mysticalagriculture_dropped_crop"
     }
-  ]
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stone"
+  }
 }

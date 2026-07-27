@@ -1,0 +1,26 @@
+{
+  "_comment": "Soymilk Producer controller. Corner/center materials mirror the dominant blocks of the GC Modular Machinery structure (config/modularmachinery/machinery/soymilk_producer.json) so the build cost tracks GC; modularium BLOCKS are the controller identity.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "tofucraft:blocktofumetal"
+    },
+    "M": {
+      "item": "soa_additions:modularium_block"
+    },
+    "C": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "pattern": [
+    "AMA",
+    "MCM",
+    "AMA"
+  ],
+  "result": {
+    "item": "custommachinery:custom_machine_item",
+    "nbt": "{machine:\"soa_ported:soymilk_producer\"}"
+  },
+  "show_notification": true
+}

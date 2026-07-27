@@ -1,0 +1,13 @@
+{
+  "type": "botania:elven_trade",
+  "ingredients": [
+    {
+      "item": "soa_additions:time_shard"
+    }
+  ],
+  "output": [
+    {
+      "item": "minecraft:gold_block"
+    }
+  ]
+}

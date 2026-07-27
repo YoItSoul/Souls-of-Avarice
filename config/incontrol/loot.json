@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "dimension": "lostcities:lostcity",
+    "hostile": true,
+    "random": 0.05,
+    "item": "soa_additions:city_defender_medal"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "_comment": "Dungeon Loot Power Generator controller. Corner/center materials mirror the dominant blocks of the GC Modular Machinery structure (config/modularmachinery/machinery/loot_power_generator.json) so the build cost tracks GC; modularium BLOCKS are the controller identity.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:gold_block"
+    },
+    "M": {
+      "item": "soa_additions:modularium_block"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
+  },
+  "pattern": [
+    "AMA",
+    "MCM",
+    "AMA"
+  ],
+  "result": {
+    "item": "custommachinery:custom_machine_item",
+    "nbt": "{machine:\"soa_ported:loot_power_generator\"}"
+  },
+  "show_notification": true
+}

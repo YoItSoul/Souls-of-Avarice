@@ -34,19 +34,14 @@ function decompress(name as string, output as crafttweaker.api.item.IItemStack, 
 // ============================================================
 
 // === Twilight Gem ===
-// Alt recipe from GC using TF items (original needed thaumcraft:salis_mundus)
-craftingTable.addShaped("soa_twilight_gem", <item:soa_additions:twilight_gem>, [
-    [<item:minecraft:air>, <item:twilightforest:magic_map_focus>, <item:minecraft:air>],
-    [<tag:items:forge:ingots/steeleaf>, <tag:items:forge:gems/diamond>, <item:twilightforest:naga_scale>],
-    [<item:minecraft:air>, <tag:items:forge:ingots/knightmetal>, <item:minecraft:air>]
-]);
-
-// Normal mode recipe adapted (original used salis_mundus, replaced with botania fertilizer)
-craftingTable.addShaped("soa_twilight_gem_alt", <item:soa_additions:twilight_gem>, [
-    [<tag:items:minecraft:saplings>, <item:botania:fertilizer>, <tag:items:minecraft:saplings>],
-    [<item:botania:fertilizer>, <item:botania:mana_diamond>, <item:botania:fertilizer>],
-    [<tag:items:minecraft:saplings>, <item:botania:fertilizer>, <tag:items:minecraft:saplings>]
-]);
+// Twilight Gem recipes are now managed as a 1:1-GC packmode split:
+//   - RETURN recipe (Twilight loot) = datapack JSON
+//     kubejs/data/soa_additions/recipes/twilight_gem.json (always on).
+//   - ENTER recipe (packmode-scaled: casual/adventure/expert) =
+//     kubejs/server_scripts/recipes/ported_gc/packmode_vanilla_crafting.js
+//     (GC normal/expert used thaumcraft:salis_mundus → thaumon:mutagen).
+// The two old always-on CT recipes were removed so the easy enter recipe
+// no longer leaks into adventure/expert.
 
 // === Ender Charm ===
 // Original used ingotDurasteel + ingotDreadium (AbyssalCraft, not available)
@@ -437,3 +432,12 @@ craftingTable.addShaped("soa_crude_hatchet", <item:soa_additions:crude_hatchet>,
 craftingTable.addShapeless("soa_gravel_to_raw_flint", <item:tough_beginnings:raw_flint>, [
     <item:minecraft:gravel>, <item:minecraft:gravel>, <item:minecraft:gravel>
 ]);
+
+// ============================================================
+//  BLOCK OF MATTER (GC world-transmutation port, 2026-07-24)
+// ============================================================
+// GC: philosopher stone right-click on placed Liquid Antimatter
+// (abyssalcraft:antiwater) -> additions:greedycraft-matter_block.
+// abyssalcraft is absent; valoria:awakened_void_block is the approved
+// equivalent (9x valoria void ingots -> craftable, void-matter themed).
+mods.projecte.WorldTransmutation.add(<blockstate:valoria:awakened_void_block>, <blockstate:soa_additions:matter_block>);

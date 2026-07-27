@@ -1,0 +1,13 @@
+{
+  "parent": "soa_additions:elysia/root",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "granted"
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "         ",
+    "         ",
+    "         ",
+    "         ",
+    "ABCCCCCBA",
+    "ABCCCCCBA",
+    "ABCCCCCBA",
+    "ABBBBBBBA",
+    "AAAAAAAAA"
+  ],
+  "key": {
+    "A": {
+      "item": "botania:livingrock"
+    },
+    "B": {
+      "item": "botania:terrasteel_ingot"
+    },
+    "C": {
+      "item": "soa_additions:creative_soul"
+    }
+  },
+  "result": {
+    "item": "botania:creative_pool"
+  }
+}

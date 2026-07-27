@@ -1,12 +1,12 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:organic_infuser",
   "time": 4800,
   "requirements": [
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "mysticalagradditions:nether_star_seeds",
+      "item": "mysticalagriculture:nether_star_seeds",
       "amount": 1,
       "slot": "in"
     },
@@ -25,7 +25,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "mysticalagradditions:nether_star_seeds",
+      "item": "mysticalagriculture:nether_star_seeds",
       "amount": 1,
       "slot": "out1",
       "chance": 0.005
@@ -33,7 +33,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "mysticalagradditions:nether_star_seeds",
+      "item": "mysticalagriculture:nether_star_seeds",
       "amount": 1,
       "slot": "out2",
       "chance": 0.005
@@ -41,7 +41,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "mysticalagradditions:nether_star_essence",
+      "item": "mysticalagriculture:nether_star_essence",
       "amount": 1,
       "slot": "out3",
       "chance": 1.0
@@ -49,7 +49,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "mysticalagradditions:nether_star_essence",
+      "item": "mysticalagriculture:nether_star_essence",
       "amount": 1,
       "slot": "out4",
       "chance": 0.5
@@ -57,7 +57,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "mysticalagradditions:nether_star_essence",
+      "item": "mysticalagriculture:nether_star_essence",
       "amount": 1,
       "slot": "out5",
       "chance": 0.25
@@ -65,7 +65,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "mysticalagradditions:nether_star_essence",
+      "item": "mysticalagriculture:nether_star_essence",
       "amount": 1,
       "slot": "out6",
       "chance": 0.125
@@ -81,33 +81,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

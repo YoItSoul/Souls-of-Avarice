@@ -38,13 +38,13 @@ ServerEvents.recipes(event => {
                 .offset(0, 4, 0)
                 .spread(7, 3, 7)
         )
-        .input('4x minecraft:ice')
-        .input('4x minecraft:packed_ice')
-        .input('2x minecraft:blue_ice')
-        .input('2x minecraft:diamond')
-        .input('8x minecraft:snowball')
+        // GC parity: NO reagents (frostmaw.zs setReagents([]) — catalyst only).
         .sacrificeRegion(13, 13)
         .recipeTime(400)
+        // packed-ice foundation stands in for GC's snowy-biome check, which
+        // has no summoningrituals equivalent.
         .blockBelow('minecraft:packed_ice')
+        // GC parity: Frostmaw only comes during storms (frostmaw.zs fail.4).
+        .weather('rain')
     console.info('[soa_scripts] frostmaw_ritual_recipe.js: DONE')
 })

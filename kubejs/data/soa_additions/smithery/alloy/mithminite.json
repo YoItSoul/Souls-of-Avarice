@@ -1,0 +1,18 @@
+{
+  "_comment": "GC parity: mithminite = mithrillium + adaminite (TAR Mithminite Smelter). 2:2->1 ingot ratio at mithrillium melt temp (GC 1500C). Bulk route; the tier-5 Hephaestus ritual is the discovery route.",
+  "inputs": [
+    {
+      "material": "soa_additions:mithrillium",
+      "mb": 288
+    },
+    {
+      "material": "soa_additions:adaminite",
+      "mb": 288
+    }
+  ],
+  "result": {
+    "material": "soa_additions:mithminite",
+    "mb": 144
+  },
+  "min_temperature_c": 1500
+}

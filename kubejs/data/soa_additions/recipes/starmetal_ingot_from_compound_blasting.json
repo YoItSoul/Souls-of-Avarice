@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": { "item": "kubejs:starmetal_compound" },
+  "result": "soa_additions:starmetal_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

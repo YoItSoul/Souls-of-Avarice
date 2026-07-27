@@ -32,8 +32,8 @@
 //   projectex:* (arcane_tablet, matter:0/1/2)
 //   thaumcraft:* (primordial_pearl, void_seed, ingot, ingot:1)
 //   redstonearsenal:material:32, redstonerepository:material:1
-//   draconicevolution:draconic_staff_of_power (not in DE 1.20)
-//   solarflux:custom_solar_panel_cosmic_solar_panel (GC custom)
+//   solarflux:sp_custom_cosmic_solar_panel (GC custom, registered by config/solarflux/custom_panels.js)
+// NOTE: draconic_staff_of_power IS in DE 1.20 as draconic_staff — ported below.
 
 console.info('[soa_ported] packmode_normal_de.js loading')
 
@@ -51,16 +51,42 @@ ServerEvents.recipes(event => {
     // event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:draconic_pickaxe' })
 
     // Remove DE stock recipes the normal-mode overrides replace:
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:wyvern_core' })
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:awakened_core' })
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:chaotic_core' })
+    // Remove by recipe ID — { type, output } doesn't match custom fusion recipes,
+    // so the stock recipe was never actually removed (visible duplicate in-game).
+    event.remove({ id: 'draconicevolution:components/wyvern_core' })
+    event.remove({ id: 'draconicevolution:components/awakened_core' })
+    event.remove({ id: 'draconicevolution:components/chaotic_core' })
+    event.remove({ id: 'draconicevolution:machines/reactor_core' })  // was missing entirely in normal mode
 
-    // --- projecte:transmutation_table (catalyst: energy_matter_core, tier 1, E=2_147_483_647) ---
-    // 1x extreme_crafting_table + 1x projectex:matter:1 + 1x tconevo:metal_block (wyvern block) +
-    // 1x dragon_heart + 1x ancient_tome_page + 1x pearl_of_knowledge +
-    // 1x bounty_hunter_medal + 1x city_defender_medal
-    // projectex:matter:1 ABSENT -> FIXME skip entire recipe
-    // event.custom({ ... })
+    // GC's remove.zs disabled these stock crafting recipes; SoA re-adds them as DE
+    // fusion recipes below. crafting_shaped remove can't touch the fusion add (safe).
+    // (transmutation_table block is NOT removed — its fusion port is skipped: projectex absent.)
+    event.remove({ output: 'projecte:transmutation_tablet' })
+    event.remove({ output: 'avaritia:extreme_crafting_table' })
+    event.remove({ output: 'projecte:condenser_mk1' })
+    event.remove({ output: 'projecte:condenser_mk2' })
+
+    // --- projecte:transmutation_table (GC, NORMAL) — the endgame ProjectE unlock ---
+    // Native recipe is removed (vanilla_remove.js) + item is stage-gated; this fusion
+    // is THE way to get it. Unblocked now that Project Expansion supplies pink_matter.
+    // catalyst energy_matter_core, tier WYVERN (GC 1), E=2_147_483_647.
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'soa_additions:energy_matter_core' },
+        ingredients: [
+            { item: 'avaritia:extreme_crafting_table' },
+            { item: 'projectexpansion:pink_matter' },
+            { item: 'tconevo:wyvern_block' },
+            { item: 'draconicevolution:dragon_heart' },
+            { item: 'soa_additions:ancient_tome_page' },
+            { item: 'soa_additions:pearl_of_knowledge' },
+            { item: 'soa_additions:bounty_hunter_medal' },
+            { item: 'soa_additions:city_defender_medal' }
+        ],
+        result: { item: 'projecte:transmutation_table' },
+        tier: 'WYVERN',
+        total_energy: 2147483647
+    })
 
     // --- projecte:transmutation_tablet (catalyst: transmutation_table, tier 2, E=400_000_000) ---
     // 4x wyvern_core + 4x awakened_core
@@ -116,8 +142,27 @@ ServerEvents.recipes(event => {
         total_energy: 800000000
     })
 
-    // --- projectex:arcane_tablet (catalyst: transmutation_tablet, tier 3, E=17_179_869_184) ---
-    // projectex ABSENT -> FIXME skip
+    // --- projectexpansion:arcane_tablet (GC projectex:arcane_tablet, NORMAL) ---
+    // Project Expansion (1.20.1 ProjectEX successor) now installed -> items exist.
+    // catalyst transmutation_tablet, tier CHAOTIC (GC 3), E=17_179_869_184.
+    // 2x magenta_matter + 2x pink_matter + 2x chaotic_core + ancient_tome + purple_matter.
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'projecte:transmutation_tablet' },
+        ingredients: [
+            { item: 'projectexpansion:magenta_matter' },
+            { item: 'projectexpansion:magenta_matter' },
+            { item: 'projectexpansion:pink_matter' },
+            { item: 'projectexpansion:pink_matter' },
+            { item: 'draconicevolution:chaotic_core' },
+            { item: 'draconicevolution:chaotic_core' },
+            { item: 'soa_additions:ancient_tome' },
+            { item: 'projectexpansion:purple_matter' }
+        ],
+        result: { item: 'projectexpansion:arcane_tablet' },
+        tier: 'CHAOTIC',
+        total_energy: 17179869184
+    })
 
     // --- projecte:condenser_mk2 (catalyst: condenser_mk1, tier 1, E=640_000_000) ---
     // 4x matter_block:1 + wyvern_core + energy_matter_core + city_defender_medal + ancient_tome_fragment
@@ -272,8 +317,8 @@ ServerEvents.recipes(event => {
     })
 
     // --- cosmic_solar_panel (catalyst: solar_panel_chaotic, tier 3, E=1_638_400_000) ---
-    // GC: custom_solar_panel_cosmic_solar_panel is a GC ContentTweaker-registered custom panel.
-    // Not in SoA. FIXME skip.
+    // GC custom panel, now registered by config/solarflux/custom_panels.js as
+    // solarflux:sp_custom_cosmic_solar_panel — recipe ported below.
 
     // --- draconicevolution:reactor_core (catalyst: chaos_shard, tier 3, E=3_276_800_000) ---
     // 2x cosmilite_ingot + 2x tconevo:metal:5 (awakened draconium) +
@@ -286,8 +331,8 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:cosmilite_ingot' },
             { tag: 'forge:ingots/draconium_awakened' },
             { tag: 'forge:ingots/draconium_awakened' },
-            { item: 'draconicevolution:chaotic_energy_core' },
-            { item: 'draconicevolution:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
             { item: 'soa_additions:terra_alloy_ingot' },
             { item: 'soa_additions:terra_alloy_ingot' }
         ],
@@ -322,6 +367,51 @@ ServerEvents.recipes(event => {
 
     // --- thaumcraft:primordial_pearl (catalyst: void_seed, tier 0, E=2_048_000) ---
     // Thaumcraft ABSENT in SoA 1.20 -> FIXME skip
+
+    // --- draconicevolution:draconic_staff (GC draconic_staff_of_power, NORMAL) ---
+    // The GC output IS in DE 1.20 (renamed draconic_staff_of_power -> draconic_staff).
+    // Catalyst infinity_catalyst, tier DRACONIC (GC tier int 2), E=17_179_869_184.
+    // 6x draconic metal block + creative soul + ancient tome.
+    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:draconic_staff' })
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'avaritia:infinity_catalyst' },
+        ingredients: [
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'soa_additions:creative_soul' },
+            { item: 'soa_additions:ancient_tome' }
+        ],
+        result: { item: 'draconicevolution:draconic_staff' },
+        tier: 'DRACONIC',
+        total_energy: 17179869184
+    })
+
+    // --- Cosmic Solar Panel (GC solarflux custom panel, NORMAL) ---
+    // Item registered by config/solarflux/custom_panels.js. Catalyst = Chaotic
+    // Solar Panel (GC solar_panel_chaotic), tier CHAOTIC, E=1_638_400_000.
+    // 4x cosmilite ingot + 4x soa_additions:chaotic_energy_core (exact GC item; DA 1.20 dropped it).
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'solarflux:sp_de.chaotic' },
+        ingredients: [
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' }
+        ],
+        result: { item: 'solarflux:sp_custom_cosmic_solar_panel' },
+        tier: 'CHAOTIC',
+        total_energy: 1638400000
+    })
 
     console.info('[soa_ported] packmode_normal_de.js: DONE')
 })

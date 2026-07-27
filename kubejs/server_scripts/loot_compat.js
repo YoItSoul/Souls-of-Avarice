@@ -25,7 +25,7 @@ LootJS.modifiers((event) => {
     // ---- Lucky Clover from grass/plants (1/200 chance) ----
     // GC: weight 1 vs 199 in a Dropt selector → ~0.5% drop rate per break.
     const PLANT_BLOCKS = [
-        'minecraft:short_grass',           // 1.20 renamed from tall_grass
+        'minecraft:grass',           // 1.20 renamed from tall_grass
         'minecraft:tall_grass',            // double-tall variant
         'minecraft:fern',
         'minecraft:large_fern',

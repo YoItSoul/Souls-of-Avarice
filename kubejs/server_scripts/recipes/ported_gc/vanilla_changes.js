@@ -29,21 +29,35 @@ console.info('[soa_ported] vanilla_changes.js loading')
 ServerEvents.recipes(event => {
     console.info('[soa_ported] vanilla_changes.js: registering recipes')
 
-    // fusion_crafting_core: blockDurasteel (FIXME: no durasteel block item) +
-    //                      draconic_core + fusion_matrix ingot
-    // FIXME: draconicevolution:fusion_crafting_core is NOT registered in SoA's
-    // Draconic Evolution build (only draconium_core/wyvern_core exist). Skip
-    // re-crafting the core since the item itself isn't present.
-    // event.remove({ output: 'draconicevolution:fusion_crafting_core' })
-    // event.shaped(
-    //     'draconicevolution:fusion_crafting_core',
-    //     ['FDF', 'DCD', 'FDF'],
-    //     {
-    //         F: 'soa_additions:fusion_matrix_ingot',
-    //         D: '#forge:ingots/durasteel',
-    //         C: 'draconicevolution:draconium_core'
-    //     }
-    // ).id('soa_ported:fusion_crafting_core_gc')
+    // fusion_crafting_core (GC draconicevolution:fusion_crafting_core -> 1.20
+    // draconicevolution:crafting_core): fusion_matrix ingots (corners/edges) +
+    // durasteel ingots (edges) + draconium core (GC draconic_core) center.
+    event.remove({ output: 'draconicevolution:crafting_core' })
+    event.shaped(
+        'draconicevolution:crafting_core',
+        ['FDF', 'DCD', 'FDF'],
+        {
+            F: '#forge:ingots/fusion_matrix',
+            D: '#forge:ingots/durasteel',
+            C: 'draconicevolution:draconium_core'
+        }
+    ).id('soa_ported:fusion_crafting_core_gc')
+
+    // laser_amplifier (GC mekanism:machineblock2:14, RecipeUtil.removeAndAdd):
+    // osmium frame + diamond top + creative shards (GC ore:shardCreative) +
+    // basic energy cube center + chaotic core bottom.
+    event.remove({ output: 'mekanism:laser_amplifier' })
+    event.shaped(
+        'mekanism:laser_amplifier',
+        ['ODO', 'SES', 'OCO'],
+        {
+            O: '#forge:ingots/osmium',
+            D: '#forge:gems/diamond',
+            S: 'soa_additions:creative_shard',
+            E: 'mekanism:basic_energy_cube',
+            C: 'draconicevolution:chaotic_core'
+        }
+    ).id('soa_ported:laser_amplifier_gc')
 
     // master_infusion_crystal: supremium block corners + netherStar center +
     //                         durasteel ingots on sides
@@ -76,7 +90,7 @@ ServerEvents.recipes(event => {
     // quark_rainbow_rune                             -> quark runes 1.20 use named items; FIXME
     // iron_chain_ring (hooked:microcrafting:2)       -> hooked absent
     // bonsai_pot                                     -> bonsaitrees absent
-    // laser_amplifier (mekanism:machineblock2:14)    -> 1.20 mekanism uses named items; FIXME
+    // laser_amplifier (mekanism:machineblock2:14)    -> PORTED above (mekanism:laser_amplifier)
     // xu_overclocked_generator                       -> extrautils2 absent
     // storage_detector (rftools:storage_scanner)     -> rftools absent
     // idol_of_sorrow  (defiledlands:idol_sorrow)     -> defiledlands absent

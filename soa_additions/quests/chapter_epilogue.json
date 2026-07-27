@@ -24,9 +24,7 @@
       "icon": "soa_additions:ordinary_medal",
       "x": 224,
       "y": 0,
-      "description": [
-        "Original items: Greedycraft-Ordinary Medal (additions)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -58,9 +56,7 @@
       "icon": "soa_additions:pioneer_medal",
       "x": 224,
       "y": 64,
-      "description": [
-        "Original items: Greedycraft-Pioneer Medal (additions)"
-      ],
+      "description": [],
       "dependencies": [
         "epi_a_journey_to_a_thousand_miles_"
       ],
@@ -91,7 +87,7 @@
     {
       "id": "epi_quest_15bc2a7b",
       "title": "Primordial Metal",
-      "icon": "soa_additions:primal_metal_ingot",
+      "icon": "tconevo:primal_metal_ingot",
       "x": 192,
       "y": 160,
       "description": [
@@ -101,7 +97,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:primal_metal_ingot",
+          "item": "tconevo:primal_metal_ingot",
           "count": 1
         }
       ],
@@ -123,9 +119,7 @@
       "icon": "soa_additions:greedy_medal",
       "x": 224,
       "y": 96,
-      "description": [
-        "Original items: Greedycraft-Greedy Medal (additions)"
-      ],
+      "description": [],
       "dependencies": [
         "epi_many_a_little_makes_a_mickle"
       ],
@@ -670,7 +664,7 @@
     {
       "id": "epi_qualified_ocd",
       "title": "Qualified OCD",
-      "icon": "ftbquests:custom_icon",
+      "icon": "soa_additions:ocd_certificate",
       "x": 224,
       "y": 416,
       "description": [

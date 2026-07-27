@@ -77,43 +77,9 @@ const BOSS_RESET_Y = 252.0
 // offset so the load is spread across the polling window.
 const BOSS_TYPE_FRAGMENTS = ['wither', 'ender_dragon', 'frostmaw', 'umvuthi', 'alpha_yeti', 'snow_queen']
 
-ServerEvents.tick(event => {
-    const tick = event.server.tickCount
-    if (tick % 5 !== 0) return  // coarse 5t outer cadence; fine 20t per entity below
-    // server.allLevels is Iterable<ServerLevel>; avoids the ambiguous
-    // getLevel(ResourceKey) vs kjs$getLevel(ResourceLocation) overload.
-    event.server.allLevels.forEach(lvl => {
-        if (!lvl) return
-        lvl.entities.forEach(e => {
-            if (!e || !e.living) return
-            if ((tick + e.id) % 20 !== 0) return
-
-            // Vec3 in 1.20.1 has both public final fields x/y/z AND accessor
-            // methods x()/y()/z(). Rhino wraps the field/method ambiguity in
-            // FieldAndMethods, which throws NullPointerException on numeric
-            // comparisons (Field.get(null)). Call the method form explicitly.
-            const m = e.getDeltaMovement()
-            let mx = m.x(), my = m.y(), mz = m.z(), dirty = false
-            if (mx >  MOTION_LIMIT) { mx =  MOTION_LIMIT; dirty = true }
-            if (mx < -MOTION_LIMIT) { mx = -MOTION_LIMIT; dirty = true }
-            if (my >  MOTION_LIMIT) { my =  MOTION_LIMIT; dirty = true }
-            if (my < -MOTION_LIMIT) { my = -MOTION_LIMIT; dirty = true }
-            if (mz >  MOTION_LIMIT) { mz =  MOTION_LIMIT; dirty = true }
-            if (mz < -MOTION_LIMIT) { mz = -MOTION_LIMIT; dirty = true }
-            if (dirty) e.setDeltaMovement(new $Vec3(mx, my, mz))
-
-            // Same caveat: use Entity.getY() / getX() / getZ() over .y/.x/.z.
-            if (e.getY() > MAX_BOSS_Y) {
-                try {
-                    const t = String(e.type)
-                    let isBoss = false
-                    for (const frag of BOSS_TYPE_FRAGMENTS) { if (t.includes(frag)) { isBoss = true; break } }
-                    if (isBoss) e.setPos(e.getX(), BOSS_RESET_Y, e.getZ())
-                } catch (err) { /* type lookup failed */ }
-            }
-        })
-    })
-})
+// Motion clamp + boss y-cap moved to Java (soa_additions SoaTickRules, 3.58.3):
+// iterating every loaded entity through Rhino was a JS invocation per entity
+// per poll. Constants above are retained by the Java port.
 
 // ============================================================
 // MobSpawnerEvents — spawner break chance + bonus XP + time_fragment drop
@@ -132,7 +98,10 @@ BlockEvents.broken(event => {
     if (Math.random() < SPAWNER_BREAK_CHANCE) {
         // Success: drop time_fragment + bonus XP
         const bonusXP = 4 + Math.floor(Math.random() * 12)  // base 4 + 0..11
-        const diffMult = (player.level.getDifficulty().getId() * 2.0) / 100.0 + 1.0
+        // GC MobSpawnerEvents.zs: bonus XP × (1 + ScalingHealth difficulty × 2%)
+        const shDiff = player.persistentData.contains('soa_sh_difficulty')
+            ? player.persistentData.getInt('soa_sh_difficulty') : 0
+        const diffMult = 1.0 + shDiff * 0.02
         const totalXP = Math.ceil(bonusXP * diffMult)
         try { player.giveExperiencePoints(totalXP) } catch (e) { /* */ }
 
@@ -181,67 +150,105 @@ BlockEvents.broken(event => {
 // per-player every 20t and diff against a cached set to synthesize the
 // "stage just acquired" event.
 //
-// stageMap: maps stage → ScalingHealth difficulty value. Mirrors GC's
-// stageMap from list_stages.zs. Higher value = more difficult.
-const STAGE_MAP = {
+// Stage → ScalingHealth difficulty. 1:1 with GC's global stageMap:
+//   scripts/global/difficulty_mapping.zs        (casual + adventure)
+//   scripts/global/difficulty_mapping_expert.zs (expert)
+// SOA-only stages (engineer/wizard tracks, challengers, fusion_matrix,
+// descendant_of_the_sun, graduated) have no GC value; they are placed on
+// GC's scale between their neighboring GC progression stages.
+const STAGE_MAP_NORMAL = {
+    // --- GC values (difficulty_mapping.zs) ---
     getting_started: 0,
-    nether: 100,
-    wither_slayer: 200,
-    ender_charm: 300,
-    hardmode: 500,
-    descendant_of_the_sun: 600,
-    novice_engineer: 50,  novice_wizard: 50,
-    skilled_engineer: 250, skilled_wizard: 250,
-    master_engineer: 500, master_wizard: 500,
-    wyvern: 800,
-    awakened: 1200,
-    chaotic: 1800,
-    fusion_matrix: 2000,
-    chaotic_dominator: 2400,
-    abyssal_conquerer: 2800,
-    wielder_of_infinity: 3200,
+    twilight_forest: 20,
+    nether: 64,
+    abyssal_conquerer: 128,
+    wither_slayer: 256,
+    ender_charm: 320,
+    hardmode: 640,
+    wyvern: 750,
+    awakened: 900,
+    chaotic_dominator: 1200,
+    chaotic: 1400,
+    wielder_of_infinity: 1600,
+    super_hardmode: 1600,
+    // --- SOA-only, interpolated on GC's casual/adventure scale ---
     expert: 0,
+    novice_engineer: 50,   novice_wizard: 50,
+    skilled_engineer: 250, skilled_wizard: 250,
+    master_engineer: 500,  master_wizard: 500,
+    descendant_of_the_sun: 600,
     graduated: 600,
-    challenger_a: 600, challenger_b: 800, challenger_c: 1000,
-    challenger_d: 1200, challenger_e: 1500, challenger_f: 1800, challenger_g: 2400,
+    challenger_a: 600, challenger_b: 750, challenger_c: 900,
+    challenger_d: 1050, challenger_e: 1200, challenger_f: 1400, challenger_g: 1600,
+    fusion_matrix: 1500,
+}
+const STAGE_MAP_EXPERT = {
+    // --- GC values (difficulty_mapping_expert.zs) ---
+    getting_started: 25,
+    twilight_forest: 50,
+    nether: 100,
+    abyssal_conquerer: 225,
+    wither_slayer: 400,
+    ender_charm: 480,
+    hardmode: 900,
+    wyvern: 1050,
+    awakened: 1250,
+    chaotic_dominator: 1600,
+    chaotic: 2000,
+    wielder_of_infinity: 2400,
+    super_hardmode: 2400,
+    // --- SOA-only, interpolated on GC's expert scale ---
+    expert: 0,
+    novice_engineer: 75,   novice_wizard: 75,
+    skilled_engineer: 375, skilled_wizard: 375,
+    master_engineer: 700,  master_wizard: 700,
+    descendant_of_the_sun: 850,
+    graduated: 850,
+    challenger_a: 900, challenger_b: 1050, challenger_c: 1250,
+    challenger_d: 1450, challenger_e: 1700, challenger_f: 2000, challenger_g: 2400,
+    fusion_matrix: 2200,
 }
 
-// Per-player previous stage set (uuid → Set<stage>). Cleared on logout.
-const PREV_STAGES = new Map()
+function soaStageMap() {
+    let mode = 'adventure'
+    try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* */ }
+    return mode === 'expert' ? STAGE_MAP_EXPERT : STAGE_MAP_NORMAL
+}
 
-PlayerEvents.loggedOut(event => { try { PREV_STAGES.delete(String(event.player.uuid)) } catch (e) {} })
-
-function diffStages(player) {
-    if (!GameStageHelper) return []
-    const uuid = String(player.uuid)
-    const prev = PREV_STAGES.get(uuid) || new Set()
-    const added = []
-    for (const stage in STAGE_MAP) {
-        if (GameStageHelper.hasStage(player, stage) && !prev.has(stage)) {
-            added.push(stage)
-            prev.add(stage)
-        }
+// Compute the player's stage-derived difficulty (max across held stages),
+// store it in persistentData (read by soa_entity_hurt.js — GC's
+// onEntityLivingHurt.zs used player.difficulty directly), and push it into
+// ScalingHealth. The 1.20.1 command is /sh_difficulty (NOT "scalinghealth
+// difficulty" — that silently failed); run from the server source since it
+// requires elevated permissions.
+function soaApplyStageDifficulty(player) {
+    if (!GameStageHelper) return 0
+    const map = soaStageMap()
+    let maxDiff = 0
+    for (const s in map) {
+        if (GameStageHelper.hasStage(player, s) && map[s] > maxDiff) maxDiff = map[s]
     }
-    PREV_STAGES.set(uuid, prev)
-    return added
+    player.persistentData.putInt('soa_sh_difficulty', maxDiff)
+    try {
+        player.server.runCommandSilent('sh_difficulty ' + player.username + ' set ' + maxDiff)
+    } catch (e) {
+        console.warn('[soa_world_events] sh_difficulty command failed: ' + e)
+    }
+    return maxDiff
 }
+global.soaApplyStageDifficulty = soaApplyStageDifficulty
 
-PlayerEvents.tick(event => {
-    const player = event.player
-    if (!player || player.level.isClientSide()) return
-    if (player.tickCount % 20 !== 0) return  // poll every 20t
-
-    const added = diffStages(player)
-    for (const stage of added) onStageAdded(player, stage)
-})
+// Stage-added detection is EVENT-DRIVEN via GameStages' own Forge event —
+// replaces the old 20t polling loop (which also re-fired the banner + tablet
+// for every already-held stage on every login). ForgeEvents is startup-scope
+// only, so the actual subscription lives in
+// startup_scripts/soa_forge_event_bridge.js and forwards through this global.
+global.soaOnStageAdded = (player, stage) => onStageAdded(player, stage)
 
 function onStageAdded(player, stage) {
-    // GC granted 'fearless_man' via the Lost Cities quest "The Fearless"
-    // (adventure/expert). Lost Cities isn't in the 1.20 pack, so grant it with
-    // 'hardmode' - the closest milestone - until that quest line is re-homed.
-    if (stage === 'hardmode' && GameStageHelper && !GameStageHelper.hasStage(player, 'fearless_man')) {
-        GameStageHelper.addStage(player, 'fearless_man')
-    }
+    // 'fearless_man' is granted by the re-homed "The Fearless" quest
+    // (1_remembering, adventure/expert) via crafting the Bravery Certificate --
+    // the 1:1 port of GC's AbyssalCraft-chapter quest. No auto-grant needed.
 
     let mode = 'adventure'
     try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* */ }
@@ -271,18 +278,30 @@ function onStageAdded(player, stage) {
     } catch (e) { /* item not yet registered — skip silently */ }
 
     // Difficulty bump — set ScalingHealth player difficulty to max stage value
-    let maxDiff = 0
-    for (const s in STAGE_MAP) {
-        if (GameStageHelper.hasStage(player, s) && STAGE_MAP[s] > maxDiff) maxDiff = STAGE_MAP[s]
-    }
-    if (maxDiff > 0) {
-        try {
-            player.runCommand('scalinghealth difficulty ' + player.username + ' set ' + maxDiff)
-        } catch (e) { /* command name may differ in 1.20.1 build */ }
-    }
+    // (GC GameStagesEvents.zs: player.difficulty = max over stageMap)
+    soaApplyStageDifficulty(player)
 
     player.tell(Component.literal('§9' + '='.repeat(50)))
 }
 
+// ============================================================
+// One-time difficulty repair on login — the old broken command means every
+// existing player is sitting at ScalingHealth difficulty 0 regardless of
+// stages. Re-derive once per player (flagged in persistentData), then
+// stage-add events keep it current. Not re-run every login so that manual
+// adjustments (difficulty changer items, GC parity) survive relogs.
+// ============================================================
+PlayerEvents.loggedIn(event => {
+    const player = event.player
+    if (!player || player.level.isClientSide()) return
+    let mode = 'adventure'
+    try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* */ }
+    if (mode === 'casual') return  // GC casual never auto-sets difficulty
+    if (player.persistentData.getBoolean('soa_diff_synced_v1')) return
+    const applied = soaApplyStageDifficulty(player)
+    player.persistentData.putBoolean('soa_diff_synced_v1', true)
+    console.info('[soa_world_events] difficulty repair: ' + player.username + ' -> ' + applied)
+})
+
 console.info('[soa_scripts] soa_world_events.js: registered (' +
-             Object.keys(STAGE_MAP).length + ' stages tracked)')
+             Object.keys(STAGE_MAP_NORMAL).length + ' stages tracked)')

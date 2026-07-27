@@ -1,0 +1,54 @@
+{
+  "_comment": "TAR infusion 1:1 (RecipesTAR mithrillium_ingot): central void metal ingot (lore: improved void metal) + 2x amber, 2x alumentum->arcane charcoal, 2x quicksilver->cinnabar, 2x enchanted fabric->spirit fabric, 2x salis mundus->arcane crystal dust. Full component counts - FA pedestals hold stacks.",
+  "additional_requirements": {
+    "forge_tier": 5
+  },
+  "essences": {
+    "aureal": 200,
+    "blood": 0,
+    "experience": 0,
+    "souls": 10
+  },
+  "inputs": [
+    {
+      "amount": 2,
+      "ingredient": {
+        "tag": "forge:gems/amber"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "malum:arcane_charcoal"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "thermal:cinnabar"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "malum:spirit_fabric"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "forbidden_arcanus:arcane_crystal_dust"
+      }
+    }
+  ],
+  "main_ingredient": {
+    "item": "soa_additions:void_metal_ingot"
+  },
+  "result": {
+    "type": "forbidden_arcanus:create_item",
+    "result_item": {
+      "Count": 1,
+      "id": "soa_additions:mithrillium_ingot"
+    }
+  }
+}

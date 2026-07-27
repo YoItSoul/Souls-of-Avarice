@@ -24,9 +24,7 @@
       "icon": "bigreactors:graphite_ingot",
       "x": 603,
       "y": 333,
-      "description": [
-        "Original items: Ingotgraphite (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -62,9 +60,7 @@
       "icon": "draconicevolution:chaotic_capacitor",
       "x": 376,
       "y": 480,
-      "description": [
-        "Original items: Infinitecapacitor (avaritiaio)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -100,9 +96,7 @@
       "icon": "bigreactors:basic_reactorcasing",
       "x": 728,
       "y": 333,
-      "description": [
-        "Original items: Reactorcoolantport (bigreactors), Reactorpowertaprf (bigreactors), Reactorpowertaptesla (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -156,7 +150,9 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:gamestage",
+          "stage": "novice_engineer",
+          "label": "Reach the Novice Engineer stage"
         }
       ],
       "rewards": [
@@ -216,9 +212,7 @@
       "icon": "enderio:sag_mill",
       "x": 125,
       "y": 352,
-      "description": [
-        "Original items: Block Simple Sag Mill (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_bedrock_dust"
       ],
@@ -291,9 +285,7 @@
       "icon": "enderio:enticing_crystal",
       "x": 229,
       "y": 352,
-      "description": [
-        "Original items: Enticing Crystal (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_better_machines_b_2"
       ],
@@ -340,9 +332,7 @@
       "icon": "thermal:electrum_ingot",
       "x": 224,
       "y": 320,
-      "description": [
-        "Original items: Electrum Ingot (thermal)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_even_more_upgrades"
       ],
@@ -420,12 +410,10 @@
     {
       "id": "ind_steampunk_era_2",
       "title": "Steampunk Era",
-      "icon": "thermalexpansion:dynamo",
+      "icon": "thermal:dynamo_stirling",
       "x": 16,
       "y": 160,
-      "description": [
-        "Original items: Dynamo (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_infinite_water"
       ],
@@ -498,9 +486,7 @@
       "icon": "jaopca:storage_blocks.black_quartz",
       "x": 603,
       "y": 83,
-      "description": [
-        "Original items: Iron Casing (actuallyadditions)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -541,9 +527,7 @@
       "icon": "mekanism:laser",
       "x": 603,
       "y": 40,
-      "description": [
-        "Original items: Block Atomic Reconstructor (actuallyadditions)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -579,9 +563,7 @@
       "icon": "extendedcrafting:pedestal",
       "x": 645,
       "y": 40,
-      "description": [
-        "Original items: Block Display Stand (actuallyadditions)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_quartz_but_it_s_black",
         "ind_super_laser"
@@ -620,9 +602,7 @@
       "icon": "extendedcrafting:crafting_core",
       "x": 707,
       "y": 40,
-      "description": [
-        "Original items: Block Empowerer (actuallyadditions)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_this_ain_t_a_decoration"
       ],
@@ -735,12 +715,10 @@
     {
       "id": "ind_it_s_a_fridge",
       "title": "It's a Fridge",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_chiller",
       "x": 272,
       "y": 125,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -771,9 +749,7 @@
       "icon": "cyclic:laser_cannon",
       "x": 603,
       "y": 395,
-      "description": [
-        "Original items: Rainbowgenerator (extrautils2)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -804,9 +780,7 @@
       "icon": "enderio:sag_mill",
       "x": 333,
       "y": 395,
-      "description": [
-        "Original items: Block Enhanced Vat (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_even_more_upgrades"
       ],
@@ -847,7 +821,9 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:gamestage",
+          "stage": "skilled_engineer",
+          "label": "Reach the Skilled Engineer stage"
         }
       ],
       "rewards": [
@@ -867,9 +843,7 @@
       "icon": "bigreactors:basic_reactorsolidaccessport",
       "x": 728,
       "y": 291,
-      "description": [
-        "Original items: Reactoraccessport (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -905,9 +879,7 @@
       "icon": "enderio:primitive_alloy_smelter",
       "x": 125,
       "y": 395,
-      "description": [
-        "Original items: Block Simple Alloy Smelter (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_bedrock_dust"
       ],
@@ -987,9 +959,7 @@
       "icon": "enderio:soularium_ingot",
       "x": 125,
       "y": 480,
-      "description": [
-        "Original items: Stellar Alloy Ingot (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_alloy_forging",
         "ind_dark_steel"
@@ -1028,9 +998,7 @@
       "icon": "enderio:pulsating_alloy_ingot",
       "x": 168,
       "y": 480,
-      "description": [
-        "Original items: Crystalline Alloy Ingot (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_endsteel"
       ],
@@ -1068,9 +1036,7 @@
       "icon": "enderio:energetic_alloy_ingot",
       "x": 229,
       "y": 480,
-      "description": [
-        "Original items: Melodic Alloy Ingot (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_melodic_alloy"
       ],
@@ -1108,9 +1074,7 @@
       "icon": "enderio:octadic_capacitor",
       "x": 272,
       "y": 480,
-      "description": [
-        "Original items: Item Capacitor Stellar (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_stellar_alloy"
       ],
@@ -1192,9 +1156,7 @@
       "icon": "thermal:upgrade_augment_1",
       "x": 64,
       "y": 83,
-      "description": [
-        "Original items: Upgrade (thermalfoundation)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_ore_doubling",
         "ind_infinite_water"
@@ -1273,9 +1235,7 @@
       "icon": "thermal:upgrade_augment_1",
       "x": 125,
       "y": 83,
-      "description": [
-        "Original items: Upgrade Augment 1 (thermal)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_industrial_evolution_i",
         "ind_mystical_machine"
@@ -1314,9 +1274,7 @@
       "icon": "thermal:upgrade_augment_2",
       "x": 168,
       "y": 83,
-      "description": [
-        "Original items: Upgrade Augment 2 (thermal)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_industrial_evolution_ii"
       ],
@@ -1389,9 +1347,7 @@
       "icon": "enderio:wired_charger",
       "x": 333,
       "y": 352,
-      "description": [
-        "Original items: Block Enhanced Wired Charger (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_even_more_upgrades"
       ],
@@ -1424,9 +1380,7 @@
       "icon": "enderio:stirling_generator",
       "x": 64,
       "y": 395,
-      "description": [
-        "Original items: Block Simple Stirling Generator (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_bedrock_dust"
       ],
@@ -1501,12 +1455,10 @@
     {
       "id": "ind_compressor",
       "title": "Compressor",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_press",
       "x": 229,
       "y": 125,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_mystical_machine"
       ],
@@ -1536,12 +1488,10 @@
     {
       "id": "ind_money_is_power",
       "title": "Money is Power",
-      "icon": "minecraft:air",
+      "icon": "thermal:dynamo_numismatic",
       "x": 272,
       "y": 187,
-      "description": [
-        "Original items: Dynamo (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_compressor"
       ],
@@ -1660,7 +1610,9 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:gamestage",
+          "stage": "skilled_engineer",
+          "label": "Reach the Skilled Engineer stage"
         }
       ],
       "rewards": [
@@ -1680,9 +1632,7 @@
       "icon": "mekanism:enrichment_chamber",
       "x": 21,
       "y": 291,
-      "description": [
-        "Original items: Oreblock (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_make_progress_in_ender_io_3"
       ],
@@ -1720,9 +1670,7 @@
       "icon": "mekanism:enrichment_chamber",
       "x": 64,
       "y": 291,
-      "description": [
-        "Original items: Machineblock (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_novel_ore",
         "ind_make_progress_in_ender_io_3"
@@ -1896,9 +1844,7 @@
       "icon": "mekanism:teleporter_frame",
       "x": 333,
       "y": 272,
-      "description": [
-        "Original items: Teleporter Frame (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_dust_to_dust"
       ],
@@ -1936,9 +1882,7 @@
       "icon": "mekanism:steel_casing",
       "x": 333,
       "y": 312,
-      "description": [
-        "Original items: Steel Casing (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_dust_to_dust"
       ],
@@ -1976,9 +1920,7 @@
       "icon": "mekanism:electrolytic_separator",
       "x": 376,
       "y": 291,
-      "description": [
-        "Original items: Machineblock2 (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_quest_33bb8983",
         "ind_distillation_controller",
@@ -2018,9 +1960,7 @@
       "icon": "mekanism:electrolytic_separator",
       "x": 376,
       "y": 333,
-      "description": [
-        "Original items: Machineblock2 (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_quadruple_ores"
       ],
@@ -2061,7 +2001,9 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:gamestage",
+          "stage": "skilled_engineer",
+          "label": "Reach the Skilled Engineer stage"
         }
       ],
       "rewards": [
@@ -2280,9 +2222,7 @@
       "icon": "enderio:end_steel_ingot",
       "x": 229,
       "y": 437,
-      "description": [
-        "Original items: End Steel Ingot (enderio)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -2323,9 +2263,7 @@
       "icon": "enderio:ender_crystal",
       "x": 229,
       "y": 395,
-      "description": [
-        "Original items: Ender Crystal (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_better_machines_b_2",
         "ind_soul_metal",
@@ -2375,9 +2313,7 @@
       "icon": "enderio:soul_binder",
       "x": 272,
       "y": 437,
-      "description": [
-        "Original items: Block Soul Binder (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_soul_injection"
       ],
@@ -2412,12 +2348,10 @@
     {
       "id": "ind_warmth_of_earth",
       "title": "Warmth of Earth",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_crucible",
       "x": 333,
       "y": 187,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -2448,9 +2382,7 @@
       "icon": "thermal:nickel_ore",
       "x": 272,
       "y": 333,
-      "description": [
-        "Original items: Nickel Ore (thermal)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_even_more_upgrades"
       ],
@@ -2610,12 +2542,10 @@
     {
       "id": "ind_direct_energy",
       "title": "Direct Energy",
-      "icon": "thermalexpansion:dynamo",
+      "icon": "thermal:dynamo_disenchantment",
       "x": 224,
       "y": 176,
-      "description": [
-        "Original items: Dynamo (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_infused_with_energy"
       ],
@@ -2688,9 +2618,7 @@
       "icon": "cyclic:harvester",
       "x": 603,
       "y": 437,
-      "description": [
-        "Original items: Harvester Block (cyclicmagic)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -2721,9 +2649,7 @@
       "icon": "mekanism:basic_chemical_tank",
       "x": 168,
       "y": 248,
-      "description": [
-        "Original items: Gastank (mekanism)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -2754,9 +2680,7 @@
       "icon": "mekanism:electrolytic_separator",
       "x": 125,
       "y": 248,
-      "description": [
-        "Original items: Machineblock2 (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_gas_storage",
         "ind_make_progress_in_ender_io_3"
@@ -2790,9 +2714,7 @@
       "icon": "bigreactors:yellorite_ore",
       "x": 603,
       "y": 272,
-      "description": [
-        "Original items: Oreyellorite (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -2828,9 +2750,7 @@
       "icon": "bigreactors:basic_reactorcasing",
       "x": 645,
       "y": 312,
-      "description": [
-        "Original items: Reactorcasing (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_want_some_nukes",
         "ind_gigantic_pencil_core",
@@ -2870,9 +2790,7 @@
       "icon": "bigreactors:basic_reactorcontrolrod",
       "x": 707,
       "y": 333,
-      "description": [
-        "Original items: Reactorcontrolrod (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_reactor_casing"
       ],
@@ -2950,9 +2868,7 @@
       "icon": "cyclic:inventory_cake",
       "x": 645,
       "y": 437,
-      "description": [
-        "Original items: Inventory Food (cyclicmagic)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -3023,9 +2939,7 @@
       "icon": "mekanism:electrolytic_separator",
       "x": 64,
       "y": 333,
-      "description": [
-        "Original items: Machineblock2 (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_easy_as_it_seems"
       ],
@@ -3058,9 +2972,7 @@
       "icon": "mekanism:enrichment_chamber",
       "x": 437,
       "y": 333,
-      "description": [
-        "Original items: Machineblock (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_chemical_dissolving"
       ],
@@ -3141,7 +3053,9 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:checkmark"
+          "type": "soa_additions:gamestage",
+          "stage": "master_engineer",
+          "label": "Reach the Master Engineer stage"
         }
       ],
       "rewards": [
@@ -3246,9 +3160,7 @@
       "icon": "mekanism:electrolytic_separator",
       "x": 125,
       "y": 333,
-      "description": [
-        "Original items: Machineblock2 (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_chemical_oxidation"
       ],
@@ -3281,9 +3193,7 @@
       "icon": "mekanism:electrolytic_separator",
       "x": 168,
       "y": 333,
-      "description": [
-        "Original items: Machineblock2 (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_chemical_infusion"
       ],
@@ -3356,9 +3266,7 @@
       "icon": "globalxp:xp_block",
       "x": 811,
       "y": 40,
-      "description": [
-        "Original items: Block Xp Solidifier (actuallyadditions)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_diamond_but_better"
       ],
@@ -3393,7 +3301,7 @@
     {
       "id": "ind_quest_5ead9b7e",
       "title": "Machine",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_furnace",
       "x": 376,
       "y": 187,
       "description": [
@@ -3506,12 +3414,10 @@
     {
       "id": "ind_compressed_energy",
       "title": "Compressed Energy",
-      "icon": "thermalexpansion:dynamo",
+      "icon": "thermal:dynamo_compression",
       "x": 96,
       "y": 160,
-      "description": [
-        "Original items: Dynamo (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_infinite_water"
       ],
@@ -3546,12 +3452,10 @@
     {
       "id": "ind_organic_infusing",
       "title": "Organic Infusing",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_insolator",
       "x": 437,
       "y": 83,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -3617,9 +3521,7 @@
       "icon": "bigreactors:basic_reactorfuelrod",
       "x": 728,
       "y": 312,
-      "description": [
-        "Original items: Reactorfuelrod (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_reactor_casing"
       ],
@@ -3732,9 +3634,7 @@
       "icon": "mekanism:basic_chemical_tank",
       "x": 229,
       "y": 248,
-      "description": [
-        "Original items: Gastank (mekanism)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_gas_storage"
       ],
@@ -3807,9 +3707,7 @@
       "icon": "soa_additions:flux_crystal",
       "x": 272,
       "y": 83,
-      "description": [
-        "Original items: Flux Ingot (redstonearsenal)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -3845,9 +3743,7 @@
       "icon": "fluxnetworks:flux_plug",
       "x": 480,
       "y": 83,
-      "description": [
-        "Original items: Energy Duct (thermaldynamics)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -3880,12 +3776,10 @@
     {
       "id": "ind_centrifuge",
       "title": "Centrifuge",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_centrifuge",
       "x": 376,
       "y": 83,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -3916,9 +3810,7 @@
       "icon": "mekanismgenerators:solar_generator",
       "x": 272,
       "y": 248,
-      "description": [
-        "Original items: Generator (mekanismgenerators)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_dust_to_dust"
       ],
@@ -3948,12 +3840,10 @@
     {
       "id": "ind_manufacturing",
       "title": "Manufacturing",
-      "icon": "thermalexpansion:machine",
+      "icon": "create:mechanical_crafter",
       "x": 376,
       "y": 125,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -3984,9 +3874,7 @@
       "icon": "enderio:loot_capacitor",
       "x": 333,
       "y": 480,
-      "description": [
-        "Original items: Item Capacitor Totemic (enderio)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -4022,9 +3910,7 @@
       "icon": "bigreactors:basic_reactorcontroller",
       "x": 707,
       "y": 272,
-      "description": [
-        "Original items: Reactorcontroller (bigreactors)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_reactor_casing"
       ],
@@ -4094,7 +3980,7 @@
     {
       "id": "ind_water_cooling",
       "title": "Water Cooling",
-      "icon": "thermalexpansion:device",
+      "icon": "thermal:fluid_cell",
       "x": 333,
       "y": 83,
       "description": [
@@ -4130,9 +4016,7 @@
       "icon": "cyclic:crafting_bag",
       "x": 707,
       "y": 437,
-      "description": [
-        "Original items: Crafting Food (cyclicmagic)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -4322,9 +4206,7 @@
       "icon": "thermal:lumium_ingot",
       "x": 480,
       "y": 125,
-      "description": [
-        "Original items: Lumium Ingot (thermal)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -4360,9 +4242,7 @@
       "icon": "enderio:vibrant_alloy_ingot",
       "x": 168,
       "y": 437,
-      "description": [
-        "Original items: Vivid Alloy Ingot (enderio)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_better_machines_a"
       ],
@@ -4396,9 +4276,7 @@
       "icon": "thermal:upgrade_augment_3",
       "x": 229,
       "y": 83,
-      "description": [
-        "Original items: Upgrade Augment 3 (thermal)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_industrial_evolution_iii"
       ],
@@ -4476,9 +4354,7 @@
       "icon": "thermal:obsidian_glass",
       "x": 168,
       "y": 104,
-      "description": [
-        "Original items: Obsidian Glass (thermal)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_mystical_machine"
       ],
@@ -4592,12 +4468,10 @@
     {
       "id": "ind_reactor_but_not_nuclear",
       "title": "Reactor But Not Nuclear",
-      "icon": "thermalexpansion:dynamo",
+      "icon": "thermal:dynamo_lapidary",
       "x": 168,
       "y": 187,
-      "description": [
-        "Original items: Dynamo (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_mystical_machine"
       ],
@@ -4628,12 +4502,10 @@
     {
       "id": "ind_geothermal_energy",
       "title": "Geothermal Energy",
-      "icon": "thermalexpansion:dynamo",
+      "icon": "thermal:dynamo_magmatic",
       "x": 125,
       "y": 187,
-      "description": [
-        "Original items: Dynamo (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [
         "ind_mystical_machine"
       ],
@@ -4711,9 +4583,7 @@
       "icon": "thermal:bronze_ingot",
       "x": 333,
       "y": 125,
-      "description": [
-        "Original items: Bronze Ingot (thermal)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {
@@ -4746,12 +4616,10 @@
     {
       "id": "ind_getting_more_wood",
       "title": "Getting More Wood",
-      "icon": "thermalexpansion:machine",
+      "icon": "thermal:machine_sawmill",
       "x": 437,
       "y": 125,
-      "description": [
-        "Original items: Machine (thermalexpansion)"
-      ],
+      "description": [],
       "dependencies": [],
       "tasks": [
         {

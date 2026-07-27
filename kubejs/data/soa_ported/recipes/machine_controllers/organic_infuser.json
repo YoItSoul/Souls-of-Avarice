@@ -1,0 +1,26 @@
+{
+  "_comment": "Organic Infuser controller. Corner/center materials mirror the dominant blocks of the GC Modular Machinery structure (config/modularmachinery/machinery/organic_infuser.json) so the build cost tracks GC; modularium BLOCKS are the controller identity.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mysticalagriculture:inferium_growth_accelerator"
+    },
+    "M": {
+      "item": "soa_additions:modularium_block"
+    },
+    "C": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "pattern": [
+    "AMA",
+    "MCM",
+    "AMA"
+  ],
+  "result": {
+    "item": "custommachinery:custom_machine_item",
+    "nbt": "{machine:\"soa_ported:organic_infuser\"}"
+  },
+  "show_notification": true
+}

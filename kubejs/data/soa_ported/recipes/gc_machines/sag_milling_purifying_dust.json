@@ -1,0 +1,17 @@
+{
+  "type": "enderio:sag_milling",
+  "energy": 600,
+  "input": {
+    "item": "botania:pure_daisy"
+  },
+  "outputs": [
+    {
+      "chance": 1.0,
+      "item": {
+        "count": 8,
+        "item": "soa_additions:purifying_dust"
+      },
+      "optional": false
+    }
+  ]
+}

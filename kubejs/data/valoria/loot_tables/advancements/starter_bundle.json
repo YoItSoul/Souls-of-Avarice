@@ -1,0 +1,15 @@
+{
+  "__comment": "Pack override of Valoria's first-tick advancement reward: the codex pool is removed because SOA ships the codex pre-loaded in the Omnipedia (soa_omnipedia.js). The starter bundle itself is kept.",
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "valoria:starter_bundle"
+        }
+      ]
+    }
+  ]
+}

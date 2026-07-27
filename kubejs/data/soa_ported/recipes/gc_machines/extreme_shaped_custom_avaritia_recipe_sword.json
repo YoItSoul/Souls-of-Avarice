@@ -1,0 +1,34 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "       AA",
+    "      ABA",
+    "     ABA ",
+    "    ABA  ",
+    " C ABA   ",
+    "  CAA    ",
+    "  DC     ",
+    " D  C    ",
+    "E        "
+  ],
+  "key": {
+    "A": {
+      "item": "avaritia:infinity_ingot"
+    },
+    "B": {
+      "item": "avaritia:infinity_catalyst"
+    },
+    "C": {
+      "item": "tconevo:chaotic_ingot"
+    },
+    "D": {
+      "item": "avaritia:neutron_ingot"
+    },
+    "E": {
+      "item": "soa_additions:creative_soul"
+    }
+  },
+  "result": {
+    "item": "avaritia:infinity_sword"
+  }
+}

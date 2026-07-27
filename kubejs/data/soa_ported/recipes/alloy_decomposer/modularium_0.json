@@ -1,12 +1,12 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:alloy_decomposer",
   "time": 30,
   "requirements": [
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "soa_additions:molten_modularium",
+      "fluid": "smithery:molten_modularium",
       "amount": 288,
       "tank": "input"
     },
@@ -18,7 +18,7 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "enderio:conductive_iron",
+      "fluid": "smithery:molten_conductive_iron",
       "amount": 144,
       "tank": "out1"
     },
@@ -32,33 +32,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

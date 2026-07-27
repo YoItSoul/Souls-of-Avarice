@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "_comment": "AbyssalCraft coralium has no 1.20 ingot; abyssal_ingot is the established port stand-in.",
+  "values": [
+    "soa_additions:abyssal_ingot"
+  ]
+}

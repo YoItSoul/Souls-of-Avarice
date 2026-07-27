@@ -1,0 +1,16 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "tag": "forge:stone"
+    },
+    {
+      "item": "soa_additions:rainbow_rune"
+    }
+  ],
+  "mana": 50,
+  "output": {
+    "count": 32,
+    "item": "twilightforest:aurora_block"
+  }
+}

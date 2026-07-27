@@ -1,0 +1,26 @@
+{
+  "_comment": "Exp Power Generator controller. Corner/center materials mirror the dominant blocks of the GC Modular Machinery structure (config/modularmachinery/machinery/exp_power_generator.json) so the build cost tracks GC; modularium BLOCKS are the controller identity.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "soa_additions:experience_block"
+    },
+    "M": {
+      "item": "soa_additions:modularium_block"
+    },
+    "C": {
+      "item": "soa_additions:compressed_experience_block"
+    }
+  },
+  "pattern": [
+    "AMA",
+    "MCM",
+    "AMA"
+  ],
+  "result": {
+    "item": "custommachinery:custom_machine_item",
+    "nbt": "{machine:\"soa_ported:exp_power_generator\"}"
+  },
+  "show_notification": true
+}

@@ -1,12 +1,12 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:liquid_converter",
   "time": 5,
   "requirements": [
     {
       "type": "custommachinery:fluid",
       "mode": "input",
-      "fluid": "forestry:honey",
+      "fluid": "cofh_core:honey",
       "amount": 100,
       "tank": "in"
     },
@@ -18,40 +18,13 @@
     {
       "type": "custommachinery:fluid",
       "mode": "output",
-      "fluid": "forge:honey",
+      "fluid": "cofh_core:honey",
       "amount": 100,
       "tank": "out"
     },
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

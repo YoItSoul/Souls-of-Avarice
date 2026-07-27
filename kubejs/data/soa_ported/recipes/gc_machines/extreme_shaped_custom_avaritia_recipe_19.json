@@ -1,0 +1,22 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "AAAAAAAA ",
+    "         "
+  ],
+  "key": {
+    "A": {
+      "item": "avaritia:infinity"
+    }
+  },
+  "result": {
+    "item": "soa_additions:infinity_block_block"
+  }
+}

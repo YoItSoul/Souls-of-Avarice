@@ -1,0 +1,31 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "AAAAAAAAA",
+    "ABBBBBBBA",
+    "ABBBBBBBA",
+    "ABBBBBBBA",
+    "AAAACAAAA",
+    "ADDDDDDDA",
+    "ADDDDDDDA",
+    "ADDDDDDDA",
+    "AAAAAAAAA"
+  ],
+  "key": {
+    "A": {
+      "item": "soa_additions:creative_soul"
+    },
+    "B": {
+      "item": "storagedrawers:emerald_storage_upgrade"
+    },
+    "C": {
+      "item": "soa_additions:infinity_block_block"
+    },
+    "D": {
+      "item": "storagedrawers:creative_storage_upgrade"
+    }
+  },
+  "result": {
+    "item": "storagedrawers:creative_vending_upgrade"
+  }
+}

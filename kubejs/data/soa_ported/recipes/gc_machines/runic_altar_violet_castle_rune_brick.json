@@ -1,0 +1,10 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    { "tag": "minecraft:stone_bricks" },
+    { "item": "soa_additions:rainbow_rune" },
+    { "tag": "forge:dyes/purple" }
+  ],
+  "mana": 50,
+  "output": { "count": 32, "item": "twilightforest:violet_castle_rune_brick" }
+}

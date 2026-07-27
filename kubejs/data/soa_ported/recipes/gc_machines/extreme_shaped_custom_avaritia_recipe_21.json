@@ -1,0 +1,28 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    " AA   BB ",
+    "AAAA BBBB",
+    "AAAACBBBB",
+    "AAAACBBBB",
+    " AAACBBB ",
+    "  AACBB  ",
+    "   ACB   ",
+    "    C    ",
+    "         "
+  ],
+  "key": {
+    "A": {
+      "item": "scalinghealth:enchanted_heart"
+    },
+    "B": {
+      "item": "scalinghealth:cursed_heart"
+    },
+    "C": {
+      "item": "soa_additions:creative_shard"
+    }
+  },
+  "result": {
+    "item": "soa_additions:difficulty_changer"
+  }
+}

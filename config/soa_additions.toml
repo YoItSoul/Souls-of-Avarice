@@ -39,7 +39,7 @@
 		#"127.0.0.1" (default) keeps the overlay private to this machine.
 		#To view it from a phone/tablet, deliberately expose it on your network by
 		#setting this to your LAN IP (or "0.0.0.0" for all interfaces).
-		bindAddress = "0.0.0.0"
+		bindAddress = "127.0.0.1"
 
 	[soa_additions.telemetry]
 		#DEVELOPMENT-PHASE telemetry, used only to troubleshoot and optimize the pack per
@@ -65,7 +65,7 @@
 		#profile is uploaded to spark's public sharing service, so this is OFF by
 		#default — enable it only if you're happy with that (still requires telemetry
 		#consent). Default: false.
-		autoSparkProfile = true
+		autoSparkProfile = false
 		#How often (in minutes) to send an 'is playing' heartbeat while in a world.
 		#Each heartbeat upserts the player's row with is_playing=true, the current
 		#dimension, fresh heap stats, and a last_active_at timestamp. The dashboard

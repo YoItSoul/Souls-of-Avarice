@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "P": {
+      "item": "mekanismgenerators:solar_panel"
+    },
+    "A": {
+      "item": "mekanism:alloy_infused"
+    }
+  },
+  "result": {
+    "item": "mekanismgenerators:solar_generator"
+  }
+}

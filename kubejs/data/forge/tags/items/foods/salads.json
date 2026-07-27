@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "createfood:mixed_salad_beetroot_carrot",
+    "createfood:mixed_salad_beetroot_carrot_bowl_block",
+    "farmersdelight:fruit_salad",
+    "farmersdelight:gleaming_salad",
+    "farmersdelight:gleaming_salad_block",
+    "farmersdelight:mixed_salad",
+    "farmersdelight:nether_salad",
+    "oceansdelight:seagrass_salad",
+    "twilightdelight:ghast_brain_salad",
+    "unusual_delight:cyan_salad",
+    "unusual_delight:scarlet_salad",
+    "unusual_delight:sprout_salad",
+    "unusual_delight:tricolor_salad"
+  ]
+}

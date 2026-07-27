@@ -8,7 +8,7 @@
   ],
   "key": {
     "p": { "tag": "forge:ender_pearls" },
-    "d": { "tag": "forge:ingots/dura_steel" },
+    "d": { "tag": "forge:ingots/durasteel" },
     "D": { "tag": "forge:ingots/dreadium" },
     "n": { "item": "minecraft:nether_star" }
   },

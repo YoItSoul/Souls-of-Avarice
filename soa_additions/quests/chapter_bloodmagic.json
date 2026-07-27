@@ -53,9 +53,7 @@
       "shape": "square",
       "x": 64,
       "y": 64,
-      "description": [
-        "Original items: Soulsnare (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_bloodmagic_qualification"
       ],
@@ -93,9 +91,7 @@
       "icon": "bloodmagic:basemonstersoul",
       "x": 112,
       "y": 48,
-      "description": [
-        "Original items: Basemonstersoul (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_soul_hunter"
       ],
@@ -129,9 +125,7 @@
       "shape": "square",
       "x": 160,
       "y": 32,
-      "description": [
-        "Original items: Soulforge (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_soul_stealer"
       ],
@@ -164,9 +158,7 @@
       "icon": "bloodmagic:soulgempetty",
       "x": 208,
       "y": 16,
-      "description": [
-        "Original items: Soulgempetty (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_tinkering_with_soul"
       ],
@@ -279,9 +271,7 @@
       "icon": "bloodmagic:soulgemgreater",
       "x": 352,
       "y": 32,
-      "description": [
-        "Original items: Soulgemgreater (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_soul_reaper"
       ],
@@ -319,9 +309,7 @@
       "icon": "bloodmagic:arcaneashes",
       "x": 208,
       "y": 48,
-      "description": [
-        "Original items: Arcaneashes (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_tinkering_with_soul"
       ],
@@ -360,9 +348,7 @@
       "shape": "square",
       "x": 112,
       "y": 80,
-      "description": [
-        "Original items: Altar (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_soul_hunter"
       ],
@@ -395,9 +381,7 @@
       "icon": "bloodmagic:blankslate",
       "x": 160,
       "y": 96,
-      "description": [
-        "Original items: Blankslate (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_blood_altar"
       ],
@@ -435,9 +419,7 @@
       "icon": "bloodmagic:blankrune",
       "x": 208,
       "y": 112,
-      "description": [
-        "Original items: Blankrune (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_mystic_stone_tablet"
       ],
@@ -655,9 +637,7 @@
       "icon": "bloodarsenal:blood_diamond_infused",
       "x": 400,
       "y": 48,
-      "description": [
-        "Original items: Blood Diamond (bloodarsenal)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_gilded_stone_tablet"
       ],
@@ -695,9 +675,7 @@
       "icon": "soa_additions:crimsonite_ingot",
       "x": 448,
       "y": 64,
-      "description": [
-        "Original items: Crimsonite Ingot (additions)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_gilded_stone_tablet",
         "blo_dance_of_life"
@@ -740,9 +718,7 @@
       "icon": "bloodmagic:sacrificialdagger",
       "x": 160,
       "y": 64,
-      "description": [
-        "Original items: Sacrificialdagger (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_blood_altar"
       ],
@@ -760,7 +736,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:bacon",
+          "item": "farmersdelight:bacon",
           "count": 10
         },
         {
@@ -821,9 +797,7 @@
       "shape": "square",
       "x": 256,
       "y": 64,
-      "description": [
-        "Original items: Base Item (bloodarsenal)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_blood_infused_wood"
       ],
@@ -858,19 +832,17 @@
     {
       "id": "blo_telepathy",
       "title": "Telepathy",
-      "icon": "soa_additions:bound_metal_ingot",
+      "icon": "tconevo:bound_metal_ingot",
       "x": 256,
       "y": 32,
-      "description": [
-        "Original items: Blood Metal (tconevo)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_soul_stone"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:sentient_metal_ingot",
+          "item": "tconevo:sentient_metal_ingot",
           "count": 1
         }
       ],
@@ -885,7 +857,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:sentient_metal_ingot",
+          "item": "tconevo:sentient_metal_ingot",
           "count": 4
         }
       ],
@@ -898,13 +870,11 @@
     {
       "id": "blo_soul_bound",
       "title": "Soul Bound",
-      "icon": "soa_additions:sentient_metal_ingot",
+      "icon": "tconevo:sentient_metal_ingot",
       "shape": "rhombus",
       "x": 304,
       "y": 48,
-      "description": [
-        "Original items: Sentient Metal (tconevo)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_forged_with_blood",
         "blo_telepathy"
@@ -912,7 +882,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:bound_metal_ingot",
+          "item": "tconevo:bound_metal_ingot",
           "count": 1
         }
       ],
@@ -932,7 +902,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:bound_metal_ingot",
+          "item": "tconevo:bound_metal_ingot",
           "count": 3
         }
       ],
@@ -948,9 +918,7 @@
       "icon": "bloodmagic:teleposerfocus",
       "x": 304,
       "y": 80,
-      "description": [
-        "Original items: Teleposerfocus (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_deluxe_stone_tablet"
       ],
@@ -988,9 +956,7 @@
       "icon": "bloodmagic:divinationsigil",
       "x": 256,
       "y": 96,
-      "description": [
-        "Original items: Divinationsigil (bloodmagic)"
-      ],
+      "description": [],
       "dependencies": [
         "blo_upgrade_altar"
       ],

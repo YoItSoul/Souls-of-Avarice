@@ -1,0 +1,596 @@
+{
+  "id": "chapter_forestry",
+  "title": "Forestry",
+  "icon": "forestry:bee_house",
+  "sort_order": 75,
+  "description": [
+    "Bees, farms, and forestry machines. Ported from GreedyCraft's Forestry chapter."
+  ],
+  "modes": [
+    "casual",
+    "adventure",
+    "expert"
+  ],
+  "requires_chapter": [],
+  "requires_quests": [],
+  "visibility": "always",
+  "parent_chapter": "chapter_mnvzp16p",
+  "quests": [
+    {
+      "id": "for_quest_013d4cfc",
+      "title": "Squeezer",
+      "icon": "forestry:squeezer",
+      "x": 96,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:squeezer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_2034cbe8",
+      "title": "Fabricator",
+      "icon": "forestry:fabricator",
+      "x": 144,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:fabricator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_25e23512",
+      "title": "Bee Analyzer",
+      "icon": "forestry:portable_alyzer",
+      "x": 96,
+      "y": 154,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_86ab9dab"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:portable_alyzer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:analyzer",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 200
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_2a2e5f4d",
+      "title": "Home Seeker",
+      "icon": "forestry:habitat_locator",
+      "x": 48,
+      "y": 154,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_48fc4e8c"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:habitat_locator",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_322f3076",
+      "title": "My Little Multiblock Farm",
+      "icon": "forestry:farm_plain_brick",
+      "x": 144,
+      "y": 106,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_2034cbe8"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:farm_plain_brick",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_3b00df73",
+      "title": "Distillatior",
+      "icon": "forestry:still",
+      "x": 0,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:still",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_48fc4e8c",
+      "title": "Home Sweet Home",
+      "icon": "forestry:bee_house",
+      "x": 48,
+      "y": 106,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_5f88aa7f"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:bee_house",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_4fbc9995",
+      "title": "Carpenter",
+      "icon": "forestry:carpenter",
+      "x": 48,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:carpenter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_5f88aa7f",
+      "title": "Bee Hunter",
+      "icon": "forestry:scoop",
+      "x": 0,
+      "y": 106,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:scoop",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:smoker",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 50
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_8565f093",
+      "title": "Centrifuge, Our Old Friend",
+      "icon": "forestry:centrifuge",
+      "x": 288,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:centrifuge",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_86ab9dab",
+      "title": "Deluxe Bee House",
+      "icon": "forestry:apiary",
+      "x": 96,
+      "y": 106,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_48fc4e8c",
+        "for_quest_4fbc9995",
+        "for_quest_013d4cfc"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:apiary",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_8e56d48a",
+      "title": "Bottleneck",
+      "icon": "forestry:bottler",
+      "x": 336,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:bottler",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_975d6f63",
+      "title": "Moistener",
+      "icon": "forestry:moistener",
+      "x": 240,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:moistener",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_99f6417a",
+      "title": "Agricultural Basics",
+      "icon": "forestry:sturdy_machine",
+      "x": 192,
+      "y": 0,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:sturdy_machine",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_bff9d296",
+      "title": "Core of Farm",
+      "icon": "forestry:farm_gearbox_brick",
+      "x": 144,
+      "y": 154,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_322f3076"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:farm_gearbox_brick",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_fb7d745d",
+      "title": "Well Fermented",
+      "icon": "forestry:fermenter",
+      "x": 384,
+      "y": 58,
+      "description": [
+        "Obtain the required item(s)"
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:fermenter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    }
+  ]
+}

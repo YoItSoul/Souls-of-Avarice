@@ -1,0 +1,19 @@
+{
+  "type": "botania:elven_trade",
+  "ingredients": [
+    {
+      "tag": "forge:slimeballs/blood"
+    },
+    {
+      "tag": "forge:gems/emerald"
+    },
+    {
+      "tag": "forge:gems/emerald"
+    }
+  ],
+  "output": [
+    {
+      "item": "defiledlands:scarlite"
+    }
+  ]
+}

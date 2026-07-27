@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "soa_additions:delivery_order",
+    "soa_additions:medkit_big",
+    "soa_additions:sunny_doll",
+    "enderio:dark_steel_sword",
+    "enderio:conduit_probe",
+    "enderio:double_layer_capacitor",
+    "artifacts:obsidian_skull",
+    "artifacts:lucky_scarf",
+    "artifacts:crystal_heart",
+    "artifacts:flame_pendant",
+    "artifacts:shock_pendant",
+    "artifacts:thorn_pendant",
+    "artifacts:cross_necklace",
+    "artifacts:panic_necklace",
+    "artifacts:scarf_of_invisibility",
+    "artifacts:umbrella",
+    "artifacts:whoopee_cushion",
+    "botania:overgrowth_seed",
+    "cyclic:evoker_fang",
+    "cyclic:glove_climb",
+    "aquaculture:neptunium_fishing_rod"
+  ]
+}

@@ -60,8 +60,20 @@ PlayerEvents.loggedIn(event => {
     const player = event.player
     if (!player || player.level.isClientSide()) return
 
+    // Source of truth is the per-world Java PackModeData (players pick the
+    // mode per world; quests can lock it) — NOT the static global from
+    // _packmode.js, which is a build-time recipe switch. Reading the global
+    // here caused false "packmode changed" splashes on every join in any
+    // world whose mode differs from the global (e.g. expert worlds while the
+    // global says adventure): the handler stripped the world's real mode
+    // stage, Java re-granted it, and the next login "changed" it again.
     let mode = 'adventure'
-    try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* */ }
+    try {
+        const $PackModeData = Java.loadClass('com.soul.soa_additions.quest.PackModeData')
+        mode = String($PackModeData.get(player.server).mode().lower())
+    } catch (e) {
+        try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e2) { /* */ }
+    }
     if (!MODE_LABEL[mode]) mode = 'adventure'
 
     // (1) Stage reconciliation — strip non-matching mode stages, ensure the

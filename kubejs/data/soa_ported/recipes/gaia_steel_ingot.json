@@ -1,0 +1,21 @@
+{
+  "type": "botania:terra_plate",
+  "ingredients": [
+    {
+      "item": "defiledlands:remorseful_gem"
+    },
+    {
+      "item": "botania:gaia_ingot"
+    },
+    {
+      "item": "botania:dragonstone"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "mana": 1000000,
+  "result": {
+    "item": "soa_additions:gaia_steel_ingot"
+  }
+}

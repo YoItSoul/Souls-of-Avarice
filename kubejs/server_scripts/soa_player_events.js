@@ -114,6 +114,16 @@ PlayerEvents.loggedIn(event => {
             for (var si = 0; si < ALL_STAGES.length; si++) GameStageHelper.addStage(player, ALL_STAGES[si])
             player.tell(Component.translatable('greedycraft.event.creative_stage_unlocked'))
         }
+
+        // GC parity: server-wide red "Executor joined the game!" banner for
+        // every truehero login (GC onPlayerLoggedIn.zs "Patreon join
+        // notification" block — fired for truehero independent of the
+        // personal true_hero.join message above; donor prefix omitted).
+        if (isTrueHero) {
+            player.server.tell(Component.translatable('greedycraft.event.executor.welcome.0')
+                .append(Component.literal(' ' + player.username))
+                .append(Component.translatable('greedycraft.event.executor.welcome.1')))
+        }
     }
 
     // -- Welcome quote broadcast (random tip from soa_quote_pools.js) --
@@ -127,8 +137,9 @@ PlayerEvents.loggedIn(event => {
 
     // -- First-join one-time message --
     if (GameStageHelper && !GameStageHelper.hasStage(player, 'first_join_message_shown')) {
-        // GC ran /sendfirstjoinmessage; we just translation-key broadcast.
-        player.tell(Component.translatable('greedycraft.event.first_join.message').gold())
+        // GC ran /sendfirstjoinmessage → greetingMessage (welcome_quotes.zs), with
+        // %PLAYERNAME% substitution — here the lang key takes the name as %s arg.
+        player.tell(Component.translatable('greedycraft.event.first_join.message', player.name))
         GameStageHelper.addStage(player, 'first_join_message_shown')
     } else {
         // -- Per-season greeting (only on subsequent logins) --

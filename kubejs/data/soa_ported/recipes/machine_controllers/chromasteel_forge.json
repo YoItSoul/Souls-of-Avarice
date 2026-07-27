@@ -1,0 +1,26 @@
+{
+  "_comment": "Chromasteel Forge controller. Corner/center materials mirror the dominant blocks of the GC Modular Machinery structure (config/modularmachinery/machinery/chromasteel_forge.json) so the build cost tracks GC; modularium BLOCKS are the controller identity.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "soa_additions:aeonsteel_block"
+    },
+    "M": {
+      "item": "soa_additions:modularium_block"
+    },
+    "C": {
+      "item": "draconicevolution:draconium_block"
+    }
+  },
+  "pattern": [
+    "AMA",
+    "MCM",
+    "AMA"
+  ],
+  "result": {
+    "item": "custommachinery:custom_machine_item",
+    "nbt": "{machine:\"soa_ported:chromasteel_forge\"}"
+  },
+  "show_notification": true
+}

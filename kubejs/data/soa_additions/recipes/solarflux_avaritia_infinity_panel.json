@@ -1,0 +1,31 @@
+{
+  "__comment": "Second half of SFR's broken AvaritiaCompat (see solarflux_avaritia_neutronium_panel.json). 's' was ItemStack(NEUTRONIUM_STORAGE_BLOCK) -> Re-Avaritia 'avaritia:neutron' (Neutronium Block); 'F' was getGeneratingSolars(neutronium panel) -> the panel item itself.",
+  "type": "avaritia:shaped_table",
+  "category": "misc",
+  "key": {
+    "n": { "item": "avaritia:neutron_ingot" },
+    "c": { "item": "avaritia:crystal_matrix_ingot" },
+    "g": { "item": "avaritia:neutron_nugget" },
+    "p": { "item": "avaritia:neutron_pile" },
+    "i": { "item": "avaritia:infinity_ingot" },
+    "F": { "item": "solarflux:sp_avaritia.neutronium" },
+    "s": { "item": "avaritia:neutron" }
+  },
+  "pattern": [
+    "  nn nn  ",
+    " nccsccn ",
+    "nc  g  cn",
+    "nc pip cn",
+    " sgiFigs ",
+    "nc pip cn",
+    "nc  g  cn",
+    " nccsccn ",
+    "  nn nn  "
+  ],
+  "result": {
+    "item": "solarflux:sp_avaritia.infinity",
+    "count": 3
+  },
+  "show_notification": true,
+  "tier": 4
+}

@@ -836,17 +836,6 @@
         "value": 1
       }
     },
-    "cataclysm:charge_time": {
-      "enabled": false,
-      "min": {
-        "default": -100,
-        "value": -100
-      },
-      "max": {
-        "default": 512,
-        "value": 512
-      }
-    },
     "ars_nouveau:ars_nouveau.perk.max_mana": {
       "enabled": false,
       "min": {
@@ -856,6 +845,17 @@
       "max": {
         "default": 10000,
         "value": 10000
+      }
+    },
+    "cataclysm:charge_time": {
+      "enabled": false,
+      "min": {
+        "default": -100,
+        "value": -100
+      },
+      "max": {
+        "default": 512,
+        "value": 512
       }
     },
     "tconstruct:player.experience_multiplier": {
@@ -1001,17 +1001,6 @@
         "value": 1
       }
     },
-    "cataclysm:nature_heal": {
-      "enabled": false,
-      "min": {
-        "default": -256,
-        "value": -256
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "lodestone:magic_damage": {
       "enabled": false,
       "min": {
@@ -1021,6 +1010,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "cataclysm:nature_heal": {
+      "enabled": false,
+      "min": {
+        "default": -256,
+        "value": -256
+      },
+      "max": {
+        "default": 1024,
+        "value": 1024
       }
     },
     "valoria:nature_resistance": {

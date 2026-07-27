@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [],
+  "remove": [
+    "mekanism:osmium_ore",
+    "mekanism:deepslate_osmium_ore",
+    "bno:nether_osmium_ore"
+  ]
+}

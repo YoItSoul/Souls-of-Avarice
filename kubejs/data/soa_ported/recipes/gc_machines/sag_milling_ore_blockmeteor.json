@@ -1,0 +1,17 @@
+{
+  "type": "enderio:sag_milling",
+  "energy": 5400,
+  "input": {
+    "tag": "forge:storage_blocks/meteor"
+  },
+  "outputs": [
+    {
+      "chance": 1.0,
+      "item": {
+        "item": "nyx:meteor_dust",
+        "count": 9
+      },
+      "optional": false
+    }
+  ]
+}

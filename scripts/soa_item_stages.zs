@@ -67,31 +67,31 @@ ItemStages.restrict(<tag:items:forge:storage_blocks/chromasteel>, "awakened");
 // OMIT_MOD (mod missing: openmodularturrets): ItemStages.restrict(<item:openmodularturrets:turret_base>, "awakened");
 
 // === challenger_a ===
-// EMPTY_TAG (empty tag: forge:seeds/tier_1): ItemStages.restrict(<tag:items:forge:seeds/tier_1>, "challenger_a");
+// EMPTY_TAG (empty tag: forge:seeds/tier1): ItemStages.restrict(<tag:items:forge:seeds/tier1>, "challenger_a");
 ItemStages.restrict(<tag:items:forge:essences/inferium>, "challenger_a");
 ItemStages.restrict(<tag:items:forge:ingots/inferium>, "challenger_a");
 ItemStages.restrict(<item:tinymobfarm:stone_farm>, "challenger_a");
 
 // === challenger_b ===
-// EMPTY_TAG (empty tag: forge:seeds/tier_2): ItemStages.restrict(<tag:items:forge:seeds/tier_2>, "challenger_b");
+// EMPTY_TAG (empty tag: forge:seeds/tier2): ItemStages.restrict(<tag:items:forge:seeds/tier2>, "challenger_b");
 ItemStages.restrict(<tag:items:forge:essences/prudentium>, "challenger_b");
 ItemStages.restrict(<tag:items:forge:ingots/prudentium>, "challenger_b");
 ItemStages.restrict(<item:tinymobfarm:iron_farm>, "challenger_b");
 
 // === challenger_c ===
-// EMPTY_TAG (empty tag: forge:seeds/tier_3): ItemStages.restrict(<tag:items:forge:seeds/tier_3>, "challenger_c");
+// EMPTY_TAG (empty tag: forge:seeds/tier3): ItemStages.restrict(<tag:items:forge:seeds/tier3>, "challenger_c");
 ItemStages.restrict(<tag:items:forge:essences/intermedium>, "challenger_c");
 ItemStages.restrict(<tag:items:forge:ingots/intermedium>, "challenger_c");
 ItemStages.restrict(<item:tinymobfarm:gold_farm>, "challenger_c");
 
 // === challenger_d ===
-// EMPTY_TAG (empty tag: forge:seeds/tier_4): ItemStages.restrict(<tag:items:forge:seeds/tier_4>, "challenger_d");
+// EMPTY_TAG (empty tag: forge:seeds/tier4): ItemStages.restrict(<tag:items:forge:seeds/tier4>, "challenger_d");
 ItemStages.restrict(<tag:items:forge:essences/superium>, "challenger_d");
 ItemStages.restrict(<tag:items:forge:ingots/superium>, "challenger_d");
 ItemStages.restrict(<item:tinymobfarm:diamond_farm>, "challenger_d");
 
 // === challenger_e ===
-// EMPTY_TAG (empty tag: forge:seeds/tier_5): ItemStages.restrict(<tag:items:forge:seeds/tier_5>, "challenger_e");
+// EMPTY_TAG (empty tag: forge:seeds/tier5): ItemStages.restrict(<tag:items:forge:seeds/tier5>, "challenger_e");
 ItemStages.restrict(<tag:items:forge:essences/supremium>, "challenger_e");
 ItemStages.restrict(<tag:items:forge:ingots/supremium>, "challenger_e");
 ItemStages.restrict(<item:tinymobfarm:emerald_farm>, "challenger_e");
@@ -102,7 +102,7 @@ ItemStages.restrict(<tag:items:forge:ingots/insanium>, "challenger_f");
 ItemStages.restrict(<item:tinymobfarm:inferno_farm>, "challenger_f");
 
 // === challenger_g ===
-// EMPTY_TAG (empty tag: forge:seeds/tier_6): ItemStages.restrict(<tag:items:forge:seeds/tier_6>, "challenger_g");
+// EMPTY_TAG (empty tag: forge:seeds/tier6): ItemStages.restrict(<tag:items:forge:seeds/tier6>, "challenger_g");
 ItemStages.restrict(<item:tinymobfarm:ultimate_farm>, "challenger_g");
 
 // === chaotic ===
@@ -142,8 +142,8 @@ ItemStages.restrict(<item:minecraft:end_rod>, "ender_charm");
 ItemStages.restrict(<item:minecraft:end_stone_bricks>, "ender_charm");
 ItemStages.restrict(<item:minecraft:end_portal_frame>, "ender_charm");
 ItemStages.restrict(<item:prefab:item_ender_gateway>, "ender_charm");
-// EMPTY_TAG (empty tag: forge:endstone): ItemStages.restrict(<tag:items:forge:endstone>, "ender_charm");
-// EMPTY_TAG (empty tag: forge:crop_chorusfruit): ItemStages.restrict(<tag:items:forge:crop_chorusfruit>, "ender_charm");
+// EMPTY_TAG (empty tag: forge:end_stones): ItemStages.restrict(<tag:items:forge:end_stones>, "ender_charm");
+// EMPTY_TAG (empty tag: forge:chorus_fruit): ItemStages.restrict(<tag:items:forge:chorus_fruit>, "ender_charm");
 ItemStages.restrict(<item:rehooked:ender_hook>, "ender_charm");
 
 // === expert ===
@@ -262,7 +262,17 @@ ItemStages.restrict(<item:meetyourfight:devils_ante>, "wither_slayer"); // Dame 
 ItemStages.restrict(<item:meetyourfight:wilted_ideals>, "hardmode");    // Rosalyne
 ItemStages.restrict(<item:meetyourfight:dusk_key>, "hardmode");         // Rosalyne (dusk chamber)
 // BOMD Night Lich summon item.
-ItemStages.restrict(<item:bosses_of_mass_destruction:soul_star>, "wither_slayer");
+// OMIT_MOD (mod missing: bosses_of_mass_destruction): ItemStages.restrict(<item:bosses_of_mass_destruction:soul_star>, "wither_slayer");
+// Defiled Lands (mod re-added 2026-07-27) — GC gamestages/items.zs gates all
+// of these to "nether" (idol_sorrow, ingotRavaging, calling_stone,
+// essenceDestroyer/Mourner, gemRemorseful).
+ItemStages.restrict(<item:defiledlands:idol_sorrow>, "nether");
+ItemStages.restrict(<item:defiledlands:calling_stone>, "nether");
+ItemStages.restrict(<item:defiledlands:ravaging_ingot>, "nether");
+ItemStages.restrict(<item:soa_additions:ravaging_ingot>, "nether");   // SOA analog kept during DL absence
+ItemStages.restrict(<item:defiledlands:essence_destroyer>, "nether");
+ItemStages.restrict(<item:defiledlands:essence_mourner>, "nether");
+ItemStages.restrict(<item:defiledlands:remorseful_gem>, "nether");
 // Firron ritual token — post-dragon like all altar summons (user decision;
 // altar itself is fusion_matrix, this keeps the catalyst craftable a hair
 // earlier so players can prep the fight).
@@ -317,7 +327,7 @@ ItemStages.restrict(<item:soa_additions:terrestrial_artifact>, "hardmode");
 ItemStages.restrict(<tag:items:forge:storage_blocks/ethaxium>, "hardmode");
 ItemStages.restrict(<tag:items:forge:ingots/ethaxium>, "hardmode");
 // EMPTY_TAG (empty tag: forge:nuggets/ethaxium): ItemStages.restrict(<tag:items:forge:nuggets/ethaxium>, "hardmode");
-// EMPTY_TAG (empty tag: forge:ingots/ethaxium_brick): ItemStages.restrict(<tag:items:forge:ingots/ethaxium_brick>, "hardmode");
+// EMPTY_TAG (empty tag: forge:ingots/ethaxium): ItemStages.restrict(<tag:items:forge:ingots/ethaxium>, "hardmode");
 // EMPTY_TAG (empty tag: forge:gems/ender_biotite): ItemStages.restrict(<tag:items:forge:gems/ender_biotite>, "hardmode");
 // OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:swordkinu>, "hardmode");
 // OMIT_MOD (mod missing: tofucraft): ItemStages.restrict(<item:tofucraft:swordmomen>, "hardmode");
@@ -336,8 +346,8 @@ ItemStages.restrict(<tag:items:forge:storage_blocks/aeonsteel>, "hardmode");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_directional_breaker>, "master_engineer");
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:quarry>, "master_engineer");
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:quarryproxy>, "master_engineer");
-// EMPTY_TAG (empty tag: forge:alloy_ultimate): ItemStages.restrict(<tag:items:forge:alloy_ultimate>, "master_engineer");
-// EMPTY_TAG (empty tag: forge:circuit_ultimate): ItemStages.restrict(<tag:items:forge:circuit_ultimate>, "master_engineer");
+// EMPTY_TAG (empty tag: forge:alloys/ultimate): ItemStages.restrict(<tag:items:forge:alloys/ultimate>, "master_engineer");
+// EMPTY_TAG (empty tag: forge:circuits/ultimate): ItemStages.restrict(<tag:items:forge:circuits/ultimate>, "master_engineer");
 ItemStages.restrict(<item:solarflux:sp_8>, "master_engineer");
 // BAD_ID (item not registered: enderio:block_killer_joe): ItemStages.restrict(<item:enderio:block_killer_joe>, "master_engineer");
 ItemStages.restrict(<item:cyclic:user>, "master_engineer");
@@ -397,8 +407,8 @@ ItemStages.restrict(<item:mythicbotany:mana_infuser>, "nether");
 ItemStages.restrict(<tag:items:forge:gems/fluix>, "nether");
 ItemStages.restrict(<tag:items:forge:dusts/fluix>, "nether");
 // BAD_ID (item not registered: ae2:part): ItemStages.restrict(<item:ae2:part>, "nether");
-// EMPTY_TAG (empty tag: forge:crystals/quartz_pure): ItemStages.restrict(<tag:items:forge:crystals/quartz_pure>, "nether");
-// EMPTY_TAG (empty tag: forge:crystals/fluix_pure): ItemStages.restrict(<tag:items:forge:crystals/fluix_pure>, "nether");
+// EMPTY_TAG (empty tag: forge:gems/certus_quartz): ItemStages.restrict(<tag:items:forge:gems/certus_quartz>, "nether");
+// EMPTY_TAG (empty tag: forge:gems/fluix): ItemStages.restrict(<tag:items:forge:gems/fluix>, "nether");
 // OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:eoa>, "nether");
 // OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:oc>, "nether");
 // OMIT_MOD (mod missing: abyssalcraft): ItemStages.restrict(<item:abyssalcraft:powerstonetracker>, "nether");
@@ -679,7 +689,7 @@ ItemStages.restrict(<tag:items:forge:nuggets/enderium>, "skilled_engineer");
 ItemStages.restrict(<tag:items:forge:dusts/enderium>, "skilled_engineer");
 ItemStages.restrict(<tag:items:forge:gears/enderium>, "skilled_engineer");
 // EMPTY_TAG (empty tag: forge:gems/gelid): ItemStages.restrict(<tag:items:forge:gems/gelid>, "skilled_engineer");
-// EMPTY_TAG (empty tag: forge:storage_blocks/gelid_gem): ItemStages.restrict(<tag:items:forge:storage_blocks/gelid_gem>, "skilled_engineer");
+// EMPTY_TAG (empty tag: forge:storage_blocks/gelid): ItemStages.restrict(<tag:items:forge:storage_blocks/gelid>, "skilled_engineer");
 // EMPTY_TAG (empty tag: forge:storage_blocks/gelid_enderium): ItemStages.restrict(<tag:items:forge:storage_blocks/gelid_enderium>, "skilled_engineer");
 // EMPTY_TAG (empty tag: forge:ingots/gelid_enderium): ItemStages.restrict(<tag:items:forge:ingots/gelid_enderium>, "skilled_engineer");
 // EMPTY_TAG (empty tag: forge:nuggets/gelid_enderium): ItemStages.restrict(<tag:items:forge:nuggets/gelid_enderium>, "skilled_engineer");

@@ -1,0 +1,11 @@
+{
+  "type": "avaritia:compressor",
+  "ingredient": {
+    "tag": "forge:ingots/experience"
+  },
+  "inputCount": 6561,
+  "result": {
+    "item": "soa_additions:pearl_of_knowledge"
+  },
+  "timeCost": 200
+}

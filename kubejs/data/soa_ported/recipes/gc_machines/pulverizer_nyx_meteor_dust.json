@@ -1,0 +1,12 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "nyx:meteor_ingot"
+  },
+  "result": [
+    {
+      "item": "nyx:meteor_dust"
+    }
+  ],
+  "energy": 600
+}

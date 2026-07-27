@@ -1,0 +1,36 @@
+{
+  "_comment": "TAR infusion 1:1 (adaminite_ingot): central mithrillium ingot + 2x nether star + 2x enchanted fabric (spirit fabric).",
+  "additional_requirements": {
+    "forge_tier": 5
+  },
+  "essences": {
+    "aureal": 200,
+    "blood": 1000,
+    "experience": 0,
+    "souls": 0
+  },
+  "inputs": [
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "minecraft:nether_star"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "malum:spirit_fabric"
+      }
+    }
+  ],
+  "main_ingredient": {
+    "item": "soa_additions:mithrillium_ingot"
+  },
+  "result": {
+    "type": "forbidden_arcanus:create_item",
+    "result_item": {
+      "Count": 1,
+      "id": "soa_additions:adaminite_ingot"
+    }
+  }
+}

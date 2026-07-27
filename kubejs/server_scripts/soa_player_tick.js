@@ -26,73 +26,132 @@ try {
     console.warn('[soa_player_tick] GameStages not loaded; portal-gating + advancement bridges disabled')
 }
 
-// stage → advancement granted on next 40-tick poll. Removed twilight_forest /
-// nether / hardmode / etc. that mapped to greedycraft:elysia advancements
-// since those advancement files don't ship in SoA. Re-add when Elysia
-// progression book is ported.
-const ADVANCEMENT_MAP = {}
+// stage → advancement granted on next 40-tick poll. 1:1 with GC's
+// advancementMap in onPlayerTick.zs; these unlock the eight log entries in the
+// the_elysia_project Patchouli book, whose advancements now ship in
+// kubejs/data/soa_additions/advancements/elysia/.
+const ADVANCEMENT_MAP = {
+    twilight_forest: 'soa_additions:elysia/log1',
+    nether: 'soa_additions:elysia/log2',
+    wither_slayer: 'soa_additions:elysia/log3',
+    ender_charm: 'soa_additions:elysia/log4',
+    hardmode: 'soa_additions:elysia/log5',
+    wyvern: 'soa_additions:elysia/log6',
+    awakened: 'soa_additions:elysia/log7',
+    chaotic: 'soa_additions:elysia/log8',
+}
 
-PlayerEvents.tick(event => {
+// Book id the Elysia lore book is bound to, for the "hold it to unlock" grant.
+const ELYSIA_BOOK = 'soa_additions:the_elysia_project'
+
+// Stage→advancement state is near-static: a player earns these eight stages
+// across an entire playthrough, so this must not be a per-tick cost. GC polled
+// every 40t and re-issued /advancement grant forever; instead we sync on login,
+// keep a per-session record, and latch `complete` so the slow safety-net poll
+// degenerates to a single property read.
+const elysiaGranted = {}
+
+function grantedThisSession(player) {
+    const key = String(player.uuid)
+    if (!elysiaGranted[key]) elysiaGranted[key] = {}
+    return elysiaGranted[key]
+}
+
+let ResourceLocationClass = null
+try {
+    ResourceLocationClass = Java.loadClass('net.minecraft.resources.ResourceLocation')
+} catch (e) {
+    console.warn('[soa_player_tick] ResourceLocation unavailable; falling back to blind grants')
+}
+
+function resolveAdvancement(player, advancement) {
+    if (!ResourceLocationClass) return null
+    // ServerPlayer exposes `server` as a field; Rhino may surface it as a getter
+    // instead, and Utils.server is the last resort.
+    let server = player.server
+    if (!server && typeof player.getServer === 'function') server = player.getServer()
+    if (!server) server = Utils.server
+    if (!server) return null
+    return server.getAdvancements().getAdvancement(new ResourceLocationClass(advancement))
+}
+
+/**
+ * Award an advancement, silently and only if the player lacks it.
+ *
+ * Deliberately NOT `/advancement grant`: that command prints "Couldn't grant …
+ * as they already have it" straight into chat for every advancement the player
+ * has already earned. Since the session cache is cleared on logout, that fired
+ * on every single login. Awarding through PlayerAdvancements is silent, skips
+ * the command dispatch entirely, and checking isDone() first makes re-granting
+ * a no-op rather than an error.
+ *
+ * @return true if the player ends up holding the advancement
+ */
+function awardAdvancement(player, advancement) {
+    // var (not const/let) throughout: Rhino throws "redeclaration of var X"
+    // when a const declaration inside a try block re-executes on later calls.
+    try {
+        var adv = resolveAdvancement(player, advancement)
+        if (!adv) return false
+        var tracker = player.getAdvancements()
+        var progress = tracker.getOrStartProgress(adv)
+        if (progress.isDone()) return true
+        var remaining = progress.getRemainingCriteria()
+        if (!remaining) return false
+        for (var i = 0; i < remaining.length; i++) tracker.award(adv, remaining[i])
+        return true
+    } catch (e) {
+        console.warn('[soa_player_tick] could not award ' + advancement + ': ' + e)
+        return false
+    }
+}
+
+function grantOnce(player, seen, advancement) {
+    if (seen[advancement]) return
+    seen[advancement] = true
+    awardAdvancement(player, advancement)
+}
+
+function syncElysia(player) {
+    if (!GameStageHelper || !player || player.level.isClientSide()) return
+    const seen = grantedThisSession(player)
+    if (seen.complete) return
+
+    grantOnce(player, seen, 'soa_additions:elysia/root')
+
+    let missing = 0
+    for (const stage in ADVANCEMENT_MAP) {
+        if (GameStageHelper.hasStage(player, stage)) grantOnce(player, seen, ADVANCEMENT_MAP[stage])
+        else missing++
+    }
+    if (missing === 0) seen.complete = true
+}
+
+PlayerEvents.loggedIn(event => syncElysia(event.player))
+PlayerEvents.loggedOut(event => {
+    if (event.player) delete elysiaGranted[String(event.player.uuid)]
+})
+
+// GC checked the held item every 40t to grant elysia/book. Right-click is the
+// same moment from the player's perspective (it's what opens the book) at zero
+// idle cost.
+ItemEvents.rightClicked('patchouli:guide_book', event => {
     const player = event.player
     if (!player || player.level.isClientSide()) return
-    const time = player.level.gameTime
-
-    // (1) Strip dim Night Vision to prevent the screen-flash bug.
-    const nv = player.getEffect('minecraft:night_vision')
-    if (nv && nv.getDuration() <= 200) player.removeEffect('minecraft:night_vision')
-
-    // (3) Cap Saturation duration at 1t (prevents food gauge max-out exploits).
-    const sat = player.getEffect('minecraft:saturation')
-    if (!player.creative && sat && sat.getDuration() > 1) {
-        player.removeEffect('minecraft:saturation')
-        player.potionEffects.add('minecraft:saturation', 1, sat.getAmplifier(), sat.isAmbient(), sat.isVisible())
-    }
-
-    // (7) Sub-5t potion sweep — every 4t, drop near-expired effects to clear visual carryover.
-    if (!player.creative && time % 4 === 0) {
-        const effects = []
-        player.activeEffects.forEach(e => effects.push(e))
-        for (const e of effects) {
-            if (e.getDuration() < 5) player.removeEffect(e.getEffect())
-        }
-    }
-
-    // (4) Portal-gating warning text (every 20t).
-    if (GameStageHelper && time % 20 === 0) {
-        const here = String(player.level.getBlockState(player.blockPosition()).block.id)
-        if (here === 'minecraft:nether_portal' && !GameStageHelper.hasStage(player, 'twilight_shield')) {
-            player.tell(Component.translatable('greedycraft.event.nether.reject.message').darkPurple())
-        }
-        if (here === 'minecraft:end_portal' && !GameStageHelper.hasStage(player, 'ender_charm')) {
-            player.tell(Component.translatable('greedycraft.event.end.reject.message').darkPurple())
-        }
-    }
-
-    // (5) Hot-spring water damage (BoP / Sakura). Both mods absent in pack — skip.
-    // (6) Twilight Forest dark_leaves damage — TF is installed; rule active.
-    if (!player.creative && time % 20 === 0) {
-        const below = player.blockPosition().below()
-        const blockBelow = String(player.level.getBlockState(below).block.id)
-        if (blockBelow === 'twilightforest:dark_leaves' || blockBelow === 'twilightforest:dark_oak_leaves') {
-            player.attack(player.damageSources.hotFloor(), 2.0)
-        }
-    }
-
-    // (8) Deep-ocean drowning — disabled. Original required door+air-pocket
-    // detection that's brittle in 1.20 (door geometry differs); re-enable with
-    // a proper "is enclosed" check if needed. Most water-breathing access in SoA
-    // comes from Soul Pendant / Sigil of Swimming which were ported, so the
-    // exploit GC was guarding against (open-bottom doored ocean base) is less
-    // common.
-
-    // (2) Elysia advancement bridge — empty until advancements are ported.
-    if (GameStageHelper && time % 40 === 0 && Object.keys(ADVANCEMENT_MAP).length > 0) {
-        for (const stage in ADVANCEMENT_MAP) {
-            if (GameStageHelper.hasStage(player, stage)) {
-                player.runCommand('advancement grant ' + player.username + ' only ' + ADVANCEMENT_MAP[stage])
-            }
-        }
-    }
+    const nbt = event.item.nbt
+    if (!nbt || String(nbt.getString('patchouli:book')) !== ELYSIA_BOOK) return
+    grantOnce(player, grantedThisSession(player), 'soa_additions:elysia/book')
 })
+
+// Rules (1)(3)(4)(6)(7) — night-vision strip, saturation cap, effect sweep,
+// portal gating, dark-leaves damage — moved to Java in soa_additions 3.58.3
+// (SoaTickRules): per-player-per-tick JS was pure Rhino overhead.
+// (5) hot-spring damage: source mods absent, never ported.
+// (8) deep-ocean drowning: disabled pending a robust "is enclosed" check.
+// (2) Elysia mid-session safety net: stages earned mid-session are picked up
+// via the GameStageEvent$Added bridge (startup_scripts/soa_forge_event_bridge.js
+// — ForgeEvents is startup-scope only); login sync covers everything else.
+// No tick handler needed.
+global.soaOnStageAddedElysia = (player, stage) => syncElysia(player)
 
 console.info('[soa_scripts] soa_player_tick.js: registered')

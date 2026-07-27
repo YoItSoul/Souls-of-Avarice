@@ -51,7 +51,8 @@
             "solarflux:solar_panels/twilightforest/carminite": true,
             "solarflux:solar_panels/draconicevolution/wyvern": true,
             "solarflux:solar_panels/draconicevolution/draconic": true,
-            "solarflux:ae2/energy_upgrade": true
+            "solarflux:ae2/energy_upgrade": true,
+            "solarflux:sp_custom_cosmic_solar_panel": true
         }
     },
     "unregistered": {}

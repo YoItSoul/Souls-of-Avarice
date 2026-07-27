@@ -46,15 +46,43 @@ ServerEvents.recipes(event => {
     // DE 1.20 doesn't ship draconic_pick as a fusion output -> no-op
     // event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:draconic_pickaxe' })
 
-    // Remove DE stock recipes that GC-expert overrides:
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:wyvern_core' })
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:awakened_core' })
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:chaotic_core' })
+    // Remove DE stock recipes that GC-expert overrides.
+    // NOTE: remove by recipe ID — KubeJS can't read a custom fusion recipe's output(),
+    // so { type, output } silently matches nothing and the stock recipe stays craftable.
+    event.remove({ id: 'draconicevolution:components/wyvern_core' })
+    event.remove({ id: 'draconicevolution:components/awakened_core' })
+    event.remove({ id: 'draconicevolution:components/chaotic_core' })
 
-    // --- projecte:transmutation_table (catalyst: energy_matter_core, tier 3) ---
-    // Ingredients: extreme_crafting_table, projectex:matter:4, tconevo:metal_block:2,
-    //              cosmilite_ingot, ancient_tome, pearl_of_knowledge, bounty_hunter_medal, city_defender_medal
-    // projectex ABSENT + metal_block:2 not a registered SoA block -> FIXME skip.
+    // GC's remove.zs disabled these stock crafting recipes; SoA re-adds them as DE
+    // fusion recipes below. A crafting_shaped remove can't touch the fusion add (safe).
+    // (transmutation_table block is NOT removed — its fusion port is skipped: projectex absent.)
+    event.remove({ output: 'projecte:transmutation_tablet' })
+    event.remove({ output: 'avaritia:extreme_crafting_table' })
+    event.remove({ output: 'projecte:condenser_mk1' })
+    event.remove({ output: 'projecte:condenser_mk2' })
+
+    // --- projecte:transmutation_table (GC, EXPERT) — the endgame ProjectE unlock ---
+    // Native recipe removed (vanilla_remove.js) + stage-gated; this fusion is THE way.
+    // Unblocked now that Project Expansion supplies blue_matter (projectex:matter:4) and
+    // tconevo:metal_block:2 resolves to tconevo:chaotic_block.
+    // catalyst energy_matter_core, tier CHAOTIC (GC 3), E=20_000_000_000.
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'soa_additions:energy_matter_core' },
+        ingredients: [
+            { item: 'avaritia:extreme_crafting_table' },
+            { item: 'projectexpansion:blue_matter' },
+            { item: 'tconevo:chaotic_block' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:ancient_tome' },
+            { item: 'soa_additions:pearl_of_knowledge' },
+            { item: 'soa_additions:bounty_hunter_medal' },
+            { item: 'soa_additions:city_defender_medal' }
+        ],
+        result: { item: 'projecte:transmutation_table' },
+        tier: 'CHAOTIC',
+        total_energy: 20000000000
+    })
 
     // --- projecte:transmutation_tablet (catalyst: transmutation_table, tier 3) ---
     // 4x cosmilite_ingot + 4x chaotic_core
@@ -87,7 +115,50 @@ ServerEvents.recipes(event => {
         total_energy: 34359738368
     })
 
-    // --- draconic_staff_of_power ---  NOT in DE 1.20. FIXME skip.
+    // --- draconicevolution:draconic_staff (GC draconic_staff_of_power, EXPERT) ---
+    // GC output IS in DE 1.20 (renamed draconic_staff_of_power -> draconic_staff).
+    // Catalyst infinity_catalyst, tier CHAOTIC (GC tier int 3), E=68_719_476_736.
+    // 4x draconic metal block + 2x cosmilite ingot + creative soul + ancient tome.
+    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:draconic_staff' })
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'avaritia:infinity_catalyst' },
+        ingredients: [
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'tconevo:draconic_metal_block' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:creative_soul' },
+            { item: 'soa_additions:ancient_tome' }
+        ],
+        result: { item: 'draconicevolution:draconic_staff' },
+        tier: 'CHAOTIC',
+        total_energy: 68719476736
+    })
+
+    // --- Cosmic Solar Panel (GC solarflux custom panel, EXPERT) ---
+    // Item registered by config/solarflux/custom_panels.js. Catalyst = Chaotic
+    // Solar Panel (GC solar_panel_chaotic), tier CHAOTIC, E=6_553_600_000.
+    // 4x cosmilite ingot + 4x soa_additions:chaotic_energy_core (exact GC item; DA 1.20 dropped it).
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'solarflux:sp_de.chaotic' },
+        ingredients: [
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:cosmilite_ingot' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' }
+        ],
+        result: { item: 'solarflux:sp_custom_cosmic_solar_panel' },
+        tier: 'CHAOTIC',
+        total_energy: 6553600000
+    })
 
     // --- avaritia:extreme_crafting_table (catalyst: minecraft:crafting_table, tier 1) ---
     // 2x block_resource:2 + 2x resource:1 + 2x wyvern_core + 2x ancient_tome_fragment
@@ -110,7 +181,27 @@ ServerEvents.recipes(event => {
         total_energy: 2400000000
     })
 
-    // --- projectex:arcane_tablet --- projectex ABSENT. Skip.
+    // --- projectexpansion:arcane_tablet (GC projectex:arcane_tablet, EXPERT) ---
+    // Project Expansion (1.20.1 ProjectEX successor) now installed -> items exist.
+    // catalyst transmutation_tablet, tier CHAOTIC (GC 3), E=68_719_476_736.
+    // 2x magenta_matter + 2x pink_matter + 2x chaotic_core + ancient_tome + purple_matter.
+    event.custom({
+        type: 'draconicevolution:fusion_crafting',
+        catalyst: { item: 'projecte:transmutation_tablet' },
+        ingredients: [
+            { item: 'projectexpansion:magenta_matter' },
+            { item: 'projectexpansion:magenta_matter' },
+            { item: 'projectexpansion:pink_matter' },
+            { item: 'projectexpansion:pink_matter' },
+            { item: 'draconicevolution:chaotic_core' },
+            { item: 'draconicevolution:chaotic_core' },
+            { item: 'soa_additions:ancient_tome' },
+            { item: 'projectexpansion:purple_matter' }
+        ],
+        result: { item: 'projectexpansion:arcane_tablet' },
+        tier: 'CHAOTIC',
+        total_energy: 68719476736
+    })
 
     // --- projecte:condenser_mk2 (catalyst: condenser_mk1, tier 1) ---
     // 4x projecte:matter_block:1 + wyvern_core + energy_matter_core +
@@ -233,7 +324,7 @@ ServerEvents.recipes(event => {
     // Note: draconicadditions:chaotic_energy_core doesn't exist; DE's own
     // draconicevolution:chaotic_energy_core does.
     // Removing DE stock first (DE 1.20 provides its own reactor_core recipe).
-    event.remove({ type: 'draconicevolution:fusion_crafting', output: 'draconicevolution:reactor_core' })
+    event.remove({ id: 'draconicevolution:machines/reactor_core' })
     event.custom({
         type: 'draconicevolution:fusion_crafting',
         catalyst: { item: 'draconicevolution:chaos_shard' },
@@ -242,8 +333,8 @@ ServerEvents.recipes(event => {
             { item: 'soa_additions:cosmilite_ingot' },
             { tag: 'forge:ingots/draconium_awakened' },
             { tag: 'forge:ingots/draconium_awakened' },
-            { item: 'draconicevolution:chaotic_energy_core' },
-            { item: 'draconicevolution:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
+            { item: 'soa_additions:chaotic_energy_core' },
             { item: 'soa_additions:terra_alloy_ingot' },
             { item: 'soa_additions:terra_alloy_ingot' }
         ],

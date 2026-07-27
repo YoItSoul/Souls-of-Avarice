@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "soa_additions:infinity_block_block"
+    }
+  ],
+  "result": {
+    "item": "avaritia:infinity",
+    "count": 64
+  }
+}

@@ -142,7 +142,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -393,39 +392,6 @@
       ]
     },
     {
-      "id": "cha_a_blessing_of_the_lord",
-      "title": "A Blessing of the Lord",
-      "icon": "minecraft:barrier",
-      "x": 192,
-      "y": 240,
-      "description": [
-        "Obtain the required item(s)"
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "cataclysm:vitality_ankh",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 5000
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\",Type:\"EPIC\",Name:\"Epic Loot Crate\",Color:16733695} 1"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "cha_building_helper",
       "title": "Building Helper",
       "icon": "chiselsandbits:chisel_netherite",
@@ -499,7 +465,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -1167,7 +1132,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:obsidian_reinforcement",
+          "item": "soa_additions:obsidian_large_plate",
           "count": 256
         },
         {
@@ -1299,7 +1264,7 @@
     {
       "id": "cha_a_peaceful_life",
       "title": "A Peaceful Life",
-      "icon": "minecraft:barrier",
+      "icon": "mca:wedding_ring",
       "x": 432,
       "y": 0,
       "description": [
@@ -1308,8 +1273,12 @@
       "dependencies": [],
       "tasks": [
         {
-          "type": "soa_additions:breed",
-          "count": 2
+          "type": "soa_additions:advancement",
+          "advancement": "mca:marriage"
+        },
+        {
+          "type": "soa_additions:advancement",
+          "advancement": "mca:baby"
         }
       ],
       "rewards": [
@@ -1374,7 +1343,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -2194,7 +2162,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -2566,7 +2533,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -3995,7 +3961,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -4117,7 +4082,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",
@@ -4582,7 +4546,6 @@
         "cha_i_can_grow_everything",
         "cha_i_love_math",
         "cha_you_got_lucky",
-        "cha_a_blessing_of_the_lord",
         "cha_gigantic_storage",
         "cha_tower_conquerer",
         "cha_gimme_your_soul",

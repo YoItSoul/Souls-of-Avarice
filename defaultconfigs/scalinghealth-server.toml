@@ -1,0 +1,46 @@
+#============================================================
+# SoA ScalingHealth server config — feature toggles ONLY.
+#
+# IMPORTANT: ScalingHealth 1.20.1 (8.x) reads ALL numeric tuning
+# (difficulty cap/accrual, mob health/damage scaling, blights,
+# damage scaling, item values, player health) from datapack JSONs:
+#   kubejs/data/scalinghealth/sh_mechanics/*.json   <-- GC values live HERE
+#   kubejs/data/scalinghealth/tags/entity_types/difficulty_exempt.json
+# Any [difficulty]/[mobs]/etc. section added to this file is DEAD —
+# Forge strips unknown keys from the per-world serverconfig copy.
+#
+# Toggle choices (match GreedyCraft config/scalinghealth/main.cfg):
+#   - mobDamageIncrease = true: GC "Damage Modifier" was 0.1/difficulty
+#     point with "Max Damage Bonus" 0 = UNLIMITED (zero means no cap).
+#   - mobDamageScaling = false: GC "Affect Hostile/Passive Mobs" = false.
+#   - playerDamageScaling = true: GC PLAYER_DIFFICULTY mode, weight 0.0225
+#     (values in sh_mechanics/damage_scaling.json).
+#   - xpAddHealth = false: GC "Set Health By XP" was empty — health comes
+#     from heart crystals only.
+#   - enableBlights = true but blightChance is 0.0 in sh_mechanics/mobs.json,
+#     matching GC (Blight Chance Multiplier 0.00, all categories blacklisted).
+#============================================================
+
+#All SH features can be disabled here. False to disable.
+[features]
+	crystalsAddHealth = true
+	xpAddHealth = false
+	crystalsRegenHealth = true
+	crystalsAddPetHealth = true
+	crystalsAddDamage = true
+	hpCrystalsOreGen = true
+	powerCrystalsOreGen = true
+	mobHpIncrease = true
+	mobDamageIncrease = true
+	playerDamageScaling = true
+	mobDamageScaling = false
+	enableDifficulty = true
+	enableBlights = true
+
+#Debug settings are intended for tuning configs or diagnosing issues.
+[debug]
+	masterSwitch = false
+	showOverlay = true
+	logEntitySpawns = false
+	logApplyingMobPotions = false
+	logDamageScaling = false

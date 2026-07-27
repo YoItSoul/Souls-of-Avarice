@@ -1,35 +1,35 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:chromasteel_forge",
   "time": 100,
   "requirements": [
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "tag": "forge:ingots/infernium",
       "amount": 1,
-      "slot": "in1"
+      "slot": "in1",
+      "item": "#forge:ingots/infernium"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "tag": "forge:ingots/cryonium",
       "amount": 1,
-      "slot": "in2"
+      "slot": "in2",
+      "item": "#forge:ingots/cryonium"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "tag": "forge:ingots/cytosinite",
       "amount": 1,
-      "slot": "in3"
+      "slot": "in3",
+      "item": "#forge:ingots/cytosinite"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "tag": "forge:ingots/titanium",
       "amount": 1,
-      "slot": "in4"
+      "slot": "in4",
+      "item": "#forge:ingots/titanium"
     },
     {
       "type": "custommachinery:energy",
@@ -46,33 +46,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

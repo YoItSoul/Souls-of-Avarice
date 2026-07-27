@@ -1,5 +1,5 @@
 {
-  "type": "custommachinery:machine",
+  "type": "custommachinery:custom_machine",
   "machine": "soa_ported:aeonsteel_forge",
   "time": 9945,
   "requirements": [
@@ -18,7 +18,7 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "soa_additions:unstable_matrix",
+      "item": "tconevo:coalescence_matrix",
       "amount": 1,
       "slot": "in2"
     },
@@ -32,7 +32,7 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "enderio:crude_steel_ingot",
+      "item": "soa_additions:stellar_alloy_ingot",
       "amount": 1,
       "slot": "in4"
     },
@@ -53,21 +53,21 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "draconicevolution:draconic_ingot",
+      "item": "draconicevolution:awakened_draconium_ingot",
       "amount": 1,
       "slot": "cat2"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "soa_additions:rainbow_petal",
+      "item": "soa_additions:orichalcos_ingot",
       "amount": 1,
       "slot": "cat3"
     },
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "mysticalagradditions:insanium_essence",
+      "item": "mysticalagradditions:insanium_ingot",
       "amount": 1,
       "slot": "cat4"
     },
@@ -81,33 +81,6 @@
     {
       "type": "custommachinery:speed",
       "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
     }
   ]
 }

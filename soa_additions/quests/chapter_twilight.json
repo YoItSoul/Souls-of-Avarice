@@ -617,8 +617,8 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
-          "count": 16
+          "item": "thermal:flux_capacitor",
+          "count": 3
         },
         {
           "type": "soa_additions:item",
@@ -650,12 +650,12 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:earth_slime_crystal",
+          "item": "minecraft:slime_ball",
           "count": 8
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:sky_slime_crystal",
+          "item": "aether:swet_ball",
           "count": 8
         },
         {

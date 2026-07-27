@@ -67,6 +67,22 @@ function init()
 		.build(2);
 
     Comment end*/
+
+	// GreedyCraft "Cosmic Solar Panel" — custom SolarFlux panel, 1:1 stats from
+	// GC config/solarflux/custom_panels.js. Registers the item id
+	// solarflux:sp_custom_cosmic_solar_panel. Its recipe is a Draconic
+	// fusion (packmode_normal_de.js / packmode_expert_mods.js), NOT a shaped craft.
+	panel()
+		.name("cosmic_solar_panel")
+		.height(6 / 16.0)
+		.generation("102400")
+		.capacity("819200000")
+		.transfer("120000")
+	.buildAndRegister()
+		.langBuilder()
+			.put("en_us", "Cosmic Solar Panel")
+			.put("zh_cn", "寰宇太阳能板")
+			.build();
 }
 
 /*

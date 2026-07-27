@@ -1,0 +1,36 @@
+{
+  "_comment": "TAR infusion 1:1 (mithminite_ingot): central adaminite ingot + 2x mithrillium ingot + 2x quicksilver (cinnabar). Bulk route: Smithery alloy mithminite.json.",
+  "additional_requirements": {
+    "forge_tier": 5
+  },
+  "essences": {
+    "aureal": 300,
+    "blood": 0,
+    "experience": 0,
+    "souls": 25
+  },
+  "inputs": [
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "soa_additions:mithrillium_ingot"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "thermal:cinnabar"
+      }
+    }
+  ],
+  "main_ingredient": {
+    "item": "soa_additions:adaminite_ingot"
+  },
+  "result": {
+    "type": "forbidden_arcanus:create_item",
+    "result_item": {
+      "Count": 1,
+      "id": "soa_additions:mithminite_ingot"
+    }
+  }
+}

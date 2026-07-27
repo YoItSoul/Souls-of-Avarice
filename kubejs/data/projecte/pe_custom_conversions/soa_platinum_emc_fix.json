@@ -1,0 +1,9 @@
+{
+  "comment": "Fixes the platinum nugget/ingot EMC rounding exploit. ProjectE's metals.json sets #forge:ingots/platinum = 16x iron = 4096, so the nugget derives to floor(4096/9) = 455; crafting 9 nuggets (4095 EMC) into 1 ingot (4096 EMC) nets +1 EMC per cycle. Pinning the ingot to a multiple of 9 (4095) and the nugget to 455 makes 9 x nugget == ingot exactly, closing the loop in both directions.",
+  "values": {
+    "before": {
+      "soa_additions:platinum_ingot": 4095,
+      "soa_additions:platinum_nugget": 455
+    }
+  }
+}

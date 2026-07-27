@@ -1,0 +1,11 @@
+{
+  "type": "avaritia:compressor",
+  "ingredient": {
+    "item": "actuallyadditions:solidified_experience"
+  },
+  "inputCount": 7382,
+  "result": {
+    "item": "soa_additions:pearl_of_knowledge"
+  },
+  "timeCost": 200
+}

@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "nyx:meteor_block"
+  },
+  "result": [
+    {
+      "item": "nyx:meteor_dust",
+      "count": 9
+    }
+  ],
+  "energy": 600
+}

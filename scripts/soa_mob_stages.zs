@@ -36,12 +36,12 @@ val mobStageMap as string[string] = {
     "mowziesmobs:frostmaw": "hardmode",
 
     // -- L_Enders Cataclysm bosses (1.20.1 addition; gated to match power tier) --
-    "cataclysm:netherite_monstrosity": "wither_slayer",
-    "cataclysm:ender_guardian":        "ender_charm",
-    "cataclysm:ignis":                 "wither_slayer",
-    "cataclysm:the_leviathan":         "hardmode",
-    "cataclysm:the_harbinger":         "wyvern",
-    "cataclysm:ancient_remnant":       "ender_charm",
+    // OMIT_MOD (entity missing: cataclysm:netherite_monstrosity): "cataclysm:netherite_monstrosity": "wither_slayer",
+    // OMIT_MOD (entity missing: cataclysm:ender_guardian): "cataclysm:ender_guardian":        "ender_charm",
+    // OMIT_MOD (entity missing: cataclysm:ignis): "cataclysm:ignis":                 "wither_slayer",
+    // OMIT_MOD (entity missing: cataclysm:the_leviathan): "cataclysm:the_leviathan":         "hardmode",
+    // OMIT_MOD (entity missing: cataclysm:the_harbinger): "cataclysm:the_harbinger":         "wyvern",
+    // OMIT_MOD (entity missing: cataclysm:ancient_remnant): "cataclysm:ancient_remnant":       "ender_charm",
 
     // -- Deeper and Darker (1.20.1; only the Stalker boss needs gating —
     //    Deep Dark biome itself is gated by progression, so non-boss sculk
@@ -84,18 +84,18 @@ val mobStageMap as string[string] = {
 
     // -- L_Enders Cataclysm 3.31 additions (tier-analogy vs the six above;
     //    REVIEW: tune stages to taste) --
-    "cataclysm:maledictus":    "hardmode",      // Frosted Prison boss
-    "cataclysm:scylla":        "hardmode",      // storm ocean boss (leviathan-tier)
-    "cataclysm:aptrgangr":     "hardmode",      // Frosted Prison elite
-    "cataclysm:wadjet":        "ender_charm",   // Cursed Pyramid (remnant-tier)
-    "cataclysm:kobolediator":  "wither_slayer", // kobold arena boss
-    "cataclysm:coralssus":     "wither_slayer", // Sunken City miniboss
+    // OMIT_MOD (entity missing: cataclysm:maledictus): "cataclysm:maledictus":    "hardmode",      // Frosted Prison boss
+    // OMIT_MOD (entity missing: cataclysm:scylla): "cataclysm:scylla":        "hardmode",      // storm ocean boss (leviathan-tier)
+    // OMIT_MOD (entity missing: cataclysm:aptrgangr): "cataclysm:aptrgangr":     "hardmode",      // Frosted Prison elite
+    // OMIT_MOD (entity missing: cataclysm:wadjet): "cataclysm:wadjet":        "ender_charm",   // Cursed Pyramid (remnant-tier)
+    // OMIT_MOD (entity missing: cataclysm:kobolediator): "cataclysm:kobolediator":  "wither_slayer", // kobold arena boss
+    // OMIT_MOD (entity missing: cataclysm:coralssus): "cataclysm:coralssus":     "wither_slayer", // Sunken City miniboss
 
     // -- Bosses of Mass Destruction (tier-analogy; REVIEW) --
-    "bosses_of_mass_destruction:void_blossom": "nether",
-    "bosses_of_mass_destruction:gauntlet":     "wither_slayer",
-    "bosses_of_mass_destruction:lich":         "wither_slayer",
-    "bosses_of_mass_destruction:obsidilith":   "ender_charm",
+    // OMIT_MOD (entity missing: bosses_of_mass_destruction:void_blossom): "bosses_of_mass_destruction:void_blossom": "nether",
+    // OMIT_MOD (entity missing: bosses_of_mass_destruction:gauntlet): "bosses_of_mass_destruction:gauntlet":     "wither_slayer",
+    // OMIT_MOD (entity missing: bosses_of_mass_destruction:lich): "bosses_of_mass_destruction:lich":         "wither_slayer",
+    // OMIT_MOD (entity missing: bosses_of_mass_destruction:obsidilith): "bosses_of_mass_destruction:obsidilith":   "ender_charm",
 
     // -- Aquamirae (Ice Maze; tier-analogy; REVIEW) --
     "aquamirae:captain_cornelia": "wither_slayer",

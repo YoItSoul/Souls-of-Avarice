@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "on_first_tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "soa_additions:starter_greedy_bag"
+  }
+}

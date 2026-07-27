@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " b ",
-    "bib",
-    " b "
+    " B ",
+    "BPB",
+    " B "
   ],
   "key": {
-    "b": {
-      "item": "bloodmagic:life_essence_bucket"
+    "B": {
+      "item": "soa_additions:coagulated_blood"
     },
-    "i": {
-      "item": "minecraft:iron_block"
+    "P": {
+      "tag": "forge:plates/iron"
     }
   },
   "result": {

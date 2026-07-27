@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "soa_additions:medkit_small",
+    "soa_additions:bag_of_dyes",
+    "soa_additions:tower_chest_key",
+    "scalinghealth:heart_crystal_shard",
+    "scalinghealth:heart_dust",
+    "soa_additions:huaji",
+    "soa_additions:poop",
+    "soa_additions:rainbow_rune",
+    "cyclic:apple_emerald",
+    "cyclic:ender_pearl_reuse",
+    "cyclic:eye_teleport",
+    "cyclic:charm_wing",
+    "cyclic:charm_antidote",
+    "cyclic:charm_fire",
+    "cyclic:charm_void",
+    "forestry:kit_pickaxe",
+    "forestry:broken_bronze_pickaxe",
+    "#minecraft:music_discs"
+  ]
+}

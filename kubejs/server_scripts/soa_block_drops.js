@@ -32,7 +32,7 @@ const BLOCK_FORTUNE = {
 }
 
 const CLOVER_BLOCKS = new Set([
-    'minecraft:short_grass',  // 1.20 rename of tallgrass
+    'minecraft:grass',  // 1.20 rename of tallgrass
     'minecraft:tall_grass',
     'minecraft:fern',
     'minecraft:large_fern',
@@ -52,6 +52,24 @@ function tierIdOf(itemStack) {
         const tier = item.getTier ? item.getTier() : null
         return tier ? String(tier) : null
     } catch (e) { return null }
+}
+
+// (3) BOP-style gems — rare drop when mining stone / deepslate (not
+//     cobblestone). 0.05% base, multiplied by the tool's Fortune level.
+const GEM_DROPS = ['soa_additions:ruby', 'soa_additions:topaz', 'soa_additions:amber',
+    'soa_additions:peridot', 'soa_additions:malachite', 'soa_additions:sapphire',
+    'soa_additions:tanzanite', 'soa_additions:amethyst']
+const GEM_STONE = new Set(['minecraft:stone', 'minecraft:deepslate'])
+
+function fortuneLevel(stack) {
+    if (!stack || stack.empty || !stack.nbt) return 0
+    const ench = stack.nbt.getList('Enchantments', 10)
+    if (!ench) return 0
+    for (let i = 0; i < ench.size(); i++) {
+        const e = ench.getCompound(i)
+        if (String(e.getString('id')) === 'minecraft:fortune') return e.getInt('lvl')
+    }
+    return 0
 }
 
 BlockEvents.broken(event => {
@@ -85,6 +103,14 @@ BlockEvents.broken(event => {
     if (CLOVER_BLOCKS.has(blockId)) {
         if (player.getRandom().nextInt(200) === 0) {
             event.block.popItem(Item.of('soa_additions:lucky_clover'))
+        }
+    }
+
+    // (3) BOP gems — stone/deepslate only, 0.05% base x Fortune level
+    if (GEM_STONE.has(blockId)) {
+        const mult = Math.max(1, fortuneLevel(player.getMainHandItem()))
+        if (player.getRandom().nextFloat() < 0.0005 * mult) {
+            event.block.popItem(Item.of(GEM_DROPS[player.getRandom().nextInt(GEM_DROPS.length)]))
         }
     }
 })

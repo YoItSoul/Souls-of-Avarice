@@ -35,12 +35,11 @@ ServerEvents.recipes(event => {
         'draconicevolution:draconium_core',            // GC: draconic_core
         'draconicevolution:wyvern_crafting_injector',  // GC: crafting_injector (FIXME: confirm 1.20 ID)
         'avaritia:infinity_catalyst',                  // GC: avaritia:resource
-        'avaritia:crystal_matrix',                     // GC: avaritia:resource:1
+        'avaritia:crystal_matrix_ingot',               // GC: avaritia:resource:1 (Crystal Matrix Ingot)
         'draconicevolution:energy_core',               // GC: energy_storage_core
         // 'thermalexpansion:machine:3',  // TX 1.20 has no direct analog -> skip
         // 'enderio:item_material',       // EIO 1.20 IDs FIXME -> skip
         // 'enderio:item_material:51',    // same
-        // 'actuallyadditions:block_misc:9', // AA absent
     ]
     removeList.forEach(out => event.remove({ output: out }))
 
@@ -80,15 +79,27 @@ ServerEvents.recipes(event => {
         }
     ).id('soa_ported:infinity_catalyst_expert')
 
-    // crystal_matrix: 4x infinity_catalyst + 2x nether_star
+    // crystal_matrix_ingot (GC avaritia:resource:1): 4x diamond_lattice + 2x nether_star
     event.shaped(
-        Item.of('avaritia:crystal_matrix', 1),
-        ['   ', 'INI', 'INI'],
+        Item.of('avaritia:crystal_matrix_ingot', 1),
+        ['   ', 'LNL', 'LNL'],
         {
-            I: 'avaritia:infinity_catalyst',
+            L: 'avaritia:diamond_lattice',
             N: 'minecraft:nether_star'
         }
-    ).id('soa_ported:crystal_matrix_expert')
+    ).id('soa_ported:crystal_matrix_ingot_expert')
+
+    // iron_casing (GC actuallyadditions:block_misc:9, expert-only add):
+    // steel corners/edges + nether-quartz dust + black-quartz core
+    event.shaped(
+        Item.of('actuallyadditions:iron_casing', 1),
+        ['SQS', 'QBQ', 'SQS'],
+        {
+            S: '#forge:ingots/steel',
+            Q: '#forge:dusts/quartz',
+            B: '#forge:gems/black_quartz'
+        }
+    ).id('soa_ported:iron_casing_expert')
 
     // energy_core: ingotWyvernMetal + gearWyvernMetal + draconic_energy_core + awakened_core
     event.shaped(

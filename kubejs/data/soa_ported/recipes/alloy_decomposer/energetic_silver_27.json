@@ -1,71 +1,18 @@
 {
-  "type": "custommachinery:machine",
-  "machine": "soa_ported:alloy_decomposer",
-  "time": 10,
-  "requirements": [
+  "__comment": "Disabled: ingredient enderio:energetic_silver has no 1.20 equivalent. Never-true condition keeps this inert; delete freely.",
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
     {
-      "type": "custommachinery:fluid",
-      "mode": "input",
-      "fluid": "enderio:energetic_silver",
-      "amount": 72,
-      "tank": "input"
-    },
-    {
-      "type": "custommachinery:energy",
-      "mode": "input",
-      "amount": 20
-    },
-    {
-      "type": "custommachinery:fluid",
-      "mode": "output",
-      "fluid": "smithery:molten_redstone",
-      "amount": 50,
-      "tank": "out1"
-    },
-    {
-      "type": "custommachinery:fluid",
-      "mode": "output",
-      "fluid": "smithery:molten_silver",
-      "amount": 72,
-      "tank": "out2"
-    },
-    {
-      "type": "custommachinery:fluid",
-      "mode": "output",
-      "fluid": "smithery:molten_glowstone",
-      "amount": 125,
-      "tank": "out3"
-    },
-    {
-      "type": "custommachinery:speed",
-      "mode": "input"
-    },
-    {
-      "type": "custommachinery:structure",
-      "mode": "input",
-      "action": "CHECK",
-      "pattern": [
-        [
-          "III",
-          "III",
-          "III"
-        ],
-        [
-          "ImI",
-          "G G",
-          "IGI"
-        ],
-        [
-          "III",
-          "ICI",
-          "III"
-        ]
-      ],
-      "keys": {
-        "I": "smithery:furnace_bricks",
-        "G": "minecraft:glass",
-        "C": "minecraft:blast_furnace"
-      }
+      "type": "forge:mod_loaded",
+      "modid": "soa_dropped_content"
     }
-  ]
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stone"
+  }
 }

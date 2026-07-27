@@ -1,0 +1,30 @@
+{
+  "__comment": "SolarFluxReborn's own AvaritiaCompat recipe, re-authored: SFR 20.1.11 targets the 1.12-era Avaritia class layout (morph.avaritia.init.AvaritiaModContent) and NoClassDefFoundErrors against Re-Avaritia, so its two panel recipes never register ('Failed to register Avaritia recipes!'). Shape/ingredients/output decoded 1:1 from AvaritiaCompat bytecode; item ids remapped to Re-Avaritia (NEUTRONIUM_INGOT->neutron_ingot etc.).",
+  "type": "avaritia:shaped_table",
+  "category": "misc",
+  "key": {
+    "n": { "item": "avaritia:neutron_ingot" },
+    "c": { "item": "avaritia:crystal_matrix_ingot" },
+    "s": { "item": "solarflux:sp_8" },
+    "g": { "item": "avaritia:neutron_nugget" },
+    "p": { "item": "avaritia:neutron_pile" },
+    "i": { "item": "avaritia:infinity_catalyst" }
+  },
+  "pattern": [
+    "  nn nn  ",
+    " nccsccn ",
+    "nc  g  cn",
+    "nc ppp cn",
+    " sgpipgs ",
+    "nc ppp cn",
+    "nc  g  cn",
+    " nccsccn ",
+    "  nn nn  "
+  ],
+  "result": {
+    "item": "solarflux:sp_avaritia.neutronium",
+    "count": 2
+  },
+  "show_notification": true,
+  "tier": 4
+}

@@ -1,0 +1,16 @@
+{
+  "type": "enderio:sag_milling",
+  "energy": 600,
+  "input": {
+    "item": "nyx:meteor_shard"
+  },
+  "outputs": [
+    {
+      "chance": 1.0,
+      "item": {
+        "item": "nyx:meteor_dust"
+      },
+      "optional": false
+    }
+  ]
+}

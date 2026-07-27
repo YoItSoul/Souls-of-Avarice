@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "avaritia:eternal_singularity"
+    },
+    {
+      "item": "soa_additions:black_hole_remnant"
+    },
+    {
+      "item": "soa_additions:black_hole_remnant"
+    }
+  ],
+  "result": {
+    "item": "avaritia:eternal_singularity",
+    "count": 2
+  }
+}

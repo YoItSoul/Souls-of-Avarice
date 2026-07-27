@@ -59,8 +59,7 @@
       "x": 48,
       "y": 144,
       "description": [
-        "Find Aloe in the wild and harvest a piece. Valoria's medicine starts here.",
-        "Original items: Aloe Piece (valoria) — mirrors the valoria:aloe_piece advancement"
+        "Find Aloe in the wild and harvest a piece. Valoria's medicine starts here."
       ],
       "dependencies": [
         "val_path_of_valoria"
@@ -96,8 +95,7 @@
       "x": 96,
       "y": 144,
       "description": [
-        "Craft an Aloe Bandage and use it to heal yourself. Mirrors the valoria:first_help advancement.",
-        "Original items: Aloe Bandage (valoria)"
+        "Craft an Aloe Bandage and use it to heal yourself. Mirrors the valoria:first_help advancement."
       ],
       "dependencies": [
         "val_aloe_piece"
@@ -133,8 +131,7 @@
       "x": 144,
       "y": 192,
       "description": [
-        "Upgrade your Aloe Bandage. Mirrors the valoria:basic_medicine advancement.",
-        "Original items: Aloe Bandage Upgraded (valoria)"
+        "Upgrade your Aloe Bandage. Mirrors the valoria:basic_medicine advancement."
       ],
       "dependencies": [
         "val_first_help"
@@ -170,8 +167,7 @@
       "x": 48,
       "y": 0,
       "description": [
-        "Mine a geode for hidden treasures. Mirrors the valoria:geodes advancement.",
-        "Original items: any item from #valoria:geodes (Stone Geode or Dirt Geode)"
+        "Mine a geode for hidden treasures. Mirrors the valoria:geodes advancement."
       ],
       "dependencies": [
         "val_path_of_valoria"
@@ -208,8 +204,7 @@
       "y": 0,
       "description": [
         "Alloy gold and cobalt into Black Gold — Valoria's gateway metal.",
-        "Codex: \"Alloy of Gold and Cobalt\"",
-        "Original items: Black Gold Ingot (valoria)"
+        "Codex: \"Alloy of Gold and Cobalt\""
       ],
       "dependencies": [
         "val_geodes"
@@ -245,8 +240,7 @@
       "x": 48,
       "y": 192,
       "description": [
-        "Build the Heavy Workbench. Codex: \"A workbench used by Tinkerers.\"",
-        "Original items: Heavy Workbench (valoria)"
+        "Build the Heavy Workbench. Codex: \"A workbench used by Tinkerers.\""
       ],
       "dependencies": [
         "val_path_of_valoria"
@@ -282,8 +276,7 @@
       "x": 48,
       "y": 48,
       "description": [
-        "Set up the basic Alchemy Station. Crafts brews and runes.",
-        "Original items: Alchemy Station Tier 1 (valoria)"
+        "Set up the basic Alchemy Station. Crafts brews and runes."
       ],
       "dependencies": [
         "val_path_of_valoria"
@@ -319,8 +312,7 @@
       "x": 144,
       "y": 0,
       "description": [
-        "Slay an Elemental and harvest its crystal. Mirrors the valoria:elemental_crystal advancement.",
-        "Original items: Elemental Crystal (valoria)"
+        "Slay an Elemental and harvest its crystal. Mirrors the valoria:elemental_crystal advancement."
       ],
       "dependencies": [
         "val_kill_ents"
@@ -357,8 +349,7 @@
       "y": 48,
       "description": [
         "Craft the Elemental Manipulator — the forge for the four elemental cores.",
-        "Mirrors the valoria:elemental_manipulator advancement.",
-        "Original items: Elemental Manipulator (valoria)"
+        "Mirrors the valoria:elemental_manipulator advancement."
       ],
       "dependencies": [
         "val_elemental_crystal",
@@ -548,8 +539,7 @@
       "x": 144,
       "y": 144,
       "description": [
-        "Slay an Ent and harvest the Harmony Heart. Mirrors the valoria:harmony_heart advancement.",
-        "Original items: Harmony Heart (valoria)"
+        "Slay an Ent and harvest the Harmony Heart. Mirrors the valoria:harmony_heart advancement."
       ],
       "dependencies": [
         "val_kill_ents"
@@ -585,8 +575,7 @@
       "x": 192,
       "y": 0,
       "description": [
-        "Hunt Devils for the rare Devil Heart (5% on player kill). Mirrors the valoria:devil_heart advancement.",
-        "Original items: Devil Heart (valoria)"
+        "Hunt Devils for the rare Devil Heart (5% on player kill). Mirrors the valoria:devil_heart advancement."
       ],
       "dependencies": [
         "val_kill_devils"
@@ -623,8 +612,7 @@
       "y": 96,
       "description": [
         "Hunt Sorcerers and Draugrs for the Necromancer Grimoire — a rare drop.",
-        "Codex: \"To kill the Necromancer firstly obtain a Necromancer Grimoire from killing Draugrs or Sorcerers.\"",
-        "Original items: Necromancer Grimoire (valoria)"
+        "Codex: \"To kill the Necromancer firstly obtain a Necromancer Grimoire from killing Draugrs or Sorcerers.\""
       ],
       "dependencies": [
         "val_kill_draugrs"
@@ -664,8 +652,7 @@
         "Find a Crypt structure and locate its Cryptic Altar. Place the Grimoire there to awaken the Necromancer.",
         "&6Tip:&r A &eExplorer's Compass&r will point you straight at the nearest Necromancer Crypt.",
         "Codex: \"Many of Necromancers descended underground, leaving empty tombs.\"",
-        "Codex: \"To awaken the Necromancer, find buried crypt and place the grimoire upon the ancient altar...\"",
-        "Original items: Cryptic Altar (valoria)"
+        "Codex: \"To awaken the Necromancer, find buried crypt and place the grimoire upon the ancient altar...\""
       ],
       "dependencies": [
         "val_necromancer_grimoire"
@@ -823,8 +810,7 @@
       "x": 336,
       "y": 0,
       "description": [
-        "Mine Jade in The Valoria dimension. Mirrors the valoria:jade advancement.",
-        "Original items: Jade (valoria)"
+        "Mine Jade in The Valoria dimension. Mirrors the valoria:jade advancement."
       ],
       "dependencies": [
         "val_visit_valoria"
@@ -861,8 +847,7 @@
       "y": 96,
       "description": [
         "Mine Pyratite in The Valoria dimension. Volatile material.",
-        "Mirrors the valoria:pyratite advancement.",
-        "Original items: Pyratite (valoria)"
+        "Mirrors the valoria:pyratite advancement."
       ],
       "dependencies": [
         "val_visit_valoria"
@@ -900,8 +885,7 @@
       "description": [
         "Find the Void Fortress structure. Codex: \"Take a visit to the Void Fortress.\"",
         "It contains the Wicked Altar — used to awaken the Wicked Crystal with a Crystal Summon Book.",
-        "&6Tip:&r A &eExplorer's Compass&r locked to the Void Fortress will guide you to it inside The Valoria.",
-        "Original items: Wicked Altar (valoria)"
+        "&6Tip:&r A &eExplorer's Compass&r locked to the Void Fortress will guide you to it inside The Valoria."
       ],
       "dependencies": [
         "val_kill_wicked_scorpions"
@@ -938,8 +922,7 @@
       "y": 48,
       "description": [
         "Defeat the Wicked Crystal — the final boss. HP 2000, 0 melee damage but devastating spells: Crystal Storm rains 6-damage projectiles, Radial Attack hits 1.5-block AoE for 6, summons Wicked Shields (25 HP) and Crystal minions (35 HP), pulls players toward it. Two phases.",
-        "Mirrors the valoria:wicked_crystal advancement.",
-        "GRANTS lunatic_cultist — Valoria's chapter completion stage (slots in for GC's AbyssalCraft progression)."
+        "Mirrors the valoria:wicked_crystal advancement."
       ],
       "dependencies": [
         "val_void_fortress"
@@ -982,8 +965,7 @@
       "y": 240,
       "description": [
         "Forge the Reaper Scythe — Valoria's literal name match for AC's Soulreaper. Wither-slayer-tier kill weapon.",
-        "Craft it any time of year: Iron Scythe + Block of Emerald + Jack o'Lantern. (The Haunted Merchant also sells it during Halloween.)",
-        "Original items: Reaper Scythe (valoria)"
+        "Craft it any time of year: Iron Scythe + Block of Emerald + Jack o'Lantern. (The Haunted Merchant also sells it during Halloween.)"
       ],
       "dependencies": [
         "val_path_of_valoria"
@@ -1020,9 +1002,7 @@
       "y": 48,
       "description": [
         "Summon Firron via the Summoning Pedestal. Catalyst (held): 1× Devil Heart. Sacrifices: 1× Ravaging Catalyst + 1× Ethereal Shard + 1× Infernal Stone.",
-        "Firron is WIP in the Valoria mod itself (no native spawn). The summon ritual is a SoA addition that mirrors GC's Idol-of-Sorrow pattern using Necromancer + Devil + Dryador drops.",
-        "HP 1500, 15 melee damage, 20 armor — hits hard. 4 attack patterns + 2 phases.",
-        "Original items: kill valoria:firron"
+        "HP 1500, 15 melee damage, 20 armor — hits hard. 4 attack patterns + 2 phases."
       ],
       "dependencies": [
         "val_devil_heart",

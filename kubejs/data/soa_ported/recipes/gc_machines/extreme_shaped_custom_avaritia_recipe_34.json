@@ -1,0 +1,22 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA",
+    "AAAAAAAAA"
+  ],
+  "key": {
+    "A": {
+      "item": "soa_additions:compressed_experience_block"
+    }
+  },
+  "result": {
+    "item": "soa_additions:pearl_of_knowledge"
+  }
+}

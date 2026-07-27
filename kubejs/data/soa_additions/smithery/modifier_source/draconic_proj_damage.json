@@ -1,0 +1,5 @@
+{
+  "source_item": "draconicevolution:item_draconic_proj_damage",
+  "modifier": "soa_additions:tconevo.draconic_arrow_damage",
+  "unit_value": 4
+}

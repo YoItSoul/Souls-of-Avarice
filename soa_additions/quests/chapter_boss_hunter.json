@@ -157,40 +157,6 @@
       ]
     },
     {
-      "id": "quest_mo4lkqwj",
-      "title": "Ender Guardian",
-      "icon": "cataclysm:ender_guardian_spawn_egg",
-      "shape": "square",
-      "x": 192,
-      "y": 96,
-      "description": [
-        "Defeat the Ender Guardian Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ender_guardian",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 700
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "bh_aq_cornelia",
       "title": "Captain Cornelia",
       "icon": "aquamirae:captain_cornelia_spawn_egg",
@@ -216,210 +182,6 @@
         {
           "type": "soa_additions:xp",
           "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4lq3ca",
-      "title": "The Harbinger",
-      "icon": "cataclysm:the_harbinger_spawn_egg",
-      "shape": "square",
-      "x": 336,
-      "y": 96,
-      "description": [
-        "Defeat the Harbinger Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:the_harbinger",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 700
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4m2sgd",
-      "title": "Scylla",
-      "icon": "cataclysm:scylla_spawn_egg",
-      "shape": "square",
-      "x": 192,
-      "y": 144,
-      "description": [
-        "Defeat the Scylla Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:scylla",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 900
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4lrcip",
-      "title": "The Leviathan",
-      "icon": "cataclysm:the_leviathan_spawn_egg",
-      "shape": "square",
-      "x": 288,
-      "y": 192,
-      "description": [
-        "Defeat the Leviathan Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:the_leviathan",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1100
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4m14zb",
-      "title": "Maledictus",
-      "icon": "cataclysm:maledictus_spawn_egg",
-      "shape": "square",
-      "x": 144,
-      "y": 144,
-      "description": [
-        "Defeat the Maledictus Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:maledictus",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 900
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4ltw9i",
-      "title": "Ancient Remnant",
-      "icon": "cataclysm:ancient_remnant_spawn_egg",
-      "shape": "square",
-      "x": 48,
-      "y": 144,
-      "description": [
-        "Defeat the Ancient Remnant Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ancient_remnant",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 900
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4lypt9",
-      "title": "Ignis",
-      "icon": "cataclysm:ignis_spawn_egg",
-      "shape": "square",
-      "x": 144,
-      "y": 288,
-      "description": [
-        "Defeat the Ignis Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:ignis",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\",Type:\"EPIC\",Name:\"Epic Loot Crate\",Color:16733695} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1800
         }
       ],
       "modes": [
@@ -842,142 +604,6 @@
       ]
     },
     {
-      "id": "bh_bomd_gauntlet",
-      "title": "Gauntlet",
-      "icon": "minecraft:iron_block",
-      "shape": "square",
-      "x": 288,
-      "y": 96,
-      "description": [
-        "Defeat the Gauntlet Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:gauntlet",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 700
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_lich",
-      "title": "Night Lich",
-      "icon": "minecraft:wither_skeleton_skull",
-      "shape": "square",
-      "x": 96,
-      "y": 192,
-      "description": [
-        "Defeat the Night Lich Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:lich",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1100
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_obsidilith",
-      "title": "Obsidilith",
-      "icon": "minecraft:crying_obsidian",
-      "shape": "square",
-      "x": 144,
-      "y": 192,
-      "description": [
-        "Defeat the Obsidilith Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:obsidilith",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1100
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "bh_bomd_void_blossom",
-      "title": "Void Blossom",
-      "icon": "minecraft:wither_rose",
-      "shape": "square",
-      "x": 336,
-      "y": 240,
-      "description": [
-        "Defeat the Void Blossom Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "bosses_of_mass_destruction:void_blossom",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\",Type:\"EPIC\",Name:\"Epic Loot Crate\",Color:16733695} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "bh_myf_bellringer",
       "title": "Bellringer",
       "icon": "meetyourfight:bellringer_spawn_egg",
@@ -1116,7 +742,9 @@
     {
       "id": "bh_bs_summoner",
       "title": "Summoner",
-      "icon": "blue_skies:summoner_spawn_egg",
+      "icon": "minecraft:obsidian",
+      "visibility": "invisible",
+      "optional": true,
       "shape": "square",
       "x": 192,
       "y": 192,
@@ -1150,7 +778,9 @@
     {
       "id": "bh_bs_alchemist",
       "title": "Alchemist",
-      "icon": "blue_skies:alchemist_spawn_egg",
+      "icon": "minecraft:obsidian",
+      "visibility": "invisible",
+      "optional": true,
       "shape": "square",
       "x": 48,
       "y": 240,
@@ -1184,7 +814,9 @@
     {
       "id": "bh_bs_starlit_crusher",
       "title": "Starlit Crusher",
-      "icon": "blue_skies:starlit_crusher_spawn_egg",
+      "icon": "minecraft:obsidian",
+      "visibility": "invisible",
+      "optional": true,
       "shape": "square",
       "x": 240,
       "y": 288,
@@ -1218,7 +850,9 @@
     {
       "id": "bh_bs_arachnarch",
       "title": "Arachnarch",
-      "icon": "blue_skies:arachnarch_spawn_egg",
+      "icon": "minecraft:obsidian",
+      "visibility": "invisible",
+      "optional": true,
       "shape": "square",
       "x": 48,
       "y": 288,
@@ -1230,40 +864,6 @@
         {
           "type": "soa_additions:kill",
           "entity": "blue_skies:arachnarch",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_epic\",Type:\"EPIC\",Name:\"Epic Loot Crate\",Color:16733695} 1"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1800
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo4ln2b7",
-      "title": "Netherite Monstrosity",
-      "icon": "cataclysm:netherite_monstrosity_spawn_egg",
-      "shape": "square",
-      "x": 192,
-      "y": 288,
-      "description": [
-        "Defeat the Netherite Monstrosity Boss."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "cataclysm:netherite_monstrosity",
           "count": 1
         }
       ],

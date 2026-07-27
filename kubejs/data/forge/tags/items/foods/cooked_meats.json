@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "aquaculturedelight:roasted_tambaqui",
+    "createfood:cooked_rabbit_cuts",
+    "farmersdelight:cooked_bacon",
+    "farmersdelight:cooked_chicken_cuts",
+    "farmersdelight:cooked_mutton_chops",
+    "farmersdelight:roast_chicken",
+    "farmersdelight:roast_chicken_block",
+    "farmersdelight:roasted_mutton_chops",
+    "farmersdelight:steak_and_potatoes",
+    "minecraft:cooked_beef",
+    "minecraft:cooked_chicken",
+    "minecraft:cooked_mutton",
+    "minecraft:cooked_porkchop",
+    "minecraft:cooked_rabbit",
+    "nethersdelight:plate_of_stuffed_hoglin_roast",
+    "unusual_delight:jungle_roast",
+    "unusual_delight:roast_tentacle",
+    "unusual_delight:steak_and_pod"
+  ]
+}

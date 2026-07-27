@@ -454,7 +454,7 @@
     {
       "id": "mil_purifier_ii",
       "title": "Purifier II",
-      "icon": "netherex:wither_bone",
+      "icon": "minecraft:wither_skeleton_skull",
       "x": 320,
       "y": 64,
       "description": [
@@ -733,7 +733,12 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:reinforced_ingot",
+          "count": 16
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:resistance_mat",
           "count": 16
         },
         {
@@ -746,7 +751,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:ichor_slime_crystal",
+          "item": "smithery:red_slime",
           "count": 16
         }
       ],
@@ -1191,7 +1196,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "tconstruct:amethyst_bronze_ingot",
+          "item": "soa_additions:creative_shard",
           "count": 1
         },
         {

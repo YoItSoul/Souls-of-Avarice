@@ -60,4 +60,8 @@ Difficulty = "NORM"
 #This will try to give all dungeons a spawner density no greater than that typical 
 #of a size Large dungeon.  This mostly effects Small and Tiny dungeons.)
 "Cull Spawners" = true
+#Mixed: Chests have mixed loot tables.
+#Original: Uses original 1/3 random-mixed third loot.
+#Allowed Values: MIXED, ORIGINAL
+"Chest Loot Style" = "ORIGINAL"
 

@@ -1,0 +1,11 @@
+{
+  "type": "avaritia:compressor",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "inputCount": 64,
+  "result": {
+    "item": "minecraft:diamond"
+  },
+  "timeCost": 200
+}

@@ -1,0 +1,22 @@
+{
+  "type": "avaritia:shaped_table",
+  "pattern": [
+    "    I    ",
+    "   III   ",
+    "  IBBBI  ",
+    " IIBSBII ",
+    " SIBBBIS ",
+    " SSIIISS ",
+    "  SSISS  ",
+    "   SSS   ",
+    "    S    "
+  ],
+  "key": {
+    "I": { "item": "avaritia:infinity_ingot" },
+    "B": { "item": "avaritia:infinity" },
+    "S": { "item": "soa_additions:creative_soul" }
+  },
+  "result": {
+    "item": "ae2:creative_item_cell"
+  }
+}

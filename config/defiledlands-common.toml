@@ -1,0 +1,73 @@
+
+#General configuration
+[general]
+	#If true, defiled blocks will automatically spread corruption to adjacent blocks.
+	#Default: false (spreading is disabled by default).
+	spreadEnabled = false
+	#If true, defiled blocks only spread corruption when inside defiled biomes.
+	#Has no effect when spreadEnabled is false.
+	#Default: true.
+	confinedSpread = true
+	#Number of spread attempts per random tick.
+	#Higher values make corruption spread faster.
+	#Default: 4.
+	#Range: 1 ~ 20
+	spreadAttempts = 4
+	#Spread radius in blocks per attempt.
+	#Higher values make corruption spread over a wider area.
+	#Default: 2.
+	#Range: 1 ~ 8
+	spreadRange = 2
+
+#World generation configuration
+[worldgen]
+	#TerraBlender region weight for defiled biomes.
+	#Higher values make defiled biomes more common.
+	#Set to 0 to completely disable defiled biome generation.
+	#Requires game restart to take effect.
+	#Default: 5.
+	#Range: 0 ~ 50
+	biomeRegionWeight = 3
+	#If true, defiled dungeons will generate underground in defiled biomes.
+	#Default: true.
+	dungeonEnabled = true
+	#If true, conjuring altars will generate in defiled biomes.
+	#Default: true.
+	altarEnabled = true
+	#Extra rarity multiplier for conjuring altar generation.
+	#The base rarity is already set by the placed_feature JSON (1 in 32 chunks).
+	#This value further divides the chance: 1 = no change, 2 = half as common, 4 = quarter, etc.
+	#Default: 1.
+	#Range: 1 ~ 100
+	altarExtraRarity = 1
+
+#Book Wyrm configuration
+[bookwyrm]
+	#Each point of Luck attribute multiplies the default chance to breed a golden Book Wyrm by this factor.
+	#Formula: actual_chance = base_chance * (1 + luck * goldWyrmPerLuck)
+	#Example: with 5 Luck and factor 0.2, chances are multiplied by 2 (5 * 0.2 = 1.0, so +100%).
+	#Base chances: purple+purple=1%, gold+purple=4%, gold+gold=10%.
+	#Set to 0.0 to disable luck influence. Default: 0.2.
+	#Range: 0.0 ~ 10.0
+	goldWyrmPerLuck = 0.2
+	#Maximum value that a Book Wyrm's MaxLevel (digest threshold) can reach through breeding.
+	#Higher values allow breeding wyrms with larger digest capacity.
+	#Default: 30.
+	#Range: 1 ~ 10000
+	wyrmMaxLevelCap = 30
+	#If false, wyrmEnchantList is a BLACKLIST: listed enchantments will never be produced by Book Wyrms.
+	#If true, wyrmEnchantList is a WHITELIST: only listed enchantments can be produced.
+	#Default: false (blacklist mode).
+	wyrmEnchantListIsWhitelist = false
+	#List of enchantment IDs to filter when a Book Wyrm produces enchanted books.
+	#Format: "namespace:enchantment_id", e.g. "minecraft:mending", "minecraft:soul_speed".
+	#Behavior depends on wyrmEnchantListIsWhitelist.
+	#Default: empty (no filtering).
+	wyrmEnchantList = []
+	#Enchantment conversion rate for Book Wyrms.
+	#Affects both the digest burden when feeding enchanted books and the output budget when producing them.
+	#Higher values mean more digest burden per enchantment and fewer output enchantments.
+	#Default: 1.0.
+	#Range: 0.1 ~ 10.0
+	wyrmConversionRate = 1.0
+

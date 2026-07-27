@@ -5,7 +5,7 @@
 // shift-right-clicked a Summoning Altar with the Sun Totem catalyst:
 //   - 1x Barako with Solar Seed in main hand
 //   - BARAKO_MINION_COUNT Barakoaya minions
-//   - BARAKO_HP scaled by packmode (15000/30000/100000 for casual/normal/expert)
+//   - BARAKO_HP scaled by packmode (30000/60000/100000 for casual/adventure/expert)
 //   - Required clear 15x15x7 area, day-only, not-raining, overworld-only
 //
 // 1.20.1 uses summoningrituals (Bagels Mods). Constraints translated:
@@ -43,12 +43,15 @@ ServerEvents.recipes(event => {
                 .offset(0, 1, 0)
                 .spread(7, 3, 7)
         )
-        .input('1x soa_additions:solarium_star')
-        .input('4x minecraft:gold_block')
-        .input('4x minecraft:fire_charge')
-        .input('1x minecraft:totem_of_undying')
+        // GC parity: NO reagents (barako.zs setReagents([]) — catalyst only).
+        // The earlier added inputs also created a progression DEADLOCK: the
+        // solarium_star sacrifice is crafted from Barako's own drops.
         .sacrificeRegion(13, 13)
         .recipeTime(400)
         .blockBelow('minecraft:smooth_sandstone')
+        // GC parity: full daylight + clear skies (barako.zs fail.3/fail.4) —
+        // summoningrituals supports both, contrary to the old comment above.
+        .dayTime('day')
+        .weather('clear')
     console.info('[soa_scripts] barako_ritual_recipe.js: DONE')
 })

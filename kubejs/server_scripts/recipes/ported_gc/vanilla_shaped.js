@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
     spawnEgg('minecraft:blaze',    'minecraft:blaze_powder',    'blaze')
     spawnEgg('minecraft:cow',      'minecraft:leather',         'cow')
     spawnEgg('minecraft:enderman', 'minecraft:ender_pearl',     'enderman')
-    spawnEgg('minecraft:ghast',    '#minecraft:glass_blocks',   'ghast_glass')
+    spawnEgg('minecraft:ghast',    '#forge:glass',   'ghast_glass')
 
     // (death_counter recipe lives at kubejs/data/soa_additions/recipes/death_counter.json)
 
@@ -74,15 +74,18 @@ ServerEvents.recipes(event => {
 
     shp('minecraft:dragon_egg',
         [' A ', 'ABA', 'AAA'],
-        { A: '#forge:scale_dragon_ender', B: '#forge:nether_star' },
+        { A: '#forge:dragon_scales', B: '#forge:nether_stars' },
         'dragonegg')
 
     // [SoA] GC 'tconstruct:materials:50' = Creative Modifier
     // (verified GC shaped.zs:37). 1.20.1 TCon has 'tconstruct:creative_slot'
     // (the creative-mode modifier-slot item).
-    shp('tconstruct:creative_slot',
+    // GC 'Creative Modifier' (tconstruct:materials:50) -> soa_additions:creative_modifier.
+    // Item ported into the soa_additions mod (ModItems.java); requires a mod rebuild to
+    // resolve in-game. The Smithery modifier BEHAVIOR still needs wiring separately.
+    shp('soa_additions:creative_modifier',
         [' A ', ' B '],
-        { A: '#forge:blocks/draconic_metal', B: 'avaritia:singularity' },
+        { A: '#forge:storage_blocks/draconic_metal', B: 'avaritia:singularity' },  // tag shipped by soa_additions (storage_blocks/, not blocks/)
         'creativehead')
 
     // [SoA] Disabled — result rename works (skull:1 → wither_skeleton_skull),
@@ -104,7 +107,7 @@ ServerEvents.recipes(event => {
     // remapped. 'scalinghealth:heart_crystal' may also need a successor.
     shp('soa_additions:difficulty_changer',
         [' A ', 'ABA', 'AAA'],
-        { A: 'tconstruct:materials', B: 'scalinghealth:heart_crystal' },
+        { A: 'soa_additions:wither_bone', B: 'scalinghealth:heart_crystal' },  // GC materials:17 = Necrotic Bone
         'difficultychanger_up_2')
 
     shp('soa_additions:difficulty_changer',
@@ -139,12 +142,12 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:bloody_sacrifice',
         ['ABA', 'BCB', 'ABA'],
-        { A: 'soa_additions:raw_human_meat', B: 'tconstruct:edible', C: 'minecraft:bone' },
+        { A: 'soa_additions:raw_human_meat', B: 'soa_additions:coagulated_blood', C: 'minecraft:bone' },
         'auto_gen_-1707222290')
 
     shp('soa_additions:bloody_sacrifice',
         ['ABA', 'BCB', 'ABA'],
-        { A: 'tconstruct:edible', B: 'soa_additions:raw_human_meat', C: 'minecraft:bone' },
+        { A: 'soa_additions:coagulated_blood', B: 'soa_additions:raw_human_meat', C: 'minecraft:bone' },
         'auto_gen_-1352061026')
 
     shp('soa_additions:true_blood_sigil',
@@ -164,12 +167,12 @@ ServerEvents.recipes(event => {
 
     shp(Item.of('chancecubes:chance_cube', 4),
         ['ABA', 'BCB', 'ABA'],
-        { A: 'minecraft:dye', B: 'minecraft:lapis_block', C: 'soa_additions:lucky_clover' },
+        { A: 'minecraft:lapis_lazuli', B: 'minecraft:lapis_block', C: 'soa_additions:lucky_clover' },  // GC dye:4 = lapis; 'minecraft:dye' was a dead 1.20 id
         'auto_gen_-1533033400')
 
     shp('projecte:harvest_goddess_band',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:soul_creative', B: 'minecraft:vine', C: 'projecte:item.pe_ring_iron_band' },
+        { A: '#forge:soul_creative', B: 'minecraft:vine', C: 'projecte:iron_band' },
         'auto_gen_1124990531')
 
     shp('projecte:nova_catalyst',
@@ -184,17 +187,17 @@ ServerEvents.recipes(event => {
 
     shp(Item.of('minecraft:coal', 4),
         [' A ', 'ABA', ' A '],
-        { A: '#forge:coal', B: '#forge:logs/wood' },
+        { A: '#forge:coal', B: '#minecraft:logs' },
         'wood_to_charcoal')
 
     shp('soa_additions:medkit_small',
         [' A ', 'ABA', ' A '],
-        { A: 'scalinghealth:heartdust', B: 'minecraft:glass_bottle' },
+        { A: 'scalinghealth:heart_dust', B: 'minecraft:glass_bottle' },
         'auto_gen_-162477942')
 
     shp('soa_additions:medkit_big',
         [' A ', 'ABA', ' A '],
-        { A: 'scalinghealth:crystalshard', B: 'soa_additions:medkit_small' },
+        { A: 'scalinghealth:heart_crystal_shard', B: 'soa_additions:medkit_small' },
         'auto_gen_-1175705809')
 
     shp('soa_additions:medkit_super',
@@ -202,10 +205,10 @@ ServerEvents.recipes(event => {
         { A: 'scalinghealth:heart_crystal', B: 'soa_additions:medkit_big' },
         'auto_gen_-1873046907')
 
-    shp(Item.of('mysticalagriculture:growth_accelerator', 2),
-        ['AAA', 'ABA', 'AAA'],
-        { A: 'mysticalagriculture:storage', B: '#forge:blocks/cytosinite' },
-        'auto_gen_1179581625')
+    // [SoA-FLAG: MA 1.20 split into 5 tiers; no 1:1 mapping] shp(Item.of('mysticalagriculture:growth_accelerator', 2),
+    //     ['AAA', 'ABA', 'AAA'],
+    //     { A: 'mysticalagriculture:storage', B: '#forge:storage_blocks/cytosinite' },
+    //     'auto_gen_1179581625')
 
     // [SoA] Mekanism Generators 'generator' meta-item resolved from GC source
     // metadata (verified GC shaped.zs:252,267,292,297,302):
@@ -229,12 +232,12 @@ ServerEvents.recipes(event => {
     //   machineblock2:6 = Chemical Washer   → mekanism:chemical_washer
     shp('mekanism:digital_miner',
         ['ABA', 'CDE', 'FGF'],
-        { A: 'mekanism:teleportation_core', B: 'mekanism:logistical_sorter', C: 'mekanism:robit', D: 'mekanism:steel_casing', E: 'mekanism:chemical_washer', F: '#forge:shards/creative', G: '#forge:blocks/wyvern_metal' },
+        { A: 'mekanism:teleportation_core', B: 'mekanism:logistical_sorter', C: 'mekanism:robit', D: 'mekanism:steel_casing', E: 'mekanism:chemical_washer', F: '#forge:shards/creative', G: '#forge:storage_blocks/wyvern_metal' },
         'auto_gen_-1864302722')
 
     shp('mekanismgenerators:gas_burning_generator',
         [' A ', 'ABA', 'CDC'],
-        { A: '#forge:alloy_ultimate', B: '#forge:ingots/aeonsteel', C: 'mekanism:energy_tablet', D: '#forge:circuit_ultimate' },
+        { A: '#forge:alloys/ultimate', B: '#forge:ingots/aeonsteel', C: 'mekanism:energy_tablet', D: '#forge:circuits/ultimate' },
         'auto_gen_1084804943')
 
     // Mekanism 1.20.1 alloy renames: atomicalloy → alloy_atomic,
@@ -263,6 +266,12 @@ ServerEvents.recipes(event => {
         ['AAA', 'AAA', 'AAA'],
         { A: 'soa_additions:experience_nugget' },
         'auto_gen_-1600085367')
+
+    // GC auto_gen: 9x Actually Additions Solidified Experience -> Knowledge Essence Ingot
+    shp('soa_additions:experience_ingot',
+        ['AAA', 'AAA', 'AAA'],
+        { A: 'actuallyadditions:solidified_experience' },
+        'experience_ingot_from_solidified')
 
     shp('soa_additions:experience_block',
         ['AAA', 'AAA', 'AAA'],
@@ -316,13 +325,14 @@ ServerEvents.recipes(event => {
 
     shp('waystones:warp_stone',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:obsidian', B: '#forge:gems/diamond', C: '#forge:enderpearl' },
+        { A: '#forge:obsidian', B: '#forge:gems/diamond', C: '#forge:ender_pearls' },
         'auto_gen_918073950')
 
-    // [SoA] GC source: 'thermalfoundation:material:23' = Saw Blade
-    // (verified GC shaped.zs:422). Thermal 1.20.1 keeps this as
-    // 'thermal:saw_blade'.
-    shp('thermal:saw_blade',
+    // [SoA] GC source: 'thermalfoundation:material:23' = Stone Gear (verified via
+    // GC lang: material:23 -> "Stone Gear"; Saw Blade is material:657, a DIFFERENT
+    // id). Prior port wrongly output thermal:saw_blade from cobblestone. Correct
+    // 1.20 "Stone Gear" is hammerlib:gears/stone (no native recipe in the jar).
+    shp('hammerlib:gears/stone',
         [' A ', 'A A', ' A '],
         { A: '#forge:cobblestone' },
         'auto_gen_2018337295')
@@ -342,14 +352,14 @@ ServerEvents.recipes(event => {
         { A: 'soa_additions:bounty_hunter_medal_silver' },
         'bh_medal_upgrade1')
 
-    shp(Item.of('appliedenergistics2:material', 4),
+    shp(Item.of('ae2:certus_quartz_crystal', 4),
         [' A ', 'ABA', ' A '],
         { A: '#forge:dusts/redstone', B: '#forge:gems/quartz' },
         'auto_gen_-555162558')
 
     shp('soa_additions:bravery_certificate',
         ['ABA', 'CDC'],
-        { A: '#forge:ingots/asgardium', B: '#forge:nether_star', C: '#forge:ingots/aeroite', D: 'aether:golden_amber' },
+        { A: '#forge:ingots/asgardium', B: '#forge:nether_stars', C: '#forge:ingots/aeroite', D: 'aether:golden_amber' },
         'auto_gen_-696385933')
 
     shp('soa_additions:fusion_matrix_block',
@@ -359,7 +369,7 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:death_coin',
         ['ABA', 'CDC', 'AEA'],
-        { A: 'draconicevolution:awakened_core', B: 'soa_additions:ancient_tome_fragment', C: 'tconevo:wyvern_ingot', D: 'soa_additions:bounty_hunter_medal', E: '#forge:shards/creative' },
+        { A: 'draconicevolution:awakened_core', B: 'soa_additions:ancient_tome_fragment', C: 'tconevo:draconic_metal_ingot', D: 'soa_additions:bounty_hunter_medal', E: '#forge:shards/creative' },  // GC metal:5 = Draconic Metal Ingot
         'auto_gen_-1606461473')
 
     shp('soa_additions:infernium_ingot',
@@ -381,7 +391,7 @@ ServerEvents.recipes(event => {
     // recipe (sticks/wood + stone_pickaxe + string) is the wooden hook.
     shp('rehooked:wood_hook',
         ['AAB', ' CA', 'C A'],
-        { A: '#forge:sticks/wood', B: 'minecraft:stone_pickaxe', C: '#forge:string' },
+        { A: '#forge:rods/wooden', B: 'minecraft:stone_pickaxe', C: '#forge:string' },
         'auto_gen_1397188541')
 
     shp('soa_additions:cryonium_block',
@@ -391,22 +401,22 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:beast_hand',
         ['ABA', 'CDC', ' C '],
-        { A: '#forge:ingots/aeonsteel', B: '#forge:blocks/snow', C: 'twilightforest:alpha_fur', D: '#forge:dusts/draconium' },
+        { A: '#forge:ingots/aeonsteel', B: '#forge:storage_blocks/snow', C: 'twilightforest:alpha_yeti_fur', D: '#forge:dusts/draconium' },
         'auto_gen_100207823')
 
     shp('soa_additions:sun_totem',
         [' A ', 'BCB', ' D '],
-        { A: 'draconicevolution:wyvern_core', B: '#forge:ingots/solarium', C: 'minecraft:totem_of_undying', D: '#forge:nether_star' },
+        { A: 'draconicevolution:wyvern_core', B: '#forge:ingots/solarium', C: 'minecraft:totem_of_undying', D: '#forge:nether_stars' },
         'auto_gen_1913024224')
 
     shp('cyclic:miner',
         [' A ', 'BCB', ' D '],
-        { A: 'minecraft:iron_pickaxe', B: '#forge:circuit_ultimate', C: 'rftools:machine_frame', D: '#forge:shards/creative' },
+        { A: 'minecraft:iron_pickaxe', B: '#forge:circuits/ultimate', C: 'rftools:machine_frame', D: '#forge:shards/creative' },
         'auto_gen_-935233766')
 
     shp('cyclic:slingshot',
         ['ABA', ' A ', ' A '],
-        { A: '#forge:sticks/wood', B: '#forge:string' },
+        { A: '#forge:rods/wooden', B: '#forge:string' },
         'auto_gen_-1848316431')
 
     // [SoA] RFTools split into rftoolsbase/rftoolsutility/etc. in 1.20.1.
@@ -415,7 +425,7 @@ ServerEvents.recipes(event => {
     // aren't present in this pack's RFTools subset — left disabled.
     shp('rftoolsbase:machine_frame',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:blocks/glass', B: '#forge:ingots/iron', C: '#forge:gears/tin' },
+        { A: '#forge:glass', B: '#forge:ingots/iron', C: '#forge:gears/tin' },
         'frame_alt')
 
     /*
@@ -431,7 +441,7 @@ ServerEvents.recipes(event => {
 
     shp('rftools:environmental_controller',
         ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:pearl_ender_eye', B: '#forge:nether_star', C: '#forge:shards/creative', D: 'rftools:machine_frame' },
+        { A: '#forge:pearl_ender_eye', B: '#forge:nether_stars', C: '#forge:shards/creative', D: 'rftools:machine_frame' },
         'environmental_controller')
     */
 
@@ -487,12 +497,12 @@ ServerEvents.recipes(event => {
 
     shp('minecraft:beacon',
         ['AAA', 'ABA', 'CCC'],
-        { A: '#forge:pane_glass', B: '#forge:blocks/terrasteel', C: '#forge:obsidian' },
+        { A: '#forge:glass_panes', B: '#forge:storage_blocks/terrasteel', C: '#forge:obsidian' },
         'beacon')
 
     shp('soa_additions:difficulty_syncer',
         ['AAA', 'ABA', 'AAA'],
-        { A: '#forge:pane_glass', B: '#forge:bone' },
+        { A: '#forge:glass_panes', B: '#forge:bone' },
         'difficulty_syncer')
 
     // [SoA] Solar Flux 1.20.1 renamed panels to sp_N (solar_panel_1 → sp_1,
@@ -534,7 +544,7 @@ ServerEvents.recipes(event => {
 
     shp('minecraft:end_portal_frame',
         ['ABA', 'CCC', 'CCC'],
-        { A: '#forge:pearl_ender_eye', B: '#forge:nether_star', C: '#forge:endstone' },
+        { A: '#forge:pearl_ender_eye', B: '#forge:nether_stars', C: '#forge:end_stones' },
         'end_portal_frame')
 
     shp('soa_additions:experience_transporter',
@@ -559,7 +569,7 @@ ServerEvents.recipes(event => {
     // casing → 'mekanism:steel_casing'.
     shp('mekanism:steel_casing',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:ingots/stainless_steel', B: '#forge:blocks/glass_hardened', C: '#forge:ingots/osmium' },
+        { A: '#forge:ingots/stainless_steel', B: '#enderio:fused_quartz', C: '#forge:ingots/osmium' },
         'mekanism_casing')
 
     shp('buildinggadgets2:gadget_building',
@@ -574,24 +584,23 @@ ServerEvents.recipes(event => {
 
     shp('buildinggadgets2:gadget_copy_paste',
         ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:ingots/stainless_steel', B: '#forge:dusts/redstone', C: '#forge:slimeball', D: '#forge:gems/diamond' },
+        { A: '#forge:ingots/stainless_steel', B: '#forge:dusts/redstone', C: '#forge:slimeballs', D: '#forge:gems/diamond' },
         'auto_gen_-1071431898')
 
     shp('buildinggadgets2:gadget_destruction',
         ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:ingots/aeonsteel', B: 'minecraft:bedrock', C: '#forge:ingots/ravaging', D: '#forge:nether_star' },
+        { A: '#forge:ingots/aeonsteel', B: 'minecraft:bedrock', C: '#forge:ingots/ravaging', D: '#forge:nether_stars' },
         'auto_gen_12241914')
 
     // [SoA] Disabled — GC ingredient was 'thermalfoundation:material:833'
     // = Cryotheum Dust (verified GC shaped.zs). Thermal 1.20.1 dropped the
     // dust forms (only fluid 'thermal:cryotheum' remains), so no clean
     // item-form successor for the recipe.
-    /*
+    // GC material:833 = Tar (crafttweaker.log-verified); thermal 1.20 HAS thermal:tar.
     shp('soa_additions:nylon_string',
         ['AAA'],
-        { A: 'thermal:material' },
+        { A: 'thermal:tar' },
         'nylon_string')
-    */
 
     shp('soa_additions:nylon_cloth',
         ['AAA', 'AAA', 'AAA'],
@@ -601,12 +610,11 @@ ServerEvents.recipes(event => {
     // [SoA] Disabled — GC ingredient was 'thermalfoundation:material:832'
     // = Pyrotheum Dust (verified GC shaped.zs). Same rationale as nylon_string
     // above: Thermal 1.20.1 has no dust item form, only the fluid.
-    /*
+    // GC material:832 = Rosin (crafttweaker.log-verified); thermal 1.20 HAS thermal:rosin.
     shp('soa_additions:rubber_band',
         ['AAA'],
-        { A: 'thermal:material' },
+        { A: 'thermal:rosin' },
         'rubber_band')
-    */
 
     shp(Item.of('soa_additions:stainless_steel_ball', 24),
         [' A ', 'AAA', ' A '],
@@ -615,7 +623,7 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:plate_of_honor',
         [' A ', 'ABA', ' A '],
-        { A: 'quark:rune', B: '#forge:cast' },
+        { A: 'quark:rune', B: '#forge:casts' },
         'plate_of_honor')
 
     // [SoA] GC source 'projectex:collector:5' = top-tier collector
@@ -632,12 +640,12 @@ ServerEvents.recipes(event => {
 
     shp('cyclic:harvester',
         [' A ', 'BCB', 'DBD'],
-        { A: 'cyclic:tool_harvest_crops', B: '#forge:ingots/aeonsteel', C: 'minecraft:dispenser', D: '#forge:circuit_ultimate' },
+        { A: 'cyclic:tool_harvest_crops', B: '#forge:ingots/aeonsteel', C: 'minecraft:dispenser', D: '#forge:circuits/ultimate' },
         'harvester')
 
     shp(Item.of('mysticalagriculture:mystical_fertilizer', 2),
         ['ABA', 'BCB', 'ABA'],
-        { A: 'mysticalagriculture:fertilized_essence', B: 'thermal:fertilizer', C: '#forge:essence_supremium' },
+        { A: 'mysticalagriculture:fertilized_essence', B: 'thermal:fertilizer', C: '#forge:essences/supremium' },
         'ma_mystical_fertilizer')
 
     shp('soa_additions:protonium_block',
@@ -645,9 +653,13 @@ ServerEvents.recipes(event => {
         { A: '#forge:ingots/protonium' },
         'protonium_block')
 
+    // GC exact: NPN/PCP/NPN — P = projectex Purple Matter (now projectexpansion),
+    // C = Energy-Matter Conversion Core (GC transformReplace kept the core; KubeJS
+    // shaped consumes it — known divergence, flagged in REVIEW_CHECKLIST).
     shp('soa_additions:protonium_ingot',
-        ['ABA', 'ABA'],
-        { A: '#forge:nuggets/cosmic_neutronium', B: 'projectextended:matter' },
+        ['NPN', 'PCP', 'NPN'],
+        { N: '#forge:nuggets/neutronium', P: 'projectexpansion:purple_matter',
+          C: 'soa_additions:energy_matter_core' },
         'protonium_ingot')
 
     shp('soa_additions:electronium_block',
@@ -667,23 +679,23 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:loli_lolipop',
         [' AB', ' CA', 'C  '],
-        { A: '#forge:list_allsugar', B: '#forge:shards/time', C: '#forge:sticks/wood' },
+        { A: '#forge:list_allsugar', B: '#forge:shards/time', C: '#forge:rods/wooden' },
         'loli_lolipop')
 
     shp('bloodmagic:soulforge',
         ['A A', 'BCB', 'BDB'],
-        { A: '#forge:ingots/stainless_steel', B: '#forge:blocks/nether_brick', C: '#forge:rods/blaze', D: '#forge:blocks/iron' },
+        { A: '#forge:ingots/stainless_steel', B: '#forge:storage_blocks/nether_brick', C: '#forge:rods/blaze', D: '#forge:storage_blocks/iron' },
         'soul_forge')
 
-    shp(Item.of('enderio:item_endergy_conduit', 8),
-        ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:item_conduit_binder', B: '#forge:ingots/stellar_alloy', C: '#forge:item_infinity_goop', D: '#forge:ingots/titanium' },
-        'stellar_alloy_conduit_energy')
+    // [SoA-REMOVE: EnderIO dropped stellar-alloy conduit tier] shp(Item.of('enderio:item_endergy_conduit', 8),
+    //     ['ABA', 'CDC', 'ABA'],
+    //     { A: '#forge:item_conduit_binder', B: '#forge:ingots/stellar_alloy', C: '#forge:item_infinity_goop', D: '#forge:ingots/titanium' },
+    //     'stellar_alloy_conduit_energy')
 
-    shp(Item.of('enderio:item_fluid_conduit', 8),
-        ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:item_conduit_binder', B: '#forge:ingots/stellar_alloy', C: '#forge:blocks/glass_hardened', D: '#forge:ingots/titanium' },
-        'stellar_alloy_conduit_fluid')
+    // [SoA-REMOVE: EnderIO dropped stellar-alloy fluid conduit] shp(Item.of('enderio:item_fluid_conduit', 8),
+    //     ['ABA', 'CDC', 'ABA'],
+    //     { A: '#forge:item_conduit_binder', B: '#forge:ingots/stellar_alloy', C: '#enderio:fused_quartz', D: '#forge:ingots/titanium' },
+    //     'stellar_alloy_conduit_fluid')
 
     shp('cyclic:heart',
         ['AAA', 'ABA', 'AAA'],
@@ -693,39 +705,39 @@ ServerEvents.recipes(event => {
     // [SoA] Ender IO renamed item_soul_vial → empty_soul_vial in 1.20.1.
     shp('enderio:empty_soul_vial',
         [' A ', 'B B', ' B '],
-        { A: '#forge:ingots/soularium', B: '#forge:blocks/glass' },
+        { A: '#forge:ingots/soularium', B: '#forge:glass' },
         'soul_vial')
 
     // [SoA] 'rehooked:hook' meta-item → ender_hook for the result; ingredient
     // 'rehooked:hook' upgrades from iron_hook (mid-tier base hook).
     shp('rehooked:ender_hook',
         ['ABC', ' DB', 'E A'],
-        { A: '#forge:pearl_ender_eye', B: '#forge:rods/blaze', C: '#forge:endstone', D: 'rehooked:iron_hook', E: '#forge:dusts/blaze' },
+        { A: '#forge:pearl_ender_eye', B: '#forge:rods/blaze', C: '#forge:end_stones', D: 'rehooked:iron_hook', E: '#forge:dusts/blaze' },
         'ender_hook')
 
-    shp(Item.of('bloodmagic:soul_snare', 8),
-        ['  A', ' B ', 'C  '],
-        { A: 'minecraft:web', B: '#forge:strings/nylon', C: '#forge:ingots/thaumium' },
-        'soul_snare')
+    // [SoA-FLAG: GC recipe needs Thaumium (gone); BM native recipe kept] shp(Item.of('bloodmagic:soul_snare', 8),
+    //     ['  A', ' B ', 'C  '],
+    //     { A: 'minecraft:cobweb', B: '#forge:strings/nylon', C: '#forge:ingots/thaumium' },
+    //     'soul_snare')
 
     shp(Item.of('minecraft:iron_trapdoor', 2),
         ['AAA', 'ABA', 'AAA'],
         { A: '#forge:ingots/iron', B: '#forge:dusts/redstone' },
         'iron_trap_door')
 
-    shp(Item.of('mekanismgenerators:generator', 16),
+    shp(Item.of('mekanismgenerators:turbine_casing', 16),
         ['ABA', 'BCB', 'ABA'],
         { A: '#forge:ingots/titanium', B: '#forge:ingots/aeonsteel', C: 'soa_additions:creative_shard' },
         'turbo_casing')
 
     shp('twilightforest:charm_of_keeping_2',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:ingots/durasteel', B: 'twilightforest:charm_of_keeping_1', C: 'minecraft:golden_apple' },
+        { A: '#forge:ingots/durasteel', B: 'twilightforest:charm_of_keeping_1', C: 'minecraft:enchanted_golden_apple' },  // GC golden_apple:1
         'charm_of_keeping_2')
 
     shp('twilightforest:charm_of_keeping_3',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:ingots/aeonsteel', B: 'twilightforest:charm_of_keeping_2', C: '#forge:nether_star' },
+        { A: '#forge:ingots/aeonsteel', B: 'twilightforest:charm_of_keeping_2', C: '#forge:nether_stars' },
         'charm_of_keeping_3')
 
     // [SoA] 'mekanism:basicblock2:7' = Formulaic Assemblicator (verified GC
@@ -740,37 +752,37 @@ ServerEvents.recipes(event => {
     // 1.12 controlcircuit metadata: 0=basic, 1=advanced, 2=elite, 3=ultimate.
     shp('mekanism:advanced_control_circuit',
         [' A ', 'BCB', ' A '],
-        { A: '#forge:ingots/stainless_steel', B: '#forge:alloy_advanced', C: '#forge:circuit_basic' },
+        { A: '#forge:ingots/stainless_steel', B: '#forge:alloys/advanced', C: '#forge:circuits/basic' },
         'mek_circuit_1')
 
     shp('mekanism:elite_control_circuit',
         [' A ', 'BCB', ' A '],
-        { A: '#forge:ingots/durasteel', B: '#forge:alloy_elite', C: '#forge:circuit_advanced' },
+        { A: '#forge:ingots/durasteel', B: '#forge:alloys/elite', C: '#forge:circuits/advanced' },
         'mek_circuit_2')
 
     shp('mekanism:ultimate_control_circuit',
         [' A ', 'BCB', ' A '],
-        { A: '#forge:ingots/aeonsteel', B: '#forge:alloy_ultimate', C: '#forge:circuit_elite' },
+        { A: '#forge:ingots/aeonsteel', B: '#forge:alloys/ultimate', C: '#forge:circuits/elite' },
         'mek_circuit_3')
 
     shp('cyclic:user',
         ['ABA', 'CDC', 'AEA'],
-        { A: '#forge:blocks/aeonsteel', B: 'minecraft:dispenser', C: '#forge:alloy_ultimate', D: '#forge:circuit_ultimate', E: 'cyclic:clock' },
+        { A: '#forge:storage_blocks/aeonsteel', B: 'minecraft:dispenser', C: '#forge:alloys/ultimate', D: '#forge:circuits/ultimate', E: 'cyclic:clock' },
         'cyclic_user')
 
     shp('torchmaster:megatorch',
         ['ABA', 'CDC', 'EDE'],
-        { A: '#forge:gel', B: '#forge:torch', C: '#forge:gems/diamond', D: '#forge:plank_wood', E: '#forge:ingots/gold' },
+        { A: '#forge:slimeballs', B: '#forge:torch', C: '#forge:gems/diamond', D: '#minecraft:planks', E: '#forge:ingots/gold' },
         'mega_torch')
 
     shp('torchmaster:feral_flare_lantern',
         ['ABA', 'CDC', 'ADA'],
-        { A: '#forge:blocks/glass', B: '#forge:dusts/blaze', C: '#forge:gel', D: '#forge:rods/blaze' },
+        { A: '#forge:glass', B: '#forge:dusts/blaze', C: '#forge:slimeballs', D: '#forge:rods/blaze' },
         'flare_lantern')
 
     shp('torchmaster:dreadlamp',
         ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:obsidian', B: '#forge:blocks/glass', C: '#forge:gel', D: '#forge:rods/blaze' },
+        { A: '#forge:obsidian', B: '#forge:glass', C: '#forge:slimeballs', D: '#forge:rods/blaze' },
         'dread_lamp')
 
     shp('globalxp:xp_block',
@@ -778,10 +790,10 @@ ServerEvents.recipes(event => {
         { A: 'minecraft:iron_bars', B: '#forge:ingots/experience', C: 'minecraft:emerald' },
         'xp_block')
 
-    shp(Item.of('tconstruct:throwball', 4),
-        ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:gunpowder', B: '#forge:dusts/sulfur', C: '#forge:ingots/meteor' },
-        'efln')
+    // [SoA-REMOVE: TConstruct EFLN has no Smithery equivalent] shp(Item.of('tconstruct:throwball', 4),
+    //     ['ABA', 'BCB', 'ABA'],
+    //     { A: '#forge:gunpowder', B: '#forge:dusts/sulfur', C: '#forge:ingots/meteor' },
+    //     'efln')
 
     // [SoA] Disabled — 'jaopca:item_essenceshadowium' was a JAOPCA-generated
     // 1.12 essence item; JAOPCA 1.20.1 doesn't generate this for shadowium.
@@ -796,7 +808,7 @@ ServerEvents.recipes(event => {
 
     shp('inventorypets:feed_bag',
         ['   ', 'ABA', ' A '],
-        { A: '#forge:item_leather', B: 'minecraft:golden_apple' },
+        { A: '#forge:leather', B: 'minecraft:golden_apple' },
         'pet_feed_bag')
 
     shp('soa_additions:twilight_gem',
