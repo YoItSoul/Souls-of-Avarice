@@ -49,10 +49,6 @@ config/**/.cache/
 config/forgeendertech/cached.dat
 config/spark/
 
-# AI-assistant working files — never ship
-**/.claude/
-**/CLAUDE.md
-
 # Local analysis tooling + generated audit reports (dev-only, not pack content)
 soa_additions/tools/
 soa_additions/audits/
