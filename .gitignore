@@ -30,6 +30,9 @@ kubejs/probe_dumps/
 kubejs/**/.probe/
 kubejs/**/*.log
 
+# Third-party music (not redistributable) - players source their own copies
+config/MusicTriggers/songs/
+
 # config runtime noise
 config/**/*.log
 config/**/*.log.gz
