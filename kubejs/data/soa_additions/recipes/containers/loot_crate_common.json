@@ -61,42 +61,72 @@
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:uncommon_lootbag\",\"Type\":\"UNCOMMON\",\"Name\":\"Uncommon Loot Bag\",\"Color\":16777215}"
+          "nbt": {
+            "Loot": "soa_additions:uncommon_lootbag",
+            "Type": "UNCOMMON",
+            "Name": "Uncommon Loot Bag",
+            "Color": 16777215
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_rare\",\"Type\":\"RARE\",\"Name\":\"Rare Loot Crate\",\"Color\":5592575}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_rare",
+            "Type": "RARE",
+            "Name": "Rare Loot Crate",
+            "Color": 5592575
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_epic\",\"Type\":\"EPIC\",\"Name\":\"Epic Loot Crate\",\"Color\":16733695}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_epic",
+            "Type": "EPIC",
+            "Name": "Epic Loot Crate",
+            "Color": 16733695
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_legendary\",\"Type\":\"LEGENDARY\",\"Name\":\"Legendary Loot Crate\",\"Color\":16755200}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_legendary",
+            "Type": "LEGENDARY",
+            "Name": "Legendary Loot Crate",
+            "Color": 16755200
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:bacon_lootbag\",\"Type\":\"COMMON\",\"Name\":\"Bacon Bag\",\"Color\":16777215}"
+          "nbt": {
+            "Loot": "soa_additions:bacon_lootbag",
+            "Type": "COMMON",
+            "Name": "Bacon Bag",
+            "Color": 16777215
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:artifact_lootbag\",\"Type\":\"LEGENDARY\",\"Name\":\"Artifact Loot Bag\",\"Color\":16777215}"
+          "nbt": {
+            "Loot": "soa_additions:artifact_lootbag",
+            "Type": "LEGENDARY",
+            "Name": "Artifact Loot Bag",
+            "Color": 16777215
+          }
         },
         "weight": 1
       },
@@ -131,7 +161,11 @@
       {
         "stack": {
           "id": "minecraft:cobblestone",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a7bA Precious Stone\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§bA Precious Stone\"}"
+            }
+          }
         },
         "weight": 1
       },
@@ -218,14 +252,24 @@
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_rare\",\"Type\":\"RARE\",\"Name\":\"Rare Loot Crate\",\"Color\":5592575}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_rare",
+            "Type": "RARE",
+            "Name": "Rare Loot Crate",
+            "Color": 5592575
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "lootbags:loot_bag",
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_common\",\"Type\":\"COMMON\",\"Name\":\"Common Loot Crate\",\"Color\":5635925}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_common",
+            "Type": "COMMON",
+            "Name": "Common Loot Crate",
+            "Color": 5635925
+          }
         },
         "weight": 1
       },
@@ -239,14 +283,22 @@
       {
         "stack": {
           "id": "minecraft:dead_bush",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a7bDed Bush\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§bDed Bush\"}"
+            }
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "minecraft:torch",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a7b10x Compressed Torcherino\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§b10x Compressed Torcherino\"}"
+            }
+          }
         },
         "weight": 1
       },
@@ -490,14 +542,22 @@
       {
         "stack": {
           "id": "minecraft:diamond_sword",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a74\u00a7lS\u00a7c\u00a7lw\u00a76\u00a7lo\u00a7e\u00a7lr\u00a72\u00a7ld\u00a7a\u00a7l \u00a7b\u00a7lo\u00a73\u00a7lf\u00a71\u00a7l \u00a79\u00a7lt\u00a7d\u00a7lh\u00a74\u00a7le\u00a7c\u00a7l \u00a76\u00a7lR\u00a7e\u00a7lN\u00a72\u00a7lG\u00a7a\u00a7l \u00a7b\u00a7lG\u00a73\u00a7lo\u00a79\u00a7ld\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§4§lS§c§lw§6§lo§e§lr§2§ld§a§l §b§lo§3§lf§1§l §9§lt§d§lh§4§le§c§l §6§lR§e§lN§2§lG§a§l §b§lG§3§lo§9§ld\"}"
+            }
+          }
         },
         "weight": 1
       },
       {
         "stack": {
           "id": "minecraft:cow_spawn_egg",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a7eTCreopargh\u00a7b\\'s spawning egg\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§eTCreopargh§b's spawning egg\"}"
+            }
+          }
         },
         "weight": 1
       },
@@ -537,7 +597,11 @@
       {
         "stack": {
           "id": "minecraft:quartz",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a75Overflux Capacitor\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§5Overflux Capacitor\"}"
+            }
+          }
         },
         "weight": 1
       },
@@ -551,7 +615,11 @@
       {
         "stack": {
           "id": "cyclic:emerald_sword",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a7cTraitor\\'s Sword\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§cTraitor's Sword\"}"
+            }
+          }
         },
         "weight": 1
       },

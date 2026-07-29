@@ -113,15 +113,15 @@ modpackMode = false
 [interface]
   # Interface and HUD tweaks
   # Hides the JEI/REI/EMI ingredient overlay until the search field is focused
-  hideJREMI = true
+  hideJREMI = false
   hideJREMIHint = false
   fontShadows = false
   fastLanguageReload = true
 
 [fastBlocks]
   # Renders chests and beds as simple static block models
-  chests = true
-  beds = true
+  chests = false
+  beds = false
 
 [particles]
   # Particle toggles

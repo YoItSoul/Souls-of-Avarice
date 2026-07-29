@@ -168,7 +168,12 @@
         "stack": {
           "id": "lootbags:loot_bag",
           "count": 5,
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_epic\",\"Type\":\"EPIC\",\"Name\":\"Epic Loot Crate\",\"Color\":16733695}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_epic",
+            "Type": "EPIC",
+            "Name": "Epic Loot Crate",
+            "Color": 16733695
+          }
         },
         "weight": 1
       },
@@ -176,7 +181,12 @@
         "stack": {
           "id": "lootbags:loot_bag",
           "count": 38,
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_rare\",\"Type\":\"RARE\",\"Name\":\"Rare Loot Crate\",\"Color\":5592575}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_rare",
+            "Type": "RARE",
+            "Name": "Rare Loot Crate",
+            "Color": 5592575
+          }
         },
         "weight": 1
       },
@@ -184,7 +194,12 @@
         "stack": {
           "id": "lootbags:loot_bag",
           "count": 64,
-          "nbt": "{\"Loot\":\"soa_additions:loot_crate_common\",\"Type\":\"COMMON\",\"Name\":\"Common Loot Crate\",\"Color\":5635925}"
+          "nbt": {
+            "Loot": "soa_additions:loot_crate_common",
+            "Type": "COMMON",
+            "Name": "Common Loot Crate",
+            "Color": 5635925
+          }
         },
         "weight": 1
       },
@@ -359,7 +374,11 @@
       {
         "stack": {
           "id": "minecraft:orange_shulker_box",
-          "nbt": "{display:{Name:'{\"text\": \"\u00a7cBox of Recursion\"}'}}"
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"§cBox of Recursion\"}"
+            }
+          }
         },
         "weight": 1
       },
