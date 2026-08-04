@@ -1,0 +1,256 @@
+// ============================================================
+// SoA Block Replacement (GENERATED - do not edit by hand)
+//
+// Makes a staged machine render as the Unknown Block in the world
+// for players who lack its stage, instead of looking normal until
+// they right-click it (which soa_block_stages.js blocks).
+//
+// Generated from scripts/soa_item_stages.zs, restricted to blocks
+// that have a block entity. Terrain and decorative blocks are
+// deliberately excluded, and hand-tuned entries in
+// scripts/soa_ore_stages.zs always take precedence.
+//
+// Regenerate: python soa_additions/tools/regen_block_replacement.py
+// ============================================================
+
+import mods.orestages.OreStages;
+
+// --- chaotic (2) ---
+OreStages.addOreStage("chaotic", <blockstate:draconicevolution:reactor_stabilizer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("chaotic", <blockstate:mekanism:laser_amplifier>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- energy_matter_core (2) ---
+OreStages.addOreStage("energy_matter_core", <blockstate:projecte:condenser_mk1>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("energy_matter_core", <blockstate:projecte:condenser_mk2>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- fusion_matrix (2) ---
+OreStages.addOreStage("fusion_matrix", <blockstate:draconicevolution:draconium_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("fusion_matrix", <blockstate:summoningrituals:altar>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- getting_started (28) ---
+OreStages.addOreStage("getting_started", <blockstate:aether:chest_mimic>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:aether:treasure_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:aquaculture:neptunes_bounty>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:ars_nouveau:archwood_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projecte:alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:black_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:blue_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:brown_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:cyan_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:gray_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:green_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:light_blue_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:light_gray_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:lime_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:magenta_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:orange_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:pink_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:purple_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:red_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:white_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:projectexpansion:yellow_advanced_alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:casting_table>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:fluid_pipe>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:forge_controller>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:forge_drain>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:forge_fuel_port>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:forge_item_port>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:smithery:part_press>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- graduated (1) ---
+OreStages.addOreStage("graduated", <blockstate:cyclic:battery_infinite>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- hardmode (31) ---
+OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_energyface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_itemface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_liquiface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_placer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_redstoneface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:celestial_manipulator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:crafting_core>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:disenchanter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:dislocator_pedestal>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:dislocator_receptacle>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:energy_pylon>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:entity_detector>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:fluid_gate>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:flux_gate>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:grinder>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:potentiometer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:rain_sensor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:reactor_core>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:draconicevolution:reactor_injector>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:alchemical_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:collector_mk1>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:collector_mk2>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:collector_mk3>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:dm_furnace>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:dm_pedestal>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:interdiction_torch>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:relay_mk1>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:relay_mk2>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:relay_mk3>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("hardmode", <blockstate:projecte:rm_furnace>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- master_engineer (8) ---
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:breaker>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:dropper>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:fluid_collector>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:fluid_placer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:long_range_breaker>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:phantom_breaker>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:vertical_digger>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("master_engineer", <blockstate:cyclic:user>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- nether (35) ---
+OreStages.addOreStage("nether", <blockstate:aether:altar>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:aether:icestone>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:aether:incubator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:aether:skyroot_bed>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:aether:skyroot_sign>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:aether:sun_altar>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:botania:enchanter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cookingforblockheads:fridge>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:anvil_void>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:battery>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:beacon>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:beacon_redstone>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:clock>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:collector>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:collector_fluid>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:conveyor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:detector_entity>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:dice>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:dropper>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:experience_pylon>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:fan>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:forester>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:generator_fuel>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:laser>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:placer_fluid>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:screen>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:tank>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:trash>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:wireless_energy>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:wireless_fluid>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:cyclic:wireless_item>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:enderio:enchanter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:minecraft:brewing_stand>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:mysticalagriculture:enchanter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("nether", <blockstate:mythicbotany:mana_infuser>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- novice_engineer (32) ---
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:atomic_reconstructor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:battery_box>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:bio_reactor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:canola_press>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:coffee_machine>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:display_stand>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:empowerer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:energizer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:enervator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:farmer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:hopping_item_interface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:item_interface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:lava_factory_controller>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:player_interface>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:shock_suppressor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:alloy_smelter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:aversion_obelisk>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:basic_capacitor_bank>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:crafter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:fluid_tank>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:impulse_hopper>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:painting_machine>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:pressurized_fluid_tank>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:sag_mill>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:slice_and_splice>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:soul_binder>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:stirling_generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:travel_anchor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:vacuum_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:vibrant_capacitor_bank>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:wired_charger>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_engineer", <blockstate:enderio:xp_vacuum>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- novice_wizard (15) ---
+OreStages.addOreStage("novice_wizard", <blockstate:bloodarsenal:blood_capacitor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodarsenal:stasis_plate>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:alchemytable>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:altar>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:demoncrucible>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:demoncrystallizer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:demonpylon>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:incensealtar>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:inputroutingnode>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:itemroutingnode>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:masterritualstone>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:masterroutingnode>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:outputroutingnode>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:soulforge>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:teleposer>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- skilled_engineer (62) ---
+OreStages.addOreStage("skilled_engineer", <blockstate:cyclic:harvester>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:boiler_casing>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:boiler_valve>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chargepad>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chemical_crystallizer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chemical_dissolution_chamber>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chemical_infuser>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chemical_injection_chamber>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chemical_oxidizer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:chemical_washer>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:combiner>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:crusher>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:digital_miner>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:dynamic_tank>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:dynamic_valve>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:electric_pump>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:electrolytic_separator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:energized_smelter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:enrichment_chamber>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:fluidic_plenisher>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:formulaic_assemblicator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:fuelwood_heater>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:induction_casing>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:induction_port>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:laser>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:laser_tractor_beam>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:logistical_sorter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:metallurgic_infuser>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:oredictionificator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:osmium_compressor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:personal_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:precision_sawmill>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:pressure_disperser>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:pressurized_reaction_chamber>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:purification_chamber>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:quantum_entangloporter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:resistive_heater>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:rotary_condensentrator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:security_desk>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:seismic_vibrator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:solar_neutron_activator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:structural_glass>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:superheating_element>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:teleporter>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:thermal_evaporation_block>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:thermal_evaporation_controller>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:thermal_evaporation_valve>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:advanced_solar_generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:bio_generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:electromagnetic_coil>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:gas_burning_generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:heat_generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:laser_focus_matrix>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:reactor_glass>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:rotational_complex>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:saturating_condenser>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:solar_generator>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:turbine_casing>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:turbine_rotor>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:turbine_valve>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:turbine_vent>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:mekanismgenerators:wind_generator>, <blockstate:soa_additions:unknown_block>, false);
