@@ -48,7 +48,7 @@
 	accretionDiskRings = 12
 	#Multiplier on the gravitational deflection.
 	#Range: 0.0 ~ 5.0
-	lensingStrength = 1.5
+	lensingStrength = 3
 	#Maximum number of black holes to apply lensing for simultaneously.
 	#Range: 1 ~ 8
 	maxLensedBlackHoles = 4
@@ -69,5 +69,5 @@
 	#Auto-spawn the permanent dev/test black holes (overworld 1500,40,1500
 	#and the End 0,200,0) on first world tick. Dev tool - keep OFF in packs:
 	#the End one sits above the dragon island and both destroy terrain.
-	spawnTestHoles = false
+	spawnTestHoles = true
 
