@@ -462,8 +462,10 @@
           "amount": 50
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:paper{tag:{display:{Lore:[\"It reads:\",\"I've been waiting for you for ages, claim your quest rewards by pressing E and clicking 'Quests' at the top center RIGHT NOW!!\"],Name:\"A Sticky Note\"}}} 1"
+          "type": "soa_additions:item",
+          "item": "minecraft:paper",
+          "count": 1,
+          "nbt": "{display:{Lore:[\"{\\\"text\\\":\\\"It reads:\\\"}\",\"{\\\"text\\\":\\\"I've been waiting for you for ages, claim your quest rewards by pressing E and clicking 'Quests' at the top center RIGHT NOW!!\\\"}\"],Name:\"{\\\"text\\\":\\\"A Sticky Note\\\"}\"}}"
         },
         {
           "type": "soa_additions:item",
@@ -570,40 +572,28 @@
           "count": 1
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:leather_helmet{tag:{display:{color:16744619,Name:\"Fairy Hat\"}}} 1"
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:leather_chestplate{tag:{display:{color:16744619,Name:\"Fairy Shirt\"}}} 1"
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:leather_leggings{tag:{display:{color:16744619,Name:\"Fairy Pants\"}}} 1"
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:leather_boots{tag:{display:{color:16744619,Name:\"Fairy Shoes\"}}} 1"
-        },
-        {
           "type": "soa_additions:item",
           "item": "minecraft:leather_helmet",
-          "count": 1
+          "count": 1,
+          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Hat\",\"color\":\"light_purple\"}'}}"
         },
         {
           "type": "soa_additions:item",
           "item": "minecraft:leather_chestplate",
-          "count": 1
+          "count": 1,
+          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Shirt\",\"color\":\"light_purple\"}'}}"
         },
         {
           "type": "soa_additions:item",
           "item": "minecraft:leather_leggings",
-          "count": 1
+          "count": 1,
+          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Pants\",\"color\":\"light_purple\"}'}}"
         },
         {
           "type": "soa_additions:item",
           "item": "minecraft:leather_boots",
-          "count": 1
+          "count": 1,
+          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Shoes\",\"color\":\"light_purple\"}'}}"
         }
       ],
       "modes": [
@@ -703,8 +693,10 @@
           "count": 1
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:potion{tag:{Potion:\"cyclic:strong_haste\"}} 1"
+          "type": "soa_additions:item",
+          "item": "minecraft:potion",
+          "count": 1,
+          "nbt": "{Potion:\"cyclic:strong_haste\"}"
         },
         {
           "type": "soa_additions:item",
@@ -846,18 +838,8 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "smithery:part_press",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_table",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_sand",
-          "count": 1
+          "item": "smithery:furnace_brick",
+          "count": 16
         }
       ],
       "modes": [
@@ -903,19 +885,27 @@
       "shape": "square",
       "x": 208,
       "y": 80,
-      "description": [],
+      "description": [
+        "Build out the Forge: an item port to feed it, and a casting table",
+        "plus casting sand to shape what comes back out."
+      ],
       "dependencies": [
         "200eb992d93375ac"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "smithery:forge_controller",
+          "item": "smithery:forge_item_port",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "smithery:forge_fuel_port",
+          "item": "smithery:casting_table",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "smithery:casting_sand",
           "count": 1
         }
       ],
@@ -931,8 +921,13 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:obsidian_large_plate",
-          "count": 257
+          "item": "soa_additions:reinforced_ingot",
+          "count": 8
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "smithery:red_slime",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -941,7 +936,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "smithery:casting_table",
+          "item": "smithery:casting_sand",
           "count": 10
         }
       ],
@@ -958,19 +953,21 @@
       "shape": "square",
       "x": 240,
       "y": 80,
-      "description": [],
+      "description": [
+        "Drain the Forge and pipe the melt where you want it."
+      ],
       "dependencies": [
         "1d30b4b2ab17d735"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "smithery:forge_controller",
+          "item": "smithery:forge_drain",
           "count": 1
         },
         {
           "type": "soa_additions:item",
-          "item": "smithery:forge_drain",
+          "item": "smithery:fluid_pipe",
           "count": 1
         }
       ],
@@ -981,23 +978,18 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:obsidian_large_plate",
-          "count": 256
+          "item": "soa_additions:reinforced_ingot",
+          "count": 8
         },
         {
           "type": "soa_additions:item",
-          "item": "smithery:furnace_bricks",
+          "item": "smithery:furnace_brick",
           "count": 64
         },
         {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_common",
           "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:furnace_bricks",
-          "count": 64
         }
       ],
       "modes": [
@@ -1010,16 +1002,24 @@
       "id": "20e815609d2b6e90",
       "title": "A Different Anvil?",
       "icon": "minecraft:anvil",
-      "x": 272,
+      "x": 304,
       "y": 80,
-      "description": [],
+      "description": [
+        "Smithery modifiers go on at an anvil, and parts get cut at a Part Press."
+      ],
       "dependencies": [
-        "0a06f9ed8ae8946e"
+        "7b55c19fc0816ac9",
+        "4dab3e16b1dd5bc8"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
           "item": "minecraft:anvil",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "smithery:part_press",
           "count": 1
         }
       ],
@@ -1045,12 +1045,11 @@
       "title": "Lots Of Liquids!",
       "icon": "smithery:forge_controller",
       "shape": "square",
-      "x": 304,
+      "x": 272,
       "y": 80,
       "description": [],
       "dependencies": [
-        "7b55c19fc0816ac9",
-        "20e815609d2b6e90"
+        "0a06f9ed8ae8946e"
       ],
       "tasks": [
         {
@@ -1062,7 +1061,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "smithery:furnace_bricks",
+          "item": "smithery:furnace_brick",
           "count": 256
         },
         {
@@ -1085,13 +1084,13 @@
       "id": "05213e20d694f6f7",
       "title": "Create..ive?",
       "icon": "create:andesite_alloy_block",
-      "x": 240,
+      "x": 272,
       "y": 32,
       "description": [
         "Congrats! Youu've founnd a compound that allows you to make cheap, high strength compounds using your new furnace!"
       ],
       "dependencies": [
-        "0a06f9ed8ae8946e"
+        "4dab3e16b1dd5bc8"
       ],
       "tasks": [
         {
@@ -1147,7 +1146,7 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
+          "item": "soa_additions:reward_ticket_common",
           "count": 1
         },
         {
@@ -1167,7 +1166,8 @@
         {
           "type": "soa_additions:item",
           "item": "smithery:excavator",
-          "count": 1
+          "count": 1,
+          "nbt": "{\"smithery:tool_composition\":{tool_type:\"smithery:excavator\",slot_materials:[\"smithery:iron\",\"smithery:iron\",\"smithery:wood\",\"smithery:wood\",\"smithery:wood\"]},\"smithery:max_durability\":440}"
         },
         {
           "type": "soa_additions:item",
@@ -1176,12 +1176,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:obsidian_large_plate",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:furnace_bricks",
+          "item": "smithery:furnace_brick",
           "count": 64
         }
       ],
@@ -1389,8 +1384,10 @@
           "amount": 500
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p minecraft:diamond_pickaxe{tag:{Enchantments:[{id:\"minecraft:efficiency\",lvl:5s},{id:\"minecraft:unbreaking\",lvl:3s}]}} 1"
+          "type": "soa_additions:item",
+          "item": "minecraft:diamond_pickaxe",
+          "count": 1,
+          "nbt": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:5s},{id:\"minecraft:unbreaking\",lvl:3s}]}"
         },
         {
           "type": "soa_additions:item",
@@ -2983,9 +2980,13 @@
       "x": 496,
       "y": 32,
       "description": [
-        "To summon the wither, you have to first defeat the guardian of the Abyssal Wastelands, Asorah, and craft an Awakened Eye."
+        "To summon the Wither, you must first descend beneath the Ancient Cities, put down the Warden, and cut the Heart of the Deep out of it.",
+        "",
+        "Only then will Nether Stars and Wither Skeleton Skulls answer to you."
       ],
-      "dependencies": [],
+      "dependencies": [
+        "quest_the_fearless"
+      ],
       "tasks": [
         {
           "type": "soa_additions:item",
@@ -3015,7 +3016,9 @@
       "x": 448,
       "y": 32,
       "description": [
-        "Only the brave ones who defeated the Valkyrie Queen in the Aether and crafted a Bravery Certificate shall explore the Dreadlands."
+        "Only the brave ones who defeated the Valkyrie Queen in the Aether and crafted a Bravery Certificate are ready for what sleeps in the deep dark.",
+        "",
+        "Steel yourself. The Warden is next."
       ],
       "dependencies": [],
       "tasks": [
@@ -3286,68 +3289,14 @@
           "amount": 150000
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_legendary\",Type:\"LEGENDARY\",Name:\"Legendary Loot Crate\",Color:16755200} 2"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 2
         },
         {
           "type": "soa_additions:item",
           "item": "draconicevolution:chaotic_core",
           "count": 5
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_giant_furnace",
-      "title": "Giant Furnace",
-      "icon": "smithery:forge_controller",
-      "x": 288,
-      "y": 32,
-      "description": [
-        "Craft the controller of a Forge — the giant furnace of the Smithery world."
-      ],
-      "dependencies": [
-        "0a06f9ed8ae8946e"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:forge_controller",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 150
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\",Type:\"COMMON\",Name:\"Common Loot Crate\",Color:5635925} 1"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:gold_ore",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:obsidian_large_plate",
-          "count": 256
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:red_slime",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_table",
-          "count": 10
         }
       ],
       "modes": [

@@ -46,8 +46,7 @@
         "Bunch of Nether exclusive items",
         "Bunch of dungeon loot you may have got before",
         "Mobs now wear stronger armors and hold stronger weapons",
-        "Access to the Aether",
-        "Allows summoning of little maids who can aid you in many ways"
+        "Access to the Aether"
       ]
     },
     "abyssal_conquerer": {
@@ -55,7 +54,7 @@
         "Conquerer of the Abyss"
       ],
       "lore": [
-        "The dragon in the abyss has been defeated. You hear dreads echo under your feet."
+        "The Warden has been put down and the Heart of the Deep cut out of it. The way to the Wither lies open."
       ],
       "unlocks": [
         "You can now fight the Wither"
@@ -80,10 +79,11 @@
         "Bravery Matters"
       ],
       "lore": [
-        "You have proved yourself in the battle with Valkyrie. Now you can go to the Dreadlands."
+        "You have proved yourself against the Valkyrie Queen. What sleeps in the deep dark holds no fear for you now."
       ],
       "unlocks": [
-        "Access to the Dreadlands"
+        "Dreadium",
+        "Valoria's void materials"
       ]
     },
     "ender_charm": {
@@ -114,7 +114,6 @@
         "New ores can be found across every dimension",
         "Draconic Evolution content",
         "Avaritia content",
-        "Extra Botany content",
         "ProjectE (Equivalent Exchange) content",
         "Mobs now wear stronger armors and hold stronger weapons",
         "You can now explore the outer islands of the End.",
@@ -144,7 +143,7 @@
       ],
       "unlocks": [
         "Wyvern Metal",
-        "You can now challenge Barako, the Sun Chief"
+        "You can now challenge Umvuthi, the Sunbird"
       ]
     },
     "awakened": {
@@ -170,7 +169,6 @@
         "The guardian of Chaos has been defeated and you are pretty much invincible now."
       ],
       "unlocks": [
-        "Death Coin",
         "Difficulty changers can now be crafted",
         "Chaotic Core"
       ]
@@ -197,8 +195,7 @@
       ],
       "unlocks": [
         "Infinity Armors and Tools",
-        "Creative Soul",
-        "Rainbow Generator"
+        "Creative Soul"
       ]
     },
     "graduated": {
@@ -235,7 +232,6 @@
       ],
       "unlocks": [
         "Platinum, Iridium and Enderium",
-        "Some Random Things content",
         "Extreme Reactors",
         "Mekanism"
       ]
@@ -250,8 +246,7 @@
       "unlocks": [
         "Ultimate mekanism alloy & circuit",
         "Advanced solar panels",
-        "User blocks",
-        "Quantum quarries"
+        "User blocks"
       ]
     },
     "novice_wizard": {
@@ -265,7 +260,7 @@
         "Thaumium",
         "Blood Magic content",
         "Infusion crafting",
-        "Complex thaumcraft mechanism"
+        "Blood Arsenal content"
       ]
     },
     "skilled_wizard": {
@@ -277,7 +272,7 @@
       ],
       "unlocks": [
         "Crimsonite",
-        "Rest of Astral Sorcery content",
+        "Malum content",
         "Infusion crafting boosters",
         "Arcane Crystal Ball"
       ]
@@ -290,8 +285,7 @@
         "You have finally gained a deep understanding of magic through millions of failures."
       ],
       "unlocks": [
-        "Void Metal and Primordial",
-        "Extended Thaumcraft content",
+        "Void Metal",
         "Energy-Matter Conversion Core"
       ]
     },
@@ -300,7 +294,7 @@
         "Conquer the Sun!"
       ],
       "lore": [
-        "You have defeated Barako, the Sun Chief. A hot metal has spawned in Nether."
+        "You have defeated Umvuthi, the Sunbird. A hot metal has spawned in the Nether."
       ],
       "unlocks": [
         "You can now mine Infernium"
@@ -314,7 +308,7 @@
         "Unlocked recipe for Sceptre."
       ],
       "unlocks": [
-        "You can now craft and use Tinker's tool: Sceptre"
+        "You can now craft and use the Smithery tool: Sceptre"
       ]
     },
     "shuriken_blueprint": {
@@ -325,7 +319,7 @@
         "Unlocked recipe for Shuriken."
       ],
       "unlocks": [
-        "You can now craft and use Tinker's tool: Shuriken"
+        "You can now craft and use the Smithery tool: Shuriken"
       ]
     },
     "laser_gun_blueprint": {
@@ -336,7 +330,7 @@
         "Unlocked recipe for Laser Guns."
       ],
       "unlocks": [
-        "You can now craft and use Tinker's tool: Laser Gun"
+        "You can now craft and use the Smithery tool: Laser Gun"
       ]
     },
     "tactic_blueprint": {
@@ -344,7 +338,7 @@
         "Tactical Blueprint"
       ],
       "lore": [
-        "Unlocked recipe for a lot of Tinker's weapons."
+        "Unlocked recipe for a lot of Smithery weapons."
       ],
       "unlocks": [
         "You can now craft and use Cleaver",

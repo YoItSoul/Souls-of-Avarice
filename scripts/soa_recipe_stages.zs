@@ -27,10 +27,10 @@ Recipes.setRecipeStage("abyssal_conquerer", <item:soa_additions:mirion_ingot>);
 //  AWAKENED
 // ============================================================
 
-Recipes.setRecipeStage("awakened", <item:draconicevolution:awakened_draconium_block>);
-Recipes.setRecipeStage("awakened", <item:draconicevolution:awakened_draconium_ingot>);
-Recipes.setRecipeStage("awakened", <item:draconicevolution:awakened_draconium_nugget>);
-Recipes.setRecipeStage("awakened", <item:draconicevolution:awakened_crafting_injector>);
+// Awakened Draconium block/ingot/nugget belong to fusion_matrix in GC
+// (restage.zs:96-98) - staged in that section instead, matching their item stage.
+// The Awakened Crafting Injector is in no GC addIngredients block and no
+// crafttweaker.log line, so GC never staged its recipe.
 Recipes.setRecipeStage("awakened", <item:magicfeather:magic_feather>);
 Recipes.setRecipeStage("awakened", <item:inventorypets:pet_cloud>);
 Recipes.setRecipeStage("awakened", <item:avaritia:neutron_compressor>);
@@ -41,6 +41,17 @@ Recipes.setRecipeStage("awakened", <item:soa_additions:protonium_ingot>);
 Recipes.setRecipeStage("awakened", <item:soa_additions:terra_alloy_ingot>);
 Recipes.setRecipeStage("awakened", <item:soa_additions:titanium_ingot>);
 Recipes.setRecipeStage("awakened", <item:soa_additions:titanium_nugget>);
+// Storage blocks - GC staged <ore:block*> alongside the ingots (items.zs:111-138)
+Recipes.setRecipeStage("awakened", <item:soa_additions:chromasteel_block>);
+Recipes.setRecipeStage("awakened", <item:soa_additions:protonium_block>);
+Recipes.setRecipeStage("awakened", <item:soa_additions:terra_alloy_block>);
+Recipes.setRecipeStage("awakened", <item:soa_additions:titanium_block>);
+// Draconic Metal (GC <ore:*DraconicMetal>, tconevo:metal:5/6/7 + metal_block:1).
+// No dust line: nothing in the pack crafts tconevo:draconic_metal_dust.
+Recipes.setRecipeStage("awakened", <item:tconevo:draconic_metal_ingot>);
+Recipes.setRecipeStage("awakened", <item:tconevo:draconic_metal_block>);
+Recipes.setRecipeStage("awakened", <item:tconevo:draconic_metal_nugget>);
+Recipes.setRecipeStage("awakened", <item:soa_additions:creative_modifier>);  // GC tconstruct:materials:50
 Recipes.setRecipeStage("awakened", <item:mysticalagriculture:titanium_essence>);
 Recipes.setRecipeStage("awakened", <item:mysticalagriculture:titanium_seeds>);
 // Draconic Evolution draconic tier tools/armor
@@ -185,6 +196,12 @@ Recipes.setRecipeStage("chaotic", <item:soa_additions:experience_singularity>);
 Recipes.setRecipeStage("chaotic", <item:soa_additions:matter_singularity>);
 Recipes.setRecipeStage("chaotic", <item:soa_additions:anti_entropy_matter>);
 Recipes.setRecipeStage("chaotic", <item:soa_additions:cosmilite_ingot>);
+Recipes.setRecipeStage("chaotic", <item:soa_additions:cosmilite_block>);
+// Chaotic Metal (GC <ore:*ChaoticMetal>, tconevo:metal:10/12 + metal_block:2)
+Recipes.setRecipeStage("chaotic", <item:tconevo:chaotic_ingot>);
+Recipes.setRecipeStage("chaotic", <item:tconevo:chaotic_block>);
+Recipes.setRecipeStage("chaotic", <item:tconevo:chaotic_nugget>);
+Recipes.setRecipeStage("chaotic", <item:avaritia:infinity_catalyst>);  // restage.zs:67 -> chaotic
 // Draconic Evolution chaotic tier tools/armor/machines
 Recipes.setRecipeStage("chaotic", <item:draconicevolution:chaotic_axe>);
 Recipes.setRecipeStage("chaotic", <item:draconicevolution:chaotic_bow>);
@@ -215,8 +232,10 @@ Recipes.setRecipeStage("chaotic", <item:draconicadditions:item_chaos_injector>);
 // ============================================================
 
 // Death Coin (custom soa recipe)
-Recipes.setRecipeStage("chaotic_dominator", <resource:soa_additions:soa_death_coin>);
-Recipes.setRecipeStage("chaotic_dominator", <item:soa_additions:difficulty_changer>);
+Recipes.setRecipeStage("chaotic_dominator", <resource:soa_additions:death_coin>);
+// Difficulty Changer is in BOTH the chaotic_dominator and wielder_of_infinity
+// blocks in GC (items.zs:41 and :480); the later action wins, so its final
+// recipe stage is wielder_of_infinity - staged in that section.
 Recipes.setRecipeStage("chaotic_dominator", <item:draconicevolution:chaotic_core>);
 Recipes.setRecipeStage("chaotic_dominator", <item:draconicevolution:chaotic_energy_core>);
 
@@ -225,11 +244,12 @@ Recipes.setRecipeStage("chaotic_dominator", <item:draconicevolution:chaotic_ener
 // ============================================================
 
 // Infernium compression/decompression (custom soa recipes)
-Recipes.setRecipeStage("descendant_of_the_sun", <resource:soa_additions:soa_infernium_ingot>);
-Recipes.setRecipeStage("descendant_of_the_sun", <resource:soa_additions:soa_rev_infernium_ingot>);
+Recipes.setRecipeStage("descendant_of_the_sun", <resource:soa_additions:infernium_ingot>);
+Recipes.setRecipeStage("descendant_of_the_sun", <resource:soa_additions:infernium_ingot_from_block>);
 Recipes.setRecipeStage("descendant_of_the_sun", <item:soa_additions:infernium_ingot>);
 Recipes.setRecipeStage("descendant_of_the_sun", <item:soa_additions:infernium_nugget>);
 Recipes.setRecipeStage("descendant_of_the_sun", <item:soa_additions:infernium_ore_block>);
+Recipes.setRecipeStage("descendant_of_the_sun", <item:soa_additions:infernium_block>);  // GC <ore:blockInfernium>
 Recipes.setRecipeStage("descendant_of_the_sun", <item:draconicevolution:awakened_core>);
 
 // ============================================================
@@ -256,9 +276,17 @@ Recipes.setRecipeStage("expert", <item:soa_additions:goodie_bag>);
 // ============================================================
 
 // Beast Hand (custom soa recipe)
-Recipes.setRecipeStage("fusion_matrix", <resource:soa_additions:soa_beast_hand>);
+Recipes.setRecipeStage("fusion_matrix", <resource:soa_additions:beast_hand>);
 Recipes.setRecipeStage("fusion_matrix", <item:soa_additions:beast_hand>);
 Recipes.setRecipeStage("fusion_matrix", <item:soa_additions:electronium_ingot>);
+Recipes.setRecipeStage("fusion_matrix", <item:soa_additions:electronium_block>);  // GC <ore:blockElectronium>
+Recipes.setRecipeStage("fusion_matrix", <item:soa_additions:fusion_matrix_ingot>);
+Recipes.setRecipeStage("fusion_matrix", <item:soa_additions:fusion_matrix_block>);
+Recipes.setRecipeStage("fusion_matrix", <item:summoningrituals:altar>);  // GC <zensummoning:altar>
+// Awakened Draconium - GC restage.zs:96-98 puts these in fusion_matrix
+Recipes.setRecipeStage("fusion_matrix", <item:draconicevolution:awakened_draconium_block>);
+Recipes.setRecipeStage("fusion_matrix", <item:draconicevolution:awakened_draconium_ingot>);
+Recipes.setRecipeStage("fusion_matrix", <item:draconicevolution:awakened_draconium_nugget>);
 Recipes.setRecipeStage("fusion_matrix", <item:draconicevolution:draconium_ingot>);
 Recipes.setRecipeStage("fusion_matrix", <item:draconicevolution:draconium_nugget>);
 Recipes.setRecipeStage("fusion_matrix", <item:draconicevolution:draconium_block>);
@@ -284,6 +312,24 @@ Recipes.setRecipeStage("getting_started", <item:minecraft:golden_pickaxe>);
 Recipes.setRecipeStage("getting_started", <item:minecraft:golden_axe>);
 Recipes.setRecipeStage("getting_started", <item:minecraft:diamond_pickaxe>);
 Recipes.setRecipeStage("getting_started", <item:minecraft:diamond_axe>);
+// Crafting Table — mirrors the forge:workbenches ItemStages restriction.
+// Covers both the 4-logs recipe and the vanilla 2x2 planks recipe re-added by
+// kubejs/server_scripts/recipes/soa_deviations.js.
+Recipes.setRecipeStage("getting_started", <item:minecraft:crafting_table>);
+// <ore:workbench> also covered Cyclic's Workbench in GC; #forge:workbenches holds
+// only minecraft:crafting_table in 1.20, so it needs its own line.
+Recipes.setRecipeStage("getting_started", <item:cyclic:workbench>);
+// <ore:plankWood> (GC items.zs:50). The tag covers 185 planks; Tenebra and
+// Witherwood are outside #minecraft:planks. The craftable Witherwood item is
+// treasure2:witherwood_planks - treasure2:wither_planks shares its display name
+// but no recipe produces it.
+Recipes.setRecipeStage("getting_started", <tag:items:minecraft:planks>);
+Recipes.setRecipeStage("getting_started", <item:defiledlands:tenebra_planks>);
+Recipes.setRecipeStage("getting_started", <item:treasure2:witherwood_planks>);
+// <ore:chest> (items.zs:51) and <ore:cobblestone> (items.zs:63). Both tags are
+// broader than GC's ore dictionary entries, which errs toward gating.
+Recipes.setRecipeStage("getting_started", <tag:items:forge:chests>);
+Recipes.setRecipeStage("getting_started", <tag:items:forge:cobblestone>);
 // Smithery workstations (replaced Tinkers' Construct tool stations)
 Recipes.setRecipeStage("getting_started", <item:smithery:casting_table>);
 Recipes.setRecipeStage("getting_started", <item:smithery:part_press>);
@@ -304,9 +350,15 @@ Recipes.setRecipeStage("graduated", <item:draconicevolution:creative_capacitor>)
 Recipes.setRecipeStage("graduated", <item:draconicevolution:creative_op_capacitor>);
 Recipes.setRecipeStage("graduated", <item:projecte:tome>);
 Recipes.setRecipeStage("graduated", <item:projecte:watch_of_flowing_time>);
-Recipes.setRecipeStage("graduated", <item:storagedrawers:creative_storage_upgrade>);
+// GC gated <storagedrawers:upgrade_creative:1> = Creative Vending Upgrade; the
+// Creative Storage Upgrade (meta 0) was never staged.
+Recipes.setRecipeStage("graduated", <item:storagedrawers:creative_vending_upgrade>);
+Recipes.setRecipeStage("graduated", <item:dankstorage:dank_6>);
 Recipes.setRecipeStage("graduated", <item:soa_additions:ocd_certificate>);
-Recipes.setRecipeStage("graduated", <item:ae2wtlib:wireless_universal_terminal>);
+// GC gated ae2wtlib:wut_creative (Creative Wireless Ultimate Terminal), which has
+// no 1.20 counterpart. The ordinary Wireless Universal Terminal was never staged,
+// and its item is not restricted either - gating only the recipe made it
+// uncraftable while remaining holdable.
 Recipes.setRecipeStage("graduated", <item:soa_additions:creative_controller>);
 // AE2 creative cells
 Recipes.setRecipeStage("graduated", <item:ae2:creative_energy_cell>);
@@ -323,25 +375,22 @@ Recipes.setRecipeStage("graduated", <item:create:creative_motor>);
 Recipes.setRecipeStage("graduated", <item:create:creative_fluid_tank>);
 Recipes.setRecipeStage("graduated", <item:create:creative_blaze_cake>);
 // Applied Flux high-capacity FE storage cells (top tiers)
-Recipes.setRecipeStage("graduated", <item:appflux:fe_16m_cell>);
-Recipes.setRecipeStage("graduated", <item:appflux:fe_16m_portable_cell>);
-Recipes.setRecipeStage("graduated", <item:appflux:fe_64m_cell>);
-Recipes.setRecipeStage("graduated", <item:appflux:fe_64m_portable_cell>);
-Recipes.setRecipeStage("graduated", <item:appflux:fe_256m_cell>);
-Recipes.setRecipeStage("graduated", <item:appflux:fe_256m_portable_cell>);
+// appflux is not in GreedyCraft, so there is no gate to port. Staging only the
+// recipes left these cells uncraftable while remaining freely holdable - the
+// items were never restricted - so the gate is dropped entirely.
 
 // ============================================================
 //  HARDMODE
 // ============================================================
 
 // Custom soa recipes
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_forbidden_bible>);
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_true_blood_sigil>);
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_medkit_super>);
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_pioneer_medal>);
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_greedy_medal>);
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_rev_medal_pioneer>);
-Recipes.setRecipeStage("hardmode", <resource:soa_additions:soa_rev_medal_greedy>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:forbidden_bible>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:true_blood_sigil>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:medkit_super>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:pioneer_medal>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:greedy_medal>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:ordinary_medal_from_pioneer>);
+Recipes.setRecipeStage("hardmode", <resource:soa_additions:pioneer_medal_from_greedy>);
 
 // Mod items by output
 Recipes.setRecipeStage("hardmode", <item:soa_additions:forbidden_bible>);
@@ -373,7 +422,10 @@ Recipes.setRecipeStage("hardmode", <item:mysticalagriculture:peridot_seeds>);
 // ============================================================
 
 Recipes.setRecipeStage("master_engineer", <item:cyclic:user>);
-Recipes.setRecipeStage("master_engineer", <item:cyclic:miner>);
+// NAME COLLISION: GC's master_engineer "Vertical Digger" is
+// actuallyadditions:block_miner (mod absent from SOA). Cyclic's "Miner" is a
+// different item that GC never staged.
+Recipes.setRecipeStage("master_engineer", <item:mekanism:ultimate_control_circuit>);  // GC <ore:circuitUltimate>
 Recipes.setRecipeStage("master_engineer", <item:solarflux:sp_8>);
 Recipes.setRecipeStage("master_engineer", <item:solarflux:sp_avaritia.neutronium>);
 Recipes.setRecipeStage("master_engineer", <item:solarflux:sp_de.chaotic>);
@@ -392,8 +444,14 @@ Recipes.setRecipeStage("master_engineer", <item:mekanismgenerators:fusion_reacto
 //  MASTER_WIZARD
 // ============================================================
 
-Recipes.setRecipeStage("master_wizard", <resource:soa_additions:soa_purifying_pill>);
-Recipes.setRecipeStage("master_wizard", <resource:soa_additions:soa_energy_matter_core>);
+// Every <resource:> id in this file carried a bogus extra "soa_" prefix until
+// 2026-07-31 (soa_additions:soa_death_coin for soa_additions:death_coin, etc.),
+// so all 23 recipe-id gates matched nothing. Most were covered anyway by the
+// <item:> output gate beside them; the Death Coin recipe was not gated at all.
+// A soa_energy_matter_core gate stood here and a soa_overflux_capacitor gate in
+// NETHER: nothing in the pack crafts either item, so there is no recipe id to
+// point at and both were dropped (the <item:> gates below still apply).
+Recipes.setRecipeStage("master_wizard", <resource:soa_additions:purifying_pill>);
 Recipes.setRecipeStage("master_wizard", <item:soa_additions:purifying_pill>);
 Recipes.setRecipeStage("master_wizard", <item:soa_additions:energy_matter_core>);
 
@@ -402,12 +460,11 @@ Recipes.setRecipeStage("master_wizard", <item:soa_additions:energy_matter_core>)
 // ============================================================
 
 // Custom soa recipes by name
-Recipes.setRecipeStage("nether", <resource:soa_additions:soa_blood_sigil>);
-Recipes.setRecipeStage("nether", <resource:soa_additions:soa_bloody_sacrifice>);
-Recipes.setRecipeStage("nether", <resource:soa_additions:soa_bloody_sacrifice_alt>);
-Recipes.setRecipeStage("nether", <resource:soa_additions:soa_awakened_eye>);
-Recipes.setRecipeStage("nether", <resource:soa_additions:soa_overflux_capacitor>);
-Recipes.setRecipeStage("nether", <resource:soa_additions:soa_medkit_big>);
+Recipes.setRecipeStage("nether", <resource:soa_additions:blood_sigil>);
+Recipes.setRecipeStage("nether", <resource:soa_additions:bloody_sacrifice>);
+Recipes.setRecipeStage("nether", <resource:soa_additions:bloody_sacrifice_alt>);
+Recipes.setRecipeStage("nether", <resource:soa_additions:awakened_eye>);
+Recipes.setRecipeStage("nether", <resource:soa_additions:medkit_big>);
 
 // soa_additions items by output
 Recipes.setRecipeStage("nether", <item:soa_additions:shining_star>);
@@ -527,6 +584,9 @@ Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:pioneer_medal>
 Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:greedy_medal>);
 Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:creative_soul>);
 Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:infinity_stone>);
+Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:infinity_block_block>);
+Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:infinity_block_block_block>);
+Recipes.setRecipeStage("wielder_of_infinity", <item:soa_additions:difficulty_changer>);  // GC items.zs:480, later action wins
 // Avaritia infinity tools/weapons
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_sword>);
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_bow>);
@@ -545,7 +605,7 @@ Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_elytra>);
 // Avaritia infinity curios / utility / resources
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_ingot>);
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_nugget>);
-Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_catalyst>);
+// Infinity Catalyst -> chaotic (restage.zs:67); staged in that section.
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_upgrade>);
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_ring>);
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity_shield>);
@@ -563,8 +623,8 @@ Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:double_compressed_c
 // ============================================================
 
 // Custom soa recipes by name
-Recipes.setRecipeStage("wither_slayer", <resource:soa_additions:soa_ender_charm>);
-Recipes.setRecipeStage("wither_slayer", <resource:soa_additions:soa_bravery_certificate>);
+Recipes.setRecipeStage("wither_slayer", <resource:soa_additions:ender_charm>);
+Recipes.setRecipeStage("wither_slayer", <resource:soa_additions:bravery_certificate>);
 
 // Mod items by output
 Recipes.setRecipeStage("wither_slayer", <item:soa_additions:bravery_certificate>);
@@ -579,8 +639,8 @@ Recipes.setRecipeStage("wither_slayer", <item:mysticalagriculture:witherproof_gl
 // ============================================================
 
 // Custom soa recipes by name
-Recipes.setRecipeStage("wyvern", <resource:soa_additions:soa_solarium_star>);
-Recipes.setRecipeStage("wyvern", <resource:soa_additions:soa_sun_totem>);
+Recipes.setRecipeStage("wyvern", <resource:soa_additions:solarium_star>);
+Recipes.setRecipeStage("wyvern", <resource:soa_additions:sun_totem>);
 
 // Mod items by output
 Recipes.setRecipeStage("wyvern", <item:soa_additions:solarium_star>);
@@ -588,6 +648,10 @@ Recipes.setRecipeStage("wyvern", <item:soa_additions:sun_totem>);
 Recipes.setRecipeStage("wyvern", <item:soa_additions:solar_seed>);
 Recipes.setRecipeStage("wyvern", <item:soa_additions:broken_solarium_star>);
 Recipes.setRecipeStage("wyvern", <item:avaritia:neutron_collector>);
+// Wyvern Metal (GC <ore:*WyvernMetal>, tconevo:metal:0/2 + metal_block:0)
+Recipes.setRecipeStage("wyvern", <item:tconevo:wyvern_ingot>);
+Recipes.setRecipeStage("wyvern", <item:tconevo:wyvern_block>);
+Recipes.setRecipeStage("wyvern", <item:tconevo:wyvern_nugget>);
 // Draconic Evolution wyvern tier tools/armor
 Recipes.setRecipeStage("wyvern", <item:draconicevolution:wyvern_axe>);
 Recipes.setRecipeStage("wyvern", <item:draconicevolution:wyvern_bow>);
@@ -602,18 +666,25 @@ Recipes.setRecipeStage("wyvern", <item:draconicevolution:wyvern_crafting_injecto
 Recipes.setRecipeStage("wyvern", <item:draconicadditions:wyvern_harness>);
 Recipes.setRecipeStage("wyvern", <item:draconicadditions:wyvern_necklace>);
 
-// parity_score.py gap closure (2026-07-17): GC containers.zs staged whole mod
-// packages behind commonStages; RecipeStages 1.20 setPackageStages mirrors it.
-// (1.12 cofh -> thermal; rftools/mcjty -> the rftools family mods.)
-Recipes.setPackageStages("thermal", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
-// GC parity: forestry was one of GC's 12 commonStages-gated packages (containers.zs);
-// gate restored 2026-07-24 with Forestry: Community Edition installed.
+// GC parity: containers.zs whitelisted whole *Java packages* of container
+// menus so that staged recipes still craft inside mod GUIs and automation,
+// where RecipeStages cannot resolve a single crafting player. RecipeStages
+// 8.0.0.2 matches these keys as `menu.getClass().getName().startsWith(key)`
+// (ServerStuff#handleServer), so the argument is a Java package root, NOT a
+// mod id -- the mod-id values used here until 2026-07-31 matched nothing.
+// Roots verified in the shipped jars:
+//   cofh     -> cofh.thermal.*.common.inventory.* menus plus the shared
+//               cofh.core.common.inventory.* filter menus (GC used "cofh" too)
+//   mcjty    -> rftoolsbase/rftoolscontrol own menus AND
+//               mcjty.lib.container.GenericContainer, which is what
+//               rftoolspower and xnet actually open (they ship no menu classes
+//               of their own) -- this is why GC used the bare "mcjty"
+//   forestry -> forestry.*.gui.* (was already correct, hence the one that worked)
+//   thelm    -> thelm.packagedauto.menu.* and the five sibling Packaged* mods
+Recipes.setPackageStages("cofh", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("mcjty", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
 Recipes.setPackageStages("forestry", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
-Recipes.setPackageStages("rftoolsbase", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
-Recipes.setPackageStages("rftoolspower", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
-Recipes.setPackageStages("rftoolscontrol", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
-Recipes.setPackageStages("xnet", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
-Recipes.setPackageStages("packagedauto", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("thelm", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
 
 // endrem eye gating (2026-07-17) — hide eye recipes until their stage
 Recipes.setRecipeStage("twilight_shield", <item:endrem:old_eye>);
@@ -632,3 +703,7 @@ Recipes.setRecipeStage("twilight_shield", <item:endrem:rogue_eye>);
 Recipes.setRecipeStage("twilight_shield", <item:endrem:undead_eye>);
 Recipes.setRecipeStage("alchemist", <item:endrem:witch_eye>);
 Recipes.setRecipeStage("wither_slayer", <item:endrem:wither_eye>);
+
+// --- containers.zs parity: GC whitelists these GUI packages across every stage ---
+Recipes.setPackageStages("appeng", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");
+Recipes.setPackageStages("mekanism", "getting_started", "novice_tinker", "skilled_tinker", "master_tinker", "novice_engineer", "skilled_engineer", "master_engineer", "novice_wizard", "skilled_wizard", "master_wizard", "qualified_botanian", "alchemist", "zealot", "twilight_shield", "valkyrie_smasher", "lunatic_cultist", "twilight_conquerer", "sun_killer", "forest_keeper", "hardmode", "wither_slayer", "the_awakened", "wielder_of_infinity", "cosmic_dominator", "fearless_man", "challenger_a", "challenger_b", "challenger_c", "challenger_d", "challenger_e", "challenger_f", "challenger_g", "challenger_all", "transmutation_table", "wand_blueprint", "tactic_blueprint", "shuriken_blueprint", "laser_gun_blueprint", "abyssal_conquerer", "cosmic_ripper", "gatekeeper", "gaia", "wyvern", "awakened", "chaotic", "twilight_forest", "chaotic_dominator", "ender_charm", "nether", "infinite_solar_energy", "space_treasure_hunter");

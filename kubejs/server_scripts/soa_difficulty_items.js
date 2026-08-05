@@ -12,7 +12,8 @@
 //   • The real ScalingHealth 1.20.1 command is /sh_difficulty; it needs an
 //     elevated command source, so we run it from the server.
 //   • persistentData.soa_sh_difficulty mirrors the ScalingHealth value for
-//     soa_entity_hurt.js (GC read player.difficulty directly in CrT).
+//     soa_additions DamageScalingHandler (GC read player.difficulty directly
+//     in CrT; the KubeJS port of that handler couldn't set damage at all).
 // ============================================================
 
 const SOA_DIFF_MIN = 0

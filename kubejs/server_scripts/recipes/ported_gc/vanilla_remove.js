@@ -73,7 +73,10 @@ ServerEvents.recipes(event => {
         // Avaritia
         'avaritia:extreme_crafting_table',
 
-        // Vanilla crafting table override-removal (GC disabled default recipe)
+        // Vanilla crafting table override-removal (GC disabled default recipe).
+        // NOTE: recipes/soa_deviations.js re-adds the vanilla 2x2 planks recipe
+        // afterwards -- GC's replacement for it was the TConstruct Crafting
+        // Station, which no longer exists after the Smithery swap.
         'minecraft:crafting_table',
 
         // Misc absent-mod cleanups (kept as no-ops in case mod re-added)

@@ -783,7 +783,7 @@
 		[cyclic.blocks.fisher]
 			# Radius to Fish from nearby water
 			#Range: 1 ~ 32
-			radius = 12
+			radius = 6
 			# Chance to Fish from nearby water.  Smaller values is slower fish
 			#Range: 1.0E-6 ~ 0.999
 			chance = 0.06

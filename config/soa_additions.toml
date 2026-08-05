@@ -26,21 +26,6 @@
 		#If true, automatically capture a 30s Java Flight Recording when a long GC pause or near-OOM heap is detected.
 		autoJfrOnSpike = true
 
-	[soa_additions.questWebOverlay]
-		#Starts a lightweight HTTP server that serves a quest book overlay page.
-		#Players get a unique URL on login so they can view their quest progress
-		#on a second screen (phone, tablet, second monitor) with live updates.
-		#Default: true.
-		enabled = true
-		#HTTP port for the quest overlay server. Default: 25580.
-		#Range: 1024 ~ 65535
-		port = 25580
-		#Network interface the overlay server binds to.
-		#"127.0.0.1" (default) keeps the overlay private to this machine.
-		#To view it from a phone/tablet, deliberately expose it on your network by
-		#setting this to your LAN IP (or "0.0.0.0" for all interfaces).
-		bindAddress = "127.0.0.1"
-
 	[soa_additions.telemetry]
 		#DEVELOPMENT-PHASE telemetry, used only to troubleshoot and optimize the pack per
 		#player while it is in development. It will be disabled for the stable public release.

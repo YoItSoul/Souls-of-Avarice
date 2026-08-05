@@ -18,16 +18,16 @@ modpackMode = false
 [fpsDisplay]
   # FPS and system details overlay
   # Accepted values are: [OFF, SIMPLE, ADVANCED]
-  mode = "SIMPLE"
+  mode = "OFF"
 
   # Accepted values are: [LEFT, CENTER, RIGHT]
-  align = "RIGHT"
+  align = "CENTER"
 
   # Accepted values are: [TOP, CENTER, BOTTOM]
   verticalAlign = "TOP"
 
   # Accepted values are: [OFF, ALL, GPU_ONLY, RAM_ONLY]
-  systemDetails = "RAM_ONLY"
+  systemDetails = "OFF"
 
   # Value must be greater than 0
   margin = 12
@@ -115,7 +115,7 @@ modpackMode = false
   # Hides the JEI/REI/EMI ingredient overlay until the search field is focused
   hideJREMI = false
   hideJREMIHint = false
-  fontShadows = false
+  fontShadows = true
   fastLanguageReload = true
 
 [fastBlocks]

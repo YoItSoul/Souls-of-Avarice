@@ -41,8 +41,9 @@
           "amount": 50
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\",Type:\"COMMON\",Name:\"Common Loot Crate\",Color:5635925} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -86,8 +87,9 @@
           "count": 32
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\",Type:\"COMMON\",Name:\"Common Loot Crate\",Color:5635925} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
         }
       ],
       "modes": [
@@ -127,8 +129,9 @@
           "count": 1
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\",Type:\"COMMON\",Name:\"Common Loot Crate\",Color:5635925} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
         }
       ],
       "modes": [
@@ -177,8 +180,9 @@
           "amount": 100
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -249,8 +253,9 @@
           "count": 32
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -282,8 +287,9 @@
           "amount": 200
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_common\",Type:\"COMMON\",Name:\"Common Loot Crate\",Color:5635925} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -349,8 +355,9 @@
           "count": 20
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -400,8 +407,9 @@
           "amount": 400
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -435,8 +443,9 @@
           "amount": 200
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -480,8 +489,9 @@
           "amount": 400
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -526,8 +536,9 @@
           "amount": 800
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -572,8 +583,9 @@
           "amount": 500
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -617,8 +629,9 @@
           "amount": 600
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -684,8 +697,9 @@
           "amount": 700
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -779,8 +793,9 @@
           "count": 8
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         },
         {
           "type": "soa_additions:xp",
@@ -823,8 +838,9 @@
           "amount": 400
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         },
         {
           "type": "soa_additions:item",
@@ -864,8 +880,9 @@
           "count": 4
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -900,8 +917,9 @@
           "amount": 500
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 1"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
         }
       ],
       "modes": [
@@ -1265,8 +1283,9 @@
           "amount": 500
         },
         {
-          "type": "soa_additions:command",
-          "command": "/give @p lootbags:loot_bag{Loot:\"soa_additions:loot_crate_rare\",Type:\"RARE\",Name:\"Rare Loot Crate\",Color:5592575} 2"
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 2
         },
         {
           "type": "soa_additions:item",

@@ -25,11 +25,11 @@ S:custom_game_intro_skip_text = '';
 
 ##[window]
 
-B:show_custom_window_icon = 'false';
-S:custom_window_icon_macos = '';
-S:custom_window_icon_32 = '';
-S:custom_window_title = '';
-S:custom_window_icon_16 = '';
+B:show_custom_window_icon = 'true';
+S:custom_window_icon_macos = '/config/fancymenu/assets/soa_icon_macos.icns';
+S:custom_window_icon_32 = '/config/fancymenu/assets/soa_icon_32.png';
+S:custom_window_title = 'Souls of Avarice';
+S:custom_window_icon_16 = '/config/fancymenu/assets/soa_icon_16.png';
 
 
 ##[multiplayer_screen]
@@ -150,6 +150,6 @@ S:global_menu_background_texture = '';
 
 B:mcp_server_enabled = 'false';
 B:dev_pip_window_debug = 'false';
-B:dev_force_mcef_missing = 'false';
 B:dev_force_watermedia_missing = 'false';
+B:dev_force_rinku_missing = 'false';
 I:mcp_server_port = '48561';

@@ -134,3 +134,26 @@ OreStages.addOreStage("nether", <blockstate:minecraft:chipped_anvil>, <blockstat
 OreStages.addOreStage("nether", <blockstate:minecraft:damaged_anvil>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("nether", <blockstate:minecraft:beacon>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("nether", <blockstate:minecraft:enchanting_table>, <blockstate:soa_additions:unknown_block>, false);
+
+// --- GC parity sweep (2026-08-04): ores/blocks GC hid that SoA did not ---
+OreStages.addOreStage("hardmode", <blockstate:taiga:meteorite_block>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:taiga:meteorite_cobble>, <blockstate:minecraft:cobblestone>, false);
+OreStages.addOreStage("hardmode", <blockstate:soa_additions:obsidiorite>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:taiga:obsidiorite_cobble>, <blockstate:minecraft:cobblestone>, false);
+OreStages.addOreStage("hardmode", <blockstate:valoria:ruby_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:valoria:deepslate_ruby_ore>, <blockstate:minecraft:deepslate>, false);
+OreStages.addOreStage("hardmode", <blockstate:valoria:sapphire_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:valoria:deepslate_sapphire_ore>, <blockstate:minecraft:deepslate>, false);
+OreStages.addOreStage("hardmode", <blockstate:valoria:amber_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:valoria:deepslate_amber_ore>, <blockstate:minecraft:deepslate>, false);
+OreStages.addOreStage("hardmode", <blockstate:treasure2:ruby_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:treasure2:sapphire_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("hardmode", <blockstate:treasure2:topaz_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("getting_started", <blockstate:minecraft:crafting_table>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:cyclic:workbench>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:minecraft:chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:minecraft:trapped_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("getting_started", <blockstate:minecraft:ender_chest>, <blockstate:soa_additions:unknown_block>, false);
+OreStages.addOreStage("skilled_engineer", <blockstate:bno:nether_osmium_ore>, <blockstate:minecraft:netherrack>, false);
+OreStages.addOreStage("nether", <blockstate:malum:natural_quartz_ore>, <blockstate:minecraft:stone>, false);
+OreStages.addOreStage("nether", <blockstate:malum:deepslate_quartz_ore>, <blockstate:minecraft:deepslate>, false);

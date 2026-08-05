@@ -36,6 +36,16 @@
 	harvestMoonInterval = 0
 	#Range: 0 ~ 1000
 	harvestMoonGracePeriod = 4
+	#Luck granted for the night of a Harvest Moon. Applied as the vanilla Luck
+	#attribute to players in a dimension the moon is running in, and added to the
+	#Cyclic Fishing Net's own roll, which has no player to read it from.
+	#Luck mainly steers fishing: it pushes the roll toward treasure and away from
+	#junk. 0 disables the boon entirely.
+	#Range: 0.0 ~ 64.0
+	harvestMoonLuckBonus = 1.0
+	#Give players the Luck attribute for the duration of a Harvest Moon. Turn off
+	#to leave the boon to automated fishing only.
+	harvestMoonPlayerLuck = true
 
 [fallingStars]
 	fallingStars = true

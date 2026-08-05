@@ -216,8 +216,8 @@ function soaStageMap() {
 }
 
 // Compute the player's stage-derived difficulty (max across held stages),
-// store it in persistentData (read by soa_entity_hurt.js — GC's
-// onEntityLivingHurt.zs used player.difficulty directly), and push it into
+// store it in persistentData (read by soa_additions DamageScalingHandler —
+// GC's onEntityLivingHurt.zs used player.difficulty directly), and push it into
 // ScalingHealth. The 1.20.1 command is /sh_difficulty (NOT "scalinghealth
 // difficulty" — that silently failed); run from the server source since it
 // requires elevated permissions.

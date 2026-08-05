@@ -1,38 +1,35 @@
 
 [headshot]
-	#Seconds of blindness applied when a player is headshot without a helmet.
-	#Range: 0 ~ 60
-	noHelmetBlindnessSeconds = 2
-	#Blindness amplifier applied when a player is headshot without a helmet. 0 = level I.
-	#Range: 0 ~ 4
-	noHelmetBlindnessAmplifier = 0
-	#Volume of the attacker-only 'ding' sound on a successful headshot.
+	#Headshot mechanics tuning. Defaults match GreedyCraft's iblis-headshots config.
+	#Damage multiplier for an unprotected headshot. A helmet scales this back
+	#toward 1.0 in proportion to its headshot protection, so a headshot can
+	#never do less than a body shot no matter how good the helmet is.
+	#Range: 0.0 ~ 1000000.0
+	headshotDamageMultiplier = 2.0
+	#Damage multiplier applied to a projectile hit that misses the head.
+	#Below 1.0 this is what makes headshots feel worth aiming for.
+	#Range: 0.0 ~ 1000000.0
+	bodyshotDamageMultiplier = 0.8
+	#Durability the helmet loses per point of incoming damage on a headshot,
+	#randomised between 1.0x and 1.5x of this value on each hit.
+	#Range: 0.0 ~ 1000000.0
+	headgearDamageMultiplier = 2.0
+	#Minimum distance in blocks at which a non-projectile attack can headshot.
+	#At the default of 12 ordinary melee never headshots; the path exists for
+	#hitscan-style ranged weapons that damage directly instead of firing an entity.
+	#Range: 0.0 ~ 1000000.0
+	meleeHeadshotMinDistance = 12.0
+	#If true, players can never be headshot. Mobs still can.
+	playersHaveNoHeads = false
+	#Cosmetic feedback. GreedyCraft ships headshots silent and invisible; these default to off.
+	#Spawn crit particles at the head on a successful headshot.
+	showParticles = false
+	#Play an attacker-only confirmation sound on a successful headshot.
+	playHitSound = true
+	#Volume of the attacker-only confirmation sound.
 	#Range: 0.0 ~ 1.0
-	dingVolume = 0.25
-	#Pitch of the attacker-only 'ding' sound on a successful headshot.
+	hitSoundVolume = 0.25
+	#Pitch of the attacker-only confirmation sound.
 	#Range: 0.5 ~ 2.0
-	dingPitch = 1.9
-	#Volume of the low thump played when a player is headshot without a helmet.
-	#Range: 0.0 ~ 1.0
-	thumpVolume = 0.9
-	#Pitch of the low thump played when a player is headshot without a helmet.
-	#Range: 0.5 ~ 2.0
-	thumpPitch = 0.5
-	#Headshot mechanics tuning.
-	#Headshot damage reduction contributed per armor point on the helmet.
-	#Range: 0.0 ~ 1.0
-	reductionPerArmorPoint = 0.1
-	#Headshot damage reduction contributed per toughness point on the helmet.
-	#Range: 0.0 ~ 1.0
-	reductionPerToughnessPoint = 0.08
-	#Hard cap on a helmet's headshot reduction fraction. 0.85 leaves at least
-	#15% of the raw headshot damage getting through regardless of how stacked
-	#the helmet's stats are.
-	#Range: 0.0 ~ 1.0
-	maxReduction = 0.85
-	#Durability points the helmet loses per 1.0 of raw headshot damage. The same
-	#value applies to every helmet — cheaper helmets with smaller max-durability
-	#pools naturally break faster than tougher ones.
-	#Range: 0.0 ~ 20.0
-	durabilityMultiplier = 1.5
+	hitSoundPitch = 1.9
 

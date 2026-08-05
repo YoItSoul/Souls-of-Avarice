@@ -12,11 +12,26 @@
 //     gated below at hardmode like GC. (An earlier port pass wrongly
 //     assumed the Zoo was gone entirely — 2026-07-14 audit fixed that.)
 //   - touhou_little_maid — mod absent. SKIP.
-//   - thaumcraft:eldritchguardian, cultistportallesser — mod absent. SKIP.
+//   - thaumcraft:eldritchguardian, cultistportallesser — Thaumcraft is absent;
+//     Forbidden Arcanus replaces it, so forbidden_arcanus:lost_soul inherits
+//     the novice_wizard gate.
 //   - mowziesmobs:umvuthi (1.20 rename of barako) / frostmaw — both installed; gated as in GC.
 //   - vanilla minecraft:wither / blaze / wither_skeleton — gated as in GC.
-//   - 1.20.1 additions: cataclysm bosses, deeperdarker mobs, etc., gated to
-//     mid-late game stages so casual play doesn't get blindsided.
+//   - abyssalcraft — Valoria replaces it. GC gated the AC *dimensions* (51/52);
+//     Valoria's content is overworld, so the three valoria: entries below are
+//     the only available equivalent lever.
+//
+// SCOPE RULE (2026-08-03): this file gates ONLY what GC gated, plus the two
+// replacement-mod translations above. GC did its progression gating through
+// dimensions.zs and items.zs — mob-stages was a narrow tool (19 entries, 10 of
+// them one mod), never a general boss-gating system.
+// An earlier port pass ignored this and gated new-mod bosses "so casual play
+// doesn't get blindsided". That rationale produced the Twilight Forest deadlock
+// documented below, plus 9 entries removed on 2026-08-03: three aether: bosses
+// (unreachable dead code — soa_dimension_stages.zs already restricts
+// aether:the_aether to 'nether'), deeperdarker:stalker, sculkhorde: x2,
+// aquamirae: x2, and enderzoology:infested_zombie (no GC analog).
+// Do not gate a mob here without a specific GC entry to point at.
 //
 // Range: GC used MobStages.addRange(mob, 256). 1.20.1 sdmmobstages handles
 // range internally; no explicit setting needed.
@@ -43,34 +58,26 @@ val mobStageMap as string[string] = {
     // OMIT_MOD (entity missing: cataclysm:the_harbinger): "cataclysm:the_harbinger":         "wyvern",
     // OMIT_MOD (entity missing: cataclysm:ancient_remnant): "cataclysm:ancient_remnant":       "ender_charm",
 
-    // -- Deeper and Darker (1.20.1; only the Stalker boss needs gating —
-    //    Deep Dark biome itself is gated by progression, so non-boss sculk
-    //    mobs don't need extra MobStages cover) --
-    "deeperdarker:stalker":            "hardmode",
-
-    // -- Forbidden Arcanus bosses --
+    // -- Forbidden Arcanus (stands in for GC's Thaumcraft entries) --
     "forbidden_arcanus:lost_soul":     "novice_wizard",
 
-    // -- Twilight Forest mid-game bosses --
-    "twilightforest:naga":         "twilight_shield",
-    "twilightforest:hydra":        "twilight_shield",
-    "twilightforest:lich":         "twilight_shield",
-    "twilightforest:minoshroom":   "wither_slayer",
-    "twilightforest:knight_phantom": "wither_slayer",
-    "twilightforest:ur_ghast":     "ender_charm",
-    "twilightforest:snow_queen":   "hardmode",
-    "twilightforest:alpha_yeti":   "hardmode",
+    // -- Twilight Forest bosses: DELIBERATELY NOT MOB-STAGED --
+    // GC's scripts/gamestages/mobs.zs gates ZERO twilightforest entities; TF
+    // progression is self-gating (each boss unlocks the next via TF's own
+    // advancement/progression rules). An earlier port pass invented a
+    // twilight_shield/wither_slayer/ender_charm gate here and it DEADLOCKED
+    // the pack (2026-08-03):
+    //   naga/hydra/lich were gated behind `twilight_shield`, but the Twilight
+    //   Shield recipe needs naga_scale (expert) + alpha_yeti_fur + carminite —
+    //   all drops/loot from TF bosses that the gate itself suppressed. The
+    //   boss spawners sat inert in their arenas, and since
+    //   soa_dimension_stages.zs restricts minecraft:the_nether to
+    //   twilight_shield, the Nether was unreachable too.
+    // Do NOT re-add TF entries here.
 
-    // -- Aether 1.20.1 bosses --
-    // Strict GC pacing (2026-07-17): aligned to the dimension's 'nether' gate —
-    // GC opened the Aether at 'nether' with no boss gating inside it.
-    "aether:slider":              "nether",
-    "aether:valkyrie_queen":      "nether",
-    "aether:sun_spirit":          "nether",
-
-    // -- Sculk Horde (sculkhorde mod) --
-    "sculkhorde:sculk_zombie":   "ender_charm",
-    "sculkhorde:sculk_creeper":  "ender_charm",
+    // -- Aether: NOT mob-staged. GC opened the Aether at 'nether' with no boss
+    //    gating inside it, and soa_dimension_stages.zs already restricts
+    //    aether:the_aether to 'nether' — per-boss gates were unreachable.
 
     // -- EnderZoology (GC parity: enderiozoo mobs were hardmode in GC) --
     "enderzoology:concussion_creeper": "hardmode",
@@ -80,7 +87,9 @@ val mobStageMap as string[string] = {
     "enderzoology:fallen_mount":       "hardmode",
     "enderzoology:wither_cat":         "hardmode",
     "enderzoology:wither_witch":       "hardmode",
-    "enderzoology:infested_zombie":    "hardmode", // no GC analog; same family
+    // enderzoology:infested_zombie NOT gated — GC's 3 remaining enderiozoo mobs
+    // (direslime/epicsquid/lovechild) have no 1.20 equivalent; substituting an
+    // unrelated mob to reach the same count is not parity.
 
     // -- L_Enders Cataclysm 3.31 additions (tier-analogy vs the six above;
     //    REVIEW: tune stages to taste) --
@@ -97,9 +106,7 @@ val mobStageMap as string[string] = {
     // OMIT_MOD (entity missing: bosses_of_mass_destruction:lich): "bosses_of_mass_destruction:lich":         "wither_slayer",
     // OMIT_MOD (entity missing: bosses_of_mass_destruction:obsidilith): "bosses_of_mass_destruction:obsidilith":   "ender_charm",
 
-    // -- Aquamirae (Ice Maze; tier-analogy; REVIEW) --
-    "aquamirae:captain_cornelia": "wither_slayer",
-    "aquamirae:maze_mother":      "wither_slayer",
+    // -- Aquamirae: NOT mob-staged. No GC analog (mod is 1.20.1-only). --
 
     // -- Valoria overworld bosses (AbyssalCraft-replacement tiers: AC keys
     //    were 'nether', Asorah granted lunatic_cultist in GC) --

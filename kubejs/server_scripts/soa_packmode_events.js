@@ -112,10 +112,17 @@ PlayerEvents.loggedIn(event => {
 
         if (changed) {
             player.tell(Component.translatable('greedycraft.event.packmode_changed.chat'))
+            // /title is permission level 2, so these must NOT go through
+            // player.runCommand (player source = level 0): that got rejected
+            // with "Unknown or incomplete command" straight into the player's
+            // chat and showed no title. GC ran them off the server source
+            // (server.commandManager.executeCommand(server, …)) — mirrored here.
+            // The .title/.subtitle keys look swapped because GC swapped them.
             try {
-                player.runCommand('title ' + player.username + ' times 40 120 40')
-                player.runCommand('title ' + player.username + ' subtitle {"translate":"greedycraft.event.packmode_changed.title"}')
-                player.runCommand('title ' + player.username + ' title {"translate":"greedycraft.event.packmode_changed.subtitle"}')
+                const server = player.server
+                server.runCommandSilent('title ' + player.username + ' times 40 120 40')
+                server.runCommandSilent('title ' + player.username + ' subtitle {"translate":"greedycraft.event.packmode_changed.title"}')
+                server.runCommandSilent('title ' + player.username + ' title {"translate":"greedycraft.event.packmode_changed.subtitle"}')
             } catch (e) { /* */ }
         }
     }

@@ -117,7 +117,7 @@ ItemStages.restrict(<item:soa_additions:mana_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:experience_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:matter_singularity>, "chaotic");
 ItemStages.restrict(<item:soa_additions:anti_entropy_matter>, "chaotic");
-ItemStages.restrict(<item:solarflux:sp_avaritia.infinity>, "chaotic");
+ItemStages.restrict(<item:solarflux:sp_custom_cosmic_solar_panel>, "chaotic");  // Cosmic Solar Panel
 ItemStages.restrict(<item:avaritia:eternal_singularity>, "chaotic");
 
 // === chaotic_dominator ===
@@ -166,6 +166,11 @@ ItemStages.restrict(<item:valoria:void_core>, "fearless_man");
 ItemStages.restrict(<item:valoria:rune_of_curses>, "fearless_man");
 ItemStages.restrict(<item:valoria:nihility_shard>, "fearless_man");
 ItemStages.restrict(<tag:items:forge:ingots/dreadium>, "fearless_man");
+// SoA: the Warden is the gate to abyssal_conquerer (see "A Glimpse of the Abyss").
+//   The deep dark is walkable long before the Aether, so an early Warden kill is
+//   reachable; locking its heart behind fearless_man keeps that from paying out.
+//   Interim measure — deep dark areas are planned to be made inaccessible outright.
+ItemStages.restrict(<item:deeperdarker:heart_of_the_deep>, "fearless_man");
 
 // === fusion_matrix ===
 ItemStages.restrict(<item:soa_additions:beast_hand>, "fusion_matrix");
@@ -181,7 +186,13 @@ ItemStages.restrict(<item:soa_additions:fusion_matrix_block>, "fusion_matrix");
 
 // === getting_started ===
 ItemStages.restrict(<tag:items:forge:workbenches>, "getting_started");
+// #forge:workbenches holds only minecraft:crafting_table in 1.20; GC's
+// <ore:workbench> also covered Cyclic's workbench.
+ItemStages.restrict(<item:cyclic:workbench>, "getting_started");  // Workbench
 ItemStages.restrict(<tag:items:minecraft:planks>, "getting_started");
+// GC used <ore:plankWood>; these two are outside #minecraft:planks in 1.20:
+ItemStages.restrict(<item:defiledlands:tenebra_planks>, "getting_started");  // Tenebra Planks
+ItemStages.restrict(<item:treasure2:wither_planks>, "getting_started");  // Witherwood Planks
 ItemStages.restrict(<tag:items:forge:chests>, "getting_started");
 ItemStages.restrict(<item:minecraft:wooden_pickaxe>, "getting_started");
 ItemStages.restrict(<item:minecraft:stone_pickaxe>, "getting_started");
@@ -221,7 +232,9 @@ ItemStages.restrict(<tag:items:forge:storage_blocks/gold>, "getting_started");
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_harvest>, "graduated");
 ItemStages.restrict(<item:draconicevolution:creative_capacitor>, "graduated");
 // BAD_ID (item not registered: ae2:creative_storage_cell): ItemStages.restrict(<item:ae2:creative_storage_cell>, "graduated");
-ItemStages.restrict(<item:thermal:watering_can>, "graduated");
+// NO_EQUIVALENT: GC gated thermalcultivation:watering_can:32000 (the CREATIVE
+// variant, restaged to wielder_of_infinity by restage.zs:59), never the plain
+// can. Thermal 1.20 has no creative watering can.
 // BAD_ID (item not registered: thermal:injector_creative): ItemStages.restrict(<item:thermal:injector_creative>, "graduated");
 ItemStages.restrict(<item:botania:creative_pool>, "graduated");
 ItemStages.restrict(<item:mysticalagradditions:creative_essence>, "graduated");
@@ -231,8 +244,12 @@ ItemStages.restrict(<item:projecte:watch_of_flowing_time>, "graduated");
 ItemStages.restrict(<item:projecte:tome>, "graduated");
 // BAD_ID (item not registered: thermal:upgrade_creative): ItemStages.restrict(<item:thermal:upgrade_creative>, "graduated");
 ItemStages.restrict(<item:chancecubes:creative_pendant>, "graduated");
-ItemStages.restrict(<item:ae2wtlib:wireless_universal_terminal>, "graduated");
-ItemStages.restrict(<item:storagedrawers:creative_storage_upgrade>, "graduated");
+// NO_EQUIVALENT: GC gated ae2wtlib:wut_creative (Creative Wireless Ultimate
+// Terminal); ae2wtlib 1.20 ships no creative terminal, and GC never gated the
+// ordinary Wireless Universal Terminal.
+// META MISMATCH: GC gated <storagedrawers:upgrade_creative:1> = Creative
+// Vending Upgrade only (already restricted in the graduated parity block);
+// meta 0, the Creative Storage Upgrade, was never staged.
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_spike>, "graduated");
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:creative_chest>, "graduated");
 // OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:creative_essentia_jar>, "graduated");
@@ -313,7 +330,9 @@ ItemStages.restrict(<tag:items:forge:nuggets/shadowium>, "hardmode");
 ItemStages.restrict(<tag:items:forge:dusts/shadowium>, "hardmode");
 // OMIT_MOD (mod missing: extrautils2): ItemStages.restrict(<item:extrautils2:teleporter>, "hardmode");
 // OMIT_MOD (mod missing: openblocks): ItemStages.restrict(<item:openblocks:hang_glider>, "hardmode");
-ItemStages.restrict(<item:minecraft:enchanted_book>, "hardmode");
+// NBT-ONLY IN GC: items.zs 428-429 gates only enchanted books with
+// StoredEnchantments lvl 5 / lvl 10; the plain item is gated at `nether` only.
+// A flat restrict here required BOTH stages for every enchanted book.
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:item_tele_staff>, "hardmode");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_misc>, "hardmode");
 ItemStages.restrict(<tag:items:forge:ores/ruby>, "hardmode");
@@ -461,7 +480,7 @@ ItemStages.restrict(<item:soa_additions:bloody_sacrifice>, "nether");
 ItemStages.restrict(<item:minecraft:ender_eye>, "nether");
 ItemStages.restrict(<item:minecraft:enchanted_book>, "nether");
 ItemStages.restrict(<item:minecraft:anvil>, "nether");
-ItemStages.restrict(<item:enderio:dark_steel_sword>, "nether");
+// The Ender (dark steel sword): GC's final gate is `disabled` - see that section.
 ItemStages.restrict(<item:minecraft:enchanting_table>, "nether");
 ItemStages.restrict(<item:inventorypets:pet_nether_portal>, "nether");
 ItemStages.restrict(<tag:items:forge:ingots/demonic_metal>, "nether");
@@ -626,7 +645,7 @@ ItemStages.restrict(<item:minecraft:quartz>, "nether");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_canola_press>, "novice_engineer");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_coffee_machine>, "novice_engineer");
 // OMIT_MOD (mod missing: actuallyadditions): ItemStages.restrict(<item:actuallyadditions:block_atomic_reconstructor>, "novice_engineer");
-ItemStages.restrict(<item:enderio:dark_steel_sword>, "novice_engineer");
+// (The Ender - gated at `disabled` in GC, see that section.)
 
 // === novice_wizard ===
 // OMIT_MOD (mod missing: thaumcraft): ItemStages.restrict(<item:thaumcraft:infusion_matrix>, "novice_wizard");
@@ -730,12 +749,11 @@ ItemStages.restrict(<tag:items:forge:storage_blocks/double_compressed_infinity>,
 ItemStages.restrict(<item:soa_additions:creative_soul>, "wielder_of_infinity");
 ItemStages.restrict(<item:soa_additions:difficulty_changer>, "wielder_of_infinity");
 ItemStages.restrict(<item:soa_additions:creative_controller>, "wielder_of_infinity");
-ItemStages.restrict(<item:minecraft:diamond_sword>, "wielder_of_infinity");
-ItemStages.restrict(<item:minecraft:diamond_pickaxe>, "wielder_of_infinity");
-ItemStages.restrict(<item:minecraft:diamond_helmet>, "wielder_of_infinity");
-ItemStages.restrict(<item:minecraft:diamond_chestplate>, "wielder_of_infinity");
-ItemStages.restrict(<item:minecraft:diamond_leggings>, "wielder_of_infinity");
-ItemStages.restrict(<item:minecraft:diamond_boots>, "wielder_of_infinity");
+// NBT-ONLY IN GC: items.zs 471-477 gates only the creative-tier
+// <minecraft:diamond_*>.withTag({ench:[{lvl:10 as short}]}) variants, never the
+// plain items (GC leaves plain diamond gear ungated; pickaxe/axe sit in
+// getting_started). Restricting the plain items here locked ordinary diamond
+// gear -- including quest rewards -- behind the endgame stage.
 ItemStages.restrict(<item:soa_additions:infinity_block_block>, "wielder_of_infinity");
 ItemStages.restrict(<item:soa_additions:infinity_block_block_block>, "wielder_of_infinity");
 ItemStages.restrict(<item:draconicevolution:draconic_staff>, "wielder_of_infinity");
@@ -817,7 +835,9 @@ ItemStages.restrict(<item:draconicevolution:draconic_bow>, "disabled");  // Drac
 ItemStages.restrict(<item:draconicevolution:draconic_pickaxe>, "disabled");  // Draconic Pickaxe
 ItemStages.restrict(<item:draconicevolution:draconic_shovel>, "disabled");  // Draconic Shovel
 ItemStages.restrict(<item:draconicevolution:draconic_sword>, "disabled");  // Draconic Sword
-ItemStages.restrict(<item:twilightforest:ender_bow>, "disabled");  // Ender Bow
+// NAME COLLISION: GC's "Ender Bow" is enderio:item_end_steel_bow, not Twilight
+// Forest's. TF's Ender Bow is never staged in GC (no `Adding to item stage`
+// line for twilightforest:ender_bow); EnderIO 1.20 ships no bow.
 ItemStages.restrict(<item:cyclic:energy_pipe>, "disabled");  // Energy Cable
 ItemStages.restrict(<item:cyclic:fluid_pipe>, "disabled");  // Fluid Cable
 ItemStages.restrict(<item:cyclic:item_pipe>, "disabled");  // Item Cable
@@ -872,7 +892,11 @@ ItemStages.restrict(<item:mysticalagradditions:awakened_draconium_crux>, "fusion
 ItemStages.restrict(<item:mysticalagriculture:awakened_draconium_essence>, "fusion_matrix");  // Awakened Draconium Essence
 ItemStages.restrict(<item:draconicevolution:awakened_draconium_ingot>, "fusion_matrix");  // Awakened Draconium Ingot
 ItemStages.restrict(<item:draconicevolution:awakened_draconium_nugget>, "fusion_matrix");  // Awakened Draconium Nugget
-ItemStages.restrict(<item:draconicevolution:awakened_core>, "fusion_matrix");  // Draconic Core
+// DE renamed its cores between versions - match by TIER, not display name:
+//   1.12 draconic_core  ("Draconic Core",  t1) == 1.20 draconium_core ("Draconium Core")
+//   1.12 awakened_core  ("Awakened Core",  t3) == 1.20 awakened_core  ("Draconic Core")
+ItemStages.restrict(<item:draconicevolution:draconium_core>, "fusion_matrix");  // GC "Draconic Core" (t1), restage.zs:91
+ItemStages.restrict(<item:draconicevolution:awakened_core>, "descendant_of_the_sun");  // GC "Awakened Core" (t3), restage.zs:64
 ItemStages.restrict(<item:draconicevolution:draconium_chest>, "fusion_matrix");  // Draconium Chest
 ItemStages.restrict(<item:mysticalagriculture:draconium_essence>, "fusion_matrix");  // Draconium Essence
 ItemStages.restrict(<item:draconicevolution:draconium_nugget>, "fusion_matrix");  // Draconium Nugget
@@ -927,7 +951,8 @@ ItemStages.restrict(<item:projecte:yellow_alchemical_bag>, "hardmode");  // Alch
 ItemStages.restrict(<item:projecte:alchemical_chest>, "hardmode");  // Alchemical Chest
 ItemStages.restrict(<item:projecte:alchemical_coal>, "hardmode");  // Alchemical Coal
 ItemStages.restrict(<item:projecte:alchemical_coal_block>, "hardmode");  // Alchemical Coal Block
-ItemStages.restrict(<item:bloodmagic:alchemytable>, "hardmode");  // Alchemy Table
+// NAME COLLISION: GC's hardmode "Alchemy Table" is projectex:alchemy_table
+// (no 1.20 counterpart). Blood Magic's table is gated at novice_wizard, as in GC.
 ItemStages.restrict(<item:projecte:relay_mk1>, "hardmode");  // Anti-Matter Relay MK1
 ItemStages.restrict(<item:projecte:relay_mk2>, "hardmode");  // Anti-Matter Relay MK2
 ItemStages.restrict(<item:projecte:relay_mk3>, "hardmode");  // Anti-Matter Relay MK3
@@ -939,9 +964,8 @@ ItemStages.restrict(<item:taiga:aurorium_dust>, "hardmode");  // Aurorium Dust
 ItemStages.restrict(<item:taiga:aurorium_ingot>, "hardmode");  // Aurorium Ingot
 ItemStages.restrict(<item:taiga:aurorium_nugget>, "hardmode");  // Aurorium Nugget
 ItemStages.restrict(<item:taiga:aurorium_ore>, "hardmode");  // Aurorium Ore
-ItemStages.restrict(<item:draconicevolution:awakened_draconium_block>, "hardmode");  // Awakened Draconium Block
-ItemStages.restrict(<item:draconicevolution:awakened_draconium_ingot>, "hardmode");  // Awakened Draconium Ingot
-ItemStages.restrict(<item:draconicevolution:awakened_draconium_nugget>, "hardmode");  // Awakened Draconium Nugget
+// Awakened Draconium block/ingot/nugget: GC restage.zs:96-98 moves these to
+// fusion_matrix, undoing the hardmode add. Gated there already.
 ItemStages.restrict(<item:draconicevolution:advanced_magnet>, "hardmode");  // Awakened Item Dislocator
 ItemStages.restrict(<item:taiga:basalt_dust>, "hardmode");  // Basalt Dust
 ItemStages.restrict(<item:taiga:basalt_ingot>, "hardmode");  // Basalt Ingot
@@ -956,8 +980,8 @@ ItemStages.restrict(<item:draconicevolution:player_dislocator>, "hardmode");  //
 ItemStages.restrict(<item:draconicevolution:p2p_dislocator>, "hardmode");  // Bound Dislocator (Point to Point)
 ItemStages.restrict(<item:projecte:catalytic_lens>, "hardmode");  // Catalytic Lens
 ItemStages.restrict(<item:draconicevolution:celestial_manipulator>, "hardmode");  // Celestial Manipulator
-ItemStages.restrict(<item:draconicevolution:chaos_shard>, "hardmode");  // Chaos Shard
-ItemStages.restrict(<item:draconicevolution:chaotic_core>, "hardmode");  // Chaotic Core
+// Chaos Shard -> awakened (restage.zs:62), Chaotic Core -> chaotic_dominator
+// (restage.zs:63). Both undo the hardmode add; gated in those stages already.
 ItemStages.restrict(<item:draconicevolution:chaotic_crafting_injector>, "hardmode");  // Chaotic Fusion Crafting Injector
 ItemStages.restrict(<item:tconevo:coalescence_matrix>, "hardmode");  // Coalescence Matrix
 ItemStages.restrict(<item:avaritia:compressed_crafting_table>, "hardmode");  // Compressed Crafting Table
@@ -996,25 +1020,25 @@ ItemStages.restrict(<item:projecte:divining_rod_3>, "hardmode");  // Divining Ro
 ItemStages.restrict(<item:projecte:divining_rod_1>, "hardmode");  // Divining Rod (low)
 ItemStages.restrict(<item:projecte:divining_rod_2>, "hardmode");  // Divining Rod (medium)
 ItemStages.restrict(<item:avaritia:double_compressed_crafting_table>, "hardmode");  // Double Compressed Crafting Table
-ItemStages.restrict(<item:draconicevolution:draconic_axe>, "hardmode");  // Draconic Axe
-ItemStages.restrict(<item:draconicevolution:draconic_bow>, "hardmode");  // Draconic Bow
-ItemStages.restrict(<item:draconicevolution:awakened_core>, "hardmode");  // Draconic Core
+// Draconic Axe / Bow -> disabled (GC restages both there; hardmode add undone)
+// Draconic Core (1.20 awakened_core = GC's tier-3 "Awakened Core"):
+// restage.zs:64 moves it to descendant_of_the_sun, undoing the hardmode add.
 ItemStages.restrict(<item:draconicevolution:draconic_io_crystal>, "hardmode");  // Draconic Energy I/O Crystal
 ItemStages.restrict(<item:draconicevolution:draconic_relay_crystal>, "hardmode");  // Draconic Energy Relay Crystal
 ItemStages.restrict(<item:draconicevolution:awakened_crafting_injector>, "hardmode");  // Draconic Fusion Crafting Injector
 ItemStages.restrict(<item:draconicevolution:draconic_hoe>, "hardmode");  // Draconic Hoe
-ItemStages.restrict(<item:draconicevolution:draconic_pickaxe>, "hardmode");  // Draconic Pickaxe
+// Draconic Pickaxe -> disabled (GC restage)
 ItemStages.restrict(<item:draconicevolution:reactor_core>, "hardmode");  // Draconic Reactor Core
-ItemStages.restrict(<item:draconicevolution:draconic_shovel>, "hardmode");  // Draconic Shovel
+// Draconic Shovel -> disabled (GC restage)
 ItemStages.restrict(<item:draconicevolution:draconic_staff>, "hardmode");  // Draconic Staff of Power
-ItemStages.restrict(<item:draconicevolution:draconic_sword>, "hardmode");  // Draconic Sword
+// Draconic Sword -> disabled (GC restage)
 ItemStages.restrict(<item:draconicevolution:draconic_wireless_crystal>, "hardmode");  // Draconic Wireless Energy Crystal
 ItemStages.restrict(<item:draconicevolution:draconium_block>, "hardmode");  // Draconium Block
-ItemStages.restrict(<item:draconicevolution:draconium_chest>, "hardmode");  // Draconium Chest
+// Draconium Chest -> fusion_matrix (restage.zs:102); hardmode add undone.
 ItemStages.restrict(<item:draconicevolution:draconium_dust>, "hardmode");  // Draconium Dust
 ItemStages.restrict(<item:draconicevolution:infused_obsidian>, "hardmode");  // Draconium Infused Obsidian
 ItemStages.restrict(<item:draconicevolution:draconium_ingot>, "hardmode");  // Draconium Ingot
-ItemStages.restrict(<item:draconicevolution:draconium_nugget>, "hardmode");  // Draconium Nugget
+// Draconium Nugget -> fusion_matrix (restage.zs:101); hardmode add undone.
 ItemStages.restrict(<item:draconicevolution:overworld_draconium_ore>, "hardmode");  // Draconium Ore
 ItemStages.restrict(<item:draconicevolution:dragon_heart>, "hardmode");  // Dragon Heart
 ItemStages.restrict(<item:taiga:duranite_dust>, "hardmode");  // Duranite Dust
@@ -1034,12 +1058,12 @@ ItemStages.restrict(<item:avaritia:endest_pearl>, "hardmode");  // Endest Pearl
 ItemStages.restrict(<item:projecte:collector_mk1>, "hardmode");  // Energy Collector MK1
 ItemStages.restrict(<item:projecte:collector_mk2>, "hardmode");  // Energy Collector MK2
 ItemStages.restrict(<item:projecte:collector_mk3>, "hardmode");  // Energy Collector MK3
-ItemStages.restrict(<item:projecte:condenser_mk1>, "hardmode");  // Energy Condenser
-ItemStages.restrict(<item:projecte:condenser_mk2>, "hardmode");  // Energy Condenser MK2
+// Energy Condenser MK1/MK2 -> energy_matter_core (restage.zs:130-131);
+// hardmode adds undone.
 ItemStages.restrict(<item:draconicevolution:energy_core>, "hardmode");  // Energy Core
 ItemStages.restrict(<item:draconicevolution:energy_core_stabilizer>, "hardmode");  // Energy Core Stabilizer
 ItemStages.restrict(<item:draconicevolution:energy_pylon>, "hardmode");  // Energy Pylon
-ItemStages.restrict(<item:cyclic:detector_entity>, "hardmode");  // Entity Detector
+ItemStages.restrict(<item:draconicevolution:entity_detector>, "hardmode");  // Entity Detector (GC hardmode = DE's, not Cyclic's)
 ItemStages.restrict(<item:projecte:evertide_amulet>, "hardmode");  // Evertide Amulet
 ItemStages.restrict(<item:avaritia:extreme_crafting_table>, "hardmode");  // Extreme Crafting Table
 ItemStages.restrict(<item:draconicevolution:fluid_gate>, "hardmode");  // Fluid Gate
@@ -1054,7 +1078,7 @@ ItemStages.restrict(<item:projecte:gem_helmet>, "hardmode");  // Gem Helmet
 ItemStages.restrict(<item:projecte:gem_leggings>, "hardmode");  // Gem Leggings
 ItemStages.restrict(<item:projecte:gem_of_eternal_density>, "hardmode");  // Gem of Eternal Density
 ItemStages.restrict(<item:draconicevolution:generator>, "hardmode");  // Generator
-ItemStages.restrict(<item:projecte:harvest_goddess_band>, "hardmode");  // Harvest Goddess Band
+// Harvest Goddess Band -> graduated (restage.zs:117); hardmode add undone.
 ItemStages.restrict(<item:projecte:high_covalence_dust>, "hardmode");  // High Covalence Dust
 ItemStages.restrict(<item:projecte:hyperkinetic_lens>, "hardmode");  // Hyperkinetic Lens
 ItemStages.restrict(<item:projecte:ignition_ring>, "hardmode");  // Ignition Ring
@@ -1064,11 +1088,8 @@ ItemStages.restrict(<item:taiga:ignitz_nugget>, "hardmode");  // Ignitz Nugget
 ItemStages.restrict(<item:taiga:imperomite_dust>, "hardmode");  // Imperomite Dust
 ItemStages.restrict(<item:taiga:imperomite_ingot>, "hardmode");  // Imperomite Ingot
 ItemStages.restrict(<item:taiga:imperomite_nugget>, "hardmode");  // Imperomite Nugget
-ItemStages.restrict(<item:avaritia:infinity>, "hardmode");  // Infinity Block
-ItemStages.restrict(<item:avaritia:infinity_boots>, "hardmode");  // Infinity Boots
-ItemStages.restrict(<item:avaritia:infinity_catalyst>, "hardmode");  // Infinity Catalyst
-ItemStages.restrict(<item:avaritia:infinity_helmet>, "hardmode");  // Infinity Helmet
-ItemStages.restrict(<item:avaritia:infinity_ingot>, "hardmode");  // Infinity Ingot
+// Infinity block/boots/helmet/ingot -> wielder_of_infinity (restage.zs:45-57);
+// Infinity Catalyst -> chaotic (restage.zs:67). All hardmode adds undone.
 ItemStages.restrict(<item:projecte:interdiction_torch>, "hardmode");  // Interdiction Torch
 ItemStages.restrict(<item:taiga:iox_dust>, "hardmode");  // Iox Dust
 ItemStages.restrict(<item:taiga:iox_ingot>, "hardmode");  // Iox Ingot
@@ -1091,7 +1112,7 @@ ItemStages.restrict(<item:projecte:klein_star_vier>, "hardmode");  // Klein Star
 ItemStages.restrict(<item:projecte:klein_star_zwei>, "hardmode");  // Klein Star Zwei
 ItemStages.restrict(<item:draconicevolution:large_chaos_frag>, "hardmode");  // Large Chaos Fragment
 ItemStages.restrict(<item:projecte:life_stone>, "hardmode");  // Life Stone
-ItemStages.restrict(<item:avaritia:infinity_bow>, "hardmode");  // Longbow of the Heavens
+// Longbow of the Heavens -> wielder_of_infinity (restage.zs:47).
 ItemStages.restrict(<item:projecte:low_covalence_dust>, "hardmode");  // Low Covalence Dust
 ItemStages.restrict(<item:taiga:lumix_dust>, "hardmode");  // Lumix Dust
 ItemStages.restrict(<item:taiga:lumix_ingot>, "hardmode");  // Lumix Ingot
@@ -1106,12 +1127,10 @@ ItemStages.restrict(<item:projecte:mind_stone>, "hardmode");  // Mind Stone
 ItemStages.restrict(<item:draconicevolution:grinder>, "hardmode");  // Mob Grinder
 ItemStages.restrict(<item:projecte:mobius_fuel>, "hardmode");  // Mobius Fuel
 ItemStages.restrict(<item:projecte:mobius_fuel_block>, "hardmode");  // Mobius Fuel Block
-ItemStages.restrict(<item:avaritia:infinity_axe>, "hardmode");  // Nature's Ruin
+// Nature's Ruin -> wielder_of_infinity (restage.zs:50).
 ItemStages.restrict(<item:draconicevolution:nether_draconium_ore>, "hardmode");  // Nether Draconium Ore
-ItemStages.restrict(<item:avaritia:neutron>, "hardmode");  // Neutronium Block
-ItemStages.restrict(<item:avaritia:neutron_compressor>, "hardmode");  // Neutronium Compressor
-ItemStages.restrict(<item:avaritia:neutron_ingot>, "hardmode");  // Neutronium Ingot
-ItemStages.restrict(<item:avaritia:neutron_nugget>, "hardmode");  // Neutronium Nugget
+// Neutronium block/ingot/nugget -> wyvern (restage.zs:108-110); Neutronium
+// Compressor -> awakened (restage.zs:112). All hardmode adds undone.
 ItemStages.restrict(<item:taiga:nihilite_dust>, "hardmode");  // Nihilite Dust
 ItemStages.restrict(<item:taiga:nihilite_ingot>, "hardmode");  // Nihilite Ingot
 ItemStages.restrict(<item:taiga:nihilite_nugget>, "hardmode");  // Nihilite Nugget
@@ -1144,8 +1163,8 @@ ItemStages.restrict(<item:taiga:palladium_ore>, "hardmode");  // Palladium Ore
 ItemStages.restrict(<item:draconicevolution:particle_generator>, "hardmode");  // Particle Generator
 ItemStages.restrict(<item:projecte:philosophers_stone>, "hardmode");  // Philosopher's Stone
 ItemStages.restrict(<item:draconicevolution:mob_soul>, "hardmode");  // Pig Soul
-ItemStages.restrict(<item:avaritia:neutron_pile>, "hardmode");  // Pile of Neutrons
-ItemStages.restrict(<item:avaritia:infinity_shovel>, "hardmode");  // Planet Eater
+// Pile of Neutrons -> wyvern (restage.zs:107); Planet Eater ->
+// wielder_of_infinity (restage.zs:49).
 ItemStages.restrict(<item:draconicevolution:potentiometer>, "hardmode");  // Potentiometer
 ItemStages.restrict(<item:taiga:prometheum_dust>, "hardmode");  // Prometheum Dust
 ItemStages.restrict(<item:taiga:prometheum_ingot>, "hardmode");  // Prometheum Ingot
@@ -1156,7 +1175,7 @@ ItemStages.restrict(<item:taiga:proxii_ingot>, "hardmode");  // Proxii Ingot
 ItemStages.restrict(<item:taiga:proxii_nugget>, "hardmode");  // Proxii Nugget
 ItemStages.restrict(<item:draconicevolution:rain_sensor>, "hardmode");  // Rain Sensor
 ItemStages.restrict(<item:draconicevolution:reactor_injector>, "hardmode");  // Reactor Energy Injector
-ItemStages.restrict(<item:draconicevolution:reactor_stabilizer>, "hardmode");  // Reactor Stabilizer
+// Reactor Stabilizer -> chaotic (restage.zs:68); hardmode add undone.
 ItemStages.restrict(<item:draconicevolution:reactor_prt_focus_ring>, "hardmode");  // Reactor Stabilizer Focus Ring
 ItemStages.restrict(<item:draconicevolution:reactor_prt_stab_frame>, "hardmode");  // Reactor Stabilizer Frame
 ItemStages.restrict(<item:draconicevolution:reactor_prt_in_rotor>, "hardmode");  // Reactor Stabilizer Inner Rotor
@@ -1188,9 +1207,10 @@ ItemStages.restrict(<item:taiga:solarium_dust>, "hardmode");  // Solarium Dust
 ItemStages.restrict(<item:taiga:solarium_ingot>, "hardmode");  // Solarium Ingot
 ItemStages.restrict(<item:taiga:solarium_nugget>, "hardmode");  // Solarium Nugget
 ItemStages.restrict(<item:projecte:soul_stone>, "hardmode");  // Soul Stone
-ItemStages.restrict(<item:draconicevolution:stabilized_spawner>, "hardmode");  // Stabilized Mob Spawner
+// Stabilized Mob Spawner: GC ends up gating this at `disabled` (crafttweaker.log
+// 93801-93802 removes the hardmode add), already restricted in that section.
 ItemStages.restrict(<item:projecte:swiftwolf_rending_gale>, "hardmode");  // Swiftwolf's Rending Gale
-ItemStages.restrict(<item:avaritia:infinity_sword>, "hardmode");  // Sword of the Cosmos
+// Sword of the Cosmos -> wielder_of_infinity (restage.zs:46).
 ItemStages.restrict(<item:taiga:terrax_dust>, "hardmode");  // Terrax Dust
 ItemStages.restrict(<item:taiga:terrax_ingot>, "hardmode");  // Terrax Ingot
 ItemStages.restrict(<item:taiga:terrax_nugget>, "hardmode");  // Terrax Nugget
@@ -1201,8 +1221,8 @@ ItemStages.restrict(<item:taiga:tiberium_nugget>, "hardmode");  // Tiberium Nugg
 ItemStages.restrict(<item:taiga:tiberium_ore>, "hardmode");  // Tiberium Ore
 ItemStages.restrict(<item:draconicevolution:small_chaos_frag>, "hardmode");  // Tiny Chaos Fragment
 ItemStages.restrict(<item:projecte:tome>, "hardmode");  // Tome of Knowledge
-ItemStages.restrict(<item:projecte:transmutation_table>, "hardmode");  // Transmutation Table
-ItemStages.restrict(<item:projecte:transmutation_tablet>, "hardmode");  // Transmutation Tablet
+// Transmutation Table/Tablet -> energy_matter_core (restage.zs:126-127);
+// hardmode adds undone.
 ItemStages.restrict(<item:taiga:triberium_dust>, "hardmode");  // Triberium Dust
 ItemStages.restrict(<item:taiga:triberium_ingot>, "hardmode");  // Triberium Ingot
 ItemStages.restrict(<item:taiga:triberium_nugget>, "hardmode");  // Triberium Nugget
@@ -1224,10 +1244,11 @@ ItemStages.restrict(<item:taiga:vibranium_ore>, "hardmode");  // Vibranium Ore
 ItemStages.restrict(<item:taiga:violium_dust>, "hardmode");  // Violium Dust
 ItemStages.restrict(<item:taiga:violium_ingot>, "hardmode");  // Violium Ingot
 ItemStages.restrict(<item:taiga:violium_nugget>, "hardmode");  // Violium Nugget
-ItemStages.restrict(<item:projecte:void_ring>, "hardmode");  // Void Ring
+// Void Ring: GC ends up gating this at `disabled` (crafttweaker.log 94069-94074
+// removes the hardmode add), already restricted in that section.
 ItemStages.restrict(<item:projecte:volcanite_amulet>, "hardmode");  // Volcanite Amulet
 ItemStages.restrict(<item:projecte:watch_of_flowing_time>, "hardmode");  // Watch of Flowing Time
-ItemStages.restrict(<item:draconicevolution:wyvern_core>, "hardmode");  // Wyvern Core
+// Wyvern Core -> fusion_matrix (restage.zs:90); hardmode add undone.
 ItemStages.restrict(<item:draconicevolution:wyvern_io_crystal>, "hardmode");  // Wyvern Energy I/O Crystal
 ItemStages.restrict(<item:draconicevolution:wyvern_relay_crystal>, "hardmode");  // Wyvern Energy Relay Crystal
 ItemStages.restrict(<item:draconicevolution:wyvern_crafting_injector>, "hardmode");  // Wyvern Fusion Crafting Injector
@@ -1239,14 +1260,17 @@ ItemStages.restrict(<item:projecte:zero_ring>, "hardmode");  // Zero Ring
 
 // === master_engineer (parity) ===
 ItemStages.restrict(<item:mekanism:alloy_atomic>, "master_engineer");  // Atomic Alloy
-ItemStages.restrict(<item:cyclic:collector_fluid>, "master_engineer");  // Fluid Collector
-ItemStages.restrict(<item:cyclic:placer_fluid>, "master_engineer");  // Fluid Placer
+// NAME COLLISION: GC's master_engineer Fluid Collector/Placer are Actually
+// Additions blocks (mod absent from SOA). Cyclic's own pair is gated at nether
+// by the cyclicmagic mod-wide rule, as in GC.
 ItemStages.restrict(<item:mekanism:ultimate_control_circuit>, "master_engineer");  // Ultimate Control Circuit
 
 // === master_wizard (parity) ===
-ItemStages.restrict(<item:tconevo:coalescence_matrix>, "master_wizard");  // Coalescence Matrix
+// Coalescence Matrix is a hardmode item in GC (taiga mod-wide gate); the
+// master_wizard copy here was a duplicate that ANDed the two stages together.
 ItemStages.restrict(<item:thermal:flux_capacitor>, "master_wizard");  // Flux Capacitor
-ItemStages.restrict(<item:cyclic:anvil_void>, "master_wizard");  // Void Anvil
+// Void Anvil is a nether item in GC (cyclicmagic mod-wide gate); the
+// master_wizard copy here was a duplicate.
 ItemStages.restrict(<item:soa_additions:void_metal_ingot>, "master_wizard");  // Void Metal Ingot
 
 // === nether (parity) ===
@@ -1259,7 +1283,8 @@ ItemStages.restrict(<item:aether:aether_dirt>, "nether");  // Aether Dirt
 ItemStages.restrict(<item:aether:aether_portal_frame>, "nether");  // Aether Portal Frame
 ItemStages.restrict(<item:aether:agility_cape>, "nether");  // Agility Cape
 ItemStages.restrict(<item:aether:ambrosium_ore>, "nether");  // Ambrosium Ore
-ItemStages.restrict(<item:aether:ambrosium_shard>, "nether");  // Ambrosium Shard
+// Ambrosium Shard: GC un-stages it outright (restage.zs:31 removeItemStages),
+// overriding the aether_legacy mod-wide nether gate.
 ItemStages.restrict(<item:aether:ambrosium_torch>, "nether");  // Ambrosium Torch
 ItemStages.restrict(<item:aether:angelic_slab>, "nether");  // Angelic Slab
 ItemStages.restrict(<item:aether:angelic_stairs>, "nether");  // Angelic Stairs
@@ -1274,9 +1299,9 @@ ItemStages.restrict(<item:cyclic:battery>, "nether");  // Battery
 ItemStages.restrict(<item:aether:berry_bush>, "nether");  // Berry Bush
 ItemStages.restrict(<item:cyclic:biomass>, "nether");  // Biomass
 ItemStages.restrict(<item:aether:ambrosium_block>, "nether");  // Block of Ambrosium
-ItemStages.restrict(<item:cyclic:placer>, "nether");  // Block Placer
+// Block Placer -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:randomize_scepter>, "nether");  // Block Randomizer
-ItemStages.restrict(<item:aether:blue_aercloud>, "nether");  // Blue Aercloud
+// Aerclouds: GC un-stages every colour (restage.zs:26, <aether_legacy:aercloud:*>).
 ItemStages.restrict(<item:aether:blue_berry>, "nether");  // Blue Berry
 ItemStages.restrict(<item:aether:blue_cape>, "nether");  // Blue Cape
 ItemStages.restrict(<item:aether:blue_gummy_swet>, "nether");  // Blue Gummy Swet
@@ -1297,17 +1322,17 @@ ItemStages.restrict(<item:aether:chest_mimic>, "nether");  // Chest Mimic
 ItemStages.restrict(<item:chisel:chisel>, "nether");  // Chisel
 ItemStages.restrict(<item:cyclic:glove_climb>, "nether");  // Climbing Gloves
 ItemStages.restrict(<item:aether:cloud_staff>, "nether");  // Cloud Staff
-ItemStages.restrict(<item:aether:cold_aercloud>, "nether");  // Cold Aercloud
+// (Cold Aercloud - un-staged with the rest of the aerclouds, restage.zs:26.)
 ItemStages.restrict(<item:aether:cold_parachute>, "nether");  // Cold Parachute
 ItemStages.restrict(<item:cyclic:conveyor>, "nether");  // Conveyor Belt
 ItemStages.restrict(<item:cyclic:chorus_spectral>, "nether");  // Corrupted Chorus Fruit
-ItemStages.restrict(<item:cyclic:crystal_axe>, "nether");  // Crystal Axe
+// Crystal Axe -> disabled (GC restage)
 ItemStages.restrict(<item:aether:crystal_fruit_leaves>, "nether");  // Crystal Fruit Leaves
-ItemStages.restrict(<item:cyclic:crystal_hoe>, "nether");  // Crystal Hoe
+// Crystal Hoe -> disabled (GC restage)
 ItemStages.restrict(<item:aether:crystal_leaves>, "nether");  // Crystal Leaves
 ItemStages.restrict(<item:cyclic:crystal_pickaxe>, "nether");  // Crystal Pickaxe
 ItemStages.restrict(<item:cyclic:crystal_shovel>, "nether");  // Crystal Shovel
-ItemStages.restrict(<item:cyclic:crystal_sword>, "nether");  // Crystal Sword
+// Crystal Sword -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:gem_amber>, "nether");  // Crystallized Amber
 ItemStages.restrict(<item:cyclic:gem_obsidian>, "nether");  // Crystallized Obsidian
 ItemStages.restrict(<item:cyclic:crystal_boots>, "nether");  // Crystallized Obsidian Boots
@@ -1318,7 +1343,7 @@ ItemStages.restrict(<item:aether:decorated_holiday_leaves>, "nether");  // Decor
 ItemStages.restrict(<item:cyclic:diamond_carrot_health>, "nether");  // Diamond Carrot
 ItemStages.restrict(<item:aether:diamond_gloves>, "nether");  // Diamond Gloves
 ItemStages.restrict(<item:valoria:diamond_spear>, "nether");  // Diamond Spear
-ItemStages.restrict(<item:cyclic:spikes_diamond>, "nether");  // Diamond Spikes
+// Diamond Spikes -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:dice>, "nether");  // Dice
 ItemStages.restrict(<item:cyclic:doorbell>, "nether");  // Doorbell
 ItemStages.restrict(<item:cyclic:peat_unbaked>, "nether");  // Dry Peat Bog
@@ -1344,9 +1369,9 @@ ItemStages.restrict(<item:cyclic:ender_pearl_mounted>, "nether");  // Ender Orb 
 ItemStages.restrict(<item:cyclic:ender_bag>, "nether");  // Ender Sack
 ItemStages.restrict(<item:cyclic:charm_world>, "nether");  // Ender Wing
 ItemStages.restrict(<item:cyclic:charm_home>, "nether");  // Ender Wing Prime
-ItemStages.restrict(<item:cyclic:energy_pipe>, "nether");  // Energy Cable
+// Energy Cable -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:wireless_energy>, "nether");  // Energy Transfer Node
-ItemStages.restrict(<item:cyclic:lightning_scepter>, "nether");  // Engraved Thunder
+// Engraved Thunder -> fusion_matrix (restage.zs:114); nether add undone.
 ItemStages.restrict(<item:cyclic:peat_fuel_enriched>, "nether");  // Enriched Peat
 ItemStages.restrict(<item:cyclic:detector_entity>, "nether");  // Entity Detector
 ItemStages.restrict(<item:cyclic:evoker_fang>, "nether");  // Evoker Fang
@@ -1354,7 +1379,7 @@ ItemStages.restrict(<item:cyclic:experience_pylon>, "nether");  // Experience Py
 ItemStages.restrict(<item:cyclic:fan>, "nether");  // Fan
 ItemStages.restrict(<item:cyclic:charm_fire>, "nether");  // Fire Charm
 ItemStages.restrict(<item:aether:flaming_sword>, "nether");  // Flaming Sword
-ItemStages.restrict(<item:cyclic:fluid_pipe>, "nether");  // Fluid Cable
+// Fluid Cable -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:collector_fluid>, "nether");  // Fluid Collector
 ItemStages.restrict(<item:cyclic:placer_fluid>, "nether");  // Fluid Placer
 ItemStages.restrict(<item:cyclic:tank>, "nether");  // Fluid Storage Tank
@@ -1369,7 +1394,7 @@ ItemStages.restrict(<item:cyclic:ice_scepter>, "nether");  // Frost Bringer
 ItemStages.restrict(<item:botania:life_essence>, "nether");  // Gaia Spirit
 ItemStages.restrict(<item:cyclic:scythe_harvest>, "nether");  // Garden Scythe
 ItemStages.restrict(<item:aether:gingerbread_man>, "nether");  // Ginger Bread Man
-ItemStages.restrict(<item:aether:golden_aercloud>, "nether");  // Golden Aercloud
+// (Golden Aercloud - un-staged with the rest of the aerclouds, restage.zs:26.)
 ItemStages.restrict(<item:aether:golden_amber>, "nether");  // Golden Amber
 ItemStages.restrict(<item:aether:golden_dart>, "nether");  // Golden Dart
 ItemStages.restrict(<item:aether:golden_dart_shooter>, "nether");  // Golden Dart Shooter
@@ -1384,7 +1409,7 @@ ItemStages.restrict(<item:aether:golden_pendant>, "nether");  // Golden Pendant
 ItemStages.restrict(<item:aether:golden_ring>, "nether");  // Golden Ring
 ItemStages.restrict(<item:aether:gravitite_gloves>, "nether");  // Gravitite Gloves
 ItemStages.restrict(<item:aether:gravitite_ore>, "nether");  // Gravitite Ore
-ItemStages.restrict(<item:cyclic:harvester>, "nether");  // Harvester
+// Harvester -> skilled_engineer (restage.zs:122); nether add undone.
 ItemStages.restrict(<item:aether:healing_stone>, "nether");  // Healing Stone
 ItemStages.restrict(<item:cyclic:heart>, "nether");  // Heart Container
 ItemStages.restrict(<item:aether:hellfire_slab>, "nether");  // Hellfire Slab
@@ -1406,7 +1431,7 @@ ItemStages.restrict(<item:aether:ice_pendant>, "nether");  // Ice Pendant
 ItemStages.restrict(<item:aether:ice_ring>, "nether");  // Ice Ring
 ItemStages.restrict(<item:aether:icestone>, "nether");  // Icestone
 ItemStages.restrict(<item:aether:incubator>, "nether");  // Incubator
-ItemStages.restrict(<item:cyclic:battery_infinite>, "nether");  // Infinite Battery
+// Infinite Battery -> graduated (restage.zs:116); nether add undone.
 ItemStages.restrict(<item:cyclic:stirrups_reverse>, "nether");  // Inverted Stirrups
 ItemStages.restrict(<item:aether:invisibility_cloak>, "nether");  // Invisibility Cloak
 ItemStages.restrict(<item:aether:iron_bubble>, "nether");  // Iron Bubble
@@ -1415,7 +1440,7 @@ ItemStages.restrict(<item:aether:iron_pendant>, "nether");  // Iron Pendant
 ItemStages.restrict(<item:aether:iron_ring>, "nether");  // Iron Ring
 ItemStages.restrict(<item:valoria:iron_spear>, "nether");  // Iron Spear
 ItemStages.restrict(<item:cyclic:spikes_iron>, "nether");  // Iron Spikes
-ItemStages.restrict(<item:cyclic:item_pipe>, "nether");  // Item Cable
+// Item Cable -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:collector>, "nether");  // Item Collector
 ItemStages.restrict(<item:cyclic:wireless_item>, "nether");  // Item Transfer Node
 ItemStages.restrict(<item:cyclic:apple_lapis>, "nether");  // Lapis Apple
@@ -1439,13 +1464,13 @@ ItemStages.restrict(<item:aether:nature_staff>, "nether");  // Nature Staff
 // BAD_ID (removed with TConstruct; no 1.20 necrotic bone equivalent): ItemStages.restrict(<item:tconstruct:necrotic_bone>, "nether");  // Necrotic Bone
 ItemStages.restrict(<item:aether:neptune_gloves>, "nether");  // Neptune Gloves
 ItemStages.restrict(<item:cyclic:netherbrick_axe>, "nether");  // Nether Axe
-ItemStages.restrict(<item:cyclic:netherbrick_hoe>, "nether");  // Nether Hoe
+// Nether Hoe -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:netherbrick_pickaxe>, "nether");  // Nether Pickaxe
 ItemStages.restrict(<item:cyclic:netherbrick_shovel>, "nether");  // Nether Shovel
 ItemStages.restrict(<item:minecraft:netherite_scrap>, "nether");  // Netherite Scrap
 ItemStages.restrict(<item:aether:obsidian_gloves>, "nether");  // Obsidian Gloves
 ItemStages.restrict(<item:cyclic:shears_obsidian>, "nether");  // Obsidian Shears
-ItemStages.restrict(<item:cyclic:packager>, "nether");  // Packager
+// Packager -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:peat_fuel>, "nether");  // Peat
 ItemStages.restrict(<item:cyclic:beacon>, "nether");  // Pharos Beacon
 ItemStages.restrict(<item:aether:phoenix_gloves>, "nether");  // Phoenix Gloves
@@ -1471,11 +1496,11 @@ ItemStages.restrict(<item:cyclic:lever_remote>, "nether");  // Remote Lever
 ItemStages.restrict(<item:cyclic:scaffold_replace>, "nether");  // Replaceable Scaffolding
 ItemStages.restrict(<item:cyclic:scaffold_responsive>, "nether");  // Responsive Scaffolding
 ItemStages.restrict(<item:cyclic:elevation_wand>, "nether");  // Rod of Elevation
-ItemStages.restrict(<item:cyclic:sandstone_axe>, "nether");  // Sandstone Axe
-ItemStages.restrict(<item:cyclic:sandstone_hoe>, "nether");  // Sandstone Hoe
-ItemStages.restrict(<item:cyclic:sandstone_pickaxe>, "nether");  // Sandstone Pickaxe
-ItemStages.restrict(<item:cyclic:sandstone_shovel>, "nether");  // Sandstone Shovel
-ItemStages.restrict(<item:cyclic:sandstone_sword>, "nether");  // Sandstone Sword
+// Sandstone Axe -> getting_started (restage.zs:85); nether add undone.
+// Sandstone Hoe -> disabled (GC restage)
+// Sandstone Pickaxe/Shovel -> getting_started (restage.zs:84,86); nether adds
+// undone. These are stage-0 tools in GC.
+// Sandstone Sword -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:peat_baked>, "nether");  // Saturated Peat Deposit
 ItemStages.restrict(<item:aether:sentry_stone>, "nether");  // Sentry Stone
 ItemStages.restrict(<item:aether:shield_of_repulsion>, "nether");  // Shield of Repulsion
@@ -1501,7 +1526,8 @@ ItemStages.restrict(<item:aether:skyroot_stick>, "nether");  // Skyroot Stick
 ItemStages.restrict(<item:aether:skyroot_trapdoor>, "nether");  // Skyroot Trapdoor
 ItemStages.restrict(<item:aether:skyroot_water_bucket>, "nether");  // Skyroot Water Bucket
 ItemStages.restrict(<item:cyclic:sleeping_mat>, "nether");  // Sleeping Mat
-ItemStages.restrict(<item:cyclic:slingshot>, "nether");  // Slingshot
+// Slingshot: GC un-stages it outright (restage.zs:25 removeItemStages) - it is
+// ungated in GreedyCraft despite the cyclicmagic mod-wide nether gate.
 ItemStages.restrict(<item:cyclic:ender_eye_reuse>, "nether");  // Solid Ender Eye
 ItemStages.restrict(<item:cyclic:soulstone>, "nether");  // Soulstone
 ItemStages.restrict(<item:cyclic:soundproofing>, "nether");  // Soundproofing
@@ -1513,7 +1539,7 @@ ItemStages.restrict(<item:valoria:spider_chestplate>, "nether");  // Spider Ches
 ItemStages.restrict(<item:valoria:spider_helmet>, "nether");  // Spider Helmet
 ItemStages.restrict(<item:valoria:spider_leggings>, "nether");  // Spider Leggings
 ItemStages.restrict(<item:cyclic:wand_missile>, "nether");  // Spirit Seeker
-ItemStages.restrict(<item:cyclic:sprinkler>, "nether");  // Sprinkler
+// Sprinkler -> disabled (GC restage)
 ItemStages.restrict(<item:cyclic:stirrups>, "nether");  // Stirrups
 ItemStages.restrict(<item:cyclic:storage_bag>, "nether");  // Storage Bag
 // (duplicate altar restrict removed 2026-07-14 — see the fusion_matrix entry)
@@ -1565,7 +1591,11 @@ ItemStages.restrict(<item:enderio:cake_base>, "novice_engineer");  // Cake Base
 ItemStages.restrict(<item:enderio:plant_matter_green>, "novice_engineer");  // Clippings and Trimmings
 ItemStages.restrict(<item:potionsmaster:coal_powder>, "novice_engineer");  // Coal Powder
 ItemStages.restrict(<item:enderio:cold_fire_igniter>, "novice_engineer");  // Cold Fire Igniter
-ItemStages.restrict(<item:cyclic:generator_fuel>, "novice_engineer");  // Combustion Generator
+// NAME COLLISION: GC's "Combustion Generator" is enderio:block_combustion_generator
+// (novice_engineer); EnderIO 1.20 has only a Stirling Generator. Cyclic's fuel
+// generator did not exist in 1.12, so it follows GC's cyclicmagic -> nether
+// mod-wide gate (items.zs:763).
+ItemStages.restrict(<item:cyclic:generator_fuel>, "nether");  // Combustion Generator (Cyclic)
 ItemStages.restrict(<item:enderzoology:concussion_charge>, "novice_engineer");  // Concussion Charge
 ItemStages.restrict(<item:enderio:conduit_binder>, "novice_engineer");  // Conduit Binder
 ItemStages.restrict(<item:enderio:conduit_binder_composite>, "novice_engineer");  // Conduit Binder Composite
@@ -1590,7 +1620,8 @@ ItemStages.restrict(<item:enderio:end_steel_block>, "novice_engineer");  // End 
 ItemStages.restrict(<item:enderio:end_steel_grinding_ball>, "novice_engineer");  // End Steel Grinding Ball
 ItemStages.restrict(<item:enderio:end_steel_ingot>, "novice_engineer");  // End Steel Ingot
 ItemStages.restrict(<item:enderio:end_steel_nugget>, "novice_engineer");  // End Steel Nugget
-ItemStages.restrict(<item:twilightforest:ender_bow>, "novice_engineer");  // Ender Bow
+// (Ender Bow - name collision, see the `disabled` section. GC gates EnderIO's
+// End Steel Bow here, which has no 1.20 counterpart.)
 ItemStages.restrict(<item:enderzoology:ender_charge>, "novice_engineer");  // Ender Charge
 ItemStages.restrict(<item:enderio:ender_crystal>, "novice_engineer");  // Ender Crystal
 ItemStages.restrict(<item:enderio:ender_fluid_conduit>, "novice_engineer");  // Ender Fluid Conduit
@@ -1628,7 +1659,9 @@ ItemStages.restrict(<item:potionsmaster:lapis_powder>, "novice_engineer");  // L
 ItemStages.restrict(<item:enderio:light>, "novice_engineer");  // Light
 ItemStages.restrict(<item:enderio:light_inverted>, "novice_engineer");  // Light (Inverted)
 ItemStages.restrict(<item:enderio:me_conduit>, "novice_engineer");  // ME Conduit
-ItemStages.restrict(<item:bloodmagic:itemrouterfiltermoditems>, "novice_engineer");  // Mod Item Filter
+// NAME COLLISION: GC's novice_engineer "Mod Item Filter" is
+// enderio:item_mod_item_filter (no 1.20 counterpart). The Blood Magic filter of
+// the same name is gated at novice_wizard, where GC puts it.
 ItemStages.restrict(<item:enderio:monster_token>, "novice_engineer");  // Monster Token
 ItemStages.restrict(<item:enderio:nethercotta>, "novice_engineer");  // Nethercotta
 ItemStages.restrict(<item:enderio:nutritious_stick>, "novice_engineer");  // Nutritious Stick
@@ -1641,8 +1674,9 @@ ItemStages.restrict(<item:enderio:painting_machine>, "novice_engineer");  // Pai
 ItemStages.restrict(<item:enderio:photovoltaic_composite>, "novice_engineer");  // Photovoltaic Composite
 ItemStages.restrict(<item:enderio:photovoltaic_plate>, "novice_engineer");  // Photovoltaic Plate
 ItemStages.restrict(<item:enderio:player_token>, "novice_engineer");  // Player Token
-ItemStages.restrict(<item:rftoolspower:power_monitor>, "novice_engineer");  // Power Monitor
-ItemStages.restrict(<item:enderio:powered_spawner>, "novice_engineer");  // Powered Spawner
+// NAME COLLISION: GC's "Power Monitor" is enderio:block_power_monitor (no 1.20
+// counterpart); RFTools Power is not gated by any GC mod-wide rule.
+// Powered Spawner -> disabled (GC restage)
 ItemStages.restrict(<item:enderio:prescient_crystal>, "novice_engineer");  // Prescient Crystal
 ItemStages.restrict(<item:enderio:pressurized_fluid_conduit>, "novice_engineer");  // Pressurized Fluid Conduit
 ItemStages.restrict(<item:enderio:pressurized_fluid_tank>, "novice_engineer");  // Pressurized Fluid Tank
@@ -1678,7 +1712,7 @@ ItemStages.restrict(<item:enderio:soularium_nugget>, "novice_engineer");  // Sou
 ItemStages.restrict(<item:enderio:soularium_pressure_plate>, "novice_engineer");  // Soularium Pressure Plate
 ItemStages.restrict(<item:enderio:staff_of_levity>, "novice_engineer");  // Staff of Levity
 ItemStages.restrict(<item:enderio:stirling_generator>, "novice_engineer");  // Stirling Generator
-ItemStages.restrict(<item:enderio:stone_gear>, "novice_engineer");  // Stone Compound Gear
+// Stone Compound Gear -> disabled (GC restage)
 ItemStages.restrict(<item:potionsmaster:tin_powder>, "novice_engineer");  // Tin Powder
 ItemStages.restrict(<item:enderio:travel_anchor>, "novice_engineer");  // Travel Anchor
 ItemStages.restrict(<item:enderio:plant_matter_brown>, "novice_engineer");  // Twigs and Prunings
@@ -1693,7 +1727,7 @@ ItemStages.restrict(<item:enderio:vibrant_crystal>, "novice_engineer");  // Vibr
 ItemStages.restrict(<item:enderio:weather_crystal>, "novice_engineer");  // Weather Crystal
 ItemStages.restrict(<item:enderio:wired_charger>, "novice_engineer");  // Wired Charger
 ItemStages.restrict(<item:enderzoology:withering_dust>, "novice_engineer");  // Withering Dust
-ItemStages.restrict(<item:enderio:wood_gear>, "novice_engineer");  // Wooden Gear
+// Wooden Gear -> disabled (GC restage)
 ItemStages.restrict(<item:enderio:xp_vacuum>, "novice_engineer");  // XP Vacuum
 ItemStages.restrict(<item:enderio:yeta_wrench>, "novice_engineer");  // Yeta Wrench
 ItemStages.restrict(<item:enderio:z_logic_controller>, "novice_engineer");  // Z-Logic Controller
@@ -1784,10 +1818,7 @@ ItemStages.restrict(<item:bloodarsenal:soul_pendant_lesser>, "novice_wizard");  
 ItemStages.restrict(<item:bloodmagic:soulgemlesser>, "novice_wizard");  // Lesser Tartaric Gem
 ItemStages.restrict(<item:bloodarsenal:sigil_lightning>, "novice_wizard");  // Lightning Sigil
 ItemStages.restrict(<item:bloodmagic:upgradetrainer>, "novice_wizard");  // Living Armour Training Bracelet
-ItemStages.restrict(<item:bloodmagic:livingboots>, "novice_wizard");  // Living Boots
-ItemStages.restrict(<item:bloodmagic:livingplate>, "novice_wizard");  // Living Chestplate
-ItemStages.restrict(<item:bloodmagic:livinghelmet>, "novice_wizard");  // Living Helmet
-ItemStages.restrict(<item:bloodmagic:livingleggings>, "novice_wizard");  // Living Leggings
+// Living armour set -> disabled (GC restages all four there)
 ItemStages.restrict(<item:bloodmagic:reagentmagnetism>, "novice_wizard");  // Magnetism Reagent
 ItemStages.restrict(<item:bloodmagic:masterritualstone>, "novice_wizard");  // Master Ritual Stone
 ItemStages.restrict(<item:bloodmagic:masterroutingnode>, "novice_wizard");  // Master Routing Node
@@ -1858,8 +1889,8 @@ ItemStages.restrict(<item:mekanismgenerators:advanced_solar_generator>, "skilled
 ItemStages.restrict(<item:mekanism:advanced_tier_installer>, "skilled_engineer");  // Advanced Tier Installer
 ItemStages.restrict(<item:mekanism:upgrade_anchor>, "skilled_engineer");  // Anchor Upgrade
 ItemStages.restrict(<item:bigreactors:anglesite_ore>, "skilled_engineer");  // Anglesite Ore
-ItemStages.restrict(<item:mekanism:jetpack_armored>, "skilled_engineer");  // Armored Jetpack
-ItemStages.restrict(<item:mekanism:alloy_atomic>, "skilled_engineer");  // Atomic Alloy
+// Armored Jetpack -> disabled (GC restage)
+// Atomic Alloy -> master_engineer (restage.zs:73, <ore:alloyUltimate>).
 ItemStages.restrict(<item:mekanism:atomic_disassembler>, "skilled_engineer");  // Atomic Disassembler
 ItemStages.restrict(<item:mekanism:basic_control_circuit>, "skilled_engineer");  // Basic Control Circuit
 ItemStages.restrict(<item:mekanism:basic_tier_installer>, "skilled_engineer");  // Basic Tier Installer
@@ -1872,8 +1903,8 @@ ItemStages.restrict(<item:mekanism:bounding_block>, "skilled_engineer");  // Bou
 ItemStages.restrict(<item:mekanism:block_bronze>, "skilled_engineer");  // Bronze Block
 ItemStages.restrict(<item:mekanism:ingot_bronze>, "skilled_engineer");  // Bronze Ingot
 ItemStages.restrict(<item:mekanism:nugget_bronze>, "skilled_engineer");  // Bronze Nugget
-ItemStages.restrict(<item:mekanism:cardboard_box>, "skilled_engineer");  // Cardboard Box
-ItemStages.restrict(<item:mekanism:block_charcoal>, "skilled_engineer");  // Charcoal Block
+// Cardboard Box -> disabled (GC restage)
+// Charcoal Block: GC un-stages it (restage.zs:42, <mekanism:basicblock:3>).
 ItemStages.restrict(<item:mekanism:chargepad>, "skilled_engineer");  // Chargepad
 ItemStages.restrict(<item:mekanism:chemical_crystallizer>, "skilled_engineer");  // Chemical Crystallizer
 ItemStages.restrict(<item:mekanism:chemical_dissolution_chamber>, "skilled_engineer");  // Chemical Dissolution Chamber
@@ -1888,12 +1919,14 @@ ItemStages.restrict(<item:mekanism:configurator>, "skilled_engineer");  // Confi
 ItemStages.restrict(<item:mekanism:clump_copper>, "skilled_engineer");  // Copper Clump
 ItemStages.restrict(<item:mekanism:crystal_copper>, "skilled_engineer");  // Copper Crystal
 ItemStages.restrict(<item:mekanism:dust_copper>, "skilled_engineer");  // Copper Dust
-ItemStages.restrict(<item:minecraft:copper_ingot>, "skilled_engineer");  // Copper Ingot
-ItemStages.restrict(<item:minecraft:copper_ore>, "skilled_engineer");  // Copper Ore
+// NOT staged: minecraft:copper_ingot / copper_ore. GC staged Mekanism by modid
+// and 1.12 Mekanism shipped its own copper ingot/ore; 1.20 Mekanism uses vanilla
+// copper, so the name-match swept vanilla copper behind skilled_engineer. Vanilla
+// copper is early-game here (and raw_copper/copper_block were never staged anyway).
 ItemStages.restrict(<item:mekanism:shard_copper>, "skilled_engineer");  // Copper Shard
 ItemStages.restrict(<item:mekanism:crafting_formula>, "skilled_engineer");  // Crafting Formula
 ItemStages.restrict(<item:mekanism:crusher>, "skilled_engineer");  // Crusher
-ItemStages.restrict(<item:mekanism:dust_diamond>, "skilled_engineer");  // Diamond Dust
+// Diamond Dust: GC un-stages <ore:dustDiamond> outright (restage.zs:24).
 ItemStages.restrict(<item:mekanism:dictionary>, "skilled_engineer");  // Dictionary
 ItemStages.restrict(<item:mekanism:digital_miner>, "skilled_engineer");  // Digital Miner
 ItemStages.restrict(<item:mekanism:dirty_dust_copper>, "skilled_engineer");  // Dirty Copper Dust
@@ -1942,9 +1975,9 @@ ItemStages.restrict(<item:mekanism:clump_iron>, "skilled_engineer");  // Iron Cl
 ItemStages.restrict(<item:mekanism:crystal_iron>, "skilled_engineer");  // Iron Crystal
 ItemStages.restrict(<item:mekanism:dust_iron>, "skilled_engineer");  // Iron Dust
 ItemStages.restrict(<item:mekanism:shard_iron>, "skilled_engineer");  // Iron Shard
-ItemStages.restrict(<item:mekanism:jetpack>, "skilled_engineer");  // Jetpack
+// Jetpack -> disabled (GC restage)
 ItemStages.restrict(<item:mekanism:laser>, "skilled_engineer");  // Laser
-ItemStages.restrict(<item:mekanism:laser_amplifier>, "skilled_engineer");  // Laser Amplifier
+// Laser Amplifier -> chaotic (restage.zs:66).
 ItemStages.restrict(<item:mekanismgenerators:laser_focus_matrix>, "skilled_engineer");  // Laser Focus Matrix
 ItemStages.restrict(<item:mekanism:laser_tractor_beam>, "skilled_engineer");  // Laser Tractor Beam
 ItemStages.restrict(<item:mekanism:clump_lead>, "skilled_engineer");  // Lead Clump
@@ -1986,8 +2019,7 @@ ItemStages.restrict(<item:mekanism:resistive_heater>, "skilled_engineer");  // R
 ItemStages.restrict(<item:mekanism:robit>, "skilled_engineer");  // Robit
 ItemStages.restrict(<item:mekanism:rotary_condensentrator>, "skilled_engineer");  // Rotary Condensentrator
 ItemStages.restrict(<item:mekanismgenerators:rotational_complex>, "skilled_engineer");  // Rotational Complex
-ItemStages.restrict(<item:mekanism:salt>, "skilled_engineer");  // Salt
-ItemStages.restrict(<item:mekanism:block_salt>, "skilled_engineer");  // Salt Block
+// Salt / Salt Block: GC un-stages both (restage.zs:27-28,30).
 ItemStages.restrict(<item:mekanismgenerators:saturating_condenser>, "skilled_engineer");  // Saturating Condenser
 ItemStages.restrict(<item:mekanism:sawdust>, "skilled_engineer");  // Sawdust
 ItemStages.restrict(<item:mekanism:scuba_tank>, "skilled_engineer");  // Scuba Tank
@@ -2030,7 +2062,7 @@ ItemStages.restrict(<item:mekanismgenerators:turbine_casing>, "skilled_engineer"
 ItemStages.restrict(<item:mekanismgenerators:turbine_rotor>, "skilled_engineer");  // Turbine Rotor
 ItemStages.restrict(<item:mekanismgenerators:turbine_valve>, "skilled_engineer");  // Turbine Valve
 ItemStages.restrict(<item:mekanismgenerators:turbine_vent>, "skilled_engineer");  // Turbine Vent
-ItemStages.restrict(<item:mekanism:ultimate_control_circuit>, "skilled_engineer");  // Ultimate Control Circuit
+// Ultimate Control Circuit -> master_engineer (restage.zs:74, <ore:circuitUltimate>).
 ItemStages.restrict(<item:mekanism:ultimate_tier_installer>, "skilled_engineer");  // Ultimate Tier Installer
 ItemStages.restrict(<item:mekanismgenerators:wind_generator>, "skilled_engineer");  // Wind Generator
 
@@ -2044,9 +2076,13 @@ ItemStages.restrict(<item:avaritia:infinity_axe>, "wielder_of_infinity");  // Na
 ItemStages.restrict(<item:avaritia:infinity_shovel>, "wielder_of_infinity");  // Planet Eater
 ItemStages.restrict(<item:avaritia:infinity_sword>, "wielder_of_infinity");  // Sword of the Cosmos
 ItemStages.restrict(<item:avaritia:infinity_pickaxe>, "wielder_of_infinity");  // World Breaker
+ItemStages.restrict(<item:avaritia:infinity_chestplate>, "wielder_of_infinity");  // GC "Infinity Breastplate"
+ItemStages.restrict(<item:avaritia:infinity_pants>, "wielder_of_infinity");  // GC "Infinity Leggings"
+ItemStages.restrict(<item:avaritia:infinity_hoe>, "wielder_of_infinity");  // Eternal Fertility
 
 // === wyvern (parity) ===
 ItemStages.restrict(<item:avaritia:neutron>, "wyvern");  // Neutronium Block
+ItemStages.restrict(<item:avaritia:neutron_collector>, "wyvern");  // Neutronium Collector (restage.zs:106)
 ItemStages.restrict(<item:avaritia:neutron_ingot>, "wyvern");  // Neutronium Ingot
 ItemStages.restrict(<item:avaritia:neutron_nugget>, "wyvern");  // Neutronium Nugget
 ItemStages.restrict(<item:avaritia:neutron_pile>, "wyvern");  // Pile of Neutrons
@@ -2069,8 +2105,7 @@ ItemStages.restrict(<item:bloodarsenal:stasis_plate_item>, "novice_wizard");
 ItemStages.restrict(<item:soa_additions:amber>, "nether");
 ItemStages.restrict(<item:valoria:amber_gem>, "nether");
 ItemStages.restrict(<item:productivebees:amber>, "nether");
-ItemStages.restrict(<item:botania:pebble>, "nether");
-ItemStages.restrict(<item:soa_additions:pebble>, "nether");
+// Pebbles: GC un-stages <ore:rock> outright (restage.zs:22).
 ItemStages.restrict(<item:enderio:enchanter>, "nether");
 ItemStages.restrict(<item:mysticalagriculture:enchanter>, "nether");
 ItemStages.restrict(<item:enderio:clear_glass_d>, "novice_engineer");
@@ -2108,12 +2143,10 @@ ItemStages.restrict(<item:enderio:fused_quartz_na>, "novice_engineer");
 ItemStages.restrict(<item:enderio:fused_quartz_nm>, "novice_engineer");
 ItemStages.restrict(<item:enderio:fused_quartz_np>, "novice_engineer");
 ItemStages.restrict(<item:enderio:fused_quartz_p>, "novice_engineer");
-ItemStages.restrict(<item:bno:copper_nugget>, "skilled_engineer");
-ItemStages.restrict(<item:create:copper_nugget>, "skilled_engineer");
-ItemStages.restrict(<item:cyclic:copper_nugget>, "skilled_engineer");
-ItemStages.restrict(<item:embers:copper_nugget>, "skilled_engineer");
-ItemStages.restrict(<item:malum:copper_nugget>, "skilled_engineer");
-ItemStages.restrict(<item:thermal:copper_nugget>, "skilled_engineer");
+// Copper nuggets deliberately unstaged: GC's only staged "Copper Nugget" was
+// mekanism:copper_nugget (staged via the mekanism modid sweep), which no longer
+// exists in 1.20 — these bno/create/cyclic/embers/malum/thermal nuggets were
+// name-match spillover, same root cause as the vanilla copper ingot/ore above.
 
 // ============================================================
 // endrem eye gating (2026-07-17): End Remastered eyes are pillar
@@ -2157,7 +2190,9 @@ ItemStages.createModRestriction("custommachineryars", "nouveau_lock");
 // === create_lock (Create + addons) ===
 ItemStages.createModRestriction("create", "create_lock");
 ItemStages.createModRestriction("createaddition", "create_lock");            // Crafts & Additions
-ItemStages.createModRestriction("createfood", "create_lock");
+// createfood ("Create: Food", 2517 items) deliberately UNGATED - food/cooking
+// content, not Create automation, and gating it locked most of the pack's
+// cooking behind create_lock.
 ItemStages.createModRestriction("createappliedkinetics", "create_lock");
 ItemStages.createModRestriction("sculkcatalyticchamber", "create_lock");     // Create: Abyss Catalysis
 ItemStages.createModRestriction("create_jetpack_curios", "create_lock");
@@ -2169,4 +2204,500 @@ ItemStages.createModRestriction("embers", "embers_lock");
 // === enigmatic_lock (Enigmatic Legacy + addons — gated until quest integration) ===
 ItemStages.createModRestriction("enigmaticlegacy", "enigmatic_lock");
 ItemStages.createModRestriction("enigmaticaddons", "enigmatic_lock");
-ItemStages.createModRestriction("enigmaticdelicacy", "enigmatic_lock");
+// enigmaticdelicacy ("Enigmatic Delicacy", 61 items) deliberately UNGATED -
+// food content rather than Enigmatic Legacy's progression items.
+
+// ============================================================
+//  GC gap resolution (2026-08-04)
+//
+//  Items GreedyCraft stages that had no counterpart here. Each was resolved
+//  from GC display name -> 1.20 item by lang matching and adversarially
+//  verified; ids below are confirmed present in soa_exports/items.json and
+//  were not already gated per logs/soa_stage_dump.json.
+//
+//  Format:  <1.20 id>   // <1.20 name>  <- GC "<name>" <1.12 id>
+// ============================================================
+
+// --- awakened (3) ---
+ItemStages.restrict(<item:actuallyadditions:bats_wing>, "awakened");  // Bat's Wing  <- GC "bat s wing" actuallyadditions:item_misc:15
+ItemStages.restrict(<item:cyclic:chorus_flight>, "awakened");  // Glistering Chorus Fruit  <- GC "glowing chorus fruit" cyclicmagic:glowing_chorus:0
+ItemStages.restrict(<item:soa_additions:creative_modifier>, "awakened");  // §dCreative Modifier  <- GC "creative modifier" tconstruct:materials:50
+
+// --- challenger_a (7) ---
+ItemStages.restrict(<item:mysticalagriculture:dirt_seeds>, "challenger_a");  // Dirt Seeds  <- GC "dirt seeds" mysticalagriculture:dirt_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ice_seeds>, "challenger_a");  // Ice Seeds  <- GC "ice seeds" mysticalagriculture:ice_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:nature_seeds>, "challenger_a");  // Nature Seeds  <- GC "nature seeds" mysticalagriculture:nature_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:stone_seeds>, "challenger_a");  // Stone Seeds  <- GC "stone seeds" mysticalagriculture:stone_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:water_seeds>, "challenger_a");  // Water Seeds  <- GC "water seeds" mysticalagriculture:water_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:wood_seeds>, "challenger_a");  // Wood Seeds  <- GC "wood seeds" mysticalagriculture:wood_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:zombie_seeds>, "challenger_a");  // Zombie Seeds  <- GC "zombie seeds" mysticalagriculture:zombie_seeds:0
+
+// --- challenger_b (20) ---
+ItemStages.restrict(<item:mysticalagriculture:aluminum_brass_seeds>, "challenger_b");  // Aluminum Brass Seeds  <- GC "aluminum brass seeds" mysticalagriculture:aluminum_brass_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:aluminum_seeds>, "challenger_b");  // Aluminum Seeds  <- GC "aluminum seeds" mysticalagriculture:aluminum_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:apatite_seeds>, "challenger_b");  // Apatite Seeds  <- GC "apatite seeds" mysticalagriculture:apatite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:basalt_seeds>, "challenger_b");  // Basalt Seeds  <- GC "basalt seeds" mysticalagriculture:basalt_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:chicken_seeds>, "challenger_b");  // Chicken Seeds  <- GC "chicken seeds" mysticalagriculture:chicken_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:coal_seeds>, "challenger_b");  // Coal Seeds  <- GC "coal seeds" mysticalagriculture:coal_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:copper_seeds>, "challenger_b");  // Copper Seeds  <- GC "copper seeds" mysticalagriculture:copper_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:cow_seeds>, "challenger_b");  // Cow Seeds  <- GC "cow seeds" mysticalagriculture:cow_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:dye_seeds>, "challenger_b");  // Dye Seeds  <- GC "dye seeds" mysticalagriculture:dye_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:fire_seeds>, "challenger_b");  // Fire Seeds  <- GC "fire seeds" mysticalagriculture:fire_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:grains_of_infinity_seeds>, "challenger_b");  // Grains of Infinity Seeds  <- GC "grains of infinity seeds" mysticalagriculture:grains_of_infinity_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:limestone_seeds>, "challenger_b");  // Limestone Seeds  <- GC "limestone seeds" mysticalagriculture:limestone_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:marble_seeds>, "challenger_b");  // Marble Seeds  <- GC "marble seeds" mysticalagriculture:marble_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:mystical_flower_seeds>, "challenger_b");  // Mystical Flower Seeds  <- GC "mystical flower seeds" mysticalagriculture:mystical_flower_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:nether_seeds>, "challenger_b");  // Nether Seeds  <- GC "nether seeds" mysticalagriculture:nether_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:pig_seeds>, "challenger_b");  // Pig Seeds  <- GC "pig seeds" mysticalagriculture:pig_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:sheep_seeds>, "challenger_b");  // Sheep Seeds  <- GC "sheep seeds" mysticalagriculture:sheep_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:silicon_seeds>, "challenger_b");  // Silicon Seeds  <- GC "silicon seeds" mysticalagriculture:silicon_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:slime_seeds>, "challenger_b");  // Slime Seeds  <- GC "slime seeds" mysticalagriculture:slime_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:sulfur_seeds>, "challenger_b");  // Sulfur Seeds  <- GC "sulfur seeds" mysticalagriculture:sulfur_seeds:0
+
+// --- challenger_c (34) ---
+ItemStages.restrict(<item:mysticalagriculture:aquamarine_seeds>, "challenger_c");  // Aquamarine Seeds  <- GC "aquamarine seeds" mysticalagriculture:aquamarine_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ardite_seeds>, "challenger_c");  // Ardite Seeds  <- GC "ardite seeds" mysticalagriculture:ardite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:basalz_seeds>, "challenger_c");  // Basalz Seeds  <- GC "basalz seeds" mysticalagriculture:basalz_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:black_quartz_seeds>, "challenger_c");  // Black Quartz Seeds  <- GC "black quartz seeds" jaopca:item_mysticalseedsquartzblack:0
+ItemStages.restrict(<item:mysticalagriculture:blitz_seeds>, "challenger_c");  // Blitz Seeds  <- GC "blitz seeds" mysticalagriculture:blitz_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:blizz_seeds>, "challenger_c");  // Blizz Seeds  <- GC "blizz seeds" mysticalagriculture:blizz_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:brass_seeds>, "challenger_c");  // Brass Seeds  <- GC "brass seeds" mysticalagriculture:brass_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:bronze_seeds>, "challenger_c");  // Bronze Seeds  <- GC "bronze seeds" mysticalagriculture:bronze_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:cake_seeds>, "challenger_c");  // Cake Seeds  <- GC "cake seeds" mysticalcreations:cake_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:certus_quartz_seeds>, "challenger_c");  // Certus Quartz Seeds  <- GC "certus quartz seeds" mysticalagriculture:certus_quartz_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:conductive_alloy_seeds>, "challenger_c");  // Conductive Alloy Seeds  <- GC "conductive iron seeds" mysticalagriculture:conductive_iron_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:creeper_seeds>, "challenger_c");  // Creeper Seeds  <- GC "creeper seeds" mysticalagriculture:creeper_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ender_biotite_seeds>, "challenger_c");  // Ender Biotite Seeds  <- GC "ender biotite seeds" mysticalagriculture:ender_biotite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:glowstone_seeds>, "challenger_c");  // Glowstone Seeds  <- GC "glowstone seeds" mysticalagriculture:glowstone_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:graphite_seeds>, "challenger_c");  // Graphite Seeds  <- GC "graphite seeds" mysticalagriculture:graphite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:guardian_seeds>, "challenger_c");  // Guardian Seeds  <- GC "guardian seeds" mysticalagriculture:guardian_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:iron_seeds>, "challenger_c");  // Iron Seeds  <- GC "iron seeds" mysticalagriculture:iron_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ironwood_seeds>, "challenger_c");  // Ironwood Seeds  <- GC "ironwood seeds" mysticalagriculture:ironwood_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:knightslime_seeds>, "challenger_c");  // Knightslime Seeds  <- GC "knightslime seeds" mysticalagriculture:knightslime_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:lead_seeds>, "challenger_c");  // Lead Seeds  <- GC "lead seeds" mysticalagriculture:lead_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:manasteel_seeds>, "challenger_c");  // Manasteel Seeds  <- GC "manasteel seeds" mysticalagriculture:manasteel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:nether_quartz_seeds>, "challenger_c");  // Nether Quartz Seeds  <- GC "nether quartz seeds" mysticalagriculture:nether_quartz_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:obsidian_seeds>, "challenger_c");  // Obsidian Seeds  <- GC "obsidian seeds" mysticalagriculture:obsidian_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:rabbit_seeds>, "challenger_c");  // Rabbit Seeds  <- GC "rabbit seeds" mysticalagriculture:rabbit_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:redstone_alloy_seeds>, "challenger_c");  // Redstone Alloy Seeds  <- GC "redstone alloy seeds" mysticalagriculture:redstone_alloy_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:redstone_seeds>, "challenger_c");  // Redstone Seeds  <- GC "redstone seeds" mysticalagriculture:redstone_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:saltpeter_seeds>, "challenger_c");  // Saltpeter Seeds  <- GC "saltpeter seeds" mysticalagriculture:saltpeter_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:silver_seeds>, "challenger_c");  // Silver Seeds  <- GC "silver seeds" mysticalagriculture:silver_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:skeleton_seeds>, "challenger_c");  // Skeleton Seeds  <- GC "skeleton seeds" mysticalagriculture:skeleton_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:sky_stone_seeds>, "challenger_c");  // Sky Stone Seeds  <- GC "sky stone seeds" mysticalagriculture:sky_stone_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:spider_seeds>, "challenger_c");  // Spider Seeds  <- GC "spider seeds" mysticalagriculture:spider_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:steeleaf_seeds>, "challenger_c");  // Steeleaf Seeds  <- GC "steeleaf seeds" mysticalagriculture:steeleaf_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:thaumium_seeds>, "challenger_c");  // Thaumium Seeds  <- GC "thaumium seeds" mysticalagriculture:thaumium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:tin_seeds>, "challenger_c");  // Tin Seeds  <- GC "tin seeds" mysticalagriculture:tin_seeds:0
+
+// --- challenger_d (36) ---
+ItemStages.restrict(<item:mysticalagriculture:abyssalnite_seeds>, "challenger_d");  // Abyssalnite Seeds  <- GC "abyssalnite seeds" mysticalagriculture:abyssalnite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:alumite_seeds>, "challenger_d");  // Alumite Seeds  <- GC "alumite seeds" mysticalagriculture:alumite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:amber_seeds>, "challenger_d");  // Amber Seeds  <- GC "amber seeds" mysticalagriculture:amber_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:blaze_seeds>, "challenger_d");  // Blaze Seeds  <- GC "blaze seeds" mysticalagriculture:blaze_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:cobalt_seeds>, "challenger_d");  // Cobalt Seeds  <- GC "cobalt seeds" mysticalagriculture:cobalt_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:constantan_seeds>, "challenger_d");  // Constantan Seeds  <- GC "constantan seeds" mysticalagriculture:constantan_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:dark_steel_seeds>, "challenger_d");  // Dark Steel Seeds  <- GC "dark steel seeds" mysticalagriculture:dark_steel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:electrum_seeds>, "challenger_d");  // Electrum Seeds  <- GC "electrum seeds" mysticalagriculture:electrum_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:elementium_seeds>, "challenger_d");  // Elementium Seeds  <- GC "elementium seeds" mysticalagriculture:elementium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:end_seeds>, "challenger_d");  // End Seeds  <- GC "end seeds" mysticalagriculture:end_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:enderman_seeds>, "challenger_d");  // Enderman Seeds  <- GC "enderman seeds" mysticalagriculture:enderman_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:energetic_alloy_seeds>, "challenger_d");  // Energetic Alloy Seeds  <- GC "energetic alloy seeds" mysticalagriculture:energetic_alloy_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:experience_seeds>, "challenger_d");  // Experience Seeds  <- GC "experience seeds" mysticalagriculture:experience_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:fiery_ingot_seeds>, "challenger_d");  // Fiery Ingot Seeds  <- GC "fiery ingot seeds" mysticalagriculture:fiery_ingot_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:fluix_seeds>, "challenger_d");  // Fluix Seeds  <- GC "fluix seeds" mysticalagriculture:fluix_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:flux_infused_ingot_seeds>, "challenger_d");  // Flux-Infused Ingot Seeds  <- GC "fluxed electrum seeds" mysticalagriculture:fluxed_electrum_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ghast_seeds>, "challenger_d");  // Ghast Seeds  <- GC "ghast seeds" mysticalagriculture:ghast_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:gold_seeds>, "challenger_d");  // Gold Seeds  <- GC "gold seeds" mysticalagriculture:gold_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:invar_seeds>, "challenger_d");  // Invar Seeds  <- GC "invar seeds" mysticalagriculture:invar_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:knightmetal_seeds>, "challenger_d");  // Knightmetal Seeds  <- GC "knightmetal seeds" mysticalagriculture:knightmetal_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:lapis_lazuli_seeds>, "challenger_d");  // Lapis Lazuli Seeds  <- GC "lapis lazuli seeds" mysticalagriculture:lapis_lazuli_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:lumium_seeds>, "challenger_d");  // Lumium Seeds  <- GC "lumium seeds" mysticalagriculture:lumium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:malachite_seeds>, "challenger_d");  // Malachite Seeds  <- GC "malachite seeds" mysticalagriculture:malachite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:mithril_seeds>, "challenger_d");  // Mithril Seeds  <- GC "mithril seeds" mysticalagriculture:mithril_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:nickel_seeds>, "challenger_d");  // Nickel Seeds  <- GC "nickel seeds" mysticalagriculture:nickel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:osmium_seeds>, "challenger_d");  // Osmium Seeds  <- GC "osmium seeds" mysticalagriculture:osmium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:peridot_seeds>, "challenger_d");  // Peridot Seeds  <- GC "peridot seeds" mysticalagriculture:peridot_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:pulsating_alloy_seeds>, "challenger_d");  // Pulsating Alloy Seeds  <- GC "pulsating iron seeds" mysticalagriculture:pulsating_iron_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:refined_glowstone_seeds>, "challenger_d");  // Refined Glowstone Seeds  <- GC "glowstone ingot seeds" mysticalagriculture:glowstone_ingot_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ruby_seeds>, "challenger_d");  // Ruby Seeds  <- GC "ruby seeds" mysticalagriculture:ruby_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:sapphire_seeds>, "challenger_d");  // Sapphire Seeds  <- GC "sapphire seeds" mysticalagriculture:sapphire_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:signalum_seeds>, "challenger_d");  // Signalum Seeds  <- GC "signalum seeds" mysticalagriculture:signalum_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:soularium_seeds>, "challenger_d");  // Soularium Seeds  <- GC "soularium seeds" mysticalagriculture:soularium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:tanzanite_seeds>, "challenger_d");  // Tanzanite Seeds  <- GC "tanzanite seeds" mysticalagriculture:tanzanite_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:topaz_seeds>, "challenger_d");  // Topaz Seeds  <- GC "topaz seeds" mysticalagriculture:topaz_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:void_metal_seeds>, "challenger_d");  // Void Metal Seeds  <- GC "void metal seeds" mysticalagriculture:void_metal_seeds:0
+
+// --- challenger_e (21) ---
+ItemStages.restrict(<item:mysticalagriculture:chromium_seeds>, "challenger_e");  // Chromium Seeds  <- GC "chromium seeds" mysticalcreations:chromium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:diamond_seeds>, "challenger_e");  // Diamond Seeds  <- GC "diamond seeds" mysticalagriculture:diamond_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:draconium_seeds>, "challenger_e");  // Draconium Seeds  <- GC "draconium seeds" mysticalagriculture:draconium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:dreadium_seeds>, "challenger_e");  // Dreadium Seeds  <- GC "dreadium seeds" mysticalagriculture:dreadium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:emerald_seeds>, "challenger_e");  // Emerald Seeds  <- GC "emerald seeds" mysticalagriculture:emerald_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:end_steel_seeds>, "challenger_e");  // End Steel Seeds  <- GC "end steel seeds" mysticalagriculture:end_steel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:ender_amethyst_seeds>, "challenger_e");  // Ender Amethyst Seeds  <- GC "ender amethyst seeds" mysticalagriculture:ender_amethyst_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:enderium_seeds>, "challenger_e");  // Enderium Seeds  <- GC "enderium seeds" mysticalagriculture:enderium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:iridium_seeds>, "challenger_e");  // Iridium Seeds  <- GC "iridium seeds" mysticalagriculture:iridium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:manyullyn_seeds>, "challenger_e");  // Manyullyn Seeds  <- GC "manyullyn seeds" mysticalagriculture:manyullyn_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:meteor_seeds>, "challenger_e");  // Meteor Seeds  <- GC "meteor seeds" mysticalcreations:meteor_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:platinum_seeds>, "challenger_e");  // Platinum Seeds  <- GC "platinum seeds" mysticalagriculture:platinum_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:refined_obsidian_seeds>, "challenger_e");  // Refined Obsidian Seeds  <- GC "refined obsidian seeds" mysticalagriculture:refined_obsidian_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:rock_crystal_seeds>, "challenger_e");  // Rock Crystal Seeds  <- GC "rock crystal seeds" mysticalagriculture:rock_crystal_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:stainless_steel_seeds>, "challenger_e");  // Stainless Steel Seeds  <- GC "stainless steel seeds" mysticalcreations:stainless_steel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:starmetal_seeds>, "challenger_e");  // Starmetal Seeds  <- GC "starmetal seeds" mysticalagriculture:starmetal_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:steel_seeds>, "challenger_e");  // Steel Seeds  <- GC "steel seeds" mysticalagriculture:steel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:terrasteel_seeds>, "challenger_e");  // Terrasteel Seeds  <- GC "terrasteel seeds" mysticalagriculture:terrasteel_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:vibrant_alloy_seeds>, "challenger_e");  // Vibrant Alloy Seeds  <- GC "vibrant alloy seeds" mysticalagriculture:vibrant_alloy_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:wither_skeleton_seeds>, "challenger_e");  // Wither Skeleton Seeds  <- GC "wither skeleton seeds" mysticalagriculture:wither_skeleton_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:yellorium_seeds>, "challenger_e");  // Yellorium Seeds  <- GC "yellorium seeds" mysticalagriculture:yellorium_seeds:0
+
+// --- challenger_g (6) ---
+ItemStages.restrict(<item:mysticalagriculture:awakened_draconium_seeds>, "challenger_g");  // Awakened Draconium Seeds  <- GC "awakened draconium seeds" mysticalagradditions:awakened_draconium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:dragon_egg_seeds>, "challenger_g");  // Dragon Egg Seeds  <- GC "dragon egg seeds" mysticalagradditions:dragon_egg_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:fusion_matrix_seeds>, "challenger_g");  // Fusion Matrix Seeds  <- GC "fusion matrix seeds" mysticalcreations:fusion_matrix_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:nether_star_seeds>, "challenger_g");  // Nether Star Seeds  <- GC "nether star seeds" mysticalagradditions:nether_star_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:neutronium_seeds>, "challenger_g");  // Neutronium Seeds  <- GC "neutronium seeds" mysticalagradditions:neutronium_seeds:0
+ItemStages.restrict(<item:mysticalagriculture:titanium_seeds>, "challenger_g");  // Titanium Seeds  <- GC "titanium seeds" mysticalcreations:titanium_seeds:0
+
+// --- chaotic_dominator (1) ---
+ItemStages.restrict(<item:soa_additions:chaotic_energy_core>, "chaotic_dominator");  // Chaotic Energy Core  <- GC "chaotic energy core" draconicadditions:chaotic_energy_core:0
+
+// --- descendant_of_the_sun (1) ---
+ItemStages.restrict(<item:jaopca:dusts.infernium>, "descendant_of_the_sun");  // Infernium Dust  <- GC "infernium dust" jaopca:item_dustinfernium:0
+
+// --- disabled (16) ---
+ItemStages.restrict(<item:actuallyadditions:greenhouse_glass>, "disabled");  // Greenhouse Glass  <- GC "greenhouse glass" actuallyadditions:block_greenhouse_glass:0
+ItemStages.restrict(<item:actuallyadditions:placer>, "disabled");  // Auto-Placer  <- GC "auto placer" actuallyadditions:block_placer:0
+ItemStages.restrict(<item:bloodarsenal:reagent_divinity>, "disabled");  // Reagent of Divinity  <- GC "divinity reagent" bloodarsenal:base_item:9
+ItemStages.restrict(<item:cyclic:crafter>, "disabled");  // Crafting Machine  <- GC "auto crafter" cyclicmagic:auto_crafter:0
+ItemStages.restrict(<item:cyclic:fisher>, "disabled");  // Fishing Net  <- GC "automatic fishing net" cyclicmagic:block_fishing:0
+ItemStages.restrict(<item:forestry:bronze_pickaxe>, "disabled");  // Survivalist's Pickaxe  <- GC "survivalist s pickaxe" forestry:bronze_pickaxe:32767
+ItemStages.restrict(<item:forestry:bronze_shovel>, "disabled");  // Survivalist's Shovel  <- GC "survivalist s shovel" forestry:bronze_shovel:32767
+ItemStages.restrict(<item:forestry:kit_pickaxe>, "disabled");  // Pickaxe Kit  <- GC "pickaxe kit" forestry:kit_pickaxe:0
+ItemStages.restrict(<item:tofucraft:tofu_diamond_sword>, "disabled");  // Diamond Tofu Sword  <- GC "diamond tofu sword" tofucraft:sworddiamond:32767
+ItemStages.restrict(<item:tofucraft:tofu_kinu_sword>, "disabled");  // Kinu Tofu Sword  <- GC "kinu tofu sword" tofucraft:swordkinu:32767
+ItemStages.restrict(<item:tofucraft:tofu_metal_sword>, "disabled");  // Metal Tofu Sword  <- GC "metal tofu sword" tofucraft:swordmetal:32767
+ItemStages.restrict(<item:tofucraft:tofu_momen_sword>, "disabled");  // Momen Tofu Sword  <- GC "momen tofu sword" tofucraft:swordmomen:32767
+ItemStages.restrict(<item:tofucraft:tofu_solid_sword>, "disabled");  // Solid Tofu Sword  <- GC "solid tofu sword" tofucraft:swordsolid:32767
+ItemStages.restrict(<item:valoria:samurai_boots>, "disabled");  // Samurai Boots  <- GC "samurai shoes" sakura:samurai_shoes:0
+ItemStages.restrict(<item:valoria:samurai_kabuto>, "disabled");  // Samurai Kabuto  <- GC "samurai helmet" sakura:samurai_helmet:0
+ItemStages.restrict(<item:valoria:samurai_leggings>, "disabled");  // Samurai Leggings  <- GC "samurai pants" sakura:samurai_pants:0
+
+// --- ender_charm (1) ---
+ItemStages.restrict(<item:minecraft:end_stone>, "ender_charm");  // End Stone  <- GC "end stone" minecraft:end_stone:0
+
+// --- energy_matter_core (2) ---
+ItemStages.restrict(<item:projectexpansion:basic_collector>, "energy_matter_core");  // Basic Collector [MK 1]  <- GC "basic collector mk1" projectex:collector:32767
+ItemStages.restrict(<item:projectexpansion:magenta_matter>, "energy_matter_core");  // Magenta Matter  <- GC "magenta matter" projectex:matter:32767
+
+// --- fusion_matrix (1) ---
+ItemStages.restrict(<item:mysticalagriculture:fusion_matrix_essence>, "fusion_matrix");  // Fusion Matrix Essence  <- GC "fusion matrix essence" mysticalcreations:fusion_matrix_essence:0
+
+// --- getting_started (2) ---
+ItemStages.restrict(<item:aether:chest_mimic>, "getting_started");  // Chest Mimic  <- GC "chest mimic" aether_legacy:chest_mimic:0
+ItemStages.restrict(<item:aether:treasure_chest>, "getting_started");  // Treasure Chest  <- GC "treasure chest" aether_legacy:treasure_chest:0
+
+// --- graduated (2) ---
+ItemStages.restrict(<item:ae2:creative_item_cell>, "graduated");  // Creative ME Item Cell  <- GC "creative me storage cell" appliedenergistics2:creative_storage_cell:0
+ItemStages.restrict(<item:projectexpansion:final_star>, "graduated");  // Final Star  <- GC "the final star" projectex:final_star:0
+
+// --- hardmode (67) ---
+ItemStages.restrict(<item:actuallyadditions:ender_casing>, "hardmode");  // Ender Casing  <- GC "ender casing" actuallyadditions:block_misc:8
+ItemStages.restrict(<item:actuallyadditions:lens_of_disenchanting>, "hardmode");  // Lens of Disenchanting  <- GC "lens of disenchanting" actuallyadditions:item_disenchanting_lens:0
+ItemStages.restrict(<item:actuallyadditions:phantom_booster>, "hardmode");  // Range Booster  <- GC "phantom booster" actuallyadditions:block_phantom_booster:0
+ItemStages.restrict(<item:actuallyadditions:phantom_energyface>, "hardmode");  // Phantom Energyface  <- GC "phantom energyface" actuallyadditions:block_phantom_energyface:0
+ItemStages.restrict(<item:actuallyadditions:phantom_itemface>, "hardmode");  // Phantom Itemface  <- GC "phantomface" actuallyadditions:block_phantomface:0
+ItemStages.restrict(<item:actuallyadditions:phantom_liquiface>, "hardmode");  // Phantom Liquiface  <- GC "phantom liquiface" actuallyadditions:block_phantom_liquiface:0
+ItemStages.restrict(<item:actuallyadditions:phantom_placer>, "hardmode");  // Phantom Placer  <- GC "phantom placer" actuallyadditions:block_phantom_placer:0
+ItemStages.restrict(<item:actuallyadditions:phantom_redstoneface>, "hardmode");  // Phantom Redstoneface  <- GC "phantom redstoneface" actuallyadditions:block_phantom_redstoneface:0
+ItemStages.restrict(<item:actuallyadditions:teleport_staff>, "hardmode");  // Teleport Staff  <- GC "teleport staff" actuallyadditions:item_tele_staff:0
+ItemStages.restrict(<item:mysticalagriculture:dragon_egg_essence>, "hardmode");  // Dragon Egg Essence  <- GC "dragon egg essence" mysticalagradditions:dragon_egg_essence:0
+ItemStages.restrict(<item:mysticalagriculture:nether_star_essence>, "hardmode");  // Nether Star Essence  <- GC "nether star essence" mysticalagradditions:nether_star_essence:0
+ItemStages.restrict(<item:mysticalagriculture:neutronium_essence>, "hardmode");  // Neutronium Essence  <- GC "neutronium essence" mysticalagradditions:neutronium_essence:0
+ItemStages.restrict(<item:projectexpansion:basic_compressed_collector>, "hardmode");  // Basic Compressed Collector [MK 1]  <- GC "basic collector mk1" projectex:compressed_collector:0
+ItemStages.restrict(<item:projectexpansion:basic_emc_link>, "hardmode");  // Basic EMC Link [MK 1]  <- GC "basic energy emc link" projectex:energy_link:0
+ItemStages.restrict(<item:projectexpansion:basic_power_flower>, "hardmode");  // Basic Power Flower [MK 1]  <- GC "basic power flower bonsai pot mk1" projectex:power_flower:0
+ItemStages.restrict(<item:projectexpansion:basic_relay>, "hardmode");  // Basic Relay [MK 1]  <- GC "basic relay mk1" projectex:relay:0
+ItemStages.restrict(<item:projectexpansion:blue_power_flower>, "hardmode");  // Blue Power Flower [MK 8]  <- GC "blue matter power flower bonsai pot mk8" projectex:power_flower:7
+ItemStages.restrict(<item:projectexpansion:blue_relay>, "hardmode");  // Blue Relay [MK 8]  <- GC "blue matter relay mk8" projectex:relay:7
+ItemStages.restrict(<item:projectexpansion:colossal_star_drei>, "hardmode");  // Colossal Star Drei  <- GC "colossal star drei" projectex:colossal_star_drei:0
+ItemStages.restrict(<item:projectexpansion:colossal_star_ein>, "hardmode");  // Colossal Star Ein  <- GC "colossal star ein" projectex:colossal_star_ein:0
+ItemStages.restrict(<item:projectexpansion:colossal_star_omega>, "hardmode");  // Colossal Star Omega  <- GC "colossal star omega" projectex:colossal_star_omega:0
+ItemStages.restrict(<item:projectexpansion:colossal_star_sphere>, "hardmode");  // Colossal Star Sphere  <- GC "colossal star sphere" projectex:colossal_star_sphere:0
+ItemStages.restrict(<item:projectexpansion:colossal_star_vier>, "hardmode");  // Colossal Star Vier  <- GC "colossal star vier" projectex:colossal_star_vier:0
+ItemStages.restrict(<item:projectexpansion:colossal_star_zwei>, "hardmode");  // Colossal Star Zwei  <- GC "colossal star zwei" projectex:colossal_star_zwei:0
+ItemStages.restrict(<item:projectexpansion:cyan_power_flower>, "hardmode");  // Cyan Power Flower [MK 9]  <- GC "cyan matter power flower bonsai pot mk9" projectex:power_flower:8
+ItemStages.restrict(<item:projectexpansion:cyan_relay>, "hardmode");  // Cyan Relay [MK 9]  <- GC "cyan matter relay mk9" projectex:relay:8
+ItemStages.restrict(<item:projectexpansion:dark_power_flower>, "hardmode");  // Dark Power Flower [MK 2]  <- GC "dark matter power flower bonsai pot mk2" projectex:power_flower:1
+ItemStages.restrict(<item:projectexpansion:dark_relay>, "hardmode");  // Dark Relay [MK 2]  <- GC "dark matter relay mk2" projectex:relay:1
+ItemStages.restrict(<item:projectexpansion:fading_power_flower>, "hardmode");  // Fading Power Flower [MK 15]  <- GC "fading matter power flower bonsai pot mk15" projectex:power_flower:14
+ItemStages.restrict(<item:projectexpansion:fading_relay>, "hardmode");  // Fading Relay [MK 15]  <- GC "fading matter relay mk15" projectex:relay:14
+ItemStages.restrict(<item:projectexpansion:final_power_flower>, "hardmode");  // Final Power Flower [MK 16]  <- GC "the final power flower bonsai pot" projectex:power_flower:15
+ItemStages.restrict(<item:projectexpansion:final_relay>, "hardmode");  // Final Relay [MK 16]  <- GC "the final relay" projectex:relay:15
+ItemStages.restrict(<item:projectexpansion:final_star_shard>, "hardmode");  // Final Star Shard  <- GC "the final star shard" projectex:final_star_shard:0
+ItemStages.restrict(<item:projectexpansion:green_power_flower>, "hardmode");  // Green Power Flower [MK 10]  <- GC "green matter power flower bonsai pot mk10" projectex:power_flower:9
+ItemStages.restrict(<item:projectexpansion:green_relay>, "hardmode");  // Green Relay [MK 10]  <- GC "green matter relay mk10" projectex:relay:9
+ItemStages.restrict(<item:projectexpansion:knowledge_sharing_book>, "hardmode");  // Knowledge Sharing Book  <- GC "knowledge sharing book" projectex:knowledge_sharing_book:0
+ItemStages.restrict(<item:projectexpansion:lime_power_flower>, "hardmode");  // Lime Power Flower [MK 11]  <- GC "lime matter power flower bonsai pot mk11" projectex:power_flower:10
+ItemStages.restrict(<item:projectexpansion:lime_relay>, "hardmode");  // Lime Relay [MK 11]  <- GC "lime matter relay mk11" projectex:relay:10
+// Magenta Matter: GC restage.zs:129 (<projectex:matter:*>) moves the matter tiers
+// to energy_matter_core, undoing the projectex hardmode add - gated there instead.
+ItemStages.restrict(<item:projectexpansion:magenta_power_flower>, "hardmode");  // Magenta Power Flower [MK 4]  <- GC "magenta matter power flower bonsai pot mk4" projectex:power_flower:3
+ItemStages.restrict(<item:projectexpansion:magenta_relay>, "hardmode");  // Magenta Relay [MK 4]  <- GC "magenta matter relay mk4" projectex:relay:3
+ItemStages.restrict(<item:projectexpansion:magnum_star_drei>, "hardmode");  // Magnum Star Drei  <- GC "magnum star drei" projectex:magnum_star_drei:0
+ItemStages.restrict(<item:projectexpansion:magnum_star_ein>, "hardmode");  // Magnum Star Ein  <- GC "magnum star ein" projectex:magnum_star_ein:0
+ItemStages.restrict(<item:projectexpansion:magnum_star_omega>, "hardmode");  // Magnum Star Omega  <- GC "magnum star omega" projectex:magnum_star_omega:0
+ItemStages.restrict(<item:projectexpansion:magnum_star_sphere>, "hardmode");  // Magnum Star Sphere  <- GC "magnum star sphere" projectex:magnum_star_sphere:0
+ItemStages.restrict(<item:projectexpansion:magnum_star_vier>, "hardmode");  // Magnum Star Vier  <- GC "magnum star vier" projectex:magnum_star_vier:0
+ItemStages.restrict(<item:projectexpansion:magnum_star_zwei>, "hardmode");  // Magnum Star Zwei  <- GC "magnum star zwei" projectex:magnum_star_zwei:0
+ItemStages.restrict(<item:projectexpansion:orange_power_flower>, "hardmode");  // Orange Power Flower [MK 13]  <- GC "orange matter power flower bonsai pot mk13" projectex:power_flower:12
+ItemStages.restrict(<item:projectexpansion:orange_relay>, "hardmode");  // Orange Relay [MK 13]  <- GC "orange matter relay mk13" projectex:relay:12
+ItemStages.restrict(<item:projectexpansion:pink_power_flower>, "hardmode");  // Pink Power Flower [MK 5]  <- GC "pink matter power flower bonsai pot mk5" projectex:power_flower:4
+ItemStages.restrict(<item:projectexpansion:pink_relay>, "hardmode");  // Pink Relay [MK 5]  <- GC "pink matter relay mk5" projectex:relay:4
+ItemStages.restrict(<item:projectexpansion:purple_power_flower>, "hardmode");  // Purple Power Flower [MK 6]  <- GC "purple matter power flower bonsai pot mk6" projectex:power_flower:5
+ItemStages.restrict(<item:projectexpansion:purple_relay>, "hardmode");  // Purple Relay [MK 6]  <- GC "purple matter relay mk6" projectex:relay:5
+ItemStages.restrict(<item:projectexpansion:red_power_flower>, "hardmode");  // Red Power Flower [MK 3]  <- GC "red matter power flower bonsai pot mk3" projectex:power_flower:2
+ItemStages.restrict(<item:projectexpansion:red_relay>, "hardmode");  // Red Relay [MK 3]  <- GC "red matter relay mk3" projectex:relay:2
+ItemStages.restrict(<item:projectexpansion:violet_power_flower>, "hardmode");  // Violet Power Flower [MK 7]  <- GC "violet matter power flower bonsai pot mk7" projectex:power_flower:6
+ItemStages.restrict(<item:projectexpansion:violet_relay>, "hardmode");  // Violet Relay [MK 7]  <- GC "violet matter relay mk7" projectex:relay:6
+ItemStages.restrict(<item:projectexpansion:white_power_flower>, "hardmode");  // White Power Flower [MK 14]  <- GC "white matter power flower bonsai pot mk14" projectex:power_flower:13
+ItemStages.restrict(<item:projectexpansion:white_relay>, "hardmode");  // White Relay [MK 14]  <- GC "white matter relay mk14" projectex:relay:13
+ItemStages.restrict(<item:projectexpansion:yellow_power_flower>, "hardmode");  // Yellow Power Flower [MK 12]  <- GC "yellow matter power flower bonsai pot mk12" projectex:power_flower:11
+ItemStages.restrict(<item:projectexpansion:yellow_relay>, "hardmode");  // Yellow Relay [MK 12]  <- GC "yellow matter relay mk12" projectex:relay:11
+// Tofu swords (diamond/kinu/metal): GC restages all three to `disabled`
+// (crafttweaker.log shows the removal before the final add), so the hardmode
+// entry is stale - they are gated in the disabled section above.
+// (Momen/Solid Tofu Sword - restaged to `disabled` in GC, same as the three above.)
+ItemStages.restrict(<item:valoria:amber_ore>, "hardmode");  // Amber Ore  <- GC "amber bearing stone" thaumcraft:ore_amber:0
+
+// --- master_engineer (7) ---
+ItemStages.restrict(<item:actuallyadditions:breaker>, "master_engineer");  // Auto-Breaker  <- GC "auto breaker" actuallyadditions:block_breaker:0
+ItemStages.restrict(<item:actuallyadditions:dropper>, "master_engineer");  // Automatic Precision Dropper  <- GC "automatic precision dropper" actuallyadditions:block_dropper:0
+ItemStages.restrict(<item:actuallyadditions:fluid_collector>, "master_engineer");  // Fluid Collector  <- GC "fluid collector" actuallyadditions:block_fluid_collector:0
+ItemStages.restrict(<item:actuallyadditions:fluid_placer>, "master_engineer");  // Fluid Placer  <- GC "fluid placer" actuallyadditions:block_fluid_placer:0
+ItemStages.restrict(<item:actuallyadditions:long_range_breaker>, "master_engineer");  // Long-Range Breaker  <- GC "long range breaker" actuallyadditions:block_directional_breaker:0
+ItemStages.restrict(<item:actuallyadditions:phantom_breaker>, "master_engineer");  // Phantom Breaker  <- GC "phantom breaker" actuallyadditions:block_phantom_breaker:0
+ItemStages.restrict(<item:actuallyadditions:vertical_digger>, "master_engineer");  // Vertical Digger  <- GC "vertical digger" actuallyadditions:block_miner:0
+
+// --- nether (2) ---
+ItemStages.restrict(<item:minecraft:ancient_debris>, "nether");  // Ancient Debris  <- GC "ancient debris" additions:greedycraft-ancient_debris:0
+ItemStages.restrict(<item:soa_additions:wither_bone>, "nether");  // §8Wither Bone  <- GC "wither bone" netherex:wither_bone:0
+
+// --- novice_engineer (16) ---
+ItemStages.restrict(<item:actuallyadditions:atomic_reconstructor>, "novice_engineer");  // Atomic Reconstructor  <- GC "atomic reconstructor" actuallyadditions:block_atomic_reconstructor:0
+ItemStages.restrict(<item:actuallyadditions:battery_box>, "novice_engineer");  // Battery Box  <- GC "battery box" actuallyadditions:block_battery_box:0
+ItemStages.restrict(<item:actuallyadditions:bio_reactor>, "novice_engineer");  // Bio Reactor  <- GC "bio reactor" actuallyadditions:block_bio_reactor:0
+ItemStages.restrict(<item:actuallyadditions:canola_press>, "novice_engineer");  // Canola Press  <- GC "canola press" actuallyadditions:block_canola_press:0
+ItemStages.restrict(<item:actuallyadditions:coffee_machine>, "novice_engineer");  // Coffee Maker  <- GC "coffee maker" actuallyadditions:block_coffee_machine:0
+ItemStages.restrict(<item:actuallyadditions:display_stand>, "novice_engineer");  // Display Stand  <- GC "display stand" actuallyadditions:block_display_stand:0
+ItemStages.restrict(<item:actuallyadditions:empowered_restonia_crystal_block>, "novice_engineer");  // Empowered Restonia Crystal Block (+ 5 sibling Empowered Crystal Blocks)  <- GC "this is bugged throw it away please" actuallyadditions:block_crystal_empowered:32767
+ItemStages.restrict(<item:actuallyadditions:empowerer>, "novice_engineer");  // Empowerer  <- GC "empowerer" actuallyadditions:block_empowerer:0
+ItemStages.restrict(<item:actuallyadditions:energizer>, "novice_engineer");  // Energizer  <- GC "energizer" actuallyadditions:block_energizer:0
+ItemStages.restrict(<item:actuallyadditions:enervator>, "novice_engineer");  // Enervator  <- GC "enervator" actuallyadditions:block_enervator:0
+ItemStages.restrict(<item:actuallyadditions:farmer>, "novice_engineer");  // Farmer  <- GC "farmer" actuallyadditions:block_farmer:0
+ItemStages.restrict(<item:actuallyadditions:hopping_item_interface>, "novice_engineer");  // Hopping Item Interface  <- GC "hopping item interface" actuallyadditions:block_item_viewer_hopping:0
+ItemStages.restrict(<item:actuallyadditions:item_interface>, "novice_engineer");  // Item Interface  <- GC "item interface" actuallyadditions:block_item_viewer:0
+ItemStages.restrict(<item:actuallyadditions:lava_factory_controller>, "novice_engineer");  // Lava Factory Controller  <- GC "lava factory controller" actuallyadditions:block_lava_factory_controller:0
+ItemStages.restrict(<item:actuallyadditions:player_interface>, "novice_engineer");  // Player Interface  <- GC "player interface" actuallyadditions:block_player_interface:0
+ItemStages.restrict(<item:actuallyadditions:shock_suppressor>, "novice_engineer");  // Shock Absorber  <- GC "shock absorber" actuallyadditions:block_shock_suppressor:0
+
+// --- skilled_engineer (1) ---
+ItemStages.restrict(<item:bigreactors:yellorite_ore>, "skilled_engineer");  // Yellorite Ore  <- GC "yellorite ore" bigreactors:oreyellorite:0
+
+// --- wielder_of_infinity (1) ---
+ItemStages.restrict(<item:actuallyadditions:ring_of_growth>, "wielder_of_infinity");  // Ring of Growth  <- GC "ring of growth" actuallyadditions:item_growth_ring:0
+
+// ============================================================
+//  Sweep of disabled lines + unaudited axes (2026-08-04)
+//
+//  OMIT_MOD/BAD_ID/EMPTY_TAG lines that were disabled against a stale
+//  registry, plus gaps found auditing the mob/dimension/ore/liquid axes.
+//  Every id re-confirmed in soa_exports/items.json and checked against the
+//  existing file for duplicates before landing here.
+// ============================================================
+
+// --- awakened (1) ---
+ItemStages.restrict(<item:smithery:molten_terra_alloy_bucket>, "awakened");
+
+// --- challenger_a (2) ---
+ItemStages.restrict(<item:mysticalagriculture:deepslate_seeds>, "challenger_a");
+ItemStages.restrict(<item:mysticalagriculture:inferium_seeds>, "challenger_a");
+
+// --- challenger_b (8) ---
+ItemStages.restrict(<item:mysticalagriculture:amethyst_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:coral_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:fish_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:honey_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:menril_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:rubber_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:squid_seeds>, "challenger_b");
+ItemStages.restrict(<item:mysticalagriculture:turtle_seeds>, "challenger_b");
+
+// --- challenger_c (7) ---
+ItemStages.restrict(<item:mysticalagriculture:amethyst_bronze_seeds>, "challenger_c");
+ItemStages.restrict(<item:mysticalagriculture:copper_alloy_seeds>, "challenger_c");
+ItemStages.restrict(<item:mysticalagriculture:pig_iron_seeds>, "challenger_c");
+ItemStages.restrict(<item:mysticalagriculture:prismarine_seeds>, "challenger_c");
+ItemStages.restrict(<item:mysticalagriculture:quartz_enriched_iron_seeds>, "challenger_c");
+ItemStages.restrict(<item:mysticalagriculture:slimesteel_seeds>, "challenger_c");
+ItemStages.restrict(<item:mysticalagriculture:zinc_seeds>, "challenger_c");
+
+// --- challenger_d (10) ---
+ItemStages.restrict(<item:mysticalagriculture:blazing_crystal_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:chrome_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:compressed_iron_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:energized_steel_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:fluorite_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:hop_graphite_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:rose_gold_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:soulium_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:tungsten_seeds>, "challenger_d");
+ItemStages.restrict(<item:mysticalagriculture:uranium_seeds>, "challenger_d");
+
+// --- challenger_e (8) ---
+ItemStages.restrict(<item:mysticalagriculture:cyanite_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:flux_infused_gem_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:hepatizon_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:netherite_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:niotic_crystal_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:queens_slime_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:spirited_crystal_seeds>, "challenger_e");
+ItemStages.restrict(<item:mysticalagriculture:uraninite_seeds>, "challenger_e");
+
+// --- challenger_g (2) ---
+ItemStages.restrict(<item:mysticalagriculture:gaia_spirit_seeds>, "challenger_g");
+ItemStages.restrict(<item:mysticalagriculture:nitro_crystal_seeds>, "challenger_g");
+
+// --- fusion_matrix (1) ---
+ItemStages.restrict(<item:smithery:molten_draconium_bucket>, "fusion_matrix");
+
+// --- hardmode (7) ---
+ItemStages.restrict(<item:smithery:molten_osgloglas_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_osmiridium_bucket>, "hardmode");
+ItemStages.restrict(<item:soa_additions:glider>, "hardmode");
+ItemStages.restrict(<item:soa_additions:malachite>, "hardmode");
+ItemStages.restrict(<item:soa_additions:peridot>, "hardmode");
+ItemStages.restrict(<item:soa_additions:tanzanite>, "hardmode");
+ItemStages.restrict(<item:soa_additions:topaz>, "hardmode");
+
+// --- novice_engineer (5) ---
+ItemStages.restrict(<item:actuallyadditions:empowered_diamatine_crystal_block>, "novice_engineer");  // Empowered Diamatine Crystal Block  <- GC actuallyadditions:block_crystal_empowered:2
+ItemStages.restrict(<item:actuallyadditions:empowered_emeradic_crystal_block>, "novice_engineer");  // Empowered Emeradic Crystal Block  <- GC actuallyadditions:block_crystal_empowered:4
+ItemStages.restrict(<item:actuallyadditions:empowered_enori_crystal_block>, "novice_engineer");  // Empowered Enori Crystal Block  <- GC actuallyadditions:block_crystal_empowered:5
+ItemStages.restrict(<item:actuallyadditions:empowered_palis_crystal_block>, "novice_engineer");  // Empowered Palis Crystal Block  <- GC actuallyadditions:block_crystal_empowered:1
+ItemStages.restrict(<item:actuallyadditions:empowered_void_crystal_block>, "novice_engineer");  // Empowered Void Crystal Block  <- GC actuallyadditions:block_crystal_empowered:3
+
+// --- wielder_of_infinity (1) ---
+ItemStages.restrict(<item:smithery:molten_infinity_metal_bucket>, "wielder_of_infinity");
+
+// --- tag-based (verified non-empty) ---
+ItemStages.restrict(<tag:items:forge:ores/amber>, "hardmode");
+ItemStages.restrict(<tag:items:forge:storage_blocks/gelid>, "skilled_engineer");
+ItemStages.restrict(<tag:items:forge:chorus_fruit>, "ender_charm");
+
+// --- hardmode: Uru (GC taiga:uru_block / taiga:uru_ore -> soa_additions) ---
+ItemStages.restrict(<item:soa_additions:uru_block>, "hardmode");  // Uru Block
+ItemStages.restrict(<item:soa_additions:uru_ore>, "hardmode");  // Uru Ore
+
+// --- disputed batch resolved (2026-08-04) ---
+// Matter tiers -> energy_matter_core: GC restage.zs:129 <projectex:matter:*> undoes
+// the hardmode add. Compressed collectors are NOT restaged, so they stay hardmode.
+ItemStages.restrict(<item:projectexpansion:blue_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:cyan_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:fading_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:green_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:lime_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:orange_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:pink_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:purple_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:violet_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:white_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:yellow_matter>, "energy_matter_core");
+ItemStages.restrict(<item:projectexpansion:blue_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:cyan_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:fading_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:green_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:lime_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:magenta_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:orange_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:pink_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:purple_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:red_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:violet_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:white_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:yellow_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:dark_compressed_collector>, "hardmode");
+ItemStages.restrict(<item:projectexpansion:final_compressed_collector>, "hardmode");
+
+// --- molten buckets: same stage as their material (GC liquid.zs parity) ---
+// A molten metal is the material in fluid form; gating the material but not its
+// bucket leaves a pour-around-the-ladder bypass.
+ItemStages.restrict(<item:smithery:molten_adamant_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_adaminite_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_aeonsteel_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_amethyst_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_aqualite_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_ardite_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_asgardium_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_astral_metal_bucket>, "skilled_wizard");
+ItemStages.restrict(<item:smithery:molten_bedrock_bucket>, "awakened");
+ItemStages.restrict(<item:smithery:molten_bound_metal_bucket>, "novice_wizard");
+ItemStages.restrict(<item:smithery:molten_chaotic_metal_bucket>, "awakened");
+ItemStages.restrict(<item:smithery:molten_chromasteel_bucket>, "awakened");
+ItemStages.restrict(<item:smithery:molten_cobalt_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_cosmilite_bucket>, "chaotic");
+ItemStages.restrict(<item:smithery:molten_crimsonite_bucket>, "skilled_wizard");
+ItemStages.restrict(<item:smithery:molten_cryonium_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_cytosinite_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_dark_matter_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_dimensional_shard_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_draconic_metal_bucket>, "wyvern");
+ItemStages.restrict(<item:smithery:molten_dreadium_bucket>, "fearless_man");
+ItemStages.restrict(<item:smithery:molten_durasteel_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_electronium_bucket>, "fusion_matrix");
+ItemStages.restrict(<item:smithery:molten_end_steel_bucket>, "novice_engineer");
+ItemStages.restrict(<item:smithery:molten_ender_biotite_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_enderium_bucket>, "skilled_engineer");
+ItemStages.restrict(<item:smithery:molten_ethaxium_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_fluix_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_fluix_steel_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_fusion_matrix_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_gaia_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_gaiasteel_bucket>, "wither_slayer");
+ItemStages.restrict(<item:smithery:molten_gelid_enderium_bucket>, "skilled_engineer");
+ItemStages.restrict(<item:smithery:molten_gelid_gem_bucket>, "skilled_engineer");
+ItemStages.restrict(<item:smithery:molten_golden_amber_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_gravitite_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_infernium_bucket>, "descendant_of_the_sun");
+ItemStages.restrict(<item:smithery:molten_insanium_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_iridium_bucket>, "skilled_engineer");
+ItemStages.restrict(<item:smithery:molten_lumium_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_ma.supremium_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_manyullyn_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_meteor_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_mirion_bucket>, "abyssal_conquerer");
+ItemStages.restrict(<item:smithery:molten_mithminite_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_mithrillium_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_neutronium_bucket>, "awakened");
+ItemStages.restrict(<item:smithery:molten_orichalcos_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_platinum_bucket>, "skilled_engineer");
+ItemStages.restrict(<item:smithery:molten_primal_metal_bucket>, "master_wizard");
+ItemStages.restrict(<item:smithery:molten_protonium_bucket>, "energy_matter_core");
+ItemStages.restrict(<item:smithery:molten_ravaging_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_red_matter_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_remorseful_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_rime_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_sentient_metal_bucket>, "novice_wizard");
+ItemStages.restrict(<item:smithery:molten_shadowium_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_stellar_alloy_gc_bucket>, "wither_slayer");
+ItemStages.restrict(<item:smithery:molten_terrestrial_bucket>, "hardmode");
+ItemStages.restrict(<item:smithery:molten_titanium_bucket>, "awakened");
+ItemStages.restrict(<item:smithery:molten_valkyrie_bucket>, "nether");
+ItemStages.restrict(<item:smithery:molten_void_metal_bucket>, "master_wizard");
+ItemStages.restrict(<item:smithery:molten_zanite_bucket>, "nether");
+
+// --- resolved ambiguous mappings (owner decisions) ---
+ItemStages.restrict(<item:ars_technica:quartz_dust>, "nether");
+ItemStages.restrict(<item:thermal:watering_can>, "disabled");
+ItemStages.restrict(<item:soa_additions:ruby>, "hardmode");
+ItemStages.restrict(<item:soa_additions:sapphire>, "hardmode");

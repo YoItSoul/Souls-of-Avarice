@@ -163,15 +163,19 @@ PlayerEvents.loggedIn(event => {
 // GC killed all instances of these entity IDs across the server when ANY
 // player respawned. That nukes the boss state — preventing the player
 // from cheesing a near-kill via death-and-respawn. Casual mode skipped.
-const RESPAWN_KILL_TYPES = [
+//
+// DELIBERATE DEVIATION (2026-07-31): GC's twilightforest:yeti entry is dropped,
+// and the alpha_yeti variant the port added with it. A server-wide sweep is far
+// too blunt for them — TF yetis are ordinary spawns in the Snowy Forest, not
+// just the Yeti Cave boss, so any player's respawn wiped yetis out from under
+// everyone else in the dimension.
+const RESPAWN_KILL_TYPES = new Set([
     'mowziesmobs:umvuthi',
     'mowziesmobs:umvuthana',
     'mowziesmobs:umvuthana_raptor',
     'mowziesmobs:umvuthana_follower_raptor',
     'mowziesmobs:frostmaw',
-    'twilightforest:yeti',
-    'twilightforest:alpha_yeti',  // 1.20.1 TF yeti boss variant
-]
+])
 
 PlayerEvents.respawned(event => {
     const player = event.player
@@ -183,10 +187,24 @@ PlayerEvents.respawned(event => {
     try { mode = String(global.SOA_PACKMODE || 'adventure') } catch (e) { /* default */ }
     if (mode === 'casual') return
 
-    for (var ti = 0; ti < RESPAWN_KILL_TYPES.length; ti++) {
+    // This used to run `execute as @e[type=…] run kill @s` through
+    // player.runCommand, which dispatches with the PLAYER as the command
+    // source — permission level 0, so `execute` was rejected outright and
+    // Brigadier's "Unknown or incomplete command" was echoed into the
+    // player's chat once per type on every single respawn, killing nothing.
+    // Switching the source to the server would fix the permission but scope the
+    // sweep to the console's own dimension. server.entities walks
+    // MinecraftServer#getAllLevels, which is what GC's server-wide kill meant —
+    // and an unregistered id here simply never matches instead of throwing.
+    const entities = player.server.entities
+    for (var i = 0; i < entities.size(); i++) {
+        const e = entities.get(i)
+        if (!e || !RESPAWN_KILL_TYPES.has(String(e.type))) continue
         try {
-            player.runCommand('execute as @e[type=' + RESPAWN_KILL_TYPES[ti] + '] run kill @s')
-        } catch (e) { /* type not registered (mod absent) — silently skip */ }
+            e.kill()  // same call /kill makes: fatal damage, so drops/death handling run
+        } catch (err) {
+            console.warn('[soa_player_events] could not kill ' + e.type + ': ' + err)
+        }
     }
 })
 

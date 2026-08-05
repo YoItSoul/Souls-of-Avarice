@@ -1,0 +1,19 @@
+
+[items]
+	#Enable or disable the Iron Barrel
+	enableIronBarrel = true
+	#Enable or disable the Obsidian Barrel
+	enableObsidianBarrel = true
+
+[stats]
+	#Number of inventory rows for Iron Barrel
+	#Range: 1 ~ 9
+	ironBarrelRows = 6
+	#Number of inventory rows for Obsidian Barrel
+	#Range: 1 ~ 9
+	obsidianBarrelRows = 9
+
+[features]
+	#Enable opening/closing animations for barrels
+	enableBarrelAnimations = true
+

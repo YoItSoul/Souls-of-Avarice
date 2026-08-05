@@ -1,0 +1,75 @@
+// ============================================================
+// SoA NBT-qualified item stages - 1:1 port of GreedyCraft's .withTag() gates
+//
+// GreedyCraft gated a handful of entries by NBT rather than by item id:
+//
+//   items.zs:471-477  <minecraft:diamond_{sword,pickaxe,helmet,chestplate,
+//                      leggings,boots}>.withTag({ench:[{lvl:10 as short}]})
+//                      -> wielder_of_infinity
+//   items.zs:428-429  <minecraft:enchanted_book>.withTag({StoredEnchantments:
+//                      [{lvl:5 as short}]}) and {lvl:10} -> hardmode
+//
+// These are the "creative tier" rewards: ordinary diamond gear and ordinary
+// enchanted books stay ungated, and only the absurdly-enchanted versions are
+// locked. An earlier port flattened them onto the plain items, which locked
+// basic diamond tools and every enchanted book behind endgame stages, so they
+// were removed - leaving these gates unported until now.
+//
+// ItemStages 8.0.3 takes a predicate, which is what makes an NBT gate
+// expressible at all: ItemStages.restrict(Predicate<IItemStack>, String...).
+//
+// The map values are boxed Integers (Map<Enchantment, Integer>), so the level is
+// cast to int before comparing - without it ZenCode emits a primitive compare
+// against an Integer and the generated predicate fails class verification.
+//
+// stack.enchantments covers both cases with one accessor: vanilla's
+// ItemStack.getEnchantmentTags() returns StoredEnchantments for enchanted books
+// and Enchantments for everything else, so the same level test reads both.
+//
+// This lives in its own file deliberately - a parse error here disables only
+// these two gates rather than all ~1900 restricts in soa_item_stages.zs.
+// ============================================================
+
+// Runs LAST. A runtime failure in a CraftTweaker script aborts the whole pass
+// from that point on, not just the offending file - an earlier VerifyError here
+// took soa_ore_stages, soa_recipe_stages and soa_recipes down with it. A low
+// priority keeps any future failure in this file from reaching them.
+#priority -1000
+
+import mods.itemstages.ItemStages;
+
+// GC's creative-tier diamond set. A bare item ingredient carries no NBT, so it
+// matches the enchanted variants too; the level test below is what narrows it.
+val diamondGear = <item:minecraft:diamond_sword>
+    | <item:minecraft:diamond_pickaxe>
+    | <item:minecraft:diamond_helmet>
+    | <item:minecraft:diamond_chestplate>
+    | <item:minecraft:diamond_leggings>
+    | <item:minecraft:diamond_boots>;
+
+// Diamond gear enchanted to level 10+ -> wielder_of_infinity (items.zs:471-477)
+ItemStages.restrict((stack) => {
+    if !diamondGear.matches(stack) {
+        return false;
+    }
+    for enchantment, level in stack.enchantments {
+        if (level as int) >= 10 {
+            return true;
+        }
+    }
+    return false;
+}, "wielder_of_infinity");
+
+// Enchanted books holding a level 5+ enchantment -> hardmode (items.zs:428-429).
+// GC listed lvl 5 and lvl 10 as separate entries; 5+ subsumes both.
+ItemStages.restrict((stack) => {
+    if !(<item:minecraft:enchanted_book>).matches(stack) {
+        return false;
+    }
+    for enchantment, level in stack.enchantments {
+        if (level as int) >= 5 {
+            return true;
+        }
+    }
+    return false;
+}, "hardmode");
