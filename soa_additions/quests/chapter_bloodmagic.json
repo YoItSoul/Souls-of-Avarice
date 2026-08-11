@@ -23,9 +23,9 @@
       "title": "Bloodmagic Qualification",
       "icon": "bloodmagic:weakbloodorb",
       "x": 0,
-      "y": 64,
+      "y": 144,
       "description": [
-        "To begin Blood Magic research, you need to get the required gamestage which can be obtained from Astral Sorcery questline"
+        "To begin Blood Magic research, you need to get the required gamestage which can be obtained from the Malum questline"
       ],
       "dependencies": [
         "mal_spirit_crucible"
@@ -51,11 +51,14 @@
       "title": "Soul Hunter",
       "icon": "bloodmagic:soulsnare",
       "shape": "square",
-      "x": 64,
-      "y": 64,
-      "description": [],
+      "x": 144,
+      "y": 36,
+      "description": [
+        "Will does not fall out of mobs on its own - snare one first, then kill it while it is tangled.",
+        "Until the aura machines exist this is your only tap for Demonic Will, so make snares in bulk."
+      ],
       "dependencies": [
-        "blo_bloodmagic_qualification"
+        "blo_blood_altar"
       ],
       "tasks": [
         {
@@ -90,11 +93,14 @@
       "id": "blo_soul_stealer",
       "title": "Soul Stealer",
       "icon": "bloodmagic:basemonstersoul",
-      "x": 112,
-      "y": 48,
-      "description": [],
+      "x": 48,
+      "y": 144,
+      "description": [
+        "Demonic Will is Blood Magic's second currency - the Hellfire Forge burns it instead of LP.",
+        "Nothing in this chapter moves until you hold one. Even the altar asks for Will before it will assemble."
+      ],
       "dependencies": [
-        "blo_soul_hunter"
+        "blo_bloodmagic_qualification"
       ],
       "tasks": [
         {
@@ -125,11 +131,14 @@
       "title": "Tinkering With Soul",
       "icon": "bloodmagic:soulforge",
       "shape": "square",
-      "x": 160,
-      "y": 32,
-      "description": [],
+      "x": 192,
+      "y": 24,
+      "description": [
+        "The Forge is the mod's other workshop, and it runs on Will rather than LP - so it works long before your altar is worth anything.",
+        "Every Tartaric Gem and every soul-forged alloy in this chapter comes out of it."
+      ],
       "dependencies": [
-        "blo_soul_stealer"
+        "blo_soul_hunter"
       ],
       "tasks": [
         {
@@ -159,9 +168,11 @@
       "id": "blo_soul_stone",
       "title": "Soul Stone",
       "icon": "bloodmagic:soulgempetty",
-      "x": 208,
-      "y": 16,
-      "description": [],
+      "x": 240,
+      "y": 24,
+      "description": [
+        "A Tartaric Gem banks Demonic Will instead of leaving you to carry it loose. Petty is the entry rung; each gem above it is the price of admission to something that wants Will in bulk."
+      ],
       "dependencies": [
         "blo_tinkering_with_soul"
       ],
@@ -193,10 +204,10 @@
       "id": "blo_more_souls",
       "title": "More Souls",
       "icon": "bloodmagic:soulgemlesser",
-      "x": 256,
-      "y": 0,
+      "x": 288,
+      "y": 48,
       "description": [
-        "Upgrade your Tartaric Gem"
+        "A bigger bank, and a gate in its own right - the Forge will not sell you the better recipes while you are still holding the smallest gem."
       ],
       "dependencies": [
         "blo_soul_stone"
@@ -234,13 +245,14 @@
       "id": "blo_soul_reaper",
       "title": "Soul Reaper",
       "icon": "bloodmagic:soulgemcommon",
-      "x": 304,
-      "y": 16,
+      "x": 336,
+      "y": 96,
       "description": [
-        "Upgrade your Tartaric Gem even further"
+        "Common is the gem the aura machines demand. The Crucible and the Crystallizer refuse anything smaller, so the Will economy stalls here until you climb this rung."
       ],
       "dependencies": [
-        "blo_more_souls"
+        "blo_more_souls",
+        "blo_deluxe_stone_tablet"
       ],
       "tasks": [
         {
@@ -275,11 +287,16 @@
       "id": "blo_beyond_soul",
       "title": "Beyond Soul",
       "icon": "bloodmagic:soulgemgreater",
-      "x": 352,
-      "y": 32,
-      "description": [],
+      "x": 576,
+      "y": 96,
+      "description": [
+        "The top of the gem ladder, priced in Demon Realm goods. Will collection ends where the dungeon rituals begin."
+      ],
       "dependencies": [
-        "blo_soul_reaper"
+        "blo_soul_reaper",
+        "blo_demonic_slate",
+        "blo_weak_blood_shard",
+        "blo_demon_will_aura"
       ],
       "tasks": [
         {
@@ -311,14 +328,54 @@
       ]
     },
     {
+      "id": "blo_alchemy_table",
+      "title": "Alchemy Table",
+      "icon": "bloodmagic:alchemytable",
+      "shape": "square",
+      "x": 192,
+      "y": 144,
+      "description": [
+        "The alchemist's bench. Reagents no crafting grid will produce - ashes, powders, the flask line - all start here.",
+        "Sanguine Scientiem has the catalogue; the table itself has the rest."
+      ],
+      "dependencies": [
+        "blo_mystic_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:alchemytable",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
       "id": "blo_why_not_use_chalk",
       "title": "Why Not Use Chalk",
       "icon": "bloodmagic:arcaneashes",
-      "x": 208,
-      "y": 48,
-      "description": [],
+      "x": 240,
+      "y": 168,
+      "description": [
+        "Ashes let you draw an Alchemy Array: a craft performed on the ground rather than in a grid. The early sigils exist nowhere else."
+      ],
       "dependencies": [
-        "blo_tinkering_with_soul"
+        "blo_alchemy_table"
       ],
       "tasks": [
         {
@@ -350,15 +407,64 @@
       ]
     },
     {
+      "id": "blo_see_the_soul",
+      "title": "See the Soul",
+      "icon": "bloodmagic:divinationsigil",
+      "x": 288,
+      "y": 144,
+      "description": [
+        "Reads the LP standing in an altar and the Will hanging in the air around you. Without it you are guessing at both numbers for the rest of the chapter."
+      ],
+      "dependencies": [
+        "blo_why_not_use_chalk"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:divinationsigil",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:accelerationrune",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "endrem:evil_eye",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
       "id": "blo_blood_altar",
       "title": "Blood Altar",
       "icon": "bloodmagic:altar",
       "shape": "square",
-      "x": 112,
-      "y": 80,
-      "description": [],
+      "x": 96,
+      "y": 144,
+      "description": [
+        "The heart of Blood Magic - nearly everything else in the mod is transmuted inside it.",
+        "A bare basin is Tier 1. Every tier above that is bought with rings of Blood Runes, and each tier unlocks a fixed set of recipes rather than a gradual improvement. Sanguine Scientiem lists which tier buys what."
+      ],
       "dependencies": [
-        "blo_soul_hunter"
+        "blo_soul_stealer"
       ],
       "tasks": [
         {
@@ -388,9 +494,11 @@
       "id": "blo_mystic_stone_tablet",
       "title": "Mystic Stone Tablet",
       "icon": "bloodmagic:blankslate",
-      "x": 160,
-      "y": 96,
-      "description": [],
+      "x": 144,
+      "y": 108,
+      "description": [
+        "Slates are the backbone of every recipe in this chapter, and the blank one is most of what a Tier 1 altar is for. Expect a harder slate waiting at every tier above it."
+      ],
       "dependencies": [
         "blo_blood_altar"
       ],
@@ -424,20 +532,61 @@
       ]
     },
     {
-      "id": "blo_upgrade_altar",
-      "title": "Upgrade Altar!",
-      "icon": "bloodmagic:blankrune",
-      "x": 208,
-      "y": 112,
-      "description": [],
+      "id": "blo_weak_blood_orb",
+      "title": "Weak Blood Orb",
+      "icon": "bloodmagic:weakbloodorb",
+      "x": 144,
+      "y": 180,
+      "description": [
+        "Bind an orb and every altar you own feeds one shared Soul Network - the pool that pays for sigils, rites and runes.",
+        "Blood Runes are built around this orb, so Tier 1 hands you the key to every tier above it."
+      ],
       "dependencies": [
-        "blo_mystic_stone_tablet"
+        "blo_blood_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:weakbloodorb",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_upgrade_altar",
+      "title": "Tier 2: The First Ring",
+      "icon": "bloodmagic:blankrune",
+      "x": 192,
+      "y": 264,
+      "description": [
+        "The first ring of runes pays out four ways at once: Reinforced Slate, the Apprentice Orb, the Alchemy Flask, and the Dagger of Sacrifice that finally lets something other than you bleed.",
+        "Runes laid at this tier are mostly structural - hold your upgrade runes until Tier 3, where all of them go live."
+      ],
+      "dependencies": [
+        "blo_mystic_stone_tablet",
+        "blo_weak_blood_orb"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
           "item": "bloodmagic:blankrune",
-          "count": 1
+          "count": 8
         }
       ],
       "rewards": [
@@ -458,13 +607,161 @@
       ]
     },
     {
+      "id": "blo_altar_tier3",
+      "title": "Tier 3: Pillars and Light",
+      "icon": "minecraft:glowstone",
+      "x": 240,
+      "y": 120,
+      "description": [
+        "Tier 3 turns the altar into a real engine: Imbued Slate, the Magician's Orb and all four elemental Inscription Tools land together. They are siblings, not a chain - take them in any order.",
+        "From here on every rune around the basin counts as an upgrade slot, including the ones that were doing nothing before."
+      ],
+      "dependencies": [
+        "blo_upgrade_altar"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 20
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:glowstone",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_altar_tier4",
+      "title": "Tier 4: Crowned in Bloodstone",
+      "icon": "bloodmagic:largebloodstonebrick",
+      "x": 480,
+      "y": 144,
+      "description": [
+        "The great unlock - Demonic Slate, the Master Orb, the Dusk Inscription Tool and both Teleposition Foci.",
+        "The altar cannot grow past Tier 3 until you have been down into the Demon Realm and dragged something back."
+      ],
+      "dependencies": [
+        "blo_altar_tier3",
+        "blo_weak_blood_shard"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 28
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:largebloodstonebrick",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 24
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_altar_tier5",
+      "title": "Tier 5: The Hellforged Crown",
+      "icon": "bloodmagic:dungeon_metal",
+      "x": 528,
+      "y": 180,
+      "description": [
+        "The ceiling. Hellforged metal crowns it, smelted from material that exists only inside the demon dungeons, and it buys Ethereal Slate and the Archmage's Orb.",
+        "The code hints at a Tier 6; the blocks its corners want were never registered in this pack, so do not go hunting for them."
+      ],
+      "dependencies": [
+        "blo_altar_tier4",
+        "blo_edge_of_the_hidden_realm"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 52
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:dungeon_metal",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:blankrune",
+          "count": 32
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:bettercapacityrune",
+          "count": 2
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
       "id": "blo_better_stone_tablet",
       "title": "Better Stone Tablet",
       "icon": "bloodmagic:reinforcedslate",
-      "x": 256,
-      "y": 128,
+      "x": 240,
+      "y": 72,
       "description": [
-        "Upgrade slate with altar"
+        "Tier 2's slate - one of the four things that first ring of runes buys you, not a rung you have to climb before the others."
       ],
       "dependencies": [
         "blo_upgrade_altar"
@@ -502,13 +799,14 @@
       "id": "blo_deluxe_stone_tablet",
       "title": "Deluxe Stone Tablet",
       "icon": "bloodmagic:infusedslate",
-      "x": 304,
-      "y": 112,
+      "x": 288,
+      "y": 0,
       "description": [
-        "Continue to upgrade your slate"
+        "Tier 3's slate, arriving alongside the Magician's Orb and the Inscription Tools. One tier, three unlocks."
       ],
       "dependencies": [
-        "blo_better_stone_tablet"
+        "blo_better_stone_tablet",
+        "blo_altar_tier3"
       ],
       "tasks": [
         {
@@ -540,16 +838,17 @@
       ]
     },
     {
-      "id": "blo_deluxe_stone_tablet_2",
-      "title": "Deluxe Stone Tablet",
+      "id": "blo_demonic_slate",
+      "title": "Demonic Slate",
       "icon": "bloodmagic:demonslate",
-      "x": 352,
-      "y": 96,
+      "x": 528,
+      "y": 108,
       "description": [
-        "How many slates are there??"
+        "How many slates are there?? This one waits on Tier 4, in the same payout as the Master Orb and the Teleposition Foci."
       ],
       "dependencies": [
-        "blo_deluxe_stone_tablet"
+        "blo_deluxe_stone_tablet",
+        "blo_altar_tier4"
       ],
       "tasks": [
         {
@@ -594,13 +893,14 @@
       "id": "blo_gilded_stone_tablet",
       "title": "Gilded Stone Tablet",
       "icon": "bloodmagic:etherealslate",
-      "x": 400,
-      "y": 80,
+      "x": 576,
+      "y": 144,
       "description": [
-        "I assure you this is the last tier of slate"
+        "I assure you this is the last slate. Tier 5 unlocks exactly two things - this and the Archmage's Orb - and there is no buildable tier above it."
       ],
       "dependencies": [
-        "blo_deluxe_stone_tablet_2"
+        "blo_demonic_slate",
+        "blo_altar_tier5"
       ],
       "tasks": [
         {
@@ -647,19 +947,135 @@
       ]
     },
     {
-      "id": "blo_dance_of_life",
-      "title": "Dance of Life",
-      "icon": "bloodarsenal:blood_diamond_infused",
-      "x": 400,
-      "y": 48,
-      "description": [],
+      "id": "blo_apprentice_blood_orb",
+      "title": "Apprentice Blood Orb",
+      "icon": "bloodmagic:apprenticebloodorb",
+      "x": 240,
+      "y": 216,
+      "description": [
+        "Each orb tier raises the ceiling on your Soul Network and opens the recipes that refuse anything weaker.",
+        "This one shares a ring of runes with the Reinforced Slate, so build either first."
+      ],
       "dependencies": [
-        "blo_gilded_stone_tablet"
+        "blo_weak_blood_orb",
+        "blo_upgrade_altar"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "bloodarsenal:blood_diamond_infused",
+          "item": "bloodmagic:apprenticebloodorb",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1250
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_magician_blood_orb",
+      "title": "Magician's Blood Orb",
+      "icon": "bloodmagic:magicianbloodorb",
+      "x": 288,
+      "y": 192,
+      "description": [
+        "Every Alchemical Reaction Chamber and every Master Ritual Stone wants this orb in its recipe. Most of the mid-game is waiting on one craft."
+      ],
+      "dependencies": [
+        "blo_apprentice_blood_orb",
+        "blo_altar_tier3"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:magicianbloodorb",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_master_blood_orb",
+      "title": "Master Blood Orb",
+      "icon": "bloodmagic:masterbloodorb",
+      "x": 528,
+      "y": 252,
+      "description": [
+        "Tier 4's orb, and the wall most players hit.",
+        "The Weak Blood Shard it demands stopped being a mob drop in 1.20 - it is grown now, not killed for - which is why the Demon Realm gates this one."
+      ],
+      "dependencies": [
+        "blo_magician_blood_orb",
+        "blo_altar_tier4"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:masterbloodorb",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_archmage_blood_orb",
+      "title": "Archmage's Blood Orb",
+      "icon": "bloodmagic:archmagebloodorb",
+      "x": 576,
+      "y": 192,
+      "description": [
+        "The last rung of the Soul Network ladder. Nothing in the tail of this chapter will accept a lesser orb, so the endgame starts the moment this one binds."
+      ],
+      "dependencies": [
+        "blo_altar_tier5",
+        "blo_master_blood_orb"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:archmagebloodorb",
           "count": 1
         }
       ],
@@ -675,7 +1091,62 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "bloodarsenal:blood_diamond_infused",
+          "item": "bloodmagic:orbcapacityrune",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_alchemical_reaction_chamber",
+      "title": "Alchemical Reaction Chamber",
+      "icon": "bloodmagic:alchemicalreactionchamber",
+      "shape": "square",
+      "x": 336,
+      "y": 0,
+      "description": [
+        "1.20 Blood Magic's workhorse. What comes out of it depends on the catalyst left sitting inside, and it runs without any Soul Network link at all.",
+        "It is also this pack's ore multiplier once you have worked the chain out, which is most of what makes the rest of this chapter affordable.",
+        "Sanguine Scientiem covers the catalysts. The Reverter and the Hydration Cell are the two that unblock the Master Blood Orb, so start there."
+      ],
+      "dependencies": [
+        "blo_magician_blood_orb",
+        "blo_deluxe_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:alchemicalreactionchamber",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:sanguinereverter",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:primitive_hydration_cell",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:sanguinereverter",
           "count": 1
         }
       ],
@@ -686,20 +1157,29 @@
       ]
     },
     {
-      "id": "blo_overbled",
-      "title": "Overbled",
-      "icon": "soa_additions:crimsonite_ingot",
-      "x": 448,
-      "y": 64,
-      "description": [],
+      "id": "blo_weak_blood_shard",
+      "title": "Blood From Fruit",
+      "icon": "bloodmagic:weakbloodshard",
+      "x": 432,
+      "y": 144,
+      "description": [
+        "Shards are not a mob drop any more. They are pulled out of Demon Realm fruit in the reaction chamber, which is why the dungeon comes first.",
+        "Carry fruit home and plant it - Tau is a crop once you own a single one, so the trip below is a one-time toll.",
+        "Bloodstone, the Master Orb and the last Tartaric Gem are all paid for in fruit from here on."
+      ],
       "dependencies": [
-        "blo_gilded_stone_tablet",
-        "blo_dance_of_life"
+        "blo_alchemical_reaction_chamber",
+        "blo_edge_of_the_hidden_realm"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:crimsonite_ingot",
+          "item": "bloodmagic:strong_tau",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:weakbloodshard",
           "count": 1
         }
       ],
@@ -710,18 +1190,13 @@
           "count": 1
         },
         {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
           "type": "soa_additions:xp",
-          "amount": 3000
+          "amount": 2000
         },
         {
           "type": "soa_additions:item",
-          "item": "soa_additions:crimsonite_ingot",
-          "count": 3
+          "item": "bloodmagic:weak_tau",
+          "count": 4
         }
       ],
       "modes": [
@@ -731,12 +1206,275 @@
       ]
     },
     {
-      "id": "blo_blood_sacrifce",
-      "title": "Blood Sacrifce",
+      "id": "blo_inscription_tools",
+      "title": "Elemental Inscription",
+      "icon": "bloodmagic:earthscribetool",
+      "x": 288,
+      "y": 288,
+      "description": [
+        "Four tools, one per element, that paint blank Ritual Stones into the stones a rite actually calls for. They never wear out.",
+        "The Ritual Diviner swallows all four whole, which is the only reason you need a complete set."
+      ],
+      "dependencies": [
+        "blo_altar_tier3"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:earthscribetool",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:firescribetool",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:waterscribetool",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:airscribetool",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 1600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:ritualstone",
+          "count": 8
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_ritual_diviner",
+      "title": "Heart of the Rite",
+      "icon": "bloodmagic:masterritualstone",
+      "x": 336,
+      "y": 288,
+      "description": [
+        "A ritual is a pattern of inscribed stones laid around one master stone, and the master is the only block you ever click.",
+        "By hand that means placing dozens of stones exactly right; the Diviner places them for you. It is the difference between rituals being a curiosity and being infrastructure.",
+        "A finished pattern sits inert until an activation crystal pays for it out of your Soul Network. Every rite in this pack accepts the weak crystal - the awakened one is not obtainable here and is never needed."
+      ],
+      "dependencies": [
+        "blo_inscription_tools",
+        "blo_magician_blood_orb",
+        "blo_better_stone_tablet"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:ritualstone",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:masterritualstone",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:ritualdiviner",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:activationcrystalweak",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:ritualstone",
+          "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_edge_of_the_hidden_realm",
+      "title": "Edge of the Hidden Realm",
+      "icon": "bloodmagic:weak_tau",
+      "x": 384,
+      "y": 288,
+      "description": [
+        "Nothing in this pack generates a Blood Magic dungeon in the world. This rite carves one, under a pillar it raises on the spot.",
+        "Its vaults are the only source of Tau Fruit, Demon Will Crystals, and the Demonite and Hellforged Sand the top two altar tiers are built from - everything the rest of this chapter is short of is down there.",
+        "A deeper rite, Pathway to the Endless Realm, opens a far larger version of the same place for a far larger price."
+      ],
+      "dependencies": [
+        "blo_ritual_diviner"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:weak_tau",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:sand_hellforged",
+          "count": 8
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_well_of_suffering",
+      "title": "Well of Suffering",
+      "icon": "bloodmagic:life_essence_bucket",
+      "x": 576,
+      "y": 240,
+      "description": [
+        "The rite that ends bloodletting: everything that dies in its zone pipes its life essence straight into a linked altar.",
+        "It calls for Dusk stones, and the plain Diviner cannot draw those - upgrade the Diviner before you plan the build. Afterwards the Ritual Tinkerer will move the damage zone if your mob source does not sit where the rite put it."
+      ],
+      "dependencies": [
+        "blo_ritual_diviner",
+        "blo_demonic_slate"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:ritualdivinerdusk",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:checkmark",
+          "text": "I have laid and lit the Well of Suffering"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:life_essence_bucket",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_demon_will_aura",
+      "title": "Aura Made Solid",
+      "icon": "bloodmagic:demoncrystallizer",
+      "shape": "square",
+      "x": 384,
+      "y": 0,
+      "description": [
+        "Will inside a gem is only useful to you. The Crucible bleeds it out into the chunk as an aura, and rituals and will-hungry machines drink from that aura instead of your pocket.",
+        "Stand a Crystallizer in a saturated aura and it grows a crystal cluster on its own lid - the longer you leave it before harvesting, the more it drops.",
+        "Between the two you stop hunting Will and start farming it."
+      ],
+      "dependencies": [
+        "blo_soul_reaper"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:demoncrucible",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:demoncrystallizer",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:defaultcrystal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:demonwillgauge",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_blood_sacrifice",
+      "title": "Blood Sacrifice",
       "icon": "bloodmagic:sacrificialdagger",
-      "x": 160,
-      "y": 64,
-      "description": [],
+      "x": 144,
+      "y": 252,
+      "description": [
+        "Your own health is the first LP supply, and the knife is how you spend it. Crude, slow and genuinely dangerous - most of what follows in this chapter exists to get you off it."
+      ],
       "dependencies": [
         "blo_blood_altar"
       ],
@@ -773,13 +1511,14 @@
       "id": "blo_blood_infused_wood",
       "title": "Blood Infused Wood",
       "icon": "bloodarsenal:blood_infused_log",
-      "x": 208,
-      "y": 80,
+      "x": 240,
+      "y": 264,
       "description": [
-        "Infuse wood with blood"
+        "Blood Arsenal branches off here. Its whole tree of gear grows out of wood the altar has soaked."
       ],
       "dependencies": [
-        "blo_blood_sacrifce"
+        "blo_blood_sacrifice",
+        "blo_upgrade_altar"
       ],
       "tasks": [
         {
@@ -815,9 +1554,11 @@
       "title": "Forged With Blood",
       "icon": "bloodarsenal:blood_infused_stick",
       "shape": "square",
-      "x": 256,
-      "y": 64,
-      "description": [],
+      "x": 288,
+      "y": 240,
+      "description": [
+        "Handle stock for Blood Arsenal. A small step, but nothing further up that branch is built without a stack of these."
+      ],
       "dependencies": [
         "blo_blood_infused_wood"
       ],
@@ -853,10 +1594,12 @@
     {
       "id": "blo_telepathy",
       "title": "Telepathy",
-      "icon": "tconevo:bound_metal_ingot",
-      "x": 256,
-      "y": 32,
-      "description": [],
+      "icon": "tconevo:sentient_metal_ingot",
+      "x": 288,
+      "y": 96,
+      "description": [
+        "Will pressed into metal - the first thing the Hellfire Forge makes that is not a gem, and a tool material in its own right. The Smithery book has its stats."
+      ],
       "dependencies": [
         "blo_soul_stone"
       ],
@@ -892,14 +1635,17 @@
     {
       "id": "blo_soul_bound",
       "title": "Soul Bound",
-      "icon": "tconevo:sentient_metal_ingot",
+      "icon": "tconevo:bound_metal_ingot",
       "shape": "rhombus",
-      "x": 304,
-      "y": 48,
-      "description": [],
+      "x": 336,
+      "y": 192,
+      "description": [
+        "What the altar makes of good steel, and the gate on this whole chapter: claiming it marks you a skilled wizard, which is what the rest of the pack has been waiting on."
+      ],
       "dependencies": [
         "blo_forged_with_blood",
-        "blo_telepathy"
+        "blo_telepathy",
+        "blo_altar_tier3"
       ],
       "tasks": [
         {
@@ -933,17 +1679,55 @@
         "casual",
         "adventure",
         "expert"
+      ],
+      "auto_claim": true
+    },
+    {
+      "id": "blo_soul_bound_recover",
+      "title": "Stage recovery",
+      "icon": "soa_additions:guide_book",
+      "visibility": "hidden_until_deps",
+      "optional": true,
+      "repeatable": true,
+      "x": 384,
+      "y": 144,
+      "description": [
+        "Gamestages is a bit weird sometimes! If the stage from \"Soul Bound\" did not stick, claim this to get it back.",
+        "Safe to use more than once."
+      ],
+      "dependencies": [
+        "blo_soul_bound"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Restore my stage please!"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "skilled_wizard",
+          "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
       ]
     },
     {
       "id": "blo_warp_engine",
       "title": "Warp Engine",
       "icon": "bloodmagic:teleposerfocus",
-      "x": 304,
-      "y": 80,
-      "description": [],
+      "x": 528,
+      "y": 36,
+      "description": [
+        "A focus is a bound location and nothing more. Tier 4 sells you the first one; what it points at only matters once you own the block that reads it."
+      ],
       "dependencies": [
-        "blo_deluxe_stone_tablet"
+        "blo_altar_tier4"
       ],
       "tasks": [
         {
@@ -975,66 +1759,21 @@
       ]
     },
     {
-      "id": "blo_see_the_soul",
-      "title": "See the Soul",
-      "icon": "bloodmagic:divinationsigil",
-      "x": 256,
-      "y": 96,
-      "description": [],
-      "dependencies": [
-        "blo_upgrade_altar"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "bloodmagic:divinationsigil",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1250
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "bloodmagic:accelerationrune",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "endrem:evil_eye",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
       "id": "blo_hyperspace_engine",
       "title": "Hyperspace Engine",
-      "icon": "bloodmagic:teleposerfocus",
-      "x": 352,
-      "y": 64,
+      "icon": "bloodmagic:enhancedteleposerfocus",
+      "x": 576,
+      "y": 48,
       "description": [
-        "Upgrade your Teleposition Focus"
+        "More reach. The plain focus barely leaves the room - this is the one that makes teleposition worth wiring into a base."
       ],
       "dependencies": [
-        "blo_deluxe_stone_tablet_2",
         "blo_warp_engine"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "bloodmagic:teleposerfocus",
+          "item": "bloodmagic:enhancedteleposerfocus",
           "count": 1
         }
       ],
@@ -1052,6 +1791,138 @@
           "type": "soa_additions:item",
           "item": "minecraft:ender_eye",
           "count": 16
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_teleposer",
+      "title": "The Teleposer",
+      "icon": "bloodmagic:teleposer",
+      "shape": "square",
+      "x": 624,
+      "y": 84,
+      "description": [
+        "A focus on its own only records a pair of coordinates. The Teleposer is the block that performs the swap, exchanging everything inside its own cube with the volume the bound focus points at - blocks, items, mobs and you.",
+        "Two of them and one focus make a permanent two-way freight link, which is why this quest wants a pair."
+      ],
+      "dependencies": [
+        "blo_hyperspace_engine"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodmagic:teleposer",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "minecraft:ender_pearl",
+          "count": 32
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_dance_of_life",
+      "title": "Dance of Life",
+      "icon": "bloodarsenal:blood_diamond_infused",
+      "x": 624,
+      "y": 204,
+      "description": [
+        "The top of Blood Arsenal, priced like it: an endgame altar, an endgame orb, and a great deal of LP burnt in one go. Everything that mod makes worth carrying wants one."
+      ],
+      "dependencies": [
+        "blo_gilded_stone_tablet",
+        "blo_archmage_blood_orb"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "bloodarsenal:blood_diamond_infused",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 2500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "bloodarsenal:blood_diamond_infused",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "blo_overbled",
+      "title": "Overbled",
+      "icon": "soa_additions:crimsonite_ingot",
+      "x": 672,
+      "y": 144,
+      "description": [
+        "The pack's own alloy and the last thing Blood Magic gives you. It binds in the Hellfire Forge rather than the altar, and every branch of this chapter - gems, slates, rituals, arsenal - has to be finished before it will."
+      ],
+      "dependencies": [
+        "blo_dance_of_life",
+        "blo_tinkering_with_soul"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:crimsonite_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 3000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:crimsonite_ingot",
+          "count": 3
         }
       ],
       "modes": [

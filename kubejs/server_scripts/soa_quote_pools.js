@@ -1,22 +1,5 @@
-// ============================================================
-// SoA Quote Pools — port of GreedyCraft scripts/global/{welcome_quotes,
-//   mob_spawner_quotes}.zs
-//
-// 1.12 GC kept these as global IData[]/string[] tables (zh_cn + en_us)
-// consumed by other event scripts. 1.20.1 KubeJS port: just declare the
-// en_us pools as global arrays here, and let existing handlers
-// (soa_player_events.js for welcome, soa_world_events.js for spawner)
-// reference them via global.SOA_WELCOME_QUOTES / SOA_SPAWNER_QUOTES /
-// SOA_SPAWNER_SUCCESS_QUOTES.
-//
-// Quote text translated from the original GC en_us blocks (Chinese block
-// dropped — SoA ships en_us only). Phrasing kept close to the source so
-// returning GC players recognize the lines.
-// ============================================================
-
 console.info('[soa_scripts] soa_quote_pools.js loading')
 
-// ---- Welcome quotes (login chat tips) ----
 global.SOA_WELCOME_QUOTES = [
     '§eThe game is laggy? Press §6R§e to open a menu where you can free up memory!',
     '§eThank you for playing this modpack! If you encounter problems, make sure to read the modpack guide book.',
@@ -37,7 +20,6 @@ global.SOA_WELCOME_QUOTES = [
     '§eEat different kinds of food to increase your max health! A multiblock kitchen makes that easier.',
 ]
 
-// ---- Mob spawner break quotes (failure to break) ----
 global.SOA_SPAWNER_QUOTES = [
     'Leave me alone!',
     'Nope.',
@@ -63,7 +45,6 @@ global.SOA_SPAWNER_QUOTES = [
     'I refuse to die when I have jobs to do!',
 ]
 
-// ---- Mob spawner success quotes (broke successfully) ----
 global.SOA_SPAWNER_SUCCESS_QUOTES = [
     'Fine, you win this time.',
     'Alright, you\'ve earned it.',

@@ -2,7 +2,7 @@
   "type": "botania:terra_plate",
   "ingredients": [
     {
-      "item": "defiledlands:remorseful_gem"
+      "item": "defiled_lands_preborn:remorseful_gem"
     },
     {
       "item": "botania:gaia_ingot"

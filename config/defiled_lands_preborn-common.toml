@@ -1,0 +1,376 @@
+
+[Corruption]
+	#Enable Corruption Spread
+	enable_corruption_spread = true
+	#Biomes cannot expand and only corrupt blocks inside said biomes
+	confined_spread = true
+
+["Book Wyrms"]
+	#The probability for two normal book wyrms to produce a golden book wyrm
+	#Range: 0.0 ~ 1.0
+	golden_wyrm_chance_for_zero_golden = 0.01
+	#The probability for one golden book wyrm and one normal book wyrm to produce a golden book wyrm
+	#Range: 0.0 ~ 1.0
+	golden_wyrm_chance_for_one_golden = 0.04
+	#The probability for two golden book wyrms to produce a golden book wyrm
+	#Range: 0.0 ~ 1.0
+	golden_wyrm_chance_for_two_golden = 0.1
+	#Maximum enchanting level for Book Wyrm
+	#Range: 10 ~ 1000
+	book_wyrm_max_enchanting_level = 30
+	#Enchantments that cannot be dropped by bookwyrms
+	book_wyrm_blacklist = ["minecraft:blast_protection"]
+	#Whether the blacklist should be treated as a whitelist
+	book_wyrm_blacklist_is_whitelist = false
+
+[Biomes]
+	#Which biomes are allowed to generate in the world
+	defiled_plains = true
+	defiled_desert = true
+	defiled_hills = true
+	defiled_snowy_plains = true
+	tenebra_forest = true
+	vilespine_forest = true
+
+[Enchantments]
+	#Explosion strength amplifier per level of the Destructive enchantment
+	#Range: 0.0 ~ 1000.0
+	enchantment_destructive_strength = 0.25
+	#Maximum level of the Destructive enchantment
+	#Range: 0 ~ 10
+	enchantment_destructive_level = 5
+
+[Attributes]
+
+	#Values for items and entities
+	[Attributes."The Destroyer"]
+		#Attack damage
+		#Range: 0.0 ~ 2048.0
+		destroyer_attack_damage = 16.0
+		#Attack speed
+		#Range: 0.0 ~ 1024.0
+		destroyer_attack_speed = 1.0
+		#Attack knockback
+		#Range: 0.0 ~ 5.0
+		destroyer_attack_knockback = 1.5
+		#Health
+		#Range: 1.0 ~ 1024.0
+		destroyer_health = 200.0
+		#Armor
+		#Range: 0.0 ~ 30.0
+		destroyer_armor = 10.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		destroyer_movement_speed = 0.32
+		#Knockback resistance
+		#Range: 0.0 ~ 1.0
+		destroyer_knockback_resistance = 1.0
+		#Follow range
+		#Range: 0.0 ~ 2048.0
+		destroyer_follow_range = 128.0
+
+	[Attributes."The Mourner"]
+		#Attack damage
+		#Range: 0.0 ~ 2048.0
+		mourner_attack_damage = 16.0
+		#Attack speed
+		#Range: 0.0 ~ 1024.0
+		mourner_attack_speed = 1.0
+		#Attack knockback
+		#Range: 0.0 ~ 5.0
+		mourner_attack_knockback = 2.0
+		#Health
+		#Range: 1.0 ~ 1024.0
+		mourner_health = 400.0
+		#Armor
+		#Range: 0.0 ~ 30.0
+		mourner_armor = 10.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		mourner_movement_speed = 0.7
+		#Knockback resistance
+		#Range: 0.0 ~ 1.0
+		mourner_knockback_resistance = 1.0
+		#Follow range
+		#Range: 0.0 ~ 2048.0
+		mourner_follow_range = 128.0
+
+	[Attributes."Book Wyrm"]
+		#Health
+		#Range: 1.0 ~ 1024.0
+		book_wyrm_health = 12.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		book_wyrm_movement_speed = 0.25
+
+	[Attributes.Host]
+		#Attack damage
+		#Range: 0.0 ~ 2048.0
+		host_attack_damage = 5.0
+		#Attack speed
+		#Range: 0.0 ~ 1024.0
+		host_attack_speed = 1.0
+		#Attack knockback
+		#Range: 0.0 ~ 5.0
+		host_attack_knockback = 1.0
+		#Health
+		#Range: 1.0 ~ 1024.0
+		host_health = 20.0
+		#Armor
+		#Range: 0.0 ~ 30.0
+		host_armor = 2.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		host_movement_speed = 0.27
+		#Knockback resistance
+		#Range: 0.0 ~ 1.0
+		host_knockback_resistance = 0.0
+		#Follow range
+		#Range: 0.0 ~ 2048.0
+		host_follow_range = 35.0
+
+	[Attributes.Scuttler]
+		#Attack damage
+		#Range: 0.0 ~ 2048.0
+		scuttler_attack_damage = 3.0
+		#Attack speed
+		#Range: 0.0 ~ 1024.0
+		scuttler_attack_speed = 1.0
+		#Attack knockback
+		#Range: 0.0 ~ 5.0
+		scuttler_attack_knockback = 1.0
+		#Health
+		#Range: 1.0 ~ 1024.0
+		scuttler_health = 16.0
+		#Armor
+		#Range: 0.0 ~ 30.0
+		scuttler_armor = 0.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		scuttler_movement_speed = 0.34
+		#Knockback resistance
+		#Range: 0.0 ~ 1.0
+		scuttler_knockback_resistance = 0.0
+		#Follow range
+		#Range: 0.0 ~ 2048.0
+		scuttler_follow_range = 16.0
+
+	[Attributes.Shambler]
+		#Attack damage
+		#Range: 0.0 ~ 2048.0
+		shambler_attack_damage = 14.0
+		#Attack speed
+		#Range: 0.0 ~ 1024.0
+		shambler_attack_speed = 1.0
+		#Attack knockback
+		#Range: 0.0 ~ 5.0
+		shambler_attack_knockback = 1.5
+		#Health
+		#Range: 1.0 ~ 1024.0
+		shambler_health = 40.0
+		#Armor
+		#Range: 0.0 ~ 30.0
+		shambler_armor = 4.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		shambler_movement_speed = 0.14
+		#Knockback resistance
+		#Range: 0.0 ~ 1.0
+		shambler_knockback_resistance = 1.0
+		#Follow range
+		#Range: 0.0 ~ 2048.0
+		shambler_follow_range = 64.0
+
+	[Attributes."Twisted Shambler"]
+		#Attack damage
+		#Range: 0.0 ~ 2048.0
+		twisted_shambler_attack_damage = 22.0
+		#Attack speed
+		#Range: 0.0 ~ 1024.0
+		twisted_shambler_attack_speed = 1.0
+		#Attack knockback
+		#Range: 0.0 ~ 5.0
+		twisted_shambler_attack_knockback = 2.0
+		#Health
+		#Range: 1.0 ~ 1024.0
+		twisted_shambler_health = 50.0
+		#Armor
+		#Range: 0.0 ~ 30.0
+		twisted_shambler_armor = 8.0
+		#Movement speed
+		#Range: 0.0 ~ 1024.0
+		twisted_shambler_movement_speed = 0.28
+		#Knockback resistance
+		#Range: 0.0 ~ 1.0
+		twisted_shambler_knockback_resistance = 1.0
+		#Follow range
+		#Range: 0.0 ~ 2048.0
+		twisted_shambler_follow_range = 64.0
+
+	[Attributes.Blastem]
+		#Blastem fruit damage
+		#Range: 0.0 ~ 1000000.0
+		blastem_damage = 7.0
+		#Blastem fruit explosion strength
+		#Range: 0.0 ~ 1000000.0
+		blastem_explosion = 1.5
+		#Blazing blastem fruit damage
+		#Range: 0.0 ~ 1000000.0
+		blazing_blastem_damage = 10.0
+		#Blazing blastem fruit explosion strength
+		#Range: 1.0 ~ 1000000.0
+		blazing_blastem_explosion = 2.0
+		#Damage multiplier for blastem projectiles when fired from an Umbra Blaster
+		#Range: 0.0 ~ 1000.0
+		umbra_blaster_damage_multiplier = 2.0
+		#Explosion strength multiplier for blastem projectiles when fired from an Umbra Blaster
+		#Range: 0.0 ~ 1000.0
+		umbra_blaster_explosion_multiplier = 2.0
+		#Umbra Blaster durability
+		#Range: 1 ~ 1000000
+		umbra_blaster_durability = 465
+
+	[Attributes.Ravager]
+		#Ravager durability
+		#Range: 1 ~ 1000000
+		ravager_durability = 2137
+		#Umbrium pellet damage
+		#Range: 0.0 ~ 1000000.0
+		umbrium_pellet_damage = 12.0
+		#Ravaging pellet damage
+		#Range: 0.0 ~ 1000000.0
+		ravaging_pellet_damage = 20.0
+		#Spiked pellet damage
+		#Range: 0.0 ~ 1000000.0
+		spiked_pellet_damage = 16.0
+
+	[Attributes."Concussion Smasher"]
+		#Concussion Smasher shockwave strength
+		#Range: 0.0 ~ 1000.0
+		concussion_smasher_strength = 15.0
+		#Concussion Smasher durability
+		#Range: 1 ~ 1000000
+		concussion_smasher_durability = 178
+
+	[Attributes."Scarlite Reaver"]
+		#Bonus damage for the Scarlite Reaver
+		#Range: 0.0 ~ 1000000.0
+		scarlite_reaver_damage = 2.0
+		#Attack speed for the Scarlite Reaver
+		#Range: 0.0 ~ 1000.0
+		scarlite_reaver_speed = 1.6
+		#Potion effect applied to the user on hit
+		scarlite_reaver_effect_type = "minecraft:regeneration"
+		#Amplifier of the applied effect
+		#Range: 0 ~ 255
+		scarlite_reaver_effect_level = 19
+		#Duration (in ticks) of the applied effect
+		#Range: 1 ~ 1000000
+		scarlite_reaver_effect_duration = 3
+
+	[Attributes.Armor]
+		#Umbrium armor durability multiplier
+		#Range: 1 ~ 1000000
+		umbrium_armor_durability_multiplier = 15
+		#Umbrium armor toughness
+		#Range: 0.0 ~ 100.0
+		umbrium_armor_toughness = 0.0
+		#Book wyrm scale armor durability multiplier
+		#Range: 1 ~ 1000000
+		book_wyrm_scale_armor_durability_multiplier = 11
+		#Book wyrm scale armor toughness
+		#Range: 0.0 ~ 100.0
+		book_wyrm_scale_armor_toughness = 0.0
+		#Golden book wyrm scale armor durability multiplier
+		#Range: 1 ~ 1000000
+		golden_book_wyrm_scale_armor_durability_multiplier = 33
+		#Golden book wyrm scale armor toughness
+		#Range: 0.0 ~ 100.0
+		golden_book_wyrm_scale_armor_toughness = 1.0
+		#Armor value of umbrium helmet
+		#Range: 0 ~ 100
+		umbrium_helmet_defense = 2
+		#Armor value of umbrium chestplate
+		#Range: 0 ~ 100
+		umbrium_chestplate_defense = 5
+		#Armor value of umbrium leggings
+		#Range: 0 ~ 100
+		umbrium_leggings_defense = 4
+		#Armor value of umbrium boots
+		#Range: 0 ~ 100
+		umbrium_boots_defense = 1
+		#Armor value of book wyrm scale helmet
+		#Range: 0 ~ 100
+		book_wyrm_scale_helmet_defense = 2
+		#Armor value of book wyrm scale chestplate
+		#Range: 0 ~ 100
+		book_wyrm_scale_chestplate_defense = 4
+		#Armor value of book wyrm scale leggings
+		#Range: 0 ~ 100
+		book_wyrm_scale_leggings_defense = 3
+		#Armor value of book wyrm scale boots
+		#Range: 0 ~ 100
+		book_wyrm_scale_boots_defense = 1
+		#Armor value of golden book wyrm scale helmet
+		#Range: 0 ~ 100
+		golden_book_wyrm_scale_helmet_defense = 3
+		#Armor value of golden book wyrm scale chestplate
+		#Range: 0 ~ 100
+		golden_book_wyrm_scale_chestplate_defense = 6
+		#Armor value of golden book wyrm scale leggings
+		#Range: 0 ~ 100
+		golden_book_wyrm_scale_leggings_defense = 5
+		#Armor value of golden book wyrm scale boots
+		#Range: 0 ~ 100
+		golden_book_wyrm_scale_boots_defense = 2
+
+	[Attributes."Tool materials"]
+		#Bonus damage for umbrium items
+		#Range: 0.0 ~ 1000000.0
+		material_umbrium_damage = 2.0
+		#Durability of umbrium items
+		#Range: 1 ~ 1000000
+		material_umbrium_durability = 302
+		#Harvesting level of umbrium items
+		#Range: 0 ~ 100
+		material_umbrium_harvest_level = 2
+		#Harvesting speed of umbrium items
+		#Range: 0.0 ~ 1000000.0
+		material_umbrium_harvest_speed = 6.0
+		#Bonus damage for scarlite items
+		#Range: 0.0 ~ 1000000.0
+		material_scarlite_damage = 2.0
+		#Durability of scarlite items
+		#Range: 1 ~ 1000000
+		material_scarlite_durability = 1561
+		#Harvesting level of scarlite items
+		#Range: 0 ~ 100
+		material_scarlite_harvest_level = 2
+		#Harvesting speed of scarlite items
+		#Range: 0.0 ~ 1000000.0
+		material_scarlite_harvest_speed = 6.0
+		#Bonus damage for the Scarlite Razor
+		#Range: 0.0 ~ 1000000.0
+		material_scarlite_razor_damage = 2.0
+		#Durability of the Scarlite Razor
+		#Range: 1 ~ 1000000
+		material_scarlite_razor_durability = 131
+		#Harvesting level of the Scarlite Razor
+		#Range: 0 ~ 100
+		material_scarlite_razor_harvest_level = 2
+		#Harvesting speed of the Scarlite Razor
+		#Range: 0.0 ~ 1000000.0
+		material_scarlite_razor_harvest_speed = 6.0
+		#Bonus damage for ravaging items
+		#Range: 0.0 ~ 1000000.0
+		material_ravaging_damage = 3.0
+		#Durability of ravaging items
+		#Range: 1 ~ 1000000
+		material_ravaging_durability = 2137
+		#Harvesting level of ravaging items
+		#Range: 0 ~ 100
+		material_ravaging_harvest_level = 3
+		#Harvesting speed of ravaging items
+		#Range: 0.0 ~ 1000000.0
+		material_ravaging_harvest_speed = 128.0
+

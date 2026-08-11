@@ -1,20 +1,5 @@
-// ============================================================
-// SoA Item Tooltips — port of GreedyCraft scripts/tweaks/tooltip.zs
-//
-// 1.12 GC declared a 160-entry { item: [tooltip_lines...] } map and
-// applied them to every NEI/JEI hover via CraftTweaker addTooltip().
-// 1.20.1 KubeJS uses the client-side ItemEvents.tooltip() listener —
-// runs every render frame, so we keep the fast-path explicit.
-//
-// Original 21 reusable phrases preserved as constants. Items from
-// absent mods (projectex, draconicadditions, eternalsingularity,
-// solarflux 1.12 ids, etc.) silently fall through.
-// ============================================================
-
 console.info('[soa_scripts] soa_tooltips.js loading')
 
-// Reusable tooltip phrases. GC pulled these from a lang file
-// (greedycraft.tooltip.constant.*); inlined here for portability.
 const T = {
     disabled:               '§cDisabled in Souls of Avarice.',
     flight_disabled:        '§cCreative flight is disabled in this pack.',
@@ -39,27 +24,22 @@ const T = {
     machinery_upgrade_warning:'§cInstalled upgrades are §cnot recoverable§r§c. Plan ahead.',
 }
 
-// item-id → array of lines. Wildcards ('*') in GC IDs are converted to
-// `startsWith` matches so all variants share the tooltip.
 const TOOLTIPS = {
-    // Mystical Agriculture supremium gear loses creative flight in this pack
+
     'mysticalagriculture:supremium_helmet':     [T.flight_disabled],
     'mysticalagriculture:supremium_chestplate': [T.flight_disabled],
     'mysticalagriculture:supremium_leggings':   [T.flight_disabled],
     'mysticalagriculture:supremium_boots':      [T.flight_disabled],
 
-    // Don't place
     'minecraft:bedrock': [T.dont_place],
     'minecraft:barrier': [T.dont_place],
 
-    // ProjectE collectors disabled (use ProjectExtended collectors instead)
     'projecte:collector_mk1': [T.disabled, '§7Use the ProjectExtended collector chain.'],
     'projecte:collector_mk2': [T.disabled, '§7Use the ProjectExtended collector chain.'],
     'projecte:collector_mk3': [T.disabled, '§7Use the ProjectExtended collector chain.'],
 
-    // DE wyvern gear (gated by `wyvern` stage in soa_item_stages.zs already)
     'draconicevolution:wyvern_helm':       [T.de_disabled_wyvern],
-    'draconicevolution:wyvern_chestpiece': [T.de_disabled_wyvern],  // 1.20 rename of wyvern_chest
+    'draconicevolution:wyvern_chestpiece': [T.de_disabled_wyvern],
     'draconicevolution:wyvern_leggings':   [T.de_disabled_wyvern],
     'draconicevolution:wyvern_boots':      [T.de_disabled_wyvern],
     'draconicevolution:wyvern_axe':        [T.de_disabled_wyvern],
@@ -69,7 +49,6 @@ const TOOLTIPS = {
     'draconicevolution:wyvern_sword':      [T.de_disabled_wyvern],
     'draconicevolution:wyvern_capacitor':  [T.de_disabled_wyvern],
 
-    // DE awakened gear (gated by `awakened` stage)
     'draconicevolution:draconic_helm':       [T.de_disabled_awakened],
     'draconicevolution:draconic_chestpiece': [T.de_disabled_awakened],
     'draconicevolution:draconic_leggings':   [T.de_disabled_awakened],
@@ -81,7 +60,6 @@ const TOOLTIPS = {
     'draconicevolution:draconic_sword':      [T.de_disabled_awakened],
     'draconicevolution:draconic_capacitor':  [T.de_disabled_awakened],
 
-    // SoA quest items
     'soa_additions:quest_book':           [T.refer_to_guide],
     'soa_additions:blueprint':            [T.blueprint_required],
     'soa_additions:blueprint_laser_gun':  [T.blueprint_required],
@@ -92,13 +70,10 @@ const TOOLTIPS = {
     'soa_additions:experience_nugget':    [T.dont_put_into_ae],
     'soa_additions:respawn_anchor':       [T.cant_set_spawn],
 
-    // Mowzie's drops — narrative hints
     'mowziesmobs:ice_crystal':            ['§3Combine with §dRainbow Runes§r§3 to forge an §bAurorian Heart§r§3.'],
 
-    // SoA forbidden bible — already has tooltip in StageItem; warn anyway
     'soa_additions:forbidden_bible':      [T.shadow_mob_1, T.shadow_mob_2],
 
-    // Tinker tools — generic repair hint
     'tconstruct:pickaxe':    [T.how_to_repair],
     'tconstruct:hammer':     [T.how_to_repair],
     'tconstruct:hand_axe':   [T.how_to_repair],
@@ -110,15 +85,12 @@ const TOOLTIPS = {
     'tconstruct:sword':      [T.how_to_repair],
     'tconstruct:flint_and_brick': [T.how_to_repair],
 
-    // Custom Machinery (CM Fork) controller blocks
     'custommachinery:custom_machine_block': [T.machinery_upgrade_guide, T.machinery_upgrade_warning],
 
-    // Bow tweaks
     'minecraft:bow':         [T.bow_speed],
     'minecraft:crossbow':    [T.bow_speed],
 }
 
-// Wildcard prefix table (e.g. all `projectex:relay:*` variants)
 const TOOLTIPS_PREFIX = {
     'projectex:collector':           [T.disabled],
     'projectex:relay':               [T.disabled],

@@ -3,22 +3,40 @@
   "name": "Patient Bag",
   "rarity": "epic",
   "output": {
+    "rolls": 1,
     "entries": [
       {
         "stack": {
           "id": "minecraft:emerald_block",
-          "count": 64
+          "count": 48
         },
         "weight": 3
       },
       {
         "stack": {
           "id": "minecraft:diamond_block",
-          "count": 64
+          "count": 48
         },
         "weight": 4
+      },
+      {
+        "stack": {
+          "id": "soa_additions:black_hole_remnant"
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "nbt": {
+            "Loot": "soa_additions:patient_lootbag",
+            "Type": "EPIC",
+            "Name": "Patient Bag",
+            "Color": 16777215
+          }
+        },
+        "weight": 9992
       }
-    ],
-    "rolls": 1
+    ]
   }
 }

@@ -1,6 +1,5 @@
 {
   "replace": false,
-  "_comment": "GC gemLifeEssence stand-in.",
   "values": [
     "bloodmagic:weakbloodshard"
   ]

@@ -1,10 +1,3 @@
-// GENERATED Ponder scenes for the Forbidden Arcanus Hephaestus Forge.
-// Scene 1: forge formation (platform pattern decoded from FA's
-// ModBlockPatterns.HEPHAESTUS_PATTERN bytecode - 9x9 darkstone platform,
-// smithing table center, Mundabitur Dust to transform). Scenes 2-5: the
-// mod's own upgrade_tier_N rituals, verbatim ingredients + essences, with
-// notes on which SoA metal rituals each tier unlocks.
-
 Ponder.registry((event) => {
     event.create('forbidden_arcanus:hephaestus_forge')
         .scene('hephaestus_forge_creation', 'Hephaestus Forge — Building it (Tier 1)', (scene, util) => {

@@ -1,43 +1,11 @@
-// ============================================================
-// SoA parity — GC spawn-egg + custom-potion crafting recipes
-//
-// Port of the recipes GreedyCraft defined in
-// scripts/recipes/vanilla/crafting_table/shaped.zs. These are the entries the
-// guide book's "Misc Recipes" page advertised; their outputs all exist in 1.20
-// (or are vanilla items differentiated only by NBT), so no new mod is needed.
-//
-// 1.12 -> 1.20 translation notes:
-//   * spawn eggs were ONE item + EntityTag NBT (<minecraft:spawn_egg>.withTag(
-//     {EntityTag:{id:"minecraft:blaze"}})); 1.20 has a discrete item per mob.
-//   * thermalfoundation:material metas 2049/2051/2053 are dustBlizz/dustBlitz/
-//     dustBasalz (odd metas are the powders, even are the rods) -> thermal:
-//     <x>_powder. Consistent with the blaze egg using blaze powder.
-//   * <ore:wool> -> #minecraft:wool, <ore:bone> -> minecraft:bone,
-//     <ore:listAllegg> -> minecraft:egg, <ore:dyeBlack> -> #forge:dyes/black.
-//   * GC's potions pulled their name/lore from greedycraft.misc.* lang keys
-//     which SoA doesn't ship, so the components are inlined with the same
-//     text and colours (§b§o -> aqua+italic, §6 -> gold, §8 -> dark_gray).
-//   * Effect ids are unchanged between versions: 1 speed, 8 jump_boost,
-//     25 levitation, 27 unluck.
-//
-// Every recipe carries an explicit id so the Patchouli guide can reference it.
-// ============================================================
-
 console.info('[soa_scripts] parity_spawn_eggs_potions.js loading')
 
-// Mob spawn eggs: ring of a themed reagent around a vanilla egg.
-//
-// Only the ones vanilla_shaped.js does NOT already cover. Its spawnEgg() helper
-// already ships slime/villager/blaze/cow/enderman/ghast with these exact
-// ingredients — duplicating them here would register two identical recipes for
-// the same output. The Thermal elemental mobs and stray were the real gaps.
 const SPAWN_EGGS = [
     { egg: 'thermal:blizz_spawn_egg', ring: 'thermal:blizz_powder', id: 'soa_ported:spawn_blizz' },
     { egg: 'thermal:blitz_spawn_egg', ring: 'thermal:blitz_powder', id: 'soa_ported:spawn_blitz' },
     { egg: 'thermal:basalz_spawn_egg', ring: 'thermal:basalz_powder', id: 'soa_ported:spawn_basalz' },
 ]
 
-// GC's potions: splash potions carrying CustomPotionEffects + a display name
 const POTIONS = [
     {
         id: 'soa_ported:lightspeed_potion',
@@ -75,7 +43,7 @@ function effectsSnbt(list) {
 }
 
 ServerEvents.recipes(event => {
-    // --- spawn eggs: ring around a plain egg ---
+
     for (const s of SPAWN_EGGS) {
         try {
             event.shaped(s.egg, [
@@ -88,7 +56,6 @@ ServerEvents.recipes(event => {
         }
     }
 
-    // --- stray: wool above/below, bone either side (GC used ore dicts) ---
     try {
         event.shaped('minecraft:stray_spawn_egg', [
             ' W ',
@@ -103,7 +70,6 @@ ServerEvents.recipes(event => {
         console.warn('[parity_eggs] spawn_stray: ' + e)
     }
 
-    // --- Totem of Undying ---
     try {
         event.shaped('minecraft:totem_of_undying', [
             'EGE',
@@ -120,9 +86,6 @@ ServerEvents.recipes(event => {
         console.warn('[parity_eggs] totem_of_undying: ' + e)
     }
 
-    // --- custom splash potions: full ring of reagent around a glass bottle ---
-    // nbt declared OUTSIDE the loop: Rhino treats a per-iteration const/let in
-    // this position as a redeclaration and errors every iteration after the first.
     let nbt
     for (const p of POTIONS) {
         try {

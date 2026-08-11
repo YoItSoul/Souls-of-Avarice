@@ -37,6 +37,6 @@
   },
   "debugLogging": {
     "desc:": "Enables debug logging to show chunk loading changes: default:false",
-    "debugLogging": false
+    "debugLogging": true
   }
 }

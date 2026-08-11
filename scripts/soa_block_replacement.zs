@@ -1,33 +1,14 @@
-// ============================================================
-// SoA Block Replacement (GENERATED - do not edit by hand)
-//
-// Makes a staged machine render as the Unknown Block in the world
-// for players who lack its stage, instead of looking normal until
-// they right-click it (which soa_block_stages.js blocks).
-//
-// Generated from scripts/soa_item_stages.zs, restricted to blocks
-// that have a block entity. Terrain and decorative blocks are
-// deliberately excluded, and hand-tuned entries in
-// scripts/soa_ore_stages.zs always take precedence.
-//
-// Regenerate: python soa_additions/tools/regen_block_replacement.py
-// ============================================================
-
 import mods.orestages.OreStages;
 
-// --- chaotic (2) ---
 OreStages.addOreStage("chaotic", <blockstate:draconicevolution:reactor_stabilizer>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("chaotic", <blockstate:mekanism:laser_amplifier>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- energy_matter_core (2) ---
 OreStages.addOreStage("energy_matter_core", <blockstate:projecte:condenser_mk1>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("energy_matter_core", <blockstate:projecte:condenser_mk2>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- fusion_matrix (2) ---
 OreStages.addOreStage("fusion_matrix", <blockstate:draconicevolution:draconium_chest>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("fusion_matrix", <blockstate:summoningrituals:altar>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- getting_started (28) ---
 OreStages.addOreStage("getting_started", <blockstate:aether:chest_mimic>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("getting_started", <blockstate:aether:treasure_chest>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("getting_started", <blockstate:aquaculture:neptunes_bounty>, <blockstate:soa_additions:unknown_block>, false);
@@ -57,10 +38,8 @@ OreStages.addOreStage("getting_started", <blockstate:smithery:forge_fuel_port>, 
 OreStages.addOreStage("getting_started", <blockstate:smithery:forge_item_port>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("getting_started", <blockstate:smithery:part_press>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- graduated (1) ---
 OreStages.addOreStage("graduated", <blockstate:cyclic:battery_infinite>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- hardmode (31) ---
 OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_energyface>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_itemface>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("hardmode", <blockstate:actuallyadditions:phantom_liquiface>, <blockstate:soa_additions:unknown_block>, false);
@@ -93,7 +72,6 @@ OreStages.addOreStage("hardmode", <blockstate:projecte:relay_mk2>, <blockstate:s
 OreStages.addOreStage("hardmode", <blockstate:projecte:relay_mk3>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("hardmode", <blockstate:projecte:rm_furnace>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- master_engineer (8) ---
 OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:breaker>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:dropper>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:fluid_collector>, <blockstate:soa_additions:unknown_block>, false);
@@ -103,7 +81,6 @@ OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:phantom_b
 OreStages.addOreStage("master_engineer", <blockstate:actuallyadditions:vertical_digger>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("master_engineer", <blockstate:cyclic:user>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- nether (35) ---
 OreStages.addOreStage("nether", <blockstate:aether:altar>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("nether", <blockstate:aether:icestone>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("nether", <blockstate:aether:incubator>, <blockstate:soa_additions:unknown_block>, false);
@@ -140,7 +117,6 @@ OreStages.addOreStage("nether", <blockstate:minecraft:brewing_stand>, <blockstat
 OreStages.addOreStage("nether", <blockstate:mysticalagriculture:enchanter>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("nether", <blockstate:mythicbotany:mana_infuser>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- novice_engineer (32) ---
 OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:atomic_reconstructor>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:battery_box>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("novice_engineer", <blockstate:actuallyadditions:bio_reactor>, <blockstate:soa_additions:unknown_block>, false);
@@ -174,7 +150,6 @@ OreStages.addOreStage("novice_engineer", <blockstate:enderio:vibrant_capacitor_b
 OreStages.addOreStage("novice_engineer", <blockstate:enderio:wired_charger>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("novice_engineer", <blockstate:enderio:xp_vacuum>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- novice_wizard (15) ---
 OreStages.addOreStage("novice_wizard", <blockstate:bloodarsenal:blood_capacitor>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("novice_wizard", <blockstate:bloodarsenal:stasis_plate>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:alchemytable>, <blockstate:soa_additions:unknown_block>, false);
@@ -191,7 +166,6 @@ OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:outputroutingnode>
 OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:soulforge>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("novice_wizard", <blockstate:bloodmagic:teleposer>, <blockstate:soa_additions:unknown_block>, false);
 
-// --- skilled_engineer (62) ---
 OreStages.addOreStage("skilled_engineer", <blockstate:cyclic:harvester>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:boiler_casing>, <blockstate:soa_additions:unknown_block>, false);
 OreStages.addOreStage("skilled_engineer", <blockstate:mekanism:boiler_valve>, <blockstate:soa_additions:unknown_block>, false);

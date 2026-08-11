@@ -24,7 +24,7 @@
       "title": "Path of Valoria",
       "icon": "valoria:eye_necklace",
       "x": 0,
-      "y": 0,
+      "y": 120,
       "description": [
         "The veil thins. Begin your journey through Valoria — corrupted lands of necromancy, fallen emperors, and forgotten fortresses."
       ],
@@ -93,7 +93,7 @@
       "title": "First Help",
       "icon": "valoria:aloe_bandage",
       "x": 96,
-      "y": 144,
+      "y": 192,
       "description": [
         "Craft an Aloe Bandage and use it to heal yourself. Mirrors the valoria:first_help advancement."
       ],
@@ -129,7 +129,7 @@
       "title": "Basic Medicine",
       "icon": "valoria:aloe_bandage_upgraded",
       "x": 144,
-      "y": 192,
+      "y": 216,
       "description": [
         "Upgrade your Aloe Bandage. Mirrors the valoria:basic_medicine advancement."
       ],
@@ -175,7 +175,7 @@
       "tasks": [
         {
           "type": "soa_additions:item",
-          "tag": "valoria:geodes",
+          "item": "valoria:stone_geode",
           "count": 2
         }
       ],
@@ -201,7 +201,7 @@
       "title": "Black Gold",
       "icon": "valoria:black_gold_ingot",
       "x": 96,
-      "y": 0,
+      "y": 48,
       "description": [
         "Alloy gold and cobalt into Black Gold — Valoria's gateway metal.",
         "Codex: \"Alloy of Gold and Cobalt\""
@@ -310,7 +310,7 @@
       "title": "Colorful Crystal",
       "icon": "valoria:elemental_crystal",
       "x": 144,
-      "y": 0,
+      "y": 24,
       "description": [
         "Slay an Elemental and harvest its crystal. Mirrors the valoria:elemental_crystal advancement."
       ],
@@ -346,7 +346,7 @@
       "title": "Elemental Fusion",
       "icon": "valoria:elemental_manipulator",
       "x": 192,
-      "y": 48,
+      "y": 120,
       "description": [
         "Craft the Elemental Manipulator — the forge for the four elemental cores.",
         "Mirrors the valoria:elemental_manipulator advancement."
@@ -377,15 +377,14 @@
         "casual",
         "adventure",
         "expert"
-      ],
-      "shape": "rhombus"
+      ]
     },
     {
       "id": "val_aquarius_core",
       "title": "Core of Depths",
       "icon": "valoria:aquarius_core",
       "x": 240,
-      "y": 0,
+      "y": 24,
       "description": [
         "Forge the Aquarius Core — water elemental focus.",
         "Mirrors the valoria:aquarius_core advancement (parallel sibling)."
@@ -422,7 +421,7 @@
       "title": "Core of Harmony",
       "icon": "valoria:nature_core",
       "x": 240,
-      "y": 144,
+      "y": 168,
       "description": [
         "Forge the Nature Core — harmony/forest focus.",
         "Codex: \"Living Forests . . .\"",
@@ -461,7 +460,7 @@
       "title": "Core of Flames",
       "icon": "valoria:infernal_core",
       "x": 240,
-      "y": 96,
+      "y": 120,
       "description": [
         "Forge the Infernal Core — fire elemental focus.",
         "Mirrors the valoria:infernal_core advancement (parallel sibling)."
@@ -499,10 +498,11 @@
       "title": "Core of Destruction",
       "icon": "valoria:void_core",
       "x": 336,
-      "y": 144,
+      "y": 192,
       "description": [
         "Forge the Void Core — destruction focus.",
-        "Mirrors the valoria:void_core advancement (parallel sibling)."
+        "&cNot a quick sibling of the other cores:&r it needs a &eNihility Shard&r, which only drops from Wicked Scorpions inside &eThe Valoria&r. Expect to finish the Necromancer, then Firron, then the Valoria portal before you can build this one.",
+        "Mirrors the valoria:void_core advancement."
       ],
       "dependencies": [
         "val_manipulator",
@@ -537,7 +537,7 @@
       "title": "Heart of Harmony",
       "icon": "valoria:harmony_heart",
       "x": 144,
-      "y": 144,
+      "y": 168,
       "description": [
         "Slay an Ent and harvest the Harmony Heart. Mirrors the valoria:harmony_heart advancement."
       ],
@@ -573,7 +573,7 @@
       "title": "Heart of Flames",
       "icon": "valoria:devil_heart",
       "x": 192,
-      "y": 0,
+      "y": 72,
       "description": [
         "Hunt Devils for the rare Devil Heart (5% on player kill). Mirrors the valoria:devil_heart advancement."
       ],
@@ -609,7 +609,7 @@
       "title": "The Grimoire",
       "icon": "valoria:necromancer_grimoire",
       "x": 96,
-      "y": 96,
+      "y": 144,
       "description": [
         "Hunt Sorcerers and Draugrs for the Necromancer Grimoire — a rare drop.",
         "Codex: \"To kill the Necromancer firstly obtain a Necromancer Grimoire from killing Draugrs or Sorcerers.\""
@@ -647,7 +647,7 @@
       "title": "The Buried Tombs",
       "icon": "valoria:cryptic_altar",
       "x": 144,
-      "y": 96,
+      "y": 120,
       "description": [
         "Find a Crypt structure and locate its Cryptic Altar. Place the Grimoire there to awaken the Necromancer.",
         "&6Tip:&r A &eExplorer's Compass&r will point you straight at the nearest Necromancer Crypt.",
@@ -659,9 +659,8 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "valoria:cryptic_altar",
-          "count": 1
+          "type": "soa_additions:observe",
+          "target": "valoria:cryptic_altar"
         }
       ],
       "rewards": [
@@ -691,7 +690,7 @@
       "title": "The Last Rite",
       "icon": "valoria:necromancer_treasure_bag",
       "x": 192,
-      "y": 96,
+      "y": 168,
       "description": [
         "Defeat the Necromancer — the first true boss. He is a single-phase spellcaster: he summons undead, applies effects, heals self and target, and knocks players around.",
         "HP 500, 5 attack damage. Use the Grimoire on the Cryptic Altar to summon him, OR craft a Ravaging Catalyst (post-Dryador) to use on a Summoning Pedestal.",
@@ -730,7 +729,7 @@
       "title": "The Forest Weeps",
       "icon": "valoria:dryador_treasure_bag",
       "x": 240,
-      "y": 192,
+      "y": 216,
       "description": [
         "Defeat Dryador, the Fallen Emperor of Nature. HP 1000, 4 attack damage, 5 armor. Pixie summons, radial acorn barrage, ground stomp.",
         "Codex: \"if the most peaceable Emperor has gone berserk, we need to investigate further.\"",
@@ -770,7 +769,7 @@
       "title": "The Forgotten Lands",
       "icon": "valoria:valoria_portal_frame",
       "x": 288,
-      "y": 48,
+      "y": 120,
       "description": [
         "Build a Valoria Portal and step into The Valoria. The corrupted dimension awaits.",
         "Codex: \"Obtain - Valoria Portal Frame Shard.\"",
@@ -808,7 +807,7 @@
       "title": "Shiny!",
       "icon": "valoria:jade",
       "x": 336,
-      "y": 0,
+      "y": 48,
       "description": [
         "Mine Jade in The Valoria dimension. Mirrors the valoria:jade advancement."
       ],
@@ -844,7 +843,7 @@
       "title": "Explosive One",
       "icon": "valoria:pyratite",
       "x": 336,
-      "y": 96,
+      "y": 144,
       "description": [
         "Mine Pyratite in The Valoria dimension. Volatile material.",
         "Mirrors the valoria:pyratite advancement."
@@ -881,7 +880,7 @@
       "title": "The Void Fortress",
       "icon": "valoria:wicked_altar",
       "x": 384,
-      "y": 48,
+      "y": 120,
       "description": [
         "Find the Void Fortress structure. Codex: \"Take a visit to the Void Fortress.\"",
         "It contains the Wicked Altar — used to awaken the Wicked Crystal with a Crystal Summon Book.",
@@ -892,9 +891,8 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "valoria:wicked_altar",
-          "count": 1
+          "type": "soa_additions:observe",
+          "target": "valoria:wicked_altar"
         }
       ],
       "rewards": [
@@ -919,7 +917,7 @@
       "title": "Heart of the Fortress",
       "icon": "valoria:wicked_crystal_treasure_bag",
       "x": 432,
-      "y": 48,
+      "y": 120,
       "description": [
         "Defeat the Wicked Crystal — the final boss. HP 2000, 0 melee damage but devastating spells: Crystal Storm rains 6-damage projectiles, Radial Attack hits 1.5-block AoE for 6, summons Wicked Shields (25 HP) and Crystal minions (35 HP), pulls players toward it. Two phases.",
         "Mirrors the valoria:wicked_crystal advancement."
@@ -955,7 +953,8 @@
         "adventure",
         "expert"
       ],
-      "shape": "rhombus"
+      "shape": "rhombus",
+      "auto_claim": true
     },
     {
       "id": "val_reaper_scythe",
@@ -999,10 +998,10 @@
       "title": "The Mobile Blade",
       "icon": "valoria:firron_spawn_egg",
       "x": 240,
-      "y": 48,
+      "y": 72,
       "description": [
-        "Summon Firron via the Summoning Pedestal. Catalyst (held): 1× Devil Heart. Sacrifices: 1× Ravaging Catalyst + 1× Ethereal Shard + 1× Infernal Stone.",
-        "HP 1500, 15 melee damage, 20 armor — hits hard. 4 attack patterns + 2 phases."
+        "No arena for this one generates anywhere - Firron is called up, so the fight starts when you decide it does.",
+        "Armoured, two-phased and quick to punish anyone who wandered over straight from the Necromancer."
       ],
       "dependencies": [
         "val_devil_heart",
@@ -1098,7 +1097,7 @@
       "title": "The Living Forests",
       "icon": "valoria:harmony_heart",
       "x": 96,
-      "y": 48,
+      "y": 96,
       "description": [
         "Cull 10 Ents from the corrupted forests. They drop Harmony Hearts and Nature Gifts — keys to Dryador's lore and the catalyst chain.",
         "&7Where to find them:&r Ents spawn in &eany forest biome&r in the Overworld — vanilla forest, dark forest, birch forest, flower forest, old growth forests, etc. Spawn groups are 2-4 per pack with high frequency, so a long walk through any treed area should turn up plenty.",
@@ -1151,7 +1150,7 @@
       "title": "Hunting the Damned",
       "icon": "valoria:devil_heart",
       "x": 144,
-      "y": 48,
+      "y": 72,
       "description": [
         "Cull 10 Devils from the corrupted lands. They drop the rare Devil Heart (5% per kill), Infernal Stone, and Devil Meat.",
         "&7Where to find them:&r Devils spawn &eanywhere in the Nether&r — every nether biome (nether wastes, soul sand valley, crimson forest, warped forest, basalt deltas). Spawn groups are 1-2 per pack, so plan to cover ground. Bring fire resistance.",
@@ -1204,7 +1203,7 @@
       "title": "Pests of the Fortress",
       "icon": "valoria:nihility_shard",
       "x": 336,
-      "y": 48,
+      "y": 96,
       "description": [
         "Cull 10 Wicked Scorpions from the Void Fortress. They drop Nihility Shards and Toxins Bottles.",
         "&7Where to find them:&r Wicked Scorpions ONLY spawn in &eThe Valoria&r dimension — they are not in the Overworld or Nether. Highest density is in &bVoid Desert&r biomes (the primary hunting ground). Lower density in &bBarren Ecotone&r, &bShaded Ecotone&r, &bEcotone&r, &bShaded Barrens&r, and trace amounts in &bVoid Hills&r and &bVoid Barren&r. You'll need to enter The Valoria first (post-Dryador gate).",
@@ -1239,6 +1238,41 @@
           "type": "soa_additions:item",
           "item": "valoria:toxins_bottle",
           "count": 3
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "val_wicked_crystal_recover",
+      "title": "Stage recovery",
+      "icon": "soa_additions:guide_book",
+      "visibility": "hidden_until_deps",
+      "optional": true,
+      "repeatable": true,
+      "x": 480,
+      "y": 120,
+      "description": [
+        "Gamestages is a bit weird sometimes! If the stage from \"Heart of the Fortress\" did not stick, claim this to get it back.",
+        "Safe to use more than once."
+      ],
+      "dependencies": [
+        "val_wicked_crystal"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Restore my stage please!"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "lunatic_cultist",
+          "scope": "player"
         }
       ],
       "modes": [

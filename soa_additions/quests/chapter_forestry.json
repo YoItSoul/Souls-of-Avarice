@@ -20,10 +20,11 @@
       "id": "for_quest_013d4cfc",
       "title": "Squeezer",
       "icon": "forestry:squeezer",
-      "x": 96,
-      "y": 58,
+      "x": 48,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Seed Oil and bulk Honey are inputs half this chapter quietly assumes you already have.",
+        "This is where they come from. The Carpenter is dead weight until a Squeezer is running."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -57,9 +58,10 @@
       "title": "Fabricator",
       "icon": "forestry:fabricator",
       "x": 144,
-      "y": 58,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Electron Tubes come from nowhere else in the game, and they gate the Multifarm's circuits and every Alveary upgrade.",
+        "Build the Fabricator before you plan either one."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -92,13 +94,14 @@
       "id": "for_quest_25e23512",
       "title": "Bee Analyzer",
       "icon": "forestry:portable_alyzer",
-      "x": 96,
-      "y": 154,
+      "x": 144,
+      "y": 96,
       "description": [
-        "Obtain the required item(s)"
+        "A species name is all an unanalysed bee will tell you. Speed, lifespan, tolerances and products stay hidden.",
+        "Breed without looking and you are guessing. The Forester's Manual explains what the traits do once you can see them."
       ],
       "dependencies": [
-        "for_quest_86ab9dab"
+        "for_quest_48fc4e8c"
       ],
       "tasks": [
         {
@@ -110,8 +113,8 @@
       "rewards": [
         {
           "type": "soa_additions:item",
-          "item": "forestry:analyzer",
-          "count": 1
+          "item": "forestry:honey_drop",
+          "count": 16
         },
         {
           "type": "soa_additions:xp",
@@ -131,20 +134,21 @@
     },
     {
       "id": "for_quest_2a2e5f4d",
-      "title": "Home Seeker",
-      "icon": "forestry:habitat_locator",
-      "x": 48,
-      "y": 154,
+      "title": "Automatic Analysis",
+      "icon": "forestry:analyzer",
+      "x": 120,
+      "y": 144,
       "description": [
-        "Obtain the required item(s)"
+        "The same job as the portable one, minus the clicking - unknown bees in one side, analysed bees out the other.",
+        "Worth building the moment you are breeding by the stack instead of by the pair."
       ],
       "dependencies": [
-        "for_quest_48fc4e8c"
+        "for_quest_25e23512"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "forestry:habitat_locator",
+          "item": "forestry:analyzer",
           "count": 1
         }
       ],
@@ -169,10 +173,11 @@
       "id": "for_quest_322f3076",
       "title": "My Little Multiblock Farm",
       "icon": "forestry:farm_plain_brick",
-      "x": 144,
-      "y": 106,
+      "x": 240,
+      "y": 96,
       "description": [
-        "Obtain the required item(s)"
+        "Farming without you standing in it: the Multifarm plants, harvests and replants on its own.",
+        "Plain Farm Blocks are only the shell. What it grows depends on the parts you fit into it, and Forestry ships a manual for each kind of farm."
       ],
       "dependencies": [
         "for_quest_2034cbe8"
@@ -205,10 +210,11 @@
       "id": "for_quest_3b00df73",
       "title": "Distillatior",
       "icon": "forestry:still",
-      "x": 0,
-      "y": 58,
+      "x": 288,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Biomass burns. Bio Fuel burns much longer. The Still is the step between them.",
+        "With a Fermenter feeding it, your power problem quietly becomes a tree farm problem."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -241,10 +247,11 @@
       "id": "for_quest_48fc4e8c",
       "title": "Home Sweet Home",
       "icon": "forestry:bee_house",
-      "x": 48,
-      "y": 106,
+      "x": 0,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Your first hive, and a deliberately stupid one - no frames, no climate control, no interest in whether the bees like the biome.",
+        "Enough to get a colony running. Not enough to breed anything you actually want."
       ],
       "dependencies": [
         "for_quest_5f88aa7f"
@@ -273,10 +280,11 @@
       "id": "for_quest_4fbc9995",
       "title": "Carpenter",
       "icon": "forestry:carpenter",
-      "x": 48,
-      "y": 58,
+      "x": 96,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Circuit Boards, the Portable Analyzer, impregnated woodwork - all of it leaves the Carpenter and none of it exists anywhere else.",
+        "It crafts wet, so expect it to want a liquid standing by alongside the recipe."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -309,10 +317,11 @@
       "id": "for_quest_5f88aa7f",
       "title": "Bee Hunter",
       "icon": "forestry:scoop",
-      "x": 0,
-      "y": 106,
+      "x": 192,
+      "y": 0,
       "description": [
-        "Obtain the required item(s)"
+        "Nothing else in this chapter happens until you own a Princess and a Drone, and both live in wild hives out in the world.",
+        "Break a hive with anything but a Scoop and the colony dies with it."
       ],
       "dependencies": [],
       "tasks": [
@@ -348,10 +357,11 @@
       "id": "for_quest_8565f093",
       "title": "Centrifuge, Our Old Friend",
       "icon": "forestry:centrifuge",
-      "x": 288,
-      "y": 58,
+      "x": 336,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Combs are worth nothing sitting in your inventory. The Centrifuge is what turns a hive's output into materials the rest of the pack actually wants.",
+        "No bee operation is finished without one."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -384,13 +394,14 @@
       "id": "for_quest_86ab9dab",
       "title": "Deluxe Bee House",
       "icon": "forestry:apiary",
-      "x": 96,
-      "y": 106,
+      "x": 72,
+      "y": 192,
       "description": [
-        "Obtain the required item(s)"
+        "The Apiary is the real hive. It takes Frames to speed bees up or wring extra production out of them, it respects the temperature and humidity of the biome it stands in, and it can be piped into and out of.",
+        "From here on, breeding assumes you own one - the Bee House cannot mutate anything interesting."
       ],
       "dependencies": [
-        "for_quest_48fc4e8c",
+        "for_quest_2a2e5f4d",
         "for_quest_4fbc9995",
         "for_quest_013d4cfc"
       ],
@@ -418,10 +429,11 @@
       "id": "for_quest_8e56d48a",
       "title": "Bottleneck",
       "icon": "forestry:bottler",
-      "x": 336,
-      "y": 58,
+      "x": 384,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Fluids move in containers or they do not move at all.",
+        "The Bottler is the joint between the Squeezer, the Fermenter and the Still. Skip it and you will be hand-carrying buckets for the rest of the chapter."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -454,10 +466,11 @@
       "id": "for_quest_975d6f63",
       "title": "Moistener",
       "icon": "forestry:moistener",
-      "x": 240,
-      "y": 58,
+      "x": 432,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "The Moistener sits there being damp and slowly turning out Mulch - the Fermenter's cheapest fertiliser.",
+        "Deeply unglamorous, and it pays for the entire fuel chain."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -490,10 +503,11 @@
       "id": "for_quest_99f6417a",
       "title": "Agricultural Basics",
       "icon": "forestry:sturdy_machine",
-      "x": 192,
+      "x": 240,
       "y": 0,
       "description": [
-        "Obtain the required item(s)"
+        "Every Forestry machine is the same box with different guts, and the Sturdy Casing is that box.",
+        "Make one and the whole machine row below opens up. Pick up the Forester's Manual while you are here - Forestry documents itself better than most, and this chapter will not repeat what the book already says."
       ],
       "dependencies": [],
       "tasks": [
@@ -524,10 +538,11 @@
       "id": "for_quest_bff9d296",
       "title": "Core of Farm",
       "icon": "forestry:farm_gearbox_brick",
-      "x": 144,
-      "y": 154,
+      "x": 216,
+      "y": 144,
       "description": [
-        "Obtain the required item(s)"
+        "The Gearbox is where the Multifarm's work gets scheduled, and where the Farm Circuit that decides what it grows has to sit.",
+        "Which means the Fabricator was never optional after all."
       ],
       "dependencies": [
         "for_quest_322f3076"
@@ -560,10 +575,11 @@
       "id": "for_quest_fb7d745d",
       "title": "Well Fermented",
       "icon": "forestry:fermenter",
-      "x": 384,
-      "y": 58,
+      "x": 240,
+      "y": 48,
       "description": [
-        "Obtain the required item(s)"
+        "Green matter in, Biomass out - the front half of Forestry's renewable power chain.",
+        "Biomass runs a Biogas Engine as it is, or goes to the Still to become something better."
       ],
       "dependencies": [
         "for_quest_99f6417a"
@@ -583,6 +599,453 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_electron_tubes",
+      "title": "Thermionic Tubing",
+      "icon": "forestry:electron_tube_copper",
+      "x": 192,
+      "y": 96,
+      "description": [
+        "Tubes are Forestry's tier currency. The metal decides the behaviour, and Farm Circuits, Alveary walls and half the late-game upgrades are all built on them.",
+        "Copper and Tin get you moving. You will be back for the exotic metals."
+      ],
+      "dependencies": [
+        "for_quest_2034cbe8"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:electron_tube_copper",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:electron_tube_tin",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_alveary",
+      "title": "The Alveary",
+      "icon": "forestry:alveary_plain",
+      "x": 24,
+      "y": 240,
+      "description": [
+        "The endgame hive: several bee slots working at once, no frames to keep feeding, and walls you can trade out for machinery.",
+        "It is a multiblock, and the Forester's Manual has the shape. Every serious breeding line past this point assumes you raised one."
+      ],
+      "dependencies": [
+        "for_quest_86ab9dab"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_plain",
+          "count": 21
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_alveary_components",
+      "title": "Alveary Upgrades",
+      "icon": "forestry:alveary_swarmer",
+      "x": 216,
+      "y": 288,
+      "description": [
+        "The upgrade blocks turn a hive into a laboratory - climate you set rather than climate you inherit, plus pollen, mutation locks and spare Princesses.",
+        "One of each. With the weather under your control you can breed species this world was never going to offer you."
+      ],
+      "dependencies": [
+        "for_quest_alveary",
+        "for_quest_electron_tubes"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_heater",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_fan",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_hygro",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_sieve",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_stabiliser",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:alveary_swarmer",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 1500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_legendary",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_engine_clockwork",
+      "title": "Wind It Up",
+      "icon": "forestry:engine_clockwork",
+      "x": 192,
+      "y": 48,
+      "description": [
+        "Every machine in this chapter needs power and nothing has told you where it comes from yet. This is the crudest possible answer.",
+        "One machine, briefly, and only while you keep winding it. A stopgap you are meant to outgrow."
+      ],
+      "dependencies": [
+        "for_quest_99f6417a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:engine_clockwork",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 400
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_bog_earth",
+      "title": "Cut the Bog",
+      "icon": "forestry:bog_earth",
+      "x": 288,
+      "y": 96,
+      "description": [
+        "Peat is neither crafted nor mined. It ripens in the world on its own schedule, and then you dig it up.",
+        "Free fuel at the price of patience. The Peat Bog manual covers the rest."
+      ],
+      "dependencies": [
+        "for_quest_engine_clockwork"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:bog_earth",
+          "count": 4
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:peat",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_engine_peat",
+      "title": "Peat Power",
+      "icon": "forestry:engine_peat",
+      "x": 312,
+      "y": 144,
+      "description": [
+        "The first engine you can walk away from: it burns what the bog gives you and asks for nothing else.",
+        "Keep the Ash it leaves behind. The better fuel wants it."
+      ],
+      "dependencies": [
+        "for_quest_bog_earth"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:engine_peat",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_bituminous_peat",
+      "title": "Better Burning",
+      "icon": "forestry:bituminous_peat",
+      "x": 216,
+      "y": 240,
+      "description": [
+        "A denser peat that outlasts the plain brick by a wide margin, and the last upgrade the solid-fuel line has to offer.",
+        "It needs something only your bees make - this is where the apiary and the engine room finally meet."
+      ],
+      "dependencies": [
+        "for_quest_engine_peat",
+        "for_quest_86ab9dab"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:bituminous_peat",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_engine_biogas",
+      "title": "Biogas Power",
+      "icon": "forestry:engine_biogas",
+      "x": 360,
+      "y": 192,
+      "description": [
+        "Top of the Forestry power chain, and the first engine that burns nothing solid at all.",
+        "The Fermenter and Still you already built are its fuel supply. The machine row becomes the power plant."
+      ],
+      "dependencies": [
+        "for_quest_engine_peat",
+        "for_quest_fb7d745d"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:engine_biogas",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 900
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_farm_hatch",
+      "title": "Harvest Output",
+      "icon": "forestry:farm_hatch_brick",
+      "x": 168,
+      "y": 192,
+      "description": [
+        "A Multifarm with nowhere to put its harvest fills up and stalls.",
+        "The Hatch is the way out. Fit one before you bother switching the platform on."
+      ],
+      "dependencies": [
+        "for_quest_bff9d296"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:farm_hatch_brick",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_farm_valve",
+      "title": "Irrigation",
+      "icon": "forestry:farm_valve_brick",
+      "x": 264,
+      "y": 192,
+      "description": [
+        "The Farm Valve is the liquid input: water for the farm's own upkeep, or fertiliser and liquid fuel when you want it running hard.",
+        "One Valve per liquid you intend to feed it."
+      ],
+      "dependencies": [
+        "for_quest_bff9d296"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:farm_valve_brick",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "for_quest_farm_control",
+      "title": "Take Control",
+      "icon": "forestry:farm_control_brick",
+      "x": 408,
+      "y": 240,
+      "description": [
+        "Redstone control over the whole platform - start it, stop it, gate it behind whatever logic you like.",
+        "The last piece of the farm, and the reason the Fabricator is still earning its floor space."
+      ],
+      "dependencies": [
+        "for_quest_farm_hatch",
+        "for_quest_farm_valve",
+        "for_quest_electron_tubes"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "forestry:farm_control_brick",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 800
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_epic",
           "count": 1
         }
       ],

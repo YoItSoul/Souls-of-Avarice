@@ -1,5 +1,4 @@
 {
-  "_comment": "GC port — gift bag contents (one item per gift). Replaces loottweaker:gift_loot_table from GC scripts/loot_tables/gift.zs.",
   "type": "minecraft:chest",
   "pools": [
     {

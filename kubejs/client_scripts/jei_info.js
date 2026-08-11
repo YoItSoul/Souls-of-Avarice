@@ -1,8 +1,3 @@
-// JEI "info" tab entries for items whose sources aren't visible as recipes
-// or loot tables — event-based drops (InControl) and native mob mechanics.
-// The Loot Crate Contents + Quest Rewards JEI categories (soa_additions
-// 3.58.18+) cover crate/quest sourcing; these fill the remaining gaps.
-
 JEIEvents.information(event => {
     event.addItem('soa_additions:city_defender_medal', [
         '§65% drop§r from any hostile mob killed in the §9Lost City§r dimension.',

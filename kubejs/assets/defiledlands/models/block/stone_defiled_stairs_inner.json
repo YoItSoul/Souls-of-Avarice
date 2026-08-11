@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "defiledlands:block/stone_defiled",
-    "top": "defiledlands:block/stone_defiled",
-    "side": "defiledlands:block/stone_defiled"
-  }
-}

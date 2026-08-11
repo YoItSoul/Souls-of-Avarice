@@ -1,22 +1,5 @@
-// ============================================================
-// SoA Recipe Stages - GreedyCraft parity fill (GENERATED)
-//
-// GreedyCraft staged an item's recipe alongside the item itself, via
-// ZenStages' addIngredients(list, true) -> Recipes.setRecipeStage(stage,
-// output). 22 of its 27 ingredient groups did so. This file closes the
-// gap between that rule and the hand-written entries in
-// soa_recipe_stages.zs, using the same by-output form.
-//
-// GC's five addIngredients(..., false) groups are honoured as exclusions;
-// see GC_EXCLUSIONS in the generator.
-//
-// Regenerate: python soa_additions/tools/audit/recipes/30_recipe_stage_gap.py
-//         then python soa_additions/tools/audit/recipes/31_gen_recipe_stages.py
-// ============================================================
-
 import mods.recipestages.Recipes;
 
-// --- nether (291) ---
 Recipes.setRecipeStage("nether", <item:ae2:annihilation_core>);
 Recipes.setRecipeStage("nether", <item:ae2:fluix_crystal>);
 Recipes.setRecipeStage("nether", <item:ae2:fluix_dust>);
@@ -254,10 +237,10 @@ Recipes.setRecipeStage("nether", <item:cyclic:water_candle>);
 Recipes.setRecipeStage("nether", <item:cyclic:wireless_energy>);
 Recipes.setRecipeStage("nether", <item:cyclic:wireless_fluid>);
 Recipes.setRecipeStage("nether", <item:cyclic:wireless_item>);
-Recipes.setRecipeStage("nether", <item:defiledlands:calling_stone>);
-Recipes.setRecipeStage("nether", <item:defiledlands:idol_sorrow>);
-Recipes.setRecipeStage("nether", <item:defiledlands:ravaging_ingot>);
-Recipes.setRecipeStage("nether", <item:defiledlands:remorseful_gem>);
+Recipes.setRecipeStage("nether", <item:defiled_lands_preborn:calling_stone>);
+Recipes.setRecipeStage("nether", <item:defiled_lands_preborn:idol_sorrow>);
+Recipes.setRecipeStage("nether", <item:defiled_lands_preborn:ravaging_ingot>);
+Recipes.setRecipeStage("nether", <item:defiled_lands_preborn:remorseful_gem>);
 Recipes.setRecipeStage("nether", <item:embers:melter>);
 Recipes.setRecipeStage("nether", <item:enderio:enchanter>);
 Recipes.setRecipeStage("nether", <item:malum:natural_quartz>);
@@ -309,7 +292,6 @@ Recipes.setRecipeStage("nether", <item:valoria:spider_chestplate>);
 Recipes.setRecipeStage("nether", <item:valoria:spider_helmet>);
 Recipes.setRecipeStage("nether", <item:valoria:spider_leggings>);
 
-// --- getting_started (259) ---
 Recipes.setRecipeStage("getting_started", <item:aquaculture:neptunes_bounty>);
 Recipes.setRecipeStage("getting_started", <item:ars_nouveau:archwood_chest>);
 Recipes.setRecipeStage("getting_started", <item:ars_nouveau:archwood_planks>);
@@ -570,7 +552,6 @@ Recipes.setRecipeStage("getting_started", <item:valoria:dread_planks>);
 Recipes.setRecipeStage("getting_started", <item:valoria:eldritch_planks>);
 Recipes.setRecipeStage("getting_started", <item:valoria:shade_planks>);
 
-// --- hardmode (240) ---
 Recipes.setRecipeStage("hardmode", <item:avaritia:cosmic_meatballs>);
 Recipes.setRecipeStage("hardmode", <item:avaritia:crystal_matrix>);
 Recipes.setRecipeStage("hardmode", <item:avaritia:crystal_matrix_ingot>);
@@ -812,7 +793,6 @@ Recipes.setRecipeStage("hardmode", <item:taiga:yrdeen_ingot>);
 Recipes.setRecipeStage("hardmode", <item:taiga:yrdeen_nugget>);
 Recipes.setRecipeStage("hardmode", <item:twilightforest:fortification_scepter>);
 
-// --- skilled_engineer (180) ---
 Recipes.setRecipeStage("skilled_engineer", <item:bigreactors:cyanite_block>);
 Recipes.setRecipeStage("skilled_engineer", <item:bigreactors:cyanite_ingot>);
 Recipes.setRecipeStage("skilled_engineer", <item:bigreactors:raw_yellorium>);
@@ -994,7 +974,6 @@ Recipes.setRecipeStage("skilled_engineer", <item:thermal:enderium_ingot>);
 Recipes.setRecipeStage("skilled_engineer", <item:thermal:enderium_nugget>);
 Recipes.setRecipeStage("skilled_engineer", <item:thermal:silver_dust>);
 
-// --- novice_engineer (163) ---
 Recipes.setRecipeStage("novice_engineer", <item:cyclic:generator_fuel>);
 Recipes.setRecipeStage("novice_engineer", <item:enderio:advanced_item_filter>);
 Recipes.setRecipeStage("novice_engineer", <item:enderio:alloy_smelter>);
@@ -1159,7 +1138,6 @@ Recipes.setRecipeStage("novice_engineer", <item:potionsmaster:quartz_powder>);
 Recipes.setRecipeStage("novice_engineer", <item:potionsmaster:tin_powder>);
 Recipes.setRecipeStage("novice_engineer", <item:rftoolspower:power_monitor>);
 
-// --- novice_wizard (146) ---
 Recipes.setRecipeStage("novice_wizard", <item:ars_nouveau:potion_flask>);
 Recipes.setRecipeStage("novice_wizard", <item:bloodarsenal:altare_aenigmatica>);
 Recipes.setRecipeStage("novice_wizard", <item:bloodarsenal:blood_capacitor>);
@@ -1307,7 +1285,6 @@ Recipes.setRecipeStage("novice_wizard", <item:tconevo:bound_metal_nugget>);
 Recipes.setRecipeStage("novice_wizard", <item:tconevo:sentient_metal_ingot>);
 Recipes.setRecipeStage("novice_wizard", <item:tconevo:sentient_metal_nugget>);
 
-// --- disabled (21) ---
 Recipes.setRecipeStage("disabled", <item:ae2:certus_quartz_axe>);
 Recipes.setRecipeStage("disabled", <item:ae2:certus_quartz_hoe>);
 Recipes.setRecipeStage("disabled", <item:ae2:certus_quartz_pickaxe>);
@@ -1330,7 +1307,6 @@ Recipes.setRecipeStage("disabled", <item:valoria:samurai_chestplate>);
 Recipes.setRecipeStage("disabled", <item:valoria:void_axe>);
 Recipes.setRecipeStage("disabled", <item:valoria:void_shovel>);
 
-// --- master_wizard (6) ---
 Recipes.setRecipeStage("master_wizard", <item:soa_additions:void_metal_ingot>);
 Recipes.setRecipeStage("master_wizard", <item:tconevo:coalescence_matrix>);
 Recipes.setRecipeStage("master_wizard", <item:tconevo:primal_metal_block>);
@@ -1338,69 +1314,52 @@ Recipes.setRecipeStage("master_wizard", <item:tconevo:primal_metal_ingot>);
 Recipes.setRecipeStage("master_wizard", <item:tconevo:primal_metal_nugget>);
 Recipes.setRecipeStage("master_wizard", <item:thermal:flux_capacitor>);
 
-// --- wither_slayer (4) ---
 Recipes.setRecipeStage("wither_slayer", <item:meetyourfight:devils_ante>);
 Recipes.setRecipeStage("wither_slayer", <item:soa_additions:evil_metal_block>);
 Recipes.setRecipeStage("wither_slayer", <item:soa_additions:evil_metal_ingot>);
 Recipes.setRecipeStage("wither_slayer", <item:soa_additions:stellar_alloy_ingot>);
 
-// --- wyvern (4) ---
 Recipes.setRecipeStage("wyvern", <item:avaritia:neutron>);
 Recipes.setRecipeStage("wyvern", <item:avaritia:neutron_ingot>);
 Recipes.setRecipeStage("wyvern", <item:avaritia:neutron_nugget>);
 Recipes.setRecipeStage("wyvern", <item:avaritia:neutron_pile>);
 
-// --- abyssal_conquerer (3) ---
 Recipes.setRecipeStage("abyssal_conquerer", <item:forbidden_arcanus:dark_nether_star>);
 Recipes.setRecipeStage("abyssal_conquerer", <item:minecraft:nether_star>);
 Recipes.setRecipeStage("abyssal_conquerer", <item:minecraft:wither_skeleton_skull>);
 
-// --- ender_charm (3) ---
 Recipes.setRecipeStage("ender_charm", <item:minecraft:chorus_fruit>);
 Recipes.setRecipeStage("ender_charm", <item:prefab:item_ender_gateway>);
 Recipes.setRecipeStage("ender_charm", <item:rehooked:ender_hook>);
 
-// --- fearless_man (3) ---
 Recipes.setRecipeStage("fearless_man", <item:soa_additions:dreadium_ingot>);
 Recipes.setRecipeStage("fearless_man", <item:valoria:rune_of_curses>);
 Recipes.setRecipeStage("fearless_man", <item:valoria:void_core>);
 
-// --- graduated (3) ---
 Recipes.setRecipeStage("graduated", <item:mysticalagradditions:creative_essence>);
 Recipes.setRecipeStage("graduated", <item:storagedrawers:creative_storage_upgrade>);
 Recipes.setRecipeStage("graduated", <item:thermal:watering_can>);
 
-// --- challenger_c (2) ---
 Recipes.setRecipeStage("challenger_c", <item:mysticalagriculture:tertium_essence>);
 Recipes.setRecipeStage("challenger_c", <item:mysticalagriculture:tertium_ingot>);
 
-// --- challenger_d (2) ---
 Recipes.setRecipeStage("challenger_d", <item:mysticalagriculture:imperium_essence>);
 Recipes.setRecipeStage("challenger_d", <item:mysticalagriculture:imperium_ingot>);
 
-// --- awakened (1) ---
 Recipes.setRecipeStage("awakened", <item:minecraft:bedrock>);
 
-// --- challenger_a (1) ---
 Recipes.setRecipeStage("challenger_a", <item:mysticalagriculture:inferium_essence>);
 
-// --- challenger_b (1) ---
 Recipes.setRecipeStage("challenger_b", <item:mysticalagriculture:prudentium_essence>);
 
-// --- challenger_e (1) ---
 Recipes.setRecipeStage("challenger_e", <item:mysticalagriculture:supremium_essence>);
 
-// --- challenger_f (1) ---
 Recipes.setRecipeStage("challenger_f", <item:mysticalagradditions:insanium_essence>);
 
-// --- chaotic_dominator (1) ---
 Recipes.setRecipeStage("chaotic_dominator", <item:soa_additions:death_coin>);
 
-// --- fusion_matrix (1) ---
 Recipes.setRecipeStage("fusion_matrix", <item:mysticalagradditions:awakened_draconium_crux>);
 
-// --- skilled_wizard (1) ---
 Recipes.setRecipeStage("skilled_wizard", <item:malum:cluster_of_brilliance>);
 
-// --- wielder_of_infinity (1) ---
 Recipes.setRecipeStage("wielder_of_infinity", <item:avaritia:infinity>);

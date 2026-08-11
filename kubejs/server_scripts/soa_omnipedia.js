@@ -1,36 +1,13 @@
-// ============================================================
-// SoA Omnipedia — port of GreedyCraft scripts/global/omnipedia.zs
-//
-// GC pre-built a single Akashic Tome ("The Omnipedia") bundling every
-// documentation book in the pack via the tome's NBT ("akashictome:data",
-// one entry per book, keyed by a unique slug matching each book's
-// "akashictome:definedMod" tag). Same contract in AkashicTome-1.7 (1.20.1);
-// the only format change is that Damage shorts are gone.
-//
-// This rebuilds that 1:1 with the 1.20.1 pack's books (soa_exports/books.json
-// + Patchouli books found in mod jars). Guide/doc books only — no gameplay
-// tomes (sculkhorde tomes, quark ancient tome, projecte tome, caster tomes),
-// no bookshelves, no unused generic modonomicon items.
-//
-// Patchouli-only guides (no dedicated item) use patchouli:guide_book with
-// the "patchouli:book" tag, GC-style. akashictome-common.toml has
-// "Allow all items to be added" = true, so players can still merge more.
-//
-// Triggered once per player via 'omnipedia_given' GameStage flag.
-// ============================================================
-
 console.info('[soa_scripts] soa_omnipedia.js loading')
 
-// key = akashictome:data slug + definedMod (must match for clean removal);
-// id = the book item; book = Patchouli book id when id is patchouli:guide_book
 const OMNIPEDIA_BOOKS = [
-    // pack's own docs
+
     { key: 'quests', id: 'soa_additions:quest_book' },
     { key: 'greedycraft', id: 'patchouli:guide_book', book: 'soa_additions:greedycraft_guide_book' },
     { key: 'elysia', id: 'patchouli:guide_book', book: 'soa_additions:the_elysia_project' },
     { key: 'nyx', id: 'patchouli:guide_book', book: 'soa_additions:nyx_guide' },
     { key: 'taiga', id: 'patchouli:guide_book', book: 'soa_additions:taiga_guide' },
-    // dedicated guide-book items
+
     { key: 'ae2', id: 'ae2:guide' },
     { key: 'aether', id: 'aether:book_of_lore' },
     { key: 'ars_nouveau', id: 'ars_nouveau:worn_notebook' },
@@ -44,7 +21,7 @@ const OMNIPEDIA_BOOKS = [
     { key: 'cookingforblockheads', id: 'cookingforblockheads:recipe_book' },
     { key: 'cookingforblockheads1', id: 'cookingforblockheads:crafting_book' },
     { key: 'cookingforblockheads2', id: 'cookingforblockheads:no_filter_edition' },
-    // Patchouli-only guides
+
     { key: 'bloodmagic', id: 'patchouli:guide_book', book: 'bloodmagic:guide' },
     { key: 'buildinggadgets2', id: 'patchouli:guide_book', book: 'buildinggadgets2:buildinggadgets2book' },
     { key: 'bigreactors', id: 'patchouli:guide_book', book: 'bigreactors:erguide' },
@@ -59,6 +36,8 @@ const OMNIPEDIA_BOOKS = [
     { key: 'smithery', id: 'patchouli:guide_book', book: 'smithery:smithery_book' },
     { key: 'treasure2', id: 'patchouli:guide_book', book: 'treasure2:treasure2_manual' },
     { key: 'twilightdelight', id: 'patchouli:guide_book', book: 'twilightdelight:twilight_guide' },
+
+    { key: 'forbidden_arcanus', id: 'patchouli:guide_book', book: 'soa_additions:forbidden_arcanus_guide' },
 ]
 
 function omnipediaEntrySnbt(b) {

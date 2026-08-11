@@ -1,5 +1,4 @@
 {
-  "_comment": "Liquid Converter controller. Corner/center materials mirror the dominant blocks of the GC Modular Machinery structure (config/modularmachinery/machinery/liquid_converter.json) so the build cost tracks GC; modularium BLOCKS are the controller identity.",
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {

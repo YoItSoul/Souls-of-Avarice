@@ -1,5 +1,4 @@
 {
-  "_comment": "TAR infusion 1:1 (mithminite_ingot): central adaminite ingot + 2x mithrillium ingot + 2x quicksilver (cinnabar). Bulk route: Smithery alloy mithminite.json.",
   "additional_requirements": {
     "forge_tier": 5
   },

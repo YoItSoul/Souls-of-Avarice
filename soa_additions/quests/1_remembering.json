@@ -1,3380 +1,3841 @@
 {
-  "id": "1_remembering",
-  "title": "Main Questline",
-  "icon": "minecraft:book",
-  "sort_order": 50,
-  "description": [],
-  "modes": [
+ "id": "1_remembering",
+ "title": "Main Questline",
+ "icon": "minecraft:book",
+ "sort_order": 50,
+ "description": [],
+ "modes": [
+  "casual",
+  "adventure",
+  "expert"
+ ],
+ "requires_chapter": [],
+ "requires_quests": [
+  "quest_mnsa7vbh"
+ ],
+ "visibility": "hidden_until_deps",
+ "parent_chapter": "chapter_mnvzp16p",
+ "quests": [
+  {
+   "id": "3971243b011b5434",
+   "title": "Thanks for playing Souls of Avarice modpack by YoItSoul",
+   "icon": "botania:gaia_head",
+   "shape": "square",
+   "x": 0,
+   "y": 32,
+   "description": [
+    "Begin the new journey."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:dimension",
+     "dimension": "minecraft:overworld"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 100
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "farmersdelight:hamburger",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "farmersdelight:glow_berry_custard",
+     "count": 8
+    }
+   ],
+   "modes": [
     "casual",
     "adventure",
     "expert"
-  ],
-  "requires_chapter": [],
-  "requires_quests": [
-    "quest_mnsa7vbh"
-  ],
-  "visibility": "hidden_until_deps",
-  "parent_chapter": "chapter_mnvzp16p",
-  "quests": [
-    {
-      "id": "3971243b011b5434",
-      "title": "Thanks for playing Souls of Avarice modpack by YoItSoul",
-      "icon": "botania:gaia_head",
-      "shape": "square",
-      "x": 0,
-      "y": 32,
-      "description": [
-        "Begin the new journey."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:dimension",
-          "dimension": "minecraft:overworld"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 100
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "createfood:berry_ice_cream_bowl",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "createfood:potato_chip_bowl",
-          "count": 8
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "46db3dfeaa372b67",
-      "title": "Break some gravel",
-      "icon": "minecraft:gravel",
-      "x": 0,
-      "y": 64,
-      "description": [
-        "Gravel is key to getting your first tools!",
-        "Break some,, and hope to get some raw flint!"
-      ],
-      "dependencies": [
-        "3971243b011b5434"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:mine",
-          "block": "minecraft:gravel",
-          "count": 10
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 25
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "4e17ea1d3d16e69a",
-      "title": "Raw Flint",
-      "icon": "tough_beginnings:raw_flint",
-      "x": 32,
-      "y": 64,
-      "description": [
-        "Great! You've gotten som raw flint, now bash it against a rock and see what happens!",
-        "",
-        "Note: This process isn't garunteed to work!"
-      ],
-      "dependencies": [
-        "46db3dfeaa372b67"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:raw_flint",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 25
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "6e9f7bc3f279459e",
-      "title": "Flint",
-      "icon": "minecraft:flint",
-      "x": 32,
-      "y": 96,
-      "description": [
-        "Ooooh.... pointy...."
-      ],
-      "dependencies": [
-        "4e17ea1d3d16e69a"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:flint",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 25
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "6b0801783efff058",
-      "title": "The Primitive Way",
-      "icon": "tough_beginnings:flintknife",
-      "shape": "square",
-      "x": 32,
-      "y": 128,
-      "description": [
-        "Some say it's a prmitive start... some say it's a tough beginning!!"
-      ],
-      "dependencies": [
-        "6e9f7bc3f279459e"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:flintknife",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 15
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "298f1fee4cdc4bf0",
-      "title": "Plant Fiber",
-      "icon": "tough_beginnings:plantfiber",
-      "shape": "square",
-      "x": 64,
-      "y": 128,
-      "description": [
-        "Using your new fancy knife, you should try cutting some grass to get plant fibers!"
-      ],
-      "dependencies": [
-        "6b0801783efff058"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:plantfiber",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 15
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "3d125a4905f017f5",
-      "title": "Lay the First Block",
-      "icon": "minecraft:campfire",
-      "shape": "square",
-      "x": 112,
-      "y": 128,
-      "description": [],
-      "dependencies": [
-        "298f1fee4cdc4bf0",
-        "11297238b0af7c2c"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:place",
-          "block": "minecraft:campfire",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 25
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "42e7831424aa17f8",
-      "title": "Fiber Rope",
-      "icon": "tough_beginnings:fiber_rope",
-      "shape": "square",
-      "x": 64,
-      "y": 160,
-      "description": [],
-      "dependencies": [
-        "298f1fee4cdc4bf0"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:fiber_rope",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "75a82dae0237fc4d",
-      "title": "Flint Axe",
-      "icon": "tough_beginnings:flint_axe",
-      "shape": "square",
-      "x": 64,
-      "y": 192,
-      "description": [],
-      "dependencies": [
-        "42e7831424aa17f8"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:flint_axe",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "11297238b0af7c2c",
-      "title": "Make a Mark",
-      "icon": "minecraft:oak_log",
-      "auto_claim": true,
-      "shape": "rhombus",
-      "x": 112,
-      "y": 192,
-      "description": [],
-      "dependencies": [
-        "75a82dae0237fc4d"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "tag": "minecraft:logs",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "getting_started",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "3a2bc9371f5cfba3",
-      "title": "So close....",
-      "icon": "tough_beginnings:block_of_wood",
-      "x": 144,
-      "y": 192,
-      "description": [],
-      "dependencies": [
-        "11297238b0af7c2c"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:block_of_wood",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 75
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "525e33f1e64dac70",
-      "title": "Finally!",
-      "icon": "tough_beginnings:tough_block_of_wood",
-      "x": 144,
-      "y": 128,
-      "description": [
-        "A tough block of wood allows you to make your standard wooden tools! That wasn't so hard was it..."
-      ],
-      "dependencies": [
-        "3d125a4905f017f5",
-        "3a2bc9371f5cfba3"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tough_beginnings:tough_block_of_wood",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:dark_oak_log",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:apple",
-          "count": 5
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:paper",
-          "count": 1,
-          "nbt": "{display:{Lore:[\"{\\\"text\\\":\\\"It reads:\\\"}\",\"{\\\"text\\\":\\\"I've been waiting for you for ages, claim your quest rewards by pressing E and clicking 'Quests' at the top center RIGHT NOW!!\\\"}\"],Name:\"{\\\"text\\\":\\\"A Sticky Note\\\"}\"}}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:greedy_bag",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "15458b9f7d2fedc4",
-      "title": "Stone Age",
-      "icon": "minecraft:stone_pickaxe",
-      "shape": "square",
-      "x": 208,
-      "y": 128,
-      "description": [],
-      "dependencies": [
-        "quest_mnv6n0g9"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:stone_pickaxe",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:cobblestone",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 35
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:furnace",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:stone_pickaxe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:torch",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:death_counter",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "4fdbe30b5806f74e",
-      "title": "Familiar Metal",
-      "icon": "minecraft:raw_iron",
-      "x": 240,
-      "y": 128,
-      "description": [],
-      "dependencies": [
-        "15458b9f7d2fedc4"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:raw_iron",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 100
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:iron_pickaxe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:baked_potato",
-          "count": 10
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:leather_helmet",
-          "count": 1,
-          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Hat\",\"color\":\"light_purple\"}'}}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:leather_chestplate",
-          "count": 1,
-          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Shirt\",\"color\":\"light_purple\"}'}}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:leather_leggings",
-          "count": 1,
-          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Pants\",\"color\":\"light_purple\"}'}}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:leather_boots",
-          "count": 1,
-          "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Shoes\",\"color\":\"light_purple\"}'}}"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "66daa004d5611f9b",
-      "title": "Ohhh Shiny",
-      "icon": "minecraft:diamond",
-      "x": 272,
-      "y": 128,
-      "description": [],
-      "dependencies": [
-        "4fdbe30b5806f74e"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:diamond",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 250
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:bread",
-          "count": 10
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "dankstorage:dank_3",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:medkit_small",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "prefab:item_house",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "7ab25d73db854279",
-      "title": "Rock Bottom",
-      "icon": "minecraft:bedrock",
-      "x": 240,
-      "y": 176,
-      "description": [],
-      "dependencies": [
-        "4fdbe30b5806f74e"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:observe",
-          "target": "minecraft:bedrock"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:flint_and_steel",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 150
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:iron_pickaxe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:potion",
-          "count": 1,
-          "nbt": "{Potion:\"cyclic:strong_haste\"}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:potion",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "7753b201fe565b8a",
-      "title": "Gold Rush",
-      "icon": "minecraft:raw_gold",
-      "x": 208,
-      "y": 176,
-      "description": [],
-      "dependencies": [
-        "4fdbe30b5806f74e"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:raw_gold",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:golden_apple",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:gold_ore",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 150
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:clock",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "7b55c19fc0816ac9",
-      "title": "Hard to Mine",
-      "icon": "minecraft:obsidian",
-      "x": 304,
-      "y": 128,
-      "description": [],
-      "dependencies": [
-        "66daa004d5611f9b"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:obsidian",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:diamond",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 400
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:obsidian",
-          "count": 18
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:flint_and_steel",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "294fca0347c456aa",
-      "title": "Rookie Artisan",
-      "icon": "smithery:part_press",
-      "shape": "rhombus",
-      "x": 144,
-      "y": 80,
-      "description": [],
-      "dependencies": [
-        "525e33f1e64dac70"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:part_press",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "novice_tinker",
-          "scope": "player"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:furnace_brick",
-          "count": 16
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "200eb992d93375ac",
-      "title": "Materials and You",
-      "icon": "patchouli:guide_book",
-      "x": 176,
-      "y": 80,
-      "description": [],
-      "dependencies": [
-        "294fca0347c456aa"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "patchouli:guide_book",
-          "count": 1,
-          "nbt": "{\"patchouli:book\":\"smithery:smithery_book\"}"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "1d30b4b2ab17d735",
-      "title": "Seared Heat",
-      "icon": "smithery:forge_controller",
-      "shape": "square",
-      "x": 208,
-      "y": 80,
-      "description": [
-        "Build out the Forge: an item port to feed it, and a casting table",
-        "plus casting sand to shape what comes back out."
-      ],
-      "dependencies": [
-        "200eb992d93375ac"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:forge_item_port",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_table",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_sand",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:gold_ore",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 150
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reinforced_ingot",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:red_slime",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_sand",
-          "count": 10
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "0a06f9ed8ae8946e",
-      "title": "The smeltery... my love!",
-      "icon": "smithery:forge_controller",
-      "shape": "square",
-      "x": 240,
-      "y": 80,
-      "description": [
-        "Drain the Forge and pipe the melt where you want it."
-      ],
-      "dependencies": [
-        "1d30b4b2ab17d735"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:forge_drain",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:fluid_pipe",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 100
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reinforced_ingot",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:furnace_brick",
-          "count": 64
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "20e815609d2b6e90",
-      "title": "A Different Anvil?",
-      "icon": "minecraft:anvil",
-      "x": 304,
-      "y": 80,
-      "description": [
-        "Smithery modifiers go on at an anvil, and parts get cut at a Part Press."
-      ],
-      "dependencies": [
-        "7b55c19fc0816ac9",
-        "4dab3e16b1dd5bc8"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:anvil",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:part_press",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 300
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "4dab3e16b1dd5bc8",
-      "title": "Lots Of Liquids!",
-      "icon": "smithery:forge_controller",
-      "shape": "square",
-      "x": 272,
-      "y": 80,
-      "description": [],
-      "dependencies": [
-        "0a06f9ed8ae8946e"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:forge_controller",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:furnace_brick",
-          "count": 256
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "05213e20d694f6f7",
-      "title": "Create..ive?",
-      "icon": "create:andesite_alloy_block",
-      "x": 272,
-      "y": 32,
-      "description": [
-        "Congrats! Youu've founnd a compound that allows you to make cheap, high strength compounds using your new furnace!"
-      ],
-      "dependencies": [
-        "4dab3e16b1dd5bc8"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "create:andesite_alloy_block",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 200
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv6n0g9",
-      "title": "A step forward",
-      "icon": "minecraft:wooden_axe",
-      "shape": "square",
-      "x": 176,
-      "y": 128,
-      "description": [
-        "While you can choose to make any number of the wooden tools, I would recommend the axe... so you can chop more wood!",
-        "",
-        "Then... maybe the pickaxe!"
-      ],
-      "dependencies": [
-        "525e33f1e64dac70"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:wooden_axe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:wooden_pickaxe",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_common",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:casting_sand",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:iron_block",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:excavator",
-          "count": 1,
-          "nbt": "{\"smithery:tool_composition\":{tool_type:\"smithery:excavator\",slot_materials:[\"smithery:iron\",\"smithery:iron\",\"smithery:wood\",\"smithery:wood\",\"smithery:wood\"]},\"smithery:max_durability\":440}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:obsidian_large_plate",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "smithery:furnace_brick",
-          "count": 64
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv6xxhh",
-      "title": "Philosopher's Stone",
-      "icon": "projecte:philosophers_stone",
-      "x": 272,
-      "y": 176,
-      "description": [],
-      "dependencies": [
-        "66daa004d5611f9b"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "projecte:philosophers_stone",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 400
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:glowstone_dust",
-          "count": 64
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv6z1g9",
-      "title": "E=mc^2",
-      "icon": "soa_additions:energy_matter_core",
-      "auto_claim": true,
-      "shape": "rhombus",
-      "x": 272,
-      "y": 208,
-      "description": [],
-      "dependencies": [
-        "quest_mnv6xxhh"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:energy_matter_core",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 3000
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "energy_matter_core",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv700ft",
-      "title": "Matter Conversion",
-      "icon": "projecte:transmutation_table",
-      "shape": "rhombus",
-      "x": 272,
-      "y": 240,
-      "description": [],
-      "dependencies": [
-        "quest_mnv6z1g9"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "projecte:transmutation_table",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 50000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "projecte:red_matter",
-          "count": 20
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:extreme_crafting_table",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "transmutation_table",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv711eq",
-      "title": "Anywhere, Anytime",
-      "icon": "projecte:transmutation_tablet",
-      "x": 304,
-      "y": 240,
-      "description": [],
-      "dependencies": [
-        "quest_mnv700ft"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "projecte:transmutation_tablet",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 80000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "projecte:dark_matter",
-          "count": 2
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv71wig",
-      "title": "Dragon Force",
-      "icon": "draconicevolution:draconium_dust",
-      "shape": "square",
-      "x": 304,
-      "y": 176,
-      "description": [],
-      "dependencies": [
-        "66daa004d5611f9b"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_dust",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:diamond",
-          "count": 6
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:diamond_pickaxe",
-          "count": 1,
-          "nbt": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:5s},{id:\"minecraft:unbreaking\",lvl:3s}]}"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "inventorypets:pet_meta",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv7329n",
-      "title": "Dragon Core",
-      "icon": "draconicevolution:draconium_core",
-      "shape": "square",
-      "x": 352,
-      "y": 176,
-      "description": [
-        "Obtain an Awakened Core"
-      ],
-      "dependencies": [
-        "quest_mnv71wig"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_core",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_core",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:redstone_block",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "waystones:warp_stone",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1200
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnv73qbr",
-      "title": "Ultimate Energy Storage",
-      "icon": "draconicevolution:energy_core",
-      "x": 352,
-      "y": 240,
-      "description": [
-        "Craft an Energy Core which can store a ridiculous amount of energy"
-      ],
-      "dependencies": [
-        "quest_mnv7329n"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:energy_core",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:wyvern_capacitor",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 2000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:energy_core_stabilizer",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mnvyhsib",
-      "title": "Welcome to Hell",
-      "icon": "minecraft:netherrack",
-      "shape": "rhombus",
-      "x": 352,
-      "y": 128,
-      "description": [
-        "Visit the Nether"
-      ],
-      "dependencies": [
-        "7b55c19fc0816ac9",
-        "quest_twilight_shield"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:dimension",
-          "dimension": "minecraft:the_nether"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:obsidian",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 800
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "inventorypets:nugget_ender",
-          "count": 9,
-          "scope": "team"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "inventorypets:pet_house",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "nether",
-          "scope": "player"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "waystones:return_scroll",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:sugar_cane",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "waystones:warp_stone",
-          "count": 16
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_hot_stuff",
-      "title": "Hot Stuff",
-      "icon": "minecraft:blaze_rod",
-      "x": 448,
-      "y": 80,
-      "description": [
-        "Obtain a Blaze Rod"
-      ],
-      "dependencies": [
-        "quest_mnvyhsib"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:blaze_rod",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:bookshelf",
-          "count": 15
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1200
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "twilightdelight:grilled_ghast",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "tinymobfarm:lasso",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:enderman_spawn_egg",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_enhanced_alloy",
-      "title": "Enhanced Alloy",
-      "icon": "soa_additions:manyullyn_ingot",
-      "x": 400,
-      "y": 80,
-      "description": [
-        "Obtain a Manyullyn Ingot"
-      ],
-      "dependencies": [
-        "quest_mnvyhsib"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "valoria:cobalt_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "valoria:cobalt_ingot",
-          "count": 10
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1200
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_get_beheaded",
-      "title": "Get Beheaded",
-      "icon": "minecraft:wither_skeleton_skull",
-      "x": 496,
-      "y": 80,
-      "description": [
-        "Obtain a Wither Skeleton Skull"
-      ],
-      "dependencies": [
-        "quest_hot_stuff",
-        "quest_glimpse_abyss"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:wither_skeleton_skull",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:wither_skeleton_skull",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_rough_battle",
-      "title": "Rough Battle",
-      "icon": "minecraft:nether_star",
-      "shape": "rhombus",
-      "x": 528,
-      "y": 80,
-      "description": [
-        "Kill the Wither"
-      ],
-      "dependencies": [
-        "quest_get_beheaded"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "minecraft:wither",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:nether_star",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "mysticalagriculture:wither_skeleton_seeds",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:nether_star",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 7500
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "wither_slayer",
-          "scope": "player"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:greedy_bag",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/tellraw @p {\"text\":\"§4§oThe withered soul of the Wither is about to bring death and evil to your world.\"}"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_it_ended",
-      "title": "It ended? ... Not even close.",
-      "icon": "minecraft:end_portal_frame",
-      "x": 448,
-      "y": 128,
-      "description": [
-        "Enter The End"
-      ],
-      "dependencies": [
-        "quest_hot_stuff",
-        "quest_ender_charm"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:dimension",
-          "dimension": "minecraft:the_end"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 2000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:ender_eye",
-          "count": 16
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_dragon_slayer",
-      "title": "Dragon Slayer",
-      "icon": "minecraft:dragon_head",
-      "shape": "rhombus",
-      "x": 496,
-      "y": 128,
-      "description": [
-        "Slay the Ender Dragon"
-      ],
-      "dependencies": [
-        "quest_rough_battle",
-        "quest_it_ended"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:kill",
-          "entity": "minecraft:ender_dragon",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:dragon_egg",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:dragon_breath",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_ingot",
-          "count": 64
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 10000
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "hardmode",
-          "scope": "player"
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:greedy_bag",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/tellraw @p {\"text\":\"§5§oThe evil spirit within the ancient dragon has been unleashed.\"}"
-        },
-        {
-          "type": "soa_additions:command",
-          "command": "/tellraw @p {\"text\":\"§2§oYour world has been blessed with new ores!\"}"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_coalescence_matrix",
-      "title": "Coalescence Matrix",
-      "icon": "tconevo:coalescence_matrix",
-      "shape": "rhombus",
-      "x": 528,
-      "y": 128,
-      "description": [],
-      "dependencies": [
-        "quest_dragon_slayer"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tconevo:coalescence_matrix",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 12500
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "fusion_matrix",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_overpriced",
-      "title": "Overpriced",
-      "icon": "avaritia:crystal_matrix_ingot",
-      "x": 576,
-      "y": 80,
-      "description": [
-        "Obtain a Crystal Matrix Ingot"
-      ],
-      "dependencies": [
-        "quest_rough_battle"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:crystal_matrix_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:crystal_matrix_ingot",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 8000
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_ultimate_crafting",
-      "title": "Ultimate Crafting Table",
-      "icon": "avaritia:extreme_crafting_table",
-      "x": 608,
-      "y": 80,
-      "description": [
-        "Craft an Extreme Crafting Table"
-      ],
-      "dependencies": [
-        "quest_overpriced"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:extreme_crafting_table",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:crystal_matrix_ingot",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 10000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_patience",
-      "title": "Patience.",
-      "icon": "avaritia:neutron_collector",
-      "x": 640,
-      "y": 80,
-      "description": [
-        "Obtain a Neutron Collector"
-      ],
-      "dependencies": [
-        "quest_ultimate_crafting"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_collector",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_ingot",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 40000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_dense_metal",
-      "title": "Dense Metal",
-      "icon": "avaritia:neutron_ingot",
-      "shape": "circle",
-      "x": 640,
-      "y": 32,
-      "description": [
-        "Obtain a Neutronium Ingot"
-      ],
-      "dependencies": [
-        "quest_patience"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_collector",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_ingot",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 25000
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_event_horizon",
-      "title": "Event Horizon",
-      "icon": "avaritia:neutron_collector",
-      "x": 672,
-      "y": 80,
-      "description": [
-        "Obtain a Neutronium Compressor"
-      ],
-      "dependencies": [
-        "quest_patience"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_compressor",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 125000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_ingot",
-          "count": 5
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_core_black_hole",
-      "title": "Core of Black Hole",
-      "icon": "avaritia:eternal_singularity",
-      "shape": "circle",
-      "x": 672,
-      "y": 32,
-      "description": [
-        "Obtain an Eternal Singularity"
-      ],
-      "dependencies": [
-        "quest_event_horizon"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:eternal_singularity",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:eternal_singularity",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 99999
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_power_infinity",
-      "title": "Power of Infinity",
-      "icon": "avaritia:infinity_catalyst",
-      "shape": "rhombus",
-      "x": 704,
-      "y": 80,
-      "description": [
-        "Obtain an Infinity Catalyst"
-      ],
-      "dependencies": [
-        "quest_event_horizon"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_catalyst",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_catalyst",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 160000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_compressor",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:neutron_collector",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "wielder_of_infinity",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_good_game",
-      "title": "Good Game",
-      "icon": "avaritia:infinity_ingot",
-      "x": 736,
-      "y": 80,
-      "description": [
-        "Obtain an Infinity Ingot"
-      ],
-      "dependencies": [
-        "quest_power_infinity"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 1919810
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_pickaxe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_axe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_hoe",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_shovel",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "avaritia:infinity_ingot",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "projecte:collector_mk3",
-          "count": 2
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_fusion_crafting",
-      "title": "Fusion Crafting",
-      "icon": "draconicevolution:crafting_core",
-      "shape": "square",
-      "x": 400,
-      "y": 176,
-      "description": [
-        "Craft a Fusion Crafting Core and a Basic Crafting Injector"
-      ],
-      "dependencies": [
-        "quest_mnv7329n"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:crafting_core",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:basic_crafting_injector",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 4500
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_core",
-          "count": 5
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_dust",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_wyvern_core",
-      "title": "Wyvern Core",
-      "icon": "draconicevolution:wyvern_core",
-      "shape": "rhombus",
-      "x": 400,
-      "y": 240,
-      "description": [
-        "Obtain a Wyvern Core"
-      ],
-      "dependencies": [
-        "quest_fusion_crafting"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:wyvern_core",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 3600
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:wyvern_core",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "wyvern",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_acquire_upgrade",
-      "title": "Acquire Upgrade",
-      "icon": "draconicevolution:wyvern_crafting_injector",
-      "shape": "square",
-      "x": 448,
-      "y": 176,
-      "description": [
-        "Upgrade your Fusion Injector"
-      ],
-      "dependencies": [
-        "quest_fusion_crafting",
-        "quest_rough_battle"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:wyvern_crafting_injector",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:wyvern_crafting_injector",
-          "count": 4,
-          "scope": "team"
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 3000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:gold_ingot",
-          "count": 256
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_awakened_fusion",
-      "title": "Draconic Fusion",
-      "icon": "draconicevolution:awakened_draconium_block",
-      "shape": "square",
-      "x": 496,
-      "y": 176,
-      "description": [
-        "Obtain a Block of Awakened Draconium via Fusion Crafting"
-      ],
-      "dependencies": [
-        "quest_dragon_slayer",
-        "quest_acquire_upgrade"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_draconium_block",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_block",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 5250
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:end_crystal",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:dragon_heart",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_fusion_awakened",
-      "title": "Fusion Awakened",
-      "icon": "draconicevolution:awakened_crafting_injector",
-      "shape": "square",
-      "x": 496,
-      "y": 240,
-      "description": [
-        "Upgrade your Fusion Injector to Awakened tier"
-      ],
-      "dependencies": [
-        "quest_awakened_fusion"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_crafting_injector",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_crafting_injector",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:dragon_heart",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_draconium_block",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 10000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_awakened_core",
-      "title": "Awakened Core",
-      "icon": "draconicevolution:awakened_core",
-      "shape": "square",
-      "x": 528,
-      "y": 176,
-      "description": [
-        "Craft an Awakened Core"
-      ],
-      "dependencies": [
-        "quest_rough_battle",
-        "quest_awakened_fusion"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_draconium_block",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_draconium_block",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 5250
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:dragon_heart",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:end_crystal",
-          "count": 8
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_land_of_chaos",
-      "title": "Land of Chaos",
-      "icon": "draconicevolution:chaos_shard",
-      "shape": "rhombus",
-      "x": 560,
-      "y": 176,
-      "description": [
-        "Kill the Chaos Guardian and obtain a Chaos Shard"
-      ],
-      "dependencies": [
-        "quest_awakened_core"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaos_shard",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 150000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaos_shard",
-          "count": 7
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_core",
-          "count": 4
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:nether_star",
-          "count": 64
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "chaotic_dominator",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_chaotic_force",
-      "title": "Chaotic Force",
-      "icon": "draconicevolution:chaotic_core",
-      "shape": "rhombus",
-      "x": 560,
-      "y": 240,
-      "description": [
-        "Obtain a Chaotic Core"
-      ],
-      "dependencies": [
-        "quest_fusion_awakened",
-        "quest_land_of_chaos"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaotic_core",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 114514
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaotic_core",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:creative_shard",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "chaotic",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_chaotic_fusion",
-      "title": "Chaotic Fusion",
-      "icon": "draconicevolution:chaotic_crafting_injector",
-      "shape": "square",
-      "x": 592,
-      "y": 240,
-      "description": [
-        "Upgrade your Fusion Injector to Chaotic tier"
-      ],
-      "dependencies": [
-        "quest_land_of_chaos",
-        "quest_chaotic_force"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaotic_crafting_injector",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 300000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaotic_crafting_injector",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_reactor",
-      "title": "Don't make it go kaboom",
-      "icon": "draconicevolution:reactor_core",
-      "shape": "square",
-      "x": 592,
-      "y": 176,
-      "description": [
-        "Build a Draconic Reactor"
-      ],
-      "dependencies": [
-        "quest_land_of_chaos",
-        "quest_chaotic_fusion"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:reactor_core",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:reactor_stabilizer",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 1000000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconic_capacitor",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_wyvern_force",
-      "title": "Wyvern Force",
-      "icon": "tconevo:wyvern_ingot",
-      "x": 448,
-      "y": 240,
-      "description": [],
-      "dependencies": [
-        "quest_acquire_upgrade",
-        "quest_wyvern_core"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tconevo:wyvern_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:wyvern_core",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 4000
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_i_am_superior",
-      "title": "I am Superior",
-      "icon": "tconevo:chaotic_ingot",
-      "x": 448,
-      "y": 288,
-      "description": [],
-      "dependencies": [
-        "quest_fusion_awakened"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tconevo:draconic_metal_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_core",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 10000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_epic",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_force_awakens",
-      "title": "The Force Awakens",
-      "icon": "draconicevolution:draconic_staff",
-      "shape": "rhombus",
-      "x": 496,
-      "y": 288,
-      "description": [],
-      "dependencies": [
-        "quest_i_am_superior"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconic_staff",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 400000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "tconevo:draconic_metal_ingot",
-          "count": 10
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "staff_wielder",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_game_guide",
-      "title": "Game Guide",
-      "icon": "patchouli:guide_book",
-      "optional": true,
-      "x": 64,
-      "y": 32,
-      "description": [
-        "Open the modpack guide book in your inventory and read it carefully"
-      ],
-      "dependencies": [
-        "3971243b011b5434"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "patchouli:guide_book",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 25
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_glimpse_abyss",
-      "title": "A Glimpse of the Abyss",
-      "icon": "deeperdarker:heart_of_the_deep",
-      "x": 496,
-      "y": 32,
-      "description": [
-        "To summon the Wither, you must first descend beneath the Ancient Cities, put down the Warden, and cut the Heart of the Deep out of it.",
-        "",
-        "Only then will Nether Stars and Wither Skeleton Skulls answer to you."
-      ],
-      "dependencies": [
-        "quest_the_fearless"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "deeperdarker:heart_of_the_deep",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 1000
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "abyssal_conquerer"
-        }
-      ],
-      "modes": [
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_the_fearless",
-      "title": "The Fearless",
-      "icon": "soa_additions:bravery_certificate",
-      "x": 448,
-      "y": 32,
-      "description": [
-        "Only the brave ones who defeated the Valkyrie Queen in the Aether and crafted a Bravery Certificate are ready for what sleeps in the deep dark.",
-        "",
-        "Steel yourself. The Warden is next."
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:bravery_certificate",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 1000
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "fearless_man"
-        }
-      ],
-      "modes": [
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_twilight_shield",
-      "title": "Twilight Shield",
-      "icon": "soa_additions:twilight_shield",
-      "x": 352,
-      "y": 80,
-      "description": [
-        "Use the Twilight Shield before you can go to the Nether safely"
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:twilight_shield",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 500
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_rare",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "twilight_shield"
-        }
-      ],
-      "modes": [
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_ender_charm",
-      "title": "Ender Charm",
-      "icon": "soa_additions:ender_charm",
-      "shape": "circle",
-      "x": 400,
-      "y": 128,
-      "description": [
-        "You can't go to The End before using an Ender Charm"
-      ],
-      "dependencies": [],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:ender_charm",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 1500
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "ender_charm"
-        }
-      ],
-      "modes": [
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo3jn76h",
-      "title": "Stage recovery",
-      "icon": "soa_additions:guide_book",
-      "visibility": "hidden_until_deps",
-      "optional": true,
-      "x": 112,
-      "y": 224,
-      "repeatable": true,
-      "description": [
-        "Gamestages is a bit weird sometimes! Let's recover that stage for you."
-      ],
-      "dependencies": [
-        "11297238b0af7c2c"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:checkmark",
-          "text": "Acknowledge"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "getting_started",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_mo3l73h3",
-      "title": "Stage recovery",
-      "icon": "soa_additions:guide_book",
-      "visibility": "hidden_until_deps",
-      "optional": true,
-      "x": 112,
-      "y": 80,
-      "repeatable": true,
-      "description": [
-        "Gamestages is a bit weird sometimes! Let's recover that stage for you."
-      ],
-      "dependencies": [
-        "294fca0347c456aa"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:checkmark",
-          "text": "Acknowledge"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "novice_tinker",
-          "scope": "player"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_moj30p7i",
-      "title": "Thin Air",
-      "icon": "thinair:respirator",
-      "visibility": "hidden_until_deps",
-      "show_deps": false,
-      "shape": "square",
-      "x": 0,
-      "y": 224,
-      "description": [
-        "It's really hard to breathe in places like underwater or in caves! Prepare a respirator so you don't die!"
-      ],
-      "dependencies": [
-        "3971243b011b5434"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:advancement",
-          "advancement": "thinair:protection_from_red"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "thinair:respirator",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:pufferfish_bucket",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_moj33wqe",
-      "title": "Headshots!",
-      "icon": "minecraft:player_head",
-      "visibility": "hidden_until_deps",
-      "show_deps": false,
-      "x": 0,
-      "y": 256,
-      "description": [
-        "Hey! How did I die so fast? Well, you probably were shot in the head. try a helmet next time..."
-      ],
-      "dependencies": [
-        "3971243b011b5434"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:stat",
-          "stat_type": "minecraft:custom",
-          "stat_value": "minecraft:deaths",
-          "threshold": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:iron_helmet",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:xp",
-          "amount": 50
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:shield",
-          "count": 1
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_chaotic_force_metal",
-      "title": "Chaotic Force",
-      "icon": "tconevo:chaotic_ingot",
-      "x": 640,
-      "y": 240,
-      "description": [
-        "Obtain a Chaotic Ingot, forged from the essence of chaos itself."
-      ],
-      "dependencies": [
-        "quest_chaotic_fusion"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "tconevo:chaotic_ingot",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 150000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:chaotic_core",
-          "count": 5
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
-    },
-    {
-      "id": "quest_awakened_core_craft",
-      "title": "Awakened Core",
-      "icon": "draconicevolution:awakened_core",
-      "x": 576,
-      "y": 128,
-      "description": [
-        "Craft an Awakened Core"
-      ],
-      "dependencies": [
-        "quest_rough_battle",
-        "quest_awakened_core"
-      ],
-      "tasks": [
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_core",
-          "count": 1
-        }
-      ],
-      "rewards": [
-        {
-          "type": "soa_additions:xp",
-          "amount": 16000
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:draconium_ingot",
-          "count": 32
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "draconicevolution:awakened_core",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "mysticalagradditions:awakened_draconium_crux",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "mysticalagriculture:awakened_draconium_seeds",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "minecraft:nether_star",
-          "count": 16
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:reward_ticket_legendary",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "soa_additions:medkit_super",
-          "count": 3
-        },
-        {
-          "type": "soa_additions:grant_stage",
-          "stage": "awakened"
-        }
-      ],
-      "modes": [
-        "casual",
-        "adventure",
-        "expert"
-      ]
+   ]
+  },
+  {
+   "id": "46db3dfeaa372b67",
+   "title": "Break some gravel",
+   "icon": "minecraft:gravel",
+   "x": 0,
+   "y": 64,
+   "description": [
+    "Gravel is key to getting your first tools!",
+    "Break some,, and hope to get some raw flint!"
+   ],
+   "dependencies": [
+    "3971243b011b5434"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:mine",
+     "block": "minecraft:gravel",
+     "count": 10
     }
-  ]
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 25
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "4e17ea1d3d16e69a",
+   "title": "Raw Flint",
+   "icon": "tough_beginnings:raw_flint",
+   "x": 32,
+   "y": 64,
+   "description": [
+    "Great! You've gotten som raw flint, now bash it against a rock and see what happens!",
+    "",
+    "Note: This process isn't garunteed to work!"
+   ],
+   "dependencies": [
+    "46db3dfeaa372b67"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:raw_flint",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 25
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "6e9f7bc3f279459e",
+   "title": "Flint",
+   "icon": "minecraft:flint",
+   "x": 32,
+   "y": 96,
+   "description": [
+    "Ooooh.... pointy...."
+   ],
+   "dependencies": [
+    "4e17ea1d3d16e69a"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:flint",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 25
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "6b0801783efff058",
+   "title": "The Primitive Way",
+   "icon": "tough_beginnings:flintknife",
+   "shape": "square",
+   "x": 32,
+   "y": 128,
+   "description": [
+    "Some say it's a prmitive start... some say it's a tough beginning!!"
+   ],
+   "dependencies": [
+    "6e9f7bc3f279459e"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:flintknife",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 15
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "298f1fee4cdc4bf0",
+   "title": "Plant Fiber",
+   "icon": "tough_beginnings:plantfiber",
+   "shape": "square",
+   "x": 64,
+   "y": 128,
+   "description": [
+    "Using your new fancy knife, you should try cutting some grass to get plant fibers!"
+   ],
+   "dependencies": [
+    "6b0801783efff058"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:plantfiber",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 15
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "3d125a4905f017f5",
+   "title": "Lay the First Block",
+   "icon": "minecraft:campfire",
+   "shape": "square",
+   "x": 112,
+   "y": 128,
+   "description": [],
+   "dependencies": [
+    "298f1fee4cdc4bf0",
+    "11297238b0af7c2c"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:place",
+     "block": "minecraft:campfire",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 25
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "42e7831424aa17f8",
+   "title": "Fiber Rope",
+   "icon": "tough_beginnings:fiber_rope",
+   "shape": "square",
+   "x": 64,
+   "y": 160,
+   "description": [],
+   "dependencies": [
+    "298f1fee4cdc4bf0"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:fiber_rope",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "75a82dae0237fc4d",
+   "title": "Flint Axe",
+   "icon": "tough_beginnings:flint_axe",
+   "shape": "square",
+   "x": 64,
+   "y": 192,
+   "description": [],
+   "dependencies": [
+    "42e7831424aa17f8"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:flint_axe",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "11297238b0af7c2c",
+   "title": "Make a Mark",
+   "icon": "minecraft:oak_log",
+   "auto_claim": true,
+   "shape": "rhombus",
+   "x": 112,
+   "y": 192,
+   "description": [],
+   "dependencies": [
+    "75a82dae0237fc4d"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "tag": "minecraft:logs",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "getting_started",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "3a2bc9371f5cfba3",
+   "title": "So close....",
+   "icon": "tough_beginnings:block_of_wood",
+   "x": 144,
+   "y": 192,
+   "description": [],
+   "dependencies": [
+    "11297238b0af7c2c"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:block_of_wood",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 75
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "525e33f1e64dac70",
+   "title": "Finally!",
+   "icon": "tough_beginnings:tough_block_of_wood",
+   "x": 144,
+   "y": 128,
+   "description": [
+    "A tough block of wood allows you to make your standard wooden tools! That wasn't so hard was it..."
+   ],
+   "dependencies": [
+    "3d125a4905f017f5",
+    "3a2bc9371f5cfba3"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tough_beginnings:tough_block_of_wood",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:dark_oak_log",
+     "count": 16
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:apple",
+     "count": 5
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:paper",
+     "count": 1,
+     "nbt": "{display:{Lore:[\"{\\\"text\\\":\\\"It reads:\\\"}\",\"{\\\"text\\\":\\\"I've been waiting for you for ages, claim your quest rewards by pressing E and clicking 'Quests' at the top center RIGHT NOW!!\\\"}\"],Name:\"{\\\"text\\\":\\\"A Sticky Note\\\"}\"}}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:greedy_bag",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "15458b9f7d2fedc4",
+   "title": "Stone Age",
+   "icon": "minecraft:stone_pickaxe",
+   "shape": "square",
+   "x": 208,
+   "y": 128,
+   "description": [],
+   "dependencies": [
+    "quest_mnv6n0g9"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:stone_pickaxe",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:cobblestone",
+     "count": 32
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 35
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:furnace",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:stone_pickaxe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:torch",
+     "count": 16
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:death_counter",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "4fdbe30b5806f74e",
+   "title": "Familiar Metal",
+   "icon": "minecraft:raw_iron",
+   "x": 240,
+   "y": 128,
+   "description": [],
+   "dependencies": [
+    "15458b9f7d2fedc4"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:raw_iron",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 100
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:iron_pickaxe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:baked_potato",
+     "count": 10
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:leather_helmet",
+     "count": 1,
+     "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Hat\",\"color\":\"light_purple\"}'}}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:leather_chestplate",
+     "count": 1,
+     "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Shirt\",\"color\":\"light_purple\"}'}}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:leather_leggings",
+     "count": 1,
+     "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Pants\",\"color\":\"light_purple\"}'}}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:leather_boots",
+     "count": 1,
+     "nbt": "{display:{color:16744619,Name:'{\"text\":\"Fairy Shoes\",\"color\":\"light_purple\"}'}}"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "66daa004d5611f9b",
+   "title": "Ohhh Shiny",
+   "icon": "minecraft:diamond",
+   "x": 272,
+   "y": 128,
+   "description": [],
+   "dependencies": [
+    "4fdbe30b5806f74e"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:diamond",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 250
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:bread",
+     "count": 10
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "dankstorage:dank_3",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:medkit_small",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "prefab:item_house",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "7ab25d73db854279",
+   "title": "Rock Bottom",
+   "icon": "minecraft:bedrock",
+   "x": 240,
+   "y": 176,
+   "description": [],
+   "dependencies": [
+    "4fdbe30b5806f74e"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:observe",
+     "target": "minecraft:bedrock"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:flint_and_steel",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 150
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:iron_pickaxe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:potion",
+     "count": 1,
+     "nbt": "{Potion:\"cyclic:strong_haste\"}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:potion",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "7753b201fe565b8a",
+   "title": "Gold Rush",
+   "icon": "minecraft:raw_gold",
+   "x": 208,
+   "y": 176,
+   "description": [],
+   "dependencies": [
+    "4fdbe30b5806f74e"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:raw_gold",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:golden_apple",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:gold_ore",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 150
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:clock",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "7b55c19fc0816ac9",
+   "title": "Hard to Mine",
+   "icon": "minecraft:obsidian",
+   "x": 304,
+   "y": 128,
+   "description": [],
+   "dependencies": [
+    "66daa004d5611f9b"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:obsidian",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:diamond",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:obsidian",
+     "count": 18
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:flint_and_steel",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "294fca0347c456aa",
+   "title": "Rookie Artisan",
+   "icon": "smithery:part_press",
+   "shape": "rhombus",
+   "x": 144,
+   "y": 80,
+   "description": [],
+   "dependencies": [
+    "525e33f1e64dac70"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:part_press",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "novice_tinker",
+     "scope": "player"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:furnace_brick",
+     "count": 16
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "200eb992d93375ac",
+   "title": "Materials and You",
+   "icon": "patchouli:guide_book",
+   "x": 176,
+   "y": 80,
+   "description": [],
+   "dependencies": [
+    "294fca0347c456aa"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "patchouli:guide_book",
+     "count": 1,
+     "nbt": "{\"patchouli:book\":\"smithery:smithery_book\"}"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "1d30b4b2ab17d735",
+   "title": "Seared Heat",
+   "icon": "smithery:forge_controller",
+   "shape": "square",
+   "x": 208,
+   "y": 80,
+   "description": [
+    "Heat alone only gives you a puddle. A Forge earns its keep the moment you can pour what it melts back out in a shape you chose.",
+    "Almost every metal in this pack passes through one eventually."
+   ],
+   "dependencies": [
+    "200eb992d93375ac"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:forge_item_port",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:casting_table",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:casting_sand",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:gold_ore",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 150
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reinforced_ingot",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:red_slime",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:casting_sand",
+     "count": 10
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "0a06f9ed8ae8946e",
+   "title": "The smeltery... my love!",
+   "icon": "smithery:forge_controller",
+   "shape": "square",
+   "x": 240,
+   "y": 80,
+   "description": [
+    "Drain the Forge and pipe the melt where you want it."
+   ],
+   "dependencies": [
+    "1d30b4b2ab17d735"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:forge_drain",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:fluid_pipe",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 100
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reinforced_ingot",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:furnace_brick",
+     "count": 64
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "20e815609d2b6e90",
+   "title": "A Different Anvil?",
+   "icon": "minecraft:anvil",
+   "x": 304,
+   "y": 80,
+   "description": [
+    "Smithery modifiers go on at an anvil, and parts get cut at a Part Press."
+   ],
+   "dependencies": [
+    "7b55c19fc0816ac9",
+    "4dab3e16b1dd5bc8"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:anvil",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 300
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "4dab3e16b1dd5bc8",
+   "title": "Lots Of Liquids!",
+   "icon": "smithery:forge_controller",
+   "shape": "square",
+   "x": 272,
+   "y": 80,
+   "description": [],
+   "dependencies": [
+    "0a06f9ed8ae8946e"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:forge_controller",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:furnace_brick",
+     "count": 256
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 500
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "05213e20d694f6f7",
+   "title": "Create..ive?",
+   "icon": "create:andesite_alloy_block",
+   "x": 272,
+   "y": 32,
+   "description": [
+    "Congrats! Youu've founnd a compound that allows you to make cheap, high strength compounds using your new furnace!"
+   ],
+   "dependencies": [
+    "4dab3e16b1dd5bc8"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "create:andesite_alloy_block",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 200
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv6n0g9",
+   "title": "A step forward",
+   "icon": "minecraft:wooden_axe",
+   "shape": "square",
+   "x": 176,
+   "y": 128,
+   "description": [
+    "While you can choose to make any number of the wooden tools, I would recommend the axe... so you can chop more wood!",
+    "",
+    "Then... maybe the pickaxe!"
+   ],
+   "dependencies": [
+    "525e33f1e64dac70"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:wooden_axe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:wooden_pickaxe",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_common",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 500
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:casting_sand",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:iron_block",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:excavator",
+     "count": 1,
+     "nbt": "{\"smithery:tool_composition\":{tool_type:\"smithery:excavator\",slot_materials:[\"smithery:iron\",\"smithery:iron\",\"smithery:wood\",\"smithery:wood\",\"smithery:wood\"]},\"smithery:max_durability\":440}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:obsidian_large_plate",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "smithery:furnace_brick",
+     "count": 64
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv6xxhh",
+   "title": "Philosopher's Stone",
+   "icon": "projecte:philosophers_stone",
+   "x": 272,
+   "y": 176,
+   "description": [],
+   "dependencies": [
+    "66daa004d5611f9b"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "projecte:philosophers_stone",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:glowstone_dust",
+     "count": 64
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv6z1g9",
+   "title": "E=mc^2",
+   "icon": "soa_additions:energy_matter_core",
+   "auto_claim": true,
+   "shape": "rhombus",
+   "x": 272,
+   "y": 208,
+   "description": [],
+   "dependencies": [
+    "quest_mnv6xxhh"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:energy_matter_core",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 3000
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "energy_matter_core",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv700ft",
+   "title": "Matter Conversion",
+   "icon": "projecte:transmutation_table",
+   "shape": "rhombus",
+   "x": 272,
+   "y": 240,
+   "description": [],
+   "dependencies": [
+    "quest_mnv6z1g9"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "projecte:transmutation_table",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 50000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "projecte:red_matter",
+     "count": 20
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:extreme_crafting_table",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "transmutation_table",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_mnv711eq",
+   "title": "Anywhere, Anytime",
+   "icon": "projecte:transmutation_tablet",
+   "x": 304,
+   "y": 240,
+   "description": [],
+   "dependencies": [
+    "quest_mnv700ft"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "projecte:transmutation_tablet",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 80000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "projecte:dark_matter",
+     "count": 2
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv71wig",
+   "title": "Dragon Force",
+   "icon": "draconicevolution:draconium_dust",
+   "shape": "square",
+   "x": 304,
+   "y": 176,
+   "description": [],
+   "dependencies": [
+    "66daa004d5611f9b"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_dust",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:diamond",
+     "count": 6
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 500
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:diamond_pickaxe",
+     "count": 1,
+     "nbt": "{Enchantments:[{id:\"minecraft:efficiency\",lvl:5s},{id:\"minecraft:unbreaking\",lvl:3s}]}"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "inventorypets:pet_meta",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv7329n",
+   "title": "Dragon Core",
+   "icon": "draconicevolution:draconium_core",
+   "shape": "square",
+   "x": 352,
+   "y": 176,
+   "description": [
+    "Obtain an Awakened Core"
+   ],
+   "dependencies": [
+    "quest_mnv71wig"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_core",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_core",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:redstone_block",
+     "count": 32
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "waystones:warp_stone",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 1200
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv73qbr",
+   "title": "Ultimate Energy Storage",
+   "icon": "draconicevolution:energy_core",
+   "x": 352,
+   "y": 240,
+   "description": [
+    "Craft an Energy Core which can store a ridiculous amount of energy"
+   ],
+   "dependencies": [
+    "quest_mnv7329n"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:energy_core",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:wyvern_capacitor",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 2000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:energy_core_stabilizer",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnvyhsib",
+   "title": "Welcome to Hell",
+   "icon": "minecraft:netherrack",
+   "shape": "rhombus",
+   "x": 352,
+   "y": 128,
+   "description": [
+    "Visit the Nether"
+   ],
+   "dependencies": [
+    "7b55c19fc0816ac9",
+    "quest_twilight_shield"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:dimension",
+     "dimension": "minecraft:the_nether"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:obsidian",
+     "count": 32
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "inventorypets:nugget_ender",
+     "count": 9,
+     "scope": "team"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "inventorypets:pet_house",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "nether",
+     "scope": "player"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "waystones:return_scroll",
+     "count": 16
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:sugar_cane",
+     "count": 32
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "waystones:warp_stone",
+     "count": 16
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_hot_stuff",
+   "title": "Hot Stuff",
+   "icon": "minecraft:blaze_rod",
+   "x": 448,
+   "y": 80,
+   "description": [
+    "Obtain a Blaze Rod"
+   ],
+   "dependencies": [
+    "quest_mnvyhsib"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:blaze_rod",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:bookshelf",
+     "count": 15
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 1200
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "twilightdelight:grilled_ghast",
+     "count": 16
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "tinymobfarm:lasso",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:enderman_spawn_egg",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_enhanced_alloy",
+   "title": "Enhanced Alloy",
+   "icon": "soa_additions:manyullyn_ingot",
+   "x": 400,
+   "y": 80,
+   "description": [
+    "Obtain a Manyullyn Ingot"
+   ],
+   "dependencies": [
+    "quest_mnvyhsib"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "valoria:cobalt_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "valoria:cobalt_ingot",
+     "count": 10
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 1200
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_get_beheaded",
+   "title": "Get Beheaded",
+   "icon": "minecraft:wither_skeleton_skull",
+   "x": 496,
+   "y": 80,
+   "description": [
+    "Obtain a Wither Skeleton Skull"
+   ],
+   "dependencies": [
+    "quest_hot_stuff",
+    "quest_glimpse_abyss"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:wither_skeleton_skull",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:wither_skeleton_skull",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 1500
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_rough_battle",
+   "title": "Rough Battle",
+   "icon": "minecraft:nether_star",
+   "shape": "rhombus",
+   "x": 528,
+   "y": 80,
+   "description": [
+    "Kill the Wither"
+   ],
+   "dependencies": [
+    "quest_get_beheaded"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:kill",
+     "entity": "minecraft:wither",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:nether_star",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "mysticalagriculture:wither_skeleton_seeds",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:nether_star",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 7500
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "wither_slayer",
+     "scope": "player"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:greedy_bag",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:command",
+     "command": "/tellraw @p {\"text\":\"§4§oThe withered soul of the Wither is about to bring death and evil to your world.\"}"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_it_ended",
+   "title": "It ended? ... Not even close.",
+   "icon": "minecraft:end_portal_frame",
+   "x": 448,
+   "y": 128,
+   "description": [
+    "Enter The End"
+   ],
+   "dependencies": [
+    "quest_hot_stuff",
+    "quest_ender_charm"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:dimension",
+     "dimension": "minecraft:the_end"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 2000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:ender_eye",
+     "count": 16
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_dragon_slayer",
+   "title": "Dragon Slayer",
+   "icon": "minecraft:dragon_head",
+   "shape": "rhombus",
+   "x": 496,
+   "y": 128,
+   "description": [
+    "Slay the Ender Dragon"
+   ],
+   "dependencies": [
+    "quest_rough_battle",
+    "quest_it_ended"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:kill",
+     "entity": "minecraft:ender_dragon",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:dragon_egg",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:dragon_breath",
+     "count": 32
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_ingot",
+     "count": 64
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 10000
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "hardmode",
+     "scope": "player"
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:greedy_bag",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:command",
+     "command": "/tellraw @p {\"text\":\"§5§oThe evil spirit within the ancient dragon has been unleashed.\"}"
+    },
+    {
+     "type": "soa_additions:command",
+     "command": "/tellraw @p {\"text\":\"§2§oYour world has been blessed with new ores!\"}"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_coalescence_matrix",
+   "title": "Coalescence Matrix",
+   "icon": "tconevo:coalescence_matrix",
+   "shape": "rhombus",
+   "x": 528,
+   "y": 128,
+   "description": [],
+   "dependencies": [
+    "quest_dragon_slayer"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tconevo:coalescence_matrix",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 12500
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "fusion_matrix",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_overpriced",
+   "title": "Overpriced",
+   "icon": "avaritia:crystal_matrix_ingot",
+   "x": 576,
+   "y": 80,
+   "description": [
+    "Obtain a Crystal Matrix Ingot"
+   ],
+   "dependencies": [
+    "quest_rough_battle"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:crystal_matrix_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:crystal_matrix_ingot",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 8000
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_ultimate_crafting",
+   "title": "Ultimate Crafting Table",
+   "icon": "avaritia:extreme_crafting_table",
+   "x": 608,
+   "y": 80,
+   "description": [
+    "Craft an Extreme Crafting Table"
+   ],
+   "dependencies": [
+    "quest_overpriced"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:extreme_crafting_table",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:crystal_matrix_ingot",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 10000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_patience",
+   "title": "Patience.",
+   "icon": "avaritia:neutron_collector",
+   "x": 640,
+   "y": 80,
+   "description": [
+    "Obtain a Neutron Collector"
+   ],
+   "dependencies": [
+    "quest_ultimate_crafting"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_collector",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_ingot",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 40000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_dense_metal",
+   "title": "Dense Metal",
+   "icon": "avaritia:neutron_ingot",
+   "x": 640,
+   "y": 32,
+   "description": [
+    "Obtain a Neutronium Ingot"
+   ],
+   "dependencies": [
+    "quest_patience"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_collector",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_ingot",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 25000
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_event_horizon",
+   "title": "Event Horizon",
+   "icon": "avaritia:neutron_collector",
+   "x": 672,
+   "y": 80,
+   "description": [
+    "Obtain a Neutronium Compressor"
+   ],
+   "dependencies": [
+    "quest_patience"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_compressor",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 125000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_ingot",
+     "count": 5
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_core_black_hole",
+   "title": "Core of Black Hole",
+   "icon": "avaritia:eternal_singularity",
+   "x": 672,
+   "y": 32,
+   "description": [
+    "Obtain an Eternal Singularity"
+   ],
+   "dependencies": [
+    "quest_event_horizon"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:eternal_singularity",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:eternal_singularity",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 99999
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_power_infinity",
+   "title": "Power of Infinity",
+   "icon": "avaritia:infinity_catalyst",
+   "shape": "rhombus",
+   "x": 704,
+   "y": 80,
+   "description": [
+    "Obtain an Infinity Catalyst"
+   ],
+   "dependencies": [
+    "quest_event_horizon"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_catalyst",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_catalyst",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 160000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_compressor",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:neutron_collector",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "wielder_of_infinity",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_good_game",
+   "title": "Good Game",
+   "icon": "avaritia:infinity_ingot",
+   "x": 736,
+   "y": 80,
+   "description": [
+    "Obtain an Infinity Ingot"
+   ],
+   "dependencies": [
+    "quest_power_infinity"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 1919810
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_pickaxe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_axe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_hoe",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_shovel",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:infinity_ingot",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "projecte:collector_mk3",
+     "count": 2
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_fusion_crafting",
+   "title": "Fusion Crafting",
+   "icon": "draconicevolution:crafting_core",
+   "shape": "square",
+   "x": 400,
+   "y": 176,
+   "description": [
+    "Craft a Fusion Crafting Core and a Basic Crafting Injector"
+   ],
+   "dependencies": [
+    "quest_mnv7329n"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:crafting_core",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:basic_crafting_injector",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 4500
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_core",
+     "count": 5
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_dust",
+     "count": 32
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_wyvern_core",
+   "title": "Wyvern Core",
+   "icon": "draconicevolution:wyvern_core",
+   "shape": "rhombus",
+   "x": 400,
+   "y": 240,
+   "description": [
+    "Obtain a Wyvern Core"
+   ],
+   "dependencies": [
+    "quest_fusion_crafting"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:wyvern_core",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 3600
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:wyvern_core",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "wyvern",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_acquire_upgrade",
+   "title": "Acquire Upgrade",
+   "icon": "draconicevolution:wyvern_crafting_injector",
+   "shape": "square",
+   "x": 448,
+   "y": 176,
+   "description": [
+    "Upgrade your Fusion Injector"
+   ],
+   "dependencies": [
+    "quest_fusion_crafting",
+    "quest_rough_battle"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:wyvern_crafting_injector",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:wyvern_crafting_injector",
+     "count": 4,
+     "scope": "team"
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 3000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:gold_ingot",
+     "count": 256
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_awakened_fusion",
+   "title": "Draconic Fusion",
+   "icon": "draconicevolution:awakened_draconium_block",
+   "shape": "square",
+   "x": 496,
+   "y": 176,
+   "description": [
+    "Obtain a Block of Awakened Draconium via Fusion Crafting"
+   ],
+   "dependencies": [
+    "quest_dragon_slayer",
+    "quest_acquire_upgrade"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_draconium_block",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconium_block",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 5250
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:end_crystal",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:dragon_heart",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_fusion_awakened",
+   "title": "Fusion Awakened",
+   "icon": "draconicevolution:awakened_crafting_injector",
+   "shape": "square",
+   "x": 496,
+   "y": 240,
+   "description": [
+    "Upgrade your Fusion Injector to Awakened tier"
+   ],
+   "dependencies": [
+    "quest_awakened_fusion"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_crafting_injector",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_crafting_injector",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:dragon_heart",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_draconium_block",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 10000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_awakened_core",
+   "title": "Awakened Core",
+   "icon": "draconicevolution:awakened_core",
+   "shape": "square",
+   "x": 528,
+   "y": 176,
+   "description": [
+    "Craft an Awakened Core"
+   ],
+   "dependencies": [
+    "quest_rough_battle",
+    "quest_awakened_fusion"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_core",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_draconium_block",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 5250
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:dragon_heart",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:end_crystal",
+     "count": 8
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_land_of_chaos",
+   "title": "Land of Chaos",
+   "icon": "draconicevolution:chaos_shard",
+   "shape": "rhombus",
+   "x": 560,
+   "y": 176,
+   "description": [
+    "Kill the Chaos Guardian and obtain a Chaos Shard"
+   ],
+   "dependencies": [
+    "quest_awakened_core"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaos_shard",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 150000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaos_shard",
+     "count": 7
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_core",
+     "count": 4
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:nether_star",
+     "count": 64
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "chaotic_dominator",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_chaotic_force",
+   "title": "Chaotic Force",
+   "icon": "draconicevolution:chaotic_core",
+   "shape": "rhombus",
+   "x": 560,
+   "y": 240,
+   "description": [
+    "Obtain a Chaotic Core"
+   ],
+   "dependencies": [
+    "quest_fusion_awakened",
+    "quest_land_of_chaos"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaotic_core",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 114514
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaotic_core",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:creative_shard",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "chaotic",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_chaotic_fusion",
+   "title": "Chaotic Fusion",
+   "icon": "draconicevolution:chaotic_crafting_injector",
+   "shape": "square",
+   "x": 592,
+   "y": 240,
+   "description": [
+    "Upgrade your Fusion Injector to Chaotic tier"
+   ],
+   "dependencies": [
+    "quest_land_of_chaos",
+    "quest_chaotic_force"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaotic_crafting_injector",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 300000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaotic_crafting_injector",
+     "count": 3
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_reactor",
+   "title": "Don't make it go kaboom",
+   "icon": "draconicevolution:reactor_core",
+   "shape": "square",
+   "x": 592,
+   "y": 176,
+   "description": [
+    "Build a Draconic Reactor"
+   ],
+   "dependencies": [
+    "quest_land_of_chaos",
+    "quest_chaotic_fusion"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:reactor_core",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:reactor_stabilizer",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 1000000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconic_capacitor",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_wyvern_force",
+   "title": "Wyvern Force",
+   "icon": "tconevo:wyvern_ingot",
+   "x": 448,
+   "y": 240,
+   "description": [],
+   "dependencies": [
+    "quest_acquire_upgrade",
+    "quest_wyvern_core"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tconevo:wyvern_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:wyvern_core",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 4000
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_i_am_superior",
+   "title": "I am Superior",
+   "icon": "tconevo:chaotic_ingot",
+   "x": 448,
+   "y": 288,
+   "description": [],
+   "dependencies": [
+    "quest_fusion_awakened"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tconevo:draconic_metal_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:awakened_core",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 10000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_force_awakens",
+   "title": "The Force Awakens",
+   "icon": "draconicevolution:draconic_staff",
+   "shape": "rhombus",
+   "x": 496,
+   "y": 288,
+   "description": [],
+   "dependencies": [
+    "quest_i_am_superior"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:draconic_staff",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 400000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "tconevo:draconic_metal_ingot",
+     "count": 10
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "staff_wielder",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_game_guide",
+   "title": "Game Guide",
+   "icon": "patchouli:guide_book",
+   "optional": true,
+   "x": 64,
+   "y": 32,
+   "description": [
+    "Open the modpack guide book in your inventory and read it carefully"
+   ],
+   "dependencies": [
+    "3971243b011b5434"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "patchouli:guide_book",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 25
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_glimpse_abyss",
+   "title": "A Glimpse of the Abyss",
+   "icon": "deeperdarker:heart_of_the_deep",
+   "x": 496,
+   "y": 32,
+   "description": [
+    "To summon the Wither, you must first descend beneath the Ancient Cities, put down the Warden, and cut the Heart of the Deep out of it.",
+    "",
+    "Only then will Nether Stars and Wither Skeleton Skulls answer to you."
+   ],
+   "dependencies": [
+    "quest_the_fearless"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "deeperdarker:heart_of_the_deep",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 1000
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "abyssal_conquerer"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true,
+   "shape": "rhombus"
+  },
+  {
+   "id": "quest_the_fearless",
+   "title": "The Fearless",
+   "icon": "soa_additions:bravery_certificate",
+   "x": 448,
+   "y": 32,
+   "description": [
+    "Only the brave ones who defeated the Valkyrie Queen in the Aether and crafted a Bravery Certificate are ready for what sleeps in the deep dark.",
+    "",
+    "Steel yourself. The Warden is next."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:bravery_certificate",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 1000
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "fearless_man"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true,
+   "shape": "rhombus"
+  },
+  {
+   "id": "quest_twilight_shield",
+   "title": "Twilight Shield",
+   "icon": "soa_additions:twilight_shield",
+   "x": 352,
+   "y": 80,
+   "description": [
+    "Use the Twilight Shield before you can go to the Nether safely"
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:twilight_shield",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 500
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "twilight_shield"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true,
+   "shape": "rhombus"
+  },
+  {
+   "id": "quest_ender_charm",
+   "title": "Ender Charm",
+   "icon": "soa_additions:ender_charm",
+   "shape": "rhombus",
+   "x": 400,
+   "y": 128,
+   "description": [
+    "You can't go to The End before using an Ender Charm"
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:ender_charm",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 1500
+    },
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "ender_charm"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ],
+   "auto_claim": true
+  },
+  {
+   "id": "quest_mo3jn76h",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "x": 112,
+   "y": 224,
+   "repeatable": true,
+   "description": [
+    "Gamestages is a bit weird sometimes! Let's recover that stage for you."
+   ],
+   "dependencies": [
+    "11297238b0af7c2c"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Acknowledge"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "getting_started",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mo3l73h3",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "x": 112,
+   "y": 80,
+   "repeatable": true,
+   "description": [
+    "Gamestages is a bit weird sometimes! Let's recover that stage for you."
+   ],
+   "dependencies": [
+    "294fca0347c456aa"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Acknowledge"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "novice_tinker",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_moj30p7i",
+   "title": "Thin Air",
+   "icon": "thinair:respirator",
+   "visibility": "hidden_until_deps",
+   "show_deps": false,
+   "shape": "square",
+   "x": 0,
+   "y": 224,
+   "description": [
+    "It's really hard to breathe in places like underwater or in caves! Prepare a respirator so you don't die!"
+   ],
+   "dependencies": [
+    "3971243b011b5434"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:advancement",
+     "advancement": "thinair:protection_from_red"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "thinair:respirator",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:pufferfish_bucket",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_moj33wqe",
+   "title": "Headshots!",
+   "icon": "minecraft:player_head",
+   "visibility": "hidden_until_deps",
+   "show_deps": false,
+   "x": 0,
+   "y": 256,
+   "description": [
+    "Hey! How did I die so fast? Well, you probably were shot in the head. try a helmet next time..."
+   ],
+   "dependencies": [
+    "3971243b011b5434"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:stat",
+     "stat_type": "minecraft:custom",
+     "stat_value": "minecraft:deaths",
+     "threshold": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:iron_helmet",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:xp",
+     "amount": 50
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "minecraft:shield",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_chaotic_force_metal",
+   "title": "Chaotic Force",
+   "icon": "tconevo:chaotic_ingot",
+   "x": 640,
+   "y": 240,
+   "description": [
+    "Obtain a Chaotic Ingot, forged from the essence of chaos itself."
+   ],
+   "dependencies": [
+    "quest_chaotic_fusion"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "tconevo:chaotic_ingot",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 150000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 2
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "draconicevolution:chaotic_core",
+     "count": 5
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv6z1g9_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 304,
+   "y": 208,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"E=mc^2\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_mnv6z1g9"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "energy_matter_core",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnv700ft_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 272,
+   "y": 272,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Matter Conversion\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_mnv700ft"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "transmutation_table",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_mnvyhsib_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 384,
+   "y": 128,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Welcome to Hell\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_mnvyhsib"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "nether",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_rough_battle_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 560,
+   "y": 80,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Rough Battle\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_rough_battle"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "wither_slayer",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_dragon_slayer_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 496,
+   "y": 160,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Dragon Slayer\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_dragon_slayer"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "hardmode",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_coalescence_matrix_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 560,
+   "y": 128,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Coalescence Matrix\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_coalescence_matrix"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "fusion_matrix",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_power_infinity_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 704,
+   "y": 112,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Power of Infinity\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_power_infinity"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "wielder_of_infinity",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_wyvern_core_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 432,
+   "y": 240,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Wyvern Core\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_wyvern_core"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "wyvern",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_land_of_chaos_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 560,
+   "y": 208,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Land of Chaos\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_land_of_chaos"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "chaotic_dominator",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_chaotic_force_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 560,
+   "y": 272,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Chaotic Force\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_chaotic_force"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "chaotic",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_force_awakens_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 528,
+   "y": 288,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"The Force Awakens\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_force_awakens"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "staff_wielder",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_glimpse_abyss_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 528,
+   "y": 32,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"A Glimpse of the Abyss\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_glimpse_abyss"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "abyssal_conquerer",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_the_fearless_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 480,
+   "y": 32,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"The Fearless\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_the_fearless"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "fearless_man",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_twilight_shield_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 384,
+   "y": 80,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Twilight Shield\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_twilight_shield"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "twilight_shield",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "quest_ender_charm_recover",
+   "title": "Stage recovery",
+   "icon": "soa_additions:guide_book",
+   "visibility": "hidden_until_deps",
+   "optional": true,
+   "repeatable": true,
+   "x": 432,
+   "y": 128,
+   "description": [
+    "Gamestages is a bit weird sometimes! If the stage from \"Ender Charm\" did not stick, claim this to get it back.",
+    "Safe to use more than once."
+   ],
+   "dependencies": [
+    "quest_ender_charm"
+   ],
+   "tasks": [
+    {
+     "type": "soa_additions:checkmark",
+     "text": "Restore my stage please!"
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:grant_stage",
+     "stage": "ender_charm",
+     "scope": "player"
+    }
+   ],
+   "modes": [
+    "adventure",
+    "expert"
+   ]
+  }
+ ]
 }

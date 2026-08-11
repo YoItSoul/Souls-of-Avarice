@@ -3,22 +3,22 @@
   "name": "Bacon Bag",
   "rarity": "common",
   "output": {
+    "rolls": 2,
     "entries": [
       {
         "stack": {
           "id": "minecraft:porkchop",
-          "count": 8
+          "count": 4
         },
         "weight": 20
       },
       {
         "stack": {
           "id": "minecraft:cooked_porkchop",
-          "count": 8
+          "count": 4
         },
         "weight": 20
       }
-    ],
-    "rolls": 3
+    ]
   }
 }

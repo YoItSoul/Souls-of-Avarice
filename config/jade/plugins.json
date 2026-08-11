@@ -164,8 +164,15 @@
     "machine": true,
     "tunnel": true
   },
+  "soa_additions": {
+    "mining_level": true
+  },
   "specialmobs": {
     "display_ninja_disguises": true
+  },
+  "smithery": {
+    "casting_table": true,
+    "casting_basin": true
   },
   "globalxp": {
     "display": true

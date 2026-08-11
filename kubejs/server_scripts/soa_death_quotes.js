@@ -1,16 +1,3 @@
-// ============================================================
-// SoA Death Quotes — port of GreedyCraft scripts/global/deathquotes.zs
-//
-// 1.12 GC tracked a localized array of flavor death messages and
-// broadcast a random one to chat each time a player died. The 1.12
-// script declared en_us and zh_cn variants; here we ship only the
-// English set since the SoA pack ships en_us.
-//
-// 1.20.1 KubeJS implementation: PlayerEvents.died → broadcast a
-// random quote to all players. %playername% placeholder substituted
-// with the deceased player's username.
-// ============================================================
-
 console.info('[soa_scripts] soa_death_quotes.js loading')
 
 const QUOTES_EN_US = [
@@ -41,7 +28,6 @@ const QUOTES_EN_US = [
     '§7"Death is just the next great adventure." — Albus Dumbledore',
 ]
 
-// KubeJS 2001 has no PlayerEvents.died — filter EntityEvents.death to players.
 EntityEvents.death(event => {
     const entity = event.entity
     if (!entity || !entity.player) return

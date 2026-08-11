@@ -1,29 +1,34 @@
 {
-  "_comment": "1:1 port of GC's TConEvo Thaumcraft Infusion recipe TCONEVO_PRIMALMETAL. Decompiled from tconevo-1.12.2-1.0.38.jar / xyz/phanta/tconevo/integration/thaumcraft/ThaumHooksImpl.class. Original GC recipe: TC Infusion at the Infusion Matrix, instability=5, vis=30 Metallum + 15 Aer + 15 Terra + 15 Ignis + 15 Aqua + 15 Ordo + 15 Perditio (= 120 Vis total), research-gated by TAR_PRIMALMETAL. Center=Coalescence Matrix, surround=primordial_pearl + salis_mundus, output=1x primal_metal_ingot. SoA mapping: Hephaestus Forge ritual is the closest mechanical 1:1 to TC Infusion (both are multi-block ritual altars with center+surround+essence costs+tier gate). Forge tier 5 requirement matches the master_wizard research gate. Essence costs map TC's 7 aspect groups to F&A's 4 essence types: Aureal (Aer/Ordo/Metallum), Blood (Terra/Ignis/Aqua), Souls (Perditio), Experience (proxy for instability cost).",
   "additional_requirements": {
     "forge_tier": 5
   },
   "essences": {
-    "aureal":     2000,
-    "blood":      8000,
+    "aureal": 2000,
+    "blood": 8000,
     "experience": 1000,
-    "souls":      200
+    "souls": 200
   },
   "inputs": [
     {
       "amount": 1,
-      "ingredient": { "item": "soa_additions:pearl_of_knowledge" }
+      "ingredient": {
+        "item": "deeperdarker:heart_of_the_deep"
+      }
     },
     {
       "amount": 1,
-      "ingredient": { "item": "forbidden_arcanus:mundabitur_dust" }
+      "ingredient": {
+        "item": "thaumon:mutagen"
+      }
     }
   ],
   "magic_circle": {
     "inner_texture": "forbidden_arcanus:textures/effect/magic_circle/inner/transmutation.png",
     "outer_texture": "forbidden_arcanus:textures/effect/magic_circle/outer/pactum.png"
   },
-  "main_ingredient": { "item": "tconevo:coalescence_matrix" },
+  "main_ingredient": {
+    "item": "tconevo:coalescence_matrix"
+  },
   "result": {
     "type": "forbidden_arcanus:create_item",
     "result_item": {

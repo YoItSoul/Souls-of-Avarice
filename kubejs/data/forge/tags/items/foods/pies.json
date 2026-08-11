@@ -1,17 +1,8 @@
 {
   "replace": false,
   "values": [
-    "createfood:berry_pie",
-    "createfood:chorus_fruit_pie",
-    "createfood:cookie_cream_pie",
-    "createfood:glow_berry_pie",
-    "createfood:meat_pie",
-    "createfood:mini_cookie_cream_pie",
-    "createfood:mini_smores_pie",
-    "createfood:smores_pie",
     "farmersdelight:apple_pie",
     "farmersdelight:chocolate_pie",
-    "farmersdelight:debug_pumpkin_pie",
     "farmersdelight:shepherds_pie",
     "minecraft:pumpkin_pie",
     "twilightdelight:aurora_pie",

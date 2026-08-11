@@ -59,7 +59,9 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "auto_claim": true,
+      "shape": "rhombus"
     },
     {
       "id": "tf_new_journey",
@@ -108,7 +110,9 @@
         "casual",
         "adventure",
         "expert"
-      ]
+      ],
+      "auto_claim": true,
+      "shape": "rhombus"
     },
     {
       "id": "tf_naga",

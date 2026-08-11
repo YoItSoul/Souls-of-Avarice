@@ -23,7 +23,7 @@
       "title": "Quartz!",
       "icon": "minecraft:quartz",
       "x": 0,
-      "y": 64,
+      "y": 168,
       "description": [
         "Obtain some Nether Quartz"
       ],
@@ -61,10 +61,10 @@
       "id": "ae2_charged_quartz",
       "title": "Charged Quartz",
       "icon": "ae2:charged_certus_quartz_crystal",
-      "x": 32,
-      "y": 112,
+      "x": 48,
+      "y": 216,
       "description": [
-        "Charge your Certus Quartz or find the already charged ones underground"
+        "Charge is what makes certus reactive enough to become fluix. You can put it there yourself, or dig for crystals the world has already charged."
       ],
       "dependencies": [
         "quest_mnw44z11"
@@ -102,10 +102,10 @@
       "id": "ae2_crystal_crafting",
       "title": "Crystal Crafting",
       "icon": "ae2:fluix_crystal",
-      "x": 32,
-      "y": 64,
+      "x": 96,
+      "y": 216,
       "description": [
-        "Acquire a Fluix Crystal by tossing Charged Certus Quartz, Redstone and Nether Quartz together into water"
+        "Fluix is the alloy of all three quartz lines, and every cable, terminal and drive downstream is made of it. It forms out in the world rather than on a bench."
       ],
       "dependencies": [
         "ae2_quartz",
@@ -144,10 +144,10 @@
       "id": "ae2_grind_dusts",
       "title": "Grind the Dusts",
       "icon": "ae2:certus_quartz_dust",
-      "x": 64,
-      "y": 64,
+      "x": 144,
+      "y": 216,
       "description": [
-        "Acquire all types of crystal dust"
+        "Past this point AE2 wants powder, not crystal. There is no Quartz Grindstone in 1.20 - whatever mill, crusher or pulverizer you already run will do the job."
       ],
       "dependencies": [
         "ae2_crystal_crafting"
@@ -166,6 +166,11 @@
         {
           "type": "soa_additions:item",
           "item": "ae2:fluix_dust",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:sky_dust",
           "count": 1
         }
       ],
@@ -195,10 +200,10 @@
       "id": "ae2_crystal_growth",
       "title": "Crystal Growth",
       "icon": "ae2:growth_accelerator",
-      "x": 96,
-      "y": 128,
+      "x": 192,
+      "y": 360,
       "description": [
-        "Craft a Growth Accelerator to speed up crystal growth"
+        "Certus grows on its own schedule, which is far too slow to feed a network. Accelerators are how you stop waiting. The AE2 guide covers budding blocks and how to keep one alive."
       ],
       "dependencies": [
         "ae2_grind_dusts"
@@ -231,10 +236,10 @@
       "id": "ae2_energy_conversion",
       "title": "Energy Conversion",
       "icon": "ae2:energy_acceptor",
-      "x": 96,
-      "y": 64,
+      "x": 192,
+      "y": 72,
       "description": [
-        "Craft an Energy Acceptor which converts other types of energy into AE"
+        "AE is its own currency. The Energy Acceptor is the exchange desk between whatever generators you already run and the network that will eat their output."
       ],
       "dependencies": [
         "ae2_grind_dusts"
@@ -268,10 +273,10 @@
       "id": "ae2_meteorite",
       "title": "Meteorite Impact",
       "icon": "ae2:sky_stone_block",
-      "x": 144,
-      "y": 128,
+      "x": 0,
+      "y": 264,
       "description": [
-        "Find a meteorite"
+        "Sky stone falls; it does not spawn. Buried in the crater are the presses you cannot craft at any bench, and there are no processors without them."
       ],
       "dependencies": [],
       "tasks": [
@@ -322,10 +327,10 @@
       "id": "ae2_inscriber",
       "title": "Circuit Inscribing",
       "icon": "ae2:inscriber",
-      "x": 144,
-      "y": 64,
+      "x": 240,
+      "y": 216,
       "description": [
-        "Craft an Inscriber to create processor circuits"
+        "The Inscriber stamps the circuits the rest of this chapter is waiting on. Nothing past here moves until you can print your own."
       ],
       "dependencies": [
         "ae2_energy_conversion",
@@ -371,10 +376,10 @@
       "title": "Intelligence Revolution",
       "icon": "ae2:logic_processor",
       "shape": "square",
-      "x": 240,
-      "y": 64,
+      "x": 288,
+      "y": 216,
       "description": [
-        "Craft all three types of processors"
+        "Logic, calculation, engineering. Nearly every AE2 machine wants one of the three, and the chapter opens out wide the moment all three are on the shelf."
       ],
       "dependencies": [
         "ae2_inscriber"
@@ -422,10 +427,10 @@
       "id": "ae2_me_chest",
       "title": "Simplism",
       "icon": "ae2:chest",
-      "x": 288,
-      "y": 128,
+      "x": 336,
+      "y": 264,
       "description": [
-        "Make a ME Chest"
+        "One cell, plugged in and readable. The smallest network that actually works - enough to prove the idea before you commit a room to cable."
       ],
       "dependencies": [
         "ae2_processors"
@@ -463,10 +468,10 @@
       "id": "ae2_crafting_terminal",
       "title": "More Elegant Crafting Method",
       "icon": "ae2:crafting_terminal",
-      "x": 240,
-      "y": 128,
+      "x": 336,
+      "y": 168,
       "description": [
-        "Craft a ME Crafting Terminal"
+        "A crafting grid backed by everything you own. From here on you stop opening chests to build things."
       ],
       "dependencies": [
         "ae2_processors"
@@ -506,9 +511,9 @@
       "icon": "ae2:drive",
       "shape": "square",
       "x": 336,
-      "y": 64,
+      "y": 120,
       "description": [
-        "Craft a ME Drive which can hold 10 storage cells at max"
+        "Cells are dead weight until something reads them. The Drive is where they live, and it is the first thing that makes storage feel bottomless."
       ],
       "dependencies": [
         "ae2_processors"
@@ -558,7 +563,7 @@
       "icon": "ae2:controller",
       "shape": "square",
       "x": 384,
-      "y": 64,
+      "y": 288,
       "description": [
         "Not enough channels? Make an ME Controller!"
       ],
@@ -603,10 +608,10 @@
       "id": "ae2_interface",
       "title": "Advanced Transport",
       "icon": "ae2:interface",
-      "x": 336,
-      "y": 16,
+      "x": 384,
+      "y": 96,
       "description": [
-        "Craft an ME Interface"
+        "The network's hand: it holds stock out where machines and pipes can reach it. Every bus hanging off this quest needs one to work against."
       ],
       "dependencies": [
         "ae2_drive"
@@ -644,10 +649,10 @@
       "id": "ae2_storage_cell",
       "title": "Never Enough Item Storage Space",
       "icon": "ae2:item_storage_cell_256k",
-      "x": 272,
-      "y": 224,
+      "x": 432,
+      "y": 192,
       "description": [
-        "Craft a 256k ME Item Storage Cell"
+        "The top of the ordinary item cell ladder. Whatever you have been hoarding, it fits now."
       ],
       "dependencies": [
         "quest_mnw5262m"
@@ -677,9 +682,9 @@
       "icon": "ae2:wireless_access_point",
       "shape": "square",
       "x": 384,
-      "y": 128,
+      "y": 144,
       "description": [
-        "Craft a ME Wireless Access Point"
+        "Cut the tether. Your network's reach becomes a radius instead of a wire, and boosters decide how generous that radius is."
       ],
       "dependencies": [
         "ae2_drive"
@@ -722,14 +727,13 @@
       "id": "ae2_free_access",
       "title": "Free Access",
       "icon": "ae2:wireless_crafting_terminal",
-      "x": 384,
-      "y": 176,
+      "x": 432,
+      "y": 144,
       "description": [
-        "Craft a Wireless Crafting Terminal for on-the-go access"
+        "The whole system in a pocket, craftable from the floor of a cave. Once you carry this, base is no longer somewhere you have to walk back to."
       ],
       "dependencies": [
-        "ae2_wireless",
-        "ae2_security"
+        "ae2_wireless"
       ],
       "tasks": [
         {
@@ -765,14 +769,17 @@
       "title": "Introduction to Autocrafting",
       "icon": "ae2:1k_crafting_storage",
       "shape": "square",
-      "x": 384,
-      "y": 16,
+      "x": 480,
+      "y": 288,
       "description": [
-        "Set up autocrafting with a Crafting Storage"
+        "The line between a warehouse and a factory. With a crafting CPU standing, you ask the network for a finished item and it works out the rest itself.",
+        "What a CPU needs to be complete is spelled out in the AE2 guide."
       ],
       "dependencies": [
         "ae2_controller",
-        "ae2_interface"
+        "ae2_pattern_provider",
+        "ae2_pattern_encoding_terminal",
+        "ae2_molecular_assembler"
       ],
       "tasks": [
         {
@@ -809,16 +816,98 @@
       ]
     },
     {
+      "id": "ae2_pattern_provider",
+      "title": "Pattern Provider",
+      "icon": "ae2:pattern_provider",
+      "x": 336,
+      "y": 312,
+      "description": [
+        "Patterns live here now, not in the Interface - that moved since 1.12. This is the block that hands your machines their ingredients."
+      ],
+      "dependencies": [
+        "ae2_processors"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:pattern_provider",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:pattern_provider",
+          "count": 4
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_pattern_encoding_terminal",
+      "title": "Encode a Pattern",
+      "icon": "ae2:pattern_encoding_terminal",
+      "x": 384,
+      "y": 336,
+      "description": [
+        "No terminal, no patterns; no patterns, no autocrafting. This is the desk where you teach the network what a recipe is."
+      ],
+      "dependencies": [
+        "ae2_pattern_provider"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:pattern_encoding_terminal",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:blank_pattern",
+          "count": 32
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
       "id": "ae2_molecular_assembler",
       "title": "Automatic Aggregation",
       "icon": "ae2:molecular_assembler",
-      "x": 64,
-      "y": 176,
+      "x": 336,
+      "y": 360,
       "description": [
-        "Craft a Molecular Assembler"
+        "The hands that do the actual building. A crafting CPU can plan all it likes - without assemblers nothing comes out the other end."
       ],
       "dependencies": [
-        "ae2_grind_dusts"
+        "ae2_processors"
       ],
       "tasks": [
         {
@@ -858,13 +947,14 @@
       "id": "ae2_device_upgrade",
       "title": "Device Upgrade",
       "icon": "ae2:speed_card",
-      "x": 192,
-      "y": 128,
+      "x": 336,
+      "y": 216,
       "description": [
-        "Craft an Acceleration Card to speed up your devices"
+        "AE2 devices run at a deliberately dull pace out of the box. Cards are the tuning knobs, and this is the one marked speed."
       ],
       "dependencies": [
-        "ae2_inscriber"
+        "ae2_inscriber",
+        "ae2_processors"
       ],
       "tasks": [
         {
@@ -895,11 +985,10 @@
       "id": "ae2_network_tool",
       "title": "Network Tool",
       "icon": "ae2:network_tool",
-      "shape": "circle",
-      "x": 240,
-      "y": 16,
+      "x": 336,
+      "y": 72,
       "description": [
-        "Craft a Network Tool to diagnose your ME network"
+        "Sooner or later a channel goes missing and a whole wing of the base goes dark. This is what tells you where."
       ],
       "dependencies": [
         "ae2_processors"
@@ -933,9 +1022,9 @@
       "title": "Why So Certus?",
       "icon": "ae2:certus_quartz_crystal",
       "x": 0,
-      "y": 112,
+      "y": 216,
       "description": [
-        "Obtain 1× Certus Quartz Crystal to progress in the Applied Energistics path."
+        "Certus quartz is the mineral the entire network is grown from. One crystal is all it takes to start; everything after this is multiplication."
       ],
       "dependencies": [],
       "tasks": [
@@ -972,10 +1061,10 @@
       "title": "ME Cooking",
       "icon": "appliedcooking:kitchen_station",
       "shape": "square",
-      "x": 288,
-      "y": 176,
+      "x": 384,
+      "y": 192,
       "description": [
-        "Obtain 1× Kitchen Station to progress in the Applied Energistics path."
+        "Food, filed and cooked by the network. A side road off the main line, but a comfortable one once the kitchen answers to a terminal."
       ],
       "dependencies": [
         "ae2_me_chest"
@@ -1008,10 +1097,10 @@
       "id": "quest_mnw5262m",
       "title": "256k Gold Chain",
       "icon": "ae2:cell_component_256k",
-      "x": 336,
-      "y": 224,
+      "x": 384,
+      "y": 240,
       "description": [
-        "Obtain 1× Cell Component 256k to progress in the Applied Energistics path."
+        "The component at the heart of every 256k cell below this - item, fluid, mana, source, energy, chemical. Make one and the whole storage fan opens."
       ],
       "dependencies": [
         "ae2_drive"
@@ -1044,11 +1133,10 @@
       "id": "quest_mnw5els3",
       "title": "Never Enough Item Storage Space (DISK)",
       "icon": "ae2things:disk_drive_256k",
-      "x": 288,
-      "y": 256,
+      "x": 432,
+      "y": 288,
       "description": [
-        "Craft a 256k ME DISK Drive.",
-        "They aren't limited to item typ efor storage!"
+        "DISKs drop the type limit ordinary cells enforce. One disk, as many different things as you care to throw at it."
       ],
       "dependencies": [
         "quest_mnw5262m"
@@ -1081,13 +1169,14 @@
       "id": "quest_mnw5gmxq",
       "title": "Never Enough Fluid Storage Space",
       "icon": "ae2:portable_fluid_cell_256k",
-      "x": 368,
-      "y": 288,
+      "x": 480,
+      "y": 144,
       "description": [
-        "Craft a 256k ME Fluid Storage Cell"
+        "Tanks stop being an architectural problem. Fluids get filed like everything else."
       ],
       "dependencies": [
-        "quest_mnw5262m"
+        "quest_mnw5262m",
+        "ae2_me_chest"
       ],
       "tasks": [
         {
@@ -1117,10 +1206,10 @@
       "id": "quest_mnw5hp7k",
       "title": "Never Enough Mana Storage Space",
       "icon": "appbot:mana_storage_cell_256k",
-      "x": 336,
-      "y": 304,
+      "x": 432,
+      "y": 432,
       "description": [
-        "Craft a 256k ME Mana Storage Cell"
+        "Botania's mana, banked in the network instead of in a field of pools."
       ],
       "dependencies": [
         "quest_mnw5262m"
@@ -1153,10 +1242,10 @@
       "id": "quest_mnw5k2fu",
       "title": "Never Enough Source Storage Space",
       "icon": "arseng:source_storage_cell_256k",
-      "x": 304,
-      "y": 288,
+      "x": 432,
+      "y": 384,
       "description": [
-        "Craft a 256k ME Mana Storage Cell"
+        "Ars Nouveau source, kept where the rest of your resources live rather than in jars beside the ritual."
       ],
       "dependencies": [
         "quest_mnw5262m"
@@ -1189,10 +1278,10 @@
       "id": "quest_mnw5nn6e",
       "title": "Never Enough Energy Storage Space",
       "icon": "appflux:fe_256k_cell",
-      "x": 384,
-      "y": 256,
+      "x": 432,
+      "y": 336,
       "description": [
-        "Craft a 256k ME Mana Storage Cell"
+        "Power becomes just another thing on the shelf. A cell's worth of FE, buffered and drawn on demand."
       ],
       "dependencies": [
         "quest_mnw5262m"
@@ -1225,10 +1314,10 @@
       "id": "quest_mnw5ocvy",
       "title": "Never Enough Chemical Storage Space",
       "icon": "appmek:chemical_storage_cell_256k",
-      "x": 400,
-      "y": 224,
+      "x": 432,
+      "y": 240,
       "description": [
-        "Craft a 256k ME Chemical Storage Cell"
+        "Mekanism gases and slurries, filed alongside the ingots. The chemical tank farm can come down."
       ],
       "dependencies": [
         "quest_mnw5262m"
@@ -1258,22 +1347,253 @@
       ]
     },
     {
-      "id": "ae2_security",
-      "title": "My Privacy Matters",
-      "icon": "mekanism:security_desk",
+      "id": "ae2_storage_bus",
+      "title": "Someone Else's Shelves",
+      "icon": "ae2:storage_bus",
       "x": 432,
-      "y": 64,
+      "y": 0,
       "description": [
-        "Obtain a Security Desk to keep your network and machines safe from prying hands."
+        "The one device that adds capacity without moving a single item - a chest, a barrel, a drawer wall becomes part of the network exactly where it stands.",
+        "The cheapest storage you will ever gain."
       ],
       "dependencies": [
-        "ae2_drive",
-        "ae2_me_chest"
+        "ae2_interface"
       ],
       "tasks": [
         {
           "type": "soa_additions:item",
-          "item": "mekanism:security_desk",
+          "item": "ae2:storage_bus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:storage_bus",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 600
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_import_bus",
+      "title": "Bring It In",
+      "icon": "ae2:import_bus",
+      "x": 432,
+      "y": 48,
+      "description": [
+        "Machines fill up and stall. An Import Bus is how output stops being something you walk over and collect."
+      ],
+      "dependencies": [
+        "ae2_interface"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:import_bus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:import_bus",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_export_bus",
+      "title": "Push It Out",
+      "icon": "ae2:export_bus",
+      "x": 432,
+      "y": 96,
+      "description": [
+        "The other direction: the network feeds the machine instead of you feeding it. Half of every automation loop you build from here leans on one."
+      ],
+      "dependencies": [
+        "ae2_interface"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:export_bus",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:export_bus",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:speed_card",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_annihilation_plane",
+      "title": "The World Is Your Inbox",
+      "icon": "ae2:annihilation_plane",
+      "x": 528,
+      "y": 168,
+      "description": [
+        "This is the network reaching into the world and taking. Aim one at anything that regrows and harvesting stops being a job you do."
+      ],
+      "dependencies": [
+        "ae2_import_bus"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:annihilation_plane",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_formation_plane",
+      "title": "The World Is Your Outbox",
+      "icon": "ae2:formation_plane",
+      "x": 528,
+      "y": 264,
+      "description": [
+        "The mirror of the annihilation plane - the network putting blocks and items back into the world. With both, a loop can run at either end without you standing in it."
+      ],
+      "dependencies": [
+        "ae2_export_bus"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:formation_plane",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 700
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_level_emitter",
+      "title": "Keep It Stocked",
+      "icon": "ae2:level_emitter",
+      "x": 528,
+      "y": 216,
+      "description": [
+        "Automation with no limit runs until the drives choke. A Level Emitter is the thermostat: it knows how much you have and says when that is enough."
+      ],
+      "dependencies": [
+        "ae2_export_bus"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:level_emitter",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:level_emitter",
+          "count": 2
+        },
+        {
+          "type": "soa_additions:xp",
+          "amount": 500
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "ae2_toggle_bus",
+      "title": "Kill Switch",
+      "icon": "ae2:toggle_bus",
+      "x": 576,
+      "y": 216,
+      "description": [
+        "One redstone signal and an entire branch of the network goes dark. Wired to the emitter above it, the system throttles itself instead of grinding forever."
+      ],
+      "dependencies": [
+        "ae2_level_emitter"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "ae2:toggle_bus",
           "count": 1
         }
       ],
@@ -1285,12 +1605,7 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_rare",
-          "count": 2
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "ae2:fluix_pearl",
-          "count": 4
+          "count": 1
         }
       ],
       "modes": [

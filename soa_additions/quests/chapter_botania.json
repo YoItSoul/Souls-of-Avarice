@@ -22,13 +22,16 @@
       "id": "bot_flower_crafting",
       "title": "Flower Crafting",
       "icon": "botania:apothecary_default",
-      "x": 48,
-      "y": 208,
+      "x": 96,
+      "y": 48,
       "description": [
-        "Craft a Petal Apothecary to begin your journey into Botania"
+        "Craft a Petal Apothecary to begin your journey into Botania",
+        "",
+        "Every flower Botania grows comes out of this basin, so nothing else in the chapter moves until it exists.",
+        "The Lexica Botania holds every petal recipe. Start it on the Pure Daisy."
       ],
       "dependencies": [
-        "quest_mnw6qg0e"
+        "bot_magic_era"
       ],
       "tasks": [
         {
@@ -63,13 +66,16 @@
       "id": "bot_magic_era",
       "title": "Magic Era",
       "icon": "botania:white_mystical_flower",
-      "x": 96,
-      "y": 208,
+      "x": 48,
+      "y": 48,
       "description": [
-        "Obtain a Mystical Flower"
+        "Obtain a Mystical Flower",
+        "",
+        "Sixteen colours of them grow wild across the world, and their petals are the raw material behind everything the Apothecary makes.",
+        "White is the colour that opens the path. Hoard it."
       ],
       "dependencies": [
-        "bot_flower_crafting"
+        "quest_mnw6qg0e"
       ],
       "tasks": [
         {
@@ -105,12 +111,15 @@
       "title": "Magical Wood",
       "icon": "botania:livingwood_log",
       "x": 144,
-      "y": 208,
+      "y": 24,
       "description": [
-        "Obtain Livingwood Log"
+        "Obtain Livingwood Log",
+        "",
+        "Botania's structural timber - wands, spreaders and the elven gateway frame all lean on it.",
+        "You do not craft this one; a Pure Daisy transmutes ordinary wood where it lies. The Lexica Botania covers the flower."
       ],
       "dependencies": [
-        "bot_magic_era"
+        "bot_flower_crafting"
       ],
       "tasks": [
         {
@@ -126,7 +135,7 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "botania:twig_wand",
+          "item": "botania:pure_daisy",
           "count": 1
         },
         {
@@ -145,13 +154,16 @@
       "id": "bot_magic_stone",
       "title": "Magic Stone",
       "icon": "botania:livingrock",
-      "x": 96,
-      "y": 256,
+      "x": 144,
+      "y": 72,
       "description": [
-        "Obtain Livingrock"
+        "Obtain Livingrock",
+        "",
+        "The other half of the building set, and you will burn through far more than you expect - pools, altars and tablets all eat it.",
+        "Grown by the same daisy, not crafted. Set up more of them than feels sensible."
       ],
       "dependencies": [
-        "bot_magic_era"
+        "bot_flower_crafting"
       ],
       "tasks": [
         {
@@ -167,8 +179,8 @@
         },
         {
           "type": "soa_additions:item",
-          "item": "botania:rune_water",
-          "count": 1
+          "item": "botania:livingrock",
+          "count": 16
         },
         {
           "type": "soa_additions:item",
@@ -186,8 +198,8 @@
       "id": "bot_twig_wand",
       "title": "The Force of Forest",
       "icon": "botania:twig_wand",
-      "x": 144,
-      "y": 144,
+      "x": 192,
+      "y": 0,
       "description": [
         "Craft a Wand of the Forest"
       ],
@@ -227,10 +239,13 @@
       "id": "bot_mana_spreader",
       "title": "Magic Conductor",
       "icon": "botania:mana_spreader",
-      "x": 208,
-      "y": 208,
+      "x": 192,
+      "y": 96,
       "description": [
-        "Craft a Mana Spreader to transport mana"
+        "Craft a Mana Spreader to transport mana",
+        "",
+        "Mana does not travel in pipes. It is fired as a beam from a spreader to whatever you bind it to, and the Wand of the Forest does the binding.",
+        "The pack retunes the recipe, so trust JEI over anything you remember from stock Botania."
       ],
       "dependencies": [
         "bot_magical_wood"
@@ -263,8 +278,8 @@
       "id": "bot_mana_pool",
       "title": "It's a Battery",
       "icon": "botania:mana_pool",
-      "x": 144,
-      "y": 256,
+      "x": 192,
+      "y": 48,
       "description": [
         "Craft a Mana Pool to store mana"
       ],
@@ -306,16 +321,60 @@
       ]
     },
     {
+      "id": "bot_manasteel",
+      "title": "Mana Infusion",
+      "icon": "botania:manasteel_ingot",
+      "x": 240,
+      "y": 48,
+      "description": [
+        "Obtain a Manasteel Ingot",
+        "",
+        "Mana Infusion is the engine of the whole mod: a charged pool rewrites ordinary materials into their mana-touched forms.",
+        "Manasteel gates every rune, and Terrasteel and Elementium past them. The Lexica Botania lists everything a pool will accept - there is far more than metal on that list."
+      ],
+      "dependencies": [
+        "bot_mana_pool"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
+          "item": "botania:manasteel_ingot",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 300
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "botania:manasteel_ingot",
+          "count": 6
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_common",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
       "id": "bot_mana_tablet",
       "title": "Pocket Mana",
       "icon": "botania:mana_tablet",
-      "x": 48,
-      "y": 304,
+      "x": 288,
+      "y": 0,
       "description": [
         "Craft a Mana Tablet for portable mana storage"
       ],
       "dependencies": [
-        "bot_mana_pool"
+        "bot_manasteel"
       ],
       "tasks": [
         {
@@ -360,13 +419,16 @@
       "id": "bot_crafting_halo",
       "title": "Elegant Crafting",
       "icon": "botania:auto_crafting_halo",
-      "x": 96,
-      "y": 304,
+      "x": 288,
+      "y": 96,
       "description": [
-        "Craft a Manufactory Halo"
+        "Craft a Manufactory Halo",
+        "",
+        "A ring of crafting slots you wear - the closest thing to automation you can carry, and a mercy long before you have a real base.",
+        "It is an upgrade of the Assembly Halo, so start there."
       ],
       "dependencies": [
-        "bot_mana_pool"
+        "bot_manasteel"
       ],
       "tasks": [
         {
@@ -402,14 +464,14 @@
       "title": "Rune Altar",
       "icon": "botania:runic_altar",
       "shape": "square",
-      "x": 208,
-      "y": 256,
+      "x": 288,
+      "y": 48,
       "description": [
         "Craft a Runic Altar"
       ],
       "dependencies": [
         "bot_mana_spreader",
-        "bot_mana_pool"
+        "bot_manasteel"
       ],
       "tasks": [
         {
@@ -451,13 +513,16 @@
       ]
     },
     {
-      "id": "bot_rune_collector",
-      "title": "Rune Collector",
-      "icon": "botania:rune_mana",
-      "x": 256,
-      "y": 208,
+      "id": "bot_elemental_runes",
+      "title": "Elemental Runes",
+      "icon": "botania:rune_earth",
+      "x": 336,
+      "y": 48,
       "description": [
-        "Collect all 16 runes"
+        "Collect the four elemental Runes and the Rune of Mana",
+        "",
+        "The first five the Runic Altar can teach you, and the toll the Terrestrial Agglomeration Plate demands.",
+        "Runes fed back into the Altar come home again; the Plate is the exception and keeps what it takes. The Lexica Botania has the rest of the set."
       ],
       "dependencies": [
         "bot_rune_altar"
@@ -485,6 +550,44 @@
         },
         {
           "type": "soa_additions:item",
+          "item": "botania:rune_mana",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:xp",
+          "amount": 2000
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "soa_additions:reward_ticket_rare",
+          "count": 1
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "bot_rune_collector",
+      "title": "Rune Collector",
+      "icon": "botania:rune_mana",
+      "x": 384,
+      "y": 0,
+      "description": [
+        "Collect the remaining eleven Runes",
+        "",
+        "The four seasons, the seven sins - every Rune the Runic Altar can make. The Mana-Infuser and the deeper Norse rituals need the seasonal ones, and a full set is simply good housekeeping."
+      ],
+      "dependencies": [
+        "bot_elemental_runes"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:item",
           "item": "botania:rune_spring",
           "count": 1
         },
@@ -501,11 +604,6 @@
         {
           "type": "soa_additions:item",
           "item": "botania:rune_winter",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "botania:rune_mana",
           "count": 1
         },
         {
@@ -566,13 +664,16 @@
       "title": "Terra Force",
       "icon": "botania:terra_plate",
       "shape": "square",
-      "x": 208,
-      "y": 304,
+      "x": 384,
+      "y": 96,
       "description": [
-        "Craft a Terrestrial Agglomeration Plate"
+        "Craft a Terrestrial Agglomeration Plate",
+        "",
+        "The door to Terrasteel, and the moment your elemental runes stop being reusable catalysts and get spent for good.",
+        "Decide where it lives before you make it."
       ],
       "dependencies": [
-        "bot_rune_altar"
+        "bot_elemental_runes"
       ],
       "tasks": [
         {
@@ -617,10 +718,13 @@
       "id": "bot_terrasteel",
       "title": "Essence of Earth",
       "icon": "botania:terrasteel_ingot",
-      "x": 256,
-      "y": 304,
+      "x": 432,
+      "y": 96,
       "description": [
-        "Obtain a Terrasteel Ingot"
+        "Obtain a Terrasteel Ingot",
+        "",
+        "The first real milestone of the chapter: Terrasteel opens Alfheim and the Gaia ritual both.",
+        "The plate wants a floor under it and a frankly rude amount of mana - the Lexica Botania draws the layout. Snatch the ingredients back mid-infusion and everything already poured in goes with them."
       ],
       "dependencies": [
         "bot_terra_plate"
@@ -658,13 +762,17 @@
       "id": "bot_nature_pylon",
       "title": "Crystal of Nature",
       "icon": "botania:mana_pylon",
-      "x": 144,
-      "y": 352,
+      "x": 480,
+      "y": 0,
       "description": [
-        "Craft a Mana Pylon"
+        "Craft a Mana Pylon, then upgrade it into a Natura Pylon",
+        "",
+        "Pylons draw on a pool beneath them for structures a spreader could never keep fed.",
+        "Natura is the tier the elven gateway insists on - plain Mana Pylons will not light it."
       ],
       "dependencies": [
-        "bot_mana_pool"
+        "bot_manasteel",
+        "bot_terrasteel"
       ],
       "tasks": [
         {
@@ -699,13 +807,17 @@
       "id": "bot_alfheim_portal",
       "title": "Not Actually a Portal",
       "icon": "botania:alfheim_portal",
-      "x": 304,
-      "y": 304,
+      "x": 528,
+      "y": 48,
       "description": [
-        "Craft an Elven Gateway Core"
+        "Craft an Elven Gateway Core",
+        "",
+        "Alfheim is where Elementium and Dreamwood come from, and this is the only door to it.",
+        "The Core is the middle of a structure, not the whole of it - the Lexica Botania draws the rest. Whatever you feed it, expect the gateway to keep drinking for as long as it stands open."
       ],
       "dependencies": [
-        "bot_terrasteel"
+        "bot_terrasteel",
+        "bot_nature_pylon"
       ],
       "tasks": [
         {
@@ -741,8 +853,8 @@
       "title": "Elementium Steel",
       "icon": "botania:elementium_ingot",
       "shape": "square",
-      "x": 304,
-      "y": 352,
+      "x": 576,
+      "y": 96,
       "description": [
         "Obtain an Elementium Ingot"
       ],
@@ -782,8 +894,8 @@
       "id": "bot_rainbow_rod",
       "title": "Sunshine Rainbow Little Pony",
       "icon": "botania:rainbow_rod",
-      "x": 368,
-      "y": 352,
+      "x": 624,
+      "y": 96,
       "description": [
         "Craft a Rod of the Bifrost"
       ],
@@ -823,8 +935,8 @@
       "id": "bot_rgb",
       "title": "R G B",
       "icon": "botania:fabulous_pool",
-      "x": 416,
-      "y": 352,
+      "x": 672,
+      "y": 96,
       "description": [
         "Craft a Fabulous Mana Pool"
       ],
@@ -864,10 +976,13 @@
       "id": "bot_terra_crystal",
       "title": "Terra Crystal",
       "icon": "botania:gaia_pylon",
-      "x": 416,
-      "y": 464,
+      "x": 816,
+      "y": 48,
       "description": [
-        "Craft a Gaia Pylon"
+        "Craft a Gaia Pylon",
+        "",
+        "These exist for exactly one purpose: the ritual that calls the Guardian. The Lexica Botania has the pattern they stand in.",
+        "MythicBotany rewrites the recipe in this pack, so read it off JEI rather than the book."
       ],
       "dependencies": [
         "bot_alfsteel_pylon"
@@ -906,10 +1021,13 @@
       "title": "Guardian of Earth",
       "icon": "botania:life_essence",
       "shape": "square",
-      "x": 480,
-      "y": 464,
+      "x": 864,
+      "y": 48,
       "description": [
-        "Defeat the Gaia Guardian"
+        "Defeat the Gaia Guardian",
+        "",
+        "Botania's boss, and a nastier fight than the Wither. He is summoned by ritual rather than found, so he arrives on your schedule - build the arena before you light it.",
+        "What he drops is the rung above Terrasteel. The Lexica Botania sets the ritual out."
       ],
       "dependencies": [
         "bot_terra_crystal"
@@ -947,8 +1065,8 @@
       "id": "bot_gaia_treasure",
       "title": "Guardian's Treasure",
       "icon": "botania:gaia_ingot",
-      "x": 528,
-      "y": 464,
+      "x": 912,
+      "y": 48,
       "description": [
         "Obtain a Gaia Spirit Ingot"
       ],
@@ -989,13 +1107,15 @@
       "title": "Dice of Fate",
       "icon": "botania:dice",
       "shape": "square",
-      "x": 480,
-      "y": 512,
+      "x": 960,
+      "y": 72,
       "description": [
-        "Summon the Gaia Guardian again with a Gaia Spirit Ingot and obtain the Dice of Fate"
+        "Obtain the Dice of Fate",
+        "",
+        "The Guardian keeps a harder second self, and the Dice falls from nothing else. Same ritual, steeper toll - a rematch you pick on purpose."
       ],
       "dependencies": [
-        "bot_gaia_guardian"
+        "bot_gaia_treasure"
       ],
       "tasks": [
         {
@@ -1026,8 +1146,8 @@
       "title": "Alfsteel",
       "icon": "mythicbotany:alfsteel_ingot",
       "shape": "square",
-      "x": 368,
-      "y": 400,
+      "x": 720,
+      "y": 48,
       "description": [
         "Obtain an Alfsteel Ingot"
       ],
@@ -1062,8 +1182,8 @@
       "id": "bot_alfsteel_pylon",
       "title": "Alfsteel Pylon",
       "icon": "mythicbotany:alfsteel_pylon",
-      "x": 368,
-      "y": 464,
+      "x": 768,
+      "y": 48,
       "description": [
         "Craft an Alfsteel Pylon"
       ],
@@ -1100,13 +1220,18 @@
       "id": "bot_mana_infuser",
       "title": "Mana-Infuser",
       "icon": "mythicbotany:mana_infuser",
-      "x": 304,
-      "y": 400,
+      "x": 672,
+      "y": 48,
       "description": [
-        "Craft a Mana-Infuser"
+        "Craft a Mana-Infuser",
+        "",
+        "MythicBotany's answer to the Agglomeration Plate, and the only road to Alfsteel.",
+        "It calls for runes the Altar can make but nothing so far has asked for, so budget a detour back to it."
       ],
       "dependencies": [
-        "bot_elementium"
+        "bot_elementium",
+        "bot_rune_collector",
+        "bot_rainbow_rod"
       ],
       "tasks": [
         {
@@ -1136,9 +1261,8 @@
       "id": "bot_rune_holder",
       "title": "Rune Rituals",
       "icon": "mythicbotany:central_rune_holder",
-      "shape": "circle",
-      "x": 480,
-      "y": 304,
+      "x": 624,
+      "y": 0,
       "description": [
         "Craft a Central Rune Holder to perform rune rituals"
       ],
@@ -1179,10 +1303,13 @@
       "title": "Tablet of Fimbultyr",
       "icon": "mythicbotany:fimbultyr_tablet",
       "shape": "square",
-      "x": 528,
-      "y": 304,
+      "x": 960,
+      "y": 24,
       "description": [
-        "Craft the Rune Tablet of Fimbultyr"
+        "Obtain the Rune Tablet of Fimbultyr",
+        "",
+        "The key to MythicBotany's rune rituals, and no bench anywhere will make it.",
+        "Only the hard mode Guardian carries it, and only for someone who has already drunk at Mimir's well. Kill him without that and you walk away with nothing."
       ],
       "dependencies": [
         "bot_rune_holder",
@@ -1216,8 +1343,8 @@
       "id": "bot_yggdrasil",
       "title": "Branch of Yggdrasil",
       "icon": "mythicbotany:yggdrasil_branch",
-      "x": 256,
-      "y": 256,
+      "x": 480,
+      "y": 96,
       "description": [
         "Obtain a Branch of Yggdrasil"
       ],
@@ -1253,8 +1380,8 @@
       "title": "Mjöllnir",
       "icon": "mythicbotany:mjoellnir",
       "shape": "square",
-      "x": 528,
-      "y": 240,
+      "x": 1008,
+      "y": 24,
       "description": [
         "Craft the mighty Mjöllnir"
       ],
@@ -1289,8 +1416,8 @@
       "id": "bot_kvasir_mead",
       "title": "Mead of Kvasir",
       "icon": "mythicbotany:kvasir_mead",
-      "x": 576,
-      "y": 304,
+      "x": 1008,
+      "y": 72,
       "description": [
         "Obtain the Mead of Kvasir"
       ],
@@ -1325,8 +1452,8 @@
       "id": "bot_andwari_ring",
       "title": "Ring of Andwari",
       "icon": "mythicbotany:andwari_ring",
-      "x": 480,
-      "y": 240,
+      "x": 672,
+      "y": 0,
       "description": [
         "Obtain the Ring of Andwari"
       ],
@@ -1362,9 +1489,12 @@
       "title": "THE MIGHTY LEXICON",
       "icon": "botania:lexicon",
       "x": 0,
-      "y": 208,
+      "y": 48,
       "description": [
-        "Obtain 1× Lexicon to progress in the Botania path."
+        "Craft the Lexica Botania",
+        "",
+        "Botania explains itself and refuses to be explained any other way. Every recipe, flower and multiblock in this chapter is written in here.",
+        "Keep it on your hotbar, not in a chest."
       ],
       "dependencies": [],
       "tasks": [
@@ -1394,11 +1524,14 @@
     {
       "id": "quest_mnw6rcpe",
       "title": "THE MIGHTY LEXICON... upgraded?",
-      "icon": "botania:lexicon{\"botania:elven_unlock\":1b}",
-      "x": 304,
-      "y": 256,
+      "icon": "botania:lexicon",
+      "x": 576,
+      "y": 0,
       "description": [
-        "Obtain 1× Lexicon to progress in the Botania path."
+        "Upgrade the Lexica Botania with elven knowledge",
+        "",
+        "Half the book stays shut until the elves have signed it, and the whole Alfhomancy branch sits behind that signature.",
+        "The gateway is the one who teaches. Give it something to read."
       ],
       "dependencies": [
         "bot_alfheim_portal"
@@ -1438,24 +1571,21 @@
       "title": "Drink Of Mimir",
       "icon": "mythicbotany:gjallar_horn_full",
       "shape": "square",
-      "x": 368,
-      "y": 304,
+      "x": 576,
+      "y": 48,
       "description": [
-        "Drink from a FULL Gjaller Horn."
+        "Drink from a FULL Gjallarhorn",
+        "",
+        "Mimir's well waits in Alfheim, and it will not fill just any vessel you carry down there - the horn has to be made worthy first.",
+        "The draught marks you permanently, and the hard mode Guardian checks for that mark before parting with the Tablet of Fimbultyr. Drink before that fight, not after."
       ],
       "dependencies": [
         "bot_alfheim_portal"
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "mythicbotany:gjallar_horn_full",
-          "count": 1
-        },
-        {
-          "type": "soa_additions:item",
-          "item": "mythicbotany:gjallar_horn_empty",
-          "count": 1
+          "type": "soa_additions:advancement",
+          "advancement": "mythicbotany:mythicbotany/mimir"
         }
       ],
       "rewards": [
@@ -1479,13 +1609,17 @@
       "id": "quest_monn7h1c",
       "title": "Rainbow Rune",
       "icon": "soa_additions:rainbow_rune",
-      "x": 304,
-      "y": 208,
+      "x": 432,
+      "y": 0,
       "description": [
-        "Sometimes you just don't have the mana..."
+        "Sometimes you just don't have the mana...",
+        "",
+        "A pack-only rune, and a sink for a complete set once the Runic Altar has nothing left to teach you.",
+        "Remember which device you are feeding: the Plate never gives runes back."
       ],
       "dependencies": [
-        "bot_rune_collector"
+        "bot_rune_collector",
+        "bot_terra_plate"
       ],
       "tasks": [
         {

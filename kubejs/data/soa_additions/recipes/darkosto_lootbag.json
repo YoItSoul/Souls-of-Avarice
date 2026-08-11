@@ -3,15 +3,14 @@
   "name": "Darkosto Bag",
   "rarity": "rare",
   "output": {
+    "rolls": 4,
     "entries": [
       {
         "stack": {
-          "id": "minecraft:cake",
-          "count": 1
+          "id": "minecraft:cake"
         },
         "weight": 20
       }
-    ],
-    "rolls": 3
+    ]
   }
 }

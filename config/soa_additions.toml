@@ -11,6 +11,17 @@
 	#Leave empty (default) to let players choose their own mode.
 	#Intended for dedicated/multiplayer servers where the admin picks the mode.
 	serverPackMode = ""
+	#If true, digging tools get a 'Mining Level' tooltip line naming their rank on the
+	#GreedyCraft ladder (Fragile through Infinity). Client-side display only.
+	#The matching block-side readout is the Jade 'mining_level' provider, toggled in Jade's own config.
+	showMiningLevelTooltip = true
+	#If true, players with an active cheat method (xray pack, cheat client, etc.) are
+	#allowed to join anyway — they are still flagged, and still told what was detected,
+	#but they are not disconnected. Off by default: on a normal server a detected cheat
+	#gets a disconnect explaining what to remove and how to come back.
+	#Singleplayer never disconnects regardless of this setting; it shows the player a
+	#screen offering to fix the problem or to enable cheating for that world.
+	allowCheatingPlayers = false
 
 	[soa_additions.jvmProfiler]
 		#Background JVM/server stats sampler. Writes CSV + summary to logs/soa_jvm_stats/.

@@ -1,7 +1,7 @@
 // Loading Backgrounds v2 configuration JSON file
 {
   // Amount of time that each background is displayed for
-  "secondsStay": 5.0,
+  "secondsStay": 60,
   // Amount of time it takes to fade between backgrounds
   "secondsFade": 0.5,
   // Background brightness, between 0.0 and 1.0

@@ -80,7 +80,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "createfood:rabbit_jerky",
+      "item": "nethersdelight:hoglin_sirloin",
       "amount": 1,
       "slot": "out1",
       "chance": 0.0003

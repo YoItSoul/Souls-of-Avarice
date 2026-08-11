@@ -1,19 +1,3 @@
-// ============================================================
-// SoA Urn Loot — port of GreedyCraft scripts/loot_tables/urn.zs
-//
-// 1.12 GC injected a reward list into pyramidplunder:urn (main/treasure/rare
-// pools). Pyramid Plunder has no 1.20 analog; replacement targets are Deeper
-// and Darker's ancient vases (deeperdarker:blocks/ancient_vase, silk-touch
-// guarded so vase-farming can't dupe loot) plus Supplementaries urns (cave
-// generation, tiered urn_loot tables). GC weights become independent chances
-// (weight/100), matching the loot_dungeon.js convention.
-//
-// Substitutions (GC -> SoA): reward tickets -> NBT'd lootbags; recall potion
-// -> waystones return scroll; sakura_diamond -> diamond; TF copper/tin/bronze/
-// platinum -> vanilla+thermal+soa equivalents; TF nugget meta -> silver
-// nugget. Dropped (no analog): sponsor_chest_fragment, meta_pet,
-// perfectly_generic_item.
-// ============================================================
 console.info('[soa_scripts] loot_urns.js loading')
 
 const URN_TABLES = [
@@ -22,10 +6,7 @@ const URN_TABLES = [
     'supplementaries:blocks/urn_loot/rare',
     'supplementaries:blocks/urn_loot/epic',
 ]
-// Block-break table: additions must NOT roll when silk-touched (that path
-// drops the vase item itself and would otherwise be an infinite loot farm).
-// Vanilla loot-condition JSON via customCondition — same guard the vase's
-// own table uses (this LootJS build has no matchTool).
+
 const VASE_TABLE = 'deeperdarker:blocks/ancient_vase'
 const NOT_SILK = {
     condition: 'minecraft:inverted',
@@ -39,7 +20,6 @@ const NOT_SILK = {
     },
 }
 
-// [item, weight, min, max] — weights/counts verbatim from GC urn.zs
 const URN_LOOT = [
     ['soa_additions:medkit_super', 1, 1, 1],
     ['soa_additions:medkit_big', 4, 1, 3],
@@ -67,7 +47,6 @@ const URN_LOOT = [
     ['soa_additions:purifying_dust', 3, 10, 40],
 ]
 
-// GC reward tickets -> tier crates (full display NBT)
 const URN_BAGS = [
     ['{"Loot":"soa_additions:loot_crate_common","Type":"COMMON","Name":"Common Loot Crate","Color":5635925}', 18, 1, 2],
     ['{"Loot":"soa_additions:loot_crate_rare","Type":"RARE","Name":"Rare Loot Crate","Color":5592575}', 5, 1, 1],

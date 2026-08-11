@@ -1,23 +1,10 @@
-// Ported from GreedyCraft: scripts/recipes/vanilla/crafting_table/remove.zs
-// 1.12.2 CraftTweaker -> 1.20.1 KubeJS
-//
-// Bulk recipe removals. This is a straight 1:1 translation; KubeJS fails
-// silent for absent-mod outputs, which is acceptable here (removals for
-// ghost items are no-ops). IDs rewritten per soa_exports/items.json and
-// memory/project_gc_port_id_mapping.md.
-//
-// Absent-mod removals intentionally kept as documentation -- if those mods
-// are ever added back, the removals fire correctly.
-//
-// projecte:item.pe_<X> -> projecte:<X>  (standard 1.20 rename)
-
 console.info('[soa_ported] vanilla_remove.js loading')
 
 ServerEvents.recipes(event => {
     console.info('[soa_ported] vanilla_remove.js: registering recipes')
 
     const outputs = [
-        // ProjectE
+
         'projecte:philosophers_stone',
         'projecte:transmutation_table',
         'projecte:rm_hoe','projecte:rm_pickaxe','projecte:rm_axe','projecte:rm_shovel',
@@ -40,18 +27,16 @@ ServerEvents.recipes(event => {
         'projecte:dm_shovel','projecte:dm_sword','projecte:dm_hoe',
         'projecte:rm_furnace','projecte:dm_furnace',
 
-        // DE / DA
         'draconicevolution:wyvern_axe','draconicevolution:wyvern_bow','draconicevolution:wyvern_pickaxe',
         'draconicevolution:wyvern_sword','draconicevolution:wyvern_shovel',
-        'draconicevolution:wyvern_helm','draconicevolution:wyvern_chestpiece', // GC: wyvern_chest
+        'draconicevolution:wyvern_helm','draconicevolution:wyvern_chestpiece',
         'draconicevolution:wyvern_leggings','draconicevolution:wyvern_boots',
         'draconicevolution:grinder',
         'draconicevolution:wyvern_core',
         'draconicevolution:generator',
-        'draconicadditions:chaotic_harness',  // GC: chaotic_armor_generator (best-guess)
-        'draconicadditions:draconic_harness', // GC: armor_generator (best-guess)
+        'draconicadditions:chaotic_harness',
+        'draconicadditions:draconic_harness',
 
-        // MysticalAgriculture (meta->named)
         'mysticalagriculture:inferium_essence','mysticalagriculture:prudentium_essence',
         'mysticalagriculture:tertium_essence','mysticalagriculture:imperium_essence',
         'mysticalagriculture:supremium_essence',
@@ -59,27 +44,19 @@ ServerEvents.recipes(event => {
         'mysticalagriculture:growth_accelerator',
         'mysticalagriculture:mystical_fertilizer',
 
-        // Mekanism
-        'mekanism:steel_casing',             // basicblock:6 best-guess
-        'mekanism:factory',                  // machineblock:4 best-guess
-        'mekanism:basic_control_circuit',    // controlcircuit:1
-        'mekanism:advanced_control_circuit', // controlcircuit:2
-        'mekanism:elite_control_circuit',    // controlcircuit:3
+        'mekanism:steel_casing',
+        'mekanism:factory',
+        'mekanism:basic_control_circuit',
+        'mekanism:advanced_control_circuit',
+        'mekanism:elite_control_circuit',
 
-        // Thermal / TX (1.20 drops most)
         'thermal:pyrotheum_dust',
         'thermal:satchel_basic',
 
-        // Avaritia
         'avaritia:extreme_crafting_table',
 
-        // Vanilla crafting table override-removal (GC disabled default recipe).
-        // NOTE: recipes/soa_deviations.js re-adds the vanilla 2x2 planks recipe
-        // afterwards -- GC's replacement for it was the TConstruct Crafting
-        // Station, which no longer exists after the Smithery swap.
         'minecraft:crafting_table',
 
-        // Misc absent-mod cleanups (kept as no-ops in case mod re-added)
         'oeintegration:excavatemodifier','projectex:stone_table','projectex:arcane_tablet',
         'projectex:collector','projectex:compressed_collector','projectex:power_flower',
         'projectex:energy_link','projectex:relay',
@@ -114,8 +91,7 @@ ServerEvents.recipes(event => {
         'thermalexpansion:cache','appliedenergistics2:cell_housing',
         'extracells:storage_component_256k','extracells:storage_component_1024k',
         'extracells:storage_component_4096k','extracells:storage_component_16384k',
-        'soa_additions:fusion_matrix_ingot', // tconevo:material
-        'extrabotany:life_essence',          // material:6 best-guess
+        'extrabotany:life_essence',
         'binniecore:storage',
         'randomthings:time_in_a_bottle',
         'enderio:soul_vial',
@@ -134,7 +110,7 @@ ServerEvents.recipes(event => {
         'extrautils2:generator_slime',
         'soa_additions:thaumium_helmet','soa_additions:thaumium_chestplate',
         'soa_additions:thaumium_leggings','soa_additions:thaumium_boots',
-        // thaumcraft:void_armor_* absent; skipped
+
         'randomthings:spectre_sword','randomthings:spectre_shovel','randomthings:spectre_pickaxe',
         'tcomplement:manyullyn_helmet','tcomplement:manyullyn_chestplate',
         'tcomplement:manyullyn_leggings','tcomplement:manyullyn_boots',
@@ -155,12 +131,11 @@ ServerEvents.recipes(event => {
         'modularmachinery:blockcasing_mm_t4','modularmachinery:blockcasing_mm_t2',
         'draconicevolution:stabilized_spawner',
         'enderio:powered_spawner','botania:spawner_mover','extrautils2:watering_can',
-        'soa_additions:modularium_ingot',   // modularmachinery:itemmodularium
         'extrabotany:material','extrautils2:compound_bow','mekanism:electric_bow',
         'sereneseasons:greenhouse_glass','actuallyadditions:player_interface',
         'tcomplement:high_oven_io','openblocks:sprinkler',
         'extrautils2:lawsword',
-        'enderio:grains_of_infinity', // item_material:10 best-guess
+        'enderio:grains_of_infinity',
         'cyclicmagic:bundled_pipe',
         'redstonearsenal:quiver_flux','redstonerepository:feeder','forestry:bronze_pickaxe',
         'mekanism:basic_universal_cable',
@@ -182,7 +157,7 @@ ServerEvents.recipes(event => {
         'bloodmagic:upgradetrainer','bloodmagic:upgradetome',
         'prefab:bulldozer','bloodmagic:mimic',
         'enderio:endergy_conduit','enderio:fluid_conduit',
-        'defiledlands:calling_stone','lootbags:loot_recycler','lootbags:loot_storage',
+        'defiled_lands_preborn:calling_stone','lootbags:loot_recycler','lootbags:loot_storage',
         'extrautils2:destruction_wand','extrautils2:builders_wand',
         'redstonerepository:ring_mining',
         'bloodmagic:soul_snare',
@@ -198,7 +173,8 @@ ServerEvents.recipes(event => {
         'mekanismgenerators:bio_generator',
         'twilightforest:charm_of_keeping_2','twilightforest:charm_of_keeping_3',
         'bloodmagic:altar',
-        'mekanism:basic_chemical_tank',
+
+        'mekanism:boiler_casing',
         'actuallyadditions:crate_keeper',
         'actuallyadditions:phantom_face',
         'extrautils2:user','cyclicmagic:block_user',
@@ -218,7 +194,9 @@ ServerEvents.recipes(event => {
     ]
     outputs.forEach(out => event.remove({ output: out }))
 
-    // Remove by recipe name
+    event.remove({ output: 'soa_additions:fusion_matrix_ingot', not: { id: 'soa_additions:fusion_matrix_ingot_from_block' } })
+    event.remove({ output: 'soa_additions:modularium_ingot', not: { id: 'soa_additions:modularium_ingot_from_block' } })
+
     const byName = [
         'projecte:conversions/emerald_to_diamond',
         'projecte:conversions/diamond_to_emerald',

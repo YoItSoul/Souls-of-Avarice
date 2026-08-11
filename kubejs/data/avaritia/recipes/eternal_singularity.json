@@ -1,5 +1,4 @@
 {
-  "_comment": "GC parity port (avaritia.zs eternal_singularity): GC consumed all avaritia singularities + all JAOPCA material singularities for x2 output. The avaritia:eternal_singularity type auto-requires Re-Avaritia's own singularities; 'ingredients' adds the pack's ExtendedCrafting material singularities (the 1.20 counterpart of GC's JAOPCA set), 'count' restores GC's doubled output.",
   "type": "avaritia:eternal_singularity",
   "category": "misc",
   "count": 2,

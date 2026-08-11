@@ -81,7 +81,7 @@
     {
       "type": "custommachinery:item",
       "mode": "input",
-      "item": "defiledlands:remorseful_gem",
+      "item": "defiled_lands_preborn:remorseful_gem",
       "amount": 1,
       "slot": "cat4"
     },

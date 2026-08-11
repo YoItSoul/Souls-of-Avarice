@@ -1,0 +1,908 @@
+{
+ "id": "chapter_delightful_food",
+ "title": "Delightful Food",
+ "icon": "avaritia:ultimate_stew",
+ "sort_order": 35,
+ "description": [
+  "The twenty-four best meals you can cook in this pack, and the two you cannot.",
+  "Nothing here is locked behind anything else on this page. Take them in any order you like; the ones nearest the centre are worth the most."
+ ],
+ "modes": [
+  "casual",
+  "adventure",
+  "expert"
+ ],
+ "requires_chapter": [],
+ "requires_quests": [
+  "quest_mnsa7vbh"
+ ],
+ "visibility": "hidden_until_deps",
+ "parent_chapter": "chapter_soa",
+ "quests": [
+  {
+   "id": "food_celestial_slice",
+   "title": "Slice of Celestial Fruit",
+   "icon": "enigmaticdelicacy:astral_fruit_slice",
+   "x": 48,
+   "y": 48,
+   "description": [
+    "Sixteen saturation off one cut. Nothing short of Avaritia beats it.",
+    "Astral trees grow the fruit themselves — find one, break the fruit down, put it on a cutting board. The first slice is what unlocks the sapling recipe, so after that you can grow your own."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "enigmaticdelicacy:astral_fruit_slice",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_poseidons_breakfast",
+   "title": "Poseidon's Breakfast",
+   "icon": "aquamirae:poseidons_breakfast",
+   "x": 96,
+   "y": 48,
+   "description": [
+    "Twenty hunger in one sitting, and it costs an enchanted golden apple to get there.",
+    "Nothing else the ocean makes comes close."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aquamirae:poseidons_breakfast",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_hydra_chop",
+   "title": "Hydra Chop",
+   "icon": "twilightforest:hydra_chop",
+   "x": 144,
+   "y": 48,
+   "description": [
+    "The Hydra leaves a trophy. Put the trophy on a cutting board and it becomes dinner instead of decoration."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "twilightforest:hydra_chop",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_insanium_apple",
+   "title": "Insanium Apple",
+   "icon": "mysticalagradditions:insanium_apple",
+   "x": 144,
+   "y": 96,
+   "description": [
+    "Four insanium essence around a golden apple. The only reason anyone grows the top tier for food."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "mysticalagradditions:insanium_apple",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_inventory_cake",
+   "title": "Ender Inventory Cake",
+   "icon": "cyclic:inventory_cake",
+   "x": 144,
+   "y": 144,
+   "description": [
+    "An ender chest, a cake and a fistful of gems. Ten saturation a slice — the highest of anything you can bake."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "cyclic:inventory_cake",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_hydra_burger",
+   "title": "Hydra Burger",
+   "icon": "twilightdelight:hydra_burger",
+   "x": 96,
+   "y": 144,
+   "description": [
+    "A fire swamp boss, between two slices of bread, with salad."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "twilightdelight:hydra_burger",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_honey_apple",
+   "title": "Honey Apple",
+   "icon": "cyclic:apple_honey",
+   "x": 48,
+   "y": 144,
+   "description": [
+    "An apple and a block of honey. The cheapest sixteen hunger in the pack by a wide margin — worth keeping a stack of long after you can afford better."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "cyclic:apple_honey",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_sniffer_sizzle",
+   "title": "Sniffer Sizzle",
+   "icon": "unusual_delight:sniffer_sizzle",
+   "x": 48,
+   "y": 96,
+   "description": [
+    "This one costs a whole unhatched egg. Fifteen hunger for a species you decided not to have."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "unusual_delight:sniffer_sizzle",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 800
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_epic",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_abyssal_risotto",
+   "title": "Abyssal Risotto",
+   "icon": "aquamirae_delight:abyssal_risotto",
+   "x": 0,
+   "y": 0,
+   "description": [
+    "Built around an abyssal amethyst, which only the Maze Mother leaves behind. You will kill her long before you cook this."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aquamirae_delight:abyssal_risotto",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_supremium_apple",
+   "title": "Supremium Apple",
+   "icon": "mysticalagradditions:supremium_apple",
+   "x": 48,
+   "y": 0,
+   "description": [
+    "The apple one tier down. You will not have the essence to spare until your farm's top tier is running."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "mysticalagradditions:supremium_apple",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_enchanted_berries",
+   "title": "Bowl of Enchanted Berries",
+   "icon": "aetherdelight:bowl_of_enchanted_berries",
+   "x": 96,
+   "y": 0,
+   "description": [
+    "Blue berries go into the Enchanter and come out worth three times as much. The best thing that floats."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aetherdelight:bowl_of_enchanted_berries",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_anglers_soup",
+   "title": "Angler's Soup",
+   "icon": "aquamirae_delight:anglers_soup",
+   "x": 144,
+   "y": 0,
+   "description": [
+    "An angler's fang, pulled from the thing that was hunting you under the ice, boiled with the fish it was chasing."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aquamirae_delight:anglers_soup",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_elder_guardian",
+   "title": "Cabbage Wrapped Elder Guardian",
+   "icon": "oceansdelight:cabbage_wrapped_elder_guardian",
+   "x": 192,
+   "y": 0,
+   "description": [
+    "An elder guardian only leaves a slab of meat behind if you kill it holding a knife. Nothing else in your hotbar counts.",
+    "Wrap it in a garden and you have the best thing a monument will ever give you."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "oceansdelight:cabbage_wrapped_elder_guardian",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_steak_and_pod",
+   "title": "Steak and Pod",
+   "icon": "unusual_delight:steak_and_pod",
+   "x": 192,
+   "y": 48,
+   "description": [
+    "The torchflower and the pitcher pod are not in any structure. A living sniffer has to dig them up for you, so keep one alive before you eat the rest."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "unusual_delight:steak_and_pod",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_marshy_delight",
+   "title": "Marshy Delight",
+   "icon": "meetyourfight:marshy_delight",
+   "x": 192,
+   "y": 96,
+   "description": [
+    "A mossy tooth off the Swampjaw, cooked mutton, and whatever grows in the dark. Boss loot, served warm."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "meetyourfight:marshy_delight",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_tomahawk_smeak",
+   "title": "Grilled Tomahawk Smeak",
+   "icon": "twilightdelight:grilled_tomahawk_smeak",
+   "x": 192,
+   "y": 144,
+   "description": [
+    "Minotaur steak on the bone, glazed in mushgloom sauce. The best meal the Twilight Forest offers before the bosses."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "twilightdelight:grilled_tomahawk_smeak",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_trout_steak",
+   "title": "Trout Steak",
+   "icon": "aquaculturedelight:trout_steak",
+   "x": 192,
+   "y": 192,
+   "description": [
+    "The best thing an ordinary fishing rod will ever put on a plate."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aquaculturedelight:trout_steak",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_squid_ink_pasta",
+   "title": "Squid Ink Pasta",
+   "icon": "farmersdelight:squid_ink_pasta",
+   "x": 144,
+   "y": 192,
+   "description": [
+    "Black pasta, cooked fish, and the ink of something you had to catch in the dark."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "farmersdelight:squid_ink_pasta",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_mutton_chops",
+   "title": "Roasted Mutton Chops",
+   "icon": "farmersdelight:roasted_mutton_chops",
+   "x": 96,
+   "y": 192,
+   "description": [
+    "Fourteen hunger off a sheep farm and a campfire. The cheapest thing on this board to mass-produce."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "farmersdelight:roasted_mutton_chops",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_halibut",
+   "title": "Halibut with Tartar Sauce",
+   "icon": "aquaculturedelight:halibut_with_tartar_sauce",
+   "x": 48,
+   "y": 192,
+   "description": [
+    "Halibut only bite in cold water, so this is a trip north before it is a recipe."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aquaculturedelight:halibut_with_tartar_sauce",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_sea_stew",
+   "title": "Sea Stew",
+   "icon": "aquamirae:sea_stew",
+   "x": 0,
+   "y": 192,
+   "description": [
+    "Esca and fins come off anglerfish; oxygelium only grows on the sea ridge. Six things that all have to be dived for, in one bowl."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "aquamirae:sea_stew",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_apple_pie",
+   "title": "Apple Pie",
+   "icon": "valoria:apple_pie",
+   "x": 0,
+   "y": 144,
+   "description": [
+    "Three apples, three cocoa, three buckets of milk. No structure, no boss, no dimension — just a working farm."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "valoria:apple_pie",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_scavenger_meat",
+   "title": "Cooked Scavenger Meat",
+   "icon": "valoria:cooked_scavenger_meat",
+   "x": 0,
+   "y": 96,
+   "description": [
+    "Whatever a scavenger is, it cooks like pork and feeds like steak. Kill one and put it on the fire."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "valoria:cooked_scavenger_meat",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_magma_gelatin",
+   "title": "Magma Gelatin",
+   "icon": "nethersdelight:magma_gelatin",
+   "x": 0,
+   "y": 48,
+   "description": [
+    "Three magma cream and a propelpearl in a cooking pot. One hunger, six saturation — it fills nothing and sustains you for ages."
+   ],
+   "dependencies": [],
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "nethersdelight:magma_gelatin",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 400
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_rare",
+     "count": 1
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  },
+  {
+   "id": "food_last_supper",
+   "title": "The Last Supper",
+   "icon": "avaritia:ultimate_stew",
+   "x": 96,
+   "y": 96,
+   "description": [
+    "Eight hundred saturation apiece. One is a stew of every crop that has ever grown; the other is every animal that has ever run from you, rolled into a ball.",
+    "Cook all twenty-four plates on this board first. There is nothing left to eat after these."
+   ],
+   "dependencies": [
+    "food_celestial_slice",
+    "food_poseidons_breakfast",
+    "food_hydra_chop",
+    "food_insanium_apple",
+    "food_inventory_cake",
+    "food_hydra_burger",
+    "food_honey_apple",
+    "food_sniffer_sizzle",
+    "food_abyssal_risotto",
+    "food_supremium_apple",
+    "food_enchanted_berries",
+    "food_anglers_soup",
+    "food_elder_guardian",
+    "food_steak_and_pod",
+    "food_marshy_delight",
+    "food_tomahawk_smeak",
+    "food_trout_steak",
+    "food_squid_ink_pasta",
+    "food_mutton_chops",
+    "food_halibut",
+    "food_sea_stew",
+    "food_apple_pie",
+    "food_scavenger_meat",
+    "food_magma_gelatin"
+   ],
+   "show_deps": false,
+   "tasks": [
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:ultimate_stew",
+     "count": 1
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "avaritia:cosmic_meatballs",
+     "count": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": "soa_additions:xp",
+     "amount": 5000
+    },
+    {
+     "type": "soa_additions:item",
+     "item": "soa_additions:reward_ticket_legendary",
+     "count": 3
+    }
+   ],
+   "modes": [
+    "casual",
+    "adventure",
+    "expert"
+   ]
+  }
+ ]
+}

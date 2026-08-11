@@ -3,13 +3,14 @@
   "name": "Direwolf Bag",
   "rarity": "rare",
   "output": {
+    "rolls": 5,
     "entries": [
       {
         "stack": {
           "id": "minecraft:cobblestone",
           "count": 64
         },
-        "weight": 20
+        "weight": 80
       },
       {
         "stack": {
@@ -18,7 +19,6 @@
         },
         "weight": 20
       }
-    ],
-    "rolls": 5
+    ]
   }
 }

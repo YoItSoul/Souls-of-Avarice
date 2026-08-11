@@ -1,40 +1,8 @@
-// Ported from GreedyCraft: scripts/recipes/vanilla/crafting_table/shaped.zs
-// 1.12.2 CraftTweaker -> 1.20.1 KubeJS
-//
-// 1415-line GC source, 279 addShaped entries, 130 portable to SoA installed mods.
-// Generator: tmp/port_shaped.py (re-runnable; preserves auto_gen_<hash> names).
-//
-// Tag substitutions (CT oredict -> 1.20.1 forge tags):
-//   <ore:ingotX>      -> #forge:ingots/x       <ore:blockX>  -> #forge:blocks/x
-//   <ore:nuggetX>     -> #forge:nuggets/x      <ore:dustX>   -> #forge:dusts/x
-//   <ore:gearX>       -> #forge:gears/x        <ore:plateX>  -> #forge:plates/x
-//   <ore:crystalX>    -> #forge:crystals/x     <ore:gemX>    -> #forge:gems/x
-//   <ore:rodX>/<stickX> -> #forge:rods/x      <ore:petalX>  -> #botania:petals/x
-//   <ore:stringX>     -> #forge:strings/x      <ore:fluidX>  -> #forge:fluids/x
-//
-// ID rewrites (CT 1.12.2 ID -> 1.20.1 ID):
-//   additions:greedycraft-X  -> soa_additions:X      additions:X      -> soa_additions:X
-//   aether_legacy:X          -> aether:X             thermalfoundation:X / thermalexpansion:X -> thermal:X
-//   cyclicmagic:X            -> cyclic:X             hooked:X         -> rehooked:X
-//   projectex:X              -> projectextended:X    buildinggadgets:X -> buildinggadgets2:X
-//
-// Per project policy: recipes whose IDs no longer resolve in 1.20.1 will silently
-// fail-load (KubeJS warning). Manual ID fixups belong in a follow-up pass.
-
 console.info('[soa_ported] vanilla_shaped.js loading')
 
 ServerEvents.recipes(event => {
     console.info('[soa_ported] vanilla_shaped.js: registering recipes')
 
-    // Pre-check to silently skip any recipe whose result or ingredient items
-    // aren't in the current registry. Catches the long tail of dead 1.12 IDs
-    // (absent mods, removed meta-items, deleted JAOPCA essences, etc.) that
-    // would otherwise spam "ItemStack 'result' can't be empty!" or "Item array
-    // cannot be empty" warnings during registration. Tags (#…) skip the check.
-    // Item.exists() returns true for some dead 1.12 IDs that KubeJS still
-    // resolves to an empty (air) stack — so the only reliable check is to
-    // build the stack and ask if it's empty. Same goes for Item.of(...)
-    // results passed in directly.
     const _liveItem = v => {
         if (typeof v === 'string') {
             if (v.length === 0 || v.charAt(0) === '#') return true
@@ -49,8 +17,6 @@ ServerEvents.recipes(event => {
         return event.shaped(out, grid, keys).id('soa_ported:shp_' + name)
     }
 
-    // Vanilla spawn-egg recipes from GC (NBT-driven, can't be auto-generated).
-    // KubeJS' shaped() accepts an Item.of() result with EntityTag NBT.
     const spawnEgg = (entityId, reagent, name) => {
         const shortName = entityId.indexOf(':') >= 0 ? entityId.split(':')[1] : entityId
         event.shaped(
@@ -66,48 +32,19 @@ ServerEvents.recipes(event => {
     spawnEgg('minecraft:enderman', 'minecraft:ender_pearl',     'enderman')
     spawnEgg('minecraft:ghast',    '#forge:glass',   'ghast_glass')
 
-    // (death_counter recipe lives at kubejs/data/soa_additions/recipes/death_counter.json)
-
-    // ----------------------------------------------------------------
-// 130 portable recipes auto-generated from GC vanilla/crafting_table/shaped.zs
-// (out of 249 parsed) — generator: tmp/port_shaped.py
-
     shp('minecraft:dragon_egg',
         [' A ', 'ABA', 'AAA'],
         { A: '#forge:dragon_scales', B: '#forge:nether_stars' },
         'dragonegg')
 
-    // [SoA] GC 'tconstruct:materials:50' = Creative Modifier
-    // (verified GC shaped.zs:37). 1.20.1 TCon has 'tconstruct:creative_slot'
-    // (the creative-mode modifier-slot item).
-    // GC 'Creative Modifier' (tconstruct:materials:50) -> soa_additions:creative_modifier.
-    // Item ported into the soa_additions mod (ModItems.java); requires a mod rebuild to
-    // resolve in-game. The Smithery modifier BEHAVIOR still needs wiring separately.
     shp('soa_additions:creative_modifier',
         [' A ', ' B '],
-        { A: '#forge:storage_blocks/draconic_metal', B: 'avaritia:singularity' },  // tag shipped by soa_additions (storage_blocks/, not blocks/)
+        { A: '#forge:storage_blocks/draconic_metal', B: 'avaritia:singularity' },
         'creativehead')
 
-    // [SoA] Disabled — result rename works (skull:1 → wither_skeleton_skull),
-    // but ingredients are both dead in 1.20.1: 'quark:black_ash' was removed
-    // from Quark, and 'mysticalagriculture:crafting' (1.12 meta-item; :15
-    // was Wither Essence per GC shaped.zs:42) split per-essence with no
-    // 'wither_essence' equivalent in this MA build.
-    /*
-    shp('minecraft:wither_skeleton_skull',
-        ['AAA', 'ABA', 'AAA'],
-        { A: 'quark:black_ash', B: 'mysticalagriculture:crafting' },
-        'witherskull')
-    */
-
-    // [SoA] 'scalinghealth:difficultychanger' was dropped in the 1.20.1
-    // rewrite; SoA reimplemented it as 'soa_additions:difficulty_changer'.
-    // Note ingredient 'tconstruct:materials' is dead (1.12 meta-item); first
-    // recipe will register but be uncraftable until that ingredient is
-    // remapped. 'scalinghealth:heart_crystal' may also need a successor.
     shp('soa_additions:difficulty_changer',
         [' A ', 'ABA', 'AAA'],
-        { A: 'soa_additions:wither_bone', B: 'scalinghealth:heart_crystal' },  // GC materials:17 = Necrotic Bone
+        { A: 'soa_additions:wither_bone', B: 'scalinghealth:heart_crystal' },
         'difficultychanger_up_2')
 
     shp('soa_additions:difficulty_changer',
@@ -167,7 +104,7 @@ ServerEvents.recipes(event => {
 
     shp(Item.of('chancecubes:chance_cube', 4),
         ['ABA', 'BCB', 'ABA'],
-        { A: 'minecraft:lapis_lazuli', B: 'minecraft:lapis_block', C: 'soa_additions:lucky_clover' },  // GC dye:4 = lapis; 'minecraft:dye' was a dead 1.20 id
+        { A: 'minecraft:lapis_lazuli', B: 'minecraft:lapis_block', C: 'soa_additions:lucky_clover' },
         'auto_gen_-1533033400')
 
     shp('projecte:harvest_goddess_band',
@@ -205,31 +142,6 @@ ServerEvents.recipes(event => {
         { A: 'scalinghealth:heart_crystal', B: 'soa_additions:medkit_big' },
         'auto_gen_-1873046907')
 
-    // [SoA-FLAG: MA 1.20 split into 5 tiers; no 1:1 mapping] shp(Item.of('mysticalagriculture:growth_accelerator', 2),
-    //     ['AAA', 'ABA', 'AAA'],
-    //     { A: 'mysticalagriculture:storage', B: '#forge:storage_blocks/cytosinite' },
-    //     'auto_gen_1179581625')
-
-    // [SoA] Mekanism Generators 'generator' meta-item resolved from GC source
-    // metadata (verified GC shaped.zs:252,267,292,297,302):
-    //   :1  = Solar Generator           → mekanismgenerators:solar_generator
-    //   :5  = Advanced Solar Generator  → mekanismgenerators:advanced_solar_generator
-    //   :6  = Gas-Burning Generator     → mekanismgenerators:gas_burning_generator
-    //   :12 = Reactor Port (creative wrap) — left disabled, ambiguous between
-    //         fission_reactor_port and fusion_reactor_port without further
-    //         GC context; design-clarification needed.
-    // 'mekanism:machineblock:4' = Digital Miner → mekanism:digital_miner.
-    /*
-    shp('mekanismgenerators:generator',
-        [' A ', 'ABA', ' A '],
-        { A: 'mekanismgenerators:generator', B: '#forge:soul_creative' },
-        'auto_gen_-1186141268')
-    */
-
-    // Original GC ingredients resolved (shaped.zs:267-271):
-    //   machineblock:15 = Logistical Sorter → mekanism:logistical_sorter
-    //   basicblock:8    = Steel Casing      → mekanism:steel_casing
-    //   machineblock2:6 = Chemical Washer   → mekanism:chemical_washer
     shp('mekanism:digital_miner',
         ['ABA', 'CDE', 'FGF'],
         { A: 'mekanism:teleportation_core', B: 'mekanism:logistical_sorter', C: 'mekanism:robit', D: 'mekanism:steel_casing', E: 'mekanism:chemical_washer', F: '#forge:shards/creative', G: '#forge:storage_blocks/wyvern_metal' },
@@ -240,8 +152,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:alloys/ultimate', B: '#forge:ingots/aeonsteel', C: 'mekanism:energy_tablet', D: '#forge:circuits/ultimate' },
         'auto_gen_1084804943')
 
-    // Mekanism 1.20.1 alloy renames: atomicalloy → alloy_atomic,
-    // enrichedalloy → alloy_infused.
     shp('mekanismgenerators:advanced_solar_generator',
         ['AAA', 'ABA', 'CCC'],
         { A: 'mekanismgenerators:solar_generator', B: 'mekanism:alloy_atomic', C: 'mekanism:alloy_infused' },
@@ -267,7 +177,6 @@ ServerEvents.recipes(event => {
         { A: 'soa_additions:experience_nugget' },
         'auto_gen_-1600085367')
 
-    // GC auto_gen: 9x Actually Additions Solidified Experience -> Knowledge Essence Ingot
     shp('soa_additions:experience_ingot',
         ['AAA', 'AAA', 'AAA'],
         { A: 'actuallyadditions:solidified_experience' },
@@ -328,10 +237,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:obsidian', B: '#forge:gems/diamond', C: '#forge:ender_pearls' },
         'auto_gen_918073950')
 
-    // [SoA] GC source: 'thermalfoundation:material:23' = Stone Gear (verified via
-    // GC lang: material:23 -> "Stone Gear"; Saw Blade is material:657, a DIFFERENT
-    // id). Prior port wrongly output thermal:saw_blade from cobblestone. Correct
-    // 1.20 "Stone Gear" is hammerlib:gears/stone (no native recipe in the jar).
     shp('hammerlib:gears/stone',
         [' A ', 'A A', ' A '],
         { A: '#forge:cobblestone' },
@@ -369,7 +274,7 @@ ServerEvents.recipes(event => {
 
     shp('soa_additions:death_coin',
         ['ABA', 'CDC', 'AEA'],
-        { A: 'draconicevolution:awakened_core', B: 'soa_additions:ancient_tome_fragment', C: 'tconevo:draconic_metal_ingot', D: 'soa_additions:bounty_hunter_medal', E: '#forge:shards/creative' },  // GC metal:5 = Draconic Metal Ingot
+        { A: 'draconicevolution:awakened_core', B: 'soa_additions:ancient_tome_fragment', C: 'tconevo:draconic_metal_ingot', D: 'soa_additions:bounty_hunter_medal', E: '#forge:shards/creative' },
         'auto_gen_-1606461473')
 
     shp('soa_additions:infernium_ingot',
@@ -387,8 +292,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:plant_fibre' },
         'auto_gen_1077378325')
 
-    // [SoA] 'rehooked:hook' meta-item split per material in 1.20.1; this
-    // recipe (sticks/wood + stone_pickaxe + string) is the wooden hook.
     shp('rehooked:wood_hook',
         ['AAB', ' CA', 'C A'],
         { A: '#forge:rods/wooden', B: 'minecraft:stone_pickaxe', C: '#forge:string' },
@@ -419,31 +322,10 @@ ServerEvents.recipes(event => {
         { A: '#forge:rods/wooden', B: '#forge:string' },
         'auto_gen_-1848316431')
 
-    // [SoA] RFTools split into rftoolsbase/rftoolsutility/etc. in 1.20.1.
-    // 'machine_frame' moved to rftoolsbase. 'shape_card' and
-    // 'environmental_controller' (RFTools Builder/RFTools Control parts)
-    // aren't present in this pack's RFTools subset — left disabled.
     shp('rftoolsbase:machine_frame',
         ['ABA', 'BCB', 'ABA'],
         { A: '#forge:glass', B: '#forge:ingots/iron', C: '#forge:gears/tin' },
         'frame_alt')
-
-    /*
-    shp('rftools:shape_card',
-        ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:paper', B: '#forge:ingots/brick', C: '#forge:shards/creative' },
-        'card_0')
-
-    shp('rftools:shape_card',
-        ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:paper', B: '#forge:ingots/void', C: 'rftools:shape_card' },
-        'card_1')
-
-    shp('rftools:environmental_controller',
-        ['ABA', 'CDC', 'ABA'],
-        { A: '#forge:pearl_ender_eye', B: '#forge:nether_stars', C: '#forge:shards/creative', D: 'rftools:machine_frame' },
-        'environmental_controller')
-    */
 
     shp('soa_additions:cytosinite_block',
         ['AAA', 'AAA', 'AAA'],
@@ -505,8 +387,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:glass_panes', B: '#forge:bone' },
         'difficulty_syncer')
 
-    // [SoA] Solar Flux 1.20.1 renamed panels to sp_N (solar_panel_1 → sp_1,
-    // ..., solar_panel_8 → sp_8). Ingredient solar_panel_1 also rewritten.
     shp('solarflux:sp_2',
         ['AAA', 'BCB', 'DDD'],
         { A: 'solarflux:mirror', B: 'solarflux:sp_1', C: '#forge:ingots/gold', D: '#forge:ingots/iron' },
@@ -552,8 +432,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:pearl_ender_eye', B: '#forge:eternal_life_essence', C: 'soa_additions:pearl_of_knowledge' },
         'experience_transporter')
 
-    // [SoA] 'soa_additions:netherite_block' was a port artifact; SoA didn't
-    // ship its own — vanilla 'minecraft:netherite_block' is the target.
     shp('minecraft:netherite_block',
         ['AAA', 'AAA', 'AAA'],
         { A: '#forge:ingots/netherite' },
@@ -564,9 +442,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:ingots/stainless_steel' },
         'stainless_steel_block')
 
-    // [SoA] Mekanism 1.20.1 split 'basicblock' meta-item; recipe pattern
-    // (stainless_steel + glass_hardened + osmium) matches the basic machine
-    // casing → 'mekanism:steel_casing'.
     shp('mekanism:steel_casing',
         ['ABA', 'BCB', 'ABA'],
         { A: '#forge:ingots/stainless_steel', B: '#enderio:fused_quartz', C: '#forge:ingots/osmium' },
@@ -592,11 +467,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:ingots/aeonsteel', B: 'minecraft:bedrock', C: '#forge:ingots/ravaging', D: '#forge:nether_stars' },
         'auto_gen_12241914')
 
-    // [SoA] Disabled — GC ingredient was 'thermalfoundation:material:833'
-    // = Cryotheum Dust (verified GC shaped.zs). Thermal 1.20.1 dropped the
-    // dust forms (only fluid 'thermal:cryotheum' remains), so no clean
-    // item-form successor for the recipe.
-    // GC material:833 = Tar (crafttweaker.log-verified); thermal 1.20 HAS thermal:tar.
     shp('soa_additions:nylon_string',
         ['AAA'],
         { A: 'thermal:tar' },
@@ -607,10 +477,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:strings/nylon' },
         'nylon_cloth')
 
-    // [SoA] Disabled — GC ingredient was 'thermalfoundation:material:832'
-    // = Pyrotheum Dust (verified GC shaped.zs). Same rationale as nylon_string
-    // above: Thermal 1.20.1 has no dust item form, only the fluid.
-    // GC material:832 = Rosin (crafttweaker.log-verified); thermal 1.20 HAS thermal:rosin.
     shp('soa_additions:rubber_band',
         ['AAA'],
         { A: 'thermal:rosin' },
@@ -626,13 +492,6 @@ ServerEvents.recipes(event => {
         { A: 'quark:rune', B: '#forge:casts' },
         'plate_of_honor')
 
-    // [SoA] GC source 'projectex:collector:5' = top-tier collector
-    // (verified GC shaped.zs:1050). Project Extended in 1.20.1 doesn't ship
-    // a 'collector' item, so the top-tier ProjectE replacement is
-    // collector_mk3. Note ingredient 'projectextended:matter' is also dead
-    // (a 1.12 ProjectEx meta-item, not present in this pack); recipe will
-    // register but be uncraftable until that ingredient is also remapped
-    // (closest substitute: 'projecte:red_matter' once you decide the tier).
     shp('projecte:collector_mk3',
         [' A ', 'ABA', ' A '],
         { A: 'projectextended:matter', B: '#forge:soul_creative' },
@@ -653,9 +512,6 @@ ServerEvents.recipes(event => {
         { A: '#forge:ingots/protonium' },
         'protonium_block')
 
-    // GC exact: NPN/PCP/NPN — P = projectex Purple Matter (now projectexpansion),
-    // C = Energy-Matter Conversion Core (GC transformReplace kept the core; KubeJS
-    // shaped consumes it — known divergence, flagged in REVIEW_CHECKLIST).
     shp('soa_additions:protonium_ingot',
         ['NPN', 'PCP', 'NPN'],
         { N: '#forge:nuggets/neutronium', P: 'projectexpansion:purple_matter',
@@ -687,38 +543,20 @@ ServerEvents.recipes(event => {
         { A: '#forge:ingots/stainless_steel', B: '#forge:storage_blocks/nether_brick', C: '#forge:rods/blaze', D: '#forge:storage_blocks/iron' },
         'soul_forge')
 
-    // [SoA-REMOVE: EnderIO dropped stellar-alloy conduit tier] shp(Item.of('enderio:item_endergy_conduit', 8),
-    //     ['ABA', 'CDC', 'ABA'],
-    //     { A: '#forge:item_conduit_binder', B: '#forge:ingots/stellar_alloy', C: '#forge:item_infinity_goop', D: '#forge:ingots/titanium' },
-    //     'stellar_alloy_conduit_energy')
-
-    // [SoA-REMOVE: EnderIO dropped stellar-alloy fluid conduit] shp(Item.of('enderio:item_fluid_conduit', 8),
-    //     ['ABA', 'CDC', 'ABA'],
-    //     { A: '#forge:item_conduit_binder', B: '#forge:ingots/stellar_alloy', C: '#enderio:fused_quartz', D: '#forge:ingots/titanium' },
-    //     'stellar_alloy_conduit_fluid')
-
     shp('cyclic:heart',
         ['AAA', 'ABA', 'AAA'],
         { A: 'scalinghealth:heart_crystal', B: '#forge:ingots/crimsonite' },
         'cyclic_heart_food')
 
-    // [SoA] Ender IO renamed item_soul_vial → empty_soul_vial in 1.20.1.
     shp('enderio:empty_soul_vial',
         [' A ', 'B B', ' B '],
         { A: '#forge:ingots/soularium', B: '#forge:glass' },
         'soul_vial')
 
-    // [SoA] 'rehooked:hook' meta-item → ender_hook for the result; ingredient
-    // 'rehooked:hook' upgrades from iron_hook (mid-tier base hook).
     shp('rehooked:ender_hook',
         ['ABC', ' DB', 'E A'],
         { A: '#forge:pearl_ender_eye', B: '#forge:rods/blaze', C: '#forge:end_stones', D: 'rehooked:iron_hook', E: '#forge:dusts/blaze' },
         'ender_hook')
-
-    // [SoA-FLAG: GC recipe needs Thaumium (gone); BM native recipe kept] shp(Item.of('bloodmagic:soul_snare', 8),
-    //     ['  A', ' B ', 'C  '],
-    //     { A: 'minecraft:cobweb', B: '#forge:strings/nylon', C: '#forge:ingots/thaumium' },
-    //     'soul_snare')
 
     shp(Item.of('minecraft:iron_trapdoor', 2),
         ['AAA', 'ABA', 'AAA'],
@@ -732,7 +570,7 @@ ServerEvents.recipes(event => {
 
     shp('twilightforest:charm_of_keeping_2',
         ['ABA', 'BCB', 'ABA'],
-        { A: '#forge:ingots/durasteel', B: 'twilightforest:charm_of_keeping_1', C: 'minecraft:enchanted_golden_apple' },  // GC golden_apple:1
+        { A: '#forge:ingots/durasteel', B: 'twilightforest:charm_of_keeping_1', C: 'minecraft:enchanted_golden_apple' },
         'charm_of_keeping_2')
 
     shp('twilightforest:charm_of_keeping_3',
@@ -740,16 +578,11 @@ ServerEvents.recipes(event => {
         { A: '#forge:ingots/aeonsteel', B: 'twilightforest:charm_of_keeping_2', C: '#forge:nether_stars' },
         'charm_of_keeping_3')
 
-    // [SoA] 'mekanism:basicblock2:7' = Formulaic Assemblicator (verified GC
-    // shaped.zs:1253) → mekanism:formulaic_assemblicator in 1.20.1.
     shp('mekanism:formulaic_assemblicator',
         [' A ', 'ABA', ' A '],
         { A: '#forge:ingots/aeonsteel', B: '#forge:ingots/stainless_steel' },
         'mek_casing_2')
 
-    // [SoA] GC source has controlcircuit:1/2/3 (verified in
-    // GreedyCraft/scripts/recipes/vanilla/crafting_table/shaped.zs:1258-1268).
-    // 1.12 controlcircuit metadata: 0=basic, 1=advanced, 2=elite, 3=ultimate.
     shp('mekanism:advanced_control_circuit',
         [' A ', 'BCB', ' A '],
         { A: '#forge:ingots/stainless_steel', B: '#forge:alloys/advanced', C: '#forge:circuits/basic' },
@@ -789,22 +622,6 @@ ServerEvents.recipes(event => {
         ['ABA', 'BCB', 'ABA'],
         { A: 'minecraft:iron_bars', B: '#forge:ingots/experience', C: 'minecraft:emerald' },
         'xp_block')
-
-    // [SoA-REMOVE: TConstruct EFLN has no Smithery equivalent] shp(Item.of('tconstruct:throwball', 4),
-    //     ['ABA', 'BCB', 'ABA'],
-    //     { A: '#forge:gunpowder', B: '#forge:dusts/sulfur', C: '#forge:ingots/meteor' },
-    //     'efln')
-
-    // [SoA] Disabled — 'jaopca:item_essenceshadowium' was a JAOPCA-generated
-    // 1.12 essence item; JAOPCA 1.20.1 doesn't generate this for shadowium.
-    // SoA ships 'soa_additions:shadowium_ore' (block) which already smelts
-    // to the ingot, so this compression recipe is functionally redundant.
-    /*
-    shp('soa_additions:shadowium_ingot',
-        ['AAA', 'A A', 'AAA'],
-        { A: 'jaopca:item_essenceshadowium' },
-        'shadowium_essence')
-    */
 
     shp('inventorypets:feed_bag',
         ['   ', 'ABA', ' A '],

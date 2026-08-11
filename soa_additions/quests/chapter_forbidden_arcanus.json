@@ -23,9 +23,9 @@
       "title": "The Forbidden Path",
       "icon": "forbidden_arcanus:lens_of_veritatis",
       "x": 0,
-      "y": 0,
+      "y": 216,
       "description": [
-        "Open the Forbidden Arcanus codex. Dark magic, soul work, and the Hephaestus Forge await."
+        "The dark road: souls, blood, aureal and raw experience, all poured into one forge. Everything below is a step toward building that forge and feeding it."
       ],
       "dependencies": [],
       "tasks": [
@@ -57,9 +57,9 @@
       "title": "Darkstone",
       "icon": "forbidden_arcanus:darkstone",
       "x": 48,
-      "y": 192,
+      "y": 240,
       "description": [
-        "Mine 32 Darkstone. The bedrock of every F&A workstation."
+        "Darkstone is the floor this whole branch is built on. Stock up now; you will come back for more of it than you expect."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -93,10 +93,10 @@
       "id": "fa_arcane_crystal",
       "title": "Arcane Crystal",
       "icon": "forbidden_arcanus:arcane_crystal",
-      "x": 96,
-      "y": 48,
+      "x": 144,
+      "y": 216,
       "description": [
-        "Find Arcane Crystal Ore in the world and mine it."
+        "The first reagent. Its ore is scattered through the underground, and nothing further in this chapter happens without a steady supply."
       ],
       "dependencies": [
         "fa_darkstone"
@@ -130,13 +130,14 @@
       "id": "fa_arcane_crystal_dust",
       "title": "Crystalline Dust",
       "icon": "forbidden_arcanus:arcane_crystal_dust",
-      "x": 144,
-      "y": 48,
+      "x": 192,
+      "y": 216,
       "description": [
-        "Grind your crystals to dust. The base reagent for Deorum and aureal bottles."
+        "Crystal ground to powder. Bottled aureal, mundabitur, deorum — they all trace back to this."
       ],
       "dependencies": [
-        "fa_arcane_crystal"
+        "fa_arcane_crystal",
+        "fa_clibano_core"
       ],
       "tasks": [
         {
@@ -167,10 +168,10 @@
       "id": "fa_edelwood",
       "title": "Edelwood",
       "icon": "forbidden_arcanus:edelwood_log",
-      "x": 96,
-      "y": 96,
+      "x": 144,
+      "y": 264,
       "description": [
-        "Find an Edelwood tree. Its planks become the spine of every magical workstation."
+        "Edelwood stands out from ordinary trees: dark, gnarled, and worth felling whole. Every workstation in this chapter is framed in it."
       ],
       "dependencies": [
         "fa_darkstone"
@@ -204,13 +205,13 @@
       "id": "fa_clibano_core",
       "title": "Clibano Core",
       "icon": "forbidden_arcanus:clibano_core",
-      "x": 240,
-      "y": 0,
+      "x": 144,
+      "y": 168,
       "description": [
-        "Wrap a blast furnace in Darkstone. The Clibano smelts twice as fast and yields essence."
+        "Your furnace upgrade for the rest of the chapter. It smelts faster than a blast furnace, and its combustion chamber burns reagents that ordinary fire will not touch."
       ],
       "dependencies": [
-        "fa_mundabitur_dust"
+        "fa_darkstone"
       ],
       "tasks": [
         {
@@ -242,10 +243,10 @@
       "id": "fa_aureal_bottle",
       "title": "Aureal Bottle",
       "icon": "forbidden_arcanus:aureal_bottle",
-      "x": 192,
-      "y": 96,
+      "x": 240,
+      "y": 264,
       "description": [
-        "Bottle ambient Aureal essence with arcane crystal dust around a regen potion."
+        "Aureal is the first of the four essences the forge drinks, and the only one you can simply bottle. Start hoarding."
       ],
       "dependencies": [
         "fa_arcane_crystal_dust"
@@ -279,11 +280,11 @@
       "id": "fa_hephaestus_t1",
       "title": "The Hephaestus Forge",
       "icon": "forbidden_arcanus:obsidian_skull",
-      "x": 288,
-      "y": 144,
+      "x": 336,
+      "y": 432,
       "description": [
-        "Build the Hephaestus Forge multi-block. The center of all F&A ritual work.",
-        "Place an Obsidian Skull to mark the forge core, then surround with the assembly."
+        "The forge is the chapter: every ritual, every alloy, every prism past this point runs on it.",
+        "Build it somewhere permanent, with room around it."
       ],
       "dependencies": [
         "fa_deorum_ingot",
@@ -319,10 +320,10 @@
       "id": "fa_soul_extractor",
       "title": "Soul Extractor",
       "icon": "forbidden_arcanus:soul_extractor",
-      "x": 192,
-      "y": 144,
+      "x": 240,
+      "y": 360,
       "description": [
-        "Build a Soul Extractor and a Utrem Jar. Drains XP from mobs into bottled souls."
+        "Souls come out of soul sand, not out of corpses. The extractor pulls them free; the jar holds what it takes."
       ],
       "dependencies": [
         "fa_edelwood_planks"
@@ -361,10 +362,10 @@
       "id": "fa_first_soul",
       "title": "First Soul",
       "icon": "forbidden_arcanus:soul",
-      "x": 240,
-      "y": 144,
+      "x": 288,
+      "y": 384,
       "description": [
-        "Capture your first soul. Each one is worth 1 unit of soul essence on the forge."
+        "Souls, banked. The forge counts them one at a time for now — by the last tier it wants them in the hundreds."
       ],
       "dependencies": [
         "fa_soul_extractor"
@@ -398,10 +399,10 @@
       "id": "fa_blood_test_tube",
       "title": "Blood Tube",
       "icon": "forbidden_arcanus:test_tube",
-      "x": 96,
-      "y": 144,
+      "x": 144,
+      "y": 312,
       "description": [
-        "Fill a test tube with your own blood. Blood essence is the second of the four."
+        "Blood is the essence you cannot mine or farm. An empty tube in your pack fills as you bleed, so carry one and go get hurt."
       ],
       "dependencies": [
         "fa_rune"
@@ -438,8 +439,7 @@
       "x": 48,
       "y": 432,
       "description": [
-        "Mine Xpetrified Ore in the deep Overworld. The orb itself is the ore drop — each one stores 91 experience essence when fed to the Hephaestus Forge.",
-        "Required for Eternal Stella."
+        "Experience fossilised in the deep stone. Rituals bill you in experience as well as essence, and the Eternal Stella wants a pile of these."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -473,10 +473,10 @@
       "id": "fa_mundabitur_dust",
       "title": "Mundabitur Dust",
       "icon": "forbidden_arcanus:mundabitur_dust",
-      "x": 192,
-      "y": 0,
+      "x": 240,
+      "y": 168,
       "description": [
-        "The pure alchemical dust. Required for forging Deorum."
+        "Clean dust, as opposed to the other kind. Deorum does not exist without it."
       ],
       "dependencies": [
         "fa_arcane_crystal_dust"
@@ -510,10 +510,10 @@
       "id": "fa_corrupti_dust",
       "title": "Corrupti Dust",
       "icon": "forbidden_arcanus:corrupti_dust",
-      "x": 192,
-      "y": 48,
+      "x": 240,
+      "y": 72,
       "description": [
-        "The corrupted twin of Mundabitur. Powers darker rituals."
+        "Mundabitur's opposite number. Everything with a dark edge to it starts here."
       ],
       "dependencies": [
         "fa_obsidian_ingot",
@@ -549,10 +549,10 @@
       "id": "fa_deorum_ingot",
       "title": "Deorum",
       "icon": "forbidden_arcanus:deorum_ingot",
-      "x": 240,
-      "y": 96,
+      "x": 288,
+      "y": 216,
       "description": [
-        "Shape gold + charcoal + arcane crystal dust + mundabitur dust on a crafting table. Pattern: charcoal corners + dust sides, gold ingot center, mundabitur top/bottom — yields one Deorum Ingot per craft."
+        "Gold reworked into a metal that will hold magic. Deorum is the working alloy of this chapter — forge tiers, daggers and gilded scales all draw on it."
       ],
       "dependencies": [
         "fa_mundabitur_dust"
@@ -590,7 +590,7 @@
       "x": 48,
       "y": 144,
       "description": [
-        "First, craft Obsidian-with-Iron blocks: 1 obsidian surrounded by 4 iron nuggets on a crafting table. Then smelt those blocks in a Clibano (or vanilla furnace) to yield Obsidian Ingots."
+        "Obsidian gives up no metal to a pickaxe; it has to be bound and put back through the fire first. The ingots carry the dark star and half of what follows."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -627,7 +627,7 @@
       "x": 48,
       "y": 336,
       "description": [
-        "Break a monster spawner. The shards are needed to upgrade the Hephaestus Forge."
+        "Spawners drop nothing in vanilla. Here they shatter into scrap, and the forge's next tier is hungry for it — so line up a dungeon or two."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -661,10 +661,10 @@
       "id": "fa_hephaestus_t2",
       "title": "Forge Tier II",
       "icon": "forbidden_arcanus:arcane_crystal_block",
-      "x": 336,
-      "y": 96,
+      "x": 384,
+      "y": 288,
       "description": [
-        "Perform the Tier 2 upgrade ritual on the Hephaestus Forge: 4 arcane crystals + 4 spawner scrap. 500 Aureal, 6000 Blood, 10 Souls."
+        "The forge outgrows its first shape. Tier II is the gate on the elemental rituals and on every upgrade after it, and the ritual only runs on a forge already standing at Tier I."
       ],
       "dependencies": [
         "fa_hephaestus_t1",
@@ -675,9 +675,7 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "forbidden_arcanus:arcane_crystal_block",
-          "count": 1
+          "type": "soa_additions:checkmark"
         }
       ],
       "rewards": [
@@ -688,6 +686,11 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:reward_ticket_epic",
+          "count": 1
+        },
+        {
+          "type": "soa_additions:item",
+          "item": "forbidden_arcanus:elementarium",
           "count": 1
         }
       ],
@@ -703,10 +706,10 @@
       "id": "fa_enchanted_soul",
       "title": "Enchanted Soul",
       "icon": "forbidden_arcanus:enchanted_soul",
-      "x": 288,
-      "y": 96,
+      "x": 336,
+      "y": 288,
       "description": [
-        "Soul of an enchanted being. Yields 10 soul essence at the forge."
+        "One of these is worth ten ordinary souls. Worth chasing before the late tiers start counting by the hundred."
       ],
       "dependencies": [
         "fa_first_soul"
@@ -740,11 +743,10 @@
       "id": "fa_hephaestus_t3",
       "title": "Forge Tier III",
       "icon": "forbidden_arcanus:chiseled_polished_darkstone",
-      "x": 384,
-      "y": 48,
+      "x": 432,
+      "y": 216,
       "description": [
-        "Tier 3 upgrade: 4 arcane crystals + 4 deorum ingots. 1000 Aureal, 9000 Blood, 50 Souls.",
-        "Unlocks Sea Prism, Whirlwind Prism, and Eternal Stella rituals."
+        "Tier III opens the prisms and the Eternal Stella — the first rituals that change how you play rather than what you carry. Needs a forge already at Tier II."
       ],
       "dependencies": [
         "fa_hephaestus_t2",
@@ -752,9 +754,7 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "forbidden_arcanus:chiseled_polished_darkstone",
-          "count": 1
+          "type": "soa_additions:checkmark"
         }
       ],
       "rewards": [
@@ -783,7 +783,7 @@
       "x": 48,
       "y": 288,
       "description": [
-        "Carve runes from strange stones in the Clibano combustion chamber. Any item tagged forbidden_arcanus:runic_stones yields a Rune when burned."
+        "Runes are the chapter's dark half, cut out of the marked stone you find underground. The Mystical Dagger and the fourth forge tier both wait on them."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -817,10 +817,10 @@
       "id": "fa_dark_rune",
       "title": "Dark Rune",
       "icon": "forbidden_arcanus:dark_rune",
-      "x": 240,
+      "x": 288,
       "y": 48,
       "description": [
-        "Combine 2 Runes with 1 Corrupti Dust on a crafting table. Yields 2 Dark Runes per craft — no forge ritual needed."
+        "Corruption worked into the rune. One purpose: the dagger that harvests dragons."
       ],
       "dependencies": [
         "fa_rune",
@@ -858,8 +858,7 @@
       "x": 48,
       "y": 384,
       "description": [
-        "Find Stella Arcanum meteorite blocks scattered across the Overworld surface and break them. Each block yields a Stellarite Piece — frozen starfire from a fallen meteor.",
-        "&7Tip:&r Silk Touch preserves the meteorite block intact for transport."
+        "Stella Arcanum falls out of the sky and stays where it lands, sitting in the open. Break the meteorite for its shards — the fourth forge tier and the Eternal Stella both want them."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -893,11 +892,10 @@
       "id": "fa_hephaestus_t4",
       "title": "Forge Tier IV",
       "icon": "forbidden_arcanus:stellarite_piece",
-      "x": 432,
-      "y": 96,
+      "x": 480,
+      "y": 168,
       "description": [
-        "Tier 4 upgrade: 4 stellarite + 4 rune. 2000 Aureal, 12000 Blood, 100 Souls.",
-        "Unlocks the highest essence-cost rituals."
+        "Fourth form. This is where essence costs stop being a formality and start emptying your jars; a Tier III forge is the price of entry."
       ],
       "dependencies": [
         "fa_hephaestus_t3",
@@ -905,9 +903,7 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "forbidden_arcanus:stellarite_block",
-          "count": 1
+          "type": "soa_additions:checkmark"
         }
       ],
       "rewards": [
@@ -934,9 +930,9 @@
       "title": "Elementarium",
       "icon": "forbidden_arcanus:elementarium",
       "x": 48,
-      "y": 240,
+      "y": 192,
       "description": [
-        "Craft the Elementarium enhancer. Required to unlock prism rituals."
+        "No recipe exists for this one. Elementarium is chest loot — jungle temples, desert pyramids, ocean ruins — and as a forge enhancer it is the only key to the elemental rituals."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -971,10 +967,10 @@
       "id": "fa_smelter_prism",
       "title": "Smelter Prism",
       "icon": "forbidden_arcanus:smelter_prism",
-      "x": 336,
-      "y": 144,
+      "x": 384,
+      "y": 432,
       "description": [
-        "A handheld smelter — auto-smelts mined blocks. Hephaestus Forge ritual (no tier requirement) + Elementarium enhancer."
+        "Ore comes up already smelted. Cheapest of the elemental rituals, and like all of them it refuses to run unless the Elementarium is sitting in the forge."
       ],
       "dependencies": [
         "fa_hephaestus_t1",
@@ -1009,10 +1005,10 @@
       "id": "fa_terrastomp_prism",
       "title": "Terrastomp Prism",
       "icon": "forbidden_arcanus:terrastomp_prism",
-      "x": 384,
-      "y": 96,
+      "x": 432,
+      "y": 384,
       "description": [
-        "Slam the ground to mine in a 3x3. Forge T2 ritual + Elementarium enhancer."
+        "Mining by ground-slam, three blocks wide. Elemental work again, so the Elementarium keeps its slot."
       ],
       "dependencies": [
         "fa_hephaestus_t2",
@@ -1047,10 +1043,10 @@
       "id": "fa_ferrognetic_mixture",
       "title": "Ferrognetic Mixture",
       "icon": "forbidden_arcanus:ferrognetic_mixture",
-      "x": 336,
-      "y": 48,
+      "x": 384,
+      "y": 144,
       "description": [
-        "Bind a lodestone to wax and slime. The compass of the void."
+        "Magnetised sludge, and one of the first things the forge makes for you instead of the crafting grid. Later work assumes you have some on hand."
       ],
       "dependencies": [
         "fa_hephaestus_t1"
@@ -1084,11 +1080,10 @@
       "id": "fa_eternal_stella",
       "title": "Eternal Stella",
       "icon": "forbidden_arcanus:eternal_stella",
-      "x": 432,
-      "y": 144,
+      "x": 480,
+      "y": 360,
       "description": [
-        "Bind 3 Petrified Orbs and a Stellarite into a single diamond. Mending in solid form.",
-        "Forge T3 ritual."
+        "Petrified experience pressed into a single stone: mending you carry rather than enchant. Tier III work, and the reason you went digging for orbs."
       ],
       "dependencies": [
         "fa_hephaestus_t3",
@@ -1125,10 +1120,10 @@
       "id": "fa_dark_nether_star",
       "title": "Dark Nether Star",
       "icon": "forbidden_arcanus:dark_nether_star",
-      "x": 96,
-      "y": 0,
+      "x": 144,
+      "y": 120,
       "description": [
-        "Surround a Nether Star with 4 Obsidian Ingots on a crafting table. The ingots drink the star's light and leave it dark."
+        "A nether star drowned in obsidian until its light goes out. The final forge tier will not begin without one."
       ],
       "dependencies": [
         "fa_obsidian_ingot"
@@ -1167,12 +1162,10 @@
       "id": "fa_dragon_scale",
       "title": "Dragon Scale",
       "icon": "forbidden_arcanus:dragon_scale",
-      "x": 336,
+      "x": 384,
       "y": 0,
       "description": [
-        "Two paths to Dragon Scales:",
-        "&71)&r Slay the Ender Dragon — one-time drop of 2-3 scales.",
-        "&72)&r Repeatable: combine a Dragon Head with a &eMystical Dagger&r on a crafting table to harvest 3 scales per use. The dagger has limited durability — craft more as needed."
+        "The dragon sheds a few scales when it dies, and never again. With the dagger and a dragon head, scales stop being a souvenir and become a supply."
       ],
       "dependencies": [
         "fa_mystical_dagger"
@@ -1206,11 +1199,10 @@
       "id": "fa_hephaestus_t5",
       "title": "Forge Tier V",
       "icon": "forbidden_arcanus:stellarite_block",
-      "x": 480,
-      "y": 0,
+      "x": 528,
+      "y": 216,
       "description": [
-        "The final upgrade: 4 sculk catalysts + 2 dark nether stars + 2 dragon scales. 5000 Aureal, 20000 Blood, 500 Souls.",
-        "All rituals at maximum efficiency."
+        "The last shape the forge takes: everything unlocked, everything at its cheapest. It is also the gate on the alloy ladder that closes this chapter, and it needs a Tier IV forge under it."
       ],
       "dependencies": [
         "fa_hephaestus_t4",
@@ -1219,9 +1211,7 @@
       ],
       "tasks": [
         {
-          "type": "soa_additions:item",
-          "item": "forbidden_arcanus:stellarite_block",
-          "count": 4
+          "type": "soa_additions:checkmark"
         }
       ],
       "rewards": [
@@ -1247,11 +1237,10 @@
       "id": "fa_sea_prism",
       "title": "Sea Prism",
       "icon": "forbidden_arcanus:sea_prism",
-      "x": 432,
-      "y": 48,
+      "x": 480,
+      "y": 264,
       "description": [
-        "Bind a Heart of the Sea to prismarine and scutes. Underwater dominion.",
-        "Forge T3 + Elementarium enhancer."
+        "The ocean stops being an obstacle. Tier III elemental work — Elementarium still required."
       ],
       "dependencies": [
         "fa_hephaestus_t3",
@@ -1286,11 +1275,10 @@
       "id": "fa_whirlwind_prism",
       "title": "Whirlwind Prism",
       "icon": "forbidden_arcanus:whirlwind_prism",
-      "x": 432,
-      "y": 0,
+      "x": 480,
+      "y": 72,
       "description": [
-        "Wing-bind phantom membranes. Lifts you into the air.",
-        "Forge T3 + Elementarium enhancer."
+        "Lift on demand; the ground becomes optional. Last of the Tier III prisms."
       ],
       "dependencies": [
         "fa_hephaestus_t3",
@@ -1326,10 +1314,10 @@
       "id": "fa_crimson_stone",
       "title": "Crimson Stone",
       "icon": "forbidden_arcanus:crimson_stone",
-      "x": 48,
-      "y": 48,
+      "x": 96,
+      "y": 216,
       "description": [
-        "A forge enhancer that halves Soul essence costs. Pricey but eternal."
+        "There is no recipe. The Crimson Stone turns up in pillager outpost chests or not at all, and as a forge enhancer it guts the soul cost of every ritual you will ever run."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -1364,9 +1352,9 @@
       "title": "Maledictus Pact",
       "icon": "forbidden_arcanus:maledictus_pact",
       "x": 48,
-      "y": 480,
+      "y": 0,
       "description": [
-        "Bind yourself to corruption instead. Capstone enhancer (dark path)."
+        "Bastion treasure rooms hide it, and no craft will make one. In the forge it opens the cursed rituals — the Elementarium's dark opposite."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -1401,13 +1389,13 @@
       "title": "Mithrillium",
       "icon": "soa_additions:mithrillium_ingot",
       "shape": "square",
-      "x": 480,
-      "y": 96,
+      "x": 576,
+      "y": 216,
       "description": [
-        "Build the Mithrillium Smelter and forge the sky-aligned metal: 4 iron + 4 amethyst + echo shard + fallen star."
+        "The first thing a finished forge earns you, and the bottom rung of SoA's own metal ladder. Tier V only."
       ],
       "dependencies": [
-        "fa_hephaestus_t4"
+        "fa_hephaestus_t5"
       ],
       "tasks": [
         {
@@ -1439,13 +1427,13 @@
       "title": "Adaminite",
       "icon": "soa_additions:adaminite_ingot",
       "shape": "square",
-      "x": 480,
-      "y": 48,
+      "x": 624,
+      "y": 216,
       "description": [
-        "Build the Adaminite Smelter and forge the earth-aligned metal: 4 gold + 4 obsidian + diamond + netherite scrap."
+        "One rung up. Still Tier V work, still expensive, and the ladder is not finished."
       ],
       "dependencies": [
-        "fa_hephaestus_t4"
+        "fa_mithrillium"
       ],
       "tasks": [
         {
@@ -1477,10 +1465,10 @@
       "title": "Mithminite",
       "icon": "soa_additions:mithminite_ingot",
       "shape": "square",
-      "x": 528,
-      "y": 0,
+      "x": 672,
+      "y": 216,
       "description": [
-        "Alloy mithrillium and adaminite at the Mithminite Smelter: 2 mithrillium + 2 adaminite + nether star + netherite ingot."
+        "Both metals folded together. Last stop before Primal."
       ],
       "dependencies": [
         "fa_mithrillium",
@@ -1515,10 +1503,10 @@
       "id": "fa_edelwood_planks",
       "title": "Edelwood Planks",
       "icon": "forbidden_arcanus:edelwood_planks",
-      "x": 144,
-      "y": 96,
+      "x": 192,
+      "y": 336,
       "description": [
-        "Mill edelwood logs into planks. Required for the T2 Forge ritual and most F&A workstation crafts."
+        "Milled edelwood. The chapter's workstations and the Tier II ritual all run on these, so cut more than you think you need."
       ],
       "dependencies": [
         "fa_edelwood"
@@ -1552,11 +1540,10 @@
       "id": "fa_dark_matter",
       "title": "Dark Matter",
       "icon": "forbidden_arcanus:dark_matter",
-      "x": 144,
-      "y": 0,
+      "x": 192,
+      "y": 96,
       "description": [
-        "Smelt edelwood logs in a furnace or Clibano. The cooked log charcoals down into Dark Matter — the seed of corruption used in Mystical Daggers and ritual crafts.",
-        "Cook time: 400 ticks per log."
+        "Edelwood cooked past charcoal into something worse. The seed of corruption in every dark craft here."
       ],
       "dependencies": [
         "fa_edelwood"
@@ -1591,10 +1578,9 @@
       "title": "Bat Wings",
       "icon": "forbidden_arcanus:bat_wing",
       "x": 48,
-      "y": 0,
+      "y": 48,
       "description": [
-        "Hunt bats in caves to collect bat wings. Required for the Whirlwind Prism ritual.",
-        "Drop rate: 0-1 per kill (looting helps). Also found in &eAbandoned Mineshaft&r chests."
+        "Bats give up their wings rarely and grudgingly. Caves and old mineshafts are where you will find them, and the Whirlwind Prism wants a handful."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -1628,11 +1614,10 @@
       "id": "fa_corrupt_soul",
       "title": "Corrupted Souls",
       "icon": "forbidden_arcanus:corrupt_soul",
-      "x": 288,
-      "y": 48,
+      "x": 336,
+      "y": 144,
       "description": [
-        "Hunt &eLost Souls&r — wandering spirits that spawn naturally in the Overworld and Nether (weight 35, packs of 1-3). They drop Corrupt Souls on death.",
-        "Each Corrupt Soul yields 1 unit of Soul essence at the Hephaestus Forge — a more efficient source than Soul Extractor for late-tier rituals."
+        "Lost Souls drift through the overworld and the nether, and drop exactly what they are. Steadier income than working soul sand by hand once the tiers start counting in hundreds."
       ],
       "dependencies": [
         "fa_first_soul"
@@ -1666,11 +1651,10 @@
       "id": "fa_mystical_dagger",
       "title": "Mystical Dagger",
       "icon": "forbidden_arcanus:mystical_dagger",
-      "x": 288,
+      "x": 336,
       "y": 0,
       "description": [
-        "Forge the dagger that harvests dragons. Pattern: dark_rune + dark_matter + 2 deorum_ingot + edelwood_stick on a crafting table.",
-        "Right-click a Dragon Head with this dagger to cleave free 3 Dragon Scales — the only repeatable scale source."
+        "The only thing that will part a dragon head from its scales — and unlike the dragon, it can do it again, until the blade wears through."
       ],
       "dependencies": [
         "fa_dark_rune",
@@ -1710,8 +1694,7 @@
       "x": 48,
       "y": 96,
       "description": [
-        "Two paths: shapeless craft 1 ender pearl into 4 fragments, OR hunt endermen for 0-2 fragments per kill (drops alongside the pearl).",
-        "Used as a Smithery material in SoA — F&A's craftable weapons/armor are removed in favor of Smithery recipes that consume these fragments."
+        "Endermen shed these alongside their pearls, and a whole pearl breaks down into several. In SoA they feed Smithery: F&A's own weapons and armour were cut so these end up in tool parts instead."
       ],
       "dependencies": [
         "fa_path_of_forbidden"
@@ -1745,12 +1728,10 @@
       "id": "fa_dragon_scale_variants",
       "title": "Aquatic and Golden Scales",
       "icon": "forbidden_arcanus:golden_dragon_scale",
-      "x": 384,
-      "y": 0,
+      "x": 432,
+      "y": 48,
       "description": [
-        "Refine raw dragon scales into two specialty variants — Smithery recipes consume these for water- and gold-aligned tool/armor parts.",
-        "&71)&r &eAquatic Scale&r — shapeless: dragon_scale + prismarine_shard + prismarine_crystals + arcane_crystal_dust.",
-        "&72)&r &eGolden Scale&r — shaped: 4 deorum_ingot around 1 dragon_scale."
+        "Two refinements of the raw scale, one aligned to water and one to gold. Smithery eats both for parts you cannot make any other way."
       ],
       "dependencies": [
         "fa_dragon_scale"
@@ -1790,10 +1771,10 @@
       "title": "Primal Metal",
       "icon": "tconevo:primal_metal_ingot",
       "shape": "square",
-      "x": 576,
-      "y": 0,
+      "x": 720,
+      "y": 216,
       "description": [
-        "The endgame alloy. Perform the Primal Metal ritual on a Hephaestus Forge T5: place a Coalescence Matrix as the main ingredient, surround with 1 Pearl of Knowledge + 1 Mundabitur Dust. Costs 2000 Aureal + 8000 Blood + 1000 Experience + 200 Souls."
+        "The end of every metal line in the pack. The most expensive ritual a Tier V forge will ever run, and the last thing this chapter asks of you."
       ],
       "dependencies": [
         "fa_hephaestus_t5",

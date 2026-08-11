@@ -88,7 +88,7 @@
     {
       "type": "custommachinery:item",
       "mode": "output",
-      "item": "createfood:bacon_bits",
+      "item": "farmersdelight:cooked_bacon",
       "amount": 1,
       "slot": "out2",
       "chance": 0.012

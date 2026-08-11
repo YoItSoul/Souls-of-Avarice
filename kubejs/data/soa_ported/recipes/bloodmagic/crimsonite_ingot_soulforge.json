@@ -1,0 +1,21 @@
+{
+  "type": "bloodmagic:soulforge",
+  "drain": 10.0,
+  "input0": {
+    "item": "bloodarsenal:blood_infused_iron_ingot"
+  },
+  "input1": {
+    "item": "bloodarsenal:blood_diamond_infused"
+  },
+  "input2": {
+    "item": "soa_additions:durasteel_ingot"
+  },
+  "input3": {
+    "item": "malum:soul_stained_steel_ingot"
+  },
+  "minimumDrain": 400.0,
+  "output": {
+    "item": "soa_additions:crimsonite_ingot",
+    "count": 1
+  }
+}

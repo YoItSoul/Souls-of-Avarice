@@ -3,15 +3,19 @@
   "name": "Worn Out Bag",
   "rarity": "common",
   "output": {
+    "rolls": 1,
     "entries": [
       {
         "stack": {
           "id": "minecraft:red_bed",
-          "count": 1
+          "nbt": {
+            "display": {
+              "Name": "{\"text\": \"Not A Bed\"}"
+            }
+          }
         },
         "weight": 20
       }
-    ],
-    "rolls": 1
+    ]
   }
 }

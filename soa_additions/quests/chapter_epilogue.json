@@ -567,7 +567,7 @@
         {
           "type": "soa_additions:item",
           "item": "soa_additions:greedy_medal",
-          "count": 1
+          "count": 4
         }
       ],
       "rewards": [
@@ -671,7 +671,9 @@
         "adventure",
         "expert"
       ],
-      "repeatable": true
+      "repeatable": true,
+      "auto_claim": true,
+      "shape": "rhombus"
     },
     {
       "id": "epi_qualified_ocd",
@@ -708,6 +710,83 @@
           "item": "soa_additions:ocd_certificate",
           "count": 1
         },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "qualified_ocd",
+          "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ],
+      "auto_claim": true,
+      "shape": "rhombus"
+    },
+    {
+      "id": "epi_a_journey_s_end_a_recover",
+      "title": "Stage recovery",
+      "icon": "soa_additions:guide_book",
+      "visibility": "hidden_until_deps",
+      "optional": true,
+      "repeatable": true,
+      "x": 272,
+      "y": 224,
+      "description": [
+        "Gamestages is a bit weird sometimes! If the stage from \"a Journey's End a\" did not stick, claim this to get it back.",
+        "Safe to use more than once."
+      ],
+      "dependencies": [
+        "epi_a_journey_s_end_a"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Restore my stage please!"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "graduated",
+          "scope": "player"
+        },
+        {
+          "type": "soa_additions:grant_stage",
+          "stage": "truehero",
+          "scope": "player"
+        }
+      ],
+      "modes": [
+        "casual",
+        "adventure",
+        "expert"
+      ]
+    },
+    {
+      "id": "epi_qualified_ocd_recover",
+      "title": "Stage recovery",
+      "icon": "soa_additions:guide_book",
+      "visibility": "hidden_until_deps",
+      "optional": true,
+      "repeatable": true,
+      "x": 272,
+      "y": 416,
+      "description": [
+        "Gamestages is a bit weird sometimes! If the stage from \"Qualified OCD\" did not stick, claim this to get it back.",
+        "Safe to use more than once."
+      ],
+      "dependencies": [
+        "epi_qualified_ocd"
+      ],
+      "tasks": [
+        {
+          "type": "soa_additions:checkmark",
+          "text": "Restore my stage please!"
+        }
+      ],
+      "rewards": [
         {
           "type": "soa_additions:grant_stage",
           "stage": "qualified_ocd",

@@ -3,6 +3,151 @@
   "name": "Artifact Loot Bag",
   "rarity": "legendary",
   "output": {
-    "table": "minecraft:chests/bastion_treasure"
+    "rolls": 2,
+    "entries": [
+      {
+        "stack": {
+          "id": "minecraft:netherite_ingot"
+        },
+        "weight": 15
+      },
+      {
+        "stack": {
+          "id": "minecraft:ancient_debris"
+        },
+        "weight": 10
+      },
+      {
+        "stack": {
+          "id": "minecraft:netherite_scrap"
+        },
+        "weight": 8
+      },
+      {
+        "stack": {
+          "id": "minecraft:ancient_debris",
+          "count": 2
+        },
+        "weight": 4
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_sword"
+        },
+        "weight": 6
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_chestplate"
+        },
+        "weight": 5
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_helmet"
+        },
+        "weight": 5
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_boots"
+        },
+        "weight": 5
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond_leggings"
+        },
+        "weight": 5
+      },
+      {
+        "stack": {
+          "id": "minecraft:diamond",
+          "count": 4
+        },
+        "weight": 5
+      },
+      {
+        "stack": {
+          "id": "minecraft:enchanted_golden_apple"
+        },
+        "weight": 2
+      },
+      {
+        "stack": {
+          "id": "minecraft:spectral_arrow",
+          "count": 18
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:gold_block",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:iron_block",
+          "count": 3
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:gold_ingot",
+          "count": 6
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:iron_ingot",
+          "count": 6
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:crying_obsidian",
+          "count": 4
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:quartz",
+          "count": 15
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:gilded_blackstone",
+          "count": 10
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "minecraft:magma_cream",
+          "count": 5
+        },
+        "weight": 1
+      },
+      {
+        "stack": {
+          "id": "lootbags:loot_bag",
+          "nbt": {
+            "Loot": "soa_additions:old_blue_lootbag",
+            "Type": "RARE",
+            "Name": "Old Blue Loot Bag",
+            "Color": 16777215
+          }
+        },
+        "weight": 1
+      }
+    ]
   }
 }

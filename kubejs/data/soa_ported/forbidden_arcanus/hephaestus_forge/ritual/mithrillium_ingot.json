@@ -1,5 +1,4 @@
 {
-  "_comment": "TAR infusion port (RecipesTAR mithrillium_ingot): central void metal ingot (lore: improved void metal) + amber, alumentum->arcane charcoal, quicksilver->cinnabar, enchanted fabric->spirit fabric, salis mundus->arcane crystal dust. DEVIATION (fixed 2026-07-31): the original note here (\"FA pedestals hold stacks\") was wrong - a ritual 'amount' is a COUNT OF PEDESTALS and the Hephaestus Forge has exactly 8 (RitualManager.PEDESTAL_OFFSETS), with Ritual.checkIngredients requiring the filled-pedestal count to equal sum(amounts) exactly. TAR's 2x-of-each-of-5 needed 10 pedestals, so this was uncraftable and JEI dropped it (AIOOBE in HephaestusForgeCategory.addInputs). Reduced to 1x of each (5 pedestals); output stays 1 ingot and the essence cost is unchanged, so the material half of the cost is half of GC's. Raising four of the five back to 2x would fit (8 pedestals) but the split would be arbitrary.",
   "additional_requirements": {
     "forge_tier": 5
   },

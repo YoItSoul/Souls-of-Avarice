@@ -1,5 +1,4 @@
 {
-  "_comment": "GC parity port (recipe_functions.zs backpack_func_2). GC: thaumcraft enchanted fabric -> malum:spirit_fabric (thaumcraft->malum replacement), stainless steel ingot (SOA has the GC contenttweaker metal), harvestcraft hardened leather -> minecraft:leather (harvestcraft absent). Keeps Simply Backpacks' NBT-preserving upgrade type so contents survive.",
   "type": "simplybackpacks:backpack_upgrade",
   "category": "misc",
   "key": {

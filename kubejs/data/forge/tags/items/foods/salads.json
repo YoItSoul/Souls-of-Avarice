@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "createfood:mixed_salad_beetroot_carrot",
-    "createfood:mixed_salad_beetroot_carrot_bowl_block",
     "farmersdelight:fruit_salad",
     "farmersdelight:gleaming_salad",
     "farmersdelight:gleaming_salad_block",

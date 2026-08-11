@@ -1,33 +1,7 @@
-// Ported from GC scripts/recipes/mods/machines/blazing_furnace.zs
-// Dynamic expansion of `for recipe in furnace.all { ... }` — GC fed every vanilla
-// smelting recipe into the blazing_furnace machine. On 1.20.1 CM Fork, we
-// iterate smelting recipes at ServerEvents.recipes time and emit a
-// custommachinery:machine JSON per smelt input.
-//
-// Uses event.forEachRecipe (walks the current recipe map from the datapack)
-// rather than Utils.server.recipeManager — the server isn't up during the
-// recipes event, so Utils.server is null.
-//
-// The 85 static blazing_furnace recipes in data/soa_ported/recipes/blazing_furnace/
-// handle the common cases; this script covers the long tail, skipping any
-// inputs that already have a static blazing_furnace recipe (by item id).
-
-// KubeJS 6.5 (2001.6.5) + CM 0.10.8 API, probed in-game 2026-07-17:
-//   event.recipes.custommachinery.custom_machine(machineId, timeTicks)
-//     .requireItem/.requireFluid/.../.requireStructure(...).id(...)
-// is the ONLY working path. Pitfalls that cost several probe rounds:
-//   - the function is named after the RecipeType (`custom_machine`), not the
-//     serializer (`machine`); `.machine` is a non-callable leftover object.
-//   - event.custom({type:"custommachinery:machine"}) and raw-JSON
-//     `requirements` both fail — KubeJS returns a silent ErroredRecipeJS
-//     instead of throwing, which fakes out try/catch probing.
-//   - the only schema constructor is (machine, time) — 1- or 3-arg calls fail.
-
 ServerEvents.recipes(event => {
 
     const seen = new Set();
-    // Inputs already covered by the static 85 recipes — skip them to avoid
-    // "duplicate id" reloads from the datapack.
+
     const staticCovered = new Set([
         "minecraft:acacia_log", "minecraft:ancient_debris", "minecraft:basalt",
         "minecraft:beef", "minecraft:birch_log", "minecraft:blackstone",
@@ -55,10 +29,6 @@ ServerEvents.recipes(event => {
         "minecraft:stone_bricks", "minecraft:polished_blackstone_bricks"
     ]);
 
-    // NB: KubeJS 6.5 + Rhino mod throws 'redeclaration of var X' on EVERY
-    // const declaration inside an arrow callback passed to forEachRecipe.
-    // The fix is to move the body into a real named function — each call
-    // gets its own activation record, no scope-tracking confusion.
     const counter = { emitted: 0 };
 
     function _processSmeltingRecipe(r, ev, covered, seenSet, ctr) {
@@ -66,12 +36,6 @@ ServerEvents.recipes(event => {
             var rj = r.json;
             if (!rj || !rj.has("result") || !rj.has("ingredient")) return;
 
-            // Coerce every Gson getAsString() to a JS string IMMEDIATELY.
-            // The Java String wrappers blow up long before the regex at the
-            // recipeId line: `seenSet.has(javaString)` on a JS Set needs
-            // toPrimitive on the wrapper and throws "Cannot find default
-            // value for object" — which is why every recipe was skipped and
-            // 0 dynamic recipes were emitted despite the String() fix below.
             var outputId = null;
             var outputCount = 1;
             var resultEl = rj.get("result");
@@ -97,9 +61,7 @@ ServerEvents.recipes(event => {
             if (inputIds.length === 0) return;
 
             var xp = rj.has("experience") ? rj.get("experience").getAsDouble() : 0.1;
-            // |0 forces a 32-bit int. Math.floor returns a JS Number that
-            // Rhino sometimes hands to int-typed Java params as a boxed
-            // Double; the explicit truncation avoids surprises.
+
             var xpAmount = Math.max(1, Math.floor(xp * 16) | 0);
 
             for (var i = 0; i < inputIds.length; i++) {
@@ -108,34 +70,16 @@ ServerEvents.recipes(event => {
                 if (seenSet.has(inputId)) continue;
                 seenSet.add(inputId);
 
-                // Coerce inputId to a JS string before regex .replace — `inputId`
-                // arrives as a Java String, and Rhino can't auto-convert a JS
-                // RegExp into a CharSequence for Java's String.replace, which
-                // throws "Cannot find default value for object" and skips the
-                // whole recipe.
                 var recipeId = "soa_additions:blazing_furnace_dyn_"
                     + String(inputId).replace(/:/g, "_").replace(/\//g, "_");
 
-                // FINAL, verified API (kubejs 2001.6.5 + CM 0.10.8, probed
-                // in-game 2026-07-17): the schema function is
-                // event.recipes.custommachinery.custom_machine (RecipeType
-                // name, NOT the serializer name `machine`), its ONLY
-                // constructor is (machine, time), and requirements are added
-                // via CM's Java builder methods on the returned recipe.
-                // Everything else (event.custom, raw-JSON requirements,
-                // other arities) returns a silent ErroredRecipeJS.
-                // No speed builder exists; with time=1 it was cosmetic.
-                // Pyrotheum is gone from Thermal 1.20.1 → smithery:molten_blaze.
                 ev.recipes.custommachinery.custom_machine("soa_ported:blazing_furnace", 1)
                     .requireItem(Item.of(inputId, 1), "in")
                     .requireEnergy(400)
                     .requireFluid(Fluid.of("smithery:molten_blaze", 2), "pyro")
                     .produceFluid(Fluid.of("cofh_core:experience", xpAmount), "xp")
                     .produceItem(Item.of(outputId, outputCount), "out")
-                    // Machine-position char is lowercase 'm' (bytecode: the
-                    // Builder exempts 'm' and ' '; 'M' is its internal marker,
-                    // and '$'/'M' both fail with "Blocks for character(s) X
-                    // are missing").
+
                     .requireStructure(
                         [["III", "III", "III"], ["ImI", "G G", "IGI"], ["III", "ICI", "III"]],
                         { "I": "smithery:furnace_bricks", "G": "minecraft:glass", "C": "minecraft:blast_furnace" })
@@ -143,9 +87,7 @@ ServerEvents.recipes(event => {
                 ctr.emitted++;
             }
         } catch (e) {
-            // Surface the real cause (Rhino's e.toString often hides the
-            // inner Java exception). The first few are enough; throttle
-            // the spam if every iteration fails.
+
             if (ctr.errorsLogged === undefined) ctr.errorsLogged = 0;
             if (ctr.errorsLogged < 3) {
                 console.warn("[blazing_furnace_dynamic] skipping recipe: " + e

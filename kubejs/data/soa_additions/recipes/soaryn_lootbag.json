@@ -3,18 +3,17 @@
   "name": "Soaryn Bag",
   "rarity": "uncommon",
   "output": {
+    "rolls": 3,
     "entries": [
       {
         "stack": {
-          "id": "minecraft:chest",
-          "count": 2
+          "id": "minecraft:chest"
         },
         "weight": 20
       },
       {
         "stack": {
-          "id": "minecraft:stick",
-          "count": 1
+          "id": "minecraft:stick"
         },
         "weight": 20
       },
@@ -25,7 +24,6 @@
         },
         "weight": 20
       }
-    ],
-    "rolls": 3
+    ]
   }
 }

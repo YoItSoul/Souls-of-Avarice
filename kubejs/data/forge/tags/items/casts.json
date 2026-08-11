@@ -1,6 +1,5 @@
 {
   "replace": false,
-  "_comment": "TCon casts -> smithery impressed casting sands.",
   "values": [
     "smithery:casting_sand_impressed_arcane_focus",
     "smithery:casting_sand_impressed_armor_plates",

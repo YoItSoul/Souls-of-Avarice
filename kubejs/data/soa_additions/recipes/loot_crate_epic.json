@@ -310,7 +310,274 @@
           "id": "minecraft:magenta_shulker_box",
           "nbt": {
             "display": {
-              "Name": "{\"text\": \"§cBox of Recursion\"}"
+              "Name": "{\"text\": \"§cBox of Recursion\"}",
+              "Lore": [
+                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+              ]
+            },
+            "BlockEntityTag": {
+              "Items": [
+                {
+                  "Slot": 0,
+                  "id": "minecraft:magenta_shulker_box",
+                  "Count": 1,
+                  "tag": {
+                    "display": {
+                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                      "Lore": [
+                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                      ]
+                    },
+                    "BlockEntityTag": {
+                      "Items": [
+                        {
+                          "Slot": 0,
+                          "id": "minecraft:magenta_shulker_box",
+                          "Count": 1,
+                          "tag": {
+                            "display": {
+                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                              "Lore": [
+                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                              ]
+                            },
+                            "BlockEntityTag": {
+                              "Items": [
+                                {
+                                  "Slot": 0,
+                                  "id": "minecraft:magenta_shulker_box",
+                                  "Count": 1,
+                                  "tag": {
+                                    "display": {
+                                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                      "Lore": [
+                                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                      ]
+                                    },
+                                    "BlockEntityTag": {
+                                      "Items": [
+                                        {
+                                          "Slot": 0,
+                                          "id": "minecraft:magenta_shulker_box",
+                                          "Count": 1,
+                                          "tag": {
+                                            "display": {
+                                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                              "Lore": [
+                                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                              ]
+                                            },
+                                            "BlockEntityTag": {
+                                              "Items": [
+                                                {
+                                                  "Slot": 0,
+                                                  "id": "minecraft:magenta_shulker_box",
+                                                  "Count": 1,
+                                                  "tag": {
+                                                    "display": {
+                                                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                      "Lore": [
+                                                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                      ]
+                                                    },
+                                                    "BlockEntityTag": {
+                                                      "Items": [
+                                                        {
+                                                          "Slot": 0,
+                                                          "id": "minecraft:magenta_shulker_box",
+                                                          "Count": 1,
+                                                          "tag": {
+                                                            "display": {
+                                                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                              "Lore": [
+                                                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                              ]
+                                                            },
+                                                            "BlockEntityTag": {
+                                                              "Items": [
+                                                                {
+                                                                  "Slot": 0,
+                                                                  "id": "minecraft:magenta_shulker_box",
+                                                                  "Count": 1,
+                                                                  "tag": {
+                                                                    "display": {
+                                                                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                      "Lore": [
+                                                                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                      ]
+                                                                    },
+                                                                    "BlockEntityTag": {
+                                                                      "Items": [
+                                                                        {
+                                                                          "Slot": 0,
+                                                                          "id": "minecraft:magenta_shulker_box",
+                                                                          "Count": 1,
+                                                                          "tag": {
+                                                                            "display": {
+                                                                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                              "Lore": [
+                                                                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                              ]
+                                                                            },
+                                                                            "BlockEntityTag": {
+                                                                              "Items": [
+                                                                                {
+                                                                                  "Slot": 0,
+                                                                                  "id": "minecraft:magenta_shulker_box",
+                                                                                  "Count": 1,
+                                                                                  "tag": {
+                                                                                    "display": {
+                                                                                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                                      "Lore": [
+                                                                                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                                      ]
+                                                                                    },
+                                                                                    "BlockEntityTag": {
+                                                                                      "Items": [
+                                                                                        {
+                                                                                          "Slot": 0,
+                                                                                          "id": "minecraft:magenta_shulker_box",
+                                                                                          "Count": 1,
+                                                                                          "tag": {
+                                                                                            "display": {
+                                                                                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                                              "Lore": [
+                                                                                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                                              ]
+                                                                                            },
+                                                                                            "BlockEntityTag": {
+                                                                                              "Items": [
+                                                                                                {
+                                                                                                  "Slot": 0,
+                                                                                                  "id": "minecraft:magenta_shulker_box",
+                                                                                                  "Count": 1,
+                                                                                                  "tag": {
+                                                                                                    "display": {
+                                                                                                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                                                      "Lore": [
+                                                                                                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                                                      ]
+                                                                                                    },
+                                                                                                    "BlockEntityTag": {
+                                                                                                      "Items": [
+                                                                                                        {
+                                                                                                          "Slot": 0,
+                                                                                                          "id": "minecraft:magenta_shulker_box",
+                                                                                                          "Count": 1,
+                                                                                                          "tag": {
+                                                                                                            "display": {
+                                                                                                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                                                              "Lore": [
+                                                                                                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                                                              ]
+                                                                                                            },
+                                                                                                            "BlockEntityTag": {
+                                                                                                              "Items": [
+                                                                                                                {
+                                                                                                                  "Slot": 0,
+                                                                                                                  "id": "minecraft:magenta_shulker_box",
+                                                                                                                  "Count": 1,
+                                                                                                                  "tag": {
+                                                                                                                    "display": {
+                                                                                                                      "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                                                                      "Lore": [
+                                                                                                                        "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    "BlockEntityTag": {
+                                                                                                                      "Items": [
+                                                                                                                        {
+                                                                                                                          "Slot": 0,
+                                                                                                                          "id": "minecraft:magenta_shulker_box",
+                                                                                                                          "Count": 1,
+                                                                                                                          "tag": {
+                                                                                                                            "display": {
+                                                                                                                              "Name": "{\"text\": \"§cBox of Recursion\"}",
+                                                                                                                              "Lore": [
+                                                                                                                                "{\"text\": \"§bjava.lang.StackOverflowError\"}"
+                                                                                                                              ]
+                                                                                                                            },
+                                                                                                                            "BlockEntityTag": {
+                                                                                                                              "Items": [
+                                                                                                                                {
+                                                                                                                                  "Slot": 0,
+                                                                                                                                  "id": "minecraft:magenta_shulker_box",
+                                                                                                                                  "Count": 1,
+                                                                                                                                  "tag": {
+                                                                                                                                    "display": {
+                                                                                                                                      "Name": "{\"text\": \"§d§oThe Last Box\"}",
+                                                                                                                                      "Lore": [
+                                                                                                                                        "{\"text\": \"§b§oLooks like you've reached an end.\"}"
+                                                                                                                                      ]
+                                                                                                                                    },
+                                                                                                                                    "BlockEntityTag": {
+                                                                                                                                      "Items": [
+                                                                                                                                        {
+                                                                                                                                          "Slot": 0,
+                                                                                                                                          "id": "progressivebosses:nether_star_shard",
+                                                                                                                                          "Count": 64
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
             }
           }
         },
